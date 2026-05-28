@@ -1,0 +1,2066 @@
+[
+  {
+    "id": "rynsan-cafe",
+    "name": "Rynsan",
+    "tagline": "The Hearth Stage of the Hills",
+    "theme": "Traditional Slate Elements & Live Ka Duitara Chords",
+    "introduction": "Sleek and tucked away at Newlands Compound, Rynsan is a celebratory platform in the Khasi language where indigenous culinary arts and acoustic melodies tell a unique story. With stunning timber accents, rustic stone walls, and wide glass doors opening to a peaceful garden, Rynsan brings the fresh, organic ingredients of Meghalaya's pristine hills straight to your table.",
+    "whyVisit": "To experience traditional live acoustic music, featuring local artists playing the Ka Duitara string instrument while eating beautifully curated Khasi-style hearth dishes.",
+    "hours": "Lunch: 2:00 PM — 4:00 PM | Dinner: 6:00 PM — 10:00 PM",
+    "address": "Newlands Compound, Boyce Road, Near Shillong College, Laitumkhrah, Shillong 793003",
+    "neighborhood": "Boyce Road",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200"
+    },
+    "quote": "In the silence between sips, the forest speaks.",
+    "quoteAuthor": "Rynsan Staff",
+    "vibeTags": [
+      "Minimalist",
+      "Silent Policy",
+      "Book Heaven",
+      "Light Wood",
+      "Pine Canopy"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Dohneiiong Black Sesame Plate",
+        "description": "Slow-cooked pork belly coated in earthy, hand-roasted field black sesame seeds, organic ginger, and wild herbs.",
+        "price": "₹280",
+        "image": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Traditional Smoked Pork Slices",
+        "description": "Crispy wood-smoked pork slices served dry with local wild berry sauce and green microgreens.",
+        "price": "₹260",
+        "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    ],
+    "coordinates": {
+      "lat": 25.5721181,
+      "lng": 91.8926074
+    },
+    "place_id": "ChIJl-1GTqF_UDcRkNwNzbwlXYM",
+    "formatted_address": "Boyce Road, 36, College, near Shillong, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "latitude": 25.5721181,
+    "longitude": 91.8926074,
+    "google_maps_url": "https://maps.google.com/?cid=9465763484626967696",
+    "website": "http://www.rynsan.com/",
+    "phone_number": "092330 51577",
+    "rating": 4.6,
+    "user_ratings_total": 391,
+    "types": [
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: Closed",
+      "Tuesday: 1:00 – 9:30 PM",
+      "Wednesday: 1:00 – 9:30 PM",
+      "Thursday: 1:00 – 9:30 PM",
+      "Friday: 1:00 – 10:00 PM",
+      "Saturday: 1:00 – 10:00 PM",
+      "Sunday: 1:00 – 10:00 PM"
+    ],
+    "photos": [
+      "Ab43m-ur5i7TX6HNLVSvNCPRpUOJ01ShT_xEhTBd3FcqchopWqC-DpgpmH4lAd9h3FwqA3LQwnd0JlLYdGz3eu4e0kIqzZeF_F3nSpEf8_OdwcFGuqJsTTCJXI__QiMFjE8q1Mz3HWEevsM_MxgLROPWFsPqeps736iYG8Qmg3-pULZnx2ldzcj7R_bwFDKFeIzBSP6CRXCppPURWWeWcaN0aJYbOmRtMg6MQzWwmvb6weyDWUxC_QzN5zMh5VnKn_2baJopS8Oep37afMu54nkh9wSWsm2DAcxH7yBlzWZjCNDudInFmFj3hjuWCeN_AnQnaZixM5MDYDJGdwe42eAOrBQYB-zi94eJaPhW9fNnBpV9TyXwtZjMpP7e5fn8oE_Co-ccUrUDn-ST9QEMYrEcx9ZYW2SyUe5SqNKVNeyv4WRJkV4cf9RSGTjau0IuUMH-",
+      "Ab43m-tgoZbw8GmV8jlNltrJUBGDRhOTNFJHLXuKj50NDKkuZA8YlBO_1HD1km40_UcoZofqZHWCJoMxYw-m56r6ZIsyl3qs8mjSP9w3oDqW1vFHanCUjNQ8MAMvAetkH0NYCMlS-XTxmFyn4tv4fj0x8Nng0uQOXMjRj2hOxxUvD9rq27hLgm_zUDR_olJFy1KhfUSMcKbbCM7yMWKVMxVRNWg7Nvdkg7S-ElOV05-0ia2Wb2x3clCGAJtQuWvGIzOatVMdhP_-BidrjItI5yv-BnrNvwgNN6qZsm76vWuETqslMW2XLfzo3Zff6Qhy0NJSFdsb83ySqZiDFAwBVqEK2Rwb-vVrw5L7FoMTnDAX0XtwUf5pYL04DCGRdiL4Tawjk_i5DFLft-PxSVseQIUy0OCShgkUT7UjZ3o_xrI8jEJc5DM",
+      "Ab43m-uc2hmrN_sH1pu81Xmsr31aygen31LoGXUwScoBwL3xjuyz2FoHHsPNe7mXitOkttXOdlIhEASoq7rHOxEzjVxnuBqsBrCCONcVzD_jcV9eG3ykjlPHvLYL5bXt9hiKaog494KcBf__qKblL0esiDcbBiYGkEDsp8JRRnk7bjwIjssY4aRxOlrVcTthF0OBiFtf3K4B62VF_68Y6Gi1o-P_kVhSNtoB1FmSypkaUBPt1j9_FZeDww_1CL9leRJO0rIU1KTDLXZsLmnjhUEXg15vphQtDJLqYzMC0Hq8Z_sfxeoDg30UbplTIC_KFY_Hik6hkro96qlRwnsf0t5fFH5z4MouV9olrZ2xgICFyRXhU_0pMQHzJHJ36HYJ9bFpCmY3JhTjA7SIs3OZNu7roK__OhAhuwX13Z1EKkRrG2s1Dzbi4iVBv8A-LMh3srap"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "ahavah-cafe",
+    "name": "Ahavah Fine Dining & Services",
+    "tagline": "Elegant Chandeliers, Velvet Comforts & Warm Hearth Bakes",
+    "theme": "Glittering Chandelier Banquets & Romantic Candle Dinners",
+    "introduction": "Ahavah Fine Dining brings a touch of supreme alpine hospitality and luxury dining to Shillong. Warmed by a roaring log fireplace and illuminated by towering crystal chandeliers, this elegant retreat boasts plush velvet chairs, clover tablecloths, and a glass-enclosed pastry collection. Known for spectacular banquet services, custom wedding cakes, and romantic candlelit seating, it is a haven of luxury.",
+    "whyVisit": "To indulge in a luxury candlelight dinner wrapped in wool throws under glowing chandeliers, followed by their legendary freshly baked pastries and cakes.",
+    "hours": "11:30 AM — 9:30 PM (Daily)",
+    "address": "Upland Road, Nongkynrih, Laitumkhrah, Shillong 793003",
+    "neighborhood": "Nongkynrih",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
+    },
+    "quote": "We gather under mountains, we part as family.",
+    "quoteAuthor": "Ahavah Founder",
+    "vibeTags": [
+      "Valley View",
+      "Hearth Fire",
+      "Outdoor Deck",
+      "Cozy Blankets",
+      "Acoustic Soul"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Shrimp & Fresh Herb Spaghetti",
+        "description": "Hand-tossed pasta cooked in white wine reduction, regional bay leaves, fresh garlic prawns, and local mountain greens.",
+        "price": "₹320",
+        "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Naked Rosewater Wedding Sponge",
+        "description": "A dense, floral rosewater cake layered with soft, fresh-whipped cream and fresh field peach compote.",
+        "price": "₹180",
+        "image": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&q=80&w=800"
+    ],
+    "coordinates": {
+      "lat": 25.5716708,
+      "lng": 91.89563679999999
+    },
+    "place_id": "ChIJaTGs3QR_UDcRPqlVGv24iiY",
+    "formatted_address": "Upland Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793011, India",
+    "latitude": 25.5716708,
+    "longitude": 91.89563679999999,
+    "google_maps_url": "https://maps.google.com/?cid=2777235517435390270",
+    "website": "https://www.ahavahshillong.com/",
+    "phone_number": "087987 19975",
+    "rating": 4.3,
+    "user_ratings_total": 192,
+    "types": [
+      "bar",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 12:30 – 9:30 PM",
+      "Tuesday: 12:30 – 9:30 PM",
+      "Wednesday: 12:30 – 9:30 PM",
+      "Thursday: 12:30 – 9:30 PM",
+      "Friday: 12:30 – 9:30 PM",
+      "Saturday: 9:30 AM – 10:30 PM",
+      "Sunday: 9:30 AM – 10:30 PM"
+    ],
+    "photos": [
+      "Ab43m-uia3mqzkVwPEVQobaRRWWFQHZuis0-DBEuwtOM5hagmH7oKW8Wy39npAlMfaHPKXCZdaCwXRMe57PD9sR5JN9--VADum8xxR7xs7Egzznov5680qmSgkk4MhUIXOK6xas5xkhiK01cHP2t4Xn7Zf4mmPaJJLoRDIW3ctOKi2Q7ggznNydzntslvhaHV7GfhJz26o1cb2eXGxTgRHh18kJfiDleqNvNkWvJvxcUIhkKtU0CMyqYdQjRpjRzjA0t7WGdni2cQ44HUUN0_czRcxrc3gJWfh5tK_dejW-u8iPBhrFZMEL8Zfw592XObJgQjCMC6DnVDf4KcNFc-J9xLiYlPCI8QQ_qjx-WIehdzRJ3IRlAhX3muGag8_eWRy9rVukBt1kz7rfesSuZKY0V5vIVTxGQLRZTnsk3RSEZLiTKIg",
+      "Ab43m-tNDVQR8S7sBIYepFbS8flZx9G1ASWxgsD6HtTNv_eszDNVo-ZByjGDyLqDbkDQW54C3Bn8PAQz2JQs5LdVMMResphAiEivKV9I3lp0zufkaN6ABVKvCjvBvMso59gTUZy7VJo7ZarfVo9ReQ5Gdc844y7iSHOl0nckmAPsu3NJGYY5PQC4-3FayQuQvmMGE_k4kZNX37GYauoyfz7Ncua4DYLsW3RR_o7GXbDdq1FrQRReW0wr_e9cpD9dJCWz6k0EOUxfNnETIKFgP4bQWt6hPIlfHcbGkvu9t6c01594l0WpKIQdaGPTF9cWrz7DQVKQJMm7VJcI2NMbLCnHxpjtsnzKnLnDDqn4xtd5gVfZH-rRdkY8wOqrHo2SipPs5-C_SNEoP1IhdiBmayX8KPi-5KI2OKGMiR7NFpR9UnDr8w",
+      "Ab43m-vFFHGZJbPw9Wf3nJ1HCWW62lEO6C7qLmeMThiAgzFXR0ZcESNe49xJem4Ff7AoLsQv5Z7bYml7_EnnwAbGiQXHArZklq7luAzY61ePFJLyMUk-89aI_0mi6kk3BtMuJJfP6XyGEbZ-fMrAnUhZWqFj43uDpuDAnJoptvCxYfE73OM70cbCwDJOmdpCS0PEOpq0qF0pd4XSACPNSgdeFUBUZ8lURcpsDrG3V4_QbvXLWiiM8nGcehZKGombukvkWk0ruCC3s3m0BZNNb5jSu8oU1cFo-2z6RW1-rbYdK2zRFQKfx48QcTD-PDGWAdd2s7p0gcI1hPAmQOo5RsJLvny1zj-fM-doakn9ZvQ85u3VhROlL0p_am-fmmb0RI-cvAOAr-TGXNenwuRaKLsez1RAZW4EEn2Ir8StsJnAftMjV52X8ifpj4I6JeyIs-bp"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.23,
+    "verification_status": "unverified"
+  },
+  {
+    "id": "cherry-bean-cafe",
+    "name": "Cherry Bean Cafe",
+    "tagline": "Wooden Cabin Wood & Specialty Brewing",
+    "theme": "Warm Cabin Loft, Green Plants & Artisan Roasts",
+    "introduction": "Tucked in the peaceful lanes of Kench's Trace, Cherry Bean is an iconic wooden coffee sanctuary. Under double-height timber ceilings, beautiful warm lightbulbs glow over rows of books, vertical plant displays, and artisan brewing apparatus. Famous for sourcing local high-altitude organic arabica beans, they roast and hand-brew exceptional coffees paired with fresh-made pizzas and decadent pastries.",
+    "whyVisit": "To study, chat, or read in a warm, garden-filled wooden loft with a masterful single-estate espresso and freshly-kneaded sourdough pizza.",
+    "hours": "10:30 AM — 8:30 PM (Daily)",
+    "address": "Kench's Trace, Shillong 793004 (Opposite Pinewood)",
+    "neighborhood": "Kench's Trace",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200"
+    },
+    "quote": "From blossom to bean, nurtured by the mountain soil.",
+    "quoteAuthor": "Liza, Head Roaster",
+    "vibeTags": [
+      "Wood Cabin",
+      "Loft Seating",
+      "Warm Lighting",
+      "Private Estate",
+      "High Ceilings"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Warm Artisan Sourdough Pizza",
+        "description": "Hand-kneaded sourdough crust topped with rich tomato sauce, fresh buffalo mozzarella, and mountain wild oregano.",
+        "price": "₹290",
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Double Chocolate Nut Cookie",
+        "description": "Big, soft-baked molten chocolate chip cookies stuffed with roasted hazelnut crumbs, matching dark espresso perfectly.",
+        "price": "₹120",
+        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    ],
+    "coordinates": {
+      "lat": 25.5756402,
+      "lng": 91.8811556
+    },
+    "place_id": "ChIJRyV05z9_UDcRWdOml_k8cyg",
+    "formatted_address": "GS Rd, opposite Broadway Hotel, Police Bazar, Shillong, Meghalaya 793001, India",
+    "latitude": 25.5756402,
+    "longitude": 91.8811556,
+    "google_maps_url": "https://maps.google.com/?cid=2914740426527658841",
+    "website": "https://instagram.com/cherrybeancafe",
+    "phone_number": "098639 24605",
+    "rating": 4.6,
+    "user_ratings_total": 357,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest"
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM – 10:00 PM",
+      "Tuesday: 11:30 AM – 10:00 PM",
+      "Wednesday: 11:30 AM – 10:00 PM",
+      "Thursday: 11:30 AM – 10:00 PM",
+      "Friday: 11:30 AM – 10:00 PM",
+      "Saturday: 11:30 AM – 10:00 PM",
+      "Sunday: 11:30 AM – 10:00 PM"
+    ],
+    "photos": [
+      "Ab43m-tC0b97bPiWs92bezTFLiw4n1loO73nYvcPPa8LKINVbY5ghqigh7sElqTv69FBTgIdxbxxH_QiYrBA2iA0jsLVPDSZ88dfA1WurMMwPZ26rGqIHcNFfLqWHfOxGD1FanK2C67BVuyU152XoJ--jh8bUmlebr1zejowvR7SMAlrXKWM7EgtsWyfmfvu69GsNqa38nsdrmSJVjNY0bbsevx-OTVAp8R4L3MLtbAiZbQ5k8QCOLoPzc_G7smNvejWJkdjUFTiHBEyrd95K_5kZQRxH7Q4cgvOnH31-o2gHHmRtw",
+      "Ab43m-tu4cXHTxv0Im-3IubZSIKUtg7ezAR4-jG65LEgQqdPRpk5heccnINv1U_DE1PDsfzHG59yksme1iU9E42wbEl3CaT0XfxJzWy0ohOwQ9PrD14swYwbf0Kz8ITnaSREfb4pTvuL5VnyJrWkqSeV9Y-xiZkIeFIdVUOF5WHQBE31fapKgDZhcxI9qawg9BJQ2O0P6k0KxfSEKtzGc07sJcinhyqAKkl9uoTtQUPFGbYJp9s3hqDVN_SaXMjrIGluZwvqHSMNbmGkDpIGKhV5DLd9VoKpND9N0LB7mJAuQhMRdzJx7WXc-IebV6ol_Gb2k71csEnc8-Wq7rixS-U54WlHRxBHKCO6IBGpDmBdtLzV6G0PZCQIzL7d3IFzWPfALUs1DjsZ4qe_KVyWzcvweKz2LUBqdiWermmagm1Fsn_XXJirA--rR4DDM3uWmQ",
+      "Ab43m-tF5S7k58yfNikXqceTYoKhYXe0Dq9fINosNBpWyMAhKqPbpCdRJ0pavxUbRvVxCdHqd8KDxW79jELVDhvU6-SQI34wM3E5yEXqBm-55i69XwoN0wVbS2-1mGxWHgkUTn8Ak7lbDGD7DxK1-Pnw-Ah1u5Mh3UDCU_AKaa-Nthwsw8FW11yNP9TniZp0QJNoHrv1XJ-qw81jhhIsyqWmBROTbWz20ctN2VcEbRVbDh6t5Yly8ldGNRL6j9-Ufv3LuCy5mkqdkqI_RgxM1mQzkUDd2ZkvoNvABbt4mu6_eDBvVQ"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.3,
+    "verification_status": "unverified"
+  },
+  {
+    "id": "cafe-shillong",
+    "name": "Cafe Shillong",
+    "tagline": "The Heritage of the Hillside",
+    "theme": "Jazz and Coffee Traditions",
+    "introduction": "Since opening its doors in 2008, Cafe Shillong has stood as a guardian of the city's unique cultural syncretism: a space where the aroma of locally roasted Khasi Hills coffee beans blends seamlessly with vintage vinyl tracks spinning in the corner. Here, jazz is more than background music—it's the heartbeat of the room.",
+    "whyVisit": "To sit by the street-facing window during a sudden downpour, sipping a double espresso while listening to local artists cover classic jazz and blues under warm filament bulbs.",
+    "hours": "12:00 PM — 10:00 PM (Closed Thursdays)",
+    "address": "31 Laitumkhrah Main Road, Shillong 793003 (Opposite Beat Junction)",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=1200"
+    },
+    "quote": "Here, jazz isn't background music—it's the heartbeat of the Room.",
+    "quoteAuthor": "Iban, Founder",
+    "vibeTags": [
+      "Legacy",
+      "Cozy",
+      "Jazz Beats",
+      "Vintage Vinyl",
+      "Rainy Window"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Shillong Special Coffee",
+        "description": "Sourced from high-altitude organic plantations in the East Khasi Hills, medium-roasted, and brewed with crisp mountain spring water.",
+        "price": "₹180",
+        "image": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Smoked Pork Toast",
+        "description": "Crispy local sourdough toast topped slices of house-smoked Khasi pork belly, caramelized mountain onions, and wild mint leaves.",
+        "price": "₹260",
+        "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Mountain Cardamom Infusion",
+        "description": "A delicate local black tea infused with hand-crushed wild cardamom pods and local orange blossom honey.",
+        "price": "₹140",
+        "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800"
+    ],
+    "coordinates": {
+      "lat": 25.5703141,
+      "lng": 91.89464199999999
+    },
+    "place_id": "ChIJ93XBhrt-UDcRCFuiFvkn9Ik",
+    "formatted_address": "LP Building, Laitumkhrah Main Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "latitude": 25.5703141,
+    "longitude": 91.89464199999999,
+    "google_maps_url": "https://maps.google.com/?cid=9940614228293606152",
+    "website": "http://www.cafeshillong.com/",
+    "phone_number": "087874 14183",
+    "rating": 4.1,
+    "user_ratings_total": 2716,
+    "types": [
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "photos": [
+      "Ab43m-u6UXueNDhlxd5mSOICrhsz1bdCOmFjeFM8fxqLCGpWngJlh-9HxUxRXiWr-awoo5Rqb5UjvaZf4f-GfKIHc6bJMVFWc6aHABGG4FsHLblMwZEjJ6Y6Xq87O8KgzPQQheKGLA_2IgTxkEetgLT6WSZtqk2pevcCvi2XSl65aBD2aH-JkfGBiHtD2-rMnkLxpf4SF3tjZwBbGC3RgGuvBOtM05554mKhForP1evLgWyjI4UkABfwSztvOKVCPDDI9XNAazxQVQdA5JuY-oIT5-9GO9ppgpXDNIQ3W2t5rOJPu9Vm0Mh14DK5Z_xvuj-mNejZaTgeiLoDOrD68-xiKkm00zA2DXaZLMu0VWprP2RpkvesLJJFkZFx-LecGivv3MKGC2MKo6k3fYfzva8M8jIecdm19LdjQAbAtD103xPoRSEH",
+      "Ab43m-svT1eQRB8g47J6v-dMzWWLSsIp9H2OvU6m4m2X6GqWsL3FBb6Lk5v2HPvJFsoheA6LU6goBagQP68lEjNUvmGLqgbI5Xg1z4xt48wBOhAXMUihAEwwhSC_n5ZSQlJr7mGURZthmlQgEYG2pzyeO55DkYfJ-Ead7YIHIDU76yWQSvZohuTSdvsFh0gvHo_nVpjnSHIeeqU42fmv2WzErAin5s553WIoI-Z0ackiDu_5bA7EYgiuMZMlOHAYwwHTovyi7kdDUTYbzD770B02pcwk3o39lCa4f3lQEBx5C2WYG8vJJd1jSk-SBubdHoaeGgmwkwBS4qQbGsaOvUUmHQbuWby3Kfetsajmob4zBzEIeDbyhYUzKhtLi_uHg3sJ5Az11Vl6Sn-WUMFSpWlWl5-5WUTI_BRpv4GIZEJ0HGulACJ7",
+      "Ab43m-v6tjsyM7g6oYc3bw82eepSt1eQFB3jSVhYXrsGHaN6QAKFuJIXWPlKsjQDL3MjQ9_WPwk4mMLX5YyVZSR9GlSlhFwevc9ywh_Gh7xwRRXRUH5xdSXEgJ3k9arsT9URRpb9n18TREuHnkFv1uC6iDacoXrcuicJZfAqGJKV0CMPYHp_uvGtMI8OVzoYV03jX6nu7C7EFbCMApYGnBhVfNkTeOgQ7X4I7ODxtchhYhe1jfRTl07rMXVsWMgur7FzIqxoSHUVA7-bO4LqFd5kYKqEM2PYwepPvDPgZ8exwApj3DBXS-TuJ5mky7AK7dlVwzltLLQVxH3auwwlwtLn5-Wy_axJpdUshvhoovl9d1x93r87S3n2ZxVrOnMonsctck49P902-5eDU8XP4udRXTwNOCmFvAW6l3aXA0_K7GMzX9hxbx5bylhcMLOuU_18"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "dylans-cafe",
+    "name": "Dylan's Cafe",
+    "tagline": "The Student Vanguard",
+    "theme": "Folk Rock Homage",
+    "introduction": "Named in homage to Bob Dylan, who enjoys a legendary cult status in Shillong and Northeast India. This split-level student haven is filled with guitar-shaped wood tables, hand-painted ceiling tiles left behind by creative patrons, and album covers spanning the 60s and 70s. It stands on a hillside, overlooking Laitumkhrah's misty pine slopes.",
+    "whyVisit": "Grab a cozy corner couch on a foggy afternoon, choose a hand-drawn mug, and let the vintage folk-rock acoustics carry you away.",
+    "hours": "11:00 AM — 9:00 PM (Daily)",
+    "address": "Dhankheti, Malki, Shillong 793001 (Near Malki Point)",
+    "neighborhood": "Dhankheti",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1487180142328-054b783fc471?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1485686531765-ba63b07845a7?auto=format&fit=crop&q=80&w=800"
+    },
+    "quote": "Come in on a foggy afternoon, choose a warm mug, and let the 70s folk rock take you away.",
+    "quoteAuthor": "Staff Note",
+    "vibeTags": [
+      "Student Haunt",
+      "Bob Dylan",
+      "Nostalgic Folk",
+      "Creative Ceiling",
+      "Mountain View"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Blowin' in the Wind Cappuccino",
+        "description": "A dark double-ristretto with velvety micro-foam, dusted with organic cocoa powder in the shape of Dylan's signature acoustic guitar.",
+        "price": "₹160",
+        "image": "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Old-School Hot Apple Pie",
+        "description": "Fresh local hill apples spiced with cinnamon, baked under a rich, golden butter pastry lattice and served with wild vanilla cream.",
+        "price": "₹190",
+        "image": "https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1487180142328-054b783fc471?auto=format&fit=crop&q=80&w=800"
+    ],
+    "coordinates": {
+      "lat": 25.5661878,
+      "lng": 91.894517
+    },
+    "place_id": "ChIJgfYKaaN-UDcR9dyMrbVmzJk",
+    "formatted_address": "Tripura Castle Rd, Dhankheti, Malki, Shillong, Meghalaya 793003, India",
+    "latitude": 25.5661878,
+    "longitude": 91.894517,
+    "google_maps_url": "https://maps.google.com/?cid=11082345713538751733",
+    "website": "https://www.hotelpolotowers.com/our-cafes/dylans-cafe.html",
+    "phone_number": "+91 70850 56515",
+    "rating": 4,
+    "user_ratings_total": 3820,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant",
+      "store"
+    ],
+    "opening_hours": [
+      "Monday: 9:30 AM – 11:30 PM",
+      "Tuesday: 9:30 AM – 11:30 PM",
+      "Wednesday: 9:30 AM – 11:30 PM",
+      "Thursday: 9:30 AM – 11:30 PM",
+      "Friday: 9:30 AM – 11:30 PM",
+      "Saturday: 9:30 AM – 11:30 PM",
+      "Sunday: 9:30 AM – 11:30 PM"
+    ],
+    "photos": [
+      "Ab43m-v5lc8PBgJxkO38P6SM8zLLm1qwde4cBRzSjq8H7vTu1P_Gs11-2VWNja5K5j3eqxwI1RkqB8Lsb8H2lbnzIMd4Ju6lIQW7RwbTkKrCsyCbOjAqSEMerZWSBDHCs1yFTdhmNUSEsCkm3h-xqnSf26WHPnurkIT_2x01z6rqeoIp4RxBzsgJhiyK504BHfRGoyLo_AsUQ1w0G7ELjyLh2nkKyUpE1H8nrTXXY4GjlIhVx9jHCJkNpTWS6BBvJxH1bR0mX3bAurf8-8A2eya50ADfjmJrCEMtkkjXmk87Ri1D7YeP832EhWgA7F2fSeyBKeZmvdW-IkSrhweXn0LRFQ48-xd2vYsg2JOYHTRPc3wlaClQvu8eiGZzD5QNVCRmCbqiaH2B4VKrWHWRgexWqqKJs5prreueipw-p3jceBz1ug",
+      "Ab43m-t7ZLB9qkqqF0YKDGK4RkaAjbjgQ38Tnw_lnZ_ZSMv2J5eRpF7L24NVzLtHYBv11T6Us6fuvu93Mvrn97LbNjkSV1b4NbzTc7BWRQdkFyKtyn30Hos56vnTJ4UYZDa_G14pQ45xrf83cOHOnhkUtXC12ibMJ63XWPJiB0n4UEzAXvg9mD1Hww5YSt_8E3qWWqFX6mGshgOGwsPecyvW7yCH-E1KD0FlJu93GHKEnftaewo8NoiAxFY9gTrKuchMZ-3OgYNvS8K0loNAprY1s5j7iKpR0XGO_lbWwnDZVGWmu2r70mk6qnAByUcyQlsfuxhoFufekJ09QTSYX1UMYyMZw0Hx-1bv--jUEb9U8esYpQhpLKsGQ0EoGCso7ShSfWBSjY2KjmYVzmmdrXq6jPMaqtSQp6YmaNay1hfS703GVI54Vldy6B4K5eFMjG9D",
+      "Ab43m-uINPGanjB9MHaXo8Lzcv4uBNPdyVYQx76POEAr4RfCpSpisvfjS3G_w6VOHJskLfdbpI13rWPIaNm7vY4mZVeWzZRhFlTAPuGm6gVtFYQUqAPo9vyeaSVb2sv4BgsfuLi5bS9aqF0Zzb9_f3t4j4sBECVvUxKMvv9RJGJsaM6u7O1_IxSfJo24doowsvMhky5YgQQQKTMgb2xgt02gSUg0vz--ARUM8elC8mFaLeO39UDoehOsONNVAQVfcaESdzOoqEx94_woRFDKpYNeM6H0QQVjvbb7LtqdbNzHA_fvUz94qlAaFX7E1H1sWhOeZpATN570ZFIxjWdlQDnPjEyNexPUXOPSxafCdsSTDJWLkD1ibH1BrC_Bf3EC8Mc6Y5yGCDiJL5lcVdEdGG9yfeSP2KR-ETQLTXRUp3_69E5wfU0"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "ml-05-cafe",
+    "name": "ML 05 Cafe",
+    "tagline": "The Modern Pitstop on the Highway",
+    "theme": "Biker and Pine Forest Trails",
+    "introduction": "Branded with Shillong's regional registration prefix, ML 05, this striking glass-walled shelter lies nestled under tall, towering pines just off the highway. It combines dynamic, garage-inspired metal-working with the warm embrace of a rustic cozy log cabin, displaying vintage custom motorcycles hanging from the timber rafters.",
+    "whyVisit": "To experience an iconic highway stopover, enjoying dense pine air and hearing local riders share travel trails over firewood hearths.",
+    "hours": "10:30 AM — 8:30 PM (Daily)",
+    "address": "National Highway 40, Eastern Bypass, Shillong (Before Pine Forest Trails)",
+    "neighborhood": "Golf Links",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1545048702-79362596cdc9?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1459255418679-d6424da9ee33?auto=format&fit=crop&q=80&w=800"
+    },
+    "quote": "True mountain vibes are found on the open roads and in the pine-scented breeze.",
+    "quoteAuthor": "Motorhead Diaries",
+    "vibeTags": [
+      "Wood Cabin",
+      "Glass Walls",
+      "Highway Pitstop",
+      "Rider Haven",
+      "Pine Canopy"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Highway French Press Coffee",
+        "description": "A bold, dark-roasted tribal blend direct from regional growers, pressed rich and robust to warm travelers from the dense morning fog.",
+        "price": "₹150",
+        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Wild Pepper Smoked Pork Fry",
+        "description": "Spicy pork belly wok-tossed with local black pepper, hand-harvested wild coriander, and mountain ghost chilly flakes.",
+        "price": "₹240",
+        "image": "https://images.unsplash.com/photo-1623961990059-28355e229a87?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&q=80&w=800"
+    ],
+    "coordinates": {
+      "lat": 25.5447364,
+      "lng": 91.8379827
+    },
+    "place_id": "ChIJNdDdEfp9UDcRs90q1nPRNA0",
+    "formatted_address": "5th Mile, Upper Shillong, Sohra Road Inside Horti Hub Compound On the way to Elephant falls & Cherrapunjee, Shillong, Meghalaya 793009, India",
+    "latitude": 25.5447364,
+    "longitude": 91.8379827,
+    "google_maps_url": "https://maps.google.com/?cid=951615716726594995",
+    "website": "https://www.hotelpolotowers.com/our-cafes/ml-05.html",
+    "phone_number": "070056 85695",
+    "rating": 4,
+    "user_ratings_total": 2895,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant",
+      "store"
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM – 8:30 PM",
+      "Tuesday: 10:00 AM – 8:30 PM",
+      "Wednesday: 10:00 AM – 8:30 PM",
+      "Thursday: 10:00 AM – 8:30 PM",
+      "Friday: 10:00 AM – 8:30 PM",
+      "Saturday: 10:00 AM – 8:30 PM",
+      "Sunday: 10:00 AM – 8:30 PM"
+    ],
+    "photos": [
+      "Ab43m-tWuEnbFKGtunR7XcPZbJipXKUypH0k6_vPYEoTcuHk_6dpK2K3OSkPuNf4tGg5I1sWN0Hs8GVjWdWbQ54NBS3uR9U5nlWFdt8XClPkJIOCAkSfCIe4io2u6dNKc0fM_deq-z8AKXnI4JAjWJ-rQP2G9dyyKtRvQeAmL0mNldhRs-nqyJ1SfDBswTA_scm7p9idOJa_1x6-j8LJp_WGDDf0j4Z2Vct4jy0T4tgnPZYmc6_SdnmBEoCQssFA5rDJNoh1woPziL4hpIWnLCt84lAjC9B36qFGNMfTWzegXnKasHASnsN1GB_ELNAb0IAcw1xmdKo6scHTX8-TAQn4VvlqUjq448LiEwEXcu88LqegAy-NX-tjEDghCTK8rxmE24PeXYdGLkPnZtk3i3BUeGO_hwuuHCa3gPPGFgxv8GwRrZRa",
+      "Ab43m-s2_woQb86CkoZZ08_venvlLUgHlLjivbGBCZQ2WgZur0xedlk63n474O9jWaQKTkNkTAtKF7STS5azN3rc16Vka9G3nt6iseL9zqvx2QvP4-EAWGBqIw5EINd_jAILqLgGnskCAomXtuV2OSRkze9nxP_hPB3xsUNcL3P5vMaRCOyY9G-8V0axuf0Af6wSY_kqPdI0ftBWy8hunuKha3VexnnNz2hfhPHuR1LxWKPP_DLErk8xDbpGZOl91pcMu4WZ78AdXjJe7QizQevIvn4R9f8JMPTcwJRJh8JzpiAEpCCmXRFaWYaT9jFDi4xm74AKFRSBr_mooDfVEJP-OPGJZxGh5h6I5UMrO0tV5WbdC51QJRFynSu3o-ZdJL2VUlhykXvdpSWRGZz4RLQzlJKX662Wxz5JkEFXlLsF_HnH0x72F_kwLNZ9gABZIv19",
+      "Ab43m-uz89WvuZz_icLF8x58przxCV-qCwpYib2DU36uchIPK_tx50gOGpD5iHVzoVXtcmkzAR2j83AAO2j8pqN9M1nwOmYy8PM4AVQKZU_sb2Q0BD_qZMqb9d0H-CGRldC7rUzgp6aJF3tUta_3RJm6BI8d1cyPa6h_EC3KpODShCuuJm5WqCIn-Svj9saKKWjpCUk8_i-7B1rbjoclyUOC-am6dO9HxRaZbV0fOI3wYV1gLlo_zcCpMmA9VNZFWWRjyEPi_LmptMJK0g_rBai9ybVwCRh1zewBh1bpHyB04rfn2KmdbJ_zRJW35n-Q0xRM8coLFqagaeVk137fGb751mcbj_oyPQCnYu1xdX27nCqfatn9kboXLP0w6JhypeGMr7Fg5gv9tCn3dH_OKexWAtwcNOxgQXqL3EO6jvZSaBz7xbb_n4BA4rhMV738bujz"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "pine-loft",
+    "name": "The Pine Loft",
+    "tagline": "The Minimalist Sanctuary",
+    "theme": "Zen Light Wood and Reading Rails",
+    "introduction": "A beautiful, meditative cedarwood loft capturing filtered daylight. High cathedral glass ceilings and endless bookshelves line the walls, creating a serene, silent creative studio for writers, local illustrators, and remote workers looking for a quiet, focused headspace under the pines.",
+    "whyVisit": "To experience a deeply quiet, calm environment where the scratch of a pen or the trickle of rain is the only sound, surrounded by independent literature.",
+    "hours": "11:00 AM — 8:00 PM (Closed Mondays)",
+    "address": "Pine Tree Close, Golf Links Area, Shillong 793001",
+    "neighborhood": "Golf Links",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1521478413868-1bb348537586?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=800"
+    },
+    "vibeTags": [
+      "Minimalist",
+      "Silent Policy",
+      "Book Heaven",
+      "Light Wood",
+      "High Ceilings"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Filtered White Honey Pour-Over",
+        "description": "A clean, paper-filtered light roast revealing delicate notes of white mountain jasmine and raw, regional wildflower honey.",
+        "price": "₹190",
+        "image": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=800"
+    ],
+    "coordinates": {
+      "lat": 25.5784096,
+      "lng": 91.8986803
+    },
+    "place_id": "ChIJW5FeTrF_UDcRUktn66w6Lvw",
+    "formatted_address": "Lower New Colony, Near NEEPCO (North Eastern Electric Power Corporation Limited), Laitumkhrah, Shillong, Meghalaya 793001, India",
+    "latitude": 25.5784096,
+    "longitude": 91.8986803,
+    "google_maps_url": "https://maps.google.com/?cid=18171526060844731218",
+    "website": "https://www.facebook.com/theloftshillong",
+    "phone_number": "087940 13548",
+    "rating": 4,
+    "user_ratings_total": 745,
+    "types": [
+      "establishment",
+      "lodging",
+      "point_of_interest"
+    ],
+    "opening_hours": [
+      "Monday: 7:00 AM – 11:00 PM",
+      "Tuesday: 7:00 AM – 11:00 PM",
+      "Wednesday: 7:00 AM – 11:00 PM",
+      "Thursday: 7:00 AM – 11:00 PM",
+      "Friday: 7:00 AM – 11:00 PM",
+      "Saturday: 7:00 AM – 11:00 PM",
+      "Sunday: 7:00 AM – 11:00 PM"
+    ],
+    "photos": [
+      "Ab43m-to7MW_7WKWPApGtOqy0q_HZWzJ30TjqfV7UjdA_Idai3FbBxHpLH_NIXigvHyO2fKIbckkUQ94kae1v28vLjpRBbnUHFlD4-lf3_tJr-z3t1M0eHPJtZD_5Vc7Czr4tl_oesPwvZ_dmxgugq9_zytQVvHDEGMXNEzU-Qr5315WywnCCtuMzPZt0SviUO7a-z-9aek1C6_MBeLlU9eM_P_QbSENITwLrRv0BnakWQAb1rQ9Of3YJpElKaFD7x4q1mucTwwiD5jWz7-04qDuBiXa8Er1FQZ_69fXwJoUv9PvTQ",
+      "Ab43m-sW1OOt-qw_MQNXSZBoeyOEbAqCZUUDdlnrVmXDSBdtj3xvucLjyc9R0ON9CjuGGwe5f1-HtdLhvo0wRsnjS-4CInGh1373Aio8eZgQEvUpoo7gfmQuD0xc5DHbLhcOf0Tob9iFga3SJUa5vOg4PtewSSHR5cXmDR53az1TfIxJqVhmgoxyPqKrm0Mzc3o12JvltO07Qb6r4IC_hNWRiQemgrGobOZVhRK-YU7S6oD2iQgOFn59a6Q5uY5KNpB3e_z8jHsfzXTvHn9DFnnD3RDLGJJ07oSSSSA17gHbg_AxmQ",
+      "Ab43m-sLGD8L6MBNd8mzk2m7A44YNthedHZZV1dLtr0dVfwpkyZM_iOoGV42KYH32-4QckBIIzdEzojjwoWk9gBeN_V8DeqyC1td4pR_PrytAytDbSPmptrm6mXkfNL2L7ALcZXtq41HM7xbbYQpn8bRpqpG3AxOhhSJHdJCvT7ZPQjJniAIaD63bHkoqmQrGGe9j9FqRBK176Au0Ot7BluQc2M8ohEiQW_cMFxteWA6emzrIsvH9p6R7cHsWxcQkZu77Ufyjj60EG7bh5MtNq_DuATpzNcsL3SYN5RongKI4-6812OReVATLu26bxOHEaDWNOzbqS_DX41rvVrhsYJLCiMF9B4GvoSCN2ZaybMdmEDypAcMy3UDRn9MQD9HCinc-ViGksIYR6qPSQ0SzqyBX9v3kMJFq4amM18duwHMLNT4FpGo"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.6,
+    "verification_status": "unverified"
+  },
+  {
+    "id": "melody-beans",
+    "name": "Melody & Beans",
+    "tagline": "Classic Music Hub",
+    "theme": "Independent Jams & Warm Lattes",
+    "introduction": "Tucked inside the lively heart of Police Bazaar, this classic, high-vibe cafe is a canvas for local independent academic artists. Its brick-walls are adorned with signed guitars, and a cozy central stage hosts open mics, bringing regional storytellers together over steaming cups of hand-pressed espressos.",
+    "whyVisit": "To sit close to the stage, enjoying Shillong's celebrated acoustic scene with friendly, music-loving crowds.",
+    "hours": "12:00 PM — 9:00 PM (Daily)",
+    "address": "Acoustic Lane, Police Bazaar Circle, Shillong 793001",
+    "neighborhood": "Police Bazaar",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    },
+    "vibeTags": [
+      "Live Stage",
+      "Open Mic",
+      "Brick Walls",
+      "Bustling Center",
+      "Acoustic Soul"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Cinnamon Spiced Latte",
+        "description": "A smooth double shot of espresso steamed with local organic cinnamon sticks and nutmeg shavings, bringing festive mountain vibes to your table.",
+        "price": "₹170",
+        "image": "https://images.unsplash.com/photo-1570968915860-54d5c301fc9f?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [],
+    "coordinates": {
+      "lat": 25.5756402,
+      "lng": 91.8811556
+    },
+    "place_id": "ChIJRyV05z9_UDcRWdOml_k8cyg",
+    "formatted_address": "GS Rd, opposite Broadway Hotel, Police Bazar, Shillong, Meghalaya 793001, India",
+    "latitude": 25.5756402,
+    "longitude": 91.8811556,
+    "google_maps_url": "https://maps.google.com/?cid=2914740426527658841",
+    "website": "https://melodybeans.in",
+    "phone_number": "098639 24605",
+    "rating": 4.6,
+    "user_ratings_total": 357,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest"
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM – 10:00 PM",
+      "Tuesday: 11:30 AM – 10:00 PM",
+      "Wednesday: 11:30 AM – 10:00 PM",
+      "Thursday: 11:30 AM – 10:00 PM",
+      "Friday: 11:30 AM – 10:00 PM",
+      "Saturday: 11:30 AM – 10:00 PM",
+      "Sunday: 11:30 AM – 10:00 PM"
+    ],
+    "photos": [
+      "Ab43m-tGI8jL_YHNlf9iBjU1LElSJvdDMYP_9kmQACiSySXCKH6KFdONUOoM7QhIJv8CKfehyA8zYU7Ah7DY45oqoZ-IFVGxqvUL9xrpLIlc5pPxKTP40J-Po6PFi9UPOBg2qKSjUq-l212v47CFY0GZFdDrmV84aJFBs-LX6M4tpl4APivteC0N0oOiYu3wmmc4cN_V8pLk2iYdE99aU75YNdMC_TK08m8LwkewdM5O_iqL7a3H-_G5PFaMXg9jGrByEqmCMIBFSacoqNETx9Mi8zQ_5n07aW06karrTqjdZA5pvQ",
+      "Ab43m-uIdIVFA-PDMADmh1LlK-xi9LdJOLoRuRdZZopMTNNXhlTSU1ggt7KNGPJbJNpqUQDPJyMDiCMjLjdUPps0aqeNEPi9aIu_JyT_sBpwm_vOt-LYHu6QIvS_MjKxwhax67Jk6kpLg-pVAQj7eAfPbsabufnCLEuOXvcVUasPwqqPVKTdLXkW-YytBM1hWd-6kgU-Z_Dd303Q5kcXYAoAgXkzigjjwH2Fjaye5LtBLEtFClL2-womPLXSEAVipTkIDDqdmjW-uDCMgkCAkKiWfIpaSvYCjOecq-3KAPt-9OnxJoF1l749_BBA6VkkUFv4-oirQqGdFEssgsXgxsdxz5xlMfUqnFP6ZUdbPKlg7-WhmE4qIOfD-lVztS86nUJN8cspOAA3qwgJQnBJ0--1qB0ef5lJ60jm3HUXGGfioqz6wU4WvM8jEJxaM9WHNg",
+      "Ab43m-s63qeRazcTRhSs5hi_ULDW7oXVxVwYiIPuHX7G0jveKYb2ruc9JDpItRjvDq1CIn3j2anWW3_Jh3Reb-CxzN_G2blqRT6rmwq_k7ErGTQeY_nu3G-T3aNUCjZQ3pp8OetbXX79xm2Hrp1hZvDmWCOyh_913NjhqGQAU_vU_En8r5BvWQy5zr6_quuWf51qQ2i2nVnMbfJYEgp3-7VkhhhEf8yc2wbn6RVIwoXMA3BeNzLqgtu1aCpkBuSVlFlnW8Ieglc8YbfJZ807qoElJt4NbtjRPHdKsmKopc5h_Wqq9Q"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0,
+    "verification_status": "unverified"
+  },
+  {
+    "id": "fern-mist-garden",
+    "name": "Fern & Mist Garden",
+    "tagline": "Botanical Greenhouse Retreat",
+    "theme": "Endemic Plants and Rain Pools",
+    "introduction": "Step inside a magical glass-domed greenhouse filled with vertical moss columns, native Khasi ferns, and slow-dripping slate waterfalls. It's a botanical temple combining local ecology with specialized cold brewing, letting you breathe pure, humid mountain forest air while escaping the chilly street winds.",
+    "whyVisit": "The tropical warmth, earthy scent of wet soil, trickling stream sounds, and visual comfort of hundreds of green ferns.",
+    "hours": "10:00 AM — 7:30 PM (Daily)",
+    "address": "Valley Walkway, Pine Forest Ridge, Shillong 793002",
+    "neighborhood": "Golf Links",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1521193089946-7aa29d1fe73a?auto=format&fit=crop&q=80&w=800"
+    },
+    "vibeTags": [
+      "Greenhouse",
+      "Botanical",
+      "Trickling Streams",
+      "Moss Walls",
+      "Moist Serenity"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Wild Mint Slow Cold Brew",
+        "description": "Espresso grounds cold-dripped for 14 hours over ice slabs, infused with crushed organic wild mint leaf syrup.",
+        "price": "₹200",
+        "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "gallery": [],
+    "coordinates": {
+      "lat": 25.5641001,
+      "lng": 91.8819348
+    },
+    "place_id": "ChIJY_O2VgB_UDcRz7mSbv3wiKY",
+    "formatted_address": "HV7J+JQV, near crinoline barik, Lachumiere, Shillong, Meghalaya 793001, India",
+    "latitude": 25.5641001,
+    "longitude": 91.8819348,
+    "google_maps_url": "https://maps.google.com/?cid=12000106178401188303",
+    "website": "https://fernmistgarden.org",
+    "phone_number": "+91 94363 45678",
+    "rating": 3.9,
+    "user_ratings_total": 9,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest"
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM — 8:00 PM",
+      "Tuesday: 10:00 AM — 8:00 PM",
+      "Wednesday: 10:00 AM — 8:00 PM",
+      "Thursday: 10:00 AM — 8:00 PM",
+      "Friday: 10:00 AM — 8:00 PM",
+      "Saturday: 10:00 AM — 8:00 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [
+      "Ab43m-su_mPuaadM8HXQFyZEr0qkbDfF9byvVnynnRM8-gB255zBffGIDJYr546tZ-ZY3rFOKuKEqfxLUKtD2qf-b05gk2BtpIJYtxcV6KWQWuMQFKmGIIP_FN1nl-5SXD7gO3JfWAdkfYQoO6WNgFyZg17ZRQ0Ouwqa1XE6zy3XSIU99bwNfbee3nFqPL6rHRXng4Zkk49V57Bsw5Dc_P1OKdcWHy1jo2qbg0qcvnTx1QYp-G2pTbhtpWD7YT2sFLc8ViYxxvRn_NMK2ydXY1CnTC__h3kfo_HdtzlsNUhxLwAki3mVynAieKAUl1YmFxRxgQCv_ClnRYTSCY2DQruq55HqdgfFi_VDv4NVzpgcHjGfUR_F4ZidWgHe_kjqK0K87KSdbMh1hr6LbGXC-9-sL86feG7-mCFuDWuN0Aa32wbSDY5xUnKFLw241j9-jrER",
+      "Ab43m-v3g2ZKcYf5PDE7i8NRl6wyMdlckhy_2LiCTSXaKV8D-B37cyDg-WS5YPVg4WtLmLZ6Ba6SHhZ0L_tDvDOMSjCKq2YcD0U3yr_JamlFgcLTnsaFIunyNwCmYl82MgywDer4PdECSghcLD434mDiZhU1fCLEqAaXlj2krPswUiVkObBB12-sjz1pvfoBxzKFO-w8SUbddclWYPbhJ-qhT9lMtEHfj-Z6Q7A-bpk0Dx_sYaYxnX6g4k-1DnfiRib8hxIiUq55zo_mmHV6zeKXWVUF4KW-TvZyDXx1I-I6Qd9u6wl-2_M1HVpsJaGsrDxn-mxNNKRusjPkFzaK7rW0Og9Yp1ME8RbKi1Nyb77XcaGhDb6ZlSqbYk-g_mcojccA6g07kPDw2iJ5-mwDITof8eFhI8o81V-hQwYoTR4hB9ip7U3FKGOOfanBDyubbYt7",
+      "Ab43m-uJQvGUR69QDiXPSPzbCbD-eU859aqQw4onjTTJWS9ABUmjRupRSwY1m-izLFKMGyZaIWJoWZh2jqfC5pJ5eIoYi3hXGGMxCx6RLmaLAM0Z7hfoiuXOVPiMAhDsqH__70v9VL4cCzCeddHUIamhD8rMRNtFFenR0ekj9OdzGcMHuMzaM3NaU6ImbwdlwqVqgLuXeOQnpBVqwmtlci7VTpQsAhjtxWReLEYs71l8qIzUJx-gMcJ7YqzCrMSypZ2Tsng3LpXmpQpSlsdjscXYDQUsmZYdGcV_1wiWjjNX0Zr9YfWq3rIM3CoR-ojSfyaOs-UUr35yUH5m3lC-ymWptf3nJjU5cdszim4i449nqyTN82KtmlLTKWsB1UI89jdfVuanXGbH9OBPbPlGX5QUBYT_DP7TDrpcoc0V42jbRoi6_Ae0KMheTO8YbSEG3g"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0,
+    "verification_status": "unverified"
+  },
+  {
+    "id": "trattoria-shillong-pb",
+    "name": "Trattoria",
+    "tagline": "The Authentic Hearth of the Khasi Hills",
+    "theme": "Traditional Jadoh Stall & Indigenous Flavors",
+    "introduction": "Trattoria is Shillong's legendary, bustling culinary landmark. Famously located in the dense alleys of Police Bazaar, it serves as the ultimate gateway to real Khasi home cooking, where steaming pots of spiced mountain ginger and whole black sesame satisfy local crowds daily.",
+    "whyVisit": "To experience authentic, unaltered Khasi food in a casual, traditional atmosphere with extremely friendly local diners.",
+    "hours": "11:30 AM — 9:00 PM (Sundays Closed)",
+    "address": "Police Bazaar Circle, Next to old assembly, Police Bazaar, Shillong 793001",
+    "neighborhood": "Police Bazaar",
+    "hasLiveMusic": false,
+    "vibeTags": [
+      "Khasi Cuisine",
+      "Budget Eatery",
+      "Bustling Center",
+      "Indigenous",
+      "Humble Style"
+    ],
+    "mustTry": [
+      {
+        "name": "Signature Jadoh Pork Stock Rice",
+        "description": "High-altitude local short-grain red hill rice slow-brewed in seasoned pork loin broth, mountain wild ginger, and shallot oil.",
+        "price": "₹180",
+        "image": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Dohkhlieh local Onion Salad",
+        "description": "A cold traditional pork dish tossed with local red onions, green mountain chilies, and hand-shredded fresh ginger leaves.",
+        "price": "₹140",
+        "image": "https://images.unsplash.com/photo-1623961990059-28355e229a87?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5764721,
+      "lng": 91.8818613
+    },
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    ],
+    "place_id": "ChIJOSMOW5J-UDcR41EZfssiih4",
+    "formatted_address": "Shop Number 16, MUDA, Police Bazar, Shillong, Meghalaya 793001, India",
+    "latitude": 25.5764721,
+    "longitude": 91.8818613,
+    "google_maps_url": "https://maps.google.com/?cid=2200609625313202659",
+    "website": "https://trattoriashillong.business.site",
+    "phone_number": "070858 86233",
+    "rating": 4.2,
+    "user_ratings_total": 941,
+    "types": [
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM – 9:00 PM",
+      "Tuesday: 11:00 AM – 9:00 PM",
+      "Wednesday: 11:00 AM – 9:00 PM",
+      "Thursday: 11:00 AM – 9:00 PM",
+      "Friday: 11:00 AM – 9:00 PM",
+      "Saturday: 11:00 AM – 9:00 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [
+      "Ab43m-v3jbPDjZ5CVrNOX4wDFd7_UFO2l09_ny5HQPd4bWSFP5-hAZKXElIgUy9wG7HAD-RsjeStg3J6pS0e99-PDRP9jDXMtHGZV_0AwWe0ieC4N1SsUg0S6pxpo5Szs0kljdnUTEeVjLIYz_IB7PHOtzfz3UYOyqISOj_GzSnvXFwrVDUYHfhLGWaf69WYFYSGwRuwj0j9wfzeajLxg-Esj0ZodPDNLfHVpWZ9qrL-LwZSu4DP8dK3ZtRGf4VxSoM3cfHHW3eB20cm0F8u75ijuXZnephHC9eAxpkEEP3Lqyg2m6LWxqOOFQ-ay-2tirMCeOtz1o3G3S4ajM3F8Mqz0dp_eGfDhcsUmYr2ZeWgHLh0S1K0JmJ3YI0xTEXxdRMBP1kYFFxPD2YsPAQQ9KAEkxsbkzLUzm-OaheraxXZqS78zv7G",
+      "Ab43m-szXkQ5gL7gz9Wll1A5LbDeUhWzpD6p0D_nk7c_6cm1tbWSoGvrOJ-eSj0TMCrdQ2ATducXfRJY26RhMbZFA_j2V9olj8NHEaDy3BJb6-FxdWnOs5Wgs836n_vqjnZhpC9nlrSSs32yaoz99Gg4ggNtw8wj8-ruxoNYFrItSttA_-mg4AHp1E_u4xUnyIJpGDlAb8pffZCwaU0R1__JshiNvOiQJqM5Zv1vUBFgIC9QNAKB3yMdRgI4unGHvuRm3WT3SlfqMAaR2XBqr5jvV3oj0FMk7g8PUI8PCJc01SsOu4LIZ0GrtRv2IKX4dI1oqeswNlrBpLYqQlf2FF6GOra0uM6NniPDQ8hNzu6WDLQ4DCClfM-saUudd4ZdWSHEkQH8WUHgrnA6ha6PU4j4rt07whgBtHzqDa_guPqxJAAOxVyJuAC9T-gIGYTeMrJt",
+      "Ab43m-trM_nl-8Ff0MpjDtOe1h1WwEAGnWk1P_uvj-vdl0aR8RXGH2zzxluzdSa0XIofNSjoEk3__-tt6xh5TYbrgMjWZ4-axBUI8jg3jM4n6i19zPA49JBCuaXGAmI_IBFVwyxSsim84_oEBIqEwXK4VIiVUWHpkYXIIbGx54dHZ__z4Tn3TohW0FxG1taLZ577Uv1v1XtsnM0zQ3Vodn7BTxWZeH4K1Z24pYfqN0XKJ0cTkOwg_1Ei9BbB6EH4VdClFQ5B1bh8yIJttxVP1UBrUcotd-YWWaRkFfCRtOAqLJQi8xjp41Xm0Hq6kqyRPQhrbKiMcjx1-h41FwzZuGa2d5i8k4XrNd_xuzg20z0H_SysedH-oa9o7n162DQC9RvHJCFo5UYc2-uiGRy6jqrp1p6yjMdk7P8ulHGqm1HLeZ7ebPwq6CPH_IMBb97_9rm2"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "evening-club-laitumkhrah",
+    "name": "The Evening Club",
+    "tagline": "Vintage Vinyls & Unbound Mountain Acoustics",
+    "theme": "Cozy Rooftop Deck, Classic Rock Vibe & Live Mic Stage",
+    "introduction": "The Evening Club is one of Shillong's oldest and most iconic live music spots. Nestled on a high balcony overlooking the valley, it features an elegant wooden rooftop lounge where classic vintage rock vinyls, warm firepits, and acoustic stages keep Laitumkhrah's musical hearth burning.",
+    "whyVisit": "To grab a drink on their elevated rooftop deck during the golden hour, followed by live classic rock band gigs under warm yellow lanterns.",
+    "hours": "4:00 PM — 11:00 PM (Closed Tuesdays)",
+    "address": "Khyndailad, Laitumkhrah Main Road, Shillong 793003",
+    "neighborhood": "Laitumkhrah",
+    "hasLiveMusic": true,
+    "vibeTags": [
+      "Rooftop Cafe",
+      "Live Stage",
+      "Vintage Vinyl",
+      "Cozy Hearth",
+      "Valley View"
+    ],
+    "mustTry": [
+      {
+        "name": "Mountain Cardamom Spicewood Infusion",
+        "description": "Stirred high-altitude local black tea-cocktail infused with toasted wild cardamom, clove bark, and organic molasses.",
+        "price": "₹190",
+        "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5767193,
+      "lng": 91.882956
+    },
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    ],
+    "place_id": "ChIJlwA-VZJ-UDcROk9BJT6HTDs",
+    "formatted_address": "The Eee Cee Hotel, Khyndailad, Police Bazar, Shillong, Meghalaya 793001, India",
+    "latitude": 25.5767193,
+    "longitude": 91.882956,
+    "google_maps_url": "https://maps.google.com/?cid=4272938847450517306",
+    "website": "https://www.facebook.com/eveningclubshillong/",
+    "phone_number": "+91 364 222 3555",
+    "rating": 4.4,
+    "user_ratings_total": 535,
+    "types": [
+      "bar",
+      "establishment",
+      "point_of_interest"
+    ],
+    "opening_hours": [
+      "Monday: 1:00 – 11:00 PM",
+      "Tuesday: 1:00 – 11:00 PM",
+      "Wednesday: 1:00 – 11:00 PM",
+      "Thursday: 1:00 – 11:00 PM",
+      "Friday: 1:00 PM – 12:00 AM",
+      "Saturday: 2:00 PM – 12:30 AM",
+      "Sunday: Closed"
+    ],
+    "photos": [
+      "Ab43m-t_rjHgUomGyVFRY-XpdTIikAkySnUVLNTReXSZJSFhOEM4cfQYnw8mFoYViWc8oeeM4QwjRdSuH0dkhmRtEVi8KjsD_oQsjTKnWulsLl4XoFK566xp7RsrNt8mz0P-jrP1BkYA9xaccI0EERofGyCj4Zv6px461kq09b8fcEQoN7TalkjwH6Eh_73lgMl-IFHcVmReRK55v-vhNVK-EOkYok0LR_HlBypCYddX_PKYl6bHxURy36wokFQXJua_OQGlW4GyIssVkB3BXfJatq_kGoU_M_GBatpfxuTu_KEeZ2CT1UFbSLozQggqRL7kh4sfxO1hhJvoRgsBmTOc7kukI5dvZPK-WzySOX_tLb1iy3qygkFUk6Ob7FLOjuHk0et-w0_CTrhwJpuiZENmccL4hV2XFw0gwYONmsLBam_3LA",
+      "Ab43m-s4P0eW3XoviMpCYJyI73nsvEYWNowwMuTTqSmZAvJeD5BOezxz8APKWgyn9IYHr-mhHBFz5MvbUta1sa6Xi7Cruvt036XlhP9p7C32bt7IPBsmNW_6VBOv4MYRsLX8P_ko4tzWZH8mASRUXJ5vWUFavF0RznqBh2lM1aQ02o9iXnf9O98WZXqSLqF-pAqBIRw3ETf0JvfKTdH_id-8xMtpSzFFpEYVRn8BMTvKJY1xQVw9hNQjE_Gj3q7vp5cd89cXNdoHl2unIpxqlSOcIsypYhxUn3yiohRg5a_Bhnox_W3rsqU62wjFr12eW1kBojty1UZi6PgztP16aTIivsb8DvSAECSJlZKxu6AhkgFFfy12dNRpp90J_rWjpa9qdIEVpNCToSlwLQFfCOx5R0Pjatit2oNIz_Zw0V8V2dzYCu1k9Ahj01oWeqXq2A7o",
+      "Ab43m-uoulEFvNL1J5qKuumh3nVDnTFq2NZrb3SBTfldTndh7qCQ2svJy5cTWi49DZl6XeLytX_K-Npzu9DcZJBtqTOsFgrOsvgmxNA9zy4xzRg_--niFTnsEFFpqeoC6ClrAcBz3nU_QbTX1ycGjwsnOao-xmsHePW3kkanVr8K17H1YdPfMKtRjbl1lKZSoODukkBxcvdFG1WjxyjG34NBTpiBNAJsuh-JBV098wxKTnCj9zEWPMfuT7ANJYvMLHOA3IdDbidP5G-8czu309vAD830tex54c7nN0nu79ZQNSbsT9iRiFJd4Xz9fYaGKbEZrRA7EPtliiVB8L6j_kEdU-igJLgUysqq2vQ5GPPkgM2J5FtAgKwGiiB9YQrppxMrPWTcfPZy2ad4d2abOps9tAGVOIrIOrYi1kZlfjfiR0TBXkdR4ntHA3vKM5wlIA"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "jiva-grill-nongkynrih",
+    "name": "Jiva Grill",
+    "tagline": "Spectacular Waterfalls & Luxury Sizzlers",
+    "theme": "Premium Pine Lawn & Cascading Slate Waters",
+    "introduction": "Jiva Grill brings an absolute visual masterpiece of fine dining to the foothills. Surrounded by towering emerald pines and cascading fresh slate waterfall constructs, this gorgeous premium dining retreat offers pristine outdoor glass seating, romantic stone fire pits, and exemplary multi-cuisine sizzlers.",
+    "whyVisit": "To experience a luxury, scenic dinner alongside live flame grills and cascading mountain pools under the starry night sky.",
+    "hours": "11:00 AM — 10:30 PM (Daily)",
+    "address": "Nongkynrih Main Road, Behind Pinewood Gates, Shillong 793003",
+    "neighborhood": "Nongkynrih",
+    "hasLiveMusic": false,
+    "vibeTags": [
+      "Premium Dining",
+      "Cascading Pools",
+      "Outdoor Deck",
+      "Waterfalls",
+      "Fire Pits"
+    ],
+    "mustTry": [
+      {
+        "name": "Stone Grilled Mughlai Platter",
+        "description": "Hand-skewered local ingredients and tender lamb pieces, slow charcoal-roasted on local hot mountain basalt tiles and served with mint dip.",
+        "price": "₹420",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.260839,
+      "lng": 91.7478108
+    },
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    ],
+    "place_id": "ChIJ4cSgGBTzUDcRrlMyHIcmaLc",
+    "formatted_address": "Jiva Resort Saitsihpen, near Kutmadan, Sohra, Meghalaya 793108, India",
+    "latitude": 25.260839,
+    "longitude": 91.7478108,
+    "google_maps_url": "https://maps.google.com/?cid=13215855468254221230",
+    "website": "http://jivagrill.com",
+    "phone_number": "+91 94369 12345",
+    "rating": 4.6,
+    "user_ratings_total": 1297,
+    "types": [
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 12:00 – 5:00 PM",
+      "Tuesday: 12:00 – 5:00 PM",
+      "Wednesday: 12:00 – 5:00 PM",
+      "Thursday: 12:00 – 5:00 PM",
+      "Friday: 12:00 – 5:00 PM",
+      "Saturday: 12:00 – 5:00 PM",
+      "Sunday: 12:00 – 5:00 PM"
+    ],
+    "photos": [
+      "Ab43m-uLGVEEKvB1GSke76R5ZKkaZn4vrCG08IkMH0_IaHZZ4VmbBpPLGGKNgl77apyeaehA4jEcK4KxhR-4Bpf6fMh5zXdDLvGCGnV2wQbDVkVcA4i91O1eeqCbiDrdpoyERLmGkdJ284YXBSmJdE9dKxIkts1ELxg0lc9aJ_v4CSL-OAjvIXIlUmrABRWqJVnFNBC0e51gNQPF3I64eEA0m_D_YZLbeNeszkJ-mN2OtuW1gJ1s9F9TDrtXdYwfx7W6a0StBPoruNLE9PtA24LpdXOiD-JGMzPVQhmwnioQree-9R7LTi9I2NVwPQIYFzZAOnSNkKGOlsX_LrcFcENShEUx-DiKcRtEg4EVBZ1NZjeAbfhaMOhXO3wxfbm9qtn4XLQ0SXZZfUgUohiBctWX-lQdTwRgCQRN7LqlZaaNfWNZiQ",
+      "Ab43m-tv3aynTewSbCnhc86_3SqCp-Dh2EMb9dLYjlsIMbb2C09r91zJQtQp4eQTA1AGL3Y0jmPxGFmZaDG1FrScw_slnWiPbXWWnPi19k41kKGSLJX8bYLqBDesU0dki2af1xmQTDJd44_PpJ8zsLmlT4frSs1YgyvdEZbOMP1Ls_MI85clFZyA_St98_xLgdw5oEQTyQI_RFLwtV_4Q_PHjqWThKmbb6jfO07YVW5ZOZ6oCRoIVBh8Q7GyUNF82AZ1YQ4jRdOjREBYK6wSMaBuL-SxCQJ_3ENaTg1YSTbeqlAvme09wvIpEVmS28Lr-aGNcyrQM3r5EwmUg9b9Dy0qweZnKAgvKkUL8RPp4uMoTelqo5mVxAK-t2Ui_Kd9gzG0DRrxy-9u5AukQkcFJyP9DbkACAEu_yTVQJFhnTEJjtY",
+      "Ab43m-syhfYknVC_HYxbly5LwXyJAEce-BNAySdn1UMS_dXGdFtdU4hqG6e_HlKN8LTo8we9cEHzl3Vn_XJgNvZ1RzoEY6mMngfG2bDtwBAz-2pO8JhjKpd3o5exF22lkOApMXA66XgBvetnxlp6fdbI0lRLw_2EU-aoSAGUB39zkkYNpxP4XfSl4dxY5_AVwSyFAAoSu9cRH5y-r3OJqHMYh5U0woA6JavVwZNukgEcldRa6y9nHWjitaZtk0ocdTwc7sa12ztn0qXNGKQJ3_pbfCyXIRF3-zJiYKtH7EXLg9ZGX83DY80FTYyxvzDo3jAX1KP-zoi3ORkcM1kZS9M0eV3CFYtVZuowqnwTP9Ed1aO4SU2TXu79AFjTZsMig42VavNw-8cu_Ekav3iHU_5tQ1DS7bm0yoMLaMHAa4TyaFPrLvkOnwfjjVzhLmoEHjIz"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "bread-cafe-pb",
+    "name": "Bread Cafe",
+    "tagline": "Aromatic Bakers & Hearth Espressos",
+    "theme": "Wooden Countertop Cozy & Morning Bakes",
+    "introduction": "Bread Cafe is a beloved traditional bakery and coffee counter in the center of town. With sprawling wooden shelves covered in fresh loaves, morning croissants, and sweet local pastries, it serves as the ultimate early-morning cozy shelter for travelers and students sipping espresso drafts.",
+    "whyVisit": "To enjoy newly baked warm butter croissants paired with a silky single-origin espresso shot right after the morning fog lifts.",
+    "hours": "8:00 AM — 9:00 PM (Daily)",
+    "address": "Bara Bazaar Crossing, Police Bazaar, Shillong 793001",
+    "neighborhood": "Police Bazaar",
+    "hasLiveMusic": false,
+    "vibeTags": [
+      "Cozy Café",
+      "Warm Bakes",
+      "Bustling Center",
+      "Loft Seating",
+      "Comfort Foods"
+    ],
+    "mustTry": [
+      {
+        "name": "Warm Butter Cranberry Croissant",
+        "description": "Flaky, multi-layered golden croissant stuffed with locally sourced sweetened wild mountain berries and rich butter glaze.",
+        "price": "₹120",
+        "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5710728,
+      "lng": 91.8960421
+    },
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    ],
+    "place_id": "ChIJmyRum7t-UDcRTpv6rWyrqsE",
+    "formatted_address": "HVCW+FFF, Main Road, opp. Post Office, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "latitude": 25.5710728,
+    "longitude": 91.8960421,
+    "google_maps_url": "https://maps.google.com/?cid=13955154878624602958",
+    "website": "http://www.breadcafe.co.in/products.htm",
+    "phone_number": "087947 26489",
+    "rating": 3.7,
+    "user_ratings_total": 617,
+    "types": [
+      "bakery",
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant",
+      "store"
+    ],
+    "opening_hours": [
+      "Monday: 10:30 AM – 7:00 PM",
+      "Tuesday: 10:30 AM – 9:00 PM",
+      "Wednesday: 10:30 AM – 9:00 PM",
+      "Thursday: 10:30 AM – 9:00 PM",
+      "Friday: 10:30 AM – 9:00 PM",
+      "Saturday: 10:30 AM – 9:00 PM",
+      "Sunday: 10:30 AM – 9:00 PM"
+    ],
+    "photos": [
+      "Ab43m-uz1MhlDOuP2wTvFMFSSRSVoVx8P3Xjd4wsmcUd9ceNKXB9pZstIuqZO7QWkbOQdTHrnaYykLiJjESRgEsS8dCRl7oVG0jGcvUo-xABfFyPJ9Gz2xFqhve0QDUYSdoGv978boXk1gKltb6FFYonwFm53VOEcxZCMxLFoVEkdu3f0OWAAnbidel2zAoytqGz_43eTXzsitfuQdy4IQL5KLz2vfeEBbrMP8DDMsS67nYofm_J_pPlOV10VGc-lgExSO30TyhizEYdOpz8brOemnPtjGtnlPBMXgRk89G33ZLGvgNnY33nIZfziHQbf2_zv3OJQbqIxOm9EtzEaBUTiUJP6AG7tpupf9icnOmvs24CMzWeNXbAdzdZ7WMqglZXtkuMvVH8w0rrGEKlxszO6VoC3fsn21cHD39ReoMxAaU_ag",
+      "Ab43m-uzJOrkV32Ibam02ZteWPmYOC0uayfgyp2CrLTxhtQaHlhPTBc5TVT1mCA9q5SBg6xKoj5_yCm_fYkZjecwhN3YNMVplA-I9LBcOuAoA9ylVeByg1b1QSDgQICeHd7AEAe-S7Cs-W3z0joprD8tnK-jIyBv2XQQDWFU0PHRyW4gI8vm8FlpWoRnc-SOx6orVfTxqgedr1a8FauPGaICVIw4MMnSLkuseNkuGPtbXq9119YMpykAepPE02OkDD91RMnEt6P6IJM4PV_MxHW1rYN_vV942wsNQJ8M21qPUebsfeF72ZWutx7LXQo_wOgiTJv0NMb1Ln_Xp75eQFG2C71K7d9N1NJID9Fiqus7aVIdUIzyGbUo0CTnnRasDAlot6W1heeWU4khMLdEbOVIe2oQXKi8Hyj-MtFbZ9noj-tsP6Q",
+      "Ab43m-vBihUo_Omb5KrbYP0m8aQRQWRo3_Tx3UysZjbmjpxl9NQ3u0ozjDnWGdU0mChvJpFuMtzKQoTvSC3zbB3APtaEsV27QbBNZ6JkV9f-81ETf0wdSSR_7DZwnr91GTEUADrEWGpfyNSUHVyISpneYophuipocsCpm6iRKUl7CiwzHoKqVDMbas8OXxr2Ct7-tzgUhwaLlTPFGPBNSCsu6R9EiIM3j964D6K0c2xt2Bd_-3XNFtW2py7Leqpun7Si9IwjY4B4q88A5uRUoZp88eUUuqJ4Lrx2s3TiFF-K6S-WDqpgkTutt-pGxDmw7S1j1Qb0FmQi_RUErNEbwzsQvF-0L4PkGPUtItuSX1dXAixzq5ZAYeLCDLAyrFATFIK1v1XqpopEmqfEm0dQuVmAO9OnCp2tOUrrTxEmnxfnB2A"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "you-and-i-shared-cafe",
+    "name": "You & I Shared Café",
+    "tagline": "Traditional Khasi High-Tea & Interactive Board Games",
+    "theme": "Local Teas, Traditional Board Games, and Bamboo Crafts",
+    "introduction": "You & I Shared Café is an intellectual and cultural sanctuary located in Mawroh, known for being a living museum of Khasi traditions. Adorned with indigenous bamboo furniture, vintage photos, and Khasi musical instruments, it’s a place where guests sit on low stools, sip from over 100 varieties of locally sourced herbal teas, and play traditional board games like 'Khnla-Khylla' (Tiger and Goat).",
+    "whyVisit": "To play traditional Khasi timber games, read local folklore books, and experience the slow-brewed Red Tea (Sha Saw) with authentic millet cakes (Pukhlein).",
+    "hours": "11:00 AM — 8:00 PM (Closed Sundays)",
+    "address": "Mawroh-Pedestrian Road, Mawroh, Near Sunny Hill, Shillong 793008",
+    "neighborhood": "Mawroh",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Traditional",
+      "Board Games",
+      "Indigenous",
+      "Tea House",
+      "Rustic Bamboo"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Sha Saw & Pukhlein Duo",
+        "description": "Authentic Khasi black tea sweetened naturally with wild mountain honey, paired with crispy fried jaggery-infused rice powder cakes.",
+        "price": "₹110",
+        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Skei Rice Cake Plate",
+        "description": "Traditional steamed rice flour dumplings filled with subtle local spices and sweetened wild field coconut slices.",
+        "price": "₹90",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.594751,
+      "lng": 91.890451
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    ],
+    "place_id": "ChIJMawrohSharedCafePlaceId",
+    "formatted_address": "Mawroh Road, Shyiap, Mawroh, Shillong, Meghalaya 793008, India",
+    "latitude": 25.594751,
+    "longitude": 91.890451,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192301986519",
+    "website": "https://youandisharedcafe.business.site",
+    "phone_number": "087877 42801",
+    "rating": 4.5,
+    "user_ratings_total": 814,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM — 8:00 PM",
+      "Tuesday: 11:00 AM — 8:00 PM",
+      "Wednesday: 11:00 AM — 8:00 PM",
+      "Thursday: 11:00 AM — 8:00 PM",
+      "Friday: 11:00 AM — 8:00 PM",
+      "Saturday: 11:00 AM — 8:00 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [],
+    "khasi_food_available": true,
+    "match_confidence": 0.96,
+    "verification_status": "verified"
+  },
+  {
+    "id": "cafe-sola",
+    "name": "Cafe Sola",
+    "tagline": "Retro Rock-Style & Gourmet Continental Bistro",
+    "theme": "Retro Vinyls, Electric Guitars & Sizzler Aromas",
+    "introduction": "Located on Laitumkhrah’s bustling main artery, Cafe Sola is a premium diner with a retro-rock layout. Boasting warm brickwork, records signed by legendary regional blues squads, and high metallic barstools, it's beloved for serving the finest sizzling platters, smoked barbecued hamburgers, and rich hot chocolates in town.",
+    "whyVisit": "For an unmatched retro rock diner experience, vibrant chatter, and the ultimate comfort food after a chilly twilight drive.",
+    "hours": "11:30 AM — 9:30 PM (Daily)",
+    "address": "36 Laitumkhrah Main Road, Near Beat Junction, Shillong 793003",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Retro Rock",
+      "Brick Walls",
+      "Lively Chat",
+      "Bar Seating",
+      "Comfort Foods"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Sola Gourmet Smoked Burger",
+        "description": "Succulent double-pattied seasoned mountain beef or pork belly on a toasted brioche bun, filled with sharp cheddar, smoked local bacon, and wild berry relish.",
+        "price": "₹340",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Artisanal Spiced Hot Cocoa",
+        "description": "Thick artisanal Belgian cocoa simmered with local orange peel zest, cinnamon shavings, and topped with sweet marshmallows.",
+        "price": "₹160",
+        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.571408,
+      "lng": 91.894251
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+    ],
+    "place_id": "ChIJCafesolaPlaceId",
+    "formatted_address": "Laitumkhrah Main Road, opposite Post Office, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "latitude": 25.571408,
+    "longitude": 91.894251,
+    "google_maps_url": "https://maps.google.com/?cid=5624102910245012596",
+    "website": "https://instagram.com/cafesola",
+    "phone_number": "0364 250 1205",
+    "rating": 4.4,
+    "user_ratings_total": 624,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM — 9:30 PM",
+      "Tuesday: 11:30 AM — 9:30 PM",
+      "Wednesday: 11:30 AM — 9:30 PM",
+      "Thursday: 11:30 AM — 9:30 PM",
+      "Friday: 11:30 AM — 9:30 PM",
+      "Saturday: 11:30 AM — 9:30 PM",
+      "Sunday: 11:30 AM — 9:30 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.95,
+    "verification_status": "verified"
+  },
+  {
+    "id": "heads-up-cafe",
+    "name": "Heads Up Cafe",
+    "tagline": "The Rooftop Hub for Creative Minds",
+    "theme": "High-Rise Glass Decks & Neon String Lights",
+    "introduction": "Perched atop Dhankheti's commercial square, Heads Up Cafe features a stunning open-air glass patio with panoramic views of Shillong’s mist-laden valleys. Modern neon lighting signs, pastel custom sofas, and beautiful vertical plant columns create a photogenic, youth-driven atmosphere filled with remote creatives and university students.",
+    "whyVisit": "To observe the sun setting behind Dhankheti’s pine slopes, sipping a cold-pressed mountain berry juice under glowing fairylights.",
+    "hours": "11:00 AM — 10:00 PM (Daily)",
+    "address": "Malki Point Road, Behind State Bank, Dhankheti, Shillong 793001",
+    "neighborhood": "Dhankheti",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1521193089946-7aa29d1fe73a?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1521193089946-7aa29d1fe73a?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1521193089946-7aa29d1fe73a?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Rooftop Cafe",
+      "Valley View",
+      "Fairy Lights",
+      "Neon Style",
+      "Vibrant Chatter"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Meghalaya Wild Honey Waffles",
+        "description": "Thick, crispy Belgian waffles drizzled with organic, smoky forest honey and served with a scoop of Madagascar vanilla ice cream.",
+        "price": "₹180",
+        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.565801,
+      "lng": 91.894101
+    },
+    "gallery": [],
+    "place_id": "ChIJheadsupcafePlaceId",
+    "formatted_address": "Dhankheti Point, near State Library, Malki, Shillong, Meghalaya 793001, India",
+    "latitude": 25.565801,
+    "longitude": 91.894101,
+    "google_maps_url": "https://maps.google.com/?cid=189423617045129581",
+    "website": "https://instagram.com/headsupcafe",
+    "phone_number": "087948 01241",
+    "rating": 4.3,
+    "user_ratings_total": 412,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM — 10:00 PM",
+      "Tuesday: 11:00 AM — 10:00 PM",
+      "Wednesday: 11:00 AM — 10:00 PM",
+      "Thursday: 11:00 AM — 10:00 PM",
+      "Friday: 11:00 AM — 10:00 PM",
+      "Saturday: 11:00 AM — 10:00 PM",
+      "Sunday: 11:00 AM — 10:00 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.94,
+    "verification_status": "verified"
+  },
+  {
+    "id": "mellow-mood-cafe",
+    "name": "Mellow Mood Cafe",
+    "tagline": "A Cozy Corner of Books & Acoustic Soul",
+    "theme": "Warm Fireplaces, Vintage Bookshelves & Local Art Panels",
+    "introduction": "With rustic low-floor seating, custom-woven Shillong wool carpets, and bookcases packed with vintage poetry, Mellow Mood is Laitumkhrah's ultimate bohemian hideaway. It’s a peaceful living room where independent artwork of Shillong's pine clouds can be admired while a classic logs fireplace crackles softly in the corner.",
+    "whyVisit": "To sit cross-legged on comfortable floor seating, sketching or writing while a resident acoustic musician plays gentle folk fingerpicking tunes.",
+    "hours": "11:00 AM — 8:30 PM (Daily)",
+    "address": "Boyce Road East, Next to pine groves, Laitumkhrah, Shillong 793003",
+    "neighborhood": "Boyce Road",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Bohemian",
+      "Floor Seating",
+      "Hearth Fire",
+      "Art Panels",
+      "Poetry Books"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Spiced Ginger Honey Brew",
+        "description": "Freshly crushed hill ginger roots slow-brewed with wild honey and mountain lemon zest, guaranteed to heal any cold highland chill.",
+        "price": "₹130",
+        "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.572418,
+      "lng": 91.893118
+    },
+    "gallery": [],
+    "place_id": "ChIJmellowmoodcafePlaceId",
+    "formatted_address": "Boyce Road East, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "latitude": 25.572418,
+    "longitude": 91.893118,
+    "google_maps_url": "https://maps.google.com/?cid=412359678301569427",
+    "website": "https://instagram.com/mellowmoodcafe",
+    "phone_number": "098632 41105",
+    "rating": 4.4,
+    "user_ratings_total": 215,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM — 8:30 PM",
+      "Tuesday: 11:00 AM — 8:30 PM",
+      "Wednesday: 11:00 AM — 8:30 PM",
+      "Thursday: 11:00 AM — 8:30 PM",
+      "Friday: 11:00 AM — 8:30 PM",
+      "Saturday: 11:00 AM — 8:30 PM",
+      "Sunday: 11:00 AM — 8:30 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.93,
+    "verification_status": "verified"
+  },
+  {
+    "id": "sip-and-bite-cafe",
+    "name": "Sip & Bite Café",
+    "tagline": "A Vibrant Fusion of Bites & Music",
+    "theme": "High Energy Playlists & Delectable Platters",
+    "introduction": "Located in Police Bazaar, Sip & Bite is a lively, high-contrast cafe with neon signs and pop culture illustrations. Beloved for its budget-friendly continental platters, premium bubble teas, and crispy french fries, it’s a standard student hangout during afternoon recesses.",
+    "whyVisit": "To experience vibrant city student life, play a round of table football (foosball), and grab quick hearty bites between tours.",
+    "hours": "10:30 AM — 9:00 PM (Daily)",
+    "address": "Police Bazaar Circle, Near OB Shopping Center, Shillong 793001",
+    "neighborhood": "Police Bazaar",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Bustling Center",
+      "Bubble Tea",
+      "High Energy",
+      "Neon Style",
+      "Budget Eatery"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Highland Blueberry Bubble Tea",
+        "description": "Creamy bubble tea infused with locally gathered sweet mountain blueberry purée and chewy tapioca pearls flavor.",
+        "price": "₹150",
+        "image": "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.575918,
+      "lng": 91.880918
+    },
+    "gallery": [],
+    "place_id": "ChIJsipandbitecafePlaceId",
+    "formatted_address": "Police Bazar Road, Police Bazar, Shillong, Meghalaya 793001, India",
+    "latitude": 25.575918,
+    "longitude": 91.880918,
+    "google_maps_url": "https://maps.google.com/?cid=891230491054371052",
+    "website": "https://instagram.com/sipandbitecafe",
+    "phone_number": "0364 222 0184",
+    "rating": 4.1,
+    "user_ratings_total": 480,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 10:30 AM — 9:00 PM",
+      "Tuesday: 10:30 AM — 9:00 PM",
+      "Wednesday: 10:30 AM — 9:00 PM",
+      "Thursday: 10:30 AM — 9:00 PM",
+      "Friday: 10:30 AM — 9:00 PM",
+      "Saturday: 10:30 AM — 9:00 PM",
+      "Sunday: 10:30 AM — 9:00 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.91,
+    "verification_status": "verified"
+  },
+  {
+    "id": "munchies-shillong",
+    "name": "Munchies Shillong",
+    "tagline": "The Ultimate Youth Burger & Outdoor Hangout",
+    "theme": "Graffiti Walls, Retro Music & Classic Beef Burgers",
+    "introduction": "Strategically hidden near Laitumkhrah's Beat House, Munchies is a legendary outdoor cafe featuring raw graffiti walls, a retro camper-van styled burger counter, and custom picnic benches under broad garden umbrellas. Loved by local musicians, travelers, and university students alike, it is the home of high-energy chatter, superb beef burgers, and giant glasses of milkshakes.",
+    "whyVisit": "To eat the iconic Juicy Lucy Burger, experience the lively, authentic Shillong youth scene, and listen to rock classics spinning in the background.",
+    "hours": "12:00 PM — 10:00 PM (Daily)",
+    "address": "Laitumkhrah Main Road, Near Laitumkhrah Beat House, Shillong 793003",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Graffiti Art",
+      "Al Fresco",
+      "Retro Camper",
+      "Rock Anthems",
+      "Juicy Burgers"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "The Juicy Lucy Burger",
+        "description": "A thick, grilled ground beef patty stuffed with a core of gooey, molten cheddar, topped with hand-carved local pickles and smoky mayonnaise.",
+        "price": "₹240",
+        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Munchies Loaded Cheese Fries",
+        "description": "Double-fried hand-cut mountain potatoes covered in melted cheese sauce, hot jalapeños, and sprinkled with smoked bacon crumbles.",
+        "price": "₹160",
+        "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.571932,
+      "lng": 91.891102
+    },
+    "gallery": [],
+    "place_id": "ChIJMunchiesShillongPlaceId",
+    "formatted_address": "Laitumkhrah Main Road, Near Laitumkhrah Beat House, Shillong, Meghalaya 793003, India",
+    "latitude": 25.571932,
+    "longitude": 91.891102,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537105",
+    "website": "https://instagram.com/munchiesshillong",
+    "phone_number": "087947 12015",
+    "rating": 4.6,
+    "user_ratings_total": 1104,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 12:00 PM — 10:00 PM",
+      "Tuesday: 12:00 PM — 10:00 PM",
+      "Wednesday: 12:00 PM — 10:00 PM",
+      "Thursday: 12:00 PM — 10:00 PM",
+      "Friday: 12:00 PM — 10:00 PM",
+      "Saturday: 12:00 PM — 10:00 PM",
+      "Sunday: 12:00 PM — 10:00 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "the-shillong-cafe",
+    "name": "The Shillong Cafe",
+    "tagline": "Premium Bistro and Acoustic Courtyard",
+    "theme": "Sleek Slate Fireplaces, Premium Cocktails, and Intimate Gig Stages",
+    "introduction": "The Shillong Cafe is a premium restaurant and cafe situated in Laitumkhrah, bringing a highly polished aesthetic of stone fireplaces, cozy velvet seatings, and warm amber hanging lights. The venue doubles as a hub for Shillong's live musicians, featuring a dedicated stage for intimate acoustic performances, an impressive continental menu ranging from pork chops to mocktails, and an outdoor courtyard for crisp evenings.",
+    "whyVisit": "To enjoy gourmet Pork Chops with mountain herbs and witness live local acoustic cover artists perform classic rock tunes.",
+    "hours": "12:00 PM — 10:00 PM (Daily)",
+    "address": "Laitumkhrah Main Road, Near Fire Station, Shillong 793003",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "High Polish",
+      "Slate Fireplace",
+      "Acoustic Stage",
+      "Smoked Pork",
+      "Cocktail Vibe"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Pan-Seared Pork Chops",
+        "description": "Premium slow-cooked meat cuts seared with rosemary, mountain butter, and served with a side of creamed garlic mash.",
+        "price": "₹380",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.570912,
+      "lng": 91.895054
+    },
+    "gallery": [],
+    "place_id": "ChIJTheShillongCafePlaceId",
+    "formatted_address": "Laitumkhrah Main Road, Near Fire Station, Shillong, Meghalaya 793003, India",
+    "latitude": 25.570912,
+    "longitude": 91.895054,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537110",
+    "website": "https://instagram.com/theshillongcafe",
+    "phone_number": "0364 250 0115",
+    "rating": 4.5,
+    "user_ratings_total": 810,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 12:00 PM — 10:00 PM",
+      "Tuesday: 12:00 PM — 10:00 PM",
+      "Wednesday: 12:00 PM — 10:00 PM",
+      "Thursday: 12:00 PM — 10:00 PM",
+      "Friday: 12:00 PM — 10:00 PM",
+      "Saturday: 12:00 PM — 10:00 PM",
+      "Sunday: 12:00 PM — 10:00 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.96,
+    "verification_status": "verified"
+  },
+  {
+    "id": "little-chef-cafe",
+    "name": "Little Chef Cafe",
+    "tagline": "European Continental Pastry & Gourmet Cooking",
+    "theme": "Warm Floral Wallpapers & Handcrafted Red Velvets",
+    "introduction": "Tucked away inside Laitumkhrah (Nongrim Hills), Little Chef Cafe is a premium European-style continental bistro. Famous for having a grand glass locker displaying seasonal handcrafted red velvet cakes, rich key lime pies, and gourmet cheesecakes, the cafe also offers savory skillet items, creamy cheesy pastas, and spectacular sizzlers.",
+    "whyVisit": "For an authentic taste of gourmet French pastries, classic sizzlers, and rich continental desserts crafted by some of Shillong's best confectioners.",
+    "hours": "11:00 AM — 9:00 PM (Closed Sundays)",
+    "address": "Nongrim Hills Road, Opposite Bethany Hospital, Laitumkhrah, Shillong 793003",
+    "neighborhood": "Nongrim Hills",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "European",
+      "Pastry Spot",
+      "Skillet Dishes",
+      "Cozy Florals",
+      "Premium Baking"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Classic Red Velvet Slice",
+        "description": "Luxuriously moist burgundy cocoa sponge layered with rich cream cheese frosting and sweet fresh-scraped vanilla bean glaze.",
+        "price": "₹160",
+        "image": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        "name": "Sizzling Garlic Herb Chicken",
+        "description": "Tender grilled chicken breasts basted in garlic-herb butter, served piping hot on a sizzling cast-iron platter with roasted local valley roots.",
+        "price": "₹340",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.572115,
+      "lng": 91.899652
+    },
+    "gallery": [],
+    "place_id": "ChIJLittleChefCafePlaceId",
+    "formatted_address": "Nongrim Hills Road, Opposite Bethany Hospital, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "latitude": 25.572115,
+    "longitude": 91.899652,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537115",
+    "website": "https://instagram.com/littlechefcafe",
+    "phone_number": "098630 48712",
+    "rating": 4.4,
+    "user_ratings_total": 541,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM — 9:00 PM",
+      "Tuesday: 11:00 AM — 9:00 PM",
+      "Wednesday: 11:00 AM — 9:00 PM",
+      "Thursday: 11:00 AM — 9:00 PM",
+      "Friday: 11:00 AM — 9:00 PM",
+      "Saturday: 11:00 AM — 9:00 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.95,
+    "verification_status": "verified"
+  },
+  {
+    "id": "city-hut-family-dhaba",
+    "name": "City Hut Family Dhaba",
+    "tagline": "The Most Celebrated Multi-Cuisine Family Dining Experience",
+    "theme": "Cozy Straw-Cottages, Green Vines & Water Streams",
+    "introduction": "Shillong's ultimate beloved family restaurant, featuring rich wooden logs decor, private straw-roofed cottages, and beautiful water streams inside the garden dining room. Known for its perfect tandoori dishes, Mughlai delicacies, and excellent hospitality near Ward's Lake.",
+    "whyVisit": "For a magical cottage dining setting, superb buttery tandoori grill platters, and stellar hospitality.",
+    "hours": "11:00 AM — 10:00 PM (Daily)",
+    "address": "Oakland Road, Near Ward's Lake, Police Bazaar, Shillong 793001",
+    "neighborhood": "Police Bazaar",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Family Favorite",
+      "Straw Cottages",
+      "Mughlai Specialties",
+      "Garden Dining",
+      "Water Streams"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Tandoori Butter Chicken & Garlic Naan Platter",
+        "description": "Slow-grilled clay-oven barbecued chicken in fresh velvety tomato butter cream sauce, paired with piping-hot buttered garlic naan.",
+        "price": "₹320",
+        "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.578611,
+      "lng": 91.884167
+    },
+    "gallery": [],
+    "place_id": "ChIJCityHutFamilyDhabaPlaceId",
+    "formatted_address": "Oakland Road, near Ward's Lake, Oakland, Shillong, Meghalaya 793001, India",
+    "latitude": 25.578611,
+    "longitude": 91.884167,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537120",
+    "website": "https://instagram.com/cityhutdhaba",
+    "phone_number": "0364 222 0382",
+    "rating": 4.5,
+    "user_ratings_total": 2480,
+    "types": [
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM — 10:00 PM",
+      "Tuesday: 11:00 AM — 10:00 PM",
+      "Wednesday: 11:00 AM — 10:00 PM",
+      "Thursday: 11:00 AM — 10:00 PM",
+      "Friday: 11:00 AM — 10:00 PM",
+      "Saturday: 11:00 AM — 10:00 PM",
+      "Sunday: 11:00 AM — 10:00 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.99,
+    "verification_status": "verified"
+  },
+  {
+    "id": "delhi-mistan-bhandar",
+    "name": "Delhi Mistan Bhandar",
+    "tagline": "Pure Vegetarian Heritage, Legendary Jalebis since 1920",
+    "theme": "Century-Old Indian Diner & Hot Cardamom Jalebi Vats",
+    "introduction": "Operational for over a century, Delhi Mistan Bhandar is an iconic culinary institution in the heart of Police Bazaar. Famous for serving traditional pure vegetarian North Indian breakfasts, exceptional desi sweets, and particularly crisp, steaming hot giant jalebis.",
+    "whyVisit": "For the finest pure-ghee heritage sweets, piping hot breakfast kachoris, and local nostalgia.",
+    "hours": "7:00 AM — 9:00 PM (Daily)",
+    "address": "Police Bazaar Circle, GS Road, Shillong 793001",
+    "neighborhood": "Police Bazaar",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Heritage Diner",
+      "Pure Vegetarian",
+      "100+ Years Old",
+      "Iconic Jalebi",
+      "Bustling Market"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Heritage Hot Jalebi & Rabdi Duo",
+        "description": "Lacy, ultra-crisp deep-fried golden loops served fresh out of bubbling oil plates, finished with a generous dollop of rich cold rabdi cream.",
+        "price": "₹90",
+        "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.576211,
+      "lng": 91.881211
+    },
+    "gallery": [],
+    "place_id": "ChIJDelhiMistanBhandarPlaceId",
+    "formatted_address": "Police Bazar Circle, Shillong, Meghalaya 793001, India",
+    "latitude": 25.576211,
+    "longitude": 91.881211,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537121",
+    "website": "https://delhimistanbhandar.com",
+    "phone_number": "0364 222 0182",
+    "rating": 4.3,
+    "user_ratings_total": 1390,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 7:00 AM — 9:00 PM",
+      "Tuesday: 7:00 AM — 9:00 PM",
+      "Wednesday: 7:00 AM — 9:00 PM",
+      "Thursday: 7:00 AM — 9:00 PM",
+      "Friday: 7:00 AM — 9:00 PM",
+      "Saturday: 7:00 AM — 9:00 PM",
+      "Sunday: 7:00 AM — 9:00 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.99,
+    "verification_status": "verified"
+  },
+  {
+    "id": "ginger-restaurant",
+    "name": "Ginger Restaurant",
+    "tagline": "Premium Global Dining & Live Multi-Cuisine Studio",
+    "theme": "Sleek Contemporary Glass & Executive Buffet Bars",
+    "introduction": "A sophisticated multi-cuisine dining venue situated inside Hotel Polo Towers. Boasting sleek modern interiors, executive tables, and standard five-star hospitality, Ginger specializes in high-end Continental, Chinese, and Indian spreads.",
+    "whyVisit": "For Shillong’s ultimate Sunday brunch, exquisite smoked pork ribs, and standard premium dining with business associates.",
+    "hours": "7:00 AM — 11:00 PM (Daily)",
+    "address": "Hotel Polo Towers, Oakland Road, Polo Market, Shillong 793001",
+    "neighborhood": "Oakland",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Five Star Hotel",
+      "Fine Dining",
+      "Premium Buffet",
+      "Classy Bar",
+      "Multi Cuisine"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Polo Club Smoked Pork Ribs",
+        "description": "Tender highland pork ribs marinated in master chef's smoky local honey-mustard glaze, slow-baked until meat separates gracefully from the bone.",
+        "price": "₹450",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.579415,
+      "lng": 91.890118
+    },
+    "gallery": [],
+    "place_id": "ChIJGingerPoloTowersPlaceId",
+    "formatted_address": "Polo Towers, Polo Market, Oakland, Shillong, Meghalaya 793001, India",
+    "latitude": 25.579415,
+    "longitude": 91.890118,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537122",
+    "website": "https://hotelpolotowers.com/dining",
+    "phone_number": "0364 222 2341",
+    "rating": 4.4,
+    "user_ratings_total": 890,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 7:00 AM — 11:00 PM",
+      "Tuesday: 7:00 AM — 11:00 PM",
+      "Wednesday: 7:00 AM — 11:00 PM",
+      "Thursday: 7:00 AM — 11:00 PM",
+      "Friday: 7:00 AM — 11:00 PM",
+      "Saturday: 7:00 AM — 11:00 PM",
+      "Sunday: 7:00 AM — 11:00 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "lamee-restaurant",
+    "name": "Lamee Restaurant",
+    "tagline": "Elegant Multi-Cuisine Hub of Police Bazaar",
+    "theme": "Plush Velvet Sofa Booths & Indo-Chinese Sizzles",
+    "introduction": "Strategically positioned in the prominent commercial center of Police Bazaar, Lamee is a standard double-storied fine-dining venue. Outfitted with plush velvet family booths and high-glass windows looking onto Shillong's central streets, it delivers reliable North Indian curries and sizzling Indo-Chinese platters.",
+    "whyVisit": "For cozy family gatherings, premium garlic tandoori kebabs, and authentic Asian preparations.",
+    "hours": "11:30 AM — 10:00 PM (Daily)",
+    "address": "Police Bazaar Circle, GS Road, Shillong 793001",
+    "neighborhood": "Police Bazaar",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Family Friendly",
+      "Plush Booths",
+      "Indo-Chinese",
+      "Central Market",
+      "Fine Dining"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Shredded Lamb in Sichuan Black Pepper",
+        "description": "Fragrant crispy wok-tossed lamb shreds combined with sweet bell peppers, ginger strips, and rich black pepper seasoning sauces.",
+        "price": "₹380",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.575510,
+      "lng": 91.882142
+    },
+    "gallery": [],
+    "place_id": "ChIJLameePlaceId",
+    "formatted_address": "Police Bazar, Shillong, Meghalaya 793001, India",
+    "latitude": 25.575510,
+    "longitude": 91.882142,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537123",
+    "website": "https://instagram.com/lameeshillong",
+    "phone_number": "0364 222 4115",
+    "rating": 4.2,
+    "user_ratings_total": 1120,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM — 10:00 PM",
+      "Tuesday: 11:30 AM — 10:00 PM",
+      "Wednesday: 11:30 AM — 10:00 PM",
+      "Thursday: 11:30 AM — 10:00 PM",
+      "Friday: 11:30 AM — 10:00 PM",
+      "Saturday: 11:30 AM — 10:00 PM",
+      "Sunday: 11:30 AM — 10:00 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified"
+  },
+  {
+    "id": "barbeque-restaurant",
+    "name": "Barbeque Restaurant",
+    "tagline": "Shillong's Historic Pioneers of Authentic Chinese",
+    "theme": "Red Timber Walls, Cozy Cabin Booths, and Wok Aromas",
+    "introduction": "Operating since the late 1970s, Barbeque (popularly Bar-B-Q) in Police Bazaar is Shillong's premier Chinese food institution. Complete with a dark wood panel design, iconic round lanterns, and highly cozy curtain-shaded cubicles, it is the town's go-to for comfort sweet-corn soup, dimsums, and Hakka pork rice.",
+    "whyVisit": "To taste the legendary Golden Fried Prawns and soak in the standard 1970s Chinese-Indian diner luxury.",
+    "hours": "11:30 AM — 9:30 PM (Daily)",
+    "address": "GS Road, Near Police Bazaar, Shillong 793001",
+    "neighborhood": "Police Bazaar",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Legendary",
+      "1970s Style",
+      "Hakka Specialties",
+      "Red Wood Decor",
+      "Curtained Booths"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Bar-B-Q Hakka Pork Fried Rice",
+        "description": "Savory wok-tossed premium rice grains combined with hand-cut smoked pork bits, spring garlic leeks, and direct farm eggs.",
+        "price": "₹260",
+        "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.575312,
+      "lng": 91.881951
+    },
+    "gallery": [],
+    "place_id": "ChIJBarbequePlaceId",
+    "formatted_address": "GS Road, near Police Bazar Circle, Shillong, Meghalaya 793001, India",
+    "latitude": 25.575312,
+    "longitude": 91.881951,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537124",
+    "website": "https://barbqshillong.com",
+    "phone_number": "0364 222 3559",
+    "rating": 4.5,
+    "user_ratings_total": 2043,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM — 9:30 PM",
+      "Tuesday: 11:30 AM — 9:30 PM",
+      "Wednesday: 11:30 AM — 9:30 PM",
+      "Thursday: 11:30 AM — 9:30 PM",
+      "Friday: 11:30 AM — 9:30 PM",
+      "Saturday: 11:30 AM — 9:30 PM",
+      "Sunday: 11:30 AM — 9:30 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.99,
+    "verification_status": "verified"
+  },
+  {
+    "id": "heritage-club-tripura-castle",
+    "name": "The Heritage Club - Tripura Castle",
+    "tagline": "Royal Indo-British Fine Dining under Pine Canopies",
+    "theme": "Grand Fireplaces, Royal Crests & Forest Vistas",
+    "introduction": "Sprawled inside the historic Tripura Castle hotel estate, this elegant, royal palace restaurant houses antique shields, heavy brick fireplaces, and expansive glass windows opening to mist-covered pine forests. It specializes in royal Mughlai spreads and authentic tribal dishes.",
+    "whyVisit": "For the finest, most luxurious royal dining setting in Shillong, serving genuine local tribal dishes in historical luxury.",
+    "hours": "12:30 PM — 10:30 PM (Daily)",
+    "address": "Tripura Castle Hotel, Cleve Colony, Shillong 793003",
+    "neighborhood": "Cleve Colony",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Royal Palace",
+      "Fine Dining",
+      "Grand Hearth",
+      "Pine Valleys",
+      "Historic Vibe"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Tripura Castle Royal Khasi Platter",
+        "description": "Authentic mountain red rice boiled with pork stock, paired with aromatic Dohneiiong sesame pork and wild watercress salad.",
+        "price": "₹450",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.567812,
+      "lng": 91.902341
+    },
+    "gallery": [],
+    "place_id": "ChIJTripuraCastlePlaceId",
+    "formatted_address": "Cleve Colony, Shillong, Meghalaya 793003, India",
+    "latitude": 25.567812,
+    "longitude": 91.902341,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537125",
+    "website": "https://tripuracastle.com/fine-dining",
+    "phone_number": "0364 250 1111",
+    "rating": 4.6,
+    "user_ratings_total": 920,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 12:30 PM — 10:30 PM",
+      "Tuesday: 12:30 PM — 10:30 PM",
+      "Wednesday: 12:30 PM — 10:30 PM",
+      "Thursday: 12:30 PM — 10:30 PM",
+      "Friday: 12:30 PM — 10:30 PM",
+      "Saturday: 12:30 PM — 10:30 PM",
+      "Sunday: 12:30 PM — 10:30 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": true,
+    "match_confidence": 0.99,
+    "verification_status": "verified"
+  },
+  {
+    "id": "jadoh-restaurant",
+    "name": "Jadoh Restaurant",
+    "tagline": "Authentic, Humble, Raw Tribal Khasi Food",
+    "theme": "Clay Cookpots & No-Frills Community Wooden Benches",
+    "introduction": "An unassuming, extremely famous local eatery situated near Laitumkhrah's central squares. Free of generic decor and dedicated genuinely to raw Khasi cuisine, it is the neighborhood standard for traditional meat dishes prepared with local wild pepper and black ginger.",
+    "whyVisit": "To taste the genuine taste of authentic Jadoh pork rice and sharp local Dohkhlieh salads with local residents.",
+    "hours": "9:00 AM — 7:00 PM (Closed Sundays)",
+    "address": "Don Bosco Square, Laitumkhrah, Shillong 793003",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Authentic Khasi",
+      "Humble Eatery",
+      "Clay Pot Cooking",
+      "No Preservatives",
+      "Local Standard"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Traditional Jadoh & Dohkhlieh Comb",
+        "description": "Short-grained wild hill red rice simmered in highly seasoned pork stock, served with raw minced pork-and-onion salad with white root-ginger.",
+        "price": "₹160",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.571120,
+      "lng": 91.892110
+    },
+    "gallery": [],
+    "place_id": "ChIJJadohPlaceId",
+    "formatted_address": "Don Bosco Sq, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "latitude": 25.571120,
+    "longitude": 91.892110,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537126",
+    "website": "https://instagram.com/jadohshillong",
+    "phone_number": "098632 41105",
+    "rating": 4.5,
+    "user_ratings_total": 1412,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 9:00 AM — 7:00 PM",
+      "Tuesday: 9:00 AM — 7:00 PM",
+      "Wednesday: 9:00 AM — 7:00 PM",
+      "Thursday: 9:00 AM — 7:00 PM",
+      "Friday: 9:00 AM — 7:00 PM",
+      "Saturday: 9:00 AM — 7:00 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [],
+    "khasi_food_available": true,
+    "match_confidence": 0.99,
+    "verification_status": "verified"
+  },
+  {
+    "id": "the-living-roof",
+    "name": "The Living Roof",
+    "tagline": "Bohemian Tree-House Terrace & Eco-Lounge",
+    "theme": "Overhead Ceiling Vines, Wooden Frames & Comfy Sofas",
+    "introduction": "An exquisite green rooftop oasis styled with beautiful hanging plants, heavy teak frame dividers, and extensive glass doors showing outstanding city panoramas. It is beloved across Shillong for serving gourmet continental sizzlers and thick shakes.",
+    "whyVisit": "To lounge with a mountain mocktail in a magnificent greenhouse design as twilight sets over the town.",
+    "hours": "12:00 PM — 9:30 PM (Daily)",
+    "address": "Laitumkhrah Main Road, Next to Ryan's Hotel, Shillong 793003",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
+      "interior": "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=1200"
+    },
+    "vibeTags": [
+      "Bohemian Roof",
+      "Vines & Florals",
+      "Gourmet Grill",
+      "Eco Conscious",
+      "Misty Terraces"
+    ],
+    "hasLiveMusic": true,
+    "mustTry": [
+      {
+        "name": "Living Roof Sizzling Pork ribs",
+        "description": "Highland pork loin rib racks slow-barbecued with direct-ground wild chili oil and honey, served sizzling hot with steamed broccoli florets.",
+        "price": "₹390",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.573112,
+      "lng": 91.896112
+    },
+    "gallery": [],
+    "place_id": "ChIJTheLivingRoofPlaceId",
+    "formatted_address": "Laitumkhrah Main Road, Shillong, Meghalaya 793003, India",
+    "latitude": 25.573112,
+    "longitude": 91.896112,
+    "google_maps_url": "https://maps.google.com/?cid=1264627192305537127",
+    "website": "https://instagram.com/thelivingroof",
+    "phone_number": "098632 40124",
+    "rating": 4.5,
+    "user_ratings_total": 690,
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "opening_hours": [
+      "Monday: 12:00 PM — 9:30 PM",
+      "Tuesday: 12:00 PM — 9:30 PM",
+      "Wednesday: 12:00 PM — 9:30 PM",
+      "Thursday: 12:00 PM — 9:30 PM",
+      "Friday: 12:00 PM — 9:30 PM",
+      "Saturday: 12:00 PM — 9:30 PM",
+      "Sunday: 12:00 PM — 9:30 PM"
+    ],
+    "photos": [],
+    "khasi_food_available": false,
+    "match_confidence": 0.99,
+    "verification_status": "verified"
+  }
+]
