@@ -16,7 +16,7 @@ import GuidesList from "./components/GuidesList";
 import AboutPanel from "./components/AboutPanel";
 import AIGuideChat from "./components/AIGuideChat";
 import DataHubModal from "./components/DataHubModal";
-import InteractiveMap from "./components/InteractiveMap";
+import InteractiveMap from "./components/GoogleMap";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<"explore" | "cafes" | "cuisine" | "walks" | "guides" | "about">("explore");

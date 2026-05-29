@@ -901,6 +901,16 @@ ${serializedCafes}
   }
 });
 
+// Expose Maps API key to frontend (safe — Maps JS API key is client-side by design)
+app.get("/api/config/maps-key", (req, res) => {
+  const key = process.env.GOOGLE_MAPS_PLATFORM_KEY || "";
+  if (!key) {
+    res.status(503).json({ error: "Maps key not configured" });
+    return;
+  }
+  res.json({ key });
+});
+
 // Vite middleware setup to handle the dual runtime modes
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {
