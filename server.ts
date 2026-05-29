@@ -477,7 +477,22 @@ app.post("/api/cafes/enrich", async (req, res) => {
             cafe.user_ratings_total = r.user_ratings_total || match.user_ratings_total || seed?.user_ratings_total || 25;
             cafe.types = r.types || seed?.types || ["cafe", "food"];
             cafe.opening_hours = r.opening_hours?.weekday_text || seed?.opening_hours || [cafe.hours];
-            cafe.photos = r.photos ? r.photos.map((p: any) => p.photo_reference).slice(0, 3) : [];
+            // Build full photo URLs (not raw references)
+            const photoRefs = r.photos ? r.photos.slice(0, 6) : [];
+            const mapsKey = process.env.GOOGLE_MAPS_PLATFORM_KEY || "";
+            const photoUrls = photoRefs.map((p: any, i: number) =>
+              `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${i === 0 ? 1200 : 800}&photo_reference=${p.photo_reference}&key=${mapsKey}`
+            );
+            cafe.photos = photoUrls;
+            if (photoUrls.length > 0) {
+              cafe.images = {
+                ...cafe.images,
+                hero: photoUrls[0],
+                card: photoUrls[1] || photoUrls[0],
+                interior: photoUrls[2] || cafe.images?.interior,
+              };
+              cafe.gallery = photoUrls.slice(1);
+            }
             cafe.khasi_food_available = cafe.vibeTags?.some((t: string) => /traditional|khasi|indigenous|jadoh/i.test(t)) || cafe.id === "rynsan-cafe";
             cafe.match_confidence = confidence;
             cafe.verification_status = status;
