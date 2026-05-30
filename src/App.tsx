@@ -16,8 +16,8 @@ import GuidesList from "./components/GuidesList";
 import AboutPanel from "./components/AboutPanel";
 import AIGuideChat from "./components/AIGuideChat";
 import DataHubModal from "./components/DataHubModal";
-import InteractiveMap from "./components/GoogleMap";
-import DiscoverMeghalaya from "./components/DiscoverMeghalaya";
+import InteractiveMap from "./components/InteractiveMap";
+import PlannersGuide from "./components/PlannersGuide";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<"explore" | "cafes" | "cuisine" | "walks" | "guides" | "about" | "discover">("explore");
@@ -545,7 +545,7 @@ export default function App() {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
             >
-              <DiscoverMeghalaya cafes={cafes} />
+              <PlannersGuide />
             </motion.div>
           )}
 
