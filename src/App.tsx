@@ -17,9 +17,10 @@ import AboutPanel from "./components/AboutPanel";
 import AIGuideChat from "./components/AIGuideChat";
 import DataHubModal from "./components/DataHubModal";
 import InteractiveMap from "./components/GoogleMap";
+import DiscoverMeghalaya from "./components/DiscoverMeghalaya";
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<"explore" | "cafes" | "cuisine" | "walks" | "guides" | "about">("explore");
+  const [activeTab, setActiveTab] = useState<"explore" | "cafes" | "cuisine" | "walks" | "guides" | "about" | "discover">("explore");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCafe, setSelectedCafe] = useState<Cafe | null>(null);
   const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<string | undefined>(undefined);
@@ -93,6 +94,7 @@ export default function App() {
   // Setup tabs
   const tabsList = [
     { id: "explore", label: "Discovery" },
+    { id: "discover", label: "Discover Meghalaya" },
     { id: "cafes", label: "Cozy Cafés" },
     { id: "cuisine", label: "Khasi Cuisine" },
     { id: "walks", label: "District Walks" },
@@ -239,7 +241,7 @@ export default function App() {
       </header>
 
       {/* Main Container Wrapper */}
-      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <main className={`flex-1 w-full ${activeTab === "discover" ? "px-4 sm:px-6 lg:px-12 xl:px-20" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"} py-8 md:py-12`}>
         <AnimatePresence mode="wait">
           {activeTab === "explore" && (
             /* EXPLORE HOME VIEW */
@@ -534,6 +536,19 @@ export default function App() {
             </motion.div>
           )}
 
+          {activeTab === "discover" && (
+            /* DISCOVER MEGHALAYA IMMERSIVE MAP */
+            <motion.div
+              key="discover-tab"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+            >
+              <DiscoverMeghalaya cafes={cafes} />
+            </motion.div>
+          )}
+
           {activeTab === "cafes" && (
             /* COZY CAFES DIRECTORY TABS */
             <motion.div
@@ -712,6 +727,7 @@ export default function App() {
 
           <div className="flex flex-wrap justify-center gap-6 font-mono text-[10px] uppercase tracking-wider">
             <button onClick={() => setActiveTab("explore")} className="hover:text-stone-100 cursor-pointer">Explore Main</button>
+            <button onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer text-amber-600">Discover Meghalaya</button>
             <button onClick={() => setActiveTab("cafes")} className="hover:text-stone-100 cursor-pointer">Cozy List</button>
             <button onClick={() => setActiveTab("cuisine")} className="hover:text-stone-100 cursor-pointer">Khasi Food</button>
             <button onClick={() => setActiveTab("guides")} className="hover:text-stone-100 cursor-pointer">Guides Periodic</button>

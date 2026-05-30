@@ -537,8 +537,19 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                         </a>
                       )}
 
+                      {cafe.menu_url && (
+                        <a
+                          href={cafe.menu_url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="bg-white hover:bg-amber-50 border border-amber-200 text-amber-800 px-3.5 py-2 rounded-lg text-xs font-sans font-medium transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer"
+                        >
+                          🍽️ View Full Menu
+                        </a>
+                      )}
+
                       {cafe.google_maps_url && (
-                        <a 
+                        <a
                           href={cafe.google_maps_url}
                           target="_blank"
                           rel="noreferrer"
@@ -550,6 +561,30 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                         </a>
                       )}
                     </div>
+
+                    {/* Price per person */}
+                    {(cafe.price_per_person || cafe.average_spend_for_two) && (
+                      <div className="flex items-center gap-3 pt-3 border-t border-stone-200/60">
+                        <div className="flex items-center gap-2 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2">
+                          <span className="text-base">💰</span>
+                          <div>
+                            <p className="text-[9px] font-mono uppercase tracking-wider text-stone-400">Price per person</p>
+                            <p className="text-sm font-bold text-amber-900 font-display">
+                              ₹{cafe.price_per_person?.toLocaleString() ?? Math.round((cafe.average_spend_for_two ?? 700) / 2).toLocaleString()}
+                              <span className="text-[10px] font-mono font-normal text-amber-700 ml-1">
+                                (₹{cafe.average_spend_for_two?.toLocaleString() ?? "700"} for two)
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        {cafe.price_display && (
+                          <span className="text-sm font-mono font-bold text-amber-800 bg-amber-50 border border-amber-100 px-2.5 py-1.5 rounded-lg">
+                            {cafe.price_display}
+                          </span>
+                        )}
+                        <p className="text-[9px] font-mono text-stone-400">Source: Google Places + verified menu</p>
+                      </div>
+                    )}
                   </div>
                 </div>
 

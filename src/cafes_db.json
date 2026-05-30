@@ -27,16 +27,40 @@
     "hasLiveMusic": true,
     "mustTry": [
       {
-        "name": "Dohneiiong Black Sesame Plate",
-        "description": "Slow-cooked pork belly coated in earthy, hand-roasted field black sesame seeds, organic ginger, and wild herbs.",
-        "price": "₹280",
-        "image": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=600"
+        "name": "Putharo Sliders",
+        "description": "Khasi steamed pounded rice cakes with smoky smoked pork topping — a signature Rynsan starter.",
+        "price": "₹500",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v2rT6mcbmbATJ0QOZwW3DUXFTEkk54zvEJlj9a3II_GHq8MRqKIb45w-k6f2x90rJCgzBAAGzJRxVIuxcARIxcbVcKWyuYcj4-E9-hhD4T-frb1xnwn8ZhmteRp5iMfLk9iJZRZEj_Q6TH2gP6hHQA9cS6wJTqBQRDWW-whWVrkC-JOhvYRBPAioUq3394g04mLIY8m4ULtpHLnWvVu0tDrAeCBD_hn49oeEdnzeUDn9SU19oS3YRyVdkPKyO6XcZ0XXPwcR2CqPsGGkNoRAK35Kj9OPOfCnGGAwug2YQIKfblyWmlQnr3ZO0NR82LFj63dHpjMv7LNslaXg998l24n4jVndJZ92IqF8JIkct4M7TwTrPiWBbP1UnJqMns7ujBvcbTauO30mJ0B99UIKUm6eVBAmaQ8kiP3TCkF4g-Ar_v&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
-        "name": "Traditional Smoked Pork Slices",
-        "description": "Crispy wood-smoked pork slices served dry with local wild berry sauce and green microgreens.",
-        "price": "₹260",
-        "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=80&w=600"
+        "name": "Doh Khlieh Rynsan",
+        "description": "Rynsan's take on the Khasi pork head salad with wild herbs and a citrusy dressing.",
+        "price": "₹500",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-szr6DEO-xgbzybquYnSNLDFiE5X_xNKeufHgkPYJgj6iYe6GtqLF0Z3_DCk0fypeuDxuIAqodd6lpW7pufDjL_51zllrQDmkdFr6o80DlGCHq7T01ABsrkXesQnBWQeT46sU-F0tDTx_bS452CtWVDQtOAKF3VbBLMvHlJeAgRLECnnaXrLJ1vZKVxqffBQv1krkUo4XpSPfxm6b8Ie2FLFXke1HPBqjsCNULZDZ515aGnLoSnYHwwpAC1EdeDhEevyJciIV0f4N4JXWUXHjf7bK7o5Ffv893YfSdSeIUNUsYKHKL2eLhjRLjRtXKTXqg2pc6Exc1O4ufaVOlu7u9nBGetYJDh3P-UGKz-sTQft1xPLbNlLMph6KR8zcZouQkkJC8WyGgGhNwFuztcIwU-wRBNE0m1g2P15CfPhi7MUu36q6M66PVtk-k979aD&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Wild Fern Salad",
+        "description": "Fiddlehead ferns and seasonal greens with crushed roasted peanuts.",
+        "price": "₹390",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-su2IoYvMccl9qQwpGLu3nVVdHg9EhBEKJk9qcBPXsnXPYdVlfl9G1fyHHiz840LPQnYTpFXzSvj1nh_6NZWf_uz3w4QJSYUFnSeJdD7Q4TJdvXHwGjuCoBCYvjBqSOkVdTEmWPNCzLG6Q1COIkluSCWzciwuCPt4utTrUT3c7ZIjfuCMm6LMQ9pOpg4ny_-xftZ2UejK7hw_jYF5MSJ3ZsRqN0zbKz7T2Ho3WKisI829Prixbv3xZwamEAX8zwSS7eeDAdc5SAg8h_kgqNLGgrri7_oXTgFW_50Bo9FoEiUecBLfFJ5HmXMsDX22IOyexqIX_nnrv2U_qHa-8f7Ov7CEeuyiQn__wQv-0EOY0d4Vu40YAE12maek5eJDaYveCpb6Ko9lfMTIj_80qGjlCX9L053KXk3xcmzgdR5jVVCn1Zm5TnP7_WLjSLxw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Chawh Chi Soup",
+        "description": "Rich and savoury wild perilla paste soup with shredded bamboo shoot.",
+        "price": "₹350",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uPXt0qPoeYTnjm6aJBp9caapjzEprgNdbP8udbQGvmjPCaeQHrT0AZxCFhkk7k6_CmaUoVKpMwQzavr4CejjMNBIJTod1SwbaWSK82HqMx5BABugZ04I9DZJEX8nSDQ6EIuOQAWsjVW0TJkz6LhCPBa59oU8t3VVpXx44d8m98yaTTKrCpMgeqiYDhh23zgeOpkjsazfTXI6PanxOawjQmMy7J80Gv5xKrqjxUtFmIAGv2t_gXmXhOdUEZhOohjPy3eX671mRWCvN0lcuUtLH3-D8on-W9XLoJ6AlbJz8SG-kKmwaAb09E5nAkrORQWH41-dDMPJoELVSr3P0gUufElGzpUMMHtehrOaWX7LdoPgUInBMZZPzUxzLrLFwwjZivgWMScWogWWhCLRnjKRld_s4ICufWakoUIyfeE22NBYEr40RW01BfEBrXu-iA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Turmeric Butter Prawns",
+        "description": "Fresh river prawns in a light buttery lakadong turmeric sauce.",
+        "price": "₹550",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-urF-LdNoph8M3OHyAWvnXF5OA4dIAT_8Y5PxbeSixXKaydXabWEvf5mh1FcoCXIrQs3BdyaBjqDHigRxZhMh9AvI0oUn1gWUkuLQUndlG_i9Ijg1p_tz0VktuGyqrDs4Jm6I7T11i2cXjFwuHp-1XY2Zp_9r0hQJWEX2tzd8gujXEYgr1R6p4PB8fEYhF2J9oUUWJ_UqRGtkjSJH_-QEbMZZ5o9_th0fHvUESFVdRoTKOq5wEvLL_isSDq-okR6M-k5gsaET7HiPZymj3QC8czfYnz47vGg7nd-ar_KRelX0lDe7USw20PQ1UvGjXZtmGW6QbEt2O6z9B5GLdU3MhapWyoEFPucG_ahQ3GLS3hOrpMXuFABA7fixn145Z8L_is_FG_NMBfrwUmUKwB0rLrS3rKDKTBq3W0_7ZTQVFK9IUy&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Mutton Roast",
+        "description": "Thin slices of slow-cooked 24-hour marinated leg of mutton.",
+        "price": "₹600",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vp0BjmAGDmNdM8vVzFjaop1_ZlxGaH994NYYpJfJdAMRXvbSFFzCOp5Sa7IO-DDeb8kIXXvPElszhIBaSFaUvCEZBGioymaBkC6co40itcOvxpF075d4CkOJcnOW-AAUZfspOjtyFG8LEinTEoXS43pz8CvHDIJ_MEcsoIq6M61IVJNLTm0ZAIeCtRVm_9idc6vP-0JLGB1BqDrsnhD_Rky0fZmLUVRtMFBszhaMzv9QQjfcl3HAt11HePezrQg8Oby67AXZo7oJHE9jTOhfh-7YI4ppxHoOUTau2FNqDE-EUsDy8XjsRZlu30iVu0I3c9BljUSDbWh_vtdtwkjwvMcYPM6-lyWfEvquCt3rd6gE2lqaQ23dU7lAjgPGB5wiececWN5fOBw67fFGuP3lidFQTG7KRPzxdZIxCJgPogtt2T&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -86,7 +110,12 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 750,
+    "average_spend_for_two": 1500,
+    "menu_url": "https://www.rynsan.com/menu",
+    "menu_pdf_lunch": "https://www.rynsan.com/Lunch.pdf",
+    "menu_pdf_dinner": "https://www.rynsan.com/Dinner.pdf"
   },
   {
     "id": "ahavah-cafe",
@@ -116,16 +145,22 @@
     "hasLiveMusic": true,
     "mustTry": [
       {
-        "name": "Shrimp & Fresh Herb Spaghetti",
-        "description": "Hand-tossed pasta cooked in white wine reduction, regional bay leaves, fresh garlic prawns, and local mountain greens.",
-        "price": "₹320",
-        "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=600"
+        "name": "Croissant & Eggs Breakfast",
+        "description": "Buttery croissants with fluffy scrambled eggs, crisp bacon, and freshly pressed juice.",
+        "price": "₹280",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vJw0hfjUFe7XBAgRRcz9TzFjKYqGcaEdXJrzve0kmkBDYJfE5FNy3b9rg-sVftBGPIQS5nc8D1AOaK1GNTALif1l7-QtZhHN-59PYjxNjEexFrOPJ0mpHnoqHE0DMwpgG8DKqCYAW0R8QAkH27e_VIcFv7r4hErfzQYI_wopP40B1ksyf4QmBh4i2rwXPjfRgRrRjUfGQWsXHltIw5mq_lBz7u0XTxou_EP3Jm7CbAVoTQ89pWvoO4crRg8SusVk9Rz-lr8YdR1kZdW4Pap9B6OnTr6pmg2mUKqbhcfFNIYOCydn-S8O6nGUydEVWr_swtESGk5b_G1j_pO3cQjFYRiwUsW_kAeawFxCETC_CiLTW4w9-nrb7FZtRAdkS2z3FuSZZv_j78Pv_Yd67O9TTSEwKUx1D8usODJCL5rgmjQw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
-        "name": "Naked Rosewater Wedding Sponge",
-        "description": "A dense, floral rosewater cake layered with soft, fresh-whipped cream and fresh field peach compote.",
+        "name": "Custom Wedding Cake Slice",
+        "description": "Freshly baked layered cake with cream and seasonal compote from their glass-enclosed pastry display.",
         "price": "₹180",
-        "image": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-siu4PyOIb6h9XajNQ1VPuV51kLypP1xjEAVHj-ew-0lKC7hxWJM60H4G8rTWgtGhh9rVLm2zbinnppl6HLp1HWWdDGzErfIJHxgf-78s8DlL2NB0KyxccbHloZDva05IO_beVLEe84JgYdvHOcXcx0f4GrkQvaADHBY0bYKtg4E-2ZCKiZ9g7qyiRzS0RIW8nJaAW4XwSQRXiEH2z4SuqiynIxQ85NSp4QcIYcLPvwJPkaq7lddPFfAeVgC_ySpFb93F5hY1l9Z18A2NpuTbBiwchTr472JlGUaON-87wGoUfNMhwWPsaSRw2531LAuinVb96N67CG96ivwi9Z5XH3F2qo1yzjZip6nlINpYOwytT0wJx60OvZd1t0QaMt9S83yexATKIzwwjN75_1o1Nyw556NFNjfcPLonUWu0dWGw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Candlelight Dinner Set",
+        "description": "Curated 3-course set under the crystal chandeliers — starter, main, and dessert.",
+        "price": "₹850",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v29sfTxPliTD1VtKxGHT3DZ4Vpzw0js6_u5dEHpZ6VSpraiEE7ZrNxqiwkelWTf568xd7DWZFi0vNnDIvPMFX-B4XUOlv7Iz-WD7sSsGpNd8Tu7ayIHUWPkzsPOIS6HxvDG23uKj0iwWwPemDiQrZnwTblqQAhWdO52-rNqcvy8laJM8PJN4v7bBz_6P_icdR_r6dzyI0UPRcoq3mAUfJRgSE2xihri17GTmwNVDVy3Fa3JaOG7EkdHO99L2p9RdXpWyNMxzwjLQeFZWeE-CYg3dL_wIBph1SgLhBQ-P_8H8umVmBmB0SqQlXjRVhVw3YMcfKaoSgDnbxzj1okb1zlemFGJgKaShHnUrxggJPSDd6oCvBYL8Sbcq3AjKzl0xHZSRkbdU2i8EWPcw6SIOgy5jonCVbkRnq2i4thIkPC5BkjFodZOTsnIrGYMpJM&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -175,7 +210,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.23,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 500,
+    "average_spend_for_two": 1000
   },
   {
     "id": "cherry-bean-cafe",
@@ -208,13 +245,13 @@
         "name": "Warm Artisan Sourdough Pizza",
         "description": "Hand-kneaded sourdough crust topped with rich tomato sauce, fresh buffalo mozzarella, and mountain wild oregano.",
         "price": "₹290",
-        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uBOduieHSgHirEAY1lmxVNBM1-NzQyGJVQcxU5tYlz8tpK7eAbCPBixSGuUTYb4jrDbZd2MTPwmTsET5VCIDH9RIIbXc3-sWQXAXctVyHNcFeOtm4XaWz_smze-iSeWrNujwFvoDPsl2JrxkM-PjxA7ayi8eABXrFXSobOQrhk6f1bpgedKqVQVY05SiI2Shkz1Aad8X8K-nsHJvbSPuftnlfgn8pEEnf_yJdMR8LYsKeAzKlnz31Jq7RzvqlBEyw2r5EC0YEG1cbCe22nINn2rs9Qd89KhW6aSaBZj6lcpunA2bqeyJ8ilZ0jP0FvTLmM_zBuhjqPgR9E4noNxA5qA-B5HelIoLBoAgGfy_uvD1OclcbYSyjxIobcHnHgiXijlRbADMRYiNAvZw5rT3dUCm6FZDj6ECWqfsCx3bAhmwabKN-ce6U4F6QIzYhW&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Double Chocolate Nut Cookie",
         "description": "Big, soft-baked molten chocolate chip cookies stuffed with roasted hazelnut crumbs, matching dark espresso perfectly.",
         "price": "₹120",
-        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vffO4EvoRiBZavX6EiyR7oVPx2fdGEijaruZXyGIpHY5u1C9RMuUrJTIzOeclX7K187YzooH7bFz8NSwkhtpWjS-R_VKdoK7EI380eV_srNPJojeps-MbALht8Z9fLvYnUuzQH-tgij121URHeDrgRBkMMPzU-R1jtxEiDezM7_oxlzuTXdnbS7Fx0bd_Cm5EjrE3pWeG6vLkRCpT-8nAAoKGIAduD079pEVQIAYm1bpQz6yRc8pPKXzAXEHg-UWPlsWNXfDC4GaokjiheUJCxy98TZED79Ol6C6bOMtNNAg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -263,7 +300,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.3,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "cafe-shillong",
@@ -296,19 +335,19 @@
         "name": "Shillong Special Coffee",
         "description": "Sourced from high-altitude organic plantations in the East Khasi Hills, medium-roasted, and brewed with crisp mountain spring water.",
         "price": "₹180",
-        "image": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vjxNYFYrmDQ4ofjVWt-2NLPUugdi4hpkk820V3f_9mwhd3ScKvxQJHCw_yh_Lg3JZRV5AAVOHcLhLnKb1BRmLiO30im8CuYzTyoB9czxxfKt4AOkmzAHGGlzX5FNHM--ClsXqPtl4lBA6BWfD2hzEC5fmK5CKNB06qSrKizLRJZOX3R0ReCiX3lTyjjD1Ppd_09W_dPtSo2XoX5RVrEx0YJk_SaTyxBdaMZeyDKyOHL-wCOThCZ0v1ueqLtWjd487k0FyWRNyZhvcNIzKkpY2hHssEGEn5w3TtnxYmRgnlP22p-yVGQCZ6aubkwD_eE68O09L7z7HFNW0kaZRfdH5ui8XjS_FZ6VBElPfttdddQtT0Lh4kXVX2qVvG35YLdmI6x15SzxkG0xlvWVzjwR3vLuaFRTQXGbYjDSLIM8OwGodm&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Smoked Pork Toast",
         "description": "Crispy local sourdough toast topped slices of house-smoked Khasi pork belly, caramelized mountain onions, and wild mint leaves.",
         "price": "₹260",
-        "image": "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uxpR4H8LHJ63SNl6GzkDJkZFRu4CAVm6rRGbqNlVgh-V38lID8Vrm-y993sQucIyFkXeNW_8O4Y3fNfvbB5hFgkt94xYaPNYo0PXXCaF3HzHmj1SNH0GkIBfYcWh-cAzysdpbKVcGHZy9YVXjiEiTN6max7GEMMuYgrH94LJ62evq8kIZgp-Zpf2DnEfMmSH_H8JfVGjxXoeossHkA1GRFT-XMMJaA_fzwibi_IJsVIKCRuauoDsRn4WGHmPssyw9ruO5M2tUY07vv6z7tPdBlL3gu4kRWYmuimNvL8LZUlbJW3quZnYM6xa4eZ0RBLHbuV1LPQcuXP7U4nrIIYNI__DU_dT43Opp_ADRVPtWbnPd4ufanxczNghIRXkyjRlunS4PHaXj9qiJtidW0xaz0f29R8X1evYwZRXrGZPZ8BxsYEzD5ca_kKGzysES5&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Mountain Cardamom Infusion",
         "description": "A delicate local black tea infused with hand-crushed wild cardamom pods and local orange blossom honey.",
         "price": "₹140",
-        "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uNFFc8ejx1FZ18fqdiYx1CjDkSu-hLaJ8tTlPKzYk5ebjijV28oe_YomoB785AogHsLUHttx7IJxwFgCZ-hRODxKmv-u7TilqwcqKUrQdyNT_OeU2UQgdh1dclM1M9FKvrhZ90DkP9IHLWxyCQ4IBWhpcfO6x2IZn9o2F7Qu_CX5jEx4hVZtvU9DsxCTlPsOYyRMnzPNWrpBv6EEpCuqH4EYV3-ULINdDq-wD7LBBHby7t69kd_m7psGJ7oJFulYpVxN7vpAn72cp6z6QeudZlF50m8YWmc0YXZT_EfZiTTIdK_nqbjoS5Icxzge-KM9_FBQFwfaR-OZEH--yJqMnFsT2LSlT8IOVNWxm4ilFsgM9WJhdpUpOxltur_h5bGcNy_r6FdJd0M8KYk5Nd1Qsjl7Y4wjvzSeCsLwDO1q0zVCxD_l6N-YTJ9o0PHw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -358,7 +397,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "dylans-cafe",
@@ -391,13 +432,13 @@
         "name": "Blowin' in the Wind Cappuccino",
         "description": "A dark double-ristretto with velvety micro-foam, dusted with organic cocoa powder in the shape of Dylan's signature acoustic guitar.",
         "price": "₹160",
-        "image": "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tear3XQLm0iMcTgADKFa8KLPQwOU8vevdC3q_5LbRNIYRgz_QR4LoGEvq6UxjSz2c9dqjxoDKuwNOxfrUZf_fdtamuuA-fm-vUMrwbyYgK33yeVRHRELmzwqIWhEUAleiDeCBSNbPmQ47jQt88CVFT_tTBbqwW8dVaxh3UERK4SmJlELZLl9dW9g4GuS7gyx7UmZ8GKMbubeX25BX__wP_78E8yALi0n5q9lfhUM35z7vEUpcM2xdekSLUmOCreoYX58pzWZj1v4KRZk16_IUMFaTOJlECA3NWTTs_wM4YsA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Old-School Hot Apple Pie",
         "description": "Fresh local hill apples spiced with cinnamon, baked under a rich, golden butter pastry lattice and served with wild vanilla cream.",
         "price": "₹190",
-        "image": "https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-taxWqdmiAMWb0ZqP4O-YVeG_kICWGotocuvu17l4CR43fFjJ5TODWXzkXUhPx4EIzf4QBkm2Pbj02PZOVZpIec-HeeAJC00R37z56UvkanaUBe9Zqha07d542PTREv_51E2aL_u7X8rAU5HvJ6yWx71EjhM6Sm-RB1yjUbwKEPrGfWVAA-kFBZ_eWNUI1YdYdkZTv8YW8MVUmFxHrpgaCWeFVrtICbKVA4VDxaNQ1ruYdo0E02I0kuTLKpIP6-Q4VnhLtss-eW1mB-UjbZUnRCjyob6YRoiZLRme9auP0XGA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -448,7 +489,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "ml-05-cafe",
@@ -481,13 +524,13 @@
         "name": "Highway French Press Coffee",
         "description": "A bold, dark-roasted tribal blend direct from regional growers, pressed rich and robust to warm travelers from the dense morning fog.",
         "price": "₹150",
-        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uduUHOtxvOpj0wuHjnKbmLY9MbcPy1MUMaJrYc8x-tU0ogY1FrdB0IDH7QZSX3ScvQLQJGRY40cNM93TmlXr0Ymz75hqGDSdAucBoLjn2_ASFBkwzrEjoMEoh-yY7zeFWUh-1n1OLMRngjwe5b4dxlEWURknJCQWOo3G3Xc22ICX2_hs9iz3fUc7uw6bkaG9mZFUgyvJLgcjQx9AWir97qKj0w8RlCDP169Vq5FyvHrK2vVA9OlTVYRFgwd3t7F0JHZqL7yf-tuCZQw8wRCZY_oIGXrOUDFz5OxdSBViYv9Woeaae1wE-9fzDe0ZvbiDDw1AqAA32uiCochrPY8r6kLQkiC0j7s70mUda2UB27fkifee2gUl4cXAoR-lwWx2ZXvtSqU9yYPS1dauWz7HyC-BYTfYXMVMo5KezJdJJJjm_u3EeWnguKMo9fZQIq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Wild Pepper Smoked Pork Fry",
         "description": "Spicy pork belly wok-tossed with local black pepper, hand-harvested wild coriander, and mountain ghost chilly flakes.",
         "price": "₹240",
-        "image": "https://images.unsplash.com/photo-1623961990059-28355e229a87?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-spW-2TwzXX1H3Hs9kcaZ32FS5KAloVEK56RgRV2SEZ3a6YjNCdP1Cl5MeFIVVhwXomg-ZdkD_0wGW6ZP-NHNIOnaFOXMXAILb8ckXztCjc5VHB1ChGq2HBgYeo2qJyfclj_kLlDift_Je3g-9PsguSFPefJj5PY7ShFDa_Hwpef4FX5AbN51VfUo8XI_Tf3lF79wC3NQcXZPOVIuRynUCBCTK3AxhUMozIoo0OVP6BWazWQl1xTDvIj7cxJT6g8Eg5CG02aDAi_MNySTqq4DND3zmfILGJfj4In9oRjzGzZkEcEo1XtGvknh5xCGKerOnIoLZorVaamlmFrvlpa4NxFBxVvfWhcMy6NcFOlLTLPK6rmxbZr4r4fEKjZ-Q9_vnyfPp1Sa71sU1hO4OwIJoht-YVI8OLzN6M3kbepJTJ7sn8XrXD6OZihRh7qbyF&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -539,7 +582,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "pine-loft",
@@ -570,7 +615,7 @@
         "name": "Filtered White Honey Pour-Over",
         "description": "A clean, paper-filtered light roast revealing delicate notes of white mountain jasmine and raw, regional wildflower honey.",
         "price": "₹190",
-        "image": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sleT--UQQNZv3sUSpXxZiQuYIcWxHxTNNiQi4a5BmY_ZgCE24gmjoHxf0sCJ3AN33yARKCtNzK9WCe4UZmE5A0QH59RXHBamMYKLjk_Zvg5LW_5YtHQ_JCNfSjcfMHA8BhZg84RCgT_HnWjBeVwnSErGP9i4lLt7RMMIeOfoNshimOX86KttCHqj-DDQlFPB0hQTigIl0MaUxzvXbhOavRDc6fdw8vVTWB0yNOFo-4KV1N6qzlbxsNWrPJ_QzYQSlGGjpaLY6k2zcHnGjng4ANVI5-FG2D15deaKYo0qgVUTgoUNca1r2_weV2vxvAFQPHWGN-2pdfSVNzHS7afWJHvMCenp9U9_KmGgSiP6Dnae7A8KIi3Rt4fovaxGShSuiqsop7XbbXKhzd-WIu82a5pp7PtUxrpVcQqRXwKdI&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -619,7 +664,9 @@
     "match_confidence": 0.6,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "melody-beans",
@@ -650,7 +697,7 @@
         "name": "Cinnamon Spiced Latte",
         "description": "A smooth double shot of espresso steamed with local organic cinnamon sticks and nutmeg shavings, bringing festive mountain vibes to your table.",
         "price": "₹170",
-        "image": "https://images.unsplash.com/photo-1570968915860-54d5c301fc9f?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v4r8x-j8Cy_nEQudByHVzkOKLqMH6P2RVKj6ivYRKss4rGkf0sRE8PLy-kmw9FnL6RdFOBWX1T3EdSe3cjCdpQVouF0FTgRQMBCaWbn9ShZ2lCnPUEEt3dypGUihBRzfg4DUUaWdLH2Xq6GztazqnUVEz7tG6nJZasWzUJU9QRQtKg02N-nY4BEidtCARd1xAr-RpD_jYAdOae7ZegKOyY3OMdue3qR4ZiKoh5RDY033oKUuDvAOWVhyxHRNepdpGkv7aNvmduGIzlExeoiBiH4_ZMZIzoqK9Yk5S1LDnGJcfI9GRU3QaKvPNBgPpk3iRSJdy641OJwqPUF2jqRPoEbI0btTE6YVH32n0p6VdKam0xoikkyLwl1JXnmFNSlkMqcfyulaJtHpLjTmiPyNuNNH5lzOARH88Ud5O-0Dr61uHXKUTBvq4IPU69pkGK&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -699,7 +746,9 @@
     "khasi_food_available": false,
     "match_confidence": 0,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "fern-mist-garden",
@@ -730,7 +779,7 @@
         "name": "Wild Mint Slow Cold Brew",
         "description": "Espresso grounds cold-dripped for 14 hours over ice slabs, infused with crushed organic wild mint leaf syrup.",
         "price": "₹200",
-        "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v1qpPqgRmOqBhlZi46l6vJLuK2CSdkq9Y5dhWOJWclp706xq6iacaDj4sBGY0t8xRWxDaJP5nHhHemx8oP0cUyW4q6NgE2U4yxNFY7e0ullYXI3J6grZj1Dc0ziSHw_DBwGEXDYzzLPcS3dvTec2JB1vAQm0fn_BkB6-b0gamXpuRRokalNzX00d6rT1sYZU7APkdzgr9473qYbf-lbNv0LfafPJSsmSOu4glH0wcSo23W9Oeva0Zw-f7cvRymfQT6m936ZmOI1fsFv2bZ-KnVntebwBc-som01RtIbKpkqg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "gallery": [
@@ -778,7 +827,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.3,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "trattoria-shillong-pb",
@@ -803,13 +854,13 @@
         "name": "Signature Jadoh Pork Stock Rice",
         "description": "High-altitude local short-grain red hill rice slow-brewed in seasoned pork loin broth, mountain wild ginger, and shallot oil.",
         "price": "₹180",
-        "image": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sDkuQIH0HGXTLYX2GnsyjGYU-kYmGTVpJVCCFG_F0MqKohtAlbT3aXQ0zJKsQFQgfCA1Qr2QaXy0i3Kf6qyYa0Dc3aprdJXEYGoz3umHnnBEYGpGVEgvcs2Xollc95yUIAycGH5rVGn7SVHe65j1t0H9_UejL4dptfVIAEdc6gqW72Zs8vHco1zl0pMJf2fdVijsM1cP8MmHdeOp0ook9SDbXdK0z_kR3kuZy9lm9_c7XkPlrwJsgrNvmo3jKT_VO6QQHevfpDBOqDolfzts3jn5hwEYjs6V37aKyAGHZUMF28KNFMjMPdY5keHqO-j74uMaIGaZd1OtUTe1gGgUhWTUPhOXyqZ8YNVgX__UkRaUa0Q5QR-w1Z_5KmWWke_79xXqovoP91Mup2x_CjcNPM1oLSAyhNtZ1SUFG4RpETFFNHbnhCaxnrXce1UmEV&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Dohkhlieh local Onion Salad",
         "description": "A cold traditional pork dish tossed with local red onions, green mountain chilies, and hand-shredded fresh ginger leaves.",
         "price": "₹140",
-        "image": "https://images.unsplash.com/photo-1623961990059-28355e229a87?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t5P6t1N7zVlZZnndesqrpZF7utquT_r7KVJJrOGhV6Dmb_RPQNOMbrBykZNTvkRaTGM-44-mJJQ3x_D_Hr0mOgcBAOn3cU4dlC_ozLplVTRV8evimf7TNdI836JN13j83YadHGN7Beu2lV6H4kgOJ5tT-H1Kg9d5bB4vNkXX9JqpEOdywdYNiGmaxLRuTX5c7KBxnEALgXEhAHLciDVQagrfNbH601lT4Rm2JsDvt7N71qzTukL8Bv_5SjwILHNEIdvo4b-0qz4QjoR3rw8hYWbn9wdKmmXNkDoYVAy8jHXmiBAhblbbpWd5K3zKxxg0dQx8QC2eRfBTNHKymMHxHXy7a9VR5UKVK1HspP9P9uNa9onj44UEoyaeDlH9Pf_G4B3oBPm1cJplqDnx8H91vBzYH_JGVc9KFqYJcZkYBh45jMxwLkZiuYHZAddf0J&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -864,7 +915,9 @@
     "khasi_food_available": true,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "evening-club-laitumkhrah",
@@ -889,7 +942,7 @@
         "name": "Mountain Cardamom Spicewood Infusion",
         "description": "Stirred high-altitude local black tea-cocktail infused with toasted wild cardamom, clove bark, and organic molasses.",
         "price": "₹190",
-        "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-s5p1qBHT3B9Y9so6B_KDAZ2laF96XTfpPbsKsIAfE5dRkuSliprufqCBCL_Sirt5esJ4LpZCLxx1ADo5MoIk_pGGni5ubg7NseD4qllTVicwVHdoPOWJ5075urAK392ztgQDbvTdHqQjv38lPWsUEZ08y929WdqCC77e8dblVjTNTIHfTa2eaq8uu7VFA7bsLGz91OTZyT84bGCNCAXbMHGIV3SF_PjbyuMK5XMhy3jMpxBdMBE6-qAUdGB1UYDzJew7dSjyypMocie50vh_ssHTZAwyhjOobD2ze3zFnEnuH9X4NzjL_hwdFlC4LH5sx-wWwP7IJXjyZAq09l2gmTVJezoLaBgAmxpCtvx84puhxd1p4S5mrS4OLzoSu1h-UpWQVvaP9URkzR2z9tHBMgx8rcANxN2h0l1wOQNfTLiRzhtxW9opxOzrRskAJq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -943,7 +996,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "jiva-grill-nongkynrih",
@@ -968,7 +1023,7 @@
         "name": "Stone Grilled Mughlai Platter",
         "description": "Hand-skewered local ingredients and tender lamb pieces, slow charcoal-roasted on local hot mountain basalt tiles and served with mint dip.",
         "price": "₹420",
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vArYulUQyB3ouKkumdWytY1Blfv7tBPNGlyXZ4zk36qMOFWVnNnTlePw1TeMvaUl67f6bIxmj2JS5RN1tKfaA6n0KxeWTzXmLMNDTpUyAS_tx4APnImuGv050ib9nW5Bu9BkCzkqkg2zZUO39a0Vrjb4HDvIh66Sij0W8fYiYmd6LaqEI-SzW6XnJbX6ptptrUe3jiiL-q9I7x4rXKRwOfNE-uoeXtUqKP2Xvq4_O6ttZbgw-fNjdx5ojaQiz84pg-qodsef7X1-D9UXucaF6BF2-ltcsyCeum5ulY_asSZ1cs8s0D3TV62XTfAMT0_smvY-tt33Jm4KRTRMQEFN4puesyW3A7okHknpGvZLqqKY4dtR_ASPWRd0hdiUEQg_JoQPz7APz43hxG3MmE5gntLa3VWEzZ1ExCl0b4LKE&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1023,7 +1078,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "bread-cafe-pb",
@@ -1048,7 +1105,7 @@
         "name": "Warm Butter Cranberry Croissant",
         "description": "Flaky, multi-layered golden croissant stuffed with locally sourced sweetened wild mountain berries and rich butter glaze.",
         "price": "₹120",
-        "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tKDIJiaVSeO7aFuoc8kXktcFxjqbILhcpSfbj3tzYvmJ_FW7_2_oMWyKeMYWHUa9IReuHvQCvq_zK4bcIOdneb2rteZ-KIb09477rL4vPjrlng0P3JTO4PIxFOT3pljxiICItOh0TC9LM3jyM40DMj5xT15g38dHGvTG0tyL5Sw96vBblLpKl_eaBnqdZXeS5ilOOQbiOlTmjOZzUSVHmuehM_VfYdV0D0Y3uDXln3FgF-XKpf9a14KSG-lHcfGrCTSQugpLd38KUuB9zOLl3s4Q3eanGyneeU9wAE8c_lZHPni80DPuZY2XfF6KtyzdNEQNO6aj5f8RPudXjgxsZBe5g1lZlkQfDLS_IDRmbiLKxEFv-ieTSqpFIH8a0wjHoOXHlEu048rmWD-_pF_Ty2aiFYP6J11BpIR88yImfyxQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1106,7 +1163,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "you-and-i-shared-cafe",
@@ -1137,13 +1196,13 @@
         "name": "Sha Saw & Pukhlein Duo",
         "description": "Authentic Khasi black tea sweetened naturally with wild mountain honey, paired with crispy fried jaggery-infused rice powder cakes.",
         "price": "₹110",
-        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-u4G_ZQPhKCimB8q8cmYn-AypYa1_skQVrQafJhNuYGzA-D2Rse5OjF761nfZcdNQrvV0DEwTa2Z9-vPYXAzlvxFvMIatvXJ4W48dDApzt8MR9B-JyuX4HEcy7nscY3hPm25YpOdZe3JfTeJigxAB_rguZGQt3dI4vIXlvFSVhNtpaa3YAl0xYdKY7YwKKf6Zur7kL54EZR58ql4b1YI7LZv3OVtgkrvkd-GFA1OsyJdJq4KhlixI8AkIZVvQBes-FwaXKuJ3iLQUGBsNLM75SgP-ByWSYK35S7aVFoqDbOxAwwKrDeD-IdV73ggFAw_n_KCWXleLUgxCY5CU1XxDebwWBhGmUIWziY1EMcsLzMjX3OTCGoR5ZKe3sXkZ0d4hMF8IXIEJ1MwmBzXNvlHpnr-rfIRoUUgl1jxjSJ6Ze2ig&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Skei Rice Cake Plate",
         "description": "Traditional steamed rice flour dumplings filled with subtle local spices and sweetened wild field coconut slices.",
         "price": "₹90",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sGDn-orZFt3LK_PkCHaycC-rz1VgXTIDGP4qVN5kkkyCkZKz4p93pjxGQ6RbpTn7RZ7CEuxoLHkg0nslUoMZfKQPft0tFtF_IH6TgR1BlA6mSgdFvIcU_0ms3QwAVmB0C0S4bM7-x4cxU6unxHQ3J_4yb1JGIqcb3qXziMWLW2DVcYdeikzoloeFQEMoRSmIqO8KzFvaoaEwv5529qaDHHBvHpZS7P9ZNshF-usH_9u6ED0Od1WP6v1ZJjbVF_nSGPyQBv4CSxsa3k7mG3OiXAfdgCEm2Lx3JaWRbIUyOq0A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1197,7 +1256,9 @@
     "match_confidence": 0,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "cafe-sola",
@@ -1228,13 +1289,13 @@
         "name": "Sola Gourmet Smoked Burger",
         "description": "Succulent double-pattied seasoned mountain beef or pork belly on a toasted brioche bun, filled with sharp cheddar, smoked local bacon, and wild berry relish.",
         "price": "₹340",
-        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vtInyzcFuiFQQdhduj05ganwswylbz_qkYRKTO2j02nA6LjIWnSFG5YPchMN2UqcLKc3zX__Y-uu4CTFA2SX437dHmcQ_aDK1MyS7Kq-MYcKUc4e2bE24Cv7C9iOpvM99MqyCsZoxgnm4a6ADDPcNWGiyrDV8RV5q7lvh5uMmtjj5rEzQkLKZFQwdGEEIYas1Y21Xr9YumVacM2CjVDJ_JCET_4pA6iwH1vyTHnLhFw3c2IFvVffJBj9Gs1sOzq7knnr1EN-yd3Ry8GUJECvp1oAXjD_FBJ_DRuWUfDSTDIZnvcUtgDL4AGqMmelLF_V9_RHxd6qqRcC-C3h7nJd9ZGBZHFLRC6BMsphR2ZlKSLU-1r_m9FaFqA35bgsuiVKmIJ_e1zFwfQUPnteScFH9oJ8RpuG71e6RRX8zD9d-2dA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Artisanal Spiced Hot Cocoa",
         "description": "Thick artisanal Belgian cocoa simmered with local orange peel zest, cinnamon shavings, and topped with sweet marshmallows.",
         "price": "₹160",
-        "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tozO8Fr3d6Gf7RTIwVc2GTFPC5PLURRMvh00gmVyfaDwQusw-oeh1i1bM4qw7mY2trAevYG2ahJ-3ugzn_fho9kMjBThC41Nvzk_PhaIC4WdGsP97cHehg6H8B5_GDOLq4WbZJq4O3ygHGVRhACLJ4MPltmOo7FDzRHv-_9-XV9n5NjlRvRXRMtEWlX4M9RlWHOvNpj2km3wL6p8l2awNW4ABG3D5IIw1kLiwgV7MiA1VPDQOCMxsjokS58hMhh49RJdt51n1VAUjevadBcU4a8jYBdpDpM57hvxN-tr7QGRHkq8LAWVQ-1jBeb1s2jk7xP-cBsupOp_CbQvyJaYPZAXHPktlzkdwL80NszaoB7H4-lpy8lZ3XlDTfU6hvMkK8MW2rDVg631GcFUq-5r7OkF4KG4TmMo96wO_yeDqiMI2bqB986WUQhj2692kg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1285,7 +1346,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "heads-up-cafe",
@@ -1316,7 +1379,7 @@
         "name": "Meghalaya Wild Honey Waffles",
         "description": "Thick, crispy Belgian waffles drizzled with organic, smoky forest honey and served with a scoop of Madagascar vanilla ice cream.",
         "price": "₹180",
-        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tLeGED6I_po5z5Hhc-g1VuH3Hf9GlErCH5yXjzxPXBct0MpEvVTot3mrZ0d4PWTmUO4OWXYfHXYRRnVua5T1Po8ApmP59VPyF7nr0bT_0Ozs6UdEYPFLKFVNPMp-8BQEMjXN0EidvVRLCeZ4kvr1d2myYcBCtFNfZ3qKILoj2NZiy_DxYz3Bh5Ghj-NPI15Dfgo6LBwNaoaFQNBnT8QsUmeUXCf0mPJOY1na4MjqRhUsMExIx7ceKrUNZnI2LfXLa4KjPqmL1TozhYMwBuq7u8fIMwmva7bk3SA9MXDB9clA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1365,7 +1428,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.45,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "mellow-mood-cafe",
@@ -1396,7 +1461,7 @@
         "name": "Spiced Ginger Honey Brew",
         "description": "Freshly crushed hill ginger roots slow-brewed with wild honey and mountain lemon zest, guaranteed to heal any cold highland chill.",
         "price": "₹130",
-        "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tqXU13OoEqnRj0fRd99Nugfnfy5ToeXqoqcX6OnNkkMGOxS51PQhjm4I7sw-i9-tvXJRl6U_9laNyXESQZCn3HMycoxseV5VI1YtlK1Et0Blp-X6ADuqt4iIhgddpwIRL5L3hwXNjbodrDvzack-u4Tm1B5IOVsGpwlz-hGF3Fi75bA16V_UpMKCneEv5cCGjYtj0KwPmFe3pkbMONMgZG-q9CUJrEme1Cvi7hzl68jQ15V74rjcKY51IJaIrU_STQjuh42AUtbLHDZnzu2v2Ko2xlfqHQJwDLsmJLp_yvFeJwc3tEQb2NfQRRChMOcUpjPPgDxi4KoMHe1AW7eOChGmawbf9vO9Ifyc7_er_kAoDrJbmG3ABBJho1Q5Rf8Kxn3BvhvNqtn4RlkG5oABBCQYP4iGm2g2gusDglFX5hKw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1440,7 +1505,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "sip-and-bite-cafe",
@@ -1471,7 +1538,7 @@
         "name": "Highland Blueberry Bubble Tea",
         "description": "Creamy bubble tea infused with locally gathered sweet mountain blueberry purée and chewy tapioca pearls flavor.",
         "price": "₹150",
-        "image": "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t96Zb6vPavrNI4l-hvTGMWNKSM6Wp0hs1Qqs5_kF4X3GI-ds31KubmBtPDW--P92ZqOwc6O98nMivj2D3bQpMchaL6eECwsYkZcUUOMOzCpuq3tA_Xhv0Ly_HYpfKK20ikxEcX71zh5AevaTsj0jX8GC2HE34Cr_36fgcEWa8MQiLC6B6UAMTsZoTMvQRqDRgW7zxJ8TXAiiMf65cWk0kU2ohdxgtH2jG-oILDkfR3xSpcCqT3oIChr-GRLFvWEB-AphCHWRU1Hwhojz-mnyCk7a4O4f_w9mVbkTwkpz2JhsaUVM6LC5B9TDcvASqFGD-xvaqAQQGl74MIaZ21A1CHbfwRfYm1KoVsTni93NdTROltoGT2AHtUUdYP8aQX3SERO0Fhzg-OJpuPBE8ZWTXMeyJ2ziG-cqbCWE8wjznuEjnhkSBo6wquXkxsM67j&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1519,7 +1586,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.3,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "munchies-shillong",
@@ -1550,13 +1619,13 @@
         "name": "The Juicy Lucy Burger",
         "description": "A thick, grilled ground beef patty stuffed with a core of gooey, molten cheddar, topped with hand-carved local pickles and smoky mayonnaise.",
         "price": "₹240",
-        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uJK_sh1ya9Wohy_buwpTtObmEpDiabcmbDyjOYwNxSuJvMKHuvzb4UFACMa9Jc4xmv5II8JdhhUnjWmzmxLxb5tj3jFIjPfFmZyOiaZtdFizdZ6TtvOfUPHK8-hM1I_qjbtx2m4xvd5eeBrVFNO4bJEcTK_g0DBXmUJ69p4uWlEiSup6zAT4jKLs3mQ8KqxJSYjQBgVwkI5CNkd9vapkS_WmcZ46VDrhpyiCafW3XCrbHp7jg3ViUL4FNWSrtz6cXap7WxYFLJ-ncbX6CHQVDvIMIDiOlC--zDybBISIR1l7X4EwOVogLcqzf-KOj4hlYOTbL6toSx9O80jdSMBvdTyF7s91-ZnTTAO8xV4zZPY4wA_N9VP2PmWvRMTfzba6u0WIsUesnkA0B416nl3DsPEFFp8i7PD_shv1ZxZoo&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Munchies Loaded Cheese Fries",
         "description": "Double-fried hand-cut mountain potatoes covered in melted cheese sauce, hot jalapeños, and sprinkled with smoked bacon crumbles.",
         "price": "₹160",
-        "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tdzpTespMFuYvgTamyVUL7iznkpL1bsdeql3YNakBPo4TLap3Tly8m0Dx0W3JqQLWbOKkQ4QOHPXZhoYlhwv5zXfqA1uhYooLCPrOX6ajP_IWlWIL_GiPUozcDhybmMWg7XkP5-HZaGb4OAAi-gcSNCqZc6xRKouckGfT2li6BeA7-UUyoItwLcYstMT-O_lNzvltDUNX7Lunvn4UHKGg5DOaJwDzpDpXjVuAvOB0uwQ2IBIRZAT-xggbEj-O_1oe_B5glDx4MtOdw1ihtiFe5TGC0FGrKuU1fNaMQ_2a-fpLbGdlHtFOvJUzBaI6c1lyPq_5qY1FgJxWMVKcC11kQK5NJyMTy6i_bIsIkiG_3ifIYJ1VgKsZsixGd-0sBaShQD0qfNmPks2DqzV-vx-S1ZkJTQSXHSEPCFkxtNNDYGkg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1609,7 +1678,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "the-shillong-cafe",
@@ -1640,7 +1711,7 @@
         "name": "Pan-Seared Pork Chops",
         "description": "Premium slow-cooked meat cuts seared with rosemary, mountain butter, and served with a side of creamed garlic mash.",
         "price": "₹380",
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-s7WwAkUeN5QyZ_44lWsGEtbvH72IvECBoE6-R6SUO4ilijChE3VYJJ2LBd50c1_TFRW4PgDyna6LyQkToL0HA21NQLlB9cWwc-YTjvv-oaBYvsVEE51kkN9S0wnC2FyEJOHqDrGC7eABC8Gd-TCU3Zn3UlLS0Z2HfNuWnQdegY7m6pNmyGA1awBiM0dHzsf9JKNRPvjdWF5Hx2f7FFkXn-23bxKrN5bwrakEaxx7-X172nhw3g4PuOA-sR4VSfoP2mVvP0CgSU9b_YgaZdHEz-S1gp6Zu0L8d31twEwW5EaoDN7wp2-o4Fsg3jhei0xP8P4Wji0cwoRglH4sTc4USoMXq64UmUloqm5AYLm4tr0H0KuPxT6AdydXFM4t2Vl7Wxr8HoxuDtjqWHV61c7vaJ_xQ35R85JedNZft_Pg7xVPOd&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1690,7 +1761,9 @@
     "match_confidence": 0.3,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "little-chef-cafe",
@@ -1721,13 +1794,13 @@
         "name": "Classic Red Velvet Slice",
         "description": "Luxuriously moist burgundy cocoa sponge layered with rich cream cheese frosting and sweet fresh-scraped vanilla bean glaze.",
         "price": "₹160",
-        "image": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t2E3lb0DpqT-D2fvch5RFE3ili7yWQVnqYttfw-5ZmF6g8UBUSJ6UJfbp9qxPyDvFXW6XV1TdgDv5MALuiyoRpCwGAua9oMN51qPR2PNA-bRDLfYIjtIpbLy1E05Zr8edETV99zCdRYpW-WPyoZ42KMpuk5U9jvUSAi9FnskgQUpIowNUAfOotLw8F2Ub_axFYsevoyfoDFfa6o2AjKwxk6Ko1ct3m100b2nJoSXPgsBt1Gjwgs0PmAOyZdKf4o78YZEXDd_SFlqmqUmEY9cpZ_jM_OBetmO_E3MM3sY7Q-x85G_VW5yo4IN4At9JYcsg0x1DvdmWjOtWxKeNCHStmKkPjWrMAANVGhC5AWuhV60T1UuQ-XkieQGRDl1PPmu5JbR4eD11fum_ZT_kWJJyZ4OOtCGMEiq2IqlU3FZS-iA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       },
       {
         "name": "Sizzling Garlic Herb Chicken",
         "description": "Tender grilled chicken breasts basted in garlic-herb butter, served piping hot on a sizzling cast-iron platter with roasted local valley roots.",
         "price": "₹340",
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sSiw0hY0r_GY7ZBONnm-b2wha-xlgtoZ_RDKCv5htkLhlxaKdipc0nE9Ej3VwDrHgm9bEr-x-sCTmioP8MkZ_NEvJA_omQFrWruH-cxfk551Jd3FGQvSoa6qoW7lVihIlSsM_xOzV1S8K8EAirMm3-k-xuPdPq1ncTeHnqlKL6eh94st236KlVE8c_-V8Y_bf3em5a4Kd-p6Mslh9PlzPopLG97TGUJlMzOImV4kigQO86igT9ic2gMD2PyrBM3JUZYx0ys9R_Hi_Ig_fM3N2G9wd-hWR6__dp47i-8sS2LtQkysH78JniQ_NFNP6WkcBPWnvYJqpqWrOrCQe6yqbrJ2tPpfCpGFPIJOZ6_T5hBEfOLR93PXGoBwMIMqp928qJaoEboAYzK_0hAydYwvPB9FK7RJXZVHH7xngiE4LJVg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1777,7 +1850,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "city-hut-family-dhaba",
@@ -1808,7 +1883,7 @@
         "name": "Tandoori Butter Chicken & Garlic Naan Platter",
         "description": "Slow-grilled clay-oven barbecued chicken in fresh velvety tomato butter cream sauce, paired with piping-hot buttered garlic naan.",
         "price": "₹320",
-        "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-u8aflVdGXOS-Dx4dCk-9M63jPJNLUGw0C7W9KKYoBEu4ifn1xF5yXn6C0vINwfGWQXgSsLmF5rLs9Pc5fcd184gME78yubHGVwBV00BVn1MA84YEics0LhxGW2HsMGwhmAWbVwzdXooTZBkFBiFlp6B0Tstccniux0iXOBDD_HfQM7bWL1NYkxMR-v5RicLaN0tmVc-e5uyO4kpcJWfbhDcFRS5qjlZO6NanX7KuXJK7VYOg4oC1g9BeudqyP6bEPYzGV0Hmc7jpzBPm4t5N6o8nZcRJZ2eT_P-l-W0bqR3AZjBGRk3Y3zd9cRCGzc9J7K9s2x3Hh3LIPjCQszp1r3WRndIualhDPaIPXzumobYj4UXQoIzTvkGIrJHt4IPnGy5iguLhBoHQsV4qZkk7Q5bZmH5EkGn0zvk4hfKbDHEuuaS7eAOyGWXyOZI2Pu&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1858,7 +1933,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "delhi-mistan-bhandar",
@@ -1889,7 +1966,7 @@
         "name": "Heritage Hot Jalebi & Rabdi Duo",
         "description": "Lacy, ultra-crisp deep-fried golden loops served fresh out of bubbling oil plates, finished with a generous dollop of rich cold rabdi cream.",
         "price": "₹90",
-        "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ui0QWorC3bq_mvrCE8N_m8UyC4yozU7Kzm3ofxaYmP_FC6LcFS0175BGeI-tdN2xpg6zD0kscUMFUVMeaF5WO1-xtRMyQxZzgOJHSWxmEVCmiys6joCKXD4a36aKlkRg7ZZ9LlxwnKnthLmUgVXTnnUh4sAGL1VTM41eF1n8rROl0znBnYpscw2F0xIfK-A6StT6YmnK2ZdOZvbPi-uAcNCKi1H8gFvdoI-LW9_4kSnc33TvavT1Be5TitOh6W3yux_6Af8qiArd07Z21hoAi9W121Yw7jg28x3pkxI4GD7agsvl30oIBG1bd497ijk0HYMteTDGqEYOi2CxUeGFfSBja6UKC-QzLmLn1TV8Ej_ys9ttex8dqO9-jbvbsJ2ww1mSXFbznUPSlzdaeC_70Tx2rg156Kv7i4nLRceztamJFX&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -1940,7 +2017,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "ginger-restaurant",
@@ -1971,7 +2050,7 @@
         "name": "Polo Club Smoked Pork Ribs",
         "description": "Tender highland pork ribs marinated in master chef's smoky local honey-mustard glaze, slow-baked until meat separates gracefully from the bone.",
         "price": "₹450",
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vTjCO5ydg7fb3KuSSqXGqmWfW34HCsssyVb9S957gS6LJUH9g2XB_s6OkR89a-6U8EcfB4i7uBPNrwrjXi1j0cskZMYIb7SsdCbvC0OJB9rR-yrVa-rymE6JqhPB4s5EiwW6Csewaae_aXGLp3Rv7JvoM2ccI1zLcgiywr6ij10cOsjL--rOu1i58WV6Oerfs9aQe-k8Kub8g5P1OFGArU9kJm1PFw33l3Gza_4EsZWnH7D3v5DczbS3vivlB_3caaMzjRQdcTxRuLykab0TajP8e2N1Vbs6SlKXB98w359HeL7vtcVYUKbOENz2E7zg-AcvkXJm6Dsn7_fx-QOwNq_qUpEZwl9VSpn8-fa599SiPaRWLHUmByUTsfZjTI2fVLM56xlehqtwoKlsendHGNzZFLbxkejTDFdaTuapw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -2021,7 +2100,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "lamee-restaurant",
@@ -2052,7 +2133,7 @@
         "name": "Shredded Lamb in Sichuan Black Pepper",
         "description": "Fragrant crispy wok-tossed lamb shreds combined with sweet bell peppers, ginger strips, and rich black pepper seasoning sauces.",
         "price": "₹380",
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ueqOPpkJ--L0ZiJQOCXifE8LDKb5L0Gdt2xiVKl0YgKkBxPMojXs85cKNwzUyyno9cKmQQ7P87g8MLqF7LFuaI6Ecw-lBN-1XaU-0_at7ua0BMRNOlS0jzDYAVFAyFHJ7ny1tlxlrJ5ppPUTgFYsORt5NONhcvBT1_as9S5bpOhmJ73XMJPK4kR6XubhnsiYPZPu1jsxWjn8TllyZfSy4Yd9TOtGHjz8IK12IL5mVtS3rh5pt8zmtLBqUk8NX1CUnE4_r8rzTbfglACD59wlfdGANoljFgt8k-EbQtcv6sLQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -2102,7 +2183,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "barbeque-restaurant",
@@ -2133,7 +2216,7 @@
         "name": "Bar-B-Q Hakka Pork Fried Rice",
         "description": "Savory wok-tossed premium rice grains combined with hand-cut smoked pork bits, spring garlic leeks, and direct farm eggs.",
         "price": "₹260",
-        "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tvjSDFwlEkAhxc9OB3Y3O6diKp3Q8jGRvE6LokY-TDX53-vgPFcImQF9L5IBY-XZKnCzRN0bkdI9gIWzems0zaYgp3VNn2bIOfgIsw0DHzy-YPnpmDhUVCwXsA8Lx7SJ416TXDB0v_vnjuUHo55jW3ofB51aCeQK2TZZrgnUbEDdbPFyHzXMVo3shsC8GMjZMa0MDlkh2M9OHxfkMEvi6hK_1fxNlqiGjRvxBcbbEgAUElL7JJMDjztUPTIzK8yyS-uSqwRs9IDoJI-b7t64pQH_OFUBe-J5acGGvSDc6n4M6SRcfQTCyMeDpBosZRKmlQbXB_3ztQpa7pajElo4OZTRC8chNhAaLfGT47FpZ66WhfZmlQ_qh-R_VEQ6JLiB_6BhZ30HpMA07eLK4thqL5em578PlgfbAqJjZSUxuQ7RbIdIJhpExvA3B7WdPy&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -2183,7 +2266,9 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "heritage-club-tripura-castle",
@@ -2214,7 +2299,7 @@
         "name": "Tripura Castle Royal Khasi Platter",
         "description": "Authentic mountain red rice boiled with pork stock, paired with aromatic Dohneiiong sesame pork and wild watercress salad.",
         "price": "₹450",
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tGBQ63WBb-rGKGmaH5BNK4ML2whi7tlatNI05HrxhaQX1opqV7YkUzxFgjLsG3odNs31T_gBVgK34sXnyvEOzwXJ4whSqJiU1INjuO8LmWNSuu1vMU292fuqajttV2HvjJwqRlsUOmnNTLcaZUrtEzcEHn2ygO9oUVEnjfciuMYQ66F5XJCx3Oab91S-LDNzaBG4-hatGndkHibCQUOIKNxoDvMj2sdzIEgjOXsS09MsPr9isNJYhRovtDhVU9I74XQZ0UvKC3iXp9o4Vaijdjbc35MMTjspAigRCMqpcUVld9sJf2r6e0oN9KR329RSnvTYLwC8gXkEKnHjT2GCOWw1TRyScUqc8axi_S2xiPoTSyOuki72UGzg5Qj5PkCNLa_BFPbRWICEwQIP79Ga3MGb9OmjXyo4SuCSa_GvGio0udmwn3JX2GUQ3sLG9f&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -2256,7 +2341,9 @@
     "khasi_food_available": false,
     "match_confidence": 0.72,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "jadoh-restaurant",
@@ -2287,7 +2374,7 @@
         "name": "Traditional Jadoh & Dohkhlieh Comb",
         "description": "Short-grained wild hill red rice simmered in highly seasoned pork stock, served with raw minced pork-and-onion salad with white root-ginger.",
         "price": "₹160",
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sU-_KsYgj5F5HUlQkgMPDNXqo8tl9uqDM545R6PDXKycuP9w8m5cbFhjKdvuMIseeNcyc7OD4Dzk-wstl84rxbPUNLTIbNM167E1pitQB-JCXF4a8iiUOycAkkcXlWZ9CrYG8czpLyVFSITsvR1uOXuT_Ht890TQfeOAJ4w29Kkhstt5aa7WzKoqv_tByQsquJzDVwUiXi8KET3hZaZQeFp4YnNfvSfyqu7aBGK5YA_OGPahOUyBnebuOFHIimjVaGxoWjQdq4rsYl4oOqBX3blzs05Bxb9FXbv3zZzYmNVA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -2336,7 +2423,9 @@
     "khasi_food_available": true,
     "match_confidence": 0,
     "verification_status": "verified",
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 350,
+    "average_spend_for_two": 700
   },
   {
     "id": "the-living-roof",
@@ -2367,7 +2456,7 @@
         "name": "Living Roof Sizzling Pork ribs",
         "description": "Highland pork loin rib racks slow-barbecued with direct-ground wild chili oil and honey, served sizzling hot with steamed broccoli florets.",
         "price": "₹390",
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sPwcxc3nzfH3RIQki8NGNXMq-Z93txvjSdx3pcSJMtxGnM8b2PHPAgqiTconv0T9chzKQa_U40kCmJgVQoDUDnUR2Z--S5BplVPNvi0ja29VMBGbSKIJcjg1pJJx93KE0OXCzZOHAkI1-Ltth_anqSmirpT9Db8FcK19EgQIEnc59bRUzYx2mgu6Rn5MvVTfp4CAphYb0Uf-OZ6EhauEbWCTXsesVdQKnzn0mIdBztd3Pv8MZFXARMCZUTZ9ulTzxjqpc2puFsYY-lA7bJNInqPW9OSWUq7nOJBnE9FxYx1CJu3jXecKn6WJMMgq7_ihm34Mcf1IoYaTQ8y34r35cAmL4jtFaf3KHBQwoQf_AGqCWDnBeIt78yYYO5OlZ1lPNE_cmLyXuWosut8VvyWkbU8SawczfvVls_hOFQRgd6Tg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
       }
     ],
     "coordinates": {
@@ -2414,7 +2503,9 @@
     "match_confidence": 0.6,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹"
+    "price_display": "₹₹",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "smoky-falls-tribe-coffee",
@@ -2499,7 +2590,9 @@
       "point_of_interest",
       "store"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "click-cafe",
@@ -2583,7 +2676,9 @@
       "food",
       "point_of_interest"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "latte-love-cafe",
@@ -2669,7 +2764,9 @@
       "restaurant",
       "store"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "woodstock-cafe",
@@ -2745,7 +2842,9 @@
       "point_of_interest",
       "restaurant"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "tring-tring",
@@ -2829,7 +2928,9 @@
       "point_of_interest",
       "restaurant"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "qzine-restaurant",
@@ -2913,7 +3014,9 @@
       "point_of_interest",
       "restaurant"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "dejavu-cafe-lounge",
@@ -2997,7 +3100,9 @@
       "point_of_interest",
       "restaurant"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "enchante-tea-room",
@@ -3079,7 +3184,9 @@
       "establishment",
       "point_of_interest"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "inside-out-cafe",
@@ -3155,7 +3262,9 @@
       "food",
       "point_of_interest"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "cafe-regal",
@@ -3241,7 +3350,9 @@
       "restaurant",
       "store"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   },
   {
     "id": "chez-rodin",
@@ -3316,6 +3427,766 @@
       "lodging",
       "point_of_interest"
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
+  },
+  {
+    "id": "marsoki-cafe",
+    "name": "Marsoki Cafe",
+    "tagline": "Shillong's Best-Kept Secret, One Floor Up",
+    "theme": "Laitumkhrah Hidden Rooftop Hideaway",
+    "introduction": "Tucked above Laitumkhrah's busiest stretch, Marsoki Cafe is the neighborhood's most talked-about hidden gem. With warm interiors, a relaxed crowd, and genuinely good coffee, it draws regulars who return for the atmosphere as much as the food.",
+    "whyVisit": "For the laid-back atmosphere, solid coffee, and the feeling of having found Shillong's best-kept secret.",
+    "hours": "Monday: 12:00 – 8:00 PM",
+    "address": "Elizabeth ville, opp. laitumkhrah, Nongkynrih, lammawrie, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-tvPY_MTo5r_iNKI5J0jh7K2vMy84nvXxoQ4kl5CEwxGTSfZ6fsBA6cVLKHSYz_89-c3Uiike5WM7eF6hzuy0QMc9TE9k5AACz2aVcYr3Ar5I5_XbmacJ4jCoCWJckSMea-UWIg8ENwwO6r3jRTcLxhYAbARIdRa6uEC9hoFb_pLJb1lY8nLjkiL2MsKhpzd0_iNDuGSPh4zqKGWXZecjmVy2js2KHsT4DhHI3mc8kWzKldbHvuAeNnKqsfgEWp-N0XMQoPqbtZ8mV7GpYaTdjVDpLg6PfDi9NYLeGq2hdsLEK52HBZmWtDaED2UH9dUpLZU5zDALekGuwJ5SZ7uweyAgKVTYOEXoTeuu162A1d359yDEJmAOVQ3uTrDljdRjhoCEdOIuiQ8TMmWTQSgjls8i_XR7whfkGxN69KkTPXU62b&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t4hmTYPXkbmSZdz_rnI4C35S7lY_TZ_rU2QP5k60PExTizPdEchnuMR4bCRvk_VdknAnbXYkaspCPxVhk445ms7xc5p7kK0i26cCLxbI2F29Dn2kO67i1zE4e4k0yGqEqUIPBDbQAzjFC2zKJSkehVVxxuFv8ePSrBm9vBHSxXht_K3FabQ9JqTVSRqXszgk0uZMPnvCHmXkUPsJNQ3eoKH8l6-eO2Hhe3YrN03pNDwzZFDbRr5h1rzgXFVOrIhuS_9DkjIxSTKforIZwiolqCceI3EaW-8wc9cqD1z3z0AItp-JiMdfz_tIgrOl0UKKoC6UDGUL46mzxOdfoNv2KVWKjuHKcOP3whuKx5wGYeIPXdScms2aGCCvlTmKEqSn6dTQpYG8KRRjwXkmh0rdy8tFU7UMgG_v4jIqEsdRgp-WNp7DMa9SobCY8JEoHe&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v4hV-g7TEvJhzNfaUK4bYH23XGkhPZH_kGSL7H8CLvJ2YLQOA70Rgb0SY9dh4e0ABthdpfC2JLaeeqLI0vQFRAWIswDA8bAgkjXNEMiLZNxnneawHdwUL7SsZXrypRKDSuuEUkqi_CkVCwxxlaJOAUkB8vIivAePADLWbUGbQN7z6iGwYSMOHDdyHmWRgUjTBoxiiIL4TXKAVO5Rb_mFqEG7hle_lys-QkWnE6pUcioSdEUQS5o5txwxRrsvGsqe1ZSlX3WnrJbx8wkGjuItzUX3-qSFFoyras4uN-HocZ_Akt6HrdnNC5WQlE89XwZ_LmpO_gbmMz1kMOeFlBTYsr861P9toqCu7IqAyFm5QBZtJb3oyM4xySSEgVyQkGguRPYPTY6i7N2O8KZ2A1bEUniEhiFumJpmXiVWbwXnhaIl_c&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-tvPY_MTo5r_iNKI5J0jh7K2vMy84nvXxoQ4kl5CEwxGTSfZ6fsBA6cVLKHSYz_89-c3Uiike5WM7eF6hzuy0QMc9TE9k5AACz2aVcYr3Ar5I5_XbmacJ4jCoCWJckSMea-UWIg8ENwwO6r3jRTcLxhYAbARIdRa6uEC9hoFb_pLJb1lY8nLjkiL2MsKhpzd0_iNDuGSPh4zqKGWXZecjmVy2js2KHsT4DhHI3mc8kWzKldbHvuAeNnKqsfgEWp-N0XMQoPqbtZ8mV7GpYaTdjVDpLg6PfDi9NYLeGq2hdsLEK52HBZmWtDaED2UH9dUpLZU5zDALekGuwJ5SZ7uweyAgKVTYOEXoTeuu162A1d359yDEJmAOVQ3uTrDljdRjhoCEdOIuiQ8TMmWTQSgjls8i_XR7whfkGxN69KkTPXU62b&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t4hmTYPXkbmSZdz_rnI4C35S7lY_TZ_rU2QP5k60PExTizPdEchnuMR4bCRvk_VdknAnbXYkaspCPxVhk445ms7xc5p7kK0i26cCLxbI2F29Dn2kO67i1zE4e4k0yGqEqUIPBDbQAzjFC2zKJSkehVVxxuFv8ePSrBm9vBHSxXht_K3FabQ9JqTVSRqXszgk0uZMPnvCHmXkUPsJNQ3eoKH8l6-eO2Hhe3YrN03pNDwzZFDbRr5h1rzgXFVOrIhuS_9DkjIxSTKforIZwiolqCceI3EaW-8wc9cqD1z3z0AItp-JiMdfz_tIgrOl0UKKoC6UDGUL46mzxOdfoNv2KVWKjuHKcOP3whuKx5wGYeIPXdScms2aGCCvlTmKEqSn6dTQpYG8KRRjwXkmh0rdy8tFU7UMgG_v4jIqEsdRgp-WNp7DMa9SobCY8JEoHe&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v4hV-g7TEvJhzNfaUK4bYH23XGkhPZH_kGSL7H8CLvJ2YLQOA70Rgb0SY9dh4e0ABthdpfC2JLaeeqLI0vQFRAWIswDA8bAgkjXNEMiLZNxnneawHdwUL7SsZXrypRKDSuuEUkqi_CkVCwxxlaJOAUkB8vIivAePADLWbUGbQN7z6iGwYSMOHDdyHmWRgUjTBoxiiIL4TXKAVO5Rb_mFqEG7hle_lys-QkWnE6pUcioSdEUQS5o5txwxRrsvGsqe1ZSlX3WnrJbx8wkGjuItzUX3-qSFFoyras4uN-HocZ_Akt6HrdnNC5WQlE89XwZ_LmpO_gbmMz1kMOeFlBTYsr861P9toqCu7IqAyFm5QBZtJb3oyM4xySSEgVyQkGguRPYPTY6i7N2O8KZ2A1bEUniEhiFumJpmXiVWbwXnhaIl_c&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tPVhGo2xVLOjwvGxFy8R9P7jSFqYR9FzT5jqAJNGjfL66y-Fwv0yfZNZgTl-ANySvGr3w8zSO1KjMWH4j_Bi1vuFfIP2SiESG1AXXZqa6D-YehLJFLfR1wOFhkN4-mjkqqCerIZOruZfZusxalVTa0HvAQD-ScUqH2pK3awFtf3kfHKymufv_I7d8MtSkAG1Xyo9sd_wDSFOdG_WwMC3-hCJ4bDxvK7yhZLrO8Tl37ShjuffRGpj8XqjgoUuHDPV8RZDv55dIFeBAQDiczMH-gP3bXJbCdiP3Od-kc4UZ0I8fR4BNys4XJJmNa4myyBhddDyAo9Al1eI8iL1Iop6VD964GtBsakKKg9IWg2IExscn4vaKP1ugfHOEH6zF_mQiEiej0zFCASSEPu3C-62O5Z-GLckt1XWkDJZC3X35R9ZXmff9lzpCJfyroMArq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uymVRll-ixqtQWpy3KCEEKADCA3rZ2HCEtU8nJwFw1agnN38VPvGrpOQDKKO-YdCHX_x_9PhNSefiJQfpxfcWCo-yy90VA3e0odt6yBCIZR737N2SHnAMO9uupLzWV-edNzB31MygGAaDrKbJzoixSq0Md453Jyr95z0DKCn0214b9sei2XBJXcSxKRu0SHdJk8L0xVmmwuTkT7a4FRueOu3qn-pd7_jl20VAvEp-iBdGNz1v4QPHzujnJIlFlTValPHl3rvKuUxogl9o6Y3HtoZA2OzobaYRHYhG-cf6c2QKtVT8ycSExMPr9Zfnhm2VyM8OWUhQlpuZKHSwuzz8uEH6F9NFItBngmHPVaX1sx4j_q3hguiTmyQOJgaBDwhr9lXMMh4QDVyFa1JBjDmIvFMIcxe49QAeMKgO4bPi95PU7&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tmc7yb1qOCMrh24FlvK-YWaqJte1j8g6EvvtZbAiwqoZVY8lJhCqMhULfgcx9LenAYq55vlMlA-Nc87E0lbqZiFiBv_4_5f_zK21tNgDzPJDNi8_Iai10r37oCLcOf8pAo9f7DS_XG9rYh8BU1bCwEX5AUbgR4bkV_studD7FOqY93Oj3TsO5tUlE8g4b_GiO6Huu5YZFsQNI2mtagMqNJlFITB6O8R_RwV3ZiUJzWHPnsdDqkpTsnHnYBfC6cz-sO57BSGneqnS8-IOnK-VMYosbRCAo92AlCNBR9dqUnAAZYv_a0FnvMXB_IcJiYiCqPf20X9v2AVp2HPxeAYEfRsTZ8cMhBf8ZZL-HUDZwJufZNLOHi64oCpkZ6XySB5ljTKlwP2LcKKsgbDHU7ag5RKBEQxdW2Jn9SJK5-2Ho3VH84&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t4hmTYPXkbmSZdz_rnI4C35S7lY_TZ_rU2QP5k60PExTizPdEchnuMR4bCRvk_VdknAnbXYkaspCPxVhk445ms7xc5p7kK0i26cCLxbI2F29Dn2kO67i1zE4e4k0yGqEqUIPBDbQAzjFC2zKJSkehVVxxuFv8ePSrBm9vBHSxXht_K3FabQ9JqTVSRqXszgk0uZMPnvCHmXkUPsJNQ3eoKH8l6-eO2Hhe3YrN03pNDwzZFDbRr5h1rzgXFVOrIhuS_9DkjIxSTKforIZwiolqCceI3EaW-8wc9cqD1z3z0AItp-JiMdfz_tIgrOl0UKKoC6UDGUL46mzxOdfoNv2KVWKjuHKcOP3whuKx5wGYeIPXdScms2aGCCvlTmKEqSn6dTQpYG8KRRjwXkmh0rdy8tFU7UMgG_v4jIqEsdRgp-WNp7DMa9SobCY8JEoHe&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v4hV-g7TEvJhzNfaUK4bYH23XGkhPZH_kGSL7H8CLvJ2YLQOA70Rgb0SY9dh4e0ABthdpfC2JLaeeqLI0vQFRAWIswDA8bAgkjXNEMiLZNxnneawHdwUL7SsZXrypRKDSuuEUkqi_CkVCwxxlaJOAUkB8vIivAePADLWbUGbQN7z6iGwYSMOHDdyHmWRgUjTBoxiiIL4TXKAVO5Rb_mFqEG7hle_lys-QkWnE6pUcioSdEUQS5o5txwxRrsvGsqe1ZSlX3WnrJbx8wkGjuItzUX3-qSFFoyras4uN-HocZ_Akt6HrdnNC5WQlE89XwZ_LmpO_gbmMz1kMOeFlBTYsr861P9toqCu7IqAyFm5QBZtJb3oyM4xySSEgVyQkGguRPYPTY6i7N2O8KZ2A1bEUniEhiFumJpmXiVWbwXnhaIl_c&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tPVhGo2xVLOjwvGxFy8R9P7jSFqYR9FzT5jqAJNGjfL66y-Fwv0yfZNZgTl-ANySvGr3w8zSO1KjMWH4j_Bi1vuFfIP2SiESG1AXXZqa6D-YehLJFLfR1wOFhkN4-mjkqqCerIZOruZfZusxalVTa0HvAQD-ScUqH2pK3awFtf3kfHKymufv_I7d8MtSkAG1Xyo9sd_wDSFOdG_WwMC3-hCJ4bDxvK7yhZLrO8Tl37ShjuffRGpj8XqjgoUuHDPV8RZDv55dIFeBAQDiczMH-gP3bXJbCdiP3Od-kc4UZ0I8fR4BNys4XJJmNa4myyBhddDyAo9Al1eI8iL1Iop6VD964GtBsakKKg9IWg2IExscn4vaKP1ugfHOEH6zF_mQiEiej0zFCASSEPu3C-62O5Z-GLckt1XWkDJZC3X35R9ZXmff9lzpCJfyroMArq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uymVRll-ixqtQWpy3KCEEKADCA3rZ2HCEtU8nJwFw1agnN38VPvGrpOQDKKO-YdCHX_x_9PhNSefiJQfpxfcWCo-yy90VA3e0odt6yBCIZR737N2SHnAMO9uupLzWV-edNzB31MygGAaDrKbJzoixSq0Md453Jyr95z0DKCn0214b9sei2XBJXcSxKRu0SHdJk8L0xVmmwuTkT7a4FRueOu3qn-pd7_jl20VAvEp-iBdGNz1v4QPHzujnJIlFlTValPHl3rvKuUxogl9o6Y3HtoZA2OzobaYRHYhG-cf6c2QKtVT8ycSExMPr9Zfnhm2VyM8OWUhQlpuZKHSwuzz8uEH6F9NFItBngmHPVaX1sx4j_q3hguiTmyQOJgaBDwhr9lXMMh4QDVyFa1JBjDmIvFMIcxe49QAeMKgO4bPi95PU7&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tmc7yb1qOCMrh24FlvK-YWaqJte1j8g6EvvtZbAiwqoZVY8lJhCqMhULfgcx9LenAYq55vlMlA-Nc87E0lbqZiFiBv_4_5f_zK21tNgDzPJDNi8_Iai10r37oCLcOf8pAo9f7DS_XG9rYh8BU1bCwEX5AUbgR4bkV_studD7FOqY93Oj3TsO5tUlE8g4b_GiO6Huu5YZFsQNI2mtagMqNJlFITB6O8R_RwV3ZiUJzWHPnsdDqkpTsnHnYBfC6cz-sO57BSGneqnS8-IOnK-VMYosbRCAo92AlCNBR9dqUnAAZYv_a0FnvMXB_IcJiYiCqPf20X9v2AVp2HPxeAYEfRsTZ8cMhBf8ZZL-HUDZwJufZNLOHi64oCpkZ6XySB5ljTKlwP2LcKKsgbDHU7ag5RKBEQxdW2Jn9SJK5-2Ho3VH84&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "Hidden Gem",
+      "Rooftop Vibe",
+      "Cozy",
+      "Local Hangout",
+      "Coffee & Bites"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Marsoki Special Coffee",
+        "description": "House blend espresso with steamed milk and a hint of cardamom.",
+        "price": "₹150",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tPVhGo2xVLOjwvGxFy8R9P7jSFqYR9FzT5jqAJNGjfL66y-Fwv0yfZNZgTl-ANySvGr3w8zSO1KjMWH4j_Bi1vuFfIP2SiESG1AXXZqa6D-YehLJFLfR1wOFhkN4-mjkqqCerIZOruZfZusxalVTa0HvAQD-ScUqH2pK3awFtf3kfHKymufv_I7d8MtSkAG1Xyo9sd_wDSFOdG_WwMC3-hCJ4bDxvK7yhZLrO8Tl37ShjuffRGpj8XqjgoUuHDPV8RZDv55dIFeBAQDiczMH-gP3bXJbCdiP3Od-kc4UZ0I8fR4BNys4XJJmNa4myyBhddDyAo9Al1eI8iL1Iop6VD964GtBsakKKg9IWg2IExscn4vaKP1ugfHOEH6zF_mQiEiej0zFCASSEPu3C-62O5Z-GLckt1XWkDJZC3X35R9ZXmff9lzpCJfyroMArq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Grilled Sandwich Platter",
+        "description": "Toasted bread, fresh vegetables, cheese, served with soup.",
+        "price": "₹180",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tPVhGo2xVLOjwvGxFy8R9P7jSFqYR9FzT5jqAJNGjfL66y-Fwv0yfZNZgTl-ANySvGr3w8zSO1KjMWH4j_Bi1vuFfIP2SiESG1AXXZqa6D-YehLJFLfR1wOFhkN4-mjkqqCerIZOruZfZusxalVTa0HvAQD-ScUqH2pK3awFtf3kfHKymufv_I7d8MtSkAG1Xyo9sd_wDSFOdG_WwMC3-hCJ4bDxvK7yhZLrO8Tl37ShjuffRGpj8XqjgoUuHDPV8RZDv55dIFeBAQDiczMH-gP3bXJbCdiP3Od-kc4UZ0I8fR4BNys4XJJmNa4myyBhddDyAo9Al1eI8iL1Iop6VD964GtBsakKKg9IWg2IExscn4vaKP1ugfHOEH6zF_mQiEiej0zFCASSEPu3C-62O5Z-GLckt1XWkDJZC3X35R9ZXmff9lzpCJfyroMArq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5689385,
+      "lng": 91.8989805
+    },
+    "latitude": 25.5689385,
+    "longitude": 91.8989805,
+    "formatted_address": "Elizabeth ville, opp. laitumkhrah, Nongkynrih, lammawrie, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "place_id": "ChIJIQg1e8t_UDcRLswEecF2h5c",
+    "phone_number": "076288 47121",
+    "website": null,
+    "google_maps_url": "https://maps.google.com/?cid=10918826394914180142",
+    "rating": 3.3,
+    "user_ratings_total": 26,
+    "price_level": 2,
+    "price_display": "₹₹",
+    "opening_hours": [
+      "Monday: 12:00 – 8:00 PM",
+      "Tuesday: 12:00 PM – 8:00 AM",
+      "Wednesday: 12:00 – 8:00 PM",
+      "Thursday: 12:00 PM – 8:30 AM",
+      "Friday: 12:00 – 8:00 PM",
+      "Saturday: 12:00 – 8:00 PM",
+      "Sunday: 1:00 – 8:00 PM"
+    ],
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
+  },
+  {
+    "id": "grub-s-cafe-bakery",
+    "name": "Grub's Cafe & Bakery",
+    "tagline": "Baked Fresh, Served High, Eaten Happily",
+    "theme": "Rooftop Bakery with Breezy Khasi Hills Views",
+    "introduction": "Grub's Cafe & Bakery is Laitumkhrah's beloved rooftop bakery, celebrated for its sky-high cheesecakes, golden croissants, and fudgy brownies. The breezy terrace with panoramic neighborhood views makes every bite taste better.",
+    "whyVisit": "For Shillong's finest cheesecake on a rooftop with a hill breeze — the combination is unbeatable.",
+    "hours": "10:00 AM — 9:00 PM",
+    "address": "Laitumkhrah Main Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uwR_Sx1rp64K6bFsYpVGuqkv3NDWFxLg2F-o_Q8zDan-Xw1qxtcsw2dofQFhnLXhwm1ntnSAr1jE9iS9lNXeeNmPt_whNxHp-d03r1qDc257tkImnElunEkJovJNtS2SWioLtIYi_BRd3-stGmCB8FiiDV1hsXFCWUYZNRdm5_2JFdHn6ojfGDRmyYNyxNJKQChrSyqHm84AJFfmCnvqbeifPiRR85_Xj3e-4YxrxTDi9lKgfMXwrgac6MQxR8TtGSmuSPUWWXrOzKlOmWAQZyOUr1kq8zPsP3XpCqgTHARfByy48hsaJmp_gZGMumKIjqfTqemqnmOeIKfKrns_6OklrgtoZ8089wTLH9dGO2jJcf8lfvCkctxyNxS8-vBd68g0bZRvoBZ1gmbycEsxhgjLfob8p3spqQoeuPlN9GEBNc&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sVKbL3fD_Gr5lPkE-u3Pde0l9bsF5YWLCd81cIryLStDfre5PaqapmUic1PzUBDT-2pOXaH72llYkqZUM8VF4o9tX6ry0O72dzUI9wntntV5g1ahpzhCSRXeljGHZv2LDKVcLGUQAarMsjieP93O3aDQw6e14BnAU-NVvQzDzRafNRoPOPkXy7yfOpO_qTDoD7w039dz9mNxyZyqGZCGIZvGsYOfYi89ABi1PXyzwgLu3MQa2kLpEiLL-abcZSIverbcXXX3iLefWxIlP80jKuhmsLnsLiHzdJIUePCt6c8y_Qn8FmLgsEeLNf_R7Cj0Nn76ySWRJreQTl2C2GRXtGojnFEVeZWhs0vFews427tu1MKC92DekzzSwmAkftBkAA_nVNiIod4z0eeIX6SlJUt82TDKKD305PvbA70izEaDqn&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sa2_Mp04FkFAY4m68UafG-CUotlARQrHVT0rXHLfWwDKcjabVliXMRzvB6w4LOJ7O0onohC0li3GfAikz1zAK8LXbwz2D40PRHNgAw5HKE3qYkPKJQoHprj-7iAfI4Jn6VURpu5euP-zgVGSiQik-yTWja77O_EedViTwn2BUaSVQadFWzb38uq07YoMTZA71FTumZ3Ti0JW93pw0OuqH0zKGs_Gd0QlsAghzx0KQb_VeSzjA6L-awg9gFmQLeByBk_FZVSfwDKpqDM-Ir9tIxLYY76AgdxOkmpZmezYH_J_IMMsb0_vNrdh_WPIXo_XHWK9523dfji_XaGDIu0c-nyUj5sLRYakoVK7yjmDBeFVIi9C9qtvkTwKWU8GDb-qJ19xYtHgdCp_y_RcvvMtBe6GMEnM6a26cz-OXTWUOvStXoxqsRkVq5Rq99HGfr&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uwR_Sx1rp64K6bFsYpVGuqkv3NDWFxLg2F-o_Q8zDan-Xw1qxtcsw2dofQFhnLXhwm1ntnSAr1jE9iS9lNXeeNmPt_whNxHp-d03r1qDc257tkImnElunEkJovJNtS2SWioLtIYi_BRd3-stGmCB8FiiDV1hsXFCWUYZNRdm5_2JFdHn6ojfGDRmyYNyxNJKQChrSyqHm84AJFfmCnvqbeifPiRR85_Xj3e-4YxrxTDi9lKgfMXwrgac6MQxR8TtGSmuSPUWWXrOzKlOmWAQZyOUr1kq8zPsP3XpCqgTHARfByy48hsaJmp_gZGMumKIjqfTqemqnmOeIKfKrns_6OklrgtoZ8089wTLH9dGO2jJcf8lfvCkctxyNxS8-vBd68g0bZRvoBZ1gmbycEsxhgjLfob8p3spqQoeuPlN9GEBNc&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sVKbL3fD_Gr5lPkE-u3Pde0l9bsF5YWLCd81cIryLStDfre5PaqapmUic1PzUBDT-2pOXaH72llYkqZUM8VF4o9tX6ry0O72dzUI9wntntV5g1ahpzhCSRXeljGHZv2LDKVcLGUQAarMsjieP93O3aDQw6e14BnAU-NVvQzDzRafNRoPOPkXy7yfOpO_qTDoD7w039dz9mNxyZyqGZCGIZvGsYOfYi89ABi1PXyzwgLu3MQa2kLpEiLL-abcZSIverbcXXX3iLefWxIlP80jKuhmsLnsLiHzdJIUePCt6c8y_Qn8FmLgsEeLNf_R7Cj0Nn76ySWRJreQTl2C2GRXtGojnFEVeZWhs0vFews427tu1MKC92DekzzSwmAkftBkAA_nVNiIod4z0eeIX6SlJUt82TDKKD305PvbA70izEaDqn&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sa2_Mp04FkFAY4m68UafG-CUotlARQrHVT0rXHLfWwDKcjabVliXMRzvB6w4LOJ7O0onohC0li3GfAikz1zAK8LXbwz2D40PRHNgAw5HKE3qYkPKJQoHprj-7iAfI4Jn6VURpu5euP-zgVGSiQik-yTWja77O_EedViTwn2BUaSVQadFWzb38uq07YoMTZA71FTumZ3Ti0JW93pw0OuqH0zKGs_Gd0QlsAghzx0KQb_VeSzjA6L-awg9gFmQLeByBk_FZVSfwDKpqDM-Ir9tIxLYY76AgdxOkmpZmezYH_J_IMMsb0_vNrdh_WPIXo_XHWK9523dfji_XaGDIu0c-nyUj5sLRYakoVK7yjmDBeFVIi9C9qtvkTwKWU8GDb-qJ19xYtHgdCp_y_RcvvMtBe6GMEnM6a26cz-OXTWUOvStXoxqsRkVq5Rq99HGfr&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ucX8JdD1GtcINO-Gd7W8vk4U2B8AUbcs6GS4DTRBnwbcCocHPGp2cRAu5YQGbz9dLsW4snzIttOsSCnoE0ett4jyZn97giThknZz0LGU06YO9DdlKvMZSfb7DzRps35ePym969mSzSnLk3aGcqaar6Hq5JeoFPHRApzNNdWvffJImvueqqIGtkVu6dntUQgtJweK3edqrburgZWvqB5hZWZhpgNroL6ZesI2N4CJv0B0bPCSzwNKMhotHrxh8qjmrfNmcqzTSiuWlNaXwWkotEBn55xK6Fn2uUb-Hsbl6JNqsTqpxXsuO3-w36MEiLhfUmwrMUgmCjJ4rhn8jGD2Wjtuqh6I7KwyfTS1t6MHtDce78GtGn0IZoN0kvJHCruRiA18-A-tJ876mya6EO2YehuqR3A53fdmAjRy1bRW3kFQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sKZvSd0V-czIqLKI2zU4vwLeDzoZCFNTDoSR6BBCQC8uV4ZnWdg4wIHi_v2GAl1bwvP_rOGxIpNOf5ewop7OCyNIlG177JWtgz2wqsGQhCdm8eSHVNxPcPByhQgWcjatA6aDI-LgtEGggrZFiJh0-ww4rNEJW6eLk3-ef-tCXmydqPubFFUqt87rve_23Q7PYpzlkKt9T0Nmue40tnsmzbpLXouY50rHf6MINxsoTork4DsPYVE7ag3opAE8-LXtkOMgPrbSEV0xOmClX4zctk6C0EzA5e0xHEmxXzVtPtwOUi7ajeORaCgbICYdVhM5pwNjHmBUQq1MoV_6P1WJtm-siACEG30pGf4Hgp3TS5jKBffVKki0il5pkt4q0tDPAlTIQR5O1qFqvXWny5Wmpierv198TVZzUKB08OSM8&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v8DSkxnLo_oSTFRqmH_II7r2X0As4pY4qUXObe5UHYccQTE9N4qdp4ZNm1hhO90clwYsy_MpVe5oG7AzSSQ6wLGRPnjjFwbwNEtCe2MkfDgqlTCulqVuxeEIHwvSeaT2TnG_elycYhmn8Ow-Ip3DlG3jrLFJSiFYlEpUOT8AOWWB8qvEWz1hi0_2U4PyzOVyYQwI5ItHD_-jl67brQZ42PFpAw8mlh5Dpq1fWbIjX5kUo1knkIZhq8PTWkZVMrS0yV_Iypk1em4avKYtnDq6um-8igGx6U5ciot-rC3DsvG__F9OlmxVRNVIfI1_sa-ZDo4sPe5KKw6-eXgQxGbLkLc9kQH5Ixn0Rn-APdus2RtonVGHzjC751dF30aDYI5GwW6Baq6FJoeuiNRMkSVlyyPgIQeaeERYm0yi_dwaCxUdk&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sVKbL3fD_Gr5lPkE-u3Pde0l9bsF5YWLCd81cIryLStDfre5PaqapmUic1PzUBDT-2pOXaH72llYkqZUM8VF4o9tX6ry0O72dzUI9wntntV5g1ahpzhCSRXeljGHZv2LDKVcLGUQAarMsjieP93O3aDQw6e14BnAU-NVvQzDzRafNRoPOPkXy7yfOpO_qTDoD7w039dz9mNxyZyqGZCGIZvGsYOfYi89ABi1PXyzwgLu3MQa2kLpEiLL-abcZSIverbcXXX3iLefWxIlP80jKuhmsLnsLiHzdJIUePCt6c8y_Qn8FmLgsEeLNf_R7Cj0Nn76ySWRJreQTl2C2GRXtGojnFEVeZWhs0vFews427tu1MKC92DekzzSwmAkftBkAA_nVNiIod4z0eeIX6SlJUt82TDKKD305PvbA70izEaDqn&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sa2_Mp04FkFAY4m68UafG-CUotlARQrHVT0rXHLfWwDKcjabVliXMRzvB6w4LOJ7O0onohC0li3GfAikz1zAK8LXbwz2D40PRHNgAw5HKE3qYkPKJQoHprj-7iAfI4Jn6VURpu5euP-zgVGSiQik-yTWja77O_EedViTwn2BUaSVQadFWzb38uq07YoMTZA71FTumZ3Ti0JW93pw0OuqH0zKGs_Gd0QlsAghzx0KQb_VeSzjA6L-awg9gFmQLeByBk_FZVSfwDKpqDM-Ir9tIxLYY76AgdxOkmpZmezYH_J_IMMsb0_vNrdh_WPIXo_XHWK9523dfji_XaGDIu0c-nyUj5sLRYakoVK7yjmDBeFVIi9C9qtvkTwKWU8GDb-qJ19xYtHgdCp_y_RcvvMtBe6GMEnM6a26cz-OXTWUOvStXoxqsRkVq5Rq99HGfr&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ucX8JdD1GtcINO-Gd7W8vk4U2B8AUbcs6GS4DTRBnwbcCocHPGp2cRAu5YQGbz9dLsW4snzIttOsSCnoE0ett4jyZn97giThknZz0LGU06YO9DdlKvMZSfb7DzRps35ePym969mSzSnLk3aGcqaar6Hq5JeoFPHRApzNNdWvffJImvueqqIGtkVu6dntUQgtJweK3edqrburgZWvqB5hZWZhpgNroL6ZesI2N4CJv0B0bPCSzwNKMhotHrxh8qjmrfNmcqzTSiuWlNaXwWkotEBn55xK6Fn2uUb-Hsbl6JNqsTqpxXsuO3-w36MEiLhfUmwrMUgmCjJ4rhn8jGD2Wjtuqh6I7KwyfTS1t6MHtDce78GtGn0IZoN0kvJHCruRiA18-A-tJ876mya6EO2YehuqR3A53fdmAjRy1bRW3kFQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sKZvSd0V-czIqLKI2zU4vwLeDzoZCFNTDoSR6BBCQC8uV4ZnWdg4wIHi_v2GAl1bwvP_rOGxIpNOf5ewop7OCyNIlG177JWtgz2wqsGQhCdm8eSHVNxPcPByhQgWcjatA6aDI-LgtEGggrZFiJh0-ww4rNEJW6eLk3-ef-tCXmydqPubFFUqt87rve_23Q7PYpzlkKt9T0Nmue40tnsmzbpLXouY50rHf6MINxsoTork4DsPYVE7ag3opAE8-LXtkOMgPrbSEV0xOmClX4zctk6C0EzA5e0xHEmxXzVtPtwOUi7ajeORaCgbICYdVhM5pwNjHmBUQq1MoV_6P1WJtm-siACEG30pGf4Hgp3TS5jKBffVKki0il5pkt4q0tDPAlTIQR5O1qFqvXWny5Wmpierv198TVZzUKB08OSM8&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v8DSkxnLo_oSTFRqmH_II7r2X0As4pY4qUXObe5UHYccQTE9N4qdp4ZNm1hhO90clwYsy_MpVe5oG7AzSSQ6wLGRPnjjFwbwNEtCe2MkfDgqlTCulqVuxeEIHwvSeaT2TnG_elycYhmn8Ow-Ip3DlG3jrLFJSiFYlEpUOT8AOWWB8qvEWz1hi0_2U4PyzOVyYQwI5ItHD_-jl67brQZ42PFpAw8mlh5Dpq1fWbIjX5kUo1knkIZhq8PTWkZVMrS0yV_Iypk1em4avKYtnDq6um-8igGx6U5ciot-rC3DsvG__F9OlmxVRNVIfI1_sa-ZDo4sPe5KKw6-eXgQxGbLkLc9kQH5Ixn0Rn-APdus2RtonVGHzjC751dF30aDYI5GwW6Baq6FJoeuiNRMkSVlyyPgIQeaeERYm0yi_dwaCxUdk&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "Rooftop",
+      "Bakery",
+      "Cheesecake",
+      "Breezy",
+      "Sweet Tooth"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "New York Cheesecake Slice",
+        "description": "Dense, creamy baked cheesecake on a buttery graham crust, served cold.",
+        "price": "₹160",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ucX8JdD1GtcINO-Gd7W8vk4U2B8AUbcs6GS4DTRBnwbcCocHPGp2cRAu5YQGbz9dLsW4snzIttOsSCnoE0ett4jyZn97giThknZz0LGU06YO9DdlKvMZSfb7DzRps35ePym969mSzSnLk3aGcqaar6Hq5JeoFPHRApzNNdWvffJImvueqqIGtkVu6dntUQgtJweK3edqrburgZWvqB5hZWZhpgNroL6ZesI2N4CJv0B0bPCSzwNKMhotHrxh8qjmrfNmcqzTSiuWlNaXwWkotEBn55xK6Fn2uUb-Hsbl6JNqsTqpxXsuO3-w36MEiLhfUmwrMUgmCjJ4rhn8jGD2Wjtuqh6I7KwyfTS1t6MHtDce78GtGn0IZoN0kvJHCruRiA18-A-tJ876mya6EO2YehuqR3A53fdmAjRy1bRW3kFQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Hazelnut Brownie",
+        "description": "Fudgy dark chocolate brownie with roasted hazelnuts and a dusting of cocoa.",
+        "price": "₹120",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ucX8JdD1GtcINO-Gd7W8vk4U2B8AUbcs6GS4DTRBnwbcCocHPGp2cRAu5YQGbz9dLsW4snzIttOsSCnoE0ett4jyZn97giThknZz0LGU06YO9DdlKvMZSfb7DzRps35ePym969mSzSnLk3aGcqaar6Hq5JeoFPHRApzNNdWvffJImvueqqIGtkVu6dntUQgtJweK3edqrburgZWvqB5hZWZhpgNroL6ZesI2N4CJv0B0bPCSzwNKMhotHrxh8qjmrfNmcqzTSiuWlNaXwWkotEBn55xK6Fn2uUb-Hsbl6JNqsTqpxXsuO3-w36MEiLhfUmwrMUgmCjJ4rhn8jGD2Wjtuqh6I7KwyfTS1t6MHtDce78GtGn0IZoN0kvJHCruRiA18-A-tJ876mya6EO2YehuqR3A53fdmAjRy1bRW3kFQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.569266,
+      "lng": 91.89821950000001
+    },
+    "latitude": 25.569266,
+    "longitude": 91.89821950000001,
+    "formatted_address": "Laitumkhrah Main Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "place_id": "ChIJ3Zm457p-UDcRnAtO1JosnBg",
+    "phone_number": "070850 69008",
+    "website": null,
+    "google_maps_url": "https://maps.google.com/?cid=1773341396775603100",
+    "rating": 4,
+    "user_ratings_total": 750,
+    "price_level": 3,
+    "price_display": "₹₹₹",
+    "opening_hours": [],
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest",
+      "store"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 700,
+    "average_spend_for_two": 1400
+  },
+  {
+    "id": "bamboo-hut",
+    "name": "Bamboo Hut",
+    "tagline": "Shillong's Original Chinese Kitchen",
+    "theme": "Authentic Chinese Street Food in a Bamboo Setting",
+    "introduction": "Bamboo Hut is one of Shillong's most enduring Chinese food destinations, serving authentic Hakka noodles, dim sum, and steamed momos from a warmly lit bamboo-themed space near MG Road. A longtime local institution.",
+    "whyVisit": "For Shillong's most authentic Hakka Chinese food — the steamed dumplings and noodles are the real deal.",
+    "hours": "10:00 AM — 9:00 PM",
+    "address": "MG Road, Secretariat Hills, Shillong, Meghalaya 793001, India",
+    "neighborhood": "MG Road",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-sZ4RNMvlQwSUietiI06kb69x5MH9sZuQY_hSkEb6vIXHnxb9ZX-fB5plLQKtxRUvSR0XOOrwOi4PVSuwncYsINzqF6aA5o-zhtp6BXvgFf1nbxBjFFK-3vlQrz09cfS7Izq1xsukXw-ostLGns6N7c6Ri71rHxH6CoiCin0Hmy6oG6OWshrd0k5ztODyC4VMntqeamLjMOUtpTSgvwShC3v62oxUgur2RopaYSSb1jKo65L62Mlpt_NFplpMGvNjehNifmfXttH2gtxb3v59oBrE8IKYgSNuiDIRP4uzKc3T6TDf9_VoOYf_Y72ODZFFWPzef8llUSKzZgS25K0O-8wLDf8JFj9qWQQ2PrVy2BDv9-PYCj0NJhssNjmhIwmGs-ZgyXgNC0EkcOehbViby4INObEqs5yOzanQE8CBSFtM0r&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tTvQkbg2JAyTAItDAsk44KaIUi9cI89rrtRkdIGr54GdxDb1SG4ILBUxJRuJIXMHqWymQk4n6i04q20W8tWKUfgYq9FKcMfbNAmCU2lqHNt0ik5rhvmdp5M2INssJTaxEFW6okmwHgpTlw_MQlbTWnwhlFER87zLUOpmZYyjs_ZwOfZEeEL2-oMXoB2PL2YTeRWss-I5rXplV6NGhm9n-Vqo9ui_GPaT6TDot__SaMIRRHCQCaFB7uzdlAfpS-kjWMKZuhUloMSDalIDovrvAOv2OBVKNoAkQdzTLzn7wq713L7yshbdOYnN1gWFVSm-aaeKFnz0QobCQkLCblSRI4uKYCeKKxxnHcHqsMHj_pd02emfBA6H0zicJ3osab650eEbB_nKHaTNd73xbykgUo5lrqsIBF7i_PXmaCNbYcxg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vhuNQcKXStkBF-S1DgZZ2nHhcKq72ZJa1Ugbq8BY7iqpGguWzEMGuiCVc5NiOL9T07_V7gEGYq58PyWAZ8pXIiDrnNQ6oiiYEBukEoBWiRucclIYImQVm-4A-fBvW_w8wxGLJWcbpbV2nDicYYW-H0dzoA5Snq09DD3yUfEm9BHr1BJ8UaZgYq18SyeegzasQn4B5CrIGFWgwZBcJFPNIyAy9UpfHcpZpo_FvPcbo4BbWyjkGKrOE9iAQORCrpmhF7GrOKbq-cyAtPv84S-ucjBUrG0gQqiLS3gkrZDUqhe1QK8rUIP_tqxu-SeuNuHIbYyxIWxDmGoXSb7p0hoTqF85Bz1u-n4K8iAcntQ5rEFDogtHdDj3KAlQGsdECAq0iHqL2t2kywoIvGe4PO3Ex2L0VJjbjYbmhNjUWctEgl1J62&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-sZ4RNMvlQwSUietiI06kb69x5MH9sZuQY_hSkEb6vIXHnxb9ZX-fB5plLQKtxRUvSR0XOOrwOi4PVSuwncYsINzqF6aA5o-zhtp6BXvgFf1nbxBjFFK-3vlQrz09cfS7Izq1xsukXw-ostLGns6N7c6Ri71rHxH6CoiCin0Hmy6oG6OWshrd0k5ztODyC4VMntqeamLjMOUtpTSgvwShC3v62oxUgur2RopaYSSb1jKo65L62Mlpt_NFplpMGvNjehNifmfXttH2gtxb3v59oBrE8IKYgSNuiDIRP4uzKc3T6TDf9_VoOYf_Y72ODZFFWPzef8llUSKzZgS25K0O-8wLDf8JFj9qWQQ2PrVy2BDv9-PYCj0NJhssNjmhIwmGs-ZgyXgNC0EkcOehbViby4INObEqs5yOzanQE8CBSFtM0r&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tTvQkbg2JAyTAItDAsk44KaIUi9cI89rrtRkdIGr54GdxDb1SG4ILBUxJRuJIXMHqWymQk4n6i04q20W8tWKUfgYq9FKcMfbNAmCU2lqHNt0ik5rhvmdp5M2INssJTaxEFW6okmwHgpTlw_MQlbTWnwhlFER87zLUOpmZYyjs_ZwOfZEeEL2-oMXoB2PL2YTeRWss-I5rXplV6NGhm9n-Vqo9ui_GPaT6TDot__SaMIRRHCQCaFB7uzdlAfpS-kjWMKZuhUloMSDalIDovrvAOv2OBVKNoAkQdzTLzn7wq713L7yshbdOYnN1gWFVSm-aaeKFnz0QobCQkLCblSRI4uKYCeKKxxnHcHqsMHj_pd02emfBA6H0zicJ3osab650eEbB_nKHaTNd73xbykgUo5lrqsIBF7i_PXmaCNbYcxg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vhuNQcKXStkBF-S1DgZZ2nHhcKq72ZJa1Ugbq8BY7iqpGguWzEMGuiCVc5NiOL9T07_V7gEGYq58PyWAZ8pXIiDrnNQ6oiiYEBukEoBWiRucclIYImQVm-4A-fBvW_w8wxGLJWcbpbV2nDicYYW-H0dzoA5Snq09DD3yUfEm9BHr1BJ8UaZgYq18SyeegzasQn4B5CrIGFWgwZBcJFPNIyAy9UpfHcpZpo_FvPcbo4BbWyjkGKrOE9iAQORCrpmhF7GrOKbq-cyAtPv84S-ucjBUrG0gQqiLS3gkrZDUqhe1QK8rUIP_tqxu-SeuNuHIbYyxIWxDmGoXSb7p0hoTqF85Bz1u-n4K8iAcntQ5rEFDogtHdDj3KAlQGsdECAq0iHqL2t2kywoIvGe4PO3Ex2L0VJjbjYbmhNjUWctEgl1J62&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tV4b3aW9_ABC2CLAk7Fe28UdqiaVGFqvymwAHRUXzUqeuurDfUKFznsdiKS-UOGr-T2Belfu-LuF3RiMnqLCuSMJ9GuCKX6BCSXBOPf8EyK0RHDrhrb-MNto7MrtgEDvmCiDr5jJMX24FG6rm8r3QRYOFaT7MPa4tu3rR5XjRcDZzFpsNYiWXt1E12edFaP86msNmKBXvcfW-viroS9dBhFpDAtwhEJ4b2m456ri7hihnafdPo1-07ft4GCoN5JNXaMdEzf6b3YLM3y9aw3aGN9f_JMcpL-ysf2YHNWxNhBeTREQF0drV5xnHv1cTeEGTpm7nAkvzPAOvLQrD4bp0O9lOE0bivnJ8BW3jqughVXyjiNH1rtbi65aTacUMRNqfkMyppKYD9sp-59XRZ5oltPu5fo4k6HO-5duQvdvn5P7Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vdsFhWHT3LNnrRtAy-VV6lxU1dtAE9NjjASQnuMSJ7mw2bYAo1Po4WGQy-CjOVvRcq9XeCkv0pCY57A4FDYM5SpunZa74szmSioEX31A20Kl-UzkM58sM-BWh1CVK7W5F4H13GErsiSywFQufCZw30kHHo54yxi3vzYSOvPyC89v_iDDKlp1hXXVLIk4Zs0cifYkBK4jA4L0IF9nB2lKQzCtfoDxX1_gJeiizcJxl85AMpRCmg0OumWt-gtUjp_cccdrxQMWlqNAouRC2rAujU8qrOePPuk4_o9fWQqJ_z3UYAeKXef3Y0iLu5z9oyfiV8aKx8CRPMZlMh-qT9rRepS3_FVO8NDDCEB3UliDPnlTuuFZyXc2ElhoWhlQjH2t0zEqG-5TRsahZhMiTaG36CHs5RnRoXRqNBarJF8-rFieEk&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t-EjCzKhmdaYgUDbxAw5XpA_X84qHi_rcTW1uCvSOaoV7vZ3YvmGselSe0vib6tTUXT5gXNhIbJIzx-8ZZ2cM4fStjcmbEMgTHean76SCvgX_2iQsSknEex-59DqoGvELaCchEfd0rI1aOJckh_80N3pi9ESgiyJoHqw-RULTg3Vk8ygepwqh-MmGQqfgj-iiDrn_z1r-xbsU5TZQJH9G21LyCQBPm-OQ-KxjKvFY67V9Wsz06_pyntPgFrn6dqMQDhhCLbKPnFclYX7vmhKcnFdguz4PsRfjERcpkWTbWfYK-ADyiEINEXkqpJPgIUw7accqCwECY_UbRhIHTF-fS_tLnvfVpPsDW8lJVVTa2UqHN6n7hwYrFEcAX8Whvrr28JaHRSjsSXDqF_gOmvsXtxjGXywnHbngHuX_RGaHMdzDD&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tTvQkbg2JAyTAItDAsk44KaIUi9cI89rrtRkdIGr54GdxDb1SG4ILBUxJRuJIXMHqWymQk4n6i04q20W8tWKUfgYq9FKcMfbNAmCU2lqHNt0ik5rhvmdp5M2INssJTaxEFW6okmwHgpTlw_MQlbTWnwhlFER87zLUOpmZYyjs_ZwOfZEeEL2-oMXoB2PL2YTeRWss-I5rXplV6NGhm9n-Vqo9ui_GPaT6TDot__SaMIRRHCQCaFB7uzdlAfpS-kjWMKZuhUloMSDalIDovrvAOv2OBVKNoAkQdzTLzn7wq713L7yshbdOYnN1gWFVSm-aaeKFnz0QobCQkLCblSRI4uKYCeKKxxnHcHqsMHj_pd02emfBA6H0zicJ3osab650eEbB_nKHaTNd73xbykgUo5lrqsIBF7i_PXmaCNbYcxg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vhuNQcKXStkBF-S1DgZZ2nHhcKq72ZJa1Ugbq8BY7iqpGguWzEMGuiCVc5NiOL9T07_V7gEGYq58PyWAZ8pXIiDrnNQ6oiiYEBukEoBWiRucclIYImQVm-4A-fBvW_w8wxGLJWcbpbV2nDicYYW-H0dzoA5Snq09DD3yUfEm9BHr1BJ8UaZgYq18SyeegzasQn4B5CrIGFWgwZBcJFPNIyAy9UpfHcpZpo_FvPcbo4BbWyjkGKrOE9iAQORCrpmhF7GrOKbq-cyAtPv84S-ucjBUrG0gQqiLS3gkrZDUqhe1QK8rUIP_tqxu-SeuNuHIbYyxIWxDmGoXSb7p0hoTqF85Bz1u-n4K8iAcntQ5rEFDogtHdDj3KAlQGsdECAq0iHqL2t2kywoIvGe4PO3Ex2L0VJjbjYbmhNjUWctEgl1J62&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tV4b3aW9_ABC2CLAk7Fe28UdqiaVGFqvymwAHRUXzUqeuurDfUKFznsdiKS-UOGr-T2Belfu-LuF3RiMnqLCuSMJ9GuCKX6BCSXBOPf8EyK0RHDrhrb-MNto7MrtgEDvmCiDr5jJMX24FG6rm8r3QRYOFaT7MPa4tu3rR5XjRcDZzFpsNYiWXt1E12edFaP86msNmKBXvcfW-viroS9dBhFpDAtwhEJ4b2m456ri7hihnafdPo1-07ft4GCoN5JNXaMdEzf6b3YLM3y9aw3aGN9f_JMcpL-ysf2YHNWxNhBeTREQF0drV5xnHv1cTeEGTpm7nAkvzPAOvLQrD4bp0O9lOE0bivnJ8BW3jqughVXyjiNH1rtbi65aTacUMRNqfkMyppKYD9sp-59XRZ5oltPu5fo4k6HO-5duQvdvn5P7Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vdsFhWHT3LNnrRtAy-VV6lxU1dtAE9NjjASQnuMSJ7mw2bYAo1Po4WGQy-CjOVvRcq9XeCkv0pCY57A4FDYM5SpunZa74szmSioEX31A20Kl-UzkM58sM-BWh1CVK7W5F4H13GErsiSywFQufCZw30kHHo54yxi3vzYSOvPyC89v_iDDKlp1hXXVLIk4Zs0cifYkBK4jA4L0IF9nB2lKQzCtfoDxX1_gJeiizcJxl85AMpRCmg0OumWt-gtUjp_cccdrxQMWlqNAouRC2rAujU8qrOePPuk4_o9fWQqJ_z3UYAeKXef3Y0iLu5z9oyfiV8aKx8CRPMZlMh-qT9rRepS3_FVO8NDDCEB3UliDPnlTuuFZyXc2ElhoWhlQjH2t0zEqG-5TRsahZhMiTaG36CHs5RnRoXRqNBarJF8-rFieEk&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t-EjCzKhmdaYgUDbxAw5XpA_X84qHi_rcTW1uCvSOaoV7vZ3YvmGselSe0vib6tTUXT5gXNhIbJIzx-8ZZ2cM4fStjcmbEMgTHean76SCvgX_2iQsSknEex-59DqoGvELaCchEfd0rI1aOJckh_80N3pi9ESgiyJoHqw-RULTg3Vk8ygepwqh-MmGQqfgj-iiDrn_z1r-xbsU5TZQJH9G21LyCQBPm-OQ-KxjKvFY67V9Wsz06_pyntPgFrn6dqMQDhhCLbKPnFclYX7vmhKcnFdguz4PsRfjERcpkWTbWfYK-ADyiEINEXkqpJPgIUw7accqCwECY_UbRhIHTF-fS_tLnvfVpPsDW8lJVVTa2UqHN6n7hwYrFEcAX8Whvrr28JaHRSjsSXDqF_gOmvsXtxjGXywnHbngHuX_RGaHMdzDD&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "Chinese",
+      "Local Favorite",
+      "Casual",
+      "Momos",
+      "Affordable"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Steamed Pork Momos",
+        "description": "Hand-folded pork dumplings, steamed fresh, served with chilli dipping sauce.",
+        "price": "₹100",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tV4b3aW9_ABC2CLAk7Fe28UdqiaVGFqvymwAHRUXzUqeuurDfUKFznsdiKS-UOGr-T2Belfu-LuF3RiMnqLCuSMJ9GuCKX6BCSXBOPf8EyK0RHDrhrb-MNto7MrtgEDvmCiDr5jJMX24FG6rm8r3QRYOFaT7MPa4tu3rR5XjRcDZzFpsNYiWXt1E12edFaP86msNmKBXvcfW-viroS9dBhFpDAtwhEJ4b2m456ri7hihnafdPo1-07ft4GCoN5JNXaMdEzf6b3YLM3y9aw3aGN9f_JMcpL-ysf2YHNWxNhBeTREQF0drV5xnHv1cTeEGTpm7nAkvzPAOvLQrD4bp0O9lOE0bivnJ8BW3jqughVXyjiNH1rtbi65aTacUMRNqfkMyppKYD9sp-59XRZ5oltPu5fo4k6HO-5duQvdvn5P7Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Hakka Noodles with Pork",
+        "description": "Wok-tossed Hakka noodles with minced pork, soy sauce, spring onions.",
+        "price": "₹130",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tV4b3aW9_ABC2CLAk7Fe28UdqiaVGFqvymwAHRUXzUqeuurDfUKFznsdiKS-UOGr-T2Belfu-LuF3RiMnqLCuSMJ9GuCKX6BCSXBOPf8EyK0RHDrhrb-MNto7MrtgEDvmCiDr5jJMX24FG6rm8r3QRYOFaT7MPa4tu3rR5XjRcDZzFpsNYiWXt1E12edFaP86msNmKBXvcfW-viroS9dBhFpDAtwhEJ4b2m456ri7hihnafdPo1-07ft4GCoN5JNXaMdEzf6b3YLM3y9aw3aGN9f_JMcpL-ysf2YHNWxNhBeTREQF0drV5xnHv1cTeEGTpm7nAkvzPAOvLQrD4bp0O9lOE0bivnJ8BW3jqughVXyjiNH1rtbi65aTacUMRNqfkMyppKYD9sp-59XRZ5oltPu5fo4k6HO-5duQvdvn5P7Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5710685,
+      "lng": 91.8841892
+    },
+    "latitude": 25.5710685,
+    "longitude": 91.8841892,
+    "formatted_address": "MG Road, Secretariat Hills, Shillong, Meghalaya 793001, India",
+    "place_id": "ChIJqS75IZF-UDcRPUMPfFIJXRA",
+    "phone_number": null,
+    "website": null,
+    "google_maps_url": "https://maps.google.com/?cid=1179108927314281277",
+    "rating": 4.1,
+    "user_ratings_total": 30,
+    "price_level": 2,
+    "price_display": "₹₹",
+    "opening_hours": [],
+    "types": [
+      "establishment",
+      "local_government_office",
+      "point_of_interest"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
+  },
+  {
+    "id": "wok-la-chaumiere",
+    "name": "Wok La Chaumiere",
+    "tagline": "Where the Wok Meets the Chaumière",
+    "theme": "Chinese-French Fusion Kitchen & Cozy Hideout",
+    "introduction": "An eclectic, beloved Shillong spot blending Chinese wok cooking with a French chaumière (cottage) aesthetic. Wok La Chaumiere is famous for creative fusion dishes, excellent momos, and an intimate cozy atmosphere that feels unlike anywhere else in the city.",
+    "whyVisit": "For the most creative Chinese-French fusion food in Shillong — the combination is unusual and utterly delicious.",
+    "hours": "Monday: 11:30 AM – 8:45 PM",
+    "address": "Lower, Lachumiere, Shillong, Meghalaya 793001, India",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vp-6yLDTlTRfvuxkp5y2JHkMlACub6zmVeHja3i3KuaL7kcIJeoManWXojSJg19QlBUeuSfBCjITpFESTD7_uyqwDQNqzdKXFkmYuMBWx3CovZC-BgMr6xMXDwLk4tXWaZt6BphNhVFiiHFgmZNadgX8THnHX6k11v6iQtewTHxYV1DwMy-0LpPUhokob38cDS51vxUf6ZgkAJTKXa4qFmdus-gK6JgF1FIoFjQJBDdYfBMIO7KFlgwSl_ivc3dTj5h6ROD6DI5ld3U9P8JDYCj9g7tjyYj7uM8ZQI5CNsUdi1EzvQzmVNz1jd7Eu23w6zDEChSe_CCuwcwhKyrjPtnS0BQieovHFVFmbXn5yxI_m8ly3LRHhxt0wDiz0oGMqbLBSO-hKOPNxGLkxM3eqSQWxPU0huQA4G0Ysuh_E&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vjpT4eZ9awalIt2QHRNK7QGqjP1IpjX2Iwwl90_ENh-8EyHxPWGb9s6Bb0QcEUB6c-rYp65VvyXlq5upuGOGXcWMsnN1jIbUld-Zwh2kO8zA4-wIUxfaMwr1q64w_PFQeWX-m3uq4Bviy-arKHoiBLetKU3k0j_-ydCYBVyLHykT9uHAkeujSOIiQamSr9wwumuM_NblkJt_5WZdM0V1BUTqKT7hkNnwwO-uOilGiIlASLKreqWDyjrPeErVqTd-z2AoyTx79ZK4zsZBfj4fkPzcXgcV60NRvmM6Th8Djwbd44RAHGVJ5GnfVball7Dyfj3q3W2d-toFugSpdlUdGKJdt-BEiEHCyBIAFc4g4WC2PkXvX0EuEZ2fq1po2DphwOrXSf0YU9Xa9zT45RlfPUmBEsdITHUsx0-jMqcYiLdDYuLpq8j6PY3PwZAmdS&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sH6xNe1itf1RXli3J5FMqZCsw_fqipV2-Q5bbhOFAMPlq9Ft_U5MGbM1PzUhGZ8olC8oVigHp9ta-Ls6pu4Kpz5Im_WXycYfjULkmYDxW88RnlZQfspDAdXoVq1LjipGRMN2d_9Pr4EOrGhcZHRWvAuyDuDdZ-Wuk51ZWW8UL5byXbu6nHrTQj0JLdx5lQcpI8TdQ4JCP_ig90swSMcyP4e6iGxdEx8WNNGtlU3YCquu-AADt5YDypDR0v70ezwS22sWFAUnM5wGSIunWZayhXfHb_Xfo_gMDuNhfKQA3gHZuaP8SOh14ViF65cFMcty3a18ojLwrAotyunfF6vLyQiUAsG7RZGCPZg2q1Ij_sCegd37q3CtUFxlUDN-EZuqrumbh4fDNiER4DmgWrhqZ3fiEJrhm3y4jrc9dpwf394g&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vp-6yLDTlTRfvuxkp5y2JHkMlACub6zmVeHja3i3KuaL7kcIJeoManWXojSJg19QlBUeuSfBCjITpFESTD7_uyqwDQNqzdKXFkmYuMBWx3CovZC-BgMr6xMXDwLk4tXWaZt6BphNhVFiiHFgmZNadgX8THnHX6k11v6iQtewTHxYV1DwMy-0LpPUhokob38cDS51vxUf6ZgkAJTKXa4qFmdus-gK6JgF1FIoFjQJBDdYfBMIO7KFlgwSl_ivc3dTj5h6ROD6DI5ld3U9P8JDYCj9g7tjyYj7uM8ZQI5CNsUdi1EzvQzmVNz1jd7Eu23w6zDEChSe_CCuwcwhKyrjPtnS0BQieovHFVFmbXn5yxI_m8ly3LRHhxt0wDiz0oGMqbLBSO-hKOPNxGLkxM3eqSQWxPU0huQA4G0Ysuh_E&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vjpT4eZ9awalIt2QHRNK7QGqjP1IpjX2Iwwl90_ENh-8EyHxPWGb9s6Bb0QcEUB6c-rYp65VvyXlq5upuGOGXcWMsnN1jIbUld-Zwh2kO8zA4-wIUxfaMwr1q64w_PFQeWX-m3uq4Bviy-arKHoiBLetKU3k0j_-ydCYBVyLHykT9uHAkeujSOIiQamSr9wwumuM_NblkJt_5WZdM0V1BUTqKT7hkNnwwO-uOilGiIlASLKreqWDyjrPeErVqTd-z2AoyTx79ZK4zsZBfj4fkPzcXgcV60NRvmM6Th8Djwbd44RAHGVJ5GnfVball7Dyfj3q3W2d-toFugSpdlUdGKJdt-BEiEHCyBIAFc4g4WC2PkXvX0EuEZ2fq1po2DphwOrXSf0YU9Xa9zT45RlfPUmBEsdITHUsx0-jMqcYiLdDYuLpq8j6PY3PwZAmdS&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sH6xNe1itf1RXli3J5FMqZCsw_fqipV2-Q5bbhOFAMPlq9Ft_U5MGbM1PzUhGZ8olC8oVigHp9ta-Ls6pu4Kpz5Im_WXycYfjULkmYDxW88RnlZQfspDAdXoVq1LjipGRMN2d_9Pr4EOrGhcZHRWvAuyDuDdZ-Wuk51ZWW8UL5byXbu6nHrTQj0JLdx5lQcpI8TdQ4JCP_ig90swSMcyP4e6iGxdEx8WNNGtlU3YCquu-AADt5YDypDR0v70ezwS22sWFAUnM5wGSIunWZayhXfHb_Xfo_gMDuNhfKQA3gHZuaP8SOh14ViF65cFMcty3a18ojLwrAotyunfF6vLyQiUAsG7RZGCPZg2q1Ij_sCegd37q3CtUFxlUDN-EZuqrumbh4fDNiER4DmgWrhqZ3fiEJrhm3y4jrc9dpwf394g&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vSxbrufW8THtbQaN040BfUwWFyGHJ4eRypKT1z3qwkww_135iZtkTFnOxw4Ukql0_Ow2KYk8CLWaOgqft_xzH2VpfQ3n3jU04XAGXt4JqYzOgaCWNw0X2Y399tvkIxuwKnrVhvmkayoBg4KrOGXBos5yfw2qJuCfdWs_kyeQDqZIXQvAAd-GrmU2xYRHl_hJz3mAfSNAvvrT0OirKTp68lQITkZVnybB5NrJqpmjUYD3kUJq-y1Edxdgp69VQZg7PihPHuidywrwoheV1jKWeFkIIixetOgILu2MhId5FZA6DQ1e_uObnQh_FcBcFIJCFfVfYt4-Cg6_z1zWzRaZ1bVrTy-O1WhDxzHwF9gpWKWRRrGBwnOAxhD8o3VfmI_iPZJOeEYOsEojUmCWol10gme7ppunN6cZ9IugxoRoqDIW6o&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uC9Jn3UO1oEuqpR-UkdSD2nBigBWKp57Rctidj2j-V2kR1xdk4CkBvdk3rDH9CNedQQyQzfKut0lzpnZa02Z4mkYZThFGtm0AXEDlZnaLGjTKzG3dwuSt2bnOEN_QgQJ-p_3VhemX9nIy6Lt9TkUXy6fNXQQ0icnQwRDzszh6xF1sLHZcz7aTB2jTgj3enyJpZ_w5Pbl8Ur7cu8wJ2VWBw_jsw2Cwv3m2-KdetrrYZyf4W_59yoHDYA86JeYqmkKtWaqDfxOffmE6fmJt23_J_2g0J5JTOqAKgsQg5mEG3m9IQATM4v7YQUh37z4jF7tLasT9bFXH7b5dttIjVLAfuoFdss1gpETdgNUL3760Dp7mbJAbfuW5Z_RO-H1yVPk1pGRA6JH1uZtyQYJ0SC3eqMdkkB_usTaMoEd8zMyhzCT0gOKp7KYTaC_ue_H4C&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-s617cT2fwgdn0UmuGwF5WZ_sTGjDlygzlu2LiAdT8mBvADqYYL9I0Dk_buZWrVbx_cPANPlAwL2B7EMUK155_jbw7KTITjzDlVtCKUNmcx4IEVf5-d32-arRXouZNhUL4Q5AwvUrXgakaQ4_WDxCN3zcR_fGLnSjt-N5EYK_bATHOWamkXVrHs6jWpN6B6jMCB0ZbW1jghhZox_VRKAMdqDNTCTcQehrWqEU_GsrqLCos7I5tLBdWIuIWhJ4icKzY0NW5q9E3w2urowUrEiTCfe5FazDfQZlv00yMNEodmwT-_Tyu40Jq62TTUsT_dbIE9SoipsOsr75OLMIFyZTkhXQ6MZL3kfTCl2xM2vhDTq36qacgi9PAoy-YRWog3T0Hg7JBW0kh-GP7jKmC1T7xjZyE-oN9IKZgK-jfid35syQgh&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vjpT4eZ9awalIt2QHRNK7QGqjP1IpjX2Iwwl90_ENh-8EyHxPWGb9s6Bb0QcEUB6c-rYp65VvyXlq5upuGOGXcWMsnN1jIbUld-Zwh2kO8zA4-wIUxfaMwr1q64w_PFQeWX-m3uq4Bviy-arKHoiBLetKU3k0j_-ydCYBVyLHykT9uHAkeujSOIiQamSr9wwumuM_NblkJt_5WZdM0V1BUTqKT7hkNnwwO-uOilGiIlASLKreqWDyjrPeErVqTd-z2AoyTx79ZK4zsZBfj4fkPzcXgcV60NRvmM6Th8Djwbd44RAHGVJ5GnfVball7Dyfj3q3W2d-toFugSpdlUdGKJdt-BEiEHCyBIAFc4g4WC2PkXvX0EuEZ2fq1po2DphwOrXSf0YU9Xa9zT45RlfPUmBEsdITHUsx0-jMqcYiLdDYuLpq8j6PY3PwZAmdS&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sH6xNe1itf1RXli3J5FMqZCsw_fqipV2-Q5bbhOFAMPlq9Ft_U5MGbM1PzUhGZ8olC8oVigHp9ta-Ls6pu4Kpz5Im_WXycYfjULkmYDxW88RnlZQfspDAdXoVq1LjipGRMN2d_9Pr4EOrGhcZHRWvAuyDuDdZ-Wuk51ZWW8UL5byXbu6nHrTQj0JLdx5lQcpI8TdQ4JCP_ig90swSMcyP4e6iGxdEx8WNNGtlU3YCquu-AADt5YDypDR0v70ezwS22sWFAUnM5wGSIunWZayhXfHb_Xfo_gMDuNhfKQA3gHZuaP8SOh14ViF65cFMcty3a18ojLwrAotyunfF6vLyQiUAsG7RZGCPZg2q1Ij_sCegd37q3CtUFxlUDN-EZuqrumbh4fDNiER4DmgWrhqZ3fiEJrhm3y4jrc9dpwf394g&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vSxbrufW8THtbQaN040BfUwWFyGHJ4eRypKT1z3qwkww_135iZtkTFnOxw4Ukql0_Ow2KYk8CLWaOgqft_xzH2VpfQ3n3jU04XAGXt4JqYzOgaCWNw0X2Y399tvkIxuwKnrVhvmkayoBg4KrOGXBos5yfw2qJuCfdWs_kyeQDqZIXQvAAd-GrmU2xYRHl_hJz3mAfSNAvvrT0OirKTp68lQITkZVnybB5NrJqpmjUYD3kUJq-y1Edxdgp69VQZg7PihPHuidywrwoheV1jKWeFkIIixetOgILu2MhId5FZA6DQ1e_uObnQh_FcBcFIJCFfVfYt4-Cg6_z1zWzRaZ1bVrTy-O1WhDxzHwF9gpWKWRRrGBwnOAxhD8o3VfmI_iPZJOeEYOsEojUmCWol10gme7ppunN6cZ9IugxoRoqDIW6o&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uC9Jn3UO1oEuqpR-UkdSD2nBigBWKp57Rctidj2j-V2kR1xdk4CkBvdk3rDH9CNedQQyQzfKut0lzpnZa02Z4mkYZThFGtm0AXEDlZnaLGjTKzG3dwuSt2bnOEN_QgQJ-p_3VhemX9nIy6Lt9TkUXy6fNXQQ0icnQwRDzszh6xF1sLHZcz7aTB2jTgj3enyJpZ_w5Pbl8Ur7cu8wJ2VWBw_jsw2Cwv3m2-KdetrrYZyf4W_59yoHDYA86JeYqmkKtWaqDfxOffmE6fmJt23_J_2g0J5JTOqAKgsQg5mEG3m9IQATM4v7YQUh37z4jF7tLasT9bFXH7b5dttIjVLAfuoFdss1gpETdgNUL3760Dp7mbJAbfuW5Z_RO-H1yVPk1pGRA6JH1uZtyQYJ0SC3eqMdkkB_usTaMoEd8zMyhzCT0gOKp7KYTaC_ue_H4C&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-s617cT2fwgdn0UmuGwF5WZ_sTGjDlygzlu2LiAdT8mBvADqYYL9I0Dk_buZWrVbx_cPANPlAwL2B7EMUK155_jbw7KTITjzDlVtCKUNmcx4IEVf5-d32-arRXouZNhUL4Q5AwvUrXgakaQ4_WDxCN3zcR_fGLnSjt-N5EYK_bATHOWamkXVrHs6jWpN6B6jMCB0ZbW1jghhZox_VRKAMdqDNTCTcQehrWqEU_GsrqLCos7I5tLBdWIuIWhJ4icKzY0NW5q9E3w2urowUrEiTCfe5FazDfQZlv00yMNEodmwT-_Tyu40Jq62TTUsT_dbIE9SoipsOsr75OLMIFyZTkhXQ6MZL3kfTCl2xM2vhDTq36qacgi9PAoy-YRWog3T0Hg7JBW0kh-GP7jKmC1T7xjZyE-oN9IKZgK-jfid35syQgh&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "Chinese",
+      "French Fusion",
+      "Unique",
+      "Cozy",
+      "Momos"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "French-Spiced Momos",
+        "description": "Steamed dumplings with a unique French herb and local chilli filling.",
+        "price": "₹120",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vSxbrufW8THtbQaN040BfUwWFyGHJ4eRypKT1z3qwkww_135iZtkTFnOxw4Ukql0_Ow2KYk8CLWaOgqft_xzH2VpfQ3n3jU04XAGXt4JqYzOgaCWNw0X2Y399tvkIxuwKnrVhvmkayoBg4KrOGXBos5yfw2qJuCfdWs_kyeQDqZIXQvAAd-GrmU2xYRHl_hJz3mAfSNAvvrT0OirKTp68lQITkZVnybB5NrJqpmjUYD3kUJq-y1Edxdgp69VQZg7PihPHuidywrwoheV1jKWeFkIIixetOgILu2MhId5FZA6DQ1e_uObnQh_FcBcFIJCFfVfYt4-Cg6_z1zWzRaZ1bVrTy-O1WhDxzHwF9gpWKWRRrGBwnOAxhD8o3VfmI_iPZJOeEYOsEojUmCWol10gme7ppunN6cZ9IugxoRoqDIW6o&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Wok La Fried Rice",
+        "description": "Wok-tossed jasmine rice with egg, vegetables, and house special sauce.",
+        "price": "₹140",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vSxbrufW8THtbQaN040BfUwWFyGHJ4eRypKT1z3qwkww_135iZtkTFnOxw4Ukql0_Ow2KYk8CLWaOgqft_xzH2VpfQ3n3jU04XAGXt4JqYzOgaCWNw0X2Y399tvkIxuwKnrVhvmkayoBg4KrOGXBos5yfw2qJuCfdWs_kyeQDqZIXQvAAd-GrmU2xYRHl_hJz3mAfSNAvvrT0OirKTp68lQITkZVnybB5NrJqpmjUYD3kUJq-y1Edxdgp69VQZg7PihPHuidywrwoheV1jKWeFkIIixetOgILu2MhId5FZA6DQ1e_uObnQh_FcBcFIJCFfVfYt4-Cg6_z1zWzRaZ1bVrTy-O1WhDxzHwF9gpWKWRRrGBwnOAxhD8o3VfmI_iPZJOeEYOsEojUmCWol10gme7ppunN6cZ9IugxoRoqDIW6o&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5679862,
+      "lng": 91.8846847
+    },
+    "latitude": 25.5679862,
+    "longitude": 91.8846847,
+    "formatted_address": "Lower, Lachumiere, Shillong, Meghalaya 793001, India",
+    "place_id": "ChIJ8TCkp5B-UDcRL22C-R6wXEI",
+    "phone_number": "090895 40670",
+    "website": "https://thewoklachaumiere.now.sh/",
+    "google_maps_url": "https://maps.google.com/?cid=4781890551442205999",
+    "rating": 4.4,
+    "user_ratings_total": 782,
+    "price_level": 2,
+    "price_display": "₹₹",
+    "opening_hours": [
+      "Monday: 11:30 AM – 8:45 PM",
+      "Tuesday: 11:00 AM – 8:45 PM",
+      "Wednesday: 11:00 AM – 8:45 PM",
+      "Thursday: 11:00 AM – 8:45 PM",
+      "Friday: 11:00 AM – 8:45 PM",
+      "Saturday: 11:00 AM – 8:45 PM",
+      "Sunday: 11:00 AM – 8:45 PM"
+    ],
+    "types": [
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
+  },
+  {
+    "id": "madras-cafe",
+    "name": "Madras Cafe",
+    "tagline": "A Piece of Chennai, High in the Meghalaya Hills",
+    "theme": "Authentic South Indian Tiffin in the Khasi Hills",
+    "introduction": "Madras Cafe brings authentic South Indian tiffin culture to Shillong. The crispy masala dosa, piping hot idlis, and freshly filtered coffee are the real draw for vegetarians and South Indian food lovers in the city.",
+    "whyVisit": "For the best South Indian breakfast in Shillong — a proper filter coffee and crispy dosa morning ritual.",
+    "hours": "Monday: 7:00 AM – 10:00 PM",
+    "address": "HVGJ+MH4, Jail Road, Police Bazar, Shillong, Meghalaya 793001, India",
+    "neighborhood": "Police Bazaar",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uEMkKitMlw62-hknXZCbPD2Dsxm-beeLb-k8LauoNm97NNY2Ec7LZUiOl2rote4iCImBOe5GWEzJsYnWx4a6f7cr8Jz7OBT-pz_X0TXZ-VRJVnIqj1pwROIUltOxtC46VD5EbAqA0UdaoSPJ_6py5k-vwZ4cW3xA7vjBV-RxQ7Jjgj1a4mGjwzsawkmyMJOotFY6XA0zG811F7VTZLz8Lioe_HM0D2-zTjGqIfUX81jxO1P5tXbOV1NFPRJpaiEYz6gqlHbmnxA-TgjeNKMbSHZ4QKtomYmT-POZDILz9M8OTopKe9w-5gxItcaV9YGYbvxkQPpGfJx0QRGrZDn-wsjRjYMHYKQ8dJUXvjrmKrIJTIH0K-I0hTPjrESwrYkp7PstDfizsTusIWwNv_HMgmMY4XonxOgZ5s9dsQ_IrrBKQblxtAs52nbdpvcZtq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tAu7jG5i7RV7A0miAdx08Y8vPUtW0s0wwopnuVn1tU-WNsWcudLwWHErr9i_Rr7xgLgoxYcW8a4P-fWhqbvfP92R3633J0cJxvBgXgm9x0UT0L5_lPGhCLuaYNjE9h3MknW8FGAxUbklDi-WhHmfLhq-yJmlNsCSuOq3mXXs2sSbQgGnIGukOz6n2Wf_0Oem7jPCFVANPbIJj0xV9ZVHlG4-1uwHCyIIWzFZxz81IJpuvztdrqtW_fiYGXzvBkehUJkmla60NcqSKsOcAOUPcAZBG-JxCfVcqAA1ElZcXWUQPl570tHRjHVyYixIgou9bPdh3uyf4z1qHTeD6OM5V6uJM-Wnlb2a7RRvGYJ7ktsw1yd0DmoMshskmtAW4Gm6lS2aHHksfINbElt5F2ETN-IBH2rWOIADSoumCpB9AM6Go6FQSgVDzwMnjLhhrI&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uXn59CewggfdzPLbohxutcw9S_j_P9BZYNn1sBaTypQOb0-_Y1I8lqCDiW1YoIdQ-JhGojytad0yvQGZwoNY6Y-8h3664D8agnJ3I8z_0EKu0hH9HAxzqdArxCQy8hlCEVC7qJf_P-z5s1YX5e95Qd9Qw7xIc0SGicQggsnv2dQ6K6M_R2TFpLrXHQP67ENE8-C0Q4jDm--MNNU2IPGQfjhnEqx7IcpC0SMKZmrVeJqDmcWm0C5FVf068YfrSdvzae6O-IcnNVaDyfnF7wttxOw6i4diD0Sxu3BoVEuIjfvn4QAnnFfybOtC1MOFCuNb1Ez1d2dmLP-rABWU1Jxn4jrhq-b_MVsNMTXYL6G4u7-NgQ2WobbprplgGei8q-weV0hQaTGPnJioU5rjYI8PBadYLa37V52q7hTDgyitJSZQdc-COXRqjftet7sEFN&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uEMkKitMlw62-hknXZCbPD2Dsxm-beeLb-k8LauoNm97NNY2Ec7LZUiOl2rote4iCImBOe5GWEzJsYnWx4a6f7cr8Jz7OBT-pz_X0TXZ-VRJVnIqj1pwROIUltOxtC46VD5EbAqA0UdaoSPJ_6py5k-vwZ4cW3xA7vjBV-RxQ7Jjgj1a4mGjwzsawkmyMJOotFY6XA0zG811F7VTZLz8Lioe_HM0D2-zTjGqIfUX81jxO1P5tXbOV1NFPRJpaiEYz6gqlHbmnxA-TgjeNKMbSHZ4QKtomYmT-POZDILz9M8OTopKe9w-5gxItcaV9YGYbvxkQPpGfJx0QRGrZDn-wsjRjYMHYKQ8dJUXvjrmKrIJTIH0K-I0hTPjrESwrYkp7PstDfizsTusIWwNv_HMgmMY4XonxOgZ5s9dsQ_IrrBKQblxtAs52nbdpvcZtq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tAu7jG5i7RV7A0miAdx08Y8vPUtW0s0wwopnuVn1tU-WNsWcudLwWHErr9i_Rr7xgLgoxYcW8a4P-fWhqbvfP92R3633J0cJxvBgXgm9x0UT0L5_lPGhCLuaYNjE9h3MknW8FGAxUbklDi-WhHmfLhq-yJmlNsCSuOq3mXXs2sSbQgGnIGukOz6n2Wf_0Oem7jPCFVANPbIJj0xV9ZVHlG4-1uwHCyIIWzFZxz81IJpuvztdrqtW_fiYGXzvBkehUJkmla60NcqSKsOcAOUPcAZBG-JxCfVcqAA1ElZcXWUQPl570tHRjHVyYixIgou9bPdh3uyf4z1qHTeD6OM5V6uJM-Wnlb2a7RRvGYJ7ktsw1yd0DmoMshskmtAW4Gm6lS2aHHksfINbElt5F2ETN-IBH2rWOIADSoumCpB9AM6Go6FQSgVDzwMnjLhhrI&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uXn59CewggfdzPLbohxutcw9S_j_P9BZYNn1sBaTypQOb0-_Y1I8lqCDiW1YoIdQ-JhGojytad0yvQGZwoNY6Y-8h3664D8agnJ3I8z_0EKu0hH9HAxzqdArxCQy8hlCEVC7qJf_P-z5s1YX5e95Qd9Qw7xIc0SGicQggsnv2dQ6K6M_R2TFpLrXHQP67ENE8-C0Q4jDm--MNNU2IPGQfjhnEqx7IcpC0SMKZmrVeJqDmcWm0C5FVf068YfrSdvzae6O-IcnNVaDyfnF7wttxOw6i4diD0Sxu3BoVEuIjfvn4QAnnFfybOtC1MOFCuNb1Ez1d2dmLP-rABWU1Jxn4jrhq-b_MVsNMTXYL6G4u7-NgQ2WobbprplgGei8q-weV0hQaTGPnJioU5rjYI8PBadYLa37V52q7hTDgyitJSZQdc-COXRqjftet7sEFN&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uKO__KmGwB2aTeZ8-LpB2NAafuEd5xKCjg8cwuokUdQPb3jhUIfTA2bJif_rIa4N4piq-aNmDiQ7B09zjYvUPSL18tKe-TXr9euH_N16ESxefUgOupWuu66r8d8SO2Kbo8lOlabheDnBN1JnEgTjPcul-id0kNQ3-KL29ag9GIHwXiwUdrRfquhQ02_DkbriPg-vr3NsjMtG4LILvMwaAGUkX1_s7U7f5hnoh7xjgIkTTJ770FFVvGDHYI6xcjFWQlWoXLVAvERGfMWmA3uoAl1-S6VicgWnEyVzcQCFakHEnhemAck9NWnkvS6TczC2WWleJETWmyYu-BS-PgU_ZbUU3XCchdI3KT7-_QUfxgqDMu3hncaRje-lyYGLu0gwOZe97ACnsygVzXGVOmfKzLObjB0oKSQjrKpS-2GKaY5FDdFtLrR1QQpali-Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vvOyh1pCrKY-CI_etnhgNE7-wfm3jVcruJ9azakvWsb3roegsOsIiFnR4UN6cNCqrkE-UP1EZhCSrSoCOsTi8KAVr88azzFdBKhQlAx3ZnJbcE2s8dLKsny-ssOjTeH9uuRPrRyMK2J7x7bggtfFvOVIMDqEbIx96FV6W1tzIMAnXpkDNoPauMTZZpdrCxV9q8uoMOlK-wL2bHZaq2-xYtgig0WjBMdgpdq_kGAudMyCvg0k22rg2peDPMYojb2tFHHCbA7b1lB8uJf3NfvdWH8q3N-YDJMBWpv6aultlqPqKRtnQzZtYDE9eSkI9npmCzCvayfpwSq7U_PVqVMj1_XStvVtVdrU8Q-V45xZRym5Rdht_-cVKAFmjmBq-PtRxldHRnWHFaf-LzMzmIVFyCIYUtWdeXLeAGDfPY8vmFd5X_HkCDZCONYNjEgA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t20kk5L2SA7BahTRCAqjK4nSBT3AwJ8mPJBA5AMxB5kXsGh6nJMc68UYy9XTBzzS0SPuw2x5uTDI6J9uoA83v7h8RtEmqbZIQy2FfUGsnkII6_6kKgqoAbITrTd6SNvadl7d7Thc6zSiwTYake8_1Uf7CRHF1T-fQ1n8PV_EKBch1NR0IdNOHxb93rYqmqOO2ehMSxguuHsrnpd39_4I2dXW1MATo6NPCV4TKH3-48YVNHVvx0UQWN706dK70OtMxL-sq3WfuVgRLINh8RRUWB-Mb5MAN__uRWYSTtGpcPGXJPsnqrqJVh3j3ksJrazinD6WwTHycQTQJwt15aCPSgpwOMFFvQtOuqBu_XJJJQaHn4730WoZAqLRVdg3xjGo0p1NPZAX0J8L3z28RD9_Pun92Z_29le6g4W24Ct0YJu_A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tAu7jG5i7RV7A0miAdx08Y8vPUtW0s0wwopnuVn1tU-WNsWcudLwWHErr9i_Rr7xgLgoxYcW8a4P-fWhqbvfP92R3633J0cJxvBgXgm9x0UT0L5_lPGhCLuaYNjE9h3MknW8FGAxUbklDi-WhHmfLhq-yJmlNsCSuOq3mXXs2sSbQgGnIGukOz6n2Wf_0Oem7jPCFVANPbIJj0xV9ZVHlG4-1uwHCyIIWzFZxz81IJpuvztdrqtW_fiYGXzvBkehUJkmla60NcqSKsOcAOUPcAZBG-JxCfVcqAA1ElZcXWUQPl570tHRjHVyYixIgou9bPdh3uyf4z1qHTeD6OM5V6uJM-Wnlb2a7RRvGYJ7ktsw1yd0DmoMshskmtAW4Gm6lS2aHHksfINbElt5F2ETN-IBH2rWOIADSoumCpB9AM6Go6FQSgVDzwMnjLhhrI&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uXn59CewggfdzPLbohxutcw9S_j_P9BZYNn1sBaTypQOb0-_Y1I8lqCDiW1YoIdQ-JhGojytad0yvQGZwoNY6Y-8h3664D8agnJ3I8z_0EKu0hH9HAxzqdArxCQy8hlCEVC7qJf_P-z5s1YX5e95Qd9Qw7xIc0SGicQggsnv2dQ6K6M_R2TFpLrXHQP67ENE8-C0Q4jDm--MNNU2IPGQfjhnEqx7IcpC0SMKZmrVeJqDmcWm0C5FVf068YfrSdvzae6O-IcnNVaDyfnF7wttxOw6i4diD0Sxu3BoVEuIjfvn4QAnnFfybOtC1MOFCuNb1Ez1d2dmLP-rABWU1Jxn4jrhq-b_MVsNMTXYL6G4u7-NgQ2WobbprplgGei8q-weV0hQaTGPnJioU5rjYI8PBadYLa37V52q7hTDgyitJSZQdc-COXRqjftet7sEFN&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uKO__KmGwB2aTeZ8-LpB2NAafuEd5xKCjg8cwuokUdQPb3jhUIfTA2bJif_rIa4N4piq-aNmDiQ7B09zjYvUPSL18tKe-TXr9euH_N16ESxefUgOupWuu66r8d8SO2Kbo8lOlabheDnBN1JnEgTjPcul-id0kNQ3-KL29ag9GIHwXiwUdrRfquhQ02_DkbriPg-vr3NsjMtG4LILvMwaAGUkX1_s7U7f5hnoh7xjgIkTTJ770FFVvGDHYI6xcjFWQlWoXLVAvERGfMWmA3uoAl1-S6VicgWnEyVzcQCFakHEnhemAck9NWnkvS6TczC2WWleJETWmyYu-BS-PgU_ZbUU3XCchdI3KT7-_QUfxgqDMu3hncaRje-lyYGLu0gwOZe97ACnsygVzXGVOmfKzLObjB0oKSQjrKpS-2GKaY5FDdFtLrR1QQpali-Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vvOyh1pCrKY-CI_etnhgNE7-wfm3jVcruJ9azakvWsb3roegsOsIiFnR4UN6cNCqrkE-UP1EZhCSrSoCOsTi8KAVr88azzFdBKhQlAx3ZnJbcE2s8dLKsny-ssOjTeH9uuRPrRyMK2J7x7bggtfFvOVIMDqEbIx96FV6W1tzIMAnXpkDNoPauMTZZpdrCxV9q8uoMOlK-wL2bHZaq2-xYtgig0WjBMdgpdq_kGAudMyCvg0k22rg2peDPMYojb2tFHHCbA7b1lB8uJf3NfvdWH8q3N-YDJMBWpv6aultlqPqKRtnQzZtYDE9eSkI9npmCzCvayfpwSq7U_PVqVMj1_XStvVtVdrU8Q-V45xZRym5Rdht_-cVKAFmjmBq-PtRxldHRnWHFaf-LzMzmIVFyCIYUtWdeXLeAGDfPY8vmFd5X_HkCDZCONYNjEgA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t20kk5L2SA7BahTRCAqjK4nSBT3AwJ8mPJBA5AMxB5kXsGh6nJMc68UYy9XTBzzS0SPuw2x5uTDI6J9uoA83v7h8RtEmqbZIQy2FfUGsnkII6_6kKgqoAbITrTd6SNvadl7d7Thc6zSiwTYake8_1Uf7CRHF1T-fQ1n8PV_EKBch1NR0IdNOHxb93rYqmqOO2ehMSxguuHsrnpd39_4I2dXW1MATo6NPCV4TKH3-48YVNHVvx0UQWN706dK70OtMxL-sq3WfuVgRLINh8RRUWB-Mb5MAN__uRWYSTtGpcPGXJPsnqrqJVh3j3ksJrazinD6WwTHycQTQJwt15aCPSgpwOMFFvQtOuqBu_XJJJQaHn4730WoZAqLRVdg3xjGo0p1NPZAX0J8L3z28RD9_Pun92Z_29le6g4W24Ct0YJu_A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "South Indian",
+      "Dosa",
+      "Filter Coffee",
+      "Vegetarian",
+      "Affordable"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Masala Dosa with Sambar",
+        "description": "Crispy fermented rice crepe, spiced potato filling, lentil sambar, coconut chutney.",
+        "price": "₹90",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uKO__KmGwB2aTeZ8-LpB2NAafuEd5xKCjg8cwuokUdQPb3jhUIfTA2bJif_rIa4N4piq-aNmDiQ7B09zjYvUPSL18tKe-TXr9euH_N16ESxefUgOupWuu66r8d8SO2Kbo8lOlabheDnBN1JnEgTjPcul-id0kNQ3-KL29ag9GIHwXiwUdrRfquhQ02_DkbriPg-vr3NsjMtG4LILvMwaAGUkX1_s7U7f5hnoh7xjgIkTTJ770FFVvGDHYI6xcjFWQlWoXLVAvERGfMWmA3uoAl1-S6VicgWnEyVzcQCFakHEnhemAck9NWnkvS6TczC2WWleJETWmyYu-BS-PgU_ZbUU3XCchdI3KT7-_QUfxgqDMu3hncaRje-lyYGLu0gwOZe97ACnsygVzXGVOmfKzLObjB0oKSQjrKpS-2GKaY5FDdFtLrR1QQpali-Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Filter Coffee",
+        "description": "Authentic South Indian filter coffee, chicory blend, steamed milk, served in a steel tumbler.",
+        "price": "₹50",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uKO__KmGwB2aTeZ8-LpB2NAafuEd5xKCjg8cwuokUdQPb3jhUIfTA2bJif_rIa4N4piq-aNmDiQ7B09zjYvUPSL18tKe-TXr9euH_N16ESxefUgOupWuu66r8d8SO2Kbo8lOlabheDnBN1JnEgTjPcul-id0kNQ3-KL29ag9GIHwXiwUdrRfquhQ02_DkbriPg-vr3NsjMtG4LILvMwaAGUkX1_s7U7f5hnoh7xjgIkTTJ770FFVvGDHYI6xcjFWQlWoXLVAvERGfMWmA3uoAl1-S6VicgWnEyVzcQCFakHEnhemAck9NWnkvS6TczC2WWleJETWmyYu-BS-PgU_ZbUU3XCchdI3KT7-_QUfxgqDMu3hncaRje-lyYGLu0gwOZe97ACnsygVzXGVOmfKzLObjB0oKSQjrKpS-2GKaY5FDdFtLrR1QQpali-Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5766273,
+      "lng": 91.881456
+    },
+    "latitude": 25.5766273,
+    "longitude": 91.881456,
+    "formatted_address": "HVGJ+MH4, Jail Road, Police Bazar, Shillong, Meghalaya 793001, India",
+    "place_id": "ChIJrdEbApN-UDcR8I6lP_aYGIw",
+    "phone_number": "094369 94611",
+    "website": null,
+    "google_maps_url": "https://maps.google.com/?cid=10094986748148158192",
+    "rating": 3.9,
+    "user_ratings_total": 2584,
+    "price_level": 2,
+    "price_display": "₹₹",
+    "opening_hours": [
+      "Monday: 7:00 AM – 10:00 PM",
+      "Tuesday: 7:00 AM – 10:00 PM",
+      "Wednesday: 7:30 AM – 10:00 PM",
+      "Thursday: 7:00 AM – 10:00 PM",
+      "Friday: 7:00 AM – 10:00 PM",
+      "Saturday: 7:00 AM – 10:00 PM",
+      "Sunday: 7:00 AM – 10:00 PM"
+    ],
+    "types": [
+      "establishment",
+      "food",
+      "point_of_interest",
+      "restaurant"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
+  },
+  {
+    "id": "corner-cafe",
+    "name": "Corner Cafe",
+    "tagline": "Everyone's Corner, Everyone's Cafe",
+    "theme": "Classic Neighborhood Corner Cafe",
+    "introduction": "Exactly what its name promises — a warm, no-fuss corner cafe in the heart of Laitumkhrah where regulars linger over coffee and snacks. Corner Cafe is the purest expression of Shillong's neighborhood cafe culture: unpretentious, reliable, and always welcoming.",
+    "whyVisit": "For an authentic neighborhood cafe experience — good coffee, simple food, and friendly locals.",
+    "hours": "Monday: 10:00 AM – 11:00 PM",
+    "address": "opposite Little Chef, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793011, India",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vkcBV2_tGxqQ-_kh9Yewp_XVNJogbvLkf_72CpJfLyiLm8uZXehVq3umiZvk-e-FY9igEaPY7W3v9sLeQwz5wk7jOq-NSbIyHHmZmIH0wlYbNxzHq7Px5rn70fgJjnsRQOVVmAvavJ9MgPtUs7moky8kZcPnBPcBC48BbCm4DziKc6kpz2cH_4ofMkF4Dwu0kEaPCbOsJ2niZqW3nHsW-LprYiydajqj9d86IybZFSM9QHNjlNZbPYo7nuHbJuAIu1YPeeV30gtRccV2yHmTxMG_xJ4hFfuSwc7qTXpnQweqbF9JdgERu03Av54M1GxZOZGS-hgJodLnhywdehb0SOER94pi3FXDe57ykEUqppozI6m08s4rpEzWM53zSkqblDj6nk7N8PC4fvJPyaJe6nVdxv7YKi5S6S4mue7RE&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tcPxtNEnqYAvU11x87uFJNBHoZ0FXhG5DiLeYPOWmaMBgxzGnX7cyB9EdMMVILzeet_ykjdr8IIdAqWyBy_3qi1w5mRJVimjDRldxyV5bVsIi7mqX2eoqJb3H64zAjPiywt10r2w3XwseopyfmXlWgF0MVrgYeoJrC9rHzvwIyEnTUezxDJTt99pLt3PByjq-dEdpq12rLjCxuiPGTDA-1QAczT87tJCJLVE0GQir4YBoypHOXUp09FwX4TIYgRbeG0uL2YYFGnn4-X9CZ8MXiQK20Cm6UIKymcAViSmV9H4ViRpUlHKmZ757qtBix1x7hlUcZP-gYbHO_18KFOOsB9FJ12lLXSaLwLHfieWzqnuW8bRz9AOdExQtzcEh3szei-8THUoEGrVWdFw5Imzhg0p9CHpgJT3_y4enrOY0Ta8gy&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sFlMyN5Vt5I99djOOcabQBT0AcbrmP0aaz63ffchlJ_nT80fVX5egM1rkGLcMRowfRNWujpGCClwAdiO4qMS2FvDETjoluLwgBwjfRYPpbHhRZoyC-D5_N1JhaL6w1Bgzng4enbl8kPClxK0i1xfGlJm3AlM61IS5sGfC3gktxa726tQY_1q4SwUGJ9-JgIqBUzKfU8xQgHqa0CEqCnY5myys-4hdJCYCdCgAvEFAib2oE-XbjOSvIOA7uK8ZV5psA0pb4UNVI-QdtLjHq7XEbqOqeBvRi_5qu9bqO8gW37ogtlGmESID-6Z1okviXZ29EFlAEDNJVV2dsqHF_6qH1UYVKBJRnLzsKCXwihb_AyrZlqmrK6pQNwZAO7AST8jnP1umjnaDvJu2sJbyvxOOduIaCWFaodnL1m16zXWp31Mjx&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vkcBV2_tGxqQ-_kh9Yewp_XVNJogbvLkf_72CpJfLyiLm8uZXehVq3umiZvk-e-FY9igEaPY7W3v9sLeQwz5wk7jOq-NSbIyHHmZmIH0wlYbNxzHq7Px5rn70fgJjnsRQOVVmAvavJ9MgPtUs7moky8kZcPnBPcBC48BbCm4DziKc6kpz2cH_4ofMkF4Dwu0kEaPCbOsJ2niZqW3nHsW-LprYiydajqj9d86IybZFSM9QHNjlNZbPYo7nuHbJuAIu1YPeeV30gtRccV2yHmTxMG_xJ4hFfuSwc7qTXpnQweqbF9JdgERu03Av54M1GxZOZGS-hgJodLnhywdehb0SOER94pi3FXDe57ykEUqppozI6m08s4rpEzWM53zSkqblDj6nk7N8PC4fvJPyaJe6nVdxv7YKi5S6S4mue7RE&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tcPxtNEnqYAvU11x87uFJNBHoZ0FXhG5DiLeYPOWmaMBgxzGnX7cyB9EdMMVILzeet_ykjdr8IIdAqWyBy_3qi1w5mRJVimjDRldxyV5bVsIi7mqX2eoqJb3H64zAjPiywt10r2w3XwseopyfmXlWgF0MVrgYeoJrC9rHzvwIyEnTUezxDJTt99pLt3PByjq-dEdpq12rLjCxuiPGTDA-1QAczT87tJCJLVE0GQir4YBoypHOXUp09FwX4TIYgRbeG0uL2YYFGnn4-X9CZ8MXiQK20Cm6UIKymcAViSmV9H4ViRpUlHKmZ757qtBix1x7hlUcZP-gYbHO_18KFOOsB9FJ12lLXSaLwLHfieWzqnuW8bRz9AOdExQtzcEh3szei-8THUoEGrVWdFw5Imzhg0p9CHpgJT3_y4enrOY0Ta8gy&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sFlMyN5Vt5I99djOOcabQBT0AcbrmP0aaz63ffchlJ_nT80fVX5egM1rkGLcMRowfRNWujpGCClwAdiO4qMS2FvDETjoluLwgBwjfRYPpbHhRZoyC-D5_N1JhaL6w1Bgzng4enbl8kPClxK0i1xfGlJm3AlM61IS5sGfC3gktxa726tQY_1q4SwUGJ9-JgIqBUzKfU8xQgHqa0CEqCnY5myys-4hdJCYCdCgAvEFAib2oE-XbjOSvIOA7uK8ZV5psA0pb4UNVI-QdtLjHq7XEbqOqeBvRi_5qu9bqO8gW37ogtlGmESID-6Z1okviXZ29EFlAEDNJVV2dsqHF_6qH1UYVKBJRnLzsKCXwihb_AyrZlqmrK6pQNwZAO7AST8jnP1umjnaDvJu2sJbyvxOOduIaCWFaodnL1m16zXWp31Mjx&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-unJBmbkc_Cq1US3EJ_1CR8iYhPnBAVMufAg0PkaeSFyY1rhcv0ouQn8B08inYfSjap4I0grqn_hrFgs_p9AUTD1zEf2UoMxggIXCGFwaJurx5oS61Pw1-DHbOA-e_Fg92Y8PvJiGN7RWPUjx8Ld2fXUZRC-pJQHCLI46X8-zVQ2jXL9PObCnlScC-zoJEPYGvlP9FqmhDjRRqPSDMBREAHJ9_-f2ware5y4rbPbBUO87D4AaVRW1Zn3K2wig-qL0tur0gh5xOk24lNxhXkTWcToN8pB7qE8XLzIFmOwjxx5D3z08e3VHR3HGBV_eOI7jQetPPemt47LlU4sF_PVqHfCR6r7tA2QK1J7kN9amIfPNEslGx7KWEb3zlreOyUc_yjS0Nk5VPTCoDPs_xKFpASEvoBB5QsKUZ7ptOsSRWCAA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tKQv139D7BhOLLpM0CXvJkwc9s9SzvSzqawkFlULvavKcWcrhodE7j-XyVZgWMkHVe5Pv2lyWj0pKSmJ8BE9V5bvyXvsOuVlHcIRZH9kfej42Y9ZkcNVct53zkTIL7mEyWOxZ0jakAQP9MHzSkL4B3P2Bqi7yRbfA3dcgng9tuXw_eSBLdqkyND9fzdZLQ4gmZIh-Rx8svndcGnbNYS9JMqZxJnsRKxCQyab-otQLXZDsu8H_Qi2byZnOhoNSgJGlg4wg8ZsGN7bTOguXcmmgtmVVEN5koW4aDVwKEp_H5WY4RMxpmyBDfoyscsrPxs6RX_ZLMfHxzTHXgyhnvMI1udWNh1KaheHimJLaBwKtmJ_6lgAfZX_hvuA0XtcwpzDVHtx4shfQEowi_hGmbCgGXukmW6tF7CLydJSC_aHM4ghWu&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uvCEhkGo86IWJU5Ugj_jkAqHkEu7FW12dpXIhAWETSFHYp4jz-dNO5lQN0UOAg8v5RV92FZbfydvvxam5IGF1pH6HbYi0aK4P6FXPgWS10spZ-oZLRmhDCfxBp6rX9OChIclkHr-0exzzFa4lERmKFwCmOjYcQxGp781Q_l9HnzIObHgyXQYPquwyKfp7dd_9rI6ASYsv0eI3ePOeq6FaxUQkEKE3W_auln-7G-NFu2l6SDyWO9L9h0l9vARG1YDUdvsOBzAyxj6B3OL9gjWHJBS8cTRmepwI4KognXIlKNBZH1X3s4hXZVspxRRy8i6JiPyz4BtVOg0G03THRNBEbrEcOpLuwqc2E49fR_VN_AYtivCA-IyOVZC_KsYz7x5gb-9g_U99WzuQzTMUSr7LI5kTNcegcnxE2OqFOk-QmIg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tcPxtNEnqYAvU11x87uFJNBHoZ0FXhG5DiLeYPOWmaMBgxzGnX7cyB9EdMMVILzeet_ykjdr8IIdAqWyBy_3qi1w5mRJVimjDRldxyV5bVsIi7mqX2eoqJb3H64zAjPiywt10r2w3XwseopyfmXlWgF0MVrgYeoJrC9rHzvwIyEnTUezxDJTt99pLt3PByjq-dEdpq12rLjCxuiPGTDA-1QAczT87tJCJLVE0GQir4YBoypHOXUp09FwX4TIYgRbeG0uL2YYFGnn4-X9CZ8MXiQK20Cm6UIKymcAViSmV9H4ViRpUlHKmZ757qtBix1x7hlUcZP-gYbHO_18KFOOsB9FJ12lLXSaLwLHfieWzqnuW8bRz9AOdExQtzcEh3szei-8THUoEGrVWdFw5Imzhg0p9CHpgJT3_y4enrOY0Ta8gy&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sFlMyN5Vt5I99djOOcabQBT0AcbrmP0aaz63ffchlJ_nT80fVX5egM1rkGLcMRowfRNWujpGCClwAdiO4qMS2FvDETjoluLwgBwjfRYPpbHhRZoyC-D5_N1JhaL6w1Bgzng4enbl8kPClxK0i1xfGlJm3AlM61IS5sGfC3gktxa726tQY_1q4SwUGJ9-JgIqBUzKfU8xQgHqa0CEqCnY5myys-4hdJCYCdCgAvEFAib2oE-XbjOSvIOA7uK8ZV5psA0pb4UNVI-QdtLjHq7XEbqOqeBvRi_5qu9bqO8gW37ogtlGmESID-6Z1okviXZ29EFlAEDNJVV2dsqHF_6qH1UYVKBJRnLzsKCXwihb_AyrZlqmrK6pQNwZAO7AST8jnP1umjnaDvJu2sJbyvxOOduIaCWFaodnL1m16zXWp31Mjx&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-unJBmbkc_Cq1US3EJ_1CR8iYhPnBAVMufAg0PkaeSFyY1rhcv0ouQn8B08inYfSjap4I0grqn_hrFgs_p9AUTD1zEf2UoMxggIXCGFwaJurx5oS61Pw1-DHbOA-e_Fg92Y8PvJiGN7RWPUjx8Ld2fXUZRC-pJQHCLI46X8-zVQ2jXL9PObCnlScC-zoJEPYGvlP9FqmhDjRRqPSDMBREAHJ9_-f2ware5y4rbPbBUO87D4AaVRW1Zn3K2wig-qL0tur0gh5xOk24lNxhXkTWcToN8pB7qE8XLzIFmOwjxx5D3z08e3VHR3HGBV_eOI7jQetPPemt47LlU4sF_PVqHfCR6r7tA2QK1J7kN9amIfPNEslGx7KWEb3zlreOyUc_yjS0Nk5VPTCoDPs_xKFpASEvoBB5QsKUZ7ptOsSRWCAA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tKQv139D7BhOLLpM0CXvJkwc9s9SzvSzqawkFlULvavKcWcrhodE7j-XyVZgWMkHVe5Pv2lyWj0pKSmJ8BE9V5bvyXvsOuVlHcIRZH9kfej42Y9ZkcNVct53zkTIL7mEyWOxZ0jakAQP9MHzSkL4B3P2Bqi7yRbfA3dcgng9tuXw_eSBLdqkyND9fzdZLQ4gmZIh-Rx8svndcGnbNYS9JMqZxJnsRKxCQyab-otQLXZDsu8H_Qi2byZnOhoNSgJGlg4wg8ZsGN7bTOguXcmmgtmVVEN5koW4aDVwKEp_H5WY4RMxpmyBDfoyscsrPxs6RX_ZLMfHxzTHXgyhnvMI1udWNh1KaheHimJLaBwKtmJ_6lgAfZX_hvuA0XtcwpzDVHtx4shfQEowi_hGmbCgGXukmW6tF7CLydJSC_aHM4ghWu&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uvCEhkGo86IWJU5Ugj_jkAqHkEu7FW12dpXIhAWETSFHYp4jz-dNO5lQN0UOAg8v5RV92FZbfydvvxam5IGF1pH6HbYi0aK4P6FXPgWS10spZ-oZLRmhDCfxBp6rX9OChIclkHr-0exzzFa4lERmKFwCmOjYcQxGp781Q_l9HnzIObHgyXQYPquwyKfp7dd_9rI6ASYsv0eI3ePOeq6FaxUQkEKE3W_auln-7G-NFu2l6SDyWO9L9h0l9vARG1YDUdvsOBzAyxj6B3OL9gjWHJBS8cTRmepwI4KognXIlKNBZH1X3s4hXZVspxRRy8i6JiPyz4BtVOg0G03THRNBEbrEcOpLuwqc2E49fR_VN_AYtivCA-IyOVZC_KsYz7x5gb-9g_U99WzuQzTMUSr7LI5kTNcegcnxE2OqFOk-QmIg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "Corner Spot",
+      "Local Hangout",
+      "Coffee",
+      "Snacks",
+      "Casual"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Cappuccino",
+        "description": "Double shot espresso, steamed milk, thick velvety foam.",
+        "price": "₹130",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-unJBmbkc_Cq1US3EJ_1CR8iYhPnBAVMufAg0PkaeSFyY1rhcv0ouQn8B08inYfSjap4I0grqn_hrFgs_p9AUTD1zEf2UoMxggIXCGFwaJurx5oS61Pw1-DHbOA-e_Fg92Y8PvJiGN7RWPUjx8Ld2fXUZRC-pJQHCLI46X8-zVQ2jXL9PObCnlScC-zoJEPYGvlP9FqmhDjRRqPSDMBREAHJ9_-f2ware5y4rbPbBUO87D4AaVRW1Zn3K2wig-qL0tur0gh5xOk24lNxhXkTWcToN8pB7qE8XLzIFmOwjxx5D3z08e3VHR3HGBV_eOI7jQetPPemt47LlU4sF_PVqHfCR6r7tA2QK1J7kN9amIfPNEslGx7KWEb3zlreOyUc_yjS0Nk5VPTCoDPs_xKFpASEvoBB5QsKUZ7ptOsSRWCAA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Veg Wrap",
+        "description": "Whole wheat tortilla, mixed vegetables, cheese, house sauce.",
+        "price": "₹110",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-unJBmbkc_Cq1US3EJ_1CR8iYhPnBAVMufAg0PkaeSFyY1rhcv0ouQn8B08inYfSjap4I0grqn_hrFgs_p9AUTD1zEf2UoMxggIXCGFwaJurx5oS61Pw1-DHbOA-e_Fg92Y8PvJiGN7RWPUjx8Ld2fXUZRC-pJQHCLI46X8-zVQ2jXL9PObCnlScC-zoJEPYGvlP9FqmhDjRRqPSDMBREAHJ9_-f2ware5y4rbPbBUO87D4AaVRW1Zn3K2wig-qL0tur0gh5xOk24lNxhXkTWcToN8pB7qE8XLzIFmOwjxx5D3z08e3VHR3HGBV_eOI7jQetPPemt47LlU4sF_PVqHfCR6r7tA2QK1J7kN9amIfPNEslGx7KWEb3zlreOyUc_yjS0Nk5VPTCoDPs_xKFpASEvoBB5QsKUZ7ptOsSRWCAA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5724078,
+      "lng": 91.8972435
+    },
+    "latitude": 25.5724078,
+    "longitude": 91.8972435,
+    "formatted_address": "opposite Little Chef, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793011, India",
+    "place_id": "ChIJL9ZJN1x_UDcRZVybaUNyknA",
+    "phone_number": "0364 357 6078",
+    "website": "https://thecornercafe.co.in/",
+    "google_maps_url": "https://maps.google.com/?cid=8111671512707849317",
+    "rating": 4,
+    "user_ratings_total": 119,
+    "price_level": 2,
+    "price_display": "₹₹",
+    "opening_hours": [
+      "Monday: 10:00 AM – 11:00 PM",
+      "Tuesday: 10:00 AM – 10:00 PM",
+      "Wednesday: 10:00 AM – 11:00 PM",
+      "Thursday: 10:00 AM – 11:00 PM",
+      "Friday: 10:00 AM – 11:00 PM",
+      "Saturday: 10:00 AM – 11:00 PM",
+      "Sunday: 10:00 AM – 11:00 PM"
+    ],
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
+  },
+  {
+    "id": "turquoise-cafe",
+    "name": "Turquoise Cafe",
+    "tagline": "Sip in Full Color, Live in Full Flavor",
+    "theme": "Vibrant Turquoise-Themed Instagram Cafe",
+    "introduction": "Turquoise Cafe (a unit of Slice of Shillong) is Shillong's most visually striking cafe, with vibrant turquoise interiors, eclectic decor, and a menu of colorful drinks and desserts that photograph beautifully and taste even better.",
+    "whyVisit": "For the most photogenic cafe interior in Shillong and surprisingly excellent coffee and cakes.",
+    "hours": "Monday: 10:00 AM – 8:30 PM",
+    "address": "Woods Cafe Upper Elysium, Bomfyle Road, opposite United Democratic Party (UDP) Office, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "neighborhood": "Laitumkhrah",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-u9NHmi6QbKq4fdaILyzPgxaA42D2C076ZNl19zJQdX9eQ29wNoBwtfdb1KsC74NI12JD7pPFNDxtUKL4SnYbsbsfJ9GiG_uX9_M5uiS0yjiLTepXtcxjcX9RFbz4S7ACTQnQl6ExMO9-IK3dZq8SaPy5_Om0mbJb8I5T-RQlBvVUrIl8hT0CQkHLJaEMM-KcaiZuuyV7wJPbuhAS5UuyEAHkFoYdQyMtYgvUJkt__MWL4zBIYir8lzwKsCdzdA2vxacqPLkLp1wJe24RNDGvujFTNBEkBxuLxaMFgzquu2hvj06MVeuUHbWmdVhTY5PlLfH11xd_OKQR9uJR-zx7KImh-DMX7L0KWa40JbPQLljT5IQ69yJvWUdnHYJSgoUe2DpIqTWWCX8RIKuTUGhxgT45mJWsRIOa9T1xBx8p_9xs7u&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t6jyU3mNycU9AaWYkwgYjUW1Ot-WAPB33qPqNmJMDJyJ3aJzPwSUyzr4FBJi-Gz3zboLSuqLJ4y1fce_FCbstub44PpO_Ic_J2p0MHH7992oySO3Q6Hxm7HNQpzXhOKT7zM-nBkvFGJ3NE3JPiheuOjsug-wLOm0OjrnkmDjg_WXivVVBlr4ZICazX3-RnCBuz1Wxvn5kFua4axA0pS3X7G5Ar-zf3Iwx0_5R-J_jhzkaIMIsfuQ_pwSpkP5xrbqv86S-OW4JNI_3gpbJcDw6Wylc8Qrx8-yTn0bAKA3w3m7LcjIN3tTc6_g6yw2kKAuO8sj_eIITd_ZdLl06wvUIpQJVIb9WpWZu5W7bNo_KGiipRed5o9kv0q0dEqRWKBsa7bYvdS0mmCELVJtIKX3V6GPWsJ1OGtpDCGhlGHlnVe3T-&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t0oMJ3FnKYFYAUU-ylvXv_Lw8bIc2g5qv_HxdkwxXteaIdHxUzo032iQanmn4RP5_mwmnqvMIDj88jgMrJT6mgbSsowEgL1I2fF5jDWKbm61DuaF2FbMxnT0F96VN4xPBKUCTqwNSak1RYGzq0i-utJOBdBZdnARTyP3ZO8GZjDEj5wXBNJRXB4JPMhwx5MrBNuGRPKhkB9QBYLb77PM2fFUHSPDh3goAlRaQrfwNVvWjUsF9ZGHzSIfC7vx_kRWRlEkevSln5ak-i27yV-lwBrPpiZgq6155yorJaNOS6NXsiA1Gd4zFbrEAZJn6OWgD4iT17aL8bftS8X9zr8xz_y_kZaurV8_4a14rd3OKi7njbu0MYFx2tnUVL6QkaCzxFyeaYgTEgjCRXBwLETpkKxWFzQWHF51To7C-CMuZIbg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-u9NHmi6QbKq4fdaILyzPgxaA42D2C076ZNl19zJQdX9eQ29wNoBwtfdb1KsC74NI12JD7pPFNDxtUKL4SnYbsbsfJ9GiG_uX9_M5uiS0yjiLTepXtcxjcX9RFbz4S7ACTQnQl6ExMO9-IK3dZq8SaPy5_Om0mbJb8I5T-RQlBvVUrIl8hT0CQkHLJaEMM-KcaiZuuyV7wJPbuhAS5UuyEAHkFoYdQyMtYgvUJkt__MWL4zBIYir8lzwKsCdzdA2vxacqPLkLp1wJe24RNDGvujFTNBEkBxuLxaMFgzquu2hvj06MVeuUHbWmdVhTY5PlLfH11xd_OKQR9uJR-zx7KImh-DMX7L0KWa40JbPQLljT5IQ69yJvWUdnHYJSgoUe2DpIqTWWCX8RIKuTUGhxgT45mJWsRIOa9T1xBx8p_9xs7u&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t6jyU3mNycU9AaWYkwgYjUW1Ot-WAPB33qPqNmJMDJyJ3aJzPwSUyzr4FBJi-Gz3zboLSuqLJ4y1fce_FCbstub44PpO_Ic_J2p0MHH7992oySO3Q6Hxm7HNQpzXhOKT7zM-nBkvFGJ3NE3JPiheuOjsug-wLOm0OjrnkmDjg_WXivVVBlr4ZICazX3-RnCBuz1Wxvn5kFua4axA0pS3X7G5Ar-zf3Iwx0_5R-J_jhzkaIMIsfuQ_pwSpkP5xrbqv86S-OW4JNI_3gpbJcDw6Wylc8Qrx8-yTn0bAKA3w3m7LcjIN3tTc6_g6yw2kKAuO8sj_eIITd_ZdLl06wvUIpQJVIb9WpWZu5W7bNo_KGiipRed5o9kv0q0dEqRWKBsa7bYvdS0mmCELVJtIKX3V6GPWsJ1OGtpDCGhlGHlnVe3T-&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t0oMJ3FnKYFYAUU-ylvXv_Lw8bIc2g5qv_HxdkwxXteaIdHxUzo032iQanmn4RP5_mwmnqvMIDj88jgMrJT6mgbSsowEgL1I2fF5jDWKbm61DuaF2FbMxnT0F96VN4xPBKUCTqwNSak1RYGzq0i-utJOBdBZdnARTyP3ZO8GZjDEj5wXBNJRXB4JPMhwx5MrBNuGRPKhkB9QBYLb77PM2fFUHSPDh3goAlRaQrfwNVvWjUsF9ZGHzSIfC7vx_kRWRlEkevSln5ak-i27yV-lwBrPpiZgq6155yorJaNOS6NXsiA1Gd4zFbrEAZJn6OWgD4iT17aL8bftS8X9zr8xz_y_kZaurV8_4a14rd3OKi7njbu0MYFx2tnUVL6QkaCzxFyeaYgTEgjCRXBwLETpkKxWFzQWHF51To7C-CMuZIbg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-suXVn3qz7ePT6EsrrPyUidet7383XPUfRvorwdJyJi4dInt40mDUX_QzrxCJNYrP6Saeqmm-Has7h_kZfjr6q8uFRcvp2ejW1LxqbYy-QAucU3ketmvgavc19ZNGKjVsyu4n91C2CcbV2WRSMKHFbptoUD41vZrDQ58YQtb9s4M4lwKLQxhU27_bS9QrtoSccr94LtdMh-yqzFB3o6VZB40otjFbwp44cbb1LYJDPNRjKoJh_hvfNSGBavhinjBUCwxFm9sUKN0h29j7hW-2ls-JKiz_DLF591fNuwfjDqxGHZ1dk9Qhp2OgKPyMN5MtyZAlAsXgRia1GXhrDyjW0OHyYQEeH7q_ClkcjdePOF9-Jmt_GH9Rd90tgVqSouvTSsgTDBCvpMAheExpolM2KC7GSBRC1IGdM92X8wKjEq4jNG-wxGxKfIgKuh9A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tUdw9U_yJdfXCuTOd2HRaHMEkxmOscz1NL4x4dcP-O3oQ9-R5UBOKSe2SLZqNTzf1ci9YNp82FWRp2YUdXXFikhpfPSrKiKzO1zlaQRcyJa55RHo_AaGAV_kS_QWzWHMp3jjr_NjtKGS1gtI3AGrYermDvfR0xxHREwmFxw6NcidTbQKQZyFwclBEi2hK-Kpm-2ShdZAW8o43tf_ph5T_8kGBNEExHk5CFceb0bQ1DCqZVQQIoxNAlnmy-cSnsrjs7KOursxOA7wtnUnttNEvHpLIenORk7R9MWEqn7BxJ87_b6-f5Zy7x9c5-HpQoWE6WwiP2evaV8j-GA6vF97xkk5Qm36wBqDRY59jfaRaUTM72P0oe_AETqeDyOeb-a8eeTXSdrbZe2UeYpWboVfMj7sAYL0bnq2u2bkMkMJM4RA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tz3-esu9AQipNW7PHoXb1xYPjbUtCmuuJANnMkhC5SR_H_dGsQTWuvZzXwSGVKyIK5zCJpY3ZE2GIBB8SAXRPzp64mtSq2sxHSD5Bo6hwxdQHJIs6SWwoyPlPiOOCuWKfRGU2u9vwl5ki6ruTwwtsXkhAbGGap1q2bU4hr8EH5xmHO_XDCKZ4WLaDoI8uzBSF9wu9P9nnvl__0GUPMuLYWYTqT738slc6B_wRlN6Ns_L0Gbr4OhE6ENohwF7epYRJcbtUtF5xJLpygjmVqnVnf64L7tSebK2c5l5lRZhxDgbLjzkNQ8NkT29uDSJblChq0CLQFBaBcHjR6w7KxLIwo1kCVZZPx5EU1qgp2Gd12aZOWbx2OH-hEqL1Ww6-RrreCGlpFJEy1AeOmDD3pCZl-jYI2Eu4FDon8tGl6cYjlBA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t6jyU3mNycU9AaWYkwgYjUW1Ot-WAPB33qPqNmJMDJyJ3aJzPwSUyzr4FBJi-Gz3zboLSuqLJ4y1fce_FCbstub44PpO_Ic_J2p0MHH7992oySO3Q6Hxm7HNQpzXhOKT7zM-nBkvFGJ3NE3JPiheuOjsug-wLOm0OjrnkmDjg_WXivVVBlr4ZICazX3-RnCBuz1Wxvn5kFua4axA0pS3X7G5Ar-zf3Iwx0_5R-J_jhzkaIMIsfuQ_pwSpkP5xrbqv86S-OW4JNI_3gpbJcDw6Wylc8Qrx8-yTn0bAKA3w3m7LcjIN3tTc6_g6yw2kKAuO8sj_eIITd_ZdLl06wvUIpQJVIb9WpWZu5W7bNo_KGiipRed5o9kv0q0dEqRWKBsa7bYvdS0mmCELVJtIKX3V6GPWsJ1OGtpDCGhlGHlnVe3T-&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t0oMJ3FnKYFYAUU-ylvXv_Lw8bIc2g5qv_HxdkwxXteaIdHxUzo032iQanmn4RP5_mwmnqvMIDj88jgMrJT6mgbSsowEgL1I2fF5jDWKbm61DuaF2FbMxnT0F96VN4xPBKUCTqwNSak1RYGzq0i-utJOBdBZdnARTyP3ZO8GZjDEj5wXBNJRXB4JPMhwx5MrBNuGRPKhkB9QBYLb77PM2fFUHSPDh3goAlRaQrfwNVvWjUsF9ZGHzSIfC7vx_kRWRlEkevSln5ak-i27yV-lwBrPpiZgq6155yorJaNOS6NXsiA1Gd4zFbrEAZJn6OWgD4iT17aL8bftS8X9zr8xz_y_kZaurV8_4a14rd3OKi7njbu0MYFx2tnUVL6QkaCzxFyeaYgTEgjCRXBwLETpkKxWFzQWHF51To7C-CMuZIbg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-suXVn3qz7ePT6EsrrPyUidet7383XPUfRvorwdJyJi4dInt40mDUX_QzrxCJNYrP6Saeqmm-Has7h_kZfjr6q8uFRcvp2ejW1LxqbYy-QAucU3ketmvgavc19ZNGKjVsyu4n91C2CcbV2WRSMKHFbptoUD41vZrDQ58YQtb9s4M4lwKLQxhU27_bS9QrtoSccr94LtdMh-yqzFB3o6VZB40otjFbwp44cbb1LYJDPNRjKoJh_hvfNSGBavhinjBUCwxFm9sUKN0h29j7hW-2ls-JKiz_DLF591fNuwfjDqxGHZ1dk9Qhp2OgKPyMN5MtyZAlAsXgRia1GXhrDyjW0OHyYQEeH7q_ClkcjdePOF9-Jmt_GH9Rd90tgVqSouvTSsgTDBCvpMAheExpolM2KC7GSBRC1IGdM92X8wKjEq4jNG-wxGxKfIgKuh9A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tUdw9U_yJdfXCuTOd2HRaHMEkxmOscz1NL4x4dcP-O3oQ9-R5UBOKSe2SLZqNTzf1ci9YNp82FWRp2YUdXXFikhpfPSrKiKzO1zlaQRcyJa55RHo_AaGAV_kS_QWzWHMp3jjr_NjtKGS1gtI3AGrYermDvfR0xxHREwmFxw6NcidTbQKQZyFwclBEi2hK-Kpm-2ShdZAW8o43tf_ph5T_8kGBNEExHk5CFceb0bQ1DCqZVQQIoxNAlnmy-cSnsrjs7KOursxOA7wtnUnttNEvHpLIenORk7R9MWEqn7BxJ87_b6-f5Zy7x9c5-HpQoWE6WwiP2evaV8j-GA6vF97xkk5Qm36wBqDRY59jfaRaUTM72P0oe_AETqeDyOeb-a8eeTXSdrbZe2UeYpWboVfMj7sAYL0bnq2u2bkMkMJM4RA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tz3-esu9AQipNW7PHoXb1xYPjbUtCmuuJANnMkhC5SR_H_dGsQTWuvZzXwSGVKyIK5zCJpY3ZE2GIBB8SAXRPzp64mtSq2sxHSD5Bo6hwxdQHJIs6SWwoyPlPiOOCuWKfRGU2u9vwl5ki6ruTwwtsXkhAbGGap1q2bU4hr8EH5xmHO_XDCKZ4WLaDoI8uzBSF9wu9P9nnvl__0GUPMuLYWYTqT738slc6B_wRlN6Ns_L0Gbr4OhE6ENohwF7epYRJcbtUtF5xJLpygjmVqnVnf64L7tSebK2c5l5lRZhxDgbLjzkNQ8NkT29uDSJblChq0CLQFBaBcHjR6w7KxLIwo1kCVZZPx5EU1qgp2Gd12aZOWbx2OH-hEqL1Ww6-RrreCGlpFJEy1AeOmDD3pCZl-jYI2Eu4FDon8tGl6cYjlBA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "Colorful",
+      "Bright Interiors",
+      "Instagram Worthy",
+      "Coffee",
+      "Cakes"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Turquoise Blue Latte",
+        "description": "Butterfly pea flower latte with steamed oat milk, honey, citrus zest.",
+        "price": "₹170",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-suXVn3qz7ePT6EsrrPyUidet7383XPUfRvorwdJyJi4dInt40mDUX_QzrxCJNYrP6Saeqmm-Has7h_kZfjr6q8uFRcvp2ejW1LxqbYy-QAucU3ketmvgavc19ZNGKjVsyu4n91C2CcbV2WRSMKHFbptoUD41vZrDQ58YQtb9s4M4lwKLQxhU27_bS9QrtoSccr94LtdMh-yqzFB3o6VZB40otjFbwp44cbb1LYJDPNRjKoJh_hvfNSGBavhinjBUCwxFm9sUKN0h29j7hW-2ls-JKiz_DLF591fNuwfjDqxGHZ1dk9Qhp2OgKPyMN5MtyZAlAsXgRia1GXhrDyjW0OHyYQEeH7q_ClkcjdePOF9-Jmt_GH9Rd90tgVqSouvTSsgTDBCvpMAheExpolM2KC7GSBRC1IGdM92X8wKjEq4jNG-wxGxKfIgKuh9A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Pastel Rainbow Cake Slice",
+        "description": "Layered vanilla sponge with pastel cream cheese frosting.",
+        "price": "₹180",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-suXVn3qz7ePT6EsrrPyUidet7383XPUfRvorwdJyJi4dInt40mDUX_QzrxCJNYrP6Saeqmm-Has7h_kZfjr6q8uFRcvp2ejW1LxqbYy-QAucU3ketmvgavc19ZNGKjVsyu4n91C2CcbV2WRSMKHFbptoUD41vZrDQ58YQtb9s4M4lwKLQxhU27_bS9QrtoSccr94LtdMh-yqzFB3o6VZB40otjFbwp44cbb1LYJDPNRjKoJh_hvfNSGBavhinjBUCwxFm9sUKN0h29j7hW-2ls-JKiz_DLF591fNuwfjDqxGHZ1dk9Qhp2OgKPyMN5MtyZAlAsXgRia1GXhrDyjW0OHyYQEeH7q_ClkcjdePOF9-Jmt_GH9Rd90tgVqSouvTSsgTDBCvpMAheExpolM2KC7GSBRC1IGdM92X8wKjEq4jNG-wxGxKfIgKuh9A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5717887,
+      "lng": 91.8916153
+    },
+    "latitude": 25.5717887,
+    "longitude": 91.8916153,
+    "formatted_address": "Woods Cafe Upper Elysium, Bomfyle Road, opposite United Democratic Party (UDP) Office, Laitumkhrah, Shillong, Meghalaya 793003, India",
+    "place_id": "ChIJ3Vg_O8t_UDcR078RQQ2bNt4",
+    "phone_number": "099107 73360",
+    "website": null,
+    "google_maps_url": "https://maps.google.com/?cid=16012156006390939603",
+    "rating": 3.4,
+    "user_ratings_total": 41,
+    "price_level": 2,
+    "price_display": "₹₹",
+    "opening_hours": [
+      "Monday: 10:00 AM – 8:30 PM",
+      "Tuesday: 10:00 AM – 8:30 PM",
+      "Wednesday: 10:00 AM – 8:30 PM",
+      "Thursday: 10:00 AM – 8:30 PM",
+      "Friday: 10:00 AM – 8:30 PM",
+      "Saturday: 10:00 AM – 8:30 PM",
+      "Sunday: 10:00 AM – 8:30 PM"
+    ],
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
+  },
+  {
+    "id": "the-press-cafe",
+    "name": "The Press Cafe",
+    "tagline": "Stop the Press — This Coffee Is Too Good",
+    "theme": "Journalist's Den & Artisan Coffee Parlour",
+    "introduction": "The Press Cafe in OB Shopping Mall is Police Bazaar's finest artisan coffee destination, sourcing and roasting locally grown blends from Meghalaya's hills. The Irish Coffee is legendary, and the housemade desserts draw a devoted daily crowd.",
+    "whyVisit": "For Shillong's best Irish coffee and locally sourced artisan coffee blends in a warm, bookish atmosphere.",
+    "hours": "Monday: 10:30 AM – 8:30 PM",
+    "address": "Jylli Shop, Nongthymmai, Shillong, Meghalaya 793014, India",
+    "neighborhood": "Police Bazaar",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-saWgw_VSuC9kVE_axLmxWR3ljj3sZ9H0q9MfNgyRMpM16_euluzfA4MjhkaCFpx6y6u0XcVM-mVoW7Xyu9_wqz4uCkGyY0_eWrzMvtB0BgbabsMuWzKjNzS-JbVQ9tX_qT7vrQwb7nzG4LWsdIKxX3FXeF-HF0hf4lPV4x0Wyn2gulbLum7x9aYrPi_WyvIWcGxOG3rGlLaCqpFd-U9OTAmeEqElB6AeNctN3vLyM_5gf18dy8ZlXr-wA4rl6wZ_Gd_v-ZHxIEXkn1g45XWuTRLcgoT6VTJLnRd4A82lsJo9cjV2F4ihBqGGFPTRTgABk5k2etKYNFG0wWRnegKeqBtsgpfjqF57ZMIQYCPIuff-nnlP3rwEt65m4IrnQn7bvJOzJr6EoPVuGEqCABDB4IKFEUoYWCuu_CF4uKe6OLTg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-teVEXnbPvryEVwqWWYef8Aauip05xUDy-JAPDYRq63aEJSAINfuqAPkCXOFE0jWeB3Wp-9ST33sEICUyYh4P15C1BzjuKCDFojb8nVy6Sm9y8OwoxOFg8Vsun6Lj2oSTST_PfEWVqZXPUhkPK61sqrePKHedZXERJsOGivwVZnF8myAzOTkSbBIT2b02iM5qOGgGCMDKqS4FBaospHCCxvC4klkYsOoDBlfd_9OIN4ZYR68-op39G6_3WlePuhiJNPU8r9miLZXrI5u7SgtgtSBT12dNATBaSHEGQQHZh5lVoz5hx1Qjkqa2grVetdu8MsFseeMpx9pbSRMH9ykOV32-PvssWGQ4ARMPAqF5V2nQpPr0-AzLmFdG-foLcCo_gmcBlt0DSTj5VVDE6XG0gKyom76mgVSOkvomgUhzpKvdZPBC9h0CGhktoWfCe0&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-stbs6BuwF3KfEL_P1vQe1rQTm9fnJ9RV39bdhKcjAjVz9cVAAvZZlfsMDnwzBpqmYsrEacrsvlVgfFNSo16fp1MilNVrHDREHz41RN8W1zgud2TZBMoFi1Q88IyXXdLgE9EweeARN1868ByPkxWg6RRB9GtDKpN1meFeCZ6pPy9YTMCElMqH777T1QKMXk-M-NkFlNiLn59tzrw5ZX8MbHfQo84mQ7fYzFcFniGFbDy-5neADcsXwq5-NX9QwvTVRo8JyFSY3qezKqKiqONp65c1yJlYXA7Bdy6xItQ1eDKibq16PhbNdQAjhyRD3pvl5YRybziQPPwYb3OnbVtVcJah8uJcdMLNDD12hwLvgZrc8f_xAHwHXCUHVfQu-GEbiWxzZj6_Kqu0I3SJC3F-FhXsxbQpfaigbQna9lEReRWAHK&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-saWgw_VSuC9kVE_axLmxWR3ljj3sZ9H0q9MfNgyRMpM16_euluzfA4MjhkaCFpx6y6u0XcVM-mVoW7Xyu9_wqz4uCkGyY0_eWrzMvtB0BgbabsMuWzKjNzS-JbVQ9tX_qT7vrQwb7nzG4LWsdIKxX3FXeF-HF0hf4lPV4x0Wyn2gulbLum7x9aYrPi_WyvIWcGxOG3rGlLaCqpFd-U9OTAmeEqElB6AeNctN3vLyM_5gf18dy8ZlXr-wA4rl6wZ_Gd_v-ZHxIEXkn1g45XWuTRLcgoT6VTJLnRd4A82lsJo9cjV2F4ihBqGGFPTRTgABk5k2etKYNFG0wWRnegKeqBtsgpfjqF57ZMIQYCPIuff-nnlP3rwEt65m4IrnQn7bvJOzJr6EoPVuGEqCABDB4IKFEUoYWCuu_CF4uKe6OLTg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-teVEXnbPvryEVwqWWYef8Aauip05xUDy-JAPDYRq63aEJSAINfuqAPkCXOFE0jWeB3Wp-9ST33sEICUyYh4P15C1BzjuKCDFojb8nVy6Sm9y8OwoxOFg8Vsun6Lj2oSTST_PfEWVqZXPUhkPK61sqrePKHedZXERJsOGivwVZnF8myAzOTkSbBIT2b02iM5qOGgGCMDKqS4FBaospHCCxvC4klkYsOoDBlfd_9OIN4ZYR68-op39G6_3WlePuhiJNPU8r9miLZXrI5u7SgtgtSBT12dNATBaSHEGQQHZh5lVoz5hx1Qjkqa2grVetdu8MsFseeMpx9pbSRMH9ykOV32-PvssWGQ4ARMPAqF5V2nQpPr0-AzLmFdG-foLcCo_gmcBlt0DSTj5VVDE6XG0gKyom76mgVSOkvomgUhzpKvdZPBC9h0CGhktoWfCe0&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-stbs6BuwF3KfEL_P1vQe1rQTm9fnJ9RV39bdhKcjAjVz9cVAAvZZlfsMDnwzBpqmYsrEacrsvlVgfFNSo16fp1MilNVrHDREHz41RN8W1zgud2TZBMoFi1Q88IyXXdLgE9EweeARN1868ByPkxWg6RRB9GtDKpN1meFeCZ6pPy9YTMCElMqH777T1QKMXk-M-NkFlNiLn59tzrw5ZX8MbHfQo84mQ7fYzFcFniGFbDy-5neADcsXwq5-NX9QwvTVRo8JyFSY3qezKqKiqONp65c1yJlYXA7Bdy6xItQ1eDKibq16PhbNdQAjhyRD3pvl5YRybziQPPwYb3OnbVtVcJah8uJcdMLNDD12hwLvgZrc8f_xAHwHXCUHVfQu-GEbiWxzZj6_Kqu0I3SJC3F-FhXsxbQpfaigbQna9lEReRWAHK&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sanWEGKnA1m7BNnXAEPUH6XrOj9yIxsejY5KlYxrPtCQCZoSp-7zhSxSlFcPSGU8DjfD6A6CM0fDjdY2O1elZEN-0jdFY8DmSxju5xuNDsd3AJHlL87nRHovYPT-JCi0npu-ydpmgYTnMFgTVcBphp3jIZcGXqxaRqLAgPrroe6WTDWzfif_ar4H2uS0AlqOzQXSIVh0qSWUV-xZdnTmt704FUm5ZIt3WrO16Ja0OmzhuF1EFQVQRCm9XRditNK7SbZzbwIKV-bBf8cXADzrVU4ngzgIfcZepAXsiIbaEZCx9E488xb6oK8jzsfZUZ1J7agBdn8ZqFyt0whCrYK-Ec_qaNvyHcF390EiuTTRg_tdBUBGm0KDkoRmbX1X1rJ0Ilg7azoIYcFDwwjdj2b9T3VNZQ-DZZhR6R-qNbbKE_plCUdyNTkSlXgl2HvSts&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v-pIAaiLxYK5_Tq7GIwJH0yiY4r0AG22Nl1mk-OndOSjO-12icQMehhRtxNXhG7UdwHnLXOLqZS8kAN3HZiKm6B30H0sAAYmCsjsbtQUB8-qCuLDpfX5Cfxnsxhkiul8EdioxJgFcpffsdZSE7yXoAnerwma0PwJHA0rAA3i7EDrnc93SouAB0eXz85h0gW-hOcwG8nDHw7mpXpbYA9LzBhTzqqt9_cQ6EcTf4hmh6zuDJxydwHcyrwbH4UIqSIYDoNphqWsh0XAsTUj3wG43NAmV-CL2U208qg3cSAYM3PiPZSY4JrfJpmNCLiwkive8aFb3gbMtA0vodVV57TUmFQDpSAQ965O-ZdNxyeEkfJ7Ws9Xazz4bnoyRfl7oIQ96-2twXO6w24jiqf6IwrYOPZIQ606U8Faa4UPyDgTdWIHHTbbWMksl04idhlDRl&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t44vR9LRFWTVZFHV96gqVsdkdRkI4hVpai-EqD6Ov2O-i1pMrvem9mCd7dR2Yeu2GCHC1h9wdhMcjCqcuO_1TdNSP-k6UYL2YDLwgXW9a8P2ds9WeZoVnro7L5rJF6bYoo4zB_2cTjHKG06p8K3OvIcDqYJ9_fU9XMdwvrXjg5pMNy_2j-hdAwppKRsAXDhZh4APoQ88BSAAdGvC0IXbsAgCQXpS9VKSfvBjfzbgRmHhmtPAp55y8MEgJqfP2L4KzKdCEI5OIY_5zdbmqFgO4EIjTqKEUvosgC27pAm4_HSX5A33So1vWNnC9-V13dlLbcJOzSZ8qakW8icoSsSSkBoPD1tIstcbjfIeqSKTbQmpgxqe0eoygshIujZDLOOiRIvx5fK1w9LJ8E4bQf2GEqD01iuXestF22l1IhYpGabA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-teVEXnbPvryEVwqWWYef8Aauip05xUDy-JAPDYRq63aEJSAINfuqAPkCXOFE0jWeB3Wp-9ST33sEICUyYh4P15C1BzjuKCDFojb8nVy6Sm9y8OwoxOFg8Vsun6Lj2oSTST_PfEWVqZXPUhkPK61sqrePKHedZXERJsOGivwVZnF8myAzOTkSbBIT2b02iM5qOGgGCMDKqS4FBaospHCCxvC4klkYsOoDBlfd_9OIN4ZYR68-op39G6_3WlePuhiJNPU8r9miLZXrI5u7SgtgtSBT12dNATBaSHEGQQHZh5lVoz5hx1Qjkqa2grVetdu8MsFseeMpx9pbSRMH9ykOV32-PvssWGQ4ARMPAqF5V2nQpPr0-AzLmFdG-foLcCo_gmcBlt0DSTj5VVDE6XG0gKyom76mgVSOkvomgUhzpKvdZPBC9h0CGhktoWfCe0&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-stbs6BuwF3KfEL_P1vQe1rQTm9fnJ9RV39bdhKcjAjVz9cVAAvZZlfsMDnwzBpqmYsrEacrsvlVgfFNSo16fp1MilNVrHDREHz41RN8W1zgud2TZBMoFi1Q88IyXXdLgE9EweeARN1868ByPkxWg6RRB9GtDKpN1meFeCZ6pPy9YTMCElMqH777T1QKMXk-M-NkFlNiLn59tzrw5ZX8MbHfQo84mQ7fYzFcFniGFbDy-5neADcsXwq5-NX9QwvTVRo8JyFSY3qezKqKiqONp65c1yJlYXA7Bdy6xItQ1eDKibq16PhbNdQAjhyRD3pvl5YRybziQPPwYb3OnbVtVcJah8uJcdMLNDD12hwLvgZrc8f_xAHwHXCUHVfQu-GEbiWxzZj6_Kqu0I3SJC3F-FhXsxbQpfaigbQna9lEReRWAHK&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sanWEGKnA1m7BNnXAEPUH6XrOj9yIxsejY5KlYxrPtCQCZoSp-7zhSxSlFcPSGU8DjfD6A6CM0fDjdY2O1elZEN-0jdFY8DmSxju5xuNDsd3AJHlL87nRHovYPT-JCi0npu-ydpmgYTnMFgTVcBphp3jIZcGXqxaRqLAgPrroe6WTDWzfif_ar4H2uS0AlqOzQXSIVh0qSWUV-xZdnTmt704FUm5ZIt3WrO16Ja0OmzhuF1EFQVQRCm9XRditNK7SbZzbwIKV-bBf8cXADzrVU4ngzgIfcZepAXsiIbaEZCx9E488xb6oK8jzsfZUZ1J7agBdn8ZqFyt0whCrYK-Ec_qaNvyHcF390EiuTTRg_tdBUBGm0KDkoRmbX1X1rJ0Ilg7azoIYcFDwwjdj2b9T3VNZQ-DZZhR6R-qNbbKE_plCUdyNTkSlXgl2HvSts&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v-pIAaiLxYK5_Tq7GIwJH0yiY4r0AG22Nl1mk-OndOSjO-12icQMehhRtxNXhG7UdwHnLXOLqZS8kAN3HZiKm6B30H0sAAYmCsjsbtQUB8-qCuLDpfX5Cfxnsxhkiul8EdioxJgFcpffsdZSE7yXoAnerwma0PwJHA0rAA3i7EDrnc93SouAB0eXz85h0gW-hOcwG8nDHw7mpXpbYA9LzBhTzqqt9_cQ6EcTf4hmh6zuDJxydwHcyrwbH4UIqSIYDoNphqWsh0XAsTUj3wG43NAmV-CL2U208qg3cSAYM3PiPZSY4JrfJpmNCLiwkive8aFb3gbMtA0vodVV57TUmFQDpSAQ965O-ZdNxyeEkfJ7Ws9Xazz4bnoyRfl7oIQ96-2twXO6w24jiqf6IwrYOPZIQ606U8Faa4UPyDgTdWIHHTbbWMksl04idhlDRl&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t44vR9LRFWTVZFHV96gqVsdkdRkI4hVpai-EqD6Ov2O-i1pMrvem9mCd7dR2Yeu2GCHC1h9wdhMcjCqcuO_1TdNSP-k6UYL2YDLwgXW9a8P2ds9WeZoVnro7L5rJF6bYoo4zB_2cTjHKG06p8K3OvIcDqYJ9_fU9XMdwvrXjg5pMNy_2j-hdAwppKRsAXDhZh4APoQ88BSAAdGvC0IXbsAgCQXpS9VKSfvBjfzbgRmHhmtPAp55y8MEgJqfP2L4KzKdCEI5OIY_5zdbmqFgO4EIjTqKEUvosgC27pAm4_HSX5A33So1vWNnC9-V13dlLbcJOzSZ8qakW8icoSsSSkBoPD1tIstcbjfIeqSKTbQmpgxqe0eoygshIujZDLOOiRIvx5fK1w9LJ8E4bQf2GEqD01iuXestF22l1IhYpGabA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "Artisan Coffee",
+      "Local Beans",
+      "Irish Coffee",
+      "Desserts",
+      "Cozy"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Irish Coffee",
+        "description": "Hot strong coffee, Irish whiskey, lightly whipped cream float.",
+        "price": "₹200",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sanWEGKnA1m7BNnXAEPUH6XrOj9yIxsejY5KlYxrPtCQCZoSp-7zhSxSlFcPSGU8DjfD6A6CM0fDjdY2O1elZEN-0jdFY8DmSxju5xuNDsd3AJHlL87nRHovYPT-JCi0npu-ydpmgYTnMFgTVcBphp3jIZcGXqxaRqLAgPrroe6WTDWzfif_ar4H2uS0AlqOzQXSIVh0qSWUV-xZdnTmt704FUm5ZIt3WrO16Ja0OmzhuF1EFQVQRCm9XRditNK7SbZzbwIKV-bBf8cXADzrVU4ngzgIfcZepAXsiIbaEZCx9E488xb6oK8jzsfZUZ1J7agBdn8ZqFyt0whCrYK-Ec_qaNvyHcF390EiuTTRg_tdBUBGm0KDkoRmbX1X1rJ0Ilg7azoIYcFDwwjdj2b9T3VNZQ-DZZhR6R-qNbbKE_plCUdyNTkSlXgl2HvSts&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Locally Sourced Cold Brew",
+        "description": "Meghalaya hill beans, 18-hour cold brew, served over ice.",
+        "price": "₹180",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sanWEGKnA1m7BNnXAEPUH6XrOj9yIxsejY5KlYxrPtCQCZoSp-7zhSxSlFcPSGU8DjfD6A6CM0fDjdY2O1elZEN-0jdFY8DmSxju5xuNDsd3AJHlL87nRHovYPT-JCi0npu-ydpmgYTnMFgTVcBphp3jIZcGXqxaRqLAgPrroe6WTDWzfif_ar4H2uS0AlqOzQXSIVh0qSWUV-xZdnTmt704FUm5ZIt3WrO16Ja0OmzhuF1EFQVQRCm9XRditNK7SbZzbwIKV-bBf8cXADzrVU4ngzgIfcZepAXsiIbaEZCx9E488xb6oK8jzsfZUZ1J7agBdn8ZqFyt0whCrYK-Ec_qaNvyHcF390EiuTTRg_tdBUBGm0KDkoRmbX1X1rJ0Ilg7azoIYcFDwwjdj2b9T3VNZQ-DZZhR6R-qNbbKE_plCUdyNTkSlXgl2HvSts&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5622024,
+      "lng": 91.9051633
+    },
+    "latitude": 25.5622024,
+    "longitude": 91.9051633,
+    "formatted_address": "Jylli Shop, Nongthymmai, Shillong, Meghalaya 793014, India",
+    "place_id": "ChIJZ9WxYR9_UDcRmM8iTQ3EujM",
+    "phone_number": null,
+    "website": null,
+    "google_maps_url": "https://maps.google.com/?cid=3727507203010252696",
+    "rating": 4.8,
+    "user_ratings_total": 96,
+    "price_level": 2,
+    "price_display": "₹₹",
+    "opening_hours": [
+      "Monday: 10:30 AM – 8:30 PM",
+      "Tuesday: 10:30 AM – 8:30 PM",
+      "Wednesday: 10:30 AM – 8:30 PM",
+      "Thursday: 10:30 AM – 8:30 PM",
+      "Friday: 10:30 AM – 8:30 PM",
+      "Saturday: 10:30 AM – 8:30 PM",
+      "Sunday: 12:00 – 8:30 PM"
+    ],
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
+  },
+  {
+    "id": "open-up-cafe",
+    "name": "Open Up Cafe",
+    "tagline": "Open Up, Hang Out, Come Back Tomorrow",
+    "theme": "Colorful Youth Hangout with Board Games & Food",
+    "introduction": "Open Up Cafe in Mawlai's Mawroh neighborhood is the area's most beloved youth hangout, combining vibrant comic-character interiors (think Batman murals), a surprisingly diverse menu, and shelves of board games. Hotdogs, momos, and burgers rule the menu.",
+    "whyVisit": "For the most fun and energetic cafe atmosphere in Shillong's Mawlai area, complete with games and great hotdogs.",
+    "hours": "Monday: Closed",
+    "address": "Mawlai, Mawroh, Pdengshnong, Shillong, Meghalaya 793001, India",
+    "neighborhood": "Mawlai",
+    "images": {
+      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uZyxg0wv9uE5Gh_zzQDYBwXYe9B2QTVZ7P50pbT6gcdRQOjG0fDf-1ftqMbY4ipwburAL-1efX0koHoK-ju_79nInaQNACzv65bAIU_Lvnawvj8_HDv7h6ygGo8876ydkrCNP7G9dQCM6ZV15kVnA7PBcU3Po_RAXYMT9XZVX25yVammT6SOFQhOZHvbDVmwR05trIOnLLOov-jApbUNNPzkqkDi9z0-NAmVHQdtjGFybppOsh9wyeybyfsp0E-PuYJ_bbQao_X2ga06AoEWJEjmomKiHrcFxNM1TO6jT9l1s1HY5nGE1pS4JXtBuFS7q-NpkzGOvs-fB_XuQSFdN7DsgcMs44sDbcW5yzDDc_SlXy5e2CiAmZF4SK02xIVlwg0hLp4wMyR893c281DnIxseaipNc3WhcI4H98sKxMrrs&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vXCtDoMcMnKzOx4tIv_2ygT2qbR2DiBdaR_dKBWaciWGku6n_iJZ7H3ntWWRAJW0Ts2da_9xx9KKj7Tx6HflsKIzb4Xlqxo3tz8sWGK77PtV51_WP6dLzTOHwAQWzqStPJ5H5pCMvBSPmPrJgAL-Yn51lScUn5-eVTuysyD-2q1ZmACr-Vex5_B3MEcuIwek8Zvxlx1PxS4Dypl7tIZjSQxr6JndHXXWYg7IjIeFj9uG_KdfP4XGQGE84cLx8N-MQI312GztMqmqAoIgLT_OHaQGSPC8vGsbm-u-vhnGNpz-nDJoSOuzNKX0ouJ-1JWXx08nmZACzuTaq1_IJMvdX98OPi3CjFrD4LVapir7JxvRCiZCRsENRYWZaNjqza4lnaWBnFRqZFN15YjLiY_Zro_3gOzHiwBUiBbQ7k5GWT4A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vp-QRfY9UDZXCVMvDdrd5e0HPdLlAIDcBaSoGHH1Y7nu35pUyc7Qtpetqi3ihNuvhrtTQdt5eDmQp_h_I4VWvqFF996PCXcSsY5zq3yCKaAwNdI3Rh8_DDu4a6afb-keITSpSGyMurj_QK7hVNr5SYgz4KzdGJ4j4MPW6Fjoh2pz8PuJ7t-xxvc-XROEOIBj_w2B7o-jYib0YguNk2L5IIBABa0Yc7m_OQwnaFvKstdHAfDXrIpJpy0VRsuxIRT508BdG3Yo6r-47tnccqWIP3bkqCHFskP-Gf6M3LxvYjNA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    },
+    "photos": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uZyxg0wv9uE5Gh_zzQDYBwXYe9B2QTVZ7P50pbT6gcdRQOjG0fDf-1ftqMbY4ipwburAL-1efX0koHoK-ju_79nInaQNACzv65bAIU_Lvnawvj8_HDv7h6ygGo8876ydkrCNP7G9dQCM6ZV15kVnA7PBcU3Po_RAXYMT9XZVX25yVammT6SOFQhOZHvbDVmwR05trIOnLLOov-jApbUNNPzkqkDi9z0-NAmVHQdtjGFybppOsh9wyeybyfsp0E-PuYJ_bbQao_X2ga06AoEWJEjmomKiHrcFxNM1TO6jT9l1s1HY5nGE1pS4JXtBuFS7q-NpkzGOvs-fB_XuQSFdN7DsgcMs44sDbcW5yzDDc_SlXy5e2CiAmZF4SK02xIVlwg0hLp4wMyR893c281DnIxseaipNc3WhcI4H98sKxMrrs&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vXCtDoMcMnKzOx4tIv_2ygT2qbR2DiBdaR_dKBWaciWGku6n_iJZ7H3ntWWRAJW0Ts2da_9xx9KKj7Tx6HflsKIzb4Xlqxo3tz8sWGK77PtV51_WP6dLzTOHwAQWzqStPJ5H5pCMvBSPmPrJgAL-Yn51lScUn5-eVTuysyD-2q1ZmACr-Vex5_B3MEcuIwek8Zvxlx1PxS4Dypl7tIZjSQxr6JndHXXWYg7IjIeFj9uG_KdfP4XGQGE84cLx8N-MQI312GztMqmqAoIgLT_OHaQGSPC8vGsbm-u-vhnGNpz-nDJoSOuzNKX0ouJ-1JWXx08nmZACzuTaq1_IJMvdX98OPi3CjFrD4LVapir7JxvRCiZCRsENRYWZaNjqza4lnaWBnFRqZFN15YjLiY_Zro_3gOzHiwBUiBbQ7k5GWT4A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vp-QRfY9UDZXCVMvDdrd5e0HPdLlAIDcBaSoGHH1Y7nu35pUyc7Qtpetqi3ihNuvhrtTQdt5eDmQp_h_I4VWvqFF996PCXcSsY5zq3yCKaAwNdI3Rh8_DDu4a6afb-keITSpSGyMurj_QK7hVNr5SYgz4KzdGJ4j4MPW6Fjoh2pz8PuJ7t-xxvc-XROEOIBj_w2B7o-jYib0YguNk2L5IIBABa0Yc7m_OQwnaFvKstdHAfDXrIpJpy0VRsuxIRT508BdG3Yo6r-47tnccqWIP3bkqCHFskP-Gf6M3LxvYjNA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tfY8fxFrITL4Knkt_KtJL5L_JsHIcfmW4330UUCvcLqr6WmpXwDV0qHRTzHYg0NGLf9zkwnTaV-_wgzDKPrLynNPTwE9EGHXp_AWkI3fsN1YccX5dzm8n1wegTXroigO00i-M-oUn2ymuhD3I7AbglukVaSxh2ehrCbKMagZBI0H-occ_P8CfydQum5FtDUusu4MlVxe873n37uPC8O6IofgFnFJ8XyNPp5S0q8Kcw7Z5jkNU3IqhbCEnBR_cV8fdyg5MbfSah-Y-JxQ_zCWjQ8cVrDMWui19XXxiV8aQGKA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v_u34kgR9MAf4pLoJ262PVau5CReINz2FT_BQyFM-uI3MoUDnuQ6HbdTFJW0lPtnVCfyiI1X77_dtT3YectfkhA9KhojKDaJwj0uIf_TESWbdX_lQsNV1ts6ugEM19nAKq_mYi6RwP91n7gWZZqFOvQXfqnzapuhKCdgh1X61IDPkijk-b5WsckIY7mUkkAQaHANpyEN4DPK7wcQf53kMRdDe7fBYZORio0bQbhtrSG25WrvRT9FoDl_WdL5MP6fXTznf-9Ny8VrAjWjEqkGbw5fGFpJXZtrQ_b5h1kvPssD-acoHMpt5n2o10uqvgmOeIZTBTyDiUd5I4m4Wa7ITWHbpv7hditlvqkrd6CMfK1lpVcuRkWwWD8yMPt3izPIBEgS4RfmfMM5gB9r96mwlsBQtVFOww2ml32SbfyixCzg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ubPPphCAekadtlzE42wkx39_QIHKKx8VqQlQ9NEXlrryi3j6G9EwZcBVRkHOwDxBnY275u0ymKSj7VbA2vV-0F4IV9kR6sIbspWNvVRV_ErV2P7TczlXNnziJdaZ_ztUR6fI9tHOUWEu2AjYeHJ8ti43dmrL4f0DzEROfNQASuh7IL0tI5xuePD7Qxf-ZsR6tZS4mwKQd5VQj3aKRLgjTvrgXFS0R6VjuKzmt32Mc50z52kQdqpdvkqKfGbpp-Ri97WBnRsc_BRCG7tQB3w0MBQv9gS-OL6EEUAN2Myxc7ZoDOxCcFx57PNOsTUitcPqPrCYJX0NVvNJIFh4eHNeII4uv1ZzWmhPiyfqvBP27kYTBmfKxar_nQ1zA795pkbA8NdXGAPjZPEqTD-3v0JLTsP5JP5huq7Eg6Veif4KLKZg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "gallery": [
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vXCtDoMcMnKzOx4tIv_2ygT2qbR2DiBdaR_dKBWaciWGku6n_iJZ7H3ntWWRAJW0Ts2da_9xx9KKj7Tx6HflsKIzb4Xlqxo3tz8sWGK77PtV51_WP6dLzTOHwAQWzqStPJ5H5pCMvBSPmPrJgAL-Yn51lScUn5-eVTuysyD-2q1ZmACr-Vex5_B3MEcuIwek8Zvxlx1PxS4Dypl7tIZjSQxr6JndHXXWYg7IjIeFj9uG_KdfP4XGQGE84cLx8N-MQI312GztMqmqAoIgLT_OHaQGSPC8vGsbm-u-vhnGNpz-nDJoSOuzNKX0ouJ-1JWXx08nmZACzuTaq1_IJMvdX98OPi3CjFrD4LVapir7JxvRCiZCRsENRYWZaNjqza4lnaWBnFRqZFN15YjLiY_Zro_3gOzHiwBUiBbQ7k5GWT4A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vp-QRfY9UDZXCVMvDdrd5e0HPdLlAIDcBaSoGHH1Y7nu35pUyc7Qtpetqi3ihNuvhrtTQdt5eDmQp_h_I4VWvqFF996PCXcSsY5zq3yCKaAwNdI3Rh8_DDu4a6afb-keITSpSGyMurj_QK7hVNr5SYgz4KzdGJ4j4MPW6Fjoh2pz8PuJ7t-xxvc-XROEOIBj_w2B7o-jYib0YguNk2L5IIBABa0Yc7m_OQwnaFvKstdHAfDXrIpJpy0VRsuxIRT508BdG3Yo6r-47tnccqWIP3bkqCHFskP-Gf6M3LxvYjNA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tfY8fxFrITL4Knkt_KtJL5L_JsHIcfmW4330UUCvcLqr6WmpXwDV0qHRTzHYg0NGLf9zkwnTaV-_wgzDKPrLynNPTwE9EGHXp_AWkI3fsN1YccX5dzm8n1wegTXroigO00i-M-oUn2ymuhD3I7AbglukVaSxh2ehrCbKMagZBI0H-occ_P8CfydQum5FtDUusu4MlVxe873n37uPC8O6IofgFnFJ8XyNPp5S0q8Kcw7Z5jkNU3IqhbCEnBR_cV8fdyg5MbfSah-Y-JxQ_zCWjQ8cVrDMWui19XXxiV8aQGKA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v_u34kgR9MAf4pLoJ262PVau5CReINz2FT_BQyFM-uI3MoUDnuQ6HbdTFJW0lPtnVCfyiI1X77_dtT3YectfkhA9KhojKDaJwj0uIf_TESWbdX_lQsNV1ts6ugEM19nAKq_mYi6RwP91n7gWZZqFOvQXfqnzapuhKCdgh1X61IDPkijk-b5WsckIY7mUkkAQaHANpyEN4DPK7wcQf53kMRdDe7fBYZORio0bQbhtrSG25WrvRT9FoDl_WdL5MP6fXTznf-9Ny8VrAjWjEqkGbw5fGFpJXZtrQ_b5h1kvPssD-acoHMpt5n2o10uqvgmOeIZTBTyDiUd5I4m4Wa7ITWHbpv7hditlvqkrd6CMfK1lpVcuRkWwWD8yMPt3izPIBEgS4RfmfMM5gB9r96mwlsBQtVFOww2ml32SbfyixCzg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
+      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ubPPphCAekadtlzE42wkx39_QIHKKx8VqQlQ9NEXlrryi3j6G9EwZcBVRkHOwDxBnY275u0ymKSj7VbA2vV-0F4IV9kR6sIbspWNvVRV_ErV2P7TczlXNnziJdaZ_ztUR6fI9tHOUWEu2AjYeHJ8ti43dmrL4f0DzEROfNQASuh7IL0tI5xuePD7Qxf-ZsR6tZS4mwKQd5VQj3aKRLgjTvrgXFS0R6VjuKzmt32Mc50z52kQdqpdvkqKfGbpp-Ri97WBnRsc_BRCG7tQB3w0MBQv9gS-OL6EEUAN2Myxc7ZoDOxCcFx57PNOsTUitcPqPrCYJX0NVvNJIFh4eHNeII4uv1ZzWmhPiyfqvBP27kYTBmfKxar_nQ1zA795pkbA8NdXGAPjZPEqTD-3v0JLTsP5JP5huq7Eg6Veif4KLKZg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+    ],
+    "vibeTags": [
+      "Vibrant",
+      "Games",
+      "Diverse Menu",
+      "Youth Crowd",
+      "Mawlai"
+    ],
+    "hasLiveMusic": false,
+    "mustTry": [
+      {
+        "name": "Spicy Hotdog",
+        "description": "Grilled pork hotdog, spicy tangy dip, mustard, caramelized onions.",
+        "price": "₹110",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tfY8fxFrITL4Knkt_KtJL5L_JsHIcfmW4330UUCvcLqr6WmpXwDV0qHRTzHYg0NGLf9zkwnTaV-_wgzDKPrLynNPTwE9EGHXp_AWkI3fsN1YccX5dzm8n1wegTXroigO00i-M-oUn2ymuhD3I7AbglukVaSxh2ehrCbKMagZBI0H-occ_P8CfydQum5FtDUusu4MlVxe873n37uPC8O6IofgFnFJ8XyNPp5S0q8Kcw7Z5jkNU3IqhbCEnBR_cV8fdyg5MbfSah-Y-JxQ_zCWjQ8cVrDMWui19XXxiV8aQGKA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      },
+      {
+        "name": "Steamed Veg Momos",
+        "description": "Fresh vegetable dumplings, steamed, served with spicy red chilli sauce.",
+        "price": "₹90",
+        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tfY8fxFrITL4Knkt_KtJL5L_JsHIcfmW4330UUCvcLqr6WmpXwDV0qHRTzHYg0NGLf9zkwnTaV-_wgzDKPrLynNPTwE9EGHXp_AWkI3fsN1YccX5dzm8n1wegTXroigO00i-M-oUn2ymuhD3I7AbglukVaSxh2ehrCbKMagZBI0H-occ_P8CfydQum5FtDUusu4MlVxe873n37uPC8O6IofgFnFJ8XyNPp5S0q8Kcw7Z5jkNU3IqhbCEnBR_cV8fdyg5MbfSah-Y-JxQ_zCWjQ8cVrDMWui19XXxiV8aQGKA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+      }
+    ],
+    "coordinates": {
+      "lat": 25.5950845,
+      "lng": 91.89455989999999
+    },
+    "latitude": 25.5950845,
+    "longitude": 91.89455989999999,
+    "formatted_address": "Mawlai, Mawroh, Pdengshnong, Shillong, Meghalaya 793001, India",
+    "place_id": "ChIJ4ZzhaPF-UDcRk4DIF4u5xh4",
+    "phone_number": null,
+    "website": null,
+    "google_maps_url": "https://maps.google.com/?cid=2217663873577156755",
+    "rating": 4.3,
+    "user_ratings_total": 1029,
+    "price_level": 2,
+    "price_display": "₹₹",
+    "opening_hours": [
+      "Monday: Closed",
+      "Tuesday: 1:30 – 9:30 PM",
+      "Wednesday: 1:30 – 9:30 PM",
+      "Thursday: 1:30 – 9:30 PM",
+      "Friday: 1:30 – 9:30 PM",
+      "Saturday: 1:30 – 9:30 PM",
+      "Sunday: 1:30 – 9:30 PM"
+    ],
+    "types": [
+      "cafe",
+      "establishment",
+      "food",
+      "point_of_interest"
+    ],
+    "verification_status": "verified",
+    "price_per_person": 400,
+    "average_spend_for_two": 800
   }
 ]

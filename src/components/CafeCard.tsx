@@ -135,11 +135,17 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
           )}
 
           <div className="flex items-center justify-between pt-1">
-            {/* Hours */}
-            <span className="inline-flex items-center gap-1.5 text-xs text-stone-500 font-mono font-medium">
-              <Clock className="w-3.5 h-3.5 text-stone-400" />
-              {cafe.hours.split("(")[0].trim()}
-            </span>
+            {/* Price or Hours */}
+            {cafe.price_per_person ? (
+              <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-900 bg-amber-50 border border-amber-100 px-2 py-0.5 rounded">
+                💰 ₹{cafe.price_per_person}/person
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 text-xs text-stone-500 font-mono font-medium">
+                <Clock className="w-3.5 h-3.5 text-stone-400" />
+                {cafe.hours.split("(")[0].trim()}
+              </span>
+            )}
 
             <button
               id={`btn-view-${cafe.id}`}

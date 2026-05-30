@@ -115,9 +115,14 @@ export interface Cafe {
   outdoor_seating?: boolean;
 
   // Budget eats
+  price_per_person?: number;
   average_spend_for_two?: number;
   cheapest_main_item?: number;
   student_budget_fit?: boolean;
+  price_display?: string;
+  menu_url?: string;
+  menu_pdf_lunch?: string;
+  menu_pdf_dinner?: string;
 }
 
 export interface NeighborhoodInfo {
