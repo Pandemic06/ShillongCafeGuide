@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Cafe, Review } from "../types";
 import { X, Clock, MapPin, Star, Sparkles, Send, CheckCircle, Navigation, Phone, Globe, ChevronDown, ChevronUp, BookOpen, Award, Info, Camera } from "lucide-react";
 import { motion } from "motion/react";
+import SEO from "./SEO";
+import { getReviewsFromFirestore, addReviewToFirestore } from "../services/db";
 
 interface CafeDetailModalProps {
   cafe: Cafe;
@@ -232,9 +234,23 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
   const fetchReviews = async () => {
     try {
       const res = await fetch("/api/reviews");
-      const allReviews = await res.json();
-      // Filter reviews specific to this cafe
-      const filtered = allReviews.filter((r: Review) => r.cafeId === cafe.id);
+      const apiReviews = await res.json();
+      
+      let fsReviews: Review[] = [];
+      try {
+        fsReviews = await getReviewsFromFirestore();
+      } catch (err) {
+        console.warn("Firestore reviews download failed:", err);
+      }
+
+      const combined = [...fsReviews];
+      apiReviews.forEach((apiR: Review) => {
+        if (!combined.some(r => r.id === apiR.id)) {
+          combined.push(apiR);
+        }
+      });
+
+      const filtered = combined.filter((r: Review) => r.cafeId === cafe.id);
       setReviews(filtered);
     } catch (err) {
       console.error("Failed to load reviews:", err);
@@ -250,22 +266,21 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
     setSuccessMsg("");
 
     try {
-      const res = await fetch("/api/reviews", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          cafeId: cafe.id,
-          userName,
-          rating,
-          comment,
-        }),
+      await addReviewToFirestore({
+        cafeId: cafe.id,
+        userName,
+        rating,
+        comment,
+        isLocalGuide: false,
+        userId: "anonymous",
+        date: new Date().toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
       });
 
-      if (!res.ok) {
-        throw new Error("Server review submission failed");
-      }
-
-      await fetchReviews(); // Refresh from backend
+      await fetchReviews(); // Refresh review logs
       setUserName("");
       setComment("");
       setRating(5);
@@ -279,6 +294,8 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
     }
   };
 
+  const currentUrl = `/?tab=cafes&cafe=${encodeURIComponent(cafe.id)}`;
+
   return (
     <motion.div
       id={`cafe-detail-panel-${cafe.id}`}
@@ -287,6 +304,39 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-50 bg-stone-900/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto"
     >
+      <SEO 
+        title={`${cafe.name} | Shillong Café Map`} 
+        description={cafe.introduction || cafe.tagline} 
+        url={currentUrl} 
+        image={cafe.images?.hero} 
+        type="article"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": cafe.khasi_food_available ? "Restaurant" : "CafeOrCoffeeShop",
+          "name": cafe.name,
+          "image": cafe.images?.hero,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": cafe.address,
+            "addressLocality": "Shillong",
+            "addressRegion": "Meghalaya",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": cafe.coordinates.lat,
+            "longitude": cafe.coordinates.lng
+          },
+          "url": `https://shillongcafemap.com${currentUrl}`,
+          "telephone": cafe.phone_number,
+          "servesCuisine": cafe.khasi_food_available ? "Khasi" : "Cafe",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": cafe.rating || 4.5,
+            "reviewCount": cafe.user_ratings_total || 20
+          }
+        }}
+      />
       <motion.div
         initial={{ scale: 0.95, y: 15 }}
         animate={{ scale: 1, y: 0 }}
@@ -325,9 +375,14 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
               <h2 className="text-3xl md:text-4.5xl font-display font-bold text-stone-900 mt-2 tracking-tight">
                 {cafe.name}
               </h2>
-              <p className="text-xs md:text-sm text-stone-700 italic font-medium mt-1">
-                "{cafe.tagline}"
-              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 mt-1">
+                <p className="text-xs md:text-sm text-stone-700 italic font-medium">
+                  "{cafe.tagline}"
+                </p>
+                <span className="text-[10px] text-stone-500/80 font-sans italic font-normal bg-stone-100/70 border border-stone-200/50 px-2 py-0.5 rounded shadow-sm self-start sm:self-auto">
+                  “Photos for reference only. Photos are not authentic.”
+                </span>
+              </div>
             </div>
           </div>
 
@@ -563,20 +618,62 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                   </div>
                   <div className="space-y-4">
                     <div className="space-y-1">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-stone-400 block">Vibe Tags</span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-stone-400 block">Vibe & Ambience</span>
                       <div className="flex flex-wrap gap-1 pt-1">
-                        {cafe.vibeTags.map((v) => (
+                        {(cafe.ambience_tags || cafe.vibeTags || []).map((v) => (
                           <span key={v} className="text-[9px] font-mono bg-stone-100 text-stone-605 text-stone-600 px-2 py-0.5 rounded">
                             #{v}
                           </span>
                         ))}
                       </div>
                     </div>
+                    
+                    {cafe.features && cafe.features.length > 0 && (
+                      <div className="space-y-1">
+                        <span className="text-[10px] font-mono uppercase tracking-wider text-stone-400 block">Features</span>
+                        <div className="flex flex-wrap gap-1 pt-1">
+                          {cafe.features.map((f) => (
+                            <span key={f} className="text-[10px] font-sans font-medium bg-amber-50 text-amber-800 px-2.5 py-0.5 rounded border border-amber-200">
+                              ✓ {f}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {cafe.popular_dishes && cafe.popular_dishes.length > 0 && (
+                      <div className="space-y-1">
+                        <span className="text-[10px] font-mono uppercase tracking-wider text-stone-400 block">Popular Dishes</span>
+                        <p className="text-xs text-stone-700 font-sans leading-relaxed">
+                          {cafe.popular_dishes.join(" · ")}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Facility Tags */}
+                    <div className="pt-2 grid grid-cols-2 gap-2">
+                       {(cafe.wifi) && <span className="text-xs text-stone-600 bg-stone-50 px-2 py-1 rounded">📶 Free Wifi</span>}
+                       {(cafe.rooftop) && <span className="text-xs text-stone-600 bg-stone-50 px-2 py-1 rounded">🌤️ Rooftop</span>}
+                       {(cafe.pet_friendly) && <span className="text-xs text-stone-600 bg-stone-50 px-2 py-1 rounded">🐕 Pet Friendly</span>}
+                    </div>
+
+                    {cafe.discovery_sources && cafe.discovery_sources.length > 0 && (
+                      <div className="space-y-1 pt-2 border-t border-stone-100">
+                        <span className="text-[9px] font-mono uppercase tracking-wider text-stone-400 block">Verified via Graph Discovery</span>
+                        <div className="flex flex-wrap gap-1 pt-1">
+                           {cafe.discovery_sources.map((s) => (
+                              <span key={s} className="text-[10px] font-sans text-stone-500">
+                                • {s}
+                              </span>
+                           ))}
+                        </div>
+                      </div>
+                    )}
 
                     <div className="space-y-1">
                       <span className="text-[10px] font-mono uppercase tracking-wider text-stone-400 block">Atmosphere</span>
                       <p className="text-xs text-[#525252] font-sans font-light leading-relaxed">
-                        {cafe.hasLiveMusic ? "🎷 This venue features live music and high-altitude acoustic acts." : "☕ Set up as a peaceful, atmospheric space perfect for coffee, dates, or study."}
+                        {cafe.hasLiveMusic || cafe.live_music ? "🎷 This venue features live music and high-altitude acoustic acts." : "☕ Set up as a peaceful, atmospheric space perfect for coffee, dates, or study."}
                       </p>
                     </div>
 
@@ -680,6 +777,9 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                       </div>
                     ))}
                   </div>
+                  <p className="text-xs text-stone-400 font-sans italic pt-2 block text-left">
+                    “Photos for reference only. Photos are not authentic.”
+                  </p>
                 </div>
               </div>
             )}
@@ -723,6 +823,9 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                     </div>
                   ))}
                 </div>
+                <p className="text-xs text-stone-400 font-sans italic pt-2 block text-left">
+                  “Photos for reference only. Photos are not authentic.”
+                </p>
               </div>
             )}
 

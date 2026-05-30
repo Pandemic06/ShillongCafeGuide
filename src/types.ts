@@ -17,52 +17,92 @@ export interface Review {
   comment: string;
   date: string;
   isLocalGuide?: boolean;
+  userId?: string;
 }
 
 export interface Cafe {
+  // Required newly specified robust schema
   id: string;
   name: string;
+  aliases?: string[];
+  category?: string;
+  subcategories?: string[];
+  description?: string; // Long narrative description
+  seo_description?: string; // SEO optimization
+  
+  // Backwards compatible fields to keep UI from crashing
   tagline: string;
   theme: string;
-  introduction: string;
+  introduction: string; // Used in UI currently
   whyVisit: string;
   hours: string;
   address: string;
-  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti";
+  locality?: string;
+  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti" | string;
   images: {
     hero: string;
     card: string;
     interior?: string;
     details?: string;
   };
-  quote?: string;
-  quoteAuthor?: string;
-  mustTry: MenuItem[];
-  gallery: string[];
-  vibeTags: string[];
-  hasLiveMusic?: boolean;
+  
+  // Base coordinates mapping
   coordinates?: { lat: number; lng: number };
   
-  // Google Maps Platform Enriched Fields
-  place_id?: string;
-  formatted_address?: string;
+  // Google Maps / Social Platform Data
   latitude?: string | number;
   longitude?: string | number;
   google_maps_url?: string;
-  website?: string;
+  place_id?: string;
   phone_number?: string;
+  website?: string;
+  instagram?: string;
+  facebook?: string;
+  swiggy?: string;
+  zomato?: string;
   rating?: number | string;
   user_ratings_total?: number | string;
-  types?: string[];
+  review_count?: number | string; // mapped from new schema
+  price_level?: string;
   opening_hours?: string[];
   photos?: string[];
+  formatted_address?: string;
+  types?: string[];
+  verification_status?: string;
+  
+  // Cafe / Restaurant attributes
   khasi_food_available?: boolean;
+  popular_dishes?: string[];
+  mustTry?: MenuItem[];  // Backward compat
+  gallery?: string[];
+  
+  // Ambiance & Tags
+  vibeTags?: string[]; // Backward compat
+  ambience_tags?: string[];
+  features?: string[];
   tags?: string[];
-  match_confidence?: number;
-  verification_status?: "verified" | "unverified";
+  
+  // Booleans
+  live_music?: boolean;
+  rooftop?: boolean;
+  wifi?: boolean;
+  parking?: boolean;
+  pet_friendly?: boolean;
+  verified?: boolean;
+  
+  // Intelligence / Scores
+  online_presence_score?: number | string;
+  verification_confidence?: number | string;
+  discovery_sources?: string[];
+  last_verified?: string;
   kong_labet_tagline?: string;
   kong_labet_note?: string;
   kong_labet_observations?: string[];
+  
+  // Other existing specific fields (optional overrides, quotes, etc)
+  quote?: string;
+  quoteAuthor?: string;
+  hasLiveMusic?: boolean;
 
   // Taxonomy & Content Governance
   primary_category?: string;

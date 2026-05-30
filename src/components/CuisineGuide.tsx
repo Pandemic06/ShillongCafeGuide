@@ -60,7 +60,8 @@ export default function CuisineGuide() {
             <div className="relative h-72 md:h-80 w-full overflow-hidden">
               <img
                 src={activeDish.image}
-                alt={activeDish.name}
+                alt={`Authentic Khasi dish: ${activeDish.name}`}
+                loading="lazy"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

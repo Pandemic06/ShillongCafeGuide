@@ -9,6 +9,8 @@ interface CafeCardProps {
 }
 
 export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
+  const [imageLoaded, setImageLoaded] = React.useState(false);
+
   // Neighborhood colors for visual landmarks
   const neighborhoodColors = {
     Laitumkhrah: "bg-blue-50 text-blue-800 border-blue-200/50",
@@ -21,22 +23,29 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
   };
 
   return (
-    <motion.div
+    <motion.article
       id={`cafe-card-${cafe.id}`}
       whileHover={{ y: -6 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       className="bg-[#FAF8F5] border border-stone-200/80 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col h-full group"
     >
       {/* Hero Image Container */}
-      <div className="relative h-56 w-full overflow-hidden bg-stone-100">
+      <div className="relative h-56 w-full overflow-hidden bg-stone-200">
+        {!imageLoaded && (
+          <div className="absolute inset-0 bg-stone-200 animate-pulse flex items-center justify-center">
+            <span className="text-[10px] uppercase font-mono tracking-wider text-stone-400">Loading...</span>
+          </div>
+        )}
         <img
           src={cafe.images.card}
-          alt={cafe.name}
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          alt={`Visual of ${cafe.name} in ${cafe.neighborhood}`}
+          loading="lazy"
+          onLoad={() => setImageLoaded(true)}
+          className={`w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105 ${imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
           referrerPolicy="no-referrer"
         />
         {/* Layer Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 via-transparent to-transparent opacity-60 pointer-events-none" />
 
         {/* Neighborhood Pill Badge */}
         <div className="absolute top-4 left-4 z-10">
@@ -151,6 +160,6 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }

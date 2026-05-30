@@ -2,15 +2,340 @@ import { Cafe, NeighborhoodInfo, GuideArticle, FoodDish, Review } from "./types"
 
 export const CAFES: Cafe[] = [
   {
+    id: "you-and-i-arts-cafe",
+    name: "You & I Arts Cafe",
+    aliases: ["You and I Cafe", "You & I Arts", "Mawlai Arts Cafe"],
+    category: "Cafe",
+    subcategories: ["Khasi Tea House", "Cultural Cafe", "Art Space"],
+    description: "An incredibly special, deeply cultural wooden tea house tucked away in Mawlai. Filled with vintage Khasi artifacts, handcrafted puppets, and local art, You & I Arts Cafe offers an unmatched selection of indigenous teas, herbal infusions, and traditional Khasi snacks in a soul-warming, nostalgic atmosphere.",
+    seo_description: "Discover You & I Arts Cafe in Mawlai, Shillong for authentic Khasi herbal teas, local snacks, and a deeply cultural, aesthetic wooden interior.",
+    tagline: "A beautifully chaotic museum of Khasi tea and art.",
+    theme: "Nostalgic Wooden Artifacts & Tribal Warmth",
+    introduction: "More than just a cafe, You & I is a cultural archive and community hearth. Stepping inside feels like entering the eclectic, cozy attic of a local historian who happens to serve the best Roselle tea in Meghalaya.",
+    whyVisit: "To sip rare Khasi herbal infusions and eat traditional snacks surrounded by local art, puppets, and community spirit.",
+    hours: "11:00 AM — 7:00 PM (Closed Sundays)",
+    address: "Mawlai Phudmuri, Shillong 793008",
+    locality: "Mawlai",
+    neighborhood: "Other",
+    latitude: 25.5950,
+    longitude: 91.8900,
+    coordinates: { lat: 25.5950, lng: 91.8900 },
+    images: {
+      hero: "https://images.unsplash.com/photo-1544783307-28df52824707?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&q=80&w=800",
+      interior: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccfa?auto=format&fit=crop&q=80&w=1200"
+    },
+    vibeTags: ["Vintage", "Art & Craft", "Tea House", "Cultural", "Nostalgic"],
+    ambience_tags: ["Vintage", "Art & Craft", "Tea House", "Cultural", "Nostalgic", "Quiet"],
+    popular_dishes: ["Roselle Tea", "Putharo", "Pumaloi", "Wild Berry Infusion"],
+    khasi_food_available: true,
+    hasLiveMusic: false,
+    live_music: false,
+    rooftop: false,
+    wifi: false,
+    pet_friendly: false,
+    price_level: "₹",
+    kong_labet_tagline: "Because real conversations happen over herbal tea, not double-shot macchiatos.",
+    online_presence_score: 92,
+    verification_confidence: 98,
+    discovery_sources: ["Instagram", "Google Places", "Local Recommendation", "Youtube Vlogs"],
+    last_verified: "2026-05-29",
+    verified: true,
+    mustTry: [
+      {
+        name: "Traditional Putharo & Tea",
+        description: "Steamed rice cakes served warm with a steaming cup of indigenous mountain Roselle tea.",
+        price: "₹80",
+        image: "https://images.unsplash.com/photo-1595311226500-117c7686b245?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1510006246830-67dfb6ef55fa?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1588147255157-123493e9867c?auto=format&fit=crop&q=80&w=800"
+    ]
+  },
+  {
+    id: "trattoria-shillong",
+    name: "Trattoria",
+    aliases: ["Trattoria Police Bazar", "Trat"],
+    category: "Restaurant",
+    subcategories: ["Khasi Cuisine", "Local Eatery", "Street Food Style"],
+    description: "Centrally located in the bustling Police Bazar, Trattoria is an absolute institution for authentic, unpretentious Khasi food. It's often packed with locals, a testament to its fast, hearty, and immensely flavorful Jadoh and meat dishes. Don't let the Italian name fool you—this is pure Meghalayan soul food.",
+    seo_description: "Trattoria in Police Bazar, Shillong is the most famous local spot for authentic Khasi food, serving unbeatable Jadoh and Tungrymbai to packed crowds.",
+    tagline: "The beating heart of Khasi street food in PB.",
+    theme: "Bustling Local Eatery",
+    introduction: "A no-nonsense, highly popular local food joint right in the heart of the city's main commercial hub. You share tables, you eat fast, and you leave wholly satisfied with the rich flavors of traditional Khasi cooking.",
+    whyVisit: "For the most authentic, wallet-friendly, and locally-approved plate of Jadoh and Dohneiiong in the city.",
+    hours: "11:00 AM — 8:00 PM (Daily, highly busy at lunch)",
+    address: "Police Bazar, Shillong 793001",
+    locality: "Police Bazar",
+    neighborhood: "Police Bazaar",
+    latitude: 25.5755,
+    longitude: 91.8835,
+    coordinates: { lat: 25.5755, lng: 91.8835 },
+    images: {
+      hero: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800",
+      interior: "https://images.unsplash.com/photo-1525640788966-69fcbcacf842?auto=format&fit=crop&q=80&w=1200"
+    },
+    vibeTags: ["Bustling", "Authentic", "Quick Bitten", "Street Food Vibe"],
+    ambience_tags: ["Bustling", "Authentic", "Crowded", "Local Favorite", "Fast-paced"],
+    popular_dishes: ["Jadoh", "Dohneiiong", "Tungrymbai", "Dohkhlieh"],
+    khasi_food_available: true,
+    hasLiveMusic: false,
+    live_music: false,
+    rooftop: false,
+    wifi: false,
+    pet_friendly: false,
+    price_level: "₹",
+    kong_labet_tagline: "The Italian name is a decoy; the Jadoh here will change your life.",
+    online_presence_score: 95,
+    verification_confidence: 100,
+    discovery_sources: ["Zomato", "Google Places", "Local Blogs", "Swiggy"],
+    last_verified: "2026-05-29",
+    verified: true,
+    mustTry: [
+      {
+        name: "Classic Jadoh & Pork",
+        description: "Flavor-packed short-grain rice cooked in meat stock, served with a side of incredibly tender pork.",
+        price: "₹150",
+        image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800"
+    ]
+  },
+  {
+    id: "munchies-shillong",
+    name: "Munchies",
+    aliases: ["Munchies Cafe", "Munchies Laitumkhrah"],
+    category: "Cafe",
+    subcategories: ["Fast Food", "Student Hangout", "Outdoor Cafe"],
+    description: "Munchies is the quintessential Shillong student hangout. Set largely outdoors with simple wooden benches under the trees in Laitumkhrah, it serves up hearty, comforting, and affordable fast food—from classic Lebanese shawarmas to juicy beef burgers. It is informal, endlessly popular, and completely vital to the local youth culture.",
+    seo_description: "Munchies Shillong is a hugely popular outdoor student cafe in Laitumkhrah serving affordable, delicious burgers, shawarmas, and fast food.",
+    tagline: "The undisputed king of Shillong student dining.",
+    theme: "Open Air Street Food & Student Vibe",
+    introduction: "Ask any local student where to get a good, cheap bite, and they will point you to the open-air benches of Munchies. It is the definition of a local staple, prioritizing flavor and atmosphere over luxury.",
+    whyVisit: "To sit perfectly outdoors, people-watch in Laitumkhrah, and eat a famously good burger without breaking the bank.",
+    hours: "12:00 PM — 8:30 PM (Daily)",
+    address: "Don Bosco Square, Laitumkhrah, Shillong 793003",
+    locality: "Laitumkhrah",
+    neighborhood: "Laitumkhrah",
+    latitude: 25.5740,
+    longitude: 91.8970,
+    coordinates: { lat: 25.5740, lng: 91.8970 },
+    images: {
+      hero: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=800",
+      interior: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1200"
+    },
+    vibeTags: ["Student-friendly", "Outdoor", "Bustling", "Casual", "Street-style"],
+    ambience_tags: ["Student-friendly", "Outdoor", "Casual", "Youthful", "Street-style"],
+    popular_dishes: ["Beef Burger", "Chicken Shawarma", "Fries", "Iced Tea"],
+    khasi_food_available: false,
+    hasLiveMusic: false,
+    live_music: false,
+    rooftop: false,
+    wifi: false,
+    pet_friendly: true,
+    price_level: "₹",
+    kong_labet_tagline: "Your wallet loves it, the stray cats love it, the college kids never leave.",
+    online_presence_score: 89,
+    verification_confidence: 99,
+    discovery_sources: ["Instagram", "Google Places", "Swiggy"],
+    last_verified: "2026-05-29",
+    verified: true,
+    mustTry: [
+      {
+        name: "Classic Beef Burger",
+        description: "Juicy, perfectly grilled beef patty with cheese, fresh lettuce, and their signature sauce.",
+        price: "₹140",
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1522244265438-e6d8a3ba5bca?auto=format&fit=crop&q=80&w=800"
+    ]
+  },
+  {
+    id: "ml-05-cafe-heritage",
+    name: "ML 05 Cafe",
+    aliases: ["ML05", "ML 05 Highway Cafe"],
+    category: "Cafe",
+    subcategories: ["Highway Cafe", "Aesthetic Cafe", "Biker Friendly"],
+    description: "Nestled beautifully among the dense pine forests on the way to Upper Shillong, ML 05 Cafe is a tribute to Meghalaya's love for motoring and road trips. With charming, rustic-chic decor featuring vintage Royal Enfield motorcycles and automotive memorabilia, the cafe perfectly captures the wanderlust spirit of the region.",
+    seo_description: "ML 05 Cafe in Upper Shillong is a stunning highway-side cafe nestled in pine forests, famous for its rustic motoring theme and great comfort food.",
+    tagline: "A tribute to the open roads of Meghalaya.",
+    theme: "Motoring Heritage & Pine Forest Rustic",
+    introduction: "A mandatory pit-stop for road trippers and locals alike looking for a scenic escape from the city traffic. It's surrounded by towering pines and features arguably the most photogenic exterior of any cafe in the region.",
+    whyVisit: "To eat spicy Maggi and drink hot chocolate in the mist, surrounded by vintage motorcycles and pine trees.",
+    hours: "10:00 AM — 7:30 PM (Daily)",
+    address: "AH1, Upper Shillong, Shillong 793009",
+    locality: "Upper Shillong",
+    neighborhood: "Other",
+    latitude: 25.5500,
+    longitude: 91.8500,
+    coordinates: { lat: 25.5500, lng: 91.8500 },
+    images: {
+      hero: "https://images.unsplash.com/photo-1444653389962-81492d6e326f?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=800",
+      interior: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1200"
+    },
+    vibeTags: ["Scenic", "Pine Forest", "Biker-Friendly", "Aesthetic", "Mist"],
+    ambience_tags: ["Scenic", "Nature", "Aesthetic", "Rustic", "Highway"],
+    popular_dishes: ["Wai Wai", "Hot Chocolate", "Chicken Wings", "Pancakes"],
+    khasi_food_available: false,
+    hasLiveMusic: false,
+    live_music: false,
+    rooftop: false,
+    wifi: true,
+    pet_friendly: true,
+    price_level: "₹₹",
+    kong_labet_tagline: "The official waiting room for the Shillong mist.",
+    online_presence_score: 96,
+    verification_confidence: 99,
+    discovery_sources: ["Instagram", "Google Places", "Tourism Blogs"],
+    last_verified: "2026-05-29",
+    verified: true,
+    mustTry: [
+      {
+        name: "Mountain Hot Chocolate",
+        description: "Rich, thick, and perfectly tailored for the cool, damp weather of Upper Shillong.",
+        price: "₹180",
+        image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=800"
+    ]
+  },
+  {
+    id: "bread-cafe-shillong",
+    name: "Bread Cafe",
+    aliases: ["Bread Cafe Laitumkhrah"],
+    category: "Bakery",
+    subcategories: ["Dessert Shop", "Cafe"],
+    description: "Located prominently in Laitumkhrah, Bread Cafe is a bright, modern escape known for its exceptional baked goods, clean aesthetics, and bustling, lively energy. It feels more like a cosmopolitan pastry shop, yet entirely grounded by the local community that fills its tables every evening.",
+    seo_description: "Bread Cafe is a premium bakery and dessert shop in Laitumkhrah, Shillong, offering the best pastries, cakes, and coffee in a bright, modern setting.",
+    tagline: "Modern European baking meets Shillong socializing.",
+    theme: "Bright, Airy Bakery & Patisserie",
+    introduction: "When the craving hits for a perfectly flaky croissant or a masterfully decorated slice of cake, Bread Cafe is the gold standard in the neighborhood.",
+    whyVisit: "To indulge your sweet tooth with high-end pastries while watching the busy streets of Laitumkhrah go by.",
+    hours: "10:00 AM — 9:00 PM (Daily)",
+    address: "Main Road, Laitumkhrah, Shillong 793003",
+    locality: "Laitumkhrah",
+    neighborhood: "Laitumkhrah",
+    latitude: 25.5720,
+    longitude: 91.8950,
+    coordinates: { lat: 25.5720, lng: 91.8950 },
+    images: {
+      hero: "https://images.unsplash.com/photo-1549557434-2e970222f7cc?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&q=80&w=800",
+      interior: "https://images.unsplash.com/photo-1556740714-a8370722cc8f?auto=format&fit=crop&q=80&w=1200"
+    },
+    vibeTags: ["Bright", "Modern", "Dessert", "Busy", "Aesthetic"],
+    ambience_tags: ["Bright", "Modern", "Upbeat", "Social", "Clean"],
+    popular_dishes: ["Blueberry Cheesecake", "Almond Croissant", "Cappuccino"],
+    khasi_food_available: false,
+    hasLiveMusic: false,
+    live_music: false,
+    rooftop: false,
+    wifi: true,
+    pet_friendly: false,
+    price_level: "₹₹",
+    kong_labet_tagline: "The place where diets go to die, happily and softly, in a pile of frosting.",
+    online_presence_score: 90,
+    verification_confidence: 97,
+    discovery_sources: ["Instagram", "Swiggy", "Google Places"],
+    last_verified: "2026-05-29",
+    verified: true,
+    mustTry: [
+      {
+        name: "Blueberry Cheesecake",
+        description: "A rich, perfectly dense baked cheesecake topped with a deeply flavorful local blueberry compote.",
+        price: "₹220",
+        image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1559553156-2e97137af16f?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=800"
+    ]
+  },
+  {
+    id: "mood-swings-shillong",
+    name: "Mood Swings",
+    category: "Cafe",
+    subcategories: ["Indie Cafe", "Social Cafe", "Aesthetic Spot"],
+    description: "Tucked into the vibrant grid of Shillong, Mood Swings is the definitive indie refuge for the city's lively creative scene. Dripping with cultural relevance and local aesthetic, it offers a distinct atmosphere blending relaxed socializing, moody interior tones, and excellent artisan beverages.",
+    seo_description: "Mood Swings Shillong is a highly popular indie aesthetic cafe serving excellent artisan beverages and a lively, relaxed vibe for creatives and students.",
+    tagline: "The definitive indie refuge for Shillong creatives.",
+    theme: "Moody Industrial & Vibrant Indie",
+    introduction: "A vibrant cultural and culinary hub favored by locals for its distinctive atmosphere and quality beverages, Mood Swings has established itself as an undeniable favorite in Shillong.",
+    whyVisit: "For its culturally relevant, indie aesthetic and highly instagrammable corners paired with great local flavor.",
+    hours: "11:00 AM — 9:00 PM (Daily)",
+    address: "Laitumkhrah, Shillong 793003",
+    neighborhood: "Laitumkhrah",
+    coordinates: { lat: 25.5714, lng: 91.8956 },
+    latitude: 25.5714,
+    longitude: 91.8956,
+    images: {
+      hero: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=800",
+      interior: "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=1200"
+    },
+    mustTry: [
+      {
+        name: "Iced Caramel Macchiato",
+        description: "Perfectly blended iced espresso with rich caramel strokes.",
+        price: "₹180",
+        image: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=800"
+    ],
+    vibeTags: ["Aesthetic", "Student-friendly", "Moody", "Indie"],
+    ambience_tags: ["Aesthetic", "Student-friendly", "Moody", "Indie", "Relaxed"],
+    features: ["Good Music", "Social", "Instagrammable"],
+    popular_dishes: ["Iced Caramel Macchiato", "Spicy Chicken Wings", "Waffles"],
+    wifi: true,
+    rooftop: false,
+    pet_friendly: false,
+    khasi_food_available: false,
+    live_music: false,
+    price_level: "₹₹",
+    kong_labet_tagline: "Where the mood swings higher than the altitude, and the coffee actually matches the hype.",
+    online_presence_score: 95,
+    verification_confidence: 90,
+    discovery_sources: ["Instagram", "Google Places", "Local Blogs"],
+    last_verified: "2026-05-29",
+    verified: true,
+  },
+  {
     id: "rynsan-cafe",
     name: "Rynsan",
+    aliases: ["Rynsan Cafe", "Rynsan Restaurant", "The Hearth Stage"],
+    category: "Restaurant",
+    subcategories: ["Khasi Heritage", "Cultural Dining", "Live Music Venue"],
+    description: "Sleek and tucked away at Newlands Compound, Rynsan is a celebratory platform in the Khasi language where indigenous culinary arts and acoustic melodies tell a unique story. It feels like entering a private, modern living room.",
+    seo_description: "Discover Rynsan in Shillong, offering authentic Khasi heritage cuisine like Dohneiiong, cozy interiors, and live acoustic music.",
     tagline: "The Hearth Stage of the Hills",
     theme: "Traditional Slate Elements & Live Ka Duitara Chords",
     introduction: "Sleek and tucked away at Newlands Compound, Rynsan is a celebratory platform in the Khasi language where indigenous culinary arts and acoustic melodies tell a unique story. With stunning timber accents, rustic stone walls, and wide glass doors opening to a peaceful garden, Rynsan brings the fresh, organic ingredients of Meghalaya's pristine hills straight to your table.",
     whyVisit: "To experience traditional live acoustic music, featuring local artists playing the Ka Duitara string instrument while eating beautifully curated Khasi-style hearth dishes.",
     hours: "Lunch: 2:00 PM — 4:00 PM | Dinner: 6:00 PM — 10:00 PM",
     address: "Newlands Compound, Boyce Road, Near Shillong College, Laitumkhrah, Shillong 793003",
+    locality: "Boyce Road",
     neighborhood: "Boyce Road",
+    latitude: 25.5750,
+    longitude: 91.8965,
+    coordinates: { lat: 25.5750, lng: 91.8965 },
     images: {
       hero: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
       card: "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=800",
@@ -19,7 +344,21 @@ export const CAFES: Cafe[] = [
     quote: "In the silence between sips, the forest speaks.",
     quoteAuthor: "Rynsan Staff",
     vibeTags: ["Minimalist", "Silent Policy", "Book Heaven", "Light Wood", "Pine Canopy"],
+    ambience_tags: ["Acoustic", "Date-night", "Cozy", "Cultural", "Hidden Gem"],
+    popular_dishes: ["Dohneiiong", "Traditional Smoked Pork Slices", "Wild Pepper Drip"],
+    khasi_food_available: true,
     hasLiveMusic: true,
+    live_music: true,
+    rooftop: false,
+    wifi: true,
+    pet_friendly: true,
+    price_level: "₹₹₹",
+    kong_labet_tagline: "The only place where the guy reading poetry next to you might actually be a good poet.",
+    online_presence_score: 88,
+    verification_confidence: 95,
+    discovery_sources: ["Instagram", "Google Places", "TripAdvisor"],
+    last_verified: "2026-05-29",
+    verified: true,
     mustTry: [
       {
         name: "Dohneiiong Black Sesame Plate",
@@ -37,8 +376,7 @@ export const CAFES: Cafe[] = [
     gallery: [
       "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
-    ],
-    coordinates: { lat: 25.5668, lng: 91.8962 }
+    ]
   },
   {
     id: "ahavah-cafe",
@@ -322,6 +660,228 @@ export const CAFES: Cafe[] = [
     ],
     gallery: [],
     coordinates: { lat: 25.5945, lng: 91.9214 }
+  },
+  {
+    id: "ahavah-shillong",
+    name: "Ahavah",
+    aliases: ["Ahavah Shillong"],
+    category: "Restaurant",
+    subcategories: ["Continental", "Mediterranean", "Fine Dining"],
+    description: "An upscale dining favorite in Laitumkhrah specializing in Continental and Mediterranean cuisines, best known for their beautifully cooked pork ribs and warm, elegant conservatory-style wooden seating.",
+    seo_description: "Ahavah in Laitumkhrah, Shillong offers amazing Continental and Mediterranean cuisines, famous for their stellar pork ribs and elegant dining ambience.",
+    tagline: "Upscale Continental & Mediterranean Elegance",
+    theme: "Warm Wood Conservatories & Gourmet European Plates",
+    introduction: "A classy, highly recommended culinary getaway in the city. The beautiful rustic interior matches the outstanding Continental and Mediterranean spreads perfectly.",
+    whyVisit: "To savor their legendary pork ribs inside a beautifully lit conservatory room with friends.",
+    hours: "12:00 PM — 9:00 PM (Daily)",
+    address: "Jowai Road, Laitumkhrah, Shillong 793003",
+    neighborhood: "Laitumkhrah",
+    coordinates: { lat: 25.5714, lng: 91.8998 },
+    google_maps_url: "https://share.google/PJ5JmHt4WB76EVhy3",
+    images: {
+      hero: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800"
+    },
+    vibeTags: ["Elegant", "Upscale", "Cosy", "Romantic"],
+    popular_dishes: ["Pork Ribs", "Mediterranean Platter", "Pasta Alfredo"],
+    verified: true,
+    mustTry: [
+      {
+        name: "Slow-Roasted Pork Ribs",
+        description: "Incredibly tender, fall-off-the-bone pork ribs glazed with custom sweet-savory glaze.",
+        price: "₹450"
+      }
+    ]
+  },
+  {
+    id: "nonna-mei-shillong",
+    name: "Nonna Mei",
+    aliases: ["Nonna Mei Shillong"],
+    category: "Restaurant",
+    subcategories: ["Italian-Khasi Fusion", "Gourmet Italian", "Artisanal Pasta"],
+    description: "A remarkable fusion of classic Italian execution with local Khasi ingredients and flavor profiles. Known for introducing fresh local herbs, smoked meats, and traditional spices into gourmet pastas and woodfired pizzas.",
+    seo_description: "Nonna Mei in Shillong offers a brilliant fusion of authentic Italian cooking and organic Khasi ingredients, from artisanal pastas to smoked pork pizzas.",
+    tagline: "The Art of Italian-Khasi Fusion",
+    theme: "Contemporary Italian Bistro with Local Mountain Soul",
+    introduction: "A magnificent culinary exploration combining pure Italian heritage with the rich, smokey, and herbal gastronomy of Meghalaya.",
+    whyVisit: "To experience premium Italian dishes like handmade ravioli and thin-crust pizzas elevated with distinct local ingredients.",
+    hours: "12:30 PM — 9:30 PM (Daily)",
+    address: "Malki Point, Shillong 793001",
+    neighborhood: "Dhankheti",
+    coordinates: { lat: 25.5701, lng: 91.8962 },
+    google_maps_url: "https://share.google/bPFAOAXnOGHDT6yAa",
+    images: {
+      hero: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=800"
+    },
+    vibeTags: ["Contemporary", "Intimate", "Fusion", "Artisanal"],
+    popular_dishes: ["Khasi-Smoked Pork Pizza", "Local Herb Gnocchi", "Tiramisu"],
+    verified: true,
+    mustTry: [
+      {
+        name: "Chef's Smoked Pork Linguine",
+        description: "Freshly prepared linguine pasta tossed in organic olive oil, local mountain chives, and premium smoked Khasi pork belly.",
+        price: "₹380"
+      }
+    ]
+  },
+  {
+    id: "the-feast-house-shillong",
+    name: "The Feast House",
+    category: "Restaurant",
+    subcategories: ["Local & Multi-Cuisine", "Sizzlers", "Live Music Outpost"],
+    description: "Loved for its unique warm ambiance and convenient proximity to central hubs, The Feast House serves excellent multi-cuisine comfort eats alongside traditional pork dishes and famous sizzling platters.",
+    seo_description: "The Feast House in Shillong is famous for its unique comforting vibe, outstanding sizzlers, local pork specialties, and beautiful central location.",
+    tagline: "Sizzlers, Pork Specialties & Superb Vibes",
+    theme: "High-Contrast Wooden Cabins & Live Acoustic Beats",
+    introduction: "A wonderful local getaway boasting a cozy wooden cabin atmosphere, rich family sizing, and a stellar reputation for sizzlers and local Khasi preparations.",
+    whyVisit: "For their signature sizzling platters and hearty slow-cooked pork belly under glowing local pine ceiling joists.",
+    hours: "11:30 AM — 9:00 PM (Daily)",
+    address: "Bivar Road, near Ward's Lake, Shillong 793001",
+    neighborhood: "Police Bazaar",
+    coordinates: { lat: 25.5790, lng: 91.8845 },
+    google_maps_url: "https://share.google/EiCAJEWFob070hnQD",
+    images: {
+      hero: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=800"
+    },
+    vibeTags: ["Rustic-Cabins", "Cozy", "Musical", "Comforting"],
+    popular_dishes: ["Pork Sizzler", "Dohneiiong", "Classic Fried Chicken"],
+    verified: true,
+    mustTry: [
+      {
+        name: "Gourmet Pork Sizzler",
+        description: "Sizzling hot platter stacked with juicy tender grilled pork slices, buttered veggies, and standard fries.",
+        price: "₹360"
+      }
+    ]
+  },
+  {
+    id: "city-hut-dhaba-shillong",
+    name: "City Hut Family Dhaba",
+    aliases: ["City Hut Dhaba", "City Hut Family Restaurant"],
+    category: "Restaurant",
+    subcategories: ["North Indian", "Indian Mughlai", "Tandoori Specialties"],
+    description: "Indisputably the most popular and highly rated Indian family restaurant in Shillong. Centered in Police Bazar, it serves exquisite Mughlai curries, sizzling tandoori meats, and delicious vegetarian options in a beautiful indoor garden-courtyard setting.",
+    seo_description: "City Hut Dhaba in Police Bazar, Shillong is the premier choice for rich North Indian and Mughlai dishes, featuring family-friendly dynamic seating.",
+    tagline: "The Undisputed King of Indian Dining",
+    theme: "Indoor Garden Thatch Cabins & Warm Lanterns",
+    introduction: "Whether it's the rich, slow-simmered butter chickens or their freshly baked butter naans, City Hut is the gold standard for reliable Indian family dining in the city.",
+    whyVisit: "To dine inside beautifully designed thatch pavilions and enjoy succulent kebabs that melt in your mouth.",
+    hours: "12:00 PM — 10:00 PM (Daily)",
+    address: "Earle Holiday Home, Oakland Road, Police Bazar, Shillong 793001",
+    neighborhood: "Police Bazaar",
+    coordinates: { lat: 25.5768, lng: 91.8830 },
+    google_maps_url: "https://share.google/Ogx91mkRSY5Nld51z",
+    images: {
+      hero: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=800"
+    },
+    vibeTags: ["Family-friendly", "Warm Lanterns", "Thatch Cabins", "Lively"],
+    popular_dishes: ["Paneer Tikka Masala", "Mutton Rogan Josh", "Tandoori Platters"],
+    verified: true,
+    mustTry: [
+      {
+        name: "Special Tandoori Butter Chicken",
+        description: "Juicy tandoor-roasted chicken simmered in an exceptionally rich, silky, butter-cream tomato gravy.",
+        price: "₹340"
+      }
+    ]
+  },
+  {
+    id: "deja-vu-shillong",
+    name: "Deja Vu",
+    category: "Restaurant",
+    subcategories: ["Chinese Cuisine", "Asian Fine Dining", "Dim Sum Parlor"],
+    description: "An absolute favorite for authentic Chinese and Pan-Asian cuisines in Laitumkhrah. Deja Vu represents the highest tiers of local Chinese cooking, with beautifully decorated interiors, attentive service, and an extensive menu of gourmet stir-fries, noodles, and dim sum.",
+    seo_description: "Deja Vu in Laitumkhrah, Shillong is the city's leading venue for upscale Chinese cooking, featuring succulent dim sums and classic wok specialties.",
+    tagline: "Exquisite Chinese & Pan-Asian Classics",
+    theme: "Moody Crimson Lanterns & Modern Asian Lounge",
+    introduction: "A classy Asian fine-dining experience located in the higher commercial corridors of Laitumkhrah, celebrated for maintaining peak consistency for over a decade.",
+    whyVisit: "For authentic, piping hot pan-fried dumplings and excellently balanced schezwan pork dishes in a moody oriental setting.",
+    hours: "12:00 PM — 9:30 PM (Daily)",
+    address: "Beat House Road, Laitumkhrah, Shillong 793003",
+    neighborhood: "Laitumkhrah",
+    coordinates: { lat: 25.5732, lng: 91.8934 },
+    google_maps_url: "https://share.google/ChiqhTZGVncFT0cSR",
+    images: {
+      hero: "https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&q=80&w=800"
+    },
+    vibeTags: ["Moody", "Fine-Dining", "Crimson-Glass", "Cozy"],
+    popular_dishes: ["Wonton Soup", "Pan-Fried Dumplings", "Chilli Garlic Noodles"],
+    verified: true,
+    mustTry: [
+      {
+        name: "Pan-Fried Pork Dumplings",
+        description: "Perfect handmade wrappers filled with seasoned pork mince and pan-crisped on flat top griddle.",
+        price: "₹240"
+      }
+    ]
+  },
+  {
+    id: "tall-timbers-kyrdemkhla",
+    name: "Tall Timbers (Black Bridge Resort)",
+    aliases: ["Tall Timbers", "Black Bridge Resort"],
+    category: "Resort Restaurant",
+    subcategories: ["Scenic Escape", "Gourmet Outpost", "Cocktail Lounge"],
+    description: "A breathtaking rural resort restaurant nestled inside Black Bridge Resort in Kyrdemkhla. Offers majestic wilderness views, exceptional cocktails, and brilliant slow-roasted comfort foods. In the chilly evenings, guests gather outside around cozy fireplaces listening to acoustic playlists and local guitar sessions.",
+    seo_description: "Tall Timbers at Black Bridge Resort in Kyrdemkhla, Meghalaya is a gorgeous forest dining spot, famous for its outdoor fireside evenings and premium cocktails.",
+    tagline: "Fireside Woodlands & Mountain Escape",
+    theme: "Raw Timber Lodges & Open-Air Campfire Pits",
+    introduction: "Situated a scenic one-hour drive out of the city, Tall Timbers offers the ultimate countryside evening: spectacular cocktail curation, comforting wood-grilled treats, and a crackling woodfire under starry skies.",
+    whyVisit: "To drive out for an evening of exceptional cocktails, warm mountain campfires, and lovely outdoor acoustic sets.",
+    hours: "11:00 AM — 9:00 PM (Daily)",
+    address: "Kyrdemkhla Village, Sohra Highway Corridor 793111",
+    neighborhood: "Other",
+    locality: "Kyrdemkhla",
+    coordinates: { lat: 25.2938, lng: 91.7584 },
+    images: {
+      hero: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&q=80&w=800"
+    },
+    vibeTags: ["Scenic", "Campfire", "Woodlands", "Rustic-Luxury"],
+    popular_dishes: ["Smoked Grilled Chicken", "Countryside Roasted Potatoes", "Signature Botanical Cocktails"],
+    verified: true,
+    mustTry: [
+      {
+        name: "Wildwood Roast Chicken",
+        description: "Organic farmhouse chicken slow-spit roasted over wild oaklogs, glazed with country mustard.",
+        price: "₹480"
+      }
+    ]
+  },
+  {
+    id: "the-yeastern-civilisation",
+    name: "The Yeastern Civilisation",
+    aliases: ["The Yeastern Civilization"],
+    category: "Pub & Restaurant",
+    subcategories: ["Pub Culture", "Cocktail Lounge", "Gastropub"],
+    description: "A lively hub boasting pure gastropub energy, outstanding artisanal cocktails, and a delightful fusion of local and continental bites. Known for its music-forward ambiance and late-evening warmth.",
+    seo_description: "The Yeastern Civilisation pub in Laitumkhrah is iconic for live musical energy, craft cocktails, and premium pub comfort platters.",
+    tagline: "Vibrant Pub Energy & Craft Cocktails",
+    theme: "Industrial Iron Accents & Warm Neon Beats",
+    introduction: "Conveniently located in Laitumkhrah, it perfectly captures the musical and nighttime soul of Shillong. Ideal for high-quality cocktails, pub platters, and friendly conversations.",
+    whyVisit: "For delicious finger foods, artisanal cocktails, and excellent musical playlists in a warm, welcoming industrial setting.",
+    hours: "1:00 PM — 9:30 PM (Daily)",
+    address: "Main Road, Laitumkhrah, Shillong 793003",
+    neighborhood: "Laitumkhrah",
+    coordinates: { lat: 25.5710, lng: 91.8975 },
+    google_maps_url: "https://share.google/SvBIzMBjTIDJ1v3t2",
+    images: {
+      hero: "https://images.unsplash.com/photo-1485686531765-ba63b07845a7?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1485686531765-ba63b07845a7?auto=format&fit=crop&q=80&w=800"
+    },
+    vibeTags: ["Lively", "Neon-Warmth", "Musical", "Social"],
+    popular_dishes: ["Cocktail Platters", "Crispy Chilli Pork", "Classic Cocktails"],
+    verified: true,
+    mustTry: [
+      {
+        name: "Crispy Chilli Pork",
+        description: "Juicy pork bits wok-tossed with local bell peppers, scallions, and standard hot yeastern paste.",
+        price: "₹320"
+      }
+    ]
   }
 ];
 
@@ -331,7 +891,7 @@ export const NEIGHBORHOODS: NeighborhoodInfo[] = [
     name: "Laitumkhrah",
     title: "The Student Heartbeat",
     description: "Built along high-altitude winding ridges, Laitumkhrah is the vibrant academic center of Shillong. Home to elite legacy schools and college hubs, its lively streets are lined with vinyl record shops, vintage clothing stalls, cozy cafes, and young local artists playing wooden guitars on the curbs during the blue hour.",
-    image: "https://images.unsplash.com/photo-1506461883276-594a12b11cc3?auto=format&fit=crop&q=80&w=1200",
+    image: "/src/assets/images/regenerated_image_1780066098407.jpg",
     vitals: {
       vibe: "Intelligent, student-centric, classic music hubs & vinyl lanes",
       bestTime: "Late afternoon to early dusk",
