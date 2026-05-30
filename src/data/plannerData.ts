@@ -666,6 +666,15 @@ export const PLANNER_ROUTES: PlannerRoute[] = [
         timeEstimate: "2:23",
         remarks: "Three-tiered waterfall. Feeling of English countryside. Bring food/change of clothes.",
         coordinates: { lat: 25.3850, lng: 92.1120 }
+      },
+      {
+        id: "mawryngkneng-hills",
+        name: "Mawryngkneng Hills",
+        type: "Picnic Spot",
+        distanceKm: 38,
+        timeEstimate: "1:10",
+        remarks: "Meghalaya's secret rolling highlands — open meadows at elevation with sweeping valley views and almost no tourists. Pine villages and rhododendron forests. Best in March–May.",
+        coordinates: { lat: 25.5120, lng: 91.9570 }
       }
     ]
   },
@@ -764,6 +773,15 @@ export const PLANNER_ROUTES: PlannerRoute[] = [
         timeEstimate: "3:19",
         remarks: "Mesmerizing waterfalls. Bad road condition beyond Amlaren, avoid in heavy rains.",
         coordinates: { lat: 25.2650, lng: 92.1520 }
+      },
+      {
+        id: "thadlaskein-lake",
+        name: "Thadlaskein Lake",
+        type: "Tourist Spot",
+        distanceKm: 61,
+        timeEstimate: "1:51",
+        remarks: "Sacred Jaintia lake surrounded by gentle hills. Community performs traditional rituals here. Serene, melancholy beauty — particularly in mist. Good forest walk around perimeter.",
+        coordinates: { lat: 25.4459, lng: 92.2011 }
       }
     ]
   },
