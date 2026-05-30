@@ -331,7 +331,7 @@ export const NEIGHBORHOODS: NeighborhoodInfo[] = [
     name: "Laitumkhrah",
     title: "The Student Heartbeat",
     description: "Built along high-altitude winding ridges, Laitumkhrah is the vibrant academic center of Shillong. Home to elite legacy schools and college hubs, its lively streets are lined with vinyl record shops, vintage clothing stalls, cozy cafes, and young local artists playing wooden guitars on the curbs during the blue hour.",
-    image: "https://images.unsplash.com/photo-1506461883276-594a12b11cc3?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1583394293915-4c5d38e4c52f?auto=format&fit=crop&q=80&w=1200",
     vitals: {
       vibe: "Intelligent, student-centric, classic music hubs & vinyl lanes",
       bestTime: "Late afternoon to early dusk",

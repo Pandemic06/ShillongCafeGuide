@@ -561,6 +561,16 @@ export default function PlannersGuide() {
 
   const activeRoute = PLANNER_ROUTES.find(r => r.id === selectedRouteId) || PLANNER_ROUTES[0];
 
+  // Kong Labet context — fire chat event when user selects a stop on the map
+  useEffect(() => {
+    if (!selectedMarkerId || selectedMarkerId === "rhino-auditorium") return;
+    const allLocs = PLANNER_ROUTES.flatMap(r => r.locations);
+    const loc = allLocs.find(l => l.id === selectedMarkerId);
+    if (!loc) return;
+    const prompt = `Tell me about "${loc.name}" on the ${activeRoute.name} in Meghalaya. What should I know before visiting? Any tips on timing, difficulty, or what to bring?`;
+    window.dispatchEvent(new CustomEvent("ask-kong-labet", { detail: { prompt } }));
+  }, [selectedMarkerId]);
+
   // Get stops in customized order, with customized active state
   const routeState = customStates[activeRoute.id] || {
     routeId: activeRoute.id,
