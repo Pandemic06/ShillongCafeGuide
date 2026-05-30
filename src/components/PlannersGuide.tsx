@@ -92,12 +92,12 @@ const CATEGORY_MODERN_IMAGES: Record<string, string> = {
 // --- Base Commencing / Concluding Landmark Station ---
 const RHINO_AUDITORIUM: PlannerLocation = {
   id: "rhino-auditorium",
-  name: "Rhino Auditorium",
+  name: "Pinewalk Crossing Near Rhino Auditorium",
   type: "Misc",
   distanceKm: 0,
   timeEstimate: "0:00",
-  remarks: "Mandatory base start and end station of all local exploration routes (HV9H+WMG, Secretariat Hills).",
-  coordinates: { lat: 25.5714, lng: 91.8807 }
+  remarks: "Mandatory base start and end station of all local exploration routes (Secretariat Hills).",
+  coordinates: { lat: 25.569811, lng: 91.879197 }
 };
 
 // --- Custom Modern Travel Tips (Evolved "Rhino Gyan") ---
@@ -331,6 +331,159 @@ function LiveRoutePolylines({
 
   return null;
 }
+
+  const getGoogleMapsSearchQuery = (loc: PlannerLocation, specRouteId?: string) => {
+    if (loc.id === "rhino-auditorium" || loc.id === "rhino-auditorium-destination") {
+      return "Pinewalk Crossing Near Rhino Auditorium, Shillong, Meghalaya, India";
+    }
+    const cleanName = loc.name.replace(/['’]/g, "");
+    
+    // Explicit mappings for all locations to have incredibly accurate names for direct mapping inside GMaps
+    const mappings: Record<string, string> = {
+      "rhino-prerna": "Rhino Prerna Sthal, Shillong, Meghalaya, India",
+      "rhino-heritage": "Rhino Heritage Museum, Shillong, Meghalaya, India",
+      "all-saints": "All Saints Cathedral, Shillong, Meghalaya, India",
+      "wards-lake": "Wards Lake, Shillong, Meghalaya, India",
+      "police-bazaar-spot": "Police Bazar, Shillong, Meghalaya, India",
+      "city-hut-dhaba": "City Hut Dhaba, Oakland Road, Shillong, Meghalaya, India",
+      "cathedral-mary-help": "Cathedral of Mary Help of Christians, Laitumkhrah, Shillong, Meghalaya, India",
+      "dejavu": "Dejavu Restaurant, Laitumkhrah, Shillong, Meghalaya, India",
+      "dylans-cafe-spot": "Dylans Cafe, Shillong, Meghalaya, India",
+      "tripura-castle-spot": "The Heritage Club - Tripura Castle, Shillong, Meghalaya, India",
+      "sweet-fall": "Sweet Falls, Shillong, Meghalaya, India",
+      "sunset-cafe-spot": "Sunset Cafe, Shillong, Meghalaya, India",
+      "ml05-cafe-spot": "ML05 Cafe, Shillong, Meghalaya, India",
+      "don-bosco": "Don Bosco Museum, Mawlai, Shillong, Meghalaya, India",
+      "ahavah-shillong-spot": "Ahavah, Laitumkhrah, Shillong, Meghalaya, India",
+      "nonna-mei-spot": "Nonna Mei Restaurant, Laitumkhrah, Shillong, Meghalaya, India",
+      "the-feast-house-spot": "The Feast House, Shillong, Meghalaya, India",
+      "the-yeeastern-civilisation-spot": "The Yeastern Civilisation, Laitumkhrah, Shillong, Meghalaya, India",
+      "shillong-peak-spot": "Shillong Peak, Laitkor, Shillong, Meghalaya, India",
+      "rhododendron-trek": "Rhododendron Trek, Shillong, Meghalaya, India",
+      
+      // Cherrapunji Route
+      "airforce-museum": "Air Force Museum, Shillong, Meghalaya, India",
+      "elephant-falls": "Elephant Falls, Shillong, Meghalaya, India",
+      "woodstock-farmhouse": "Woodstock Farmhouse, Shillong, Meghalaya, India",
+      "bulls-trek": "Wahniangleng Trail, Meghalaya, India",
+      "tall-timbers-spot": "Tall Timbers at Black Bridge Resort, Kyrdemkhla, Meghalaya, India",
+      "cafe-cherrapunjee-spot": "Café Cherrapunjee, Sohra Laitryngew, Meghalaya, India",
+      "mawkdok-valley": "Mawkdok Dympep Valley View Point, Meghalaya, India",
+      "cloud-country": "Cloud Country Cafe and Diner, Cherrapunji, Meghalaya, India",
+      "misty-hills": "Misty Hills Restaurant, Cherrapunji, Meghalaya, India",
+      "wah-kaba": "Wah Kaba Falls, Cherrapunji, Meghalaya, India",
+      "arwah-caves": "Arwah Cave, Cherrapunji, Meghalaya, India",
+      "seven-sister-view": "Seven Sisters Waterfalls, Cherrapunji, Meghalaya, India",
+      "polo-orchid-cherra": "Polo Orchid Resort Cherrapunjee, Meghalaya, India",
+      "khoh-ramhah": "Khoh Ramhah, Meghalaya, India",
+      "bangladesh-view": "Bangladesh View Point, Cherrapunji, Meghalaya, India",
+      "kynrem-falls": "Kynrem Falls, Cherrapunji, Meghalaya, India",
+      "rangkylliaw-bridge": "Rangkylliaw Suspension Bridge, Meghalaya, India",
+      "kongthong-whistling": "Kongthong Village, Meghalaya, India",
+      "garden-of-caves": "Garden Of Caves, Laitryngew, Meghalaya, India",
+      "mawmluh-caves": "Mawmluh Cave, Cherrapunji, Meghalaya, India",
+      "rainbow-falls": "Rainbow Falls, Nongriat, Meghalaya, India",
+      "nohkalikai": "Nohkalikai Waterfalls, Cherrapunji, Meghalaya, India",
+      "jiva-resort-spot": "Jiva Resort Cherrapunjee, Meghalaya, India",
+      "mawsmai-caves": "Mawsmai Cave, Cherrapunji, Meghalaya, India",
+      "sohbar-bridge": "Sohbar Bridge, Meghalaya, India",
+      "double-decker-bridge": "Double Decker Living Root Bridge, Nongriat, Meghalaya, India",
+      
+      // Wei Sawdong Route
+      "lyngksiar-fall": "Lyngksiar Falls, Sohryngkham, Meghalaya, India",
+      "janailar-falls": "Janailar Falls, Meghalaya, India",
+      "prut-fall": "Prut Falls, Meghalaya, India",
+      "mawsawa-falls": "Mawsawa Falls, Meghalaya, India",
+      "wei-sawdong-falls": "Wei Sawdong Falls, Cherrapunji, Meghalaya, India",
+      "dainthlen-falls": "Dainthlen Falls, Cherrapunji, Meghalaya, India",
+      
+      // Dawki Route
+      "mawjngih-viewpoint": "Mawjngih Lapynshongdor View Point, Meghalaya, India",
+      "ka-bri-war": "Ka Bri War Resort, Pomshutia, Meghalaya, India",
+      "byrdaw-falls": "Byrdaw Falls, Pomshutia, Meghalaya, India",
+      "dawki-boat": "Dawki River Boating, Dawki, Meghalaya, India",
+      "riwai-living-root": "Living Root Bridge, Riwai, Meghalaya, India",
+      "balancing-rock": "Balancing Rock, Mawlynnong, Meghalaya, India",
+      "mawlynnong-village": "Mawlynnong Village, Meghalaya, India",
+      "bamboo-trail": "Mawryngkhang Bamboo Trail, Wahkhen, Meghalaya, India",
+      "borhill-fall": "Borhill Falls, Dawki, Meghalaya, India",
+      
+      // Laitlum Route
+      "daphiba-cafe-spot": "Daphiba Cafe, Laitlum, Meghalaya, India",
+      "laitlum-canyon-spot": "Laitlum Canyons, Meghalaya, India",
+      "nongjrong-viewpoint": "Nongjrong View Point, Nongjrong, Meghalaya, India",
+      "pdem-falls": "Pdem Falls, Meghalaya, India",
+      "wahrashi-falls": "Wahrashi Falls, Meghalaya, India",
+      
+      // Jowai Route
+      "hotel-highwinds-lakeside": "Hotel Highwinds Lakeside, Jowai, Meghalaya, India",
+      "tyrshi-falls": "Tyrshi Falls, Jowai, Meghalaya, India",
+      "the-loomkyntoor-resort": "The Loomkyntoor Resort, Jowai, Meghalaya, India",
+      "phe-phe-falls": "Phe Phe Falls, Jowai, Meghalaya, India",
+      "krang-shuri": "Krang Shuri Waterfall, Jowai, Meghalaya, India",
+      "shnongpdeng": "Shnongpdeng, Dawki, Meghalaya, India",
+      "nartiang-monoliths": "Nartiang Monoliths, Jaintia Hills, Meghalaya, India",
+      "nartiang-durga": "Nartiang Durga Temple, Meghalaya, India",
+      "amkoi-sliang": "Amkoi Sliang Wah Umngot, Jaintia Hills, Meghalaya, India",
+      "noh-kawang": "Noh Kawang Falls, Meghalaya, India",
+      
+      // Silchar Route
+      "moopun-falls": "Moopun Falls, Jaintia Hills, Meghalaya, India",
+      "umbyein-falls": "Umbyein Falls, Jaintia Hills, Meghalaya, India",
+      "krem-chympe": "Krem Chympe, Jaintia Hills, Meghalaya, India",
+      "khaddum-falls": "Khaddum Pieltleng Falls, Meghalaya, India",
+      
+      // Mawsynram Route
+      "molis-fall": "Molis Falls, Mawsynram, Meghalaya, India",
+      "mawjymbuin-caves": "Mawjymbuin Cave, Mawsynram, Meghalaya, India",
+      "maysynram-spot": "Mawsynram Village, Meghalaya, India",
+      "umkhakoi-water-park": "Umkhakoi Lake, Mawsynram, Meghalaya, India",
+      "split-rock": "Split Rock, Mawsynram, Meghalaya, India",
+      "sacred-forest": "Mawphlang Sacred Grove, Meghalaya, India",
+      "ranikor": "Ranikor River Beach, Meghalaya, India",
+      "david-scott": "David Scott Trail Entrance, Mawphlang, Meghalaya, India",
+      
+      // Nongstoin Route
+      "hudoi-falls": "Khudoi Falls, Meghalaya, India",
+      "kyllang-rock": "Kyllang Rock, Meghalaya, India",
+      "dommurok-view": "Dommurok View Point, Meghalaya, India",
+      "mawphanlur-spot": "Mawphanlur, West Khasi Hills, Meghalaya, India",
+      "dzuko-valley-meghalaya": "Dzuko Valley, Meghalaya, India",
+      "wei-weinia": "Wei Weinia Falls, West Khasi Hills, Meghalaya, India",
+      
+      // Tura Route
+      "nasep-chiring": "Nasep Chiring Natural Pool, Meghalaya, India",
+      "rongchang-rock": "Rongchang Rock Formation, Meghalaya, India",
+      "siju-caves": "Siju Cave, South Garo Hills, Meghalaya, India",
+      "siju-lodge": "Siju Tourist Lodge, South Garo Hills, Meghalaya, India",
+      "jadesil-fish": "Jadesil Fish Sanctuary, Meghalaya, India",
+      "wari-chora": "Wari Chora, Meghalaya, India",
+      
+      // Umiam Route
+      "eastern-command": "Eastern Command Water Sports Node, Umiam, Meghalaya, India",
+      "orchid-lake": "Orchid Lake Resort, Umiam, Meghalaya, India",
+      "umiam-lake-spot": "Umiam Lake View Point, Umiam, Meghalaya, India",
+      "bahut-chota-pani": "Bahut Chota Pani Lake, Umroi, Meghalaya, India",
+      "ri-kynjai": "Ri Kynjai Resort, Umiam, Meghalaya, India",
+      "lake-paradise": "Lake Paradise Camping Ground, Umiam, Meghalaya, India",
+      
+      // Guwahati Route
+      "excelencia": "Excelencia Highway Restaurant, Assam, India",
+      "jiva-veg-spot": "Jiva Veg Highway Restaurant, Nongpoh, Meghalaya, India",
+      "alfresco-cruise": "Alfresco Grand Cruise, Guwahati, Assam, India",
+      "pobitora": "Pobitora Wildlife Sanctuary, Assam, India",
+      "kamakhya-temple": "Kamakhya Temple, Guwahati, Assam, India"
+    };
+
+    if (mappings[loc.id]) {
+      return mappings[loc.id];
+    }
+
+    if (specRouteId === "guwahati") {
+      return `${cleanName}, Guwahati, Assam, India`;
+    }
+    return `${cleanName}, Meghalaya, India`;
+  };
 
 export default function PlannersGuide() {
   // --- Core State ---
@@ -589,26 +742,102 @@ export default function PlannersGuide() {
     });
   };
 
+  // --- Dynamic Routing & Category Optimization Utility Pass ---
+
+  const getDistance = (c1: { lat: number; lng: number }, c2: { lat: number; lng: number }) => {
+    const R = 6371; // Earth's radius in km
+    const dLat = ((c2.lat - c1.lat) * Math.PI) / 180;
+    const dLng = ((c2.lng - c1.lng) * Math.PI) / 180;
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos((c1.lat * Math.PI) / 180) *
+        Math.cos((c2.lat * Math.PI) / 180) *
+        Math.sin(dLng / 2) *
+        Math.sin(dLng / 2);
+    const cVal = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * cVal;
+  };
+
+  const getLocationCategoryGroup = (loc: PlannerLocation): "cafes" | "waterfalls" | "treks" | "caves" | "other" => {
+    const nm = loc.name.toLowerCase();
+    if (loc.type === "Eatery" || nm.includes("cafe") || nm.includes("dylan")) return "cafes";
+    if (nm.includes("fall")) return "waterfalls";
+    if (loc.type === "Trek" || nm.includes("trail") || nm.includes("walk")) return "treks";
+    if (nm.includes("cave") || nm.includes("krem")) return "caves";
+    return "other";
+  };
+
+  const countCategoryActive = (catGroup: "cafes" | "waterfalls" | "treks" | "caves") => {
+    return routeState.activeStopIds.filter(id => {
+      const loc = masterLocationsOptionList.find(l => l.id === id);
+      if (!loc) return false;
+      return getLocationCategoryGroup(loc) === catGroup;
+    }).length;
+  };
+
+  const handleRemoveCategory = (catGroup: "cafes" | "waterfalls" | "treks" | "caves") => {
+    const updatedStops = routeState.activeStopIds.filter(id => {
+      const loc = masterLocationsOptionList.find(l => l.id === id);
+      if (!loc) return true;
+      return getLocationCategoryGroup(loc) !== catGroup;
+    });
+    updateRouteState(activeRoute.id, {
+      activeStopIds: updatedStops
+    });
+  };
+
+  const handleOptimizeRoute = () => {
+    const activeLocs = masterLocationsOptionList.filter(loc =>
+      routeState.activeStopIds.includes(loc.id)
+    );
+    if (activeLocs.length <= 1) return;
+
+    const optimizedList: PlannerLocation[] = [];
+    const remaining = [...activeLocs];
+    let currentCoords = RHINO_AUDITORIUM.coordinates;
+
+    while (remaining.length > 0) {
+      let nearestIdx = 0;
+      let minDistance = Infinity;
+
+      for (let i = 0; i < remaining.length; i++) {
+        const dist = getDistance(currentCoords, remaining[i].coordinates);
+        if (dist < minDistance) {
+          minDistance = dist;
+          nearestIdx = i;
+        }
+      }
+
+      const nextLoc = remaining.splice(nearestIdx, 1)[0];
+      optimizedList.push(nextLoc);
+      currentCoords = nextLoc.coordinates;
+    }
+
+    const activeIds = optimizedList.map(l => l.id);
+    const inactiveIds = masterLocationsOptionList
+      .filter(l => !routeState.activeStopIds.includes(l.id))
+      .map(l => l.id);
+
+    updateRouteState(activeRoute.id, {
+      customOrderIds: [...activeIds, ...inactiveIds]
+    });
+  };
+
   // --- Export Route as Direct Google Maps Coordinate Waypoint Directions ---
   const [isPlayingDeepLink, setIsPlayingDeepLink] = useState(false);
   const handleExportToGoogleMaps = () => {
     if (activeLocationsData.length < 1) return;
     setIsPlayingDeepLink(true);
 
-    const originStr = `${RHINO_AUDITORIUM.coordinates.lat},${RHINO_AUDITORIUM.coordinates.lng}`;
-    const destStr = `${RHINO_AUDITORIUM.coordinates.lat},${RHINO_AUDITORIUM.coordinates.lng}`;
+    const startCoord = `${RHINO_AUDITORIUM.coordinates.lat},${RHINO_AUDITORIUM.coordinates.lng}`;
+    const endCoord = `${RHINO_AUDITORIUM.coordinates.lat},${RHINO_AUDITORIUM.coordinates.lng}`;
     
-    // All active stops as intermediate waypoints
-    const waypointsArr = activeLocationsData.map(loc => `${loc.coordinates.lat},${loc.coordinates.lng}`);
-    const waypointsStr = waypointsArr.join("|");
-
-    let calculatedTravelmode = "driving";
-    if (travelMode === "WALKING") calculatedTravelmode = "walking";
-    if (travelMode === "BICYCLING") calculatedTravelmode = "bicycling";
-    if (travelMode === "TWO_WHEELER") calculatedTravelmode = "motorcycle";
-
-    const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${originStr}&destination=${destStr}${waypointsStr ? `&waypoints=${waypointsStr}` : ""}&travelmode=${calculatedTravelmode}`;
+    // Construct direct exact coordinate components for ALL waypoints
+    const stopsCoords = activeLocationsData.map(loc => `${loc.coordinates.lat},${loc.coordinates.lng}`);
+    const routeSegments = [startCoord, ...stopsCoords, endCoord];
     
+    const mapsUrl = `https://www.google.com/maps/dir/${routeSegments.join("/")}/@${RHINO_AUDITORIUM.coordinates.lat},${RHINO_AUDITORIUM.coordinates.lng},12z?entry=ttu`;
+
     // Simulate premium visual load feedback
     setTimeout(() => {
       window.open(mapsUrl, "_blank");
@@ -661,7 +890,7 @@ export default function PlannersGuide() {
         <div id="route-commencement-notice" className="inline-flex items-center gap-2.5 bg-amber-50 border border-amber-200/50 p-3 px-5 rounded-2xl max-w-xl mx-auto shadow-xs text-left">
           <Info className="w-4 h-4 text-amber-800 shrink-0" />
           <span className="text-xs text-stone-705 font-sans font-medium">
-            <strong className="text-amber-950 font-semibold">Route Commencement:</strong> All curated itineraries commence and conclude at <span className="underline decoration-amber-500 font-medium">Rhino Auditorium (HV9H+WMG, Secretariat Hills, Shillong, Meghalaya 793001)</span>.
+            <strong className="text-amber-950 font-semibold">Route Commencement:</strong> All curated itineraries commence and conclude at <span className="underline decoration-amber-500 font-medium">Pinewalk Crossing Near Rhino Auditorium (Secretariat Hills, Shillong, Meghalaya 793001)</span>.
           </span>
         </div>
       </div>
@@ -700,6 +929,44 @@ export default function PlannersGuide() {
               </button>
             )
           })}
+        </div>
+
+        {/* Bulk Category Omitters */}
+        <div id="bulk-category-removal" className="border-t border-stone-200/50 pt-4 space-y-2">
+          <div className="flex items-center gap-1.5 text-stone-700">
+            <Trash className="w-3.5 h-3.5 text-amber-800" />
+            <span className="text-[10px] font-mono uppercase tracking-wider font-bold">Skip a Category of Spots from Route</span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={() => handleRemoveCategory("cafes")}
+              disabled={countCategoryActive("cafes") === 0}
+              className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white text-stone-700 border-amber-205 hover:border-amber-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer flex items-center gap-1.5 shadow-2xs hover:bg-stone-50"
+            >
+              ☕ Skip Cafés ({countCategoryActive("cafes")})
+            </button>
+            <button
+              onClick={() => handleRemoveCategory("waterfalls")}
+              disabled={countCategoryActive("waterfalls") === 0}
+              className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white text-stone-700 border-sky-200 hover:border-sky-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer flex items-center gap-1.5 shadow-2xs hover:bg-stone-50"
+            >
+              🌊 Skip Waterfalls ({countCategoryActive("waterfalls")})
+            </button>
+            <button
+              onClick={() => handleRemoveCategory("treks")}
+              disabled={countCategoryActive("treks") === 0}
+              className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white text-stone-700 border-orange-200 hover:border-orange-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer flex items-center gap-1.5 shadow-2xs hover:bg-stone-50"
+            >
+              🥾 Skip Treks ({countCategoryActive("treks")})
+            </button>
+            <button
+              onClick={() => handleRemoveCategory("caves")}
+              disabled={countCategoryActive("caves") === 0}
+              className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white text-stone-700 border-stone-250 hover:border-stone-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer flex items-center gap-1.5 shadow-2xs hover:bg-stone-50"
+            >
+              ⛰️ Skip Caves ({countCategoryActive("caves")})
+            </button>
+          </div>
         </div>
       </div>
 
@@ -874,7 +1141,7 @@ export default function PlannersGuide() {
 
             <div className="bg-amber-50 border-b border-amber-200/50 p-2.5 px-4 flex items-center gap-2 text-xs text-stone-800 font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-600 animate-ping" />
-              <span>📍 Route Loop: Begins & finishes at <strong>Rhino Auditorium, Shillong</strong></span>
+              <span>📍 Route Loop: Begins & finishes at <strong>Pinewalk Crossing Near Rhino Auditorium, Shillong</strong></span>
             </div>
 
             {/* Standard Map view Frame: redirects or shows inline vectors */}
@@ -894,7 +1161,7 @@ export default function PlannersGuide() {
                     <AdvancedMarker 
                       key="rhino-auditorium" 
                       position={RHINO_AUDITORIUM.coordinates} 
-                      title="Rhino Auditorium (Start/End)"
+                      title="Pinewalk Crossing Near Rhino Auditorium (Start/End)"
                     >
                       <div className="relative scale-110 z-50">
                         <Pin background="#b45309" borderColor="#ffffff" glyphColor="#ffffff" scale={1.1} />
@@ -903,20 +1170,21 @@ export default function PlannersGuide() {
                         </div>
                       </div>
                     </AdvancedMarker>
-                    {customizedLocations.map((loc) => {
-                      const isActive = routeState.activeStopIds.includes(loc.id);
-                      return (
-                        <AdvancedMarker 
-                          key={loc.id} 
-                          position={loc.coordinates} 
-                          title={loc.name}
-                        >
-                          <div className={`relative transition-transform duration-200 ${isActive ? "scale-100" : "scale-80 opacity-60"}`}>
-                            <Pin background={getCategoryColor(loc.type, loc.name, loc.remarks)} borderColor="#ffffff" glyphColor="#ffffff" scale={0.9} />
-                          </div>
-                        </AdvancedMarker>
-                      );
-                    })}
+                    {customizedLocations
+                      .filter((loc) => routeState.activeStopIds.includes(loc.id))
+                      .map((loc) => {
+                        return (
+                          <AdvancedMarker 
+                            key={loc.id} 
+                            position={loc.coordinates} 
+                            title={loc.name}
+                          >
+                            <div className="relative scale-100 transition-transform duration-200">
+                              <Pin background={getCategoryColor(loc.type, loc.name, loc.remarks)} borderColor="#ffffff" glyphColor="#ffffff" scale={0.9} />
+                            </div>
+                          </AdvancedMarker>
+                        );
+                      })}
                   </Map>
                 </APIProvider>
               ) : (
@@ -989,7 +1257,14 @@ export default function PlannersGuide() {
                   Configured driving sequence: <span className="font-semibold text-stone-800">{activeSpotsCount} of {totalSpotsCount} Stops</span> active.
                 </p>
               </div>
-              <div className="flex gap-2 w-full sm:w-auto justify-end">
+              <div className="flex gap-2 w-full sm:w-auto justify-end flex-wrap">
+                <button
+                  onClick={handleOptimizeRoute}
+                  disabled={activeSpotsCount <= 1}
+                  className="px-3.5 py-1.5 text-xs font-mono bg-amber-805 text-amber-50 hover:bg-amber-900 disabled:opacity-45 disabled:cursor-not-allowed hover:text-white border border-amber-800 rounded-lg cursor-pointer flex items-center gap-1.5 transition-all shadow-sm font-semibold"
+                >
+                  <ArrowDownUp className="w-3.5 h-3.5 text-amber-300" /> Optimize Sequence
+                </button>
                 <button
                   onClick={resetRouteToDefault}
                   className="px-3.5 py-1.5 text-xs font-mono text-stone-600 hover:text-stone-900 border border-stone-300 hover:border-stone-400 rounded-lg cursor-pointer flex items-center gap-1.5 transition-colors bg-white font-medium"
@@ -1081,7 +1356,7 @@ export default function PlannersGuide() {
                     <AdvancedMarker 
                       key="rhino-auditorium" 
                       position={RHINO_AUDITORIUM.coordinates} 
-                      title="Rhino Auditorium (Start/End)"
+                      title="Pinewalk Crossing Near Rhino Auditorium (Start/End)"
                       onClick={() => setSelectedMarkerId(selectedMarkerId === "rhino-auditorium" ? null : "rhino-auditorium")}
                     >
                       <div className="relative scale-110 z-50 cursor-pointer" style={{ width: "32px", height: "32px" }}>
@@ -1093,46 +1368,45 @@ export default function PlannersGuide() {
                     </AdvancedMarker>
                     
                     {/* Immersive premium markers with interaction triggers */}
-                    {customizedLocations.map((loc, idx) => {
-                      const isActive = routeState.activeStopIds.includes(loc.id);
-                      const isHovered = hoveredLocId === loc.id;
-                      const isSelected = selectedMarkerId === loc.id;
-                      const pinColor = getCategoryColor(loc.type, loc.name, loc.remarks);
+                    {customizedLocations
+                      .filter((loc) => routeState.activeStopIds.includes(loc.id))
+                      .map((loc, idx) => {
+                        const isHovered = hoveredLocId === loc.id;
+                        const isSelected = selectedMarkerId === loc.id;
+                        const pinColor = getCategoryColor(loc.type, loc.name, loc.remarks);
 
-                      return (
-                        <AdvancedMarker 
-                          key={loc.id} 
-                          position={loc.coordinates} 
-                          title={loc.name}
-                          onClick={() => setSelectedMarkerId(selectedMarkerId === loc.id ? null : loc.id)}
-                        >
-                          <div 
-                            className={`relative cursor-pointer transition-all duration-350 ${
-                              isHovered || isSelected ? "scale-120 z-50" : "scale-100 z-10"
-                            } ${isActive ? "" : "opacity-45"}`}
-                            onMouseEnter={() => setHoveredLocId(loc.id)}
-                            onMouseLeave={() => setHoveredLocId(null)}
-                            style={{ width: "32px", height: "32px" }}
+                        return (
+                          <AdvancedMarker 
+                            key={loc.id} 
+                            position={loc.coordinates} 
+                            title={loc.name}
+                            onClick={() => setSelectedMarkerId(selectedMarkerId === loc.id ? null : loc.id)}
                           >
-                            <Pin background={pinColor} borderColor="#ffffff" glyphColor="#ffffff" scale={isSelected || isHovered ? 1.15 : 0.9} />
-                            
-                            {/* Sequence number overlay on map pin */}
-                            {isActive && (
+                            <div 
+                              className={`relative cursor-pointer transition-all duration-350 ${
+                                isHovered || isSelected ? "scale-120 z-50" : "scale-100 z-10"
+                              }`}
+                              onMouseEnter={() => setHoveredLocId(loc.id)}
+                              onMouseLeave={() => setHoveredLocId(null)}
+                              style={{ width: "32px", height: "32px" }}
+                            >
+                              <Pin background={pinColor} borderColor="#ffffff" glyphColor="#ffffff" scale={isSelected || isHovered ? 1.15 : 0.9} />
+                              
+                              {/* Sequence number overlay on map pin */}
                               <div className="absolute top-1 max-w-full flex justify-center inset-x-0 text-[10px] font-mono font-bold text-neutral-900 pointer-events-none select-none">
                                 {idx + 1}
                               </div>
-                            )}
 
-                            {/* Added detour badge */}
-                            {addedDetours.some(d => d.id === loc.id) && (
-                              <div className="absolute -top-1.5 -right-1.5 bg-amber-500 rounded-full p-1 border border-white">
-                                <Sparkles className="w-2 h-2 text-white" />
-                              </div>
-                            )}
-                          </div>
-                        </AdvancedMarker>
-                      );
-                    })}
+                              {/* Added detour badge */}
+                              {addedDetours.some(d => d.id === loc.id) && (
+                                <div className="absolute -top-1.5 -right-1.5 bg-amber-500 rounded-full p-1 border border-white">
+                                  <Sparkles className="w-2 h-2 text-white" />
+                                </div>
+                              )}
+                            </div>
+                          </AdvancedMarker>
+                        );
+                      })}
                   </Map>
                 </APIProvider>
               ) : (
@@ -1330,7 +1604,7 @@ export default function PlannersGuide() {
                 {/* Fixed Station Loop Banner */}
                 <div className="bg-amber-950/50 border-b border-amber-900/40 p-2.5 px-4 flex items-center gap-2 text-[10.5px] text-amber-200 font-medium">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0 animate-pulse" />
-                  <span>Always commences & concludes at <strong>Rhino Auditorium</strong></span>
+                  <span>Always commences & concludes at <strong>Pinewalk Crossing Near Rhino Auditorium</strong></span>
                 </div>
 
                 {/* Grid calculation summary */}
@@ -1356,12 +1630,24 @@ export default function PlannersGuide() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between pb-1">
                       <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-wider font-bold">Waypoint Stops Ordered</span>
-                      <button 
-                        onClick={resetRouteToDefault}
-                        className="text-[10px] font-mono text-neutral-400 hover:text-amber-400 transition-colors uppercase font-bold"
-                      >
-                        Reset Sequence
-                      </button>
+                      <div className="flex items-center gap-1.5 shrink-0 select-none">
+                        <button 
+                          onClick={handleOptimizeRoute}
+                          disabled={activeSpotsCount <= 1}
+                          className="text-[10px] font-mono text-amber-400 hover:text-amber-300 disabled:opacity-40 disabled:cursor-not-allowed transition-colors uppercase font-bold flex items-center gap-0.5"
+                          title="Sort active stops by fastest physical route sequence"
+                        >
+                          <ArrowDownUp className="w-3 h-3 text-amber-500" /> Optimize
+                        </button>
+                        <span className="text-neutral-700 font-mono text-[9px]">|</span>
+                        <button 
+                          onClick={resetRouteToDefault}
+                          className="text-[10px] font-mono text-neutral-400 hover:text-neutral-200 transition-colors uppercase font-bold"
+                          title="Restore original route defaults"
+                        >
+                          Reset
+                        </button>
+                      </div>
                     </div>
 
                     <div className="space-y-2">
@@ -1596,6 +1882,18 @@ export default function PlannersGuide() {
                 {/* Expanded stops menu scroll box */}
                 {isMobileDrawerExpanded && (
                   <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                    {/* Bulk Actions Header */}
+                    <div className="flex items-center justify-between p-2 bg-neutral-900 border border-neutral-800 rounded-xl">
+                      <span className="text-[9px] font-mono text-neutral-450 uppercase tracking-widest font-bold pl-1">Routing sequence</span>
+                      <button
+                        onClick={handleOptimizeRoute}
+                        disabled={activeSpotsCount <= 1}
+                        className="px-2.5 py-1 text-[9px] font-mono text-amber-400 border border-amber-800/40 hover:bg-amber-900/20 rounded font-bold uppercase disabled:opacity-40"
+                      >
+                        ⚡ Fast Route
+                      </button>
+                    </div>
+
                     <div className="space-y-2 text-left">
                       {/* Fixed start station */}
                       <div className="p-2.5 rounded-xl border flex items-center justify-between bg-neutral-900/40 border-neutral-800 text-neutral-100">

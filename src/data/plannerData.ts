@@ -23,7 +23,7 @@ export interface PlannerRoute {
 }
 
 export const RHINO_GYAN_RULES = [
-  "All distances have been taken from Rhino Auditorium and timings are approximate.",
+  "All distances have been taken from Pinewalk Crossing Near Rhino Auditorium and timings are approximate.",
   "Crossing Laitumkhrah is time consuming on working days especially during school timings. While going towards Laitkor on a working day, it is advisable to use the route via Shillong Peak, it is a bit longer but saves lots of time.",
   "Rainy season is from Mid Mar to Late Sep, don't change your plan because of rain. Just carry a large umbrella, slipper and a dress change to enjoy the clouds, rains and the beautiful waterfalls.",
   "Picnic spots are places where you can sit & spend the whole day, carry your drinks, snacks and a dress to swim.",
