@@ -483,7 +483,7 @@ export const DISHES: FoodDish[] = [
     description: "An incredibly iconic Khasi classic: tender cubes of pork slow-cooked in a silky, jet-black gravy made from dry-roasted black sesame seeds (Nei-long), local ginger shreds, and fragrant wild fragrant wild peppercorns.",
     profile: "Nutty, velvety, deeply herbal, moderate slow-heat spice",
     pairing: "Tastes exceptional on cloudy days alongside steaming hot red hill rice.",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800",
+    image: "/cafe-photos/jadoh-restaurant/hero-0.jpg",
     matchCafes: ["Heritage Inn Kitchen", "Trattoria"]
   }
 ];
@@ -493,7 +493,7 @@ export const ARTICLES: GuideArticle[] = [
     id: "rainy-day-coffee",
     title: "Why Rain is the Best Time for Coffee in Shillong",
     excerpt: "Exploring the sensory magic that happens when the clouds open over Shillong and local cafés become shelters of warm acoustic folk music.",
-    image: "https://images.unsplash.com/photo-1428592953211-077101b2021b?auto=format&fit=crop&q=80&w=1200",
+    image: "/cafe-photos/cafe-shillong/hero-0.jpg",
     author: "Ujjwal",
     date: "June 12, 2026",
     readTime: "5 min read",
@@ -538,7 +538,7 @@ Next time the sky darkens in Police Bazaar, don't run for a taxi. Slip inside a 
     id: "secret-roasters",
     title: "The Secret Roasters of Upper Shillong",
     excerpt: "Deep inside the misty pine forests, independent cultivators are quietly reviving pre-colonial Arabica bean strains.",
-    image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1200",
+    image: "/cafe-photos/smoky-falls-tribe-coffee/hero-0.jpg",
     author: "Banrak",
     date: "May 28, 2026",
     readTime: "7 min read",

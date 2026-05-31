@@ -419,7 +419,7 @@ export default function App() {
                 {/* Visual Left 5 */}
                 <div className="md:col-span-5 h-72 rounded-2xl overflow-hidden bg-stone-100 border border-stone-200">
                   <img
-                    src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=800"
+                    src="/cafe-photos/jadoh-restaurant/hero-0.jpg"
                     alt="Traditional Dohneiiong dish with sesame"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

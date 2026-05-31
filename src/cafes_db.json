@@ -6,7 +6,7 @@
     "theme": "Traditional Slate Elements & Live Ka Duitara Chords",
     "introduction": "Sleek and tucked away at Newlands Compound, Rynsan is a celebratory platform in the Khasi language where indigenous culinary arts and acoustic melodies tell a unique story. With stunning timber accents, rustic stone walls, and wide glass doors opening to a peaceful garden, Rynsan brings the fresh, organic ingredients of Meghalaya's pristine hills straight to your table.",
     "whyVisit": "To experience traditional live acoustic music, featuring local artists playing the Ka Duitara string instrument while eating beautifully curated Khasi-style hearth dishes.",
-    "hours": "Lunch: 2:00 PM — 4:00 PM | Dinner: 6:00 PM — 10:00 PM",
+    "hours": "Lunch: 2:00 PM \u2014 4:00 PM | Dinner: 6:00 PM \u2014 10:00 PM",
     "address": "Newlands Compound, Boyce Road, Near Shillong College, Laitumkhrah, Shillong 793003",
     "neighborhood": "Nongkynrih",
     "images": {
@@ -28,39 +28,39 @@
     "mustTry": [
       {
         "name": "Putharo Sliders",
-        "description": "Khasi steamed pounded rice cakes with smoky smoked pork topping — a signature Rynsan starter.",
-        "price": "₹500",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v2rT6mcbmbATJ0QOZwW3DUXFTEkk54zvEJlj9a3II_GHq8MRqKIb45w-k6f2x90rJCgzBAAGzJRxVIuxcARIxcbVcKWyuYcj4-E9-hhD4T-frb1xnwn8ZhmteRp5iMfLk9iJZRZEj_Q6TH2gP6hHQA9cS6wJTqBQRDWW-whWVrkC-JOhvYRBPAioUq3394g04mLIY8m4ULtpHLnWvVu0tDrAeCBD_hn49oeEdnzeUDn9SU19oS3YRyVdkPKyO6XcZ0XXPwcR2CqPsGGkNoRAK35Kj9OPOfCnGGAwug2YQIKfblyWmlQnr3ZO0NR82LFj63dHpjMv7LNslaXg998l24n4jVndJZ92IqF8JIkct4M7TwTrPiWBbP1UnJqMns7ujBvcbTauO30mJ0B99UIKUm6eVBAmaQ8kiP3TCkF4g-Ar_v&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "description": "Khasi steamed pounded rice cakes with smoky smoked pork topping \u2014 a signature Rynsan starter.",
+        "price": "\u20b9500",
+        "image": "/cafe-photos/rynsan-cafe/photo-0.jpg"
       },
       {
         "name": "Doh Khlieh Rynsan",
         "description": "Rynsan's take on the Khasi pork head salad with wild herbs and a citrusy dressing.",
-        "price": "₹500",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-szr6DEO-xgbzybquYnSNLDFiE5X_xNKeufHgkPYJgj6iYe6GtqLF0Z3_DCk0fypeuDxuIAqodd6lpW7pufDjL_51zllrQDmkdFr6o80DlGCHq7T01ABsrkXesQnBWQeT46sU-F0tDTx_bS452CtWVDQtOAKF3VbBLMvHlJeAgRLECnnaXrLJ1vZKVxqffBQv1krkUo4XpSPfxm6b8Ie2FLFXke1HPBqjsCNULZDZ515aGnLoSnYHwwpAC1EdeDhEevyJciIV0f4N4JXWUXHjf7bK7o5Ffv893YfSdSeIUNUsYKHKL2eLhjRLjRtXKTXqg2pc6Exc1O4ufaVOlu7u9nBGetYJDh3P-UGKz-sTQft1xPLbNlLMph6KR8zcZouQkkJC8WyGgGhNwFuztcIwU-wRBNE0m1g2P15CfPhi7MUu36q6M66PVtk-k979aD&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9500",
+        "image": "/cafe-photos/rynsan-cafe/photo-1.jpg"
       },
       {
         "name": "Wild Fern Salad",
         "description": "Fiddlehead ferns and seasonal greens with crushed roasted peanuts.",
-        "price": "₹390",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-su2IoYvMccl9qQwpGLu3nVVdHg9EhBEKJk9qcBPXsnXPYdVlfl9G1fyHHiz840LPQnYTpFXzSvj1nh_6NZWf_uz3w4QJSYUFnSeJdD7Q4TJdvXHwGjuCoBCYvjBqSOkVdTEmWPNCzLG6Q1COIkluSCWzciwuCPt4utTrUT3c7ZIjfuCMm6LMQ9pOpg4ny_-xftZ2UejK7hw_jYF5MSJ3ZsRqN0zbKz7T2Ho3WKisI829Prixbv3xZwamEAX8zwSS7eeDAdc5SAg8h_kgqNLGgrri7_oXTgFW_50Bo9FoEiUecBLfFJ5HmXMsDX22IOyexqIX_nnrv2U_qHa-8f7Ov7CEeuyiQn__wQv-0EOY0d4Vu40YAE12maek5eJDaYveCpb6Ko9lfMTIj_80qGjlCX9L053KXk3xcmzgdR5jVVCn1Zm5TnP7_WLjSLxw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9390",
+        "image": "/cafe-photos/rynsan-cafe/photo-2.jpg"
       },
       {
         "name": "Chawh Chi Soup",
         "description": "Rich and savoury wild perilla paste soup with shredded bamboo shoot.",
-        "price": "₹350",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uPXt0qPoeYTnjm6aJBp9caapjzEprgNdbP8udbQGvmjPCaeQHrT0AZxCFhkk7k6_CmaUoVKpMwQzavr4CejjMNBIJTod1SwbaWSK82HqMx5BABugZ04I9DZJEX8nSDQ6EIuOQAWsjVW0TJkz6LhCPBa59oU8t3VVpXx44d8m98yaTTKrCpMgeqiYDhh23zgeOpkjsazfTXI6PanxOawjQmMy7J80Gv5xKrqjxUtFmIAGv2t_gXmXhOdUEZhOohjPy3eX671mRWCvN0lcuUtLH3-D8on-W9XLoJ6AlbJz8SG-kKmwaAb09E5nAkrORQWH41-dDMPJoELVSr3P0gUufElGzpUMMHtehrOaWX7LdoPgUInBMZZPzUxzLrLFwwjZivgWMScWogWWhCLRnjKRld_s4ICufWakoUIyfeE22NBYEr40RW01BfEBrXu-iA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9350",
+        "image": "/cafe-photos/rynsan-cafe/photo-3.jpg"
       },
       {
         "name": "Turmeric Butter Prawns",
         "description": "Fresh river prawns in a light buttery lakadong turmeric sauce.",
-        "price": "₹550",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-urF-LdNoph8M3OHyAWvnXF5OA4dIAT_8Y5PxbeSixXKaydXabWEvf5mh1FcoCXIrQs3BdyaBjqDHigRxZhMh9AvI0oUn1gWUkuLQUndlG_i9Ijg1p_tz0VktuGyqrDs4Jm6I7T11i2cXjFwuHp-1XY2Zp_9r0hQJWEX2tzd8gujXEYgr1R6p4PB8fEYhF2J9oUUWJ_UqRGtkjSJH_-QEbMZZ5o9_th0fHvUESFVdRoTKOq5wEvLL_isSDq-okR6M-k5gsaET7HiPZymj3QC8czfYnz47vGg7nd-ar_KRelX0lDe7USw20PQ1UvGjXZtmGW6QbEt2O6z9B5GLdU3MhapWyoEFPucG_ahQ3GLS3hOrpMXuFABA7fixn145Z8L_is_FG_NMBfrwUmUKwB0rLrS3rKDKTBq3W0_7ZTQVFK9IUy&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9550",
+        "image": "/cafe-photos/rynsan-cafe/photo-4.jpg"
       },
       {
         "name": "Mutton Roast",
         "description": "Thin slices of slow-cooked 24-hour marinated leg of mutton.",
-        "price": "₹600",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vp0BjmAGDmNdM8vVzFjaop1_ZlxGaH994NYYpJfJdAMRXvbSFFzCOp5Sa7IO-DDeb8kIXXvPElszhIBaSFaUvCEZBGioymaBkC6co40itcOvxpF075d4CkOJcnOW-AAUZfspOjtyFG8LEinTEoXS43pz8CvHDIJ_MEcsoIq6M61IVJNLTm0ZAIeCtRVm_9idc6vP-0JLGB1BqDrsnhD_Rky0fZmLUVRtMFBszhaMzv9QQjfcl3HAt11HePezrQg8Oby67AXZo7oJHE9jTOhfh-7YI4ppxHoOUTau2FNqDE-EUsDy8XjsRZlu30iVu0I3c9BljUSDbWh_vtdtwkjwvMcYPM6-lyWfEvquCt3rd6gE2lqaQ23dU7lAjgPGB5wiececWN5fOBw67fFGuP3lidFQTG7KRPzxdZIxCJgPogtt2T&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9600",
+        "image": "/cafe-photos/rynsan-cafe/photo-5.jpg"
       }
     ],
     "gallery": [
@@ -90,13 +90,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 12:00 – 10:00 PM",
-      "Tuesday: 12:00 – 10:00 PM",
-      "Wednesday: 12:00 – 10:00 PM",
-      "Thursday: 12:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 10:00 PM"
+      "Monday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/rynsan-cafe/photo-0.jpg",
@@ -110,7 +110,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 750,
     "average_spend_for_two": 1500,
     "menu_url": "https://www.rynsan.com/menu",
@@ -127,7 +127,7 @@
     "theme": "Glittering Chandelier Banquets & Romantic Candle Dinners",
     "introduction": "Ahavah Fine Dining brings a touch of supreme alpine hospitality and luxury dining to Shillong. Warmed by a roaring log fireplace and illuminated by towering crystal chandeliers, this elegant retreat boasts plush velvet chairs, clover tablecloths, and a glass-enclosed pastry collection. Known for spectacular banquet services, custom wedding cakes, and romantic candlelit seating, it is a haven of luxury.",
     "whyVisit": "To indulge in a luxury candlelight dinner wrapped in wool throws under glowing chandeliers, followed by their legendary freshly baked pastries and cakes.",
-    "hours": "11:30 AM — 9:30 PM (Daily)",
+    "hours": "11:30 AM \u2014 9:30 PM (Daily)",
     "address": "Upland Road, Nongkynrih, Laitumkhrah, Shillong 793003",
     "neighborhood": "Nongkynrih",
     "images": {
@@ -150,20 +150,27 @@
       {
         "name": "Croissant & Eggs Breakfast",
         "description": "Buttery croissants with fluffy scrambled eggs, crisp bacon, and freshly pressed juice.",
-        "price": "₹280",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vJw0hfjUFe7XBAgRRcz9TzFjKYqGcaEdXJrzve0kmkBDYJfE5FNy3b9rg-sVftBGPIQS5nc8D1AOaK1GNTALif1l7-QtZhHN-59PYjxNjEexFrOPJ0mpHnoqHE0DMwpgG8DKqCYAW0R8QAkH27e_VIcFv7r4hErfzQYI_wopP40B1ksyf4QmBh4i2rwXPjfRgRrRjUfGQWsXHltIw5mq_lBz7u0XTxou_EP3Jm7CbAVoTQ89pWvoO4crRg8SusVk9Rz-lr8YdR1kZdW4Pap9B6OnTr6pmg2mUKqbhcfFNIYOCydn-S8O6nGUydEVWr_swtESGk5b_G1j_pO3cQjFYRiwUsW_kAeawFxCETC_CiLTW4w9-nrb7FZtRAdkS2z3FuSZZv_j78Pv_Yd67O9TTSEwKUx1D8usODJCL5rgmjQw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9280",
+        "image": "/cafe-photos/ahavah-cafe/photo-0.jpg"
       },
       {
         "name": "Custom Wedding Cake Slice",
         "description": "Freshly baked layered cake with cream and seasonal compote from their glass-enclosed pastry display.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-siu4PyOIb6h9XajNQ1VPuV51kLypP1xjEAVHj-ew-0lKC7hxWJM60H4G8rTWgtGhh9rVLm2zbinnppl6HLp1HWWdDGzErfIJHxgf-78s8DlL2NB0KyxccbHloZDva05IO_beVLEe84JgYdvHOcXcx0f4GrkQvaADHBY0bYKtg4E-2ZCKiZ9g7qyiRzS0RIW8nJaAW4XwSQRXiEH2z4SuqiynIxQ85NSp4QcIYcLPvwJPkaq7lddPFfAeVgC_ySpFb93F5hY1l9Z18A2NpuTbBiwchTr472JlGUaON-87wGoUfNMhwWPsaSRw2531LAuinVb96N67CG96ivwi9Z5XH3F2qo1yzjZip6nlINpYOwytT0wJx60OvZd1t0QaMt9S83yexATKIzwwjN75_1o1Nyw556NFNjfcPLonUWu0dWGw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/ahavah-cafe/photo-1.jpg"
       },
       {
         "name": "Candlelight Dinner Set",
-        "description": "Curated 3-course set under the crystal chandeliers — starter, main, and dessert.",
-        "price": "₹850",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v29sfTxPliTD1VtKxGHT3DZ4Vpzw0js6_u5dEHpZ6VSpraiEE7ZrNxqiwkelWTf568xd7DWZFi0vNnDIvPMFX-B4XUOlv7Iz-WD7sSsGpNd8Tu7ayIHUWPkzsPOIS6HxvDG23uKj0iwWwPemDiQrZnwTblqQAhWdO52-rNqcvy8laJM8PJN4v7bBz_6P_icdR_r6dzyI0UPRcoq3mAUfJRgSE2xihri17GTmwNVDVy3Fa3JaOG7EkdHO99L2p9RdXpWyNMxzwjLQeFZWeE-CYg3dL_wIBph1SgLhBQ-P_8H8umVmBmB0SqQlXjRVhVw3YMcfKaoSgDnbxzj1okb1zlemFGJgKaShHnUrxggJPSDd6oCvBYL8Sbcq3AjKzl0xHZSRkbdU2i8EWPcw6SIOgy5jonCVbkRnq2i4thIkPC5BkjFodZOTsnIrGYMpJM&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "description": "Curated 3-course set under the crystal chandeliers \u2014 starter, main, and dessert.",
+        "price": "\u20b9850",
+        "image": "/cafe-photos/ahavah-cafe/photo-2.jpg"
+      },
+      {
+        "name": "Ahavah's Truffle Mushroom Gnocchi",
+        "description": "Hand-rolled potato gnocchi tossed in a rich truffle mushroom cream sauce, finished with Parmesan and fresh herbs.",
+        "price": "\u20b9675",
+        "image": "/cafe-photos/ahavah-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "gallery": [
@@ -194,13 +201,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 12:30 – 9:30 PM",
-      "Tuesday: 12:30 – 9:30 PM",
-      "Wednesday: 12:30 – 9:30 PM",
-      "Thursday: 12:30 – 9:30 PM",
-      "Friday: 12:30 – 9:30 PM",
-      "Saturday: 9:30 AM – 10:30 PM",
-      "Sunday: 9:30 AM – 10:30 PM"
+      "Monday: 12:30\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 12:30\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 12:30\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 12:30\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 12:30\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 9:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Sunday: 9:30\u202fAM\u2009\u2013\u200910:30\u202fPM"
     ],
     "photos": [
       "/cafe-photos/ahavah-cafe/photo-0.jpg",
@@ -213,7 +220,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.23,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 500,
     "average_spend_for_two": 1000,
     "rooftop_verified": false,
@@ -226,7 +233,7 @@
     "theme": "Warm Cabin Loft, Green Plants & Artisan Roasts",
     "introduction": "Tucked in the peaceful lanes of Kench's Trace, Cherry Bean is an iconic wooden coffee sanctuary. Under double-height timber ceilings, beautiful warm lightbulbs glow over rows of books, vertical plant displays, and artisan brewing apparatus. Famous for sourcing local high-altitude organic arabica beans, they roast and hand-brew exceptional coffees paired with fresh-made pizzas and decadent pastries.",
     "whyVisit": "To study, chat, or read in a warm, garden-filled wooden loft with a masterful single-estate espresso and freshly-kneaded sourdough pizza.",
-    "hours": "10:30 AM — 8:30 PM (Daily)",
+    "hours": "10:30 AM \u2014 8:30 PM (Daily)",
     "address": "Kench's Trace, Shillong 793004 (Opposite Pinewood)",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -249,14 +256,28 @@
       {
         "name": "Warm Artisan Sourdough Pizza",
         "description": "Hand-kneaded sourdough crust topped with rich tomato sauce, fresh buffalo mozzarella, and mountain wild oregano.",
-        "price": "₹290",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uBOduieHSgHirEAY1lmxVNBM1-NzQyGJVQcxU5tYlz8tpK7eAbCPBixSGuUTYb4jrDbZd2MTPwmTsET5VCIDH9RIIbXc3-sWQXAXctVyHNcFeOtm4XaWz_smze-iSeWrNujwFvoDPsl2JrxkM-PjxA7ayi8eABXrFXSobOQrhk6f1bpgedKqVQVY05SiI2Shkz1Aad8X8K-nsHJvbSPuftnlfgn8pEEnf_yJdMR8LYsKeAzKlnz31Jq7RzvqlBEyw2r5EC0YEG1cbCe22nINn2rs9Qd89KhW6aSaBZj6lcpunA2bqeyJ8ilZ0jP0FvTLmM_zBuhjqPgR9E4noNxA5qA-B5HelIoLBoAgGfy_uvD1OclcbYSyjxIobcHnHgiXijlRbADMRYiNAvZw5rT3dUCm6FZDj6ECWqfsCx3bAhmwabKN-ce6U4F6QIzYhW&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9290",
+        "image": "/cafe-photos/cherry-bean-cafe/photo-0.jpg"
       },
       {
         "name": "Double Chocolate Nut Cookie",
         "description": "Big, soft-baked molten chocolate chip cookies stuffed with roasted hazelnut crumbs, matching dark espresso perfectly.",
-        "price": "₹120",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vffO4EvoRiBZavX6EiyR7oVPx2fdGEijaruZXyGIpHY5u1C9RMuUrJTIzOeclX7K187YzooH7bFz8NSwkhtpWjS-R_VKdoK7EI380eV_srNPJojeps-MbALht8Z9fLvYnUuzQH-tgij121URHeDrgRBkMMPzU-R1jtxEiDezM7_oxlzuTXdnbS7Fx0bd_Cm5EjrE3pWeG6vLkRCpT-8nAAoKGIAduD079pEVQIAYm1bpQz6yRc8pPKXzAXEHg-UWPlsWNXfDC4GaokjiheUJCxy98TZED79Ol6C6bOMtNNAg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9120",
+        "image": "/cafe-photos/cherry-bean-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Highland Hearth Latte",
+        "description": "Our signature artisan espresso infused with smoky caramel and a hint of warming spices, topped with creamy foam for a cozy cabin feel.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/cherry-bean-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Woodland Mushroom & Gruyere Tart",
+        "description": "A flaky, buttery tart shell generously filled with earthy woodland mushrooms, caramelized onions, and rich Gruyere cheese, baked golden.",
+        "price": "\u20b9480",
+        "image": "/cafe-photos/cherry-bean-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "gallery": [
@@ -286,13 +307,13 @@
       "point_of_interest"
     ],
     "opening_hours": [
-      "Monday: 11:30 AM – 10:00 PM",
-      "Tuesday: 11:30 AM – 10:00 PM",
-      "Wednesday: 11:30 AM – 10:00 PM",
-      "Thursday: 11:30 AM – 10:00 PM",
-      "Friday: 11:30 AM – 10:00 PM",
-      "Saturday: 11:30 AM – 10:00 PM",
-      "Sunday: 11:30 AM – 10:00 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/cherry-bean-cafe/photo-0.jpg",
@@ -305,7 +326,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.3,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700,
     "neighborhood_verified": true,
@@ -317,9 +338,9 @@
     "name": "Cafe Shillong",
     "tagline": "The Heritage of the Hillside",
     "theme": "Jazz and Coffee Traditions",
-    "introduction": "Since opening its doors in 2008, Cafe Shillong has stood as a guardian of the city's unique cultural syncretism: a space where the aroma of locally roasted Khasi Hills coffee beans blends seamlessly with vintage vinyl tracks spinning in the corner. Here, jazz is more than background music—it's the heartbeat of the room.",
+    "introduction": "Since opening its doors in 2008, Cafe Shillong has stood as a guardian of the city's unique cultural syncretism: a space where the aroma of locally roasted Khasi Hills coffee beans blends seamlessly with vintage vinyl tracks spinning in the corner. Here, jazz is more than background music\u2014it's the heartbeat of the room.",
     "whyVisit": "To sit by the street-facing window during a sudden downpour, sipping a double espresso while listening to local artists cover classic jazz and blues under warm filament bulbs.",
-    "hours": "12:00 PM — 10:00 PM (Closed Thursdays)",
+    "hours": "12:00 PM \u2014 10:00 PM (Closed Thursdays)",
     "address": "31 Laitumkhrah Main Road, Shillong 793003 (Opposite Beat Junction)",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -328,7 +349,7 @@
       "interior": "/cafe-photos/cafe-shillong/interior-0.jpg",
       "details": "/cafe-photos/cafe-shillong/details-0.jpg"
     },
-    "quote": "Here, jazz isn't background music—it's the heartbeat of the Room.",
+    "quote": "Here, jazz isn't background music\u2014it's the heartbeat of the Room.",
     "quoteAuthor": "Iban, Founder",
     "vibeTags": [
       "Legacy",
@@ -342,20 +363,27 @@
       {
         "name": "Shillong Special Coffee",
         "description": "Sourced from high-altitude organic plantations in the East Khasi Hills, medium-roasted, and brewed with crisp mountain spring water.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vjxNYFYrmDQ4ofjVWt-2NLPUugdi4hpkk820V3f_9mwhd3ScKvxQJHCw_yh_Lg3JZRV5AAVOHcLhLnKb1BRmLiO30im8CuYzTyoB9czxxfKt4AOkmzAHGGlzX5FNHM--ClsXqPtl4lBA6BWfD2hzEC5fmK5CKNB06qSrKizLRJZOX3R0ReCiX3lTyjjD1Ppd_09W_dPtSo2XoX5RVrEx0YJk_SaTyxBdaMZeyDKyOHL-wCOThCZ0v1ueqLtWjd487k0FyWRNyZhvcNIzKkpY2hHssEGEn5w3TtnxYmRgnlP22p-yVGQCZ6aubkwD_eE68O09L7z7HFNW0kaZRfdH5ui8XjS_FZ6VBElPfttdddQtT0Lh4kXVX2qVvG35YLdmI6x15SzxkG0xlvWVzjwR3vLuaFRTQXGbYjDSLIM8OwGodm&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/cafe-shillong/photo-0.jpg"
       },
       {
         "name": "Smoked Pork Toast",
         "description": "Crispy local sourdough toast topped slices of house-smoked Khasi pork belly, caramelized mountain onions, and wild mint leaves.",
-        "price": "₹260",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uxpR4H8LHJ63SNl6GzkDJkZFRu4CAVm6rRGbqNlVgh-V38lID8Vrm-y993sQucIyFkXeNW_8O4Y3fNfvbB5hFgkt94xYaPNYo0PXXCaF3HzHmj1SNH0GkIBfYcWh-cAzysdpbKVcGHZy9YVXjiEiTN6max7GEMMuYgrH94LJ62evq8kIZgp-Zpf2DnEfMmSH_H8JfVGjxXoeossHkA1GRFT-XMMJaA_fzwibi_IJsVIKCRuauoDsRn4WGHmPssyw9ruO5M2tUY07vv6z7tPdBlL3gu4kRWYmuimNvL8LZUlbJW3quZnYM6xa4eZ0RBLHbuV1LPQcuXP7U4nrIIYNI__DU_dT43Opp_ADRVPtWbnPd4ufanxczNghIRXkyjRlunS4PHaXj9qiJtidW0xaz0f29R8X1evYwZRXrGZPZ8BxsYEzD5ca_kKGzysES5&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9260",
+        "image": "/cafe-photos/cafe-shillong/photo-1.jpg"
       },
       {
         "name": "Mountain Cardamom Infusion",
         "description": "A delicate local black tea infused with hand-crushed wild cardamom pods and local orange blossom honey.",
-        "price": "₹140",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uNFFc8ejx1FZ18fqdiYx1CjDkSu-hLaJ8tTlPKzYk5ebjijV28oe_YomoB785AogHsLUHttx7IJxwFgCZ-hRODxKmv-u7TilqwcqKUrQdyNT_OeU2UQgdh1dclM1M9FKvrhZ90DkP9IHLWxyCQ4IBWhpcfO6x2IZn9o2F7Qu_CX5jEx4hVZtvU9DsxCTlPsOYyRMnzPNWrpBv6EEpCuqH4EYV3-ULINdDq-wD7LBBHby7t69kd_m7psGJ7oJFulYpVxN7vpAn72cp6z6QeudZlF50m8YWmc0YXZT_EfZiTTIdK_nqbjoS5Icxzge-KM9_FBQFwfaR-OZEH--yJqMnFsT2LSlT8IOVNWxm4ilFsgM9WJhdpUpOxltur_h5bGcNy_r6FdJd0M8KYk5Nd1Qsjl7Y4wjvzSeCsLwDO1q0zVCxD_l6N-YTJ9o0PHw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9140",
+        "image": "/cafe-photos/cafe-shillong/photo-2.jpg"
+      },
+      {
+        "name": "Legacy Espresso Torte",
+        "description": "A rich, dense chocolate torte infused with premium espresso, a perfect companion for jazz melodies on a rainy Shillong afternoon.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/cafe-shillong/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "gallery": [
@@ -385,13 +413,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 12:00 – 10:00 PM",
-      "Tuesday: 12:00 – 10:00 PM",
-      "Wednesday: 12:00 – 10:00 PM",
-      "Thursday: 12:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 10:00 PM"
+      "Monday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/cafe-shillong/photo-0.jpg",
@@ -405,7 +433,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -416,7 +444,7 @@
     "theme": "Folk Rock Homage",
     "introduction": "Named in homage to Bob Dylan, who enjoys a legendary cult status in Shillong and Northeast India. This split-level student haven is filled with guitar-shaped wood tables, hand-painted ceiling tiles left behind by creative patrons, and album covers spanning the 60s and 70s. It stands on a hillside, overlooking Laitumkhrah's misty pine slopes.",
     "whyVisit": "Grab a cozy corner couch on a foggy afternoon, choose a hand-drawn mug, and let the vintage folk-rock acoustics carry you away.",
-    "hours": "11:00 AM — 9:00 PM (Daily)",
+    "hours": "11:00 AM \u2014 9:00 PM (Daily)",
     "address": "Dhankheti, Malki, Shillong 793001 (Near Malki Point)",
     "neighborhood": "Dhankheti",
     "images": {
@@ -439,14 +467,28 @@
       {
         "name": "Blowin' in the Wind Cappuccino",
         "description": "A dark double-ristretto with velvety micro-foam, dusted with organic cocoa powder in the shape of Dylan's signature acoustic guitar.",
-        "price": "₹160",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tear3XQLm0iMcTgADKFa8KLPQwOU8vevdC3q_5LbRNIYRgz_QR4LoGEvq6UxjSz2c9dqjxoDKuwNOxfrUZf_fdtamuuA-fm-vUMrwbyYgK33yeVRHRELmzwqIWhEUAleiDeCBSNbPmQ47jQt88CVFT_tTBbqwW8dVaxh3UERK4SmJlELZLl9dW9g4GuS7gyx7UmZ8GKMbubeX25BX__wP_78E8yALi0n5q9lfhUM35z7vEUpcM2xdekSLUmOCreoYX58pzWZj1v4KRZk16_IUMFaTOJlECA3NWTTs_wM4YsA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9160",
+        "image": "/cafe-photos/dylans-cafe/photo-0.jpg"
       },
       {
         "name": "Old-School Hot Apple Pie",
         "description": "Fresh local hill apples spiced with cinnamon, baked under a rich, golden butter pastry lattice and served with wild vanilla cream.",
-        "price": "₹190",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-taxWqdmiAMWb0ZqP4O-YVeG_kICWGotocuvu17l4CR43fFjJ5TODWXzkXUhPx4EIzf4QBkm2Pbj02PZOVZpIec-HeeAJC00R37z56UvkanaUBe9Zqha07d542PTREv_51E2aL_u7X8rAU5HvJ6yWx71EjhM6Sm-RB1yjUbwKEPrGfWVAA-kFBZ_eWNUI1YdYdkZTv8YW8MVUmFxHrpgaCWeFVrtICbKVA4VDxaNQ1ruYdo0E02I0kuTLKpIP6-Q4VnhLtss-eW1mB-UjbZUnRCjyob6YRoiZLRme9auP0XGA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9190",
+        "image": "/cafe-photos/dylans-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Mr. Tambourine Man's Mushroom Melt",
+        "description": "Saut\u00e9ed mushrooms, caramelized onions, and gooey cheese, perfectly grilled between rustic bread, served with a side salad.",
+        "price": "\u20b9360",
+        "image": "/cafe-photos/dylans-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Hurricane Hibiscus Iced Tea",
+        "description": "A vibrant, tangy iced tea brewed with hibiscus flowers and a hint of ginger, offering a refreshing storm of flavour.",
+        "price": "\u20b9190",
+        "image": "/cafe-photos/dylans-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "gallery": [
@@ -478,12 +520,12 @@
       "store"
     ],
     "opening_hours": [
-      "Monday: 10:30 AM – 9:00 PM",
-      "Tuesday: 10:30 AM – 9:00 PM",
-      "Wednesday: 10:30 AM – 9:00 PM",
-      "Thursday: 10:30 AM – 9:00 PM",
-      "Friday: 10:30 AM – 9:00 PM",
-      "Saturday: 10:30 AM – 9:00 PM",
+      "Monday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
       "Sunday: Closed"
     ],
     "photos": [
@@ -497,7 +539,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700
   },
@@ -508,7 +550,7 @@
     "theme": "Biker and Pine Forest Trails",
     "introduction": "Branded with Shillong's regional registration prefix, ML 05, this striking glass-walled shelter lies nestled under tall, towering pines just off the highway. It combines dynamic, garage-inspired metal-working with the warm embrace of a rustic cozy log cabin, displaying vintage custom motorcycles hanging from the timber rafters.",
     "whyVisit": "To experience an iconic highway stopover, enjoying dense pine air and hearing local riders share travel trails over firewood hearths.",
-    "hours": "10:30 AM — 8:30 PM (Daily)",
+    "hours": "10:30 AM \u2014 8:30 PM (Daily)",
     "address": "National Highway 40, Eastern Bypass, Shillong (Before Pine Forest Trails)",
     "neighborhood": "Golf Links",
     "images": {
@@ -531,14 +573,28 @@
       {
         "name": "Highway French Press Coffee",
         "description": "A bold, dark-roasted tribal blend direct from regional growers, pressed rich and robust to warm travelers from the dense morning fog.",
-        "price": "₹150",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uduUHOtxvOpj0wuHjnKbmLY9MbcPy1MUMaJrYc8x-tU0ogY1FrdB0IDH7QZSX3ScvQLQJGRY40cNM93TmlXr0Ymz75hqGDSdAucBoLjn2_ASFBkwzrEjoMEoh-yY7zeFWUh-1n1OLMRngjwe5b4dxlEWURknJCQWOo3G3Xc22ICX2_hs9iz3fUc7uw6bkaG9mZFUgyvJLgcjQx9AWir97qKj0w8RlCDP169Vq5FyvHrK2vVA9OlTVYRFgwd3t7F0JHZqL7yf-tuCZQw8wRCZY_oIGXrOUDFz5OxdSBViYv9Woeaae1wE-9fzDe0ZvbiDDw1AqAA32uiCochrPY8r6kLQkiC0j7s70mUda2UB27fkifee2gUl4cXAoR-lwWx2ZXvtSqU9yYPS1dauWz7HyC-BYTfYXMVMo5KezJdJJJjm_u3EeWnguKMo9fZQIq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9150",
+        "image": "/cafe-photos/ml-05-cafe/photo-0.jpg"
       },
       {
         "name": "Wild Pepper Smoked Pork Fry",
         "description": "Spicy pork belly wok-tossed with local black pepper, hand-harvested wild coriander, and mountain ghost chilly flakes.",
-        "price": "₹240",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-spW-2TwzXX1H3Hs9kcaZ32FS5KAloVEK56RgRV2SEZ3a6YjNCdP1Cl5MeFIVVhwXomg-ZdkD_0wGW6ZP-NHNIOnaFOXMXAILb8ckXztCjc5VHB1ChGq2HBgYeo2qJyfclj_kLlDift_Je3g-9PsguSFPefJj5PY7ShFDa_Hwpef4FX5AbN51VfUo8XI_Tf3lF79wC3NQcXZPOVIuRynUCBCTK3AxhUMozIoo0OVP6BWazWQl1xTDvIj7cxJT6g8Eg5CG02aDAi_MNySTqq4DND3zmfILGJfj4In9oRjzGzZkEcEo1XtGvknh5xCGKerOnIoLZorVaamlmFrvlpa4NxFBxVvfWhcMy6NcFOlLTLPK6rmxbZr4r4fEKjZ-Q9_vnyfPp1Sa71sU1hO4OwIJoht-YVI8OLzN6M3kbepJTJ7sn8XrXD6OZihRh7qbyF&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9240",
+        "image": "/cafe-photos/ml-05-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Pine Canopy Chicken Burger",
+        "description": "Grilled chicken patty, smoked cheese, caramelized onions, and a creamy herb sauce, served on a toasted brioche bun.",
+        "price": "\u20b9485",
+        "image": "/cafe-photos/ml-05-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Pine Cone Waffles",
+        "description": "Freshly made waffles, shaped like mini pine cones, dusted with powdered sugar, served with local berry compote and maple drizzle.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/ml-05-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "gallery": [
@@ -570,13 +626,13 @@
       "store"
     ],
     "opening_hours": [
-      "Monday: 10:00 AM – 8:30 PM",
-      "Tuesday: 10:00 AM – 8:30 PM",
-      "Wednesday: 10:00 AM – 8:30 PM",
-      "Thursday: 10:00 AM – 8:30 PM",
-      "Friday: 10:00 AM – 8:30 PM",
-      "Saturday: 10:00 AM – 8:30 PM",
-      "Sunday: 10:00 AM – 8:30 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM"
     ],
     "photos": [
       "/cafe-photos/ml-05-cafe/photo-0.jpg",
@@ -590,7 +646,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -601,7 +657,7 @@
     "theme": "Zen Light Wood and Reading Rails",
     "introduction": "A beautiful, meditative cedarwood loft capturing filtered daylight. High cathedral glass ceilings and endless bookshelves line the walls, creating a serene, silent creative studio for writers, local illustrators, and remote workers looking for a quiet, focused headspace under the pines.",
     "whyVisit": "To experience a deeply quiet, calm environment where the scratch of a pen or the trickle of rain is the only sound, surrounded by independent literature.",
-    "hours": "11:00 AM — 8:00 PM (Closed Mondays)",
+    "hours": "11:00 AM \u2014 8:00 PM (Closed Mondays)",
     "address": "Pine Tree Close, Golf Links Area, Shillong 793001",
     "neighborhood": "Golf Links",
     "images": {
@@ -622,8 +678,29 @@
       {
         "name": "Filtered White Honey Pour-Over",
         "description": "A clean, paper-filtered light roast revealing delicate notes of white mountain jasmine and raw, regional wildflower honey.",
-        "price": "₹190",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sleT--UQQNZv3sUSpXxZiQuYIcWxHxTNNiQi4a5BmY_ZgCE24gmjoHxf0sCJ3AN33yARKCtNzK9WCe4UZmE5A0QH59RXHBamMYKLjk_Zvg5LW_5YtHQ_JCNfSjcfMHA8BhZg84RCgT_HnWjBeVwnSErGP9i4lLt7RMMIeOfoNshimOX86KttCHqj-DDQlFPB0hQTigIl0MaUxzvXbhOavRDc6fdw8vVTWB0yNOFo-4KV1N6qzlbxsNWrPJ_QzYQSlGGjpaLY6k2zcHnGjng4ANVI5-FG2D15deaKYo0qgVUTgoUNca1r2_weV2vxvAFQPHWGN-2pdfSVNzHS7afWJHvMCenp9U9_KmGgSiP6Dnae7A8KIi3Rt4fovaxGShSuiqsop7XbbXKhzd-WIu82a5pp7PtUxrpVcQqRXwKdI&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9190",
+        "image": "/cafe-photos/pine-loft/photo-0.jpg"
+      },
+      {
+        "name": "Shillong Strawberry & Basil Spritzer",
+        "description": "A vibrant blend of local strawberries, fresh basil, and sparkling water, offering a crisp and rejuvenating sip perfect for quiet contemplation.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/pine-loft/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Forest Berry & Cream Cheese Toast",
+        "description": "Toasted artisanal bread generously spread with creamy cheese and topped with seasonal forest berries and a hint of mint.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/pine-loft/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Misty Mountain Matcha Latte",
+        "description": "A serene blend of ceremonial grade matcha, steamed milk, and a touch of organic sweetness, embodying Shillong's tranquil hills.",
+        "price": "\u20b9350",
+        "image": "/cafe-photos/pine-loft/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "gallery": [
@@ -652,12 +729,12 @@
       "point_of_interest"
     ],
     "opening_hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 11:00 AM – 10:00 PM",
-      "Thursday: 11:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 10:00 PM",
-      "Saturday: 11:00 AM – 10:00 PM",
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
       "Sunday: Closed"
     ],
     "photos": [
@@ -672,7 +749,7 @@
     "match_confidence": 0.6,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -683,7 +760,7 @@
     "theme": "Independent Jams & Warm Lattes",
     "introduction": "Tucked inside the lively heart of Police Bazaar, this classic, high-vibe cafe is a canvas for local independent academic artists. Its brick-walls are adorned with signed guitars, and a cozy central stage hosts open mics, bringing regional storytellers together over steaming cups of hand-pressed espressos.",
     "whyVisit": "To sit close to the stage, enjoying Shillong's celebrated acoustic scene with friendly, music-loving crowds.",
-    "hours": "12:00 PM — 9:00 PM (Daily)",
+    "hours": "12:00 PM \u2014 9:00 PM (Daily)",
     "address": "Acoustic Lane, Police Bazaar Circle, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -704,8 +781,29 @@
       {
         "name": "Cinnamon Spiced Latte",
         "description": "A smooth double shot of espresso steamed with local organic cinnamon sticks and nutmeg shavings, bringing festive mountain vibes to your table.",
-        "price": "₹170",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v4r8x-j8Cy_nEQudByHVzkOKLqMH6P2RVKj6ivYRKss4rGkf0sRE8PLy-kmw9FnL6RdFOBWX1T3EdSe3cjCdpQVouF0FTgRQMBCaWbn9ShZ2lCnPUEEt3dypGUihBRzfg4DUUaWdLH2Xq6GztazqnUVEz7tG6nJZasWzUJU9QRQtKg02N-nY4BEidtCARd1xAr-RpD_jYAdOae7ZegKOyY3OMdue3qR4ZiKoh5RDY033oKUuDvAOWVhyxHRNepdpGkv7aNvmduGIzlExeoiBiH4_ZMZIzoqK9Yk5S1LDnGJcfI9GRU3QaKvPNBgPpk3iRSJdy641OJwqPUF2jqRPoEbI0btTE6YVH32n0p6VdKam0xoikkyLwl1JXnmFNSlkMqcfyulaJtHpLjTmiPyNuNNH5lzOARH88Ud5O-0Dr61uHXKUTBvq4IPU69pkGK&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9170",
+        "image": "/cafe-photos/melody-beans/photo-0.jpg"
+      },
+      {
+        "name": "Acoustic Mocha",
+        "description": "A soulful blend of rich espresso, dark chocolate, and steamed milk, topped with a swirl of cream, perfect for acoustic evenings.",
+        "price": "\u20b9290",
+        "image": "/cafe-photos/melody-beans/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Police Bazaar Chicken Wrap",
+        "description": "Tender grilled chicken, fresh garden greens, and a zesty cream sauce, wrapped in a warm tortilla for a satisfying bite.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/melody-beans/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Mountain Berry Crumble",
+        "description": "Warm baked local berries beneath a golden oat crumble, served with a scoop of creamy vanilla ice cream.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/melody-beans/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "gallery": [
@@ -735,13 +833,13 @@
       "point_of_interest"
     ],
     "opening_hours": [
-      "Monday: 11:30 AM – 10:00 PM",
-      "Tuesday: 11:30 AM – 10:00 PM",
-      "Wednesday: 11:30 AM – 10:00 PM",
-      "Thursday: 11:30 AM – 10:00 PM",
-      "Friday: 11:30 AM – 10:00 PM",
-      "Saturday: 11:30 AM – 10:00 PM",
-      "Sunday: 11:30 AM – 10:00 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/melody-beans/photo-0.jpg",
@@ -754,7 +852,7 @@
     "khasi_food_available": false,
     "match_confidence": 0,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700
   },
@@ -765,7 +863,7 @@
     "theme": "Endemic Plants and Rain Pools",
     "introduction": "Step inside a magical glass-domed greenhouse filled with vertical moss columns, native Khasi ferns, and slow-dripping slate waterfalls. It's a botanical temple combining local ecology with specialized cold brewing, letting you breathe pure, humid mountain forest air while escaping the chilly street winds.",
     "whyVisit": "The tropical warmth, earthy scent of wet soil, trickling stream sounds, and visual comfort of hundreds of green ferns.",
-    "hours": "10:00 AM — 7:30 PM (Daily)",
+    "hours": "10:00 AM \u2014 7:30 PM (Daily)",
     "address": "Valley Walkway, Pine Forest Ridge, Shillong 793002",
     "neighborhood": "Golf Links",
     "images": {
@@ -786,8 +884,29 @@
       {
         "name": "Wild Mint Slow Cold Brew",
         "description": "Espresso grounds cold-dripped for 14 hours over ice slabs, infused with crushed organic wild mint leaf syrup.",
-        "price": "₹200",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v1qpPqgRmOqBhlZi46l6vJLuK2CSdkq9Y5dhWOJWclp706xq6iacaDj4sBGY0t8xRWxDaJP5nHhHemx8oP0cUyW4q6NgE2U4yxNFY7e0ullYXI3J6grZj1Dc0ziSHw_DBwGEXDYzzLPcS3dvTec2JB1vAQm0fn_BkB6-b0gamXpuRRokalNzX00d6rT1sYZU7APkdzgr9473qYbf-lbNv0LfafPJSsmSOu4glH0wcSo23W9Oeva0Zw-f7cvRymfQT6m936ZmOI1fsFv2bZ-KnVntebwBc-som01RtIbKpkqg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9200",
+        "image": "/cafe-photos/fern-mist-garden/photo-0.jpg"
+      },
+      {
+        "name": "Sohiong Garden Spritzer",
+        "description": "A vibrant spritzer featuring indigenous Sohiong berries, infused with subtle botanicals for a refreshing, misty garden taste.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/fern-mist-garden/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Forest Greens Tart",
+        "description": "A savoury tart filled with seasonal garden greens, wild mushrooms, and creamy cheese, evoking the rich forest floor.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/fern-mist-garden/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Dewdrop Citrus Panna Cotta",
+        "description": "A silken panna cotta infused with subtle local citrus zest, topped with a delicate 'dewdrop' jelly, a refreshing botanical treat.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/fern-mist-garden/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "gallery": [
@@ -817,12 +936,12 @@
     ],
     "opening_hours": [
       "Monday: Closed",
-      "Tuesday: 12:00 – 8:30 PM",
-      "Wednesday: 12:00 – 8:30 PM",
-      "Thursday: 12:00 – 8:30 PM",
-      "Friday: 12:00 – 9:00 PM",
-      "Saturday: 12:00 – 9:30 PM",
-      "Sunday: 12:00 – 9:30 PM"
+      "Tuesday: 12:00\u2009\u2013\u20098:30\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20098:30\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20098:30\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20099:30\u202fPM"
     ],
     "photos": [
       "/cafe-photos/fern-mist-garden/photo-0.jpg",
@@ -835,7 +954,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.3,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700
   },
@@ -846,7 +965,7 @@
     "theme": "Traditional Jadoh Stall & Indigenous Flavors",
     "introduction": "Trattoria is Shillong's legendary, bustling culinary landmark. Famously located in the dense alleys of Police Bazaar, it serves as the ultimate gateway to real Khasi home cooking, where steaming pots of spiced mountain ginger and whole black sesame satisfy local crowds daily.",
     "whyVisit": "To experience authentic, unaltered Khasi food in a casual, traditional atmosphere with extremely friendly local diners.",
-    "hours": "11:30 AM — 9:00 PM (Sundays Closed)",
+    "hours": "11:30 AM \u2014 9:00 PM (Sundays Closed)",
     "address": "Police Bazaar Circle, Next to old assembly, Police Bazaar, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "hasLiveMusic": false,
@@ -861,14 +980,28 @@
       {
         "name": "Signature Jadoh Pork Stock Rice",
         "description": "High-altitude local short-grain red hill rice slow-brewed in seasoned pork loin broth, mountain wild ginger, and shallot oil.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sDkuQIH0HGXTLYX2GnsyjGYU-kYmGTVpJVCCFG_F0MqKohtAlbT3aXQ0zJKsQFQgfCA1Qr2QaXy0i3Kf6qyYa0Dc3aprdJXEYGoz3umHnnBEYGpGVEgvcs2Xollc95yUIAycGH5rVGn7SVHe65j1t0H9_UejL4dptfVIAEdc6gqW72Zs8vHco1zl0pMJf2fdVijsM1cP8MmHdeOp0ook9SDbXdK0z_kR3kuZy9lm9_c7XkPlrwJsgrNvmo3jKT_VO6QQHevfpDBOqDolfzts3jn5hwEYjs6V37aKyAGHZUMF28KNFMjMPdY5keHqO-j74uMaIGaZd1OtUTe1gGgUhWTUPhOXyqZ8YNVgX__UkRaUa0Q5QR-w1Z_5KmWWke_79xXqovoP91Mup2x_CjcNPM1oLSAyhNtZ1SUFG4RpETFFNHbnhCaxnrXce1UmEV&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/trattoria-shillong-pb/photo-0.jpg"
       },
       {
         "name": "Dohkhlieh local Onion Salad",
         "description": "A cold traditional pork dish tossed with local red onions, green mountain chilies, and hand-shredded fresh ginger leaves.",
-        "price": "₹140",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t5P6t1N7zVlZZnndesqrpZF7utquT_r7KVJJrOGhV6Dmb_RPQNOMbrBykZNTvkRaTGM-44-mJJQ3x_D_Hr0mOgcBAOn3cU4dlC_ozLplVTRV8evimf7TNdI836JN13j83YadHGN7Beu2lV6H4kgOJ5tT-H1Kg9d5bB4vNkXX9JqpEOdywdYNiGmaxLRuTX5c7KBxnEALgXEhAHLciDVQagrfNbH601lT4Rm2JsDvt7N71qzTukL8Bv_5SjwILHNEIdvo4b-0qz4QjoR3rw8hYWbn9wdKmmXNkDoYVAy8jHXmiBAhblbbpWd5K3zKxxg0dQx8QC2eRfBTNHKymMHxHXy7a9VR5UKVK1HspP9P9uNa9onj44UEoyaeDlH9Pf_G4B3oBPm1cJplqDnx8H91vBzYH_JGVc9KFqYJcZkYBh45jMxwLkZiuYHZAddf0J&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9140",
+        "image": "/cafe-photos/trattoria-shillong-pb/photo-1.jpg"
+      },
+      {
+        "name": "Dohneiiong",
+        "description": "Succulent pork slow-cooked in a rich, aromatic black sesame paste with indigenous spices, a true Khasi delicacy.",
+        "price": "\u20b9450",
+        "image": "/cafe-photos/trattoria-shillong-pb/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Putharo & Tungtap",
+        "description": "Crispy deep-fried rice flour bread served with a pungent, flavorful dry fish chutney, a beloved Khasi staple.",
+        "price": "\u20b9220",
+        "image": "/cafe-photos/trattoria-shillong-pb/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -904,12 +1037,12 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 11:00 AM – 9:00 PM",
-      "Tuesday: 11:00 AM – 9:00 PM",
-      "Wednesday: 11:00 AM – 9:00 PM",
-      "Thursday: 11:00 AM – 9:00 PM",
-      "Friday: 11:00 AM – 9:00 PM",
-      "Saturday: 11:00 AM – 9:00 PM",
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
       "Sunday: Closed"
     ],
     "photos": [
@@ -923,7 +1056,7 @@
     "khasi_food_available": true,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700
   },
@@ -934,7 +1067,7 @@
     "theme": "Classic Rock Lounge with Live Mic & Vinyl",
     "introduction": "The Evening Club is one of Shillong's oldest and most iconic live music spots. Nestled on a high balcony overlooking the valley, it features an elegant wooden rooftop lounge where classic vintage rock vinyls, warm firepits, and acoustic stages keep Laitumkhrah's musical hearth burning.",
     "whyVisit": "To grab a drink on their elevated rooftop deck during the golden hour, followed by live classic rock band gigs under warm yellow lanterns.",
-    "hours": "4:00 PM — 11:00 PM (Closed Tuesdays)",
+    "hours": "4:00 PM \u2014 11:00 PM (Closed Tuesdays)",
     "address": "Khyndailad, Laitumkhrah Main Road, Shillong 793003",
     "neighborhood": "Police Bazaar",
     "hasLiveMusic": true,
@@ -949,8 +1082,29 @@
       {
         "name": "Mountain Cardamom Spicewood Infusion",
         "description": "Stirred high-altitude local black tea-cocktail infused with toasted wild cardamom, clove bark, and organic molasses.",
-        "price": "₹190",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-s5p1qBHT3B9Y9so6B_KDAZ2laF96XTfpPbsKsIAfE5dRkuSliprufqCBCL_Sirt5esJ4LpZCLxx1ADo5MoIk_pGGni5ubg7NseD4qllTVicwVHdoPOWJ5075urAK392ztgQDbvTdHqQjv38lPWsUEZ08y929WdqCC77e8dblVjTNTIHfTa2eaq8uu7VFA7bsLGz91OTZyT84bGCNCAXbMHGIV3SF_PjbyuMK5XMhy3jMpxBdMBE6-qAUdGB1UYDzJew7dSjyypMocie50vh_ssHTZAwyhjOobD2ze3zFnEnuH9X4NzjL_hwdFlC4LH5sx-wWwP7IJXjyZAq09l2gmTVJezoLaBgAmxpCtvx84puhxd1p4S5mrS4OLzoSu1h-UpWQVvaP9URkzR2z9tHBMgx8rcANxN2h0l1wOQNfTLiRzhtxW9opxOzrRskAJq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9190",
+        "image": "/cafe-photos/evening-club-laitumkhrah/photo-0.jpg"
+      },
+      {
+        "name": "Purple Haze Punch",
+        "description": "A vibrant, refreshing berry and citrus mocktail, echoing the psychedelic spirit of classic rock.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/evening-club-laitumkhrah/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Whole Lotta Love Nachos",
+        "description": "Crispy tortilla chips generously loaded with melted cheese, fresh salsa, jalape\u00f1os, and creamy sour cream.",
+        "price": "\u20b9390",
+        "image": "/cafe-photos/evening-club-laitumkhrah/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Comfortably Numb Mac N' Cheese",
+        "description": "A rich, creamy baked mac and cheese, offering ultimate comfort on a cool Shillong evening.",
+        "price": "\u20b9480",
+        "image": "/cafe-photos/evening-club-laitumkhrah/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -985,12 +1139,12 @@
       "point_of_interest"
     ],
     "opening_hours": [
-      "Monday: 1:00 – 11:00 PM",
-      "Tuesday: 1:00 – 11:00 PM",
-      "Wednesday: 1:00 – 11:00 PM",
-      "Thursday: 1:00 – 11:00 PM",
-      "Friday: 1:00 PM – 12:00 AM",
-      "Saturday: 2:00 PM – 12:30 AM",
+      "Monday: 1:00\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 1:00\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 1:00\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 1:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 1:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 2:00\u202fPM\u2009\u2013\u200912:30\u202fAM",
       "Sunday: Closed"
     ],
     "photos": [
@@ -1004,7 +1158,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700,
     "neighborhood_verified": true,
@@ -1019,7 +1173,7 @@
     "theme": "Premium Pine Lawn & Cascading Slate Waters",
     "introduction": "Jiva Grill brings an absolute visual masterpiece of fine dining to the foothills. Surrounded by towering emerald pines and cascading fresh slate waterfall constructs, this gorgeous premium dining retreat offers pristine outdoor glass seating, romantic stone fire pits, and exemplary multi-cuisine sizzlers.",
     "whyVisit": "To experience a luxury, scenic dinner alongside live flame grills and cascading mountain pools under the starry night sky.",
-    "hours": "11:00 AM — 10:30 PM (Daily)",
+    "hours": "11:00 AM \u2014 10:30 PM (Daily)",
     "address": "Nongkynrih Main Road, Behind Pinewood Gates, Shillong 793003",
     "neighborhood": "Nongkynrih",
     "hasLiveMusic": false,
@@ -1035,8 +1189,29 @@
       {
         "name": "Stone Grilled Mughlai Platter",
         "description": "Hand-skewered local ingredients and tender lamb pieces, slow charcoal-roasted on local hot mountain basalt tiles and served with mint dip.",
-        "price": "₹420",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vArYulUQyB3ouKkumdWytY1Blfv7tBPNGlyXZ4zk36qMOFWVnNnTlePw1TeMvaUl67f6bIxmj2JS5RN1tKfaA6n0KxeWTzXmLMNDTpUyAS_tx4APnImuGv050ib9nW5Bu9BkCzkqkg2zZUO39a0Vrjb4HDvIh66Sij0W8fYiYmd6LaqEI-SzW6XnJbX6ptptrUe3jiiL-q9I7x4rXKRwOfNE-uoeXtUqKP2Xvq4_O6ttZbgw-fNjdx5ojaQiz84pg-qodsef7X1-D9UXucaF6BF2-ltcsyCeum5ulY_asSZ1cs8s0D3TV62XTfAMT0_smvY-tt33Jm4KRTRMQEFN4puesyW3A7okHknpGvZLqqKY4dtR_ASPWRd0hdiUEQg_JoQPz7APz43hxG3MmE5gntLa3VWEzZ1ExCl0b4LKE&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9420",
+        "image": "/cafe-photos/jiva-grill-nongkynrih/photo-0.jpg"
+      },
+      {
+        "name": "Jiva Cascade Cooler",
+        "description": "A vibrant mocktail blending fresh berries, mint, lime, and sparkling water, mirroring the cafe's serene cascading pools.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/jiva-grill-nongkynrih/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Char-Grilled Rosemary Chicken with Garlic Mash",
+        "description": "Succulent chicken breast marinated in rosemary and garlic, char-grilled, served with creamy mashed potatoes and seasonal greens.",
+        "price": "\u20b9595",
+        "image": "/cafe-photos/jiva-grill-nongkynrih/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Shillong Mist Souffl\u00e9 Cheesecake",
+        "description": "Light and airy cheesecake with a hint of local citrus, baked to a perfect souffl\u00e9-like texture, garnished with edible flowers.",
+        "price": "\u20b9480",
+        "image": "/cafe-photos/jiva-grill-nongkynrih/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1072,13 +1247,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 12:00 – 5:00 PM",
-      "Tuesday: 12:00 – 5:00 PM",
-      "Wednesday: 12:00 – 5:00 PM",
-      "Thursday: 12:00 – 5:00 PM",
-      "Friday: 12:00 – 5:00 PM",
-      "Saturday: 12:00 – 5:00 PM",
-      "Sunday: 12:00 – 5:00 PM"
+      "Monday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20095:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/jiva-grill-nongkynrih/photo-0.jpg",
@@ -1091,7 +1266,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700,
     "rooftop_verified": false,
@@ -1104,12 +1279,12 @@
     "theme": "Wooden Countertop Cozy & Morning Bakes",
     "introduction": "Bread Cafe is a beloved traditional bakery and coffee counter in the center of town. With sprawling wooden shelves covered in fresh loaves, morning croissants, and sweet local pastries, it serves as the ultimate early-morning cozy shelter for travelers and students sipping espresso drafts.",
     "whyVisit": "To enjoy newly baked warm butter croissants paired with a silky single-origin espresso shot right after the morning fog lifts.",
-    "hours": "8:00 AM — 9:00 PM (Daily)",
+    "hours": "8:00 AM \u2014 9:00 PM (Daily)",
     "address": "Bara Bazaar Crossing, Police Bazaar, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "hasLiveMusic": false,
     "vibeTags": [
-      "Cozy Café",
+      "Cozy Caf\u00e9",
       "Warm Bakes",
       "Bustling Center",
       "Loft Seating",
@@ -1119,8 +1294,29 @@
       {
         "name": "Warm Butter Cranberry Croissant",
         "description": "Flaky, multi-layered golden croissant stuffed with locally sourced sweetened wild mountain berries and rich butter glaze.",
-        "price": "₹120",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tKDIJiaVSeO7aFuoc8kXktcFxjqbILhcpSfbj3tzYvmJ_FW7_2_oMWyKeMYWHUa9IReuHvQCvq_zK4bcIOdneb2rteZ-KIb09477rL4vPjrlng0P3JTO4PIxFOT3pljxiICItOh0TC9LM3jyM40DMj5xT15g38dHGvTG0tyL5Sw96vBblLpKl_eaBnqdZXeS5ilOOQbiOlTmjOZzUSVHmuehM_VfYdV0D0Y3uDXln3FgF-XKpf9a14KSG-lHcfGrCTSQugpLd38KUuB9zOLl3s4Q3eanGyneeU9wAE8c_lZHPni80DPuZY2XfF6KtyzdNEQNO6aj5f8RPudXjgxsZBe5g1lZlkQfDLS_IDRmbiLKxEFv-ieTSqpFIH8a0wjHoOXHlEu048rmWD-_pF_Ty2aiFYP6J11BpIR88yImfyxQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9120",
+        "image": "/cafe-photos/bread-cafe-pb/photo-0.jpg"
+      },
+      {
+        "name": "Shillong Sunrise Baked Eggs",
+        "description": "Two eggs baked with spinach, cherry tomatoes, and creamy feta, served with a side of crusty artisanal sourdough toast.",
+        "price": "\u20b9360",
+        "image": "/cafe-photos/bread-cafe-pb/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Spiced Banana Walnut Loaf",
+        "description": "A comforting slice of moist, fragrant banana bread baked with walnuts and a hint of cinnamon, perfect with your coffee.",
+        "price": "\u20b9220",
+        "image": "/cafe-photos/bread-cafe-pb/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Signature Dark Chocolate Elixir",
+        "description": "Rich, velvety dark chocolate infused with a hint of cinnamon, topped with whipped cream and delicate chocolate shavings.",
+        "price": "\u20b9310",
+        "image": "/cafe-photos/bread-cafe-pb/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1159,13 +1355,13 @@
       "store"
     ],
     "opening_hours": [
-      "Monday: 9:30 AM – 8:00 PM",
-      "Tuesday: 9:30 AM – 8:00 PM",
-      "Wednesday: 9:30 AM – 8:00 PM",
-      "Thursday: 9:30 AM – 8:00 PM",
-      "Friday: 9:30 AM – 8:00 PM",
-      "Saturday: 9:30 AM – 8:00 PM",
-      "Sunday: 9:30 AM – 8:00 PM"
+      "Monday: 9:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Tuesday: 9:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Wednesday: 9:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Thursday: 9:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Friday: 9:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Saturday: 9:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Sunday: 9:30\u202fAM\u2009\u2013\u20098:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/bread-cafe-pb/photo-0.jpg",
@@ -1178,18 +1374,18 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700
   },
   {
     "id": "you-and-i-shared-cafe",
-    "name": "You & I Shared Café",
+    "name": "You & I Shared Caf\u00e9",
     "tagline": "Traditional Khasi High-Tea & Interactive Board Games",
     "theme": "Local Teas, Traditional Board Games, and Bamboo Crafts",
-    "introduction": "You & I Shared Café is an intellectual and cultural sanctuary located in Mawroh, known for being a living museum of Khasi traditions. Adorned with indigenous bamboo furniture, vintage photos, and Khasi musical instruments, it’s a place where guests sit on low stools, sip from over 100 varieties of locally sourced herbal teas, and play traditional board games like 'Khnla-Khylla' (Tiger and Goat).",
+    "introduction": "You & I Shared Caf\u00e9 is an intellectual and cultural sanctuary located in Mawroh, known for being a living museum of Khasi traditions. Adorned with indigenous bamboo furniture, vintage photos, and Khasi musical instruments, it\u2019s a place where guests sit on low stools, sip from over 100 varieties of locally sourced herbal teas, and play traditional board games like 'Khnla-Khylla' (Tiger and Goat).",
     "whyVisit": "To play traditional Khasi timber games, read local folklore books, and experience the slow-brewed Red Tea (Sha Saw) with authentic millet cakes (Pukhlein).",
-    "hours": "11:00 AM — 8:00 PM (Closed Sundays)",
+    "hours": "11:00 AM \u2014 8:00 PM (Closed Sundays)",
     "address": "Mawroh-Pedestrian Road, Mawroh, Near Sunny Hill, Shillong 793008",
     "neighborhood": "Mawroh",
     "images": {
@@ -1210,14 +1406,28 @@
       {
         "name": "Sha Saw & Pukhlein Duo",
         "description": "Authentic Khasi black tea sweetened naturally with wild mountain honey, paired with crispy fried jaggery-infused rice powder cakes.",
-        "price": "₹110",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-u4G_ZQPhKCimB8q8cmYn-AypYa1_skQVrQafJhNuYGzA-D2Rse5OjF761nfZcdNQrvV0DEwTa2Z9-vPYXAzlvxFvMIatvXJ4W48dDApzt8MR9B-JyuX4HEcy7nscY3hPm25YpOdZe3JfTeJigxAB_rguZGQt3dI4vIXlvFSVhNtpaa3YAl0xYdKY7YwKKf6Zur7kL54EZR58ql4b1YI7LZv3OVtgkrvkd-GFA1OsyJdJq4KhlixI8AkIZVvQBes-FwaXKuJ3iLQUGBsNLM75SgP-ByWSYK35S7aVFoqDbOxAwwKrDeD-IdV73ggFAw_n_KCWXleLUgxCY5CU1XxDebwWBhGmUIWziY1EMcsLzMjX3OTCGoR5ZKe3sXkZ0d4hMF8IXIEJ1MwmBzXNvlHpnr-rfIRoUUgl1jxjSJ6Ze2ig&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9110",
+        "image": "/cafe-photos/you-and-i-shared-cafe/photo-0.jpg"
       },
       {
         "name": "Skei Rice Cake Plate",
         "description": "Traditional steamed rice flour dumplings filled with subtle local spices and sweetened wild field coconut slices.",
-        "price": "₹90",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sGDn-orZFt3LK_PkCHaycC-rz1VgXTIDGP4qVN5kkkyCkZKz4p93pjxGQ6RbpTn7RZ7CEuxoLHkg0nslUoMZfKQPft0tFtF_IH6TgR1BlA6mSgdFvIcU_0ms3QwAVmB0C0S4bM7-x4cxU6unxHQ3J_4yb1JGIqcb3qXziMWLW2DVcYdeikzoloeFQEMoRSmIqO8KzFvaoaEwv5529qaDHHBvHpZS7P9ZNshF-usH_9u6ED0Od1WP6v1ZJjbVF_nSGPyQBv4CSxsa3k7mG3OiXAfdgCEm2Lx3JaWRbIUyOq0A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b990",
+        "image": "/cafe-photos/you-and-i-shared-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Sha Ryndia Soothing Brew",
+        "description": "A comforting herbal infusion made from indigenous Ryndia leaves, known for its calming properties, served in a rustic bamboo cup.",
+        "price": "\u20b9180",
+        "image": "/cafe-photos/you-and-i-shared-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Doh Sniang Tungkhap Wrap",
+        "description": "Savory smoked pork, tender bamboo shoots, and fresh greens wrapped in a soft flatbread, a hearty Khasi-inspired snack.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/you-and-i-shared-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1252,12 +1462,12 @@
     ],
     "opening_hours": [
       "Monday: Closed",
-      "Tuesday: 1:30 – 9:30 PM",
-      "Wednesday: 1:30 – 9:30 PM",
-      "Thursday: 1:30 – 9:30 PM",
-      "Friday: 1:30 – 9:30 PM",
-      "Saturday: 1:30 – 9:30 PM",
-      "Sunday: 1:30 – 9:30 PM"
+      "Tuesday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 1:30\u2009\u2013\u20099:30\u202fPM"
     ],
     "photos": [
       "/cafe-photos/you-and-i-shared-cafe/photo-0.jpg",
@@ -1271,7 +1481,7 @@
     "match_confidence": 0,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -1280,9 +1490,9 @@
     "name": "Cafe Sola",
     "tagline": "Retro Rock-Style & Gourmet Continental Bistro",
     "theme": "Retro Vinyls, Electric Guitars & Sizzler Aromas",
-    "introduction": "Located on Laitumkhrah’s bustling main artery, Cafe Sola is a premium diner with a retro-rock layout. Boasting warm brickwork, records signed by legendary regional blues squads, and high metallic barstools, it's beloved for serving the finest sizzling platters, smoked barbecued hamburgers, and rich hot chocolates in town.",
+    "introduction": "Located on Laitumkhrah\u2019s bustling main artery, Cafe Sola is a premium diner with a retro-rock layout. Boasting warm brickwork, records signed by legendary regional blues squads, and high metallic barstools, it's beloved for serving the finest sizzling platters, smoked barbecued hamburgers, and rich hot chocolates in town.",
     "whyVisit": "For an unmatched retro rock diner experience, vibrant chatter, and the ultimate comfort food after a chilly twilight drive.",
-    "hours": "11:30 AM — 9:30 PM (Daily)",
+    "hours": "11:30 AM \u2014 9:30 PM (Daily)",
     "address": "36 Laitumkhrah Main Road, Near Beat Junction, Shillong 793003",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -1303,14 +1513,28 @@
       {
         "name": "Sola Gourmet Smoked Burger",
         "description": "Succulent double-pattied seasoned mountain beef or pork belly on a toasted brioche bun, filled with sharp cheddar, smoked local bacon, and wild berry relish.",
-        "price": "₹340",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vtInyzcFuiFQQdhduj05ganwswylbz_qkYRKTO2j02nA6LjIWnSFG5YPchMN2UqcLKc3zX__Y-uu4CTFA2SX437dHmcQ_aDK1MyS7Kq-MYcKUc4e2bE24Cv7C9iOpvM99MqyCsZoxgnm4a6ADDPcNWGiyrDV8RV5q7lvh5uMmtjj5rEzQkLKZFQwdGEEIYas1Y21Xr9YumVacM2CjVDJ_JCET_4pA6iwH1vyTHnLhFw3c2IFvVffJBj9Gs1sOzq7knnr1EN-yd3Ry8GUJECvp1oAXjD_FBJ_DRuWUfDSTDIZnvcUtgDL4AGqMmelLF_V9_RHxd6qqRcC-C3h7nJd9ZGBZHFLRC6BMsphR2ZlKSLU-1r_m9FaFqA35bgsuiVKmIJ_e1zFwfQUPnteScFH9oJ8RpuG71e6RRX8zD9d-2dA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9340",
+        "image": "/cafe-photos/cafe-sola/photo-0.jpg"
       },
       {
         "name": "Artisanal Spiced Hot Cocoa",
         "description": "Thick artisanal Belgian cocoa simmered with local orange peel zest, cinnamon shavings, and topped with sweet marshmallows.",
-        "price": "₹160",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tozO8Fr3d6Gf7RTIwVc2GTFPC5PLURRMvh00gmVyfaDwQusw-oeh1i1bM4qw7mY2trAevYG2ahJ-3ugzn_fho9kMjBThC41Nvzk_PhaIC4WdGsP97cHehg6H8B5_GDOLq4WbZJq4O3ygHGVRhACLJ4MPltmOo7FDzRHv-_9-XV9n5NjlRvRXRMtEWlX4M9RlWHOvNpj2km3wL6p8l2awNW4ABG3D5IIw1kLiwgV7MiA1VPDQOCMxsjokS58hMhh49RJdt51n1VAUjevadBcU4a8jYBdpDpM57hvxN-tr7QGRHkq8LAWVQ-1jBeb1s2jk7xP-cBsupOp_CbQvyJaYPZAXHPktlzkdwL80NszaoB7H4-lpy8lZ3XlDTfU6hvMkK8MW2rDVg631GcFUq-5r7OkF4KG4TmMo96wO_yeDqiMI2bqB986WUQhj2692kg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9160",
+        "image": "/cafe-photos/cafe-sola/photo-1.jpg"
+      },
+      {
+        "name": "Power Chord Chicken Sizzler",
+        "description": "Juicy grilled chicken, saut\u00e9ed veggies, crispy fries, and a smoky house sauce, served sizzling hot for that ultimate rock 'n' roll experience.",
+        "price": "\u20b9580",
+        "image": "/cafe-photos/cafe-sola/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Jukebox Jolt Shake",
+        "description": "A rich, creamy blend of espresso, caramel, and vanilla ice cream, topped with whipped cream and a sprinkle of cookie crumble.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/cafe-sola/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1341,13 +1565,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 2:00 – 9:00 PM",
-      "Tuesday: 12:00 – 9:00 PM",
-      "Wednesday: 1:00 – 9:00 PM",
-      "Thursday: 1:00 – 9:00 PM",
-      "Friday: 1:00 – 9:00 PM",
-      "Saturday: 1:00 – 9:00 PM",
-      "Sunday: 3:00 – 9:00 PM"
+      "Monday: 2:00\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 1:00\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 1:00\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 1:00\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 1:00\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 3:00\u2009\u2013\u20099:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/cafe-sola/photo-0.jpg",
@@ -1361,7 +1585,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -1370,9 +1594,9 @@
     "name": "Mellow Mood Cafe",
     "tagline": "A Cozy Corner of Books & Acoustic Soul",
     "theme": "Warm Fireplaces, Vintage Bookshelves & Local Art Panels",
-    "introduction": "With rustic low-floor seating, custom-woven Shillong wool carpets, and bookcases packed with vintage poetry, Mellow Mood is Laitumkhrah's ultimate bohemian hideaway. It’s a peaceful living room where independent artwork of Shillong's pine clouds can be admired while a classic logs fireplace crackles softly in the corner.",
+    "introduction": "With rustic low-floor seating, custom-woven Shillong wool carpets, and bookcases packed with vintage poetry, Mellow Mood is Laitumkhrah's ultimate bohemian hideaway. It\u2019s a peaceful living room where independent artwork of Shillong's pine clouds can be admired while a classic logs fireplace crackles softly in the corner.",
     "whyVisit": "To sit cross-legged on comfortable floor seating, sketching or writing while a resident acoustic musician plays gentle folk fingerpicking tunes.",
-    "hours": "11:00 AM — 8:30 PM (Daily)",
+    "hours": "11:00 AM \u2014 8:30 PM (Daily)",
     "address": "Boyce Road East, Next to pine groves, Laitumkhrah, Shillong 793003",
     "neighborhood": "Nongkynrih",
     "images": {
@@ -1393,8 +1617,29 @@
       {
         "name": "Spiced Ginger Honey Brew",
         "description": "Freshly crushed hill ginger roots slow-brewed with wild honey and mountain lemon zest, guaranteed to heal any cold highland chill.",
-        "price": "₹130",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tqXU13OoEqnRj0fRd99Nugfnfy5ToeXqoqcX6OnNkkMGOxS51PQhjm4I7sw-i9-tvXJRl6U_9laNyXESQZCn3HMycoxseV5VI1YtlK1Et0Blp-X6ADuqt4iIhgddpwIRL5L3hwXNjbodrDvzack-u4Tm1B5IOVsGpwlz-hGF3Fi75bA16V_UpMKCneEv5cCGjYtj0KwPmFe3pkbMONMgZG-q9CUJrEme1Cvi7hzl68jQ15V74rjcKY51IJaIrU_STQjuh42AUtbLHDZnzu2v2Ko2xlfqHQJwDLsmJLp_yvFeJwc3tEQb2NfQRRChMOcUpjPPgDxi4KoMHe1AW7eOChGmawbf9vO9Ifyc7_er_kAoDrJbmG3ABBJho1Q5Rf8Kxn3BvhvNqtn4RlkG5oABBCQYP4iGm2g2gusDglFX5hKw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9130",
+        "image": "/cafe-photos/mellow-mood-cafe/photo-0.jpg"
+      },
+      {
+        "name": "Hearthside Mocha Swirl",
+        "description": "A rich dark chocolate mocha infused with a hint of cinnamon, perfect for a cozy fireside read.",
+        "price": "\u20b9220",
+        "image": "/cafe-photos/mellow-mood-cafe/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Woodland Mushroom & Thyme Tartlet",
+        "description": "Flaky pastry tartlet filled with earthy mushrooms, fresh thyme, and creamy cheese, baked to golden perfection.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/mellow-mood-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Berry & Oat Crumble with Vanilla Cream",
+        "description": "Warm baked mixed berries topped with a buttery oat crumble, served with a dollop of fresh vanilla cream.",
+        "price": "\u20b9350",
+        "image": "/cafe-photos/mellow-mood-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1424,7 +1669,7 @@
       "point_of_interest"
     ],
     "opening_hours": [
-      "11:00 AM — 8:30 PM (Daily)"
+      "11:00 AM \u2014 8:30 PM (Daily)"
     ],
     "photos": [
       "/cafe-photos/mellow-mood-cafe/photo-0.jpg",
@@ -1438,7 +1683,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800,
     "neighborhood_verified": true,
@@ -1447,12 +1692,12 @@
   },
   {
     "id": "sip-and-bite-cafe",
-    "name": "Sip & Bite Café",
+    "name": "Sip & Bite Caf\u00e9",
     "tagline": "A Vibrant Fusion of Bites & Music",
     "theme": "High Energy Playlists & Delectable Platters",
-    "introduction": "Located in Police Bazaar, Sip & Bite is a lively, high-contrast cafe with neon signs and pop culture illustrations. Beloved for its budget-friendly continental platters, premium bubble teas, and crispy french fries, it’s a standard student hangout during afternoon recesses.",
+    "introduction": "Located in Police Bazaar, Sip & Bite is a lively, high-contrast cafe with neon signs and pop culture illustrations. Beloved for its budget-friendly continental platters, premium bubble teas, and crispy french fries, it\u2019s a standard student hangout during afternoon recesses.",
     "whyVisit": "To experience vibrant city student life, play a round of table football (foosball), and grab quick hearty bites between tours.",
-    "hours": "10:30 AM — 9:00 PM (Daily)",
+    "hours": "10:30 AM \u2014 9:00 PM (Daily)",
     "address": "Police Bazaar Circle, Near OB Shopping Center, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -1472,9 +1717,30 @@
     "mustTry": [
       {
         "name": "Highland Blueberry Bubble Tea",
-        "description": "Creamy bubble tea infused with locally gathered sweet mountain blueberry purée and chewy tapioca pearls flavor.",
-        "price": "₹150",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t96Zb6vPavrNI4l-hvTGMWNKSM6Wp0hs1Qqs5_kF4X3GI-ds31KubmBtPDW--P92ZqOwc6O98nMivj2D3bQpMchaL6eECwsYkZcUUOMOzCpuq3tA_Xhv0Ly_HYpfKK20ikxEcX71zh5AevaTsj0jX8GC2HE34Cr_36fgcEWa8MQiLC6B6UAMTsZoTMvQRqDRgW7zxJ8TXAiiMf65cWk0kU2ohdxgtH2jG-oILDkfR3xSpcCqT3oIChr-GRLFvWEB-AphCHWRU1Hwhojz-mnyCk7a4O4f_w9mVbkTwkpz2JhsaUVM6LC5B9TDcvASqFGD-xvaqAQQGl74MIaZ21A1CHbfwRfYm1KoVsTni93NdTROltoGT2AHtUUdYP8aQX3SERO0Fhzg-OJpuPBE8ZWTXMeyJ2ziG-cqbCWE8wjznuEjnhkSBo6wquXkxsM67j&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "description": "Creamy bubble tea infused with locally gathered sweet mountain blueberry pur\u00e9e and chewy tapioca pearls flavor.",
+        "price": "\u20b9150",
+        "image": "/cafe-photos/sip-and-bite-cafe/photo-0.jpg"
+      },
+      {
+        "name": "Neon Nacho Overload",
+        "description": "Crispy tortilla chips generously loaded with melted cheese, spicy salsa, jalape\u00f1os, and a dollop of zesty sour cream.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/sip-and-bite-cafe/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Electric Berry Blast Smoothie",
+        "description": "A vibrant, icy blend of mixed berries, yogurt, and a hint of mint, perfect for a refreshing energy boost.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/sip-and-bite-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Spicy Chicken Sizzler Sandwich",
+        "description": "Grilled chicken marinated in fiery spices, loaded with cheese and fresh veggies, pressed between toasted bread.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/sip-and-bite-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1503,13 +1769,13 @@
       "point_of_interest"
     ],
     "opening_hours": [
-      "Monday: 1:00 – 10:00 PM",
-      "Tuesday: 1:00 – 10:00 PM",
-      "Wednesday: 1:00 – 10:00 PM",
-      "Thursday: 1:00 – 10:00 PM",
-      "Friday: 1:00 – 10:00 PM",
-      "Saturday: 1:00 – 10:00 PM",
-      "Sunday: 1:00 – 10:00 PM"
+      "Monday: 1:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 1:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 1:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 1:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 1:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 1:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 1:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/sip-and-bite-cafe/photo-0.jpg",
@@ -1522,7 +1788,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.3,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700
   },
@@ -1533,7 +1799,7 @@
     "theme": "Graffiti Walls, Retro Music & Classic Beef Burgers",
     "introduction": "Strategically hidden near Laitumkhrah's Beat House, Munchies is a legendary outdoor cafe featuring raw graffiti walls, a retro camper-van styled burger counter, and custom picnic benches under broad garden umbrellas. Loved by local musicians, travelers, and university students alike, it is the home of high-energy chatter, superb beef burgers, and giant glasses of milkshakes.",
     "whyVisit": "To eat the iconic Juicy Lucy Burger, experience the lively, authentic Shillong youth scene, and listen to rock classics spinning in the background.",
-    "hours": "12:00 PM — 10:00 PM (Daily)",
+    "hours": "12:00 PM \u2014 10:00 PM (Daily)",
     "address": "Laitumkhrah Main Road, Near Laitumkhrah Beat House, Shillong 793003",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -1554,14 +1820,28 @@
       {
         "name": "The Juicy Lucy Burger",
         "description": "A thick, grilled ground beef patty stuffed with a core of gooey, molten cheddar, topped with hand-carved local pickles and smoky mayonnaise.",
-        "price": "₹240",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uJK_sh1ya9Wohy_buwpTtObmEpDiabcmbDyjOYwNxSuJvMKHuvzb4UFACMa9Jc4xmv5II8JdhhUnjWmzmxLxb5tj3jFIjPfFmZyOiaZtdFizdZ6TtvOfUPHK8-hM1I_qjbtx2m4xvd5eeBrVFNO4bJEcTK_g0DBXmUJ69p4uWlEiSup6zAT4jKLs3mQ8KqxJSYjQBgVwkI5CNkd9vapkS_WmcZ46VDrhpyiCafW3XCrbHp7jg3ViUL4FNWSrtz6cXap7WxYFLJ-ncbX6CHQVDvIMIDiOlC--zDybBISIR1l7X4EwOVogLcqzf-KOj4hlYOTbL6toSx9O80jdSMBvdTyF7s91-ZnTTAO8xV4zZPY4wA_N9VP2PmWvRMTfzba6u0WIsUesnkA0B416nl3DsPEFFp8i7PD_shv1ZxZoo&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9240",
+        "image": "/cafe-photos/munchies-shillong/photo-0.jpg"
       },
       {
         "name": "Munchies Loaded Cheese Fries",
-        "description": "Double-fried hand-cut mountain potatoes covered in melted cheese sauce, hot jalapeños, and sprinkled with smoked bacon crumbles.",
-        "price": "₹160",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tdzpTespMFuYvgTamyVUL7iznkpL1bsdeql3YNakBPo4TLap3Tly8m0Dx0W3JqQLWbOKkQ4QOHPXZhoYlhwv5zXfqA1uhYooLCPrOX6ajP_IWlWIL_GiPUozcDhybmMWg7XkP5-HZaGb4OAAi-gcSNCqZc6xRKouckGfT2li6BeA7-UUyoItwLcYstMT-O_lNzvltDUNX7Lunvn4UHKGg5DOaJwDzpDpXjVuAvOB0uwQ2IBIRZAT-xggbEj-O_1oe_B5glDx4MtOdw1ihtiFe5TGC0FGrKuU1fNaMQ_2a-fpLbGdlHtFOvJUzBaI6c1lyPq_5qY1FgJxWMVKcC11kQK5NJyMTy6i_bIsIkiG_3ifIYJ1VgKsZsixGd-0sBaShQD0qfNmPks2DqzV-vx-S1ZkJTQSXHSEPCFkxtNNDYGkg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "description": "Double-fried hand-cut mountain potatoes covered in melted cheese sauce, hot jalape\u00f1os, and sprinkled with smoked bacon crumbles.",
+        "price": "\u20b9160",
+        "image": "/cafe-photos/munchies-shillong/photo-1.jpg"
+      },
+      {
+        "name": "The Rockabilly Rumble Burger",
+        "description": "A succulent beef patty, smoked bacon, caramelized onions, cheddar cheese, and house BBQ sauce on a toasted bun.",
+        "price": "\u20b9480",
+        "image": "/cafe-photos/munchies-shillong/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "The Jukebox Jam Shake",
+        "description": "A decadent thick shake blending rich chocolate, crunchy cookies, and a swirl of caramel, topped with whipped cream.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/munchies-shillong/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1594,13 +1874,13 @@
       "store"
     ],
     "opening_hours": [
-      "Monday: 11:30 AM – 9:00 PM",
-      "Tuesday: 11:30 AM – 9:00 PM",
-      "Wednesday: 11:30 AM – 9:00 PM",
-      "Thursday: 11:30 AM – 9:00 PM",
-      "Friday: 11:30 AM – 9:00 PM",
-      "Saturday: 11:30 AM – 9:00 PM",
-      "Sunday: 11:30 AM – 9:00 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/munchies-shillong/photo-0.jpg",
@@ -1614,7 +1894,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -1625,7 +1905,7 @@
     "theme": "Sleek Slate Fireplaces, Premium Cocktails, and Intimate Gig Stages",
     "introduction": "The Shillong Cafe is a premium restaurant and cafe situated in Laitumkhrah, bringing a highly polished aesthetic of stone fireplaces, cozy velvet seatings, and warm amber hanging lights. The venue doubles as a hub for Shillong's live musicians, featuring a dedicated stage for intimate acoustic performances, an impressive continental menu ranging from pork chops to mocktails, and an outdoor courtyard for crisp evenings.",
     "whyVisit": "To enjoy gourmet Pork Chops with mountain herbs and witness live local acoustic cover artists perform classic rock tunes.",
-    "hours": "12:00 PM — 10:00 PM (Daily)",
+    "hours": "12:00 PM \u2014 10:00 PM (Daily)",
     "address": "Laitumkhrah Main Road, Near Fire Station, Shillong 793003",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -1646,8 +1926,29 @@
       {
         "name": "Pan-Seared Pork Chops",
         "description": "Premium slow-cooked meat cuts seared with rosemary, mountain butter, and served with a side of creamed garlic mash.",
-        "price": "₹380",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-s7WwAkUeN5QyZ_44lWsGEtbvH72IvECBoE6-R6SUO4ilijChE3VYJJ2LBd50c1_TFRW4PgDyna6LyQkToL0HA21NQLlB9cWwc-YTjvv-oaBYvsVEE51kkN9S0wnC2FyEJOHqDrGC7eABC8Gd-TCU3Zn3UlLS0Z2HfNuWnQdegY7m6pNmyGA1awBiM0dHzsf9JKNRPvjdWF5Hx2f7FFkXn-23bxKrN5bwrakEaxx7-X172nhw3g4PuOA-sR4VSfoP2mVvP0CgSU9b_YgaZdHEz-S1gp6Zu0L8d31twEwW5EaoDN7wp2-o4Fsg3jhei0xP8P4Wji0cwoRglH4sTc4USoMXq64UmUloqm5AYLm4tr0H0KuPxT6AdydXFM4t2Vl7Wxr8HoxuDtjqWHV61c7vaJ_xQ35R85JedNZft_Pg7xVPOd&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9380",
+        "image": "/cafe-photos/the-shillong-cafe/photo-0.jpg"
+      },
+      {
+        "name": "Pine Smoke Old Fashioned",
+        "description": "Premium whiskey gently smoked with pine, balanced with orange bitters and a hint of homemade jaggery syrup for a sophisticated twist.",
+        "price": "\u20b9550",
+        "image": "/cafe-photos/the-shillong-cafe/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Slow-Smoked Pork Belly with Apple-Chilli Glaze",
+        "description": "Succulent pork belly, slow-smoked to perfection, glazed with a tangy apple and local chilli reduction, served alongside creamy potato gratin.",
+        "price": "\u20b9780",
+        "image": "/cafe-photos/the-shillong-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Wild Mushroom & Truffle Arancini",
+        "description": "Crispy Arborio rice balls filled with wild mushrooms and truffle essence, served with a smoky paprika aioli for a refined start.",
+        "price": "\u20b9420",
+        "image": "/cafe-photos/the-shillong-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1677,13 +1978,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 12:00 – 10:00 PM",
-      "Tuesday: 12:00 – 10:00 PM",
-      "Wednesday: 12:00 – 10:00 PM",
-      "Thursday: 12:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 10:00 PM"
+      "Monday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/the-shillong-cafe/photo-0.jpg",
@@ -1697,7 +1998,7 @@
     "match_confidence": 0.3,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -1708,7 +2009,7 @@
     "theme": "Warm Floral Wallpapers & Handcrafted Red Velvets",
     "introduction": "Tucked away inside Laitumkhrah (Nongrim Hills), Little Chef Cafe is a premium European-style continental bistro. Famous for having a grand glass locker displaying seasonal handcrafted red velvet cakes, rich key lime pies, and gourmet cheesecakes, the cafe also offers savory skillet items, creamy cheesy pastas, and spectacular sizzlers.",
     "whyVisit": "For an authentic taste of gourmet French pastries, classic sizzlers, and rich continental desserts crafted by some of Shillong's best confectioners.",
-    "hours": "11:00 AM — 9:00 PM (Closed Sundays)",
+    "hours": "11:00 AM \u2014 9:00 PM (Closed Sundays)",
     "address": "Nongrim Hills Road, Opposite Bethany Hospital, Laitumkhrah, Shillong 793003",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -1729,14 +2030,28 @@
       {
         "name": "Classic Red Velvet Slice",
         "description": "Luxuriously moist burgundy cocoa sponge layered with rich cream cheese frosting and sweet fresh-scraped vanilla bean glaze.",
-        "price": "₹160",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t2E3lb0DpqT-D2fvch5RFE3ili7yWQVnqYttfw-5ZmF6g8UBUSJ6UJfbp9qxPyDvFXW6XV1TdgDv5MALuiyoRpCwGAua9oMN51qPR2PNA-bRDLfYIjtIpbLy1E05Zr8edETV99zCdRYpW-WPyoZ42KMpuk5U9jvUSAi9FnskgQUpIowNUAfOotLw8F2Ub_axFYsevoyfoDFfa6o2AjKwxk6Ko1ct3m100b2nJoSXPgsBt1Gjwgs0PmAOyZdKf4o78YZEXDd_SFlqmqUmEY9cpZ_jM_OBetmO_E3MM3sY7Q-x85G_VW5yo4IN4At9JYcsg0x1DvdmWjOtWxKeNCHStmKkPjWrMAANVGhC5AWuhV60T1UuQ-XkieQGRDl1PPmu5JbR4eD11fum_ZT_kWJJyZ4OOtCGMEiq2IqlU3FZS-iA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9160",
+        "image": "/cafe-photos/little-chef-cafe/photo-0.jpg"
       },
       {
         "name": "Sizzling Garlic Herb Chicken",
         "description": "Tender grilled chicken breasts basted in garlic-herb butter, served piping hot on a sizzling cast-iron platter with roasted local valley roots.",
-        "price": "₹340",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sSiw0hY0r_GY7ZBONnm-b2wha-xlgtoZ_RDKCv5htkLhlxaKdipc0nE9Ej3VwDrHgm9bEr-x-sCTmioP8MkZ_NEvJA_omQFrWruH-cxfk551Jd3FGQvSoa6qoW7lVihIlSsM_xOzV1S8K8EAirMm3-k-xuPdPq1ncTeHnqlKL6eh94st236KlVE8c_-V8Y_bf3em5a4Kd-p6Mslh9PlzPopLG97TGUJlMzOImV4kigQO86igT9ic2gMD2PyrBM3JUZYx0ys9R_Hi_Ig_fM3N2G9wd-hWR6__dp47i-8sS2LtQkysH78JniQ_NFNP6WkcBPWnvYJqpqWrOrCQe6yqbrJ2tPpfCpGFPIJOZ6_T5hBEfOLR93PXGoBwMIMqp928qJaoEboAYzK_0hAydYwvPB9FK7RJXZVHH7xngiE4LJVg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9340",
+        "image": "/cafe-photos/little-chef-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Berry Blossom Tart",
+        "description": "A delicate shortcrust pastry filled with vanilla cr\u00e8me p\u00e2tissi\u00e8re, topped with fresh seasonal berries and edible blossoms.",
+        "price": "\u20b9395",
+        "image": "/cafe-photos/little-chef-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Wild Mushroom & Truffle Cream Tagliatelle",
+        "description": "Al dente tagliatelle tossed in a rich, earthy wild mushroom and truffle cream sauce, finished with Parmesan shavings.",
+        "price": "\u20b9580",
+        "image": "/cafe-photos/little-chef-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1767,12 +2082,12 @@
       "store"
     ],
     "opening_hours": [
-      "Monday: 12:00 – 6:30 PM",
-      "Tuesday: 12:00 – 6:30 PM",
-      "Wednesday: 12:00 – 6:30 PM",
-      "Thursday: 12:00 – 6:30 PM",
-      "Friday: 12:00 – 6:30 PM",
-      "Saturday: 12:00 – 6:30 PM",
+      "Monday: 12:00\u2009\u2013\u20096:30\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u20096:30\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20096:30\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20096:30\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20096:30\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20096:30\u202fPM",
       "Sunday: Closed"
     ],
     "photos": [
@@ -1786,7 +2101,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.98,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700,
     "neighborhood_verified": true,
@@ -1800,7 +2115,7 @@
     "theme": "Cozy Straw-Cottages, Green Vines & Water Streams",
     "introduction": "Shillong's ultimate beloved family restaurant, featuring rich wooden logs decor, private straw-roofed cottages, and beautiful water streams inside the garden dining room. Known for its perfect tandoori dishes, Mughlai delicacies, and excellent hospitality near Ward's Lake.",
     "whyVisit": "For a magical cottage dining setting, superb buttery tandoori grill platters, and stellar hospitality.",
-    "hours": "11:00 AM — 10:00 PM (Daily)",
+    "hours": "11:00 AM \u2014 10:00 PM (Daily)",
     "address": "Oakland Road, Near Ward's Lake, Police Bazaar, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -1821,8 +2136,29 @@
       {
         "name": "Tandoori Butter Chicken & Garlic Naan Platter",
         "description": "Slow-grilled clay-oven barbecued chicken in fresh velvety tomato butter cream sauce, paired with piping-hot buttered garlic naan.",
-        "price": "₹320",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-u8aflVdGXOS-Dx4dCk-9M63jPJNLUGw0C7W9KKYoBEu4ifn1xF5yXn6C0vINwfGWQXgSsLmF5rLs9Pc5fcd184gME78yubHGVwBV00BVn1MA84YEics0LhxGW2HsMGwhmAWbVwzdXooTZBkFBiFlp6B0Tstccniux0iXOBDD_HfQM7bWL1NYkxMR-v5RicLaN0tmVc-e5uyO4kpcJWfbhDcFRS5qjlZO6NanX7KuXJK7VYOg4oC1g9BeudqyP6bEPYzGV0Hmc7jpzBPm4t5N6o8nZcRJZ2eT_P-l-W0bqR3AZjBGRk3Y3zd9cRCGzc9J7K9s2x3Hh3LIPjCQszp1r3WRndIualhDPaIPXzumobYj4UXQoIzTvkGIrJHt4IPnGy5iguLhBoHQsV4qZkk7Q5bZmH5EkGn0zvk4hfKbDHEuuaS7eAOyGWXyOZI2Pu&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9320",
+        "image": "/cafe-photos/city-hut-family-dhaba/photo-0.jpg"
+      },
+      {
+        "name": "Awadhi Mutton Rogan Josh with Saffron Pulao",
+        "description": "Aromatic slow-cooked lamb in rich Kashmiri spices, served alongside fragrant basmati rice infused with saffron, perfect for a hearty family meal.",
+        "price": "\u20b9675",
+        "image": "/cafe-photos/city-hut-family-dhaba/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Malai Broccoli & Paneer Tikka",
+        "description": "Tender broccoli florets and soft paneer marinated in creamy cashew and cardamom, char-grilled to perfection in our tandoor.",
+        "price": "\u20b9420",
+        "image": "/cafe-photos/city-hut-family-dhaba/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Himalayan Mint & Ginger Cooler",
+        "description": "A refreshing blend of fresh mint, zesty ginger, lime, and a hint of sweetness, reminiscent of cool mountain streams.",
+        "price": "\u20b9240",
+        "image": "/cafe-photos/city-hut-family-dhaba/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1852,13 +2188,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 11:00 AM – 9:30 PM",
-      "Tuesday: 11:00 AM – 9:30 PM",
-      "Wednesday: 11:00 AM – 9:30 PM",
-      "Thursday: 11:00 AM – 9:30 PM",
-      "Friday: 11:00 AM – 9:30 PM",
-      "Saturday: 11:00 AM – 9:30 PM",
-      "Sunday: 11:00 AM – 9:30 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM"
     ],
     "photos": [
       "/cafe-photos/city-hut-family-dhaba/photo-0.jpg",
@@ -1872,7 +2208,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -1883,7 +2219,7 @@
     "theme": "Century-Old Indian Diner & Hot Cardamom Jalebi Vats",
     "introduction": "Operational for over a century, Delhi Mistan Bhandar is an iconic culinary institution in the heart of Police Bazaar. Famous for serving traditional pure vegetarian North Indian breakfasts, exceptional desi sweets, and particularly crisp, steaming hot giant jalebis.",
     "whyVisit": "For the finest pure-ghee heritage sweets, piping hot breakfast kachoris, and local nostalgia.",
-    "hours": "7:00 AM — 9:00 PM (Daily)",
+    "hours": "7:00 AM \u2014 9:00 PM (Daily)",
     "address": "Police Bazaar Circle, GS Road, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -1904,8 +2240,29 @@
       {
         "name": "Heritage Hot Jalebi & Rabdi Duo",
         "description": "Lacy, ultra-crisp deep-fried golden loops served fresh out of bubbling oil plates, finished with a generous dollop of rich cold rabdi cream.",
-        "price": "₹90",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ui0QWorC3bq_mvrCE8N_m8UyC4yozU7Kzm3ofxaYmP_FC6LcFS0175BGeI-tdN2xpg6zD0kscUMFUVMeaF5WO1-xtRMyQxZzgOJHSWxmEVCmiys6joCKXD4a36aKlkRg7ZZ9LlxwnKnthLmUgVXTnnUh4sAGL1VTM41eF1n8rROl0znBnYpscw2F0xIfK-A6StT6YmnK2ZdOZvbPi-uAcNCKi1H8gFvdoI-LW9_4kSnc33TvavT1Be5TitOh6W3yux_6Af8qiArd07Z21hoAi9W121Yw7jg28x3pkxI4GD7agsvl30oIBG1bd497ijk0HYMteTDGqEYOi2CxUeGFfSBja6UKC-QzLmLn1TV8Ej_ys9ttex8dqO9-jbvbsJ2ww1mSXFbznUPSlzdaeC_70Tx2rg156Kv7i4nLRceztamJFX&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b990",
+        "image": "/cafe-photos/delhi-mistan-bhandar/photo-0.jpg"
+      },
+      {
+        "name": "Chole Bhature Platter",
+        "description": "Fluffy bhature served with spicy, tangy chickpea curry, onions, and pickle, a true Delhi delight.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/delhi-mistan-bhandar/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Kesar Badam Kulfi Falooda",
+        "description": "Rich, creamy saffron-almond kulfi layered with vermicelli, rose syrup, basil seeds, and nuts for a cooling treat.",
+        "price": "\u20b9220",
+        "image": "/cafe-photos/delhi-mistan-bhandar/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Dhaba-Style Aloo Paratha Thali",
+        "description": "Two golden-fried potato-stuffed parathas served with creamy dahi, tangy pickle, and homemade butter.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/delhi-mistan-bhandar/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -1936,13 +2293,13 @@
       "store"
     ],
     "opening_hours": [
-      "Monday: 7:00 AM – 9:30 PM",
-      "Tuesday: 7:30 AM – 9:30 PM",
-      "Wednesday: 7:30 AM – 9:30 PM",
-      "Thursday: 7:30 AM – 9:30 PM",
-      "Friday: 7:30 AM – 9:30 PM",
-      "Saturday: 7:30 AM – 9:30 PM",
-      "Sunday: 7:30 AM – 9:30 PM"
+      "Monday: 7:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 7:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 7:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 7:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 7:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 7:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 7:30\u202fAM\u2009\u2013\u20099:30\u202fPM"
     ],
     "photos": [
       "/cafe-photos/delhi-mistan-bhandar/photo-0.jpg",
@@ -1956,7 +2313,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -1966,8 +2323,8 @@
     "tagline": "Premium Global Dining & Live Multi-Cuisine Studio",
     "theme": "Sleek Contemporary Glass & Executive Buffet Bars",
     "introduction": "A sophisticated multi-cuisine dining venue situated inside Hotel Polo Towers. Boasting sleek modern interiors, executive tables, and standard five-star hospitality, Ginger specializes in high-end Continental, Chinese, and Indian spreads.",
-    "whyVisit": "For Shillong’s ultimate Sunday brunch, exquisite smoked pork ribs, and standard premium dining with business associates.",
-    "hours": "7:00 AM — 11:00 PM (Daily)",
+    "whyVisit": "For Shillong\u2019s ultimate Sunday brunch, exquisite smoked pork ribs, and standard premium dining with business associates.",
+    "hours": "7:00 AM \u2014 11:00 PM (Daily)",
     "address": "Hotel Polo Towers, Oakland Road, Polo Market, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -1988,8 +2345,29 @@
       {
         "name": "Polo Club Smoked Pork Ribs",
         "description": "Tender highland pork ribs marinated in master chef's smoky local honey-mustard glaze, slow-baked until meat separates gracefully from the bone.",
-        "price": "₹450",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vTjCO5ydg7fb3KuSSqXGqmWfW34HCsssyVb9S957gS6LJUH9g2XB_s6OkR89a-6U8EcfB4i7uBPNrwrjXi1j0cskZMYIb7SsdCbvC0OJB9rR-yrVa-rymE6JqhPB4s5EiwW6Csewaae_aXGLp3Rv7JvoM2ccI1zLcgiywr6ij10cOsjL--rOu1i58WV6Oerfs9aQe-k8Kub8g5P1OFGArU9kJm1PFw33l3Gza_4EsZWnH7D3v5DczbS3vivlB_3caaMzjRQdcTxRuLykab0TajP8e2N1Vbs6SlKXB98w359HeL7vtcVYUKbOENz2E7zg-AcvkXJm6Dsn7_fx-QOwNq_qUpEZwl9VSpn8-fa599SiPaRWLHUmByUTsfZjTI2fVLM56xlehqtwoKlsendHGNzZFLbxkejTDFdaTuapw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9450",
+        "image": "/cafe-photos/ginger-restaurant/photo-0.jpg"
+      },
+      {
+        "name": "Pan-Seared Himalayan Trout with Lemon Butter Sauce",
+        "description": "Freshly sourced Himalayan trout, pan-seared to perfection, served with a zesty lemon butter sauce and seasonal greens.",
+        "price": "\u20b9750",
+        "image": "/cafe-photos/ginger-restaurant/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Crispy Prawns with Wasabi Mayo",
+        "description": "Succulent prawns lightly battered and fried to a golden crisp, served with a creamy, subtly spicy wasabi mayonnaise.",
+        "price": "\u20b9480",
+        "image": "/cafe-photos/ginger-restaurant/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Malai Kofta Curry",
+        "description": "Soft paneer and potato dumplings gently simmered in a rich, creamy cashew and saffron-infused gravy, a timeless Indian classic.",
+        "price": "\u20b9450",
+        "image": "/cafe-photos/ginger-restaurant/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2019,13 +2397,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 7:00 AM – 11:00 PM",
-      "Tuesday: 7:00 AM – 11:00 PM",
-      "Wednesday: 7:00 AM – 11:00 PM",
-      "Thursday: 7:00 AM – 11:00 PM",
-      "Friday: 7:00 AM – 11:00 PM",
-      "Saturday: 7:00 AM – 11:00 PM",
-      "Sunday: 7:00 AM – 11:00 PM"
+      "Monday: 7:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 7:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 7:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 7:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 7:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 7:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 7:00\u202fAM\u2009\u2013\u200911:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/ginger-restaurant/photo-0.jpg",
@@ -2039,7 +2417,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800,
     "neighborhood_verified": true,
@@ -2053,7 +2431,7 @@
     "theme": "Plush Velvet Sofa Booths & Indo-Chinese Sizzles",
     "introduction": "Strategically positioned in the prominent commercial center of Police Bazaar, Lamee is a standard double-storied fine-dining venue. Outfitted with plush velvet family booths and high-glass windows looking onto Shillong's central streets, it delivers reliable North Indian curries and sizzling Indo-Chinese platters.",
     "whyVisit": "For cozy family gatherings, premium garlic tandoori kebabs, and authentic Asian preparations.",
-    "hours": "11:30 AM — 10:00 PM (Daily)",
+    "hours": "11:30 AM \u2014 10:00 PM (Daily)",
     "address": "Police Bazaar Circle, GS Road, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -2074,8 +2452,29 @@
       {
         "name": "Shredded Lamb in Sichuan Black Pepper",
         "description": "Fragrant crispy wok-tossed lamb shreds combined with sweet bell peppers, ginger strips, and rich black pepper seasoning sauces.",
-        "price": "₹380",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ueqOPpkJ--L0ZiJQOCXifE8LDKb5L0Gdt2xiVKl0YgKkBxPMojXs85cKNwzUyyno9cKmQQ7P87g8MLqF7LFuaI6Ecw-lBN-1XaU-0_at7ua0BMRNOlS0jzDYAVFAyFHJ7ny1tlxlrJ5ppPUTgFYsORt5NONhcvBT1_as9S5bpOhmJ73XMJPK4kR6XubhnsiYPZPu1jsxWjn8TllyZfSy4Yd9TOtGHjz8IK12IL5mVtS3rh5pt8zmtLBqUk8NX1CUnE4_r8rzTbfglACD59wlfdGANoljFgt8k-EbQtcv6sLQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9380",
+        "image": "/cafe-photos/lamee-restaurant/photo-0.jpg"
+      },
+      {
+        "name": "Szechuan Chicken Sizzler",
+        "description": "Succulent diced chicken tossed in spicy Szechuan sauce, served sizzling with Hakka noodles and saut\u00e9ed exotic vegetables.",
+        "price": "\u20b9495",
+        "image": "/cafe-photos/lamee-restaurant/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Hakka Noodles with Prawns & Garlic",
+        "description": "Stir-fried Hakka noodles with juicy prawns, vibrant vegetables, and a generous infusion of aromatic garlic.",
+        "price": "\u20b9420",
+        "image": "/cafe-photos/lamee-restaurant/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Chilli Paneer Dry (Chef's Special)",
+        "description": "Crispy fried paneer cubes coated in a tangy, spicy Indo-Chinese chilli sauce, garnished with fresh spring onions.",
+        "price": "\u20b9340",
+        "image": "/cafe-photos/lamee-restaurant/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2105,13 +2504,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 11:00 AM – 10:00 PM",
-      "Thursday: 11:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 10:00 PM",
-      "Saturday: 11:00 AM – 10:00 PM",
-      "Sunday: 11:00 AM – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "photos": [
       "/cafe-photos/lamee-restaurant/photo-0.jpg",
@@ -2125,7 +2524,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -2136,7 +2535,7 @@
     "theme": "Red Timber Walls, Cozy Cabin Booths, and Wok Aromas",
     "introduction": "Operating since the late 1970s, Barbeque (popularly Bar-B-Q) in Police Bazaar is Shillong's premier Chinese food institution. Complete with a dark wood panel design, iconic round lanterns, and highly cozy curtain-shaded cubicles, it is the town's go-to for comfort sweet-corn soup, dimsums, and Hakka pork rice.",
     "whyVisit": "To taste the legendary Golden Fried Prawns and soak in the standard 1970s Chinese-Indian diner luxury.",
-    "hours": "11:30 AM — 9:30 PM (Daily)",
+    "hours": "11:30 AM \u2014 9:30 PM (Daily)",
     "address": "GS Road, Near Police Bazaar, Shillong 793001",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -2157,8 +2556,29 @@
       {
         "name": "Bar-B-Q Hakka Pork Fried Rice",
         "description": "Savory wok-tossed premium rice grains combined with hand-cut smoked pork bits, spring garlic leeks, and direct farm eggs.",
-        "price": "₹260",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tvjSDFwlEkAhxc9OB3Y3O6diKp3Q8jGRvE6LokY-TDX53-vgPFcImQF9L5IBY-XZKnCzRN0bkdI9gIWzems0zaYgp3VNn2bIOfgIsw0DHzy-YPnpmDhUVCwXsA8Lx7SJ416TXDB0v_vnjuUHo55jW3ofB51aCeQK2TZZrgnUbEDdbPFyHzXMVo3shsC8GMjZMa0MDlkh2M9OHxfkMEvi6hK_1fxNlqiGjRvxBcbbEgAUElL7JJMDjztUPTIzK8yyS-uSqwRs9IDoJI-b7t64pQH_OFUBe-J5acGGvSDc6n4M6SRcfQTCyMeDpBosZRKmlQbXB_3ztQpa7pajElo4OZTRC8chNhAaLfGT47FpZ66WhfZmlQ_qh-R_VEQ6JLiB_6BhZ30HpMA07eLK4thqL5em578PlgfbAqJjZSUxuQ7RbIdIJhpExvA3B7WdPy&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9260",
+        "image": "/cafe-photos/barbeque-restaurant/photo-0.jpg"
+      },
+      {
+        "name": "Signature Hakka BBQ Pork Belly",
+        "description": "Slow-cooked pork belly, glazed with a secret Hakka sauce, finished on the grill for smoky perfection.",
+        "price": "\u20b9780",
+        "image": "/cafe-photos/barbeque-restaurant/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Legendary Hakka Chilli Chicken (Dry)",
+        "description": "Crispy chicken pieces wok-tossed in a spicy, tangy Hakka chilli sauce with bell peppers and onions.",
+        "price": "\u20b9420",
+        "image": "/cafe-photos/barbeque-restaurant/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "1970s Hakka Chicken Chowmein",
+        "description": "Classic Hakka style noodles, wok-tossed with tender chicken, crunchy vegetables, and a savory soy glaze.",
+        "price": "\u20b9480",
+        "image": "/cafe-photos/barbeque-restaurant/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2188,13 +2608,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 9:30 AM – 9:45 PM",
-      "Tuesday: 9:30 AM – 9:45 PM",
-      "Wednesday: 9:30 AM – 9:45 PM",
-      "Thursday: 9:30 AM – 9:45 PM",
-      "Friday: 9:30 AM – 9:45 PM",
-      "Saturday: 9:30 AM – 9:45 PM",
-      "Sunday: 9:30 AM – 9:45 PM"
+      "Monday: 9:30\u202fAM\u2009\u2013\u20099:45\u202fPM",
+      "Tuesday: 9:30\u202fAM\u2009\u2013\u20099:45\u202fPM",
+      "Wednesday: 9:30\u202fAM\u2009\u2013\u20099:45\u202fPM",
+      "Thursday: 9:30\u202fAM\u2009\u2013\u20099:45\u202fPM",
+      "Friday: 9:30\u202fAM\u2009\u2013\u20099:45\u202fPM",
+      "Saturday: 9:30\u202fAM\u2009\u2013\u20099:45\u202fPM",
+      "Sunday: 9:30\u202fAM\u2009\u2013\u20099:45\u202fPM"
     ],
     "photos": [
       "/cafe-photos/barbeque-restaurant/photo-0.jpg",
@@ -2208,7 +2628,7 @@
     "match_confidence": 0.98,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800
   },
@@ -2219,7 +2639,7 @@
     "theme": "Grand Fireplaces, Royal Crests & Forest Vistas",
     "introduction": "Sprawled inside the historic Tripura Castle hotel estate, this elegant, royal palace restaurant houses antique shields, heavy brick fireplaces, and expansive glass windows opening to mist-covered pine forests. It specializes in royal Mughlai spreads and authentic tribal dishes.",
     "whyVisit": "For the finest, most luxurious royal dining setting in Shillong, serving genuine local tribal dishes in historical luxury.",
-    "hours": "12:30 PM — 10:30 PM (Daily)",
+    "hours": "12:30 PM \u2014 10:30 PM (Daily)",
     "address": "Tripura Castle Hotel, Cleve Colony, Shillong 793003",
     "neighborhood": "Cleve Colony",
     "images": {
@@ -2240,8 +2660,29 @@
       {
         "name": "Tripura Castle Royal Khasi Platter",
         "description": "Authentic mountain red rice boiled with pork stock, paired with aromatic Dohneiiong sesame pork and wild watercress salad.",
-        "price": "₹450",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tGBQ63WBb-rGKGmaH5BNK4ML2whi7tlatNI05HrxhaQX1opqV7YkUzxFgjLsG3odNs31T_gBVgK34sXnyvEOzwXJ4whSqJiU1INjuO8LmWNSuu1vMU292fuqajttV2HvjJwqRlsUOmnNTLcaZUrtEzcEHn2ygO9oUVEnjfciuMYQ66F5XJCx3Oab91S-LDNzaBG4-hatGndkHibCQUOIKNxoDvMj2sdzIEgjOXsS09MsPr9isNJYhRovtDhVU9I74XQZ0UvKC3iXp9o4Vaijdjbc35MMTjspAigRCMqpcUVld9sJf2r6e0oN9KR329RSnvTYLwC8gXkEKnHjT2GCOWw1TRyScUqc8axi_S2xiPoTSyOuki72UGzg5Qj5PkCNLa_BFPbRWICEwQIP79Ga3MGb9OmjXyo4SuCSa_GvGio0udmwn3JX2GUQ3sLG9f&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9450",
+        "image": "/cafe-photos/heritage-club-tripura-castle/photo-0.jpg"
+      },
+      {
+        "name": "Hearthside Roasted Tomato & Basil Soup",
+        "description": "A velvety soup, slow-roasted tomatoes, fresh basil, served with a delicate cheese tuile, perfect by the fireplace.",
+        "price": "\u20b9350",
+        "image": "/cafe-photos/heritage-club-tripura-castle/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Castle Keeper's Pot Roast Chicken",
+        "description": "Succulent chicken slow-cooked with root vegetables and aromatic herbs, served with creamy mashed potatoes and a rich jus.",
+        "price": "\u20b9650",
+        "image": "/cafe-photos/heritage-club-tripura-castle/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Pine Forest Berry Panna Cotta",
+        "description": "A silky panna cotta infused with vanilla, topped with a compote of seasonal forest berries and a hint of pine.",
+        "price": "\u20b9420",
+        "image": "/cafe-photos/heritage-club-tripura-castle/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2270,7 +2711,7 @@
       "point_of_interest"
     ],
     "opening_hours": [
-      "12:30 PM — 10:30 PM (Daily)"
+      "12:30 PM \u2014 10:30 PM (Daily)"
     ],
     "photos": [
       "/cafe-photos/heritage-club-tripura-castle/photo-0.jpg",
@@ -2283,7 +2724,7 @@
     "khasi_food_available": false,
     "match_confidence": 0.72,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700
   },
@@ -2294,7 +2735,7 @@
     "theme": "Clay Cookpots & No-Frills Community Wooden Benches",
     "introduction": "An unassuming, extremely famous local eatery situated near Laitumkhrah's central squares. Free of generic decor and dedicated genuinely to raw Khasi cuisine, it is the neighborhood standard for traditional meat dishes prepared with local wild pepper and black ginger.",
     "whyVisit": "To taste the genuine taste of authentic Jadoh pork rice and sharp local Dohkhlieh salads with local residents.",
-    "hours": "9:00 AM — 7:00 PM (Closed Sundays)",
+    "hours": "9:00 AM \u2014 7:00 PM (Closed Sundays)",
     "address": "Don Bosco Square, Laitumkhrah, Shillong 793003",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -2315,8 +2756,29 @@
       {
         "name": "Traditional Jadoh & Dohkhlieh Comb",
         "description": "Short-grained wild hill red rice simmered in highly seasoned pork stock, served with raw minced pork-and-onion salad with white root-ginger.",
-        "price": "₹160",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sU-_KsYgj5F5HUlQkgMPDNXqo8tl9uqDM545R6PDXKycuP9w8m5cbFhjKdvuMIseeNcyc7OD4Dzk-wstl84rxbPUNLTIbNM167E1pitQB-JCXF4a8iiUOycAkkcXlWZ9CrYG8czpLyVFSITsvR1uOXuT_Ht890TQfeOAJ4w29Kkhstt5aa7WzKoqv_tByQsquJzDVwUiXi8KET3hZaZQeFp4YnNfvSfyqu7aBGK5YA_OGPahOUyBnebuOFHIimjVaGxoWjQdq4rsYl4oOqBX3blzs05Bxb9FXbv3zZzYmNVA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9160",
+        "image": "/cafe-photos/jadoh-restaurant/photo-0.jpg"
+      },
+      {
+        "name": "Doh Neiiong Clay Pot",
+        "description": "Succulent pork slow-cooked in an earthy black sesame paste, infused with local spices, served steaming hot from a clay pot.",
+        "price": "\u20b9480",
+        "image": "/cafe-photos/jadoh-restaurant/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Tungrymbai Doh Clay Pot",
+        "description": "A robust and aromatic stew of fermented soybeans, cooked with tender pork and local herbs, served simmering in its clay pot.",
+        "price": "\u20b9390",
+        "image": "/cafe-photos/jadoh-restaurant/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Doh Syiar Khasi Clay Pot",
+        "description": "Tender chicken pieces simmered in a fragrant Khasi spice blend with local herbs, slow-cooked to perfection in a traditional clay pot.",
+        "price": "\u20b9420",
+        "image": "/cafe-photos/jadoh-restaurant/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2346,13 +2808,13 @@
       "restaurant"
     ],
     "opening_hours": [
-      "Monday: 9:30 AM – 8:30 PM",
-      "Tuesday: 9:30 AM – 8:30 PM",
-      "Wednesday: 9:30 AM – 8:30 PM",
-      "Thursday: 9:30 AM – 8:30 PM",
-      "Friday: 9:30 PM – 12:00 AM",
-      "Saturday: 12:00 AM – 8:30 PM",
-      "Sunday: 9:30 AM – 8:30 PM"
+      "Monday: 9:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Tuesday: 9:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Wednesday: 9:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Thursday: 9:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Friday: 9:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 12:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Sunday: 9:30\u202fAM\u2009\u2013\u20098:30\u202fPM"
     ],
     "photos": [
       "/cafe-photos/jadoh-restaurant/photo-0.jpg",
@@ -2365,7 +2827,7 @@
     "khasi_food_available": true,
     "match_confidence": 0,
     "verification_status": "verified",
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 350,
     "average_spend_for_two": 700
   },
@@ -2376,7 +2838,7 @@
     "theme": "Overhead Ceiling Vines, Wooden Frames & Comfy Sofas",
     "introduction": "An exquisite green rooftop oasis styled with beautiful hanging plants, heavy teak frame dividers, and extensive glass doors showing outstanding city panoramas. It is beloved across Shillong for serving gourmet continental sizzlers and thick shakes.",
     "whyVisit": "To lounge with a mountain mocktail in a magnificent greenhouse design as twilight sets over the town.",
-    "hours": "12:00 PM — 9:30 PM (Daily)",
+    "hours": "12:00 PM \u2014 9:30 PM (Daily)",
     "address": "Laitumkhrah Main Road, Next to Ryan's Hotel, Shillong 793003",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -2397,8 +2859,29 @@
       {
         "name": "Living Roof Sizzling Pork ribs",
         "description": "Highland pork loin rib racks slow-barbecued with direct-ground wild chili oil and honey, served sizzling hot with steamed broccoli florets.",
-        "price": "₹390",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sPwcxc3nzfH3RIQki8NGNXMq-Z93txvjSdx3pcSJMtxGnM8b2PHPAgqiTconv0T9chzKQa_U40kCmJgVQoDUDnUR2Z--S5BplVPNvi0ja29VMBGbSKIJcjg1pJJx93KE0OXCzZOHAkI1-Ltth_anqSmirpT9Db8FcK19EgQIEnc59bRUzYx2mgu6Rn5MvVTfp4CAphYb0Uf-OZ6EhauEbWCTXsesVdQKnzn0mIdBztd3Pv8MZFXARMCZUTZ9ulTzxjqpc2puFsYY-lA7bJNInqPW9OSWUq7nOJBnE9FxYx1CJu3jXecKn6WJMMgq7_ihm34Mcf1IoYaTQ8y34r35cAmL4jtFaf3KHBQwoQf_AGqCWDnBeIt78yYYO5OlZ1lPNE_cmLyXuWosut8VvyWkbU8SawczfvVls_hOFQRgd6Tg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9390",
+        "image": "/cafe-photos/the-living-roof/photo-0.jpg"
+      },
+      {
+        "name": "Misty Meadow Mint Cooler",
+        "description": "A vibrant, refreshing blend of fresh mint, lime, and a hint of local floral syrup, topped with sparkling water.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/the-living-roof/photo-1.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Bohemian Grilled Chicken Steak",
+        "description": "Tender grilled chicken steak infused with rosemary and thyme, served with creamy mashed potatoes and a vibrant seasonal salad.",
+        "price": "\u20b9580",
+        "image": "/cafe-photos/the-living-roof/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Laitumkhrah Smoked Paneer & Bell Pepper Melt",
+        "description": "A delightful grilled sandwich featuring smoked paneer, colorful bell peppers, and a blend of cheeses, served on artisanal bread.",
+        "price": "\u20b9420",
+        "image": "/cafe-photos/the-living-roof/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2431,7 +2914,7 @@
       "store"
     ],
     "opening_hours": [
-      "12:00 PM — 9:30 PM (Daily)"
+      "12:00 PM \u2014 9:30 PM (Daily)"
     ],
     "photos": [
       "/cafe-photos/the-living-roof/photo-0.jpg",
@@ -2445,7 +2928,7 @@
     "match_confidence": 0.6,
     "verification_status": "verified",
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "price_per_person": 400,
     "average_spend_for_two": 800,
     "rooftop_verified": true,
@@ -2458,7 +2941,7 @@
     "theme": "Locally Roasted Cherrapunjee Beans & Tribe Heritage",
     "introduction": "Founded by Dasumarlin Majaw and her father, Smoky Falls Tribe Coffee is Shillong's most beloved specialty coffee secret. Using handpicked, freshly roasted beans from the Cherrapunjee hills, every cup is a deep dive into northeast India's finest arabica terroir.",
     "whyVisit": "For the most authentic, locally sourced single-origin Cherrapunjee hill coffee in Shillong.",
-    "hours": "Monday: 11:00 AM – 9:00 PM",
+    "hours": "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
     "address": "Police Bazar, Shillong, Meghalaya 793001, India",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -2493,14 +2976,28 @@
       {
         "name": "Cherrapunjee Single Origin Pour-Over",
         "description": "Hand-roasted highland arabica, slow-poured through ceramic dripper. Deep berry and citrus notes.",
-        "price": "₹160",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sJ411ECoKuzdED_WLgjUg6ZINQjJNNjfpMObpLuAnDyKJE_QxON88XKOBVaxP2Ga99J9sqz5MaZQAVOQFRlJtQLFJsy8rpJDzalE5Dd_lIyq-kfx0WBWxMTqEvapR5JpaaaTRehnTB2gFd9C6B2cGa5QZDbRNSYd0setT_9aFSohpWpZG85rWa4TDiwQonIKyc6GM3BZELN63ASAahwkEziix6Us8kTfjVco6YaV61u085ruiDvcsU5mElTfuX6TpkIT_i0XZP_GPbjbPAHsFczVkWHtq3gsjiWrVP28pExg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9160",
+        "image": "/cafe-photos/smoky-falls-tribe-coffee/photo-0.jpg"
       },
       {
         "name": "Cold Brew Tribe Blend",
         "description": "12-hour cold steeped local blend with dark chocolate and earthy finish.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sJ411ECoKuzdED_WLgjUg6ZINQjJNNjfpMObpLuAnDyKJE_QxON88XKOBVaxP2Ga99J9sqz5MaZQAVOQFRlJtQLFJsy8rpJDzalE5Dd_lIyq-kfx0WBWxMTqEvapR5JpaaaTRehnTB2gFd9C6B2cGa5QZDbRNSYd0setT_9aFSohpWpZG85rWa4TDiwQonIKyc6GM3BZELN63ASAahwkEziix6Us8kTfjVco6YaV61u085ruiDvcsU5mElTfuX6TpkIT_i0XZP_GPbjbPAHsFczVkWHtq3gsjiWrVP28pExg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/smoky-falls-tribe-coffee/photo-1.jpg"
+      },
+      {
+        "name": "Nongriat Root Bridge Latte",
+        "description": "A comforting espresso latte crafted with our unique Cherrapunjee roast, inspired by the enduring beauty and ingenuity of Meghalaya's living root bridges.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/smoky-falls-tribe-coffee/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Smoky Falls Affogato",
+        "description": "A delightful dessert featuring a scoop of vanilla bean ice cream drowned in a shot of our rich, aromatic Cherrapunjee espresso.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/smoky-falls-tribe-coffee/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2517,15 +3014,15 @@
     "rating": 4.3,
     "user_ratings_total": 311,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 11:00 AM – 9:00 PM",
-      "Tuesday: 11:00 AM – 9:00 PM",
-      "Wednesday: 11:00 AM – 9:00 PM",
-      "Thursday: 11:00 AM – 9:00 PM",
-      "Friday: 11:00 AM – 9:00 PM",
-      "Saturday: 11:00 AM – 9:00 PM",
-      "Sunday: 11:00 AM – 9:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM"
     ],
     "types": [
       "cafe",
@@ -2545,7 +3042,7 @@
     "theme": "Photography Art & Creative Expression Hub",
     "introduction": "Tucked in the LP Building on Laitumkhrah Main Road, Click Cafe is the go-to creative den for Shillong's art and photography community. Walls lined with local prints, warm lighting, and genuinely good coffee make it a favorite for students and creatives.",
     "whyVisit": "For the warm creative atmosphere, local photography exhibitions, and consistently good espresso drinks.",
-    "hours": "Monday: 10:30 AM – 9:00 PM",
+    "hours": "Monday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
     "address": "Dhankheti st Peter's building 1st floor, Malki, Shillong, Meghalaya 793003, India",
     "neighborhood": "Dhankheti",
     "images": {
@@ -2580,14 +3077,28 @@
       {
         "name": "Hazelnut Espresso",
         "description": "Double shot espresso with locally sourced hazelnut syrup and steamed hill milk.",
-        "price": "₹150",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uIPiYBRx8ADyFDcePcZi3Srfnwdit6OSESfgE8V_EVCQUflTlHYSW8C6ni3BYKcgZPApgQpeJDDsLtoRpQWiFCh2JfczPetR67Q8luD-ge96giaAuI7ekZTfgbkE7tyGh-mgzJs0DJJ5CAayzCuVAFRARUID9hKylVB4Oa-nrWvsldcdQXmCwUhvGVroZYN_i4ZOlQ4ZnA20sA0eQ6SaLxEXMaODRZ3QiQ7LLd2rO52qW1p8BjS1BcGz4wVyf3AtrQ5crUTTTmNTX7jegYN8WP4s_6nwBuyFcviBfxkK4aTw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9150",
+        "image": "/cafe-photos/click-cafe/photo-0.jpg"
       },
       {
         "name": "Nutella French Toast",
         "description": "Thick-cut bread, Nutella spread, fresh banana slices, dusted with cinnamon.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uIPiYBRx8ADyFDcePcZi3Srfnwdit6OSESfgE8V_EVCQUflTlHYSW8C6ni3BYKcgZPApgQpeJDDsLtoRpQWiFCh2JfczPetR67Q8luD-ge96giaAuI7ekZTfgbkE7tyGh-mgzJs0DJJ5CAayzCuVAFRARUID9hKylVB4Oa-nrWvsldcdQXmCwUhvGVroZYN_i4ZOlQ4ZnA20sA0eQ6SaLxEXMaODRZ3QiQ7LLd2rO52qW1p8BjS1BcGz4wVyf3AtrQ5crUTTTmNTX7jegYN8WP4s_6nwBuyFcviBfxkK4aTw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/click-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Chromatic Cooler",
+        "description": "A vibrant, layered mocktail blending tangy berries and a hint of mint, perfectly capturing the spectrum of creative inspiration.",
+        "price": "\u20b9220",
+        "image": "/cafe-photos/click-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Palette Panini",
+        "description": "A gourmet panini loaded with colourful grilled vegetables, smoked cheese, and a secret pesto spread, a masterpiece for your taste buds.",
+        "price": "\u20b9350",
+        "image": "/cafe-photos/click-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2604,14 +3115,14 @@
     "rating": 4.6,
     "user_ratings_total": 253,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 10:30 AM – 9:00 PM",
-      "Tuesday: 10:30 AM – 9:00 PM",
-      "Wednesday: 10:30 AM – 9:00 PM",
-      "Thursday: 10:30 AM – 9:00 PM",
-      "Friday: 10:30 AM – 9:00 PM",
-      "Saturday: 10:30 AM – 9:00 PM",
+      "Monday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 10:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
       "Sunday: Closed"
     ],
     "types": [
@@ -2634,7 +3145,7 @@
     "theme": "Artisan Latte & Warm Police Bazaar Retreat",
     "introduction": "A compact, warm cafe right in the buzz of Police Bazaar, Latte Love is where Shillong's office crowd and shoppers sneak away for a quiet latte break. The latte art is genuinely impressive for a small neighborhood shop.",
     "whyVisit": "For beautiful latte art, warm wooden interiors, and a quiet escape from Police Bazaar's market noise.",
-    "hours": "Monday: 10:00 AM – 8:30 PM",
+    "hours": "Monday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
     "address": "Police Bazar, Shillong, Meghalaya 793001, India",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -2669,14 +3180,28 @@
       {
         "name": "Signature Latte Art Special",
         "description": "Double shot with steamed whole milk poured into intricate rosette patterns.",
-        "price": "₹140",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sL-Y_OJim3_OVNhAoVhoPjeHCuu4__JGqw0hsCojPwP9oUgYTcnxZ1Xg_dymLiVRvxVTOZBpLhPHmJEN-KQj41EeTOO_ofLDuO8fbnRju8j-F6nmeqDF-p14IuYeIGtcWmcSnQQI71QpJqukREK-M69VgYFN8C1C78BXPTXmXPN12epNtmpGSORA8wJnefykC3bcHTaoHhDYMV-z-71d4nCNjE7EoP8geXrRT3gXxTygchuem_04Mg9Oqmg1LTA0VjjxvkawqqcCEV071kCSNjAqhPo_rQKTP9MqVwgtncIYzlahxEfS9IhB6MGgq-LD05CUMYcs1yNO2MEPe0Zx3xviIjXhgtG6YdC_RB84QCxaleNsvsIkFYivX03Bb6zKmUAe9ujiLKExafekLE4fKkfNJ8ESwjcDfFnHPmrzA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9140",
+        "image": "/cafe-photos/latte-love-cafe/photo-0.jpg"
       },
       {
         "name": "Grilled Cheese & Tomato Sandwich",
         "description": "Old-school grilled sandwich with local cheese and garden tomatoes.",
-        "price": "₹120",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sL-Y_OJim3_OVNhAoVhoPjeHCuu4__JGqw0hsCojPwP9oUgYTcnxZ1Xg_dymLiVRvxVTOZBpLhPHmJEN-KQj41EeTOO_ofLDuO8fbnRju8j-F6nmeqDF-p14IuYeIGtcWmcSnQQI71QpJqukREK-M69VgYFN8C1C78BXPTXmXPN12epNtmpGSORA8wJnefykC3bcHTaoHhDYMV-z-71d4nCNjE7EoP8geXrRT3gXxTygchuem_04Mg9Oqmg1LTA0VjjxvkawqqcCEV071kCSNjAqhPo_rQKTP9MqVwgtncIYzlahxEfS9IhB6MGgq-LD05CUMYcs1yNO2MEPe0Zx3xviIjXhgtG6YdC_RB84QCxaleNsvsIkFYivX03Bb6zKmUAe9ujiLKExafekLE4fKkfNJ8ESwjcDfFnHPmrzA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9120",
+        "image": "/cafe-photos/latte-love-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Rose Cardamom Latte",
+        "description": "A fragrant latte infused with subtle rose and aromatic cardamom, offering a unique and comforting retreat from the Police Bazaar bustle.",
+        "price": "\u20b9290",
+        "image": "/cafe-photos/latte-love-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Creamy Spinach & Corn Toastie",
+        "description": "A wholesome toastie filled with creamy spinach and sweet corn, offering a delightful and quick vegetarian option.",
+        "price": "\u20b9200",
+        "image": "/cafe-photos/latte-love-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2693,14 +3218,14 @@
     "rating": 4,
     "user_ratings_total": 30,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 10:00 AM – 8:30 PM",
-      "Tuesday: 10:00 AM – 8:30 PM",
-      "Wednesday: 10:00 AM – 8:30 PM",
-      "Thursday: 10:00 AM – 8:30 PM",
-      "Friday: 10:00 AM – 8:30 PM",
-      "Saturday: 10:00 AM – 8:30 PM",
+      "Monday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
       "Sunday: Closed"
     ],
     "types": [
@@ -2718,11 +3243,11 @@
   {
     "id": "woodstock-cafe",
     "name": "Woodstock Cafe",
-    "tagline": "Rock & Roll Never Died — It Just Moved to Shillong",
+    "tagline": "Rock & Roll Never Died \u2014 It Just Moved to Shillong",
     "theme": "Classic Rock Memorabilia & Live Band Stage",
     "introduction": "Housed inside Hotel Polo Towers, Woodstock Cafe is Shillong's most storied music venue-cafe hybrid. With walls plastered in classic rock posters, a small stage for live acts, and a menu that spans comfort food to cocktails, it is the city's premier rock culture institution.",
     "whyVisit": "For live classic rock bands on weekends, cold beers, and the best chicken wings in Shillong.",
-    "hours": "10:00 AM — 9:00 PM",
+    "hours": "10:00 AM \u2014 9:00 PM",
     "address": "8th Mile, NH40, Lumdewsaw, Mylliem, Shillong, Meghalaya 793009, India",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -2757,14 +3282,28 @@
       {
         "name": "Woodstock BBQ Chicken Wings",
         "description": "Crispy oven-roasted wings tossed in smoky BBQ sauce with slaw on the side.",
-        "price": "₹320",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-trQOeeT07jI_KgnpbLNDe2sXdAGVe2DvY2zq2Qg2cHzaTEtvTjDsge_BxErYM-H4XvnSr9Vg7xzS0JjUq-yF_lfSm-O_uIlVzR-aqMjmCAvnWowCY48gUaQR4HZPAESZGrtF78UijgyzYbQhH7GA5aijUQ-C6XI0IQALe9jqO1id58SQwqTSnrXP_cuLntesy3fq7Un4GfSsWaYMAk-ptu9dqfmbge9RalpHkAIqBtTt4X3Nu1NpdL--J3vFitR6j7-DMSLeJ16ryBHWab5Aq8Cw0cVBje4X47C4Lv-Mjv2wLbNVakwrkGFRI5UCiW33PidNE80aDRAlRUyazUrbB1fyaJYdliij3IhJI7RdBchlW2uAN9lYo5i6iLdDdl5Gg-ZM0ma9U0cW2qxwDWIhPkhcv_OT8ZfpyVZSWBkzJUMqoAT4DiZ6zBPAbUq7xR&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9320",
+        "image": "/cafe-photos/woodstock-cafe/photo-0.jpg"
       },
       {
         "name": "Classic Rock Burger",
         "description": "Double beef patty, caramelized onions, cheddar, pickles, house sauce, brioche bun.",
-        "price": "₹280",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-trQOeeT07jI_KgnpbLNDe2sXdAGVe2DvY2zq2Qg2cHzaTEtvTjDsge_BxErYM-H4XvnSr9Vg7xzS0JjUq-yF_lfSm-O_uIlVzR-aqMjmCAvnWowCY48gUaQR4HZPAESZGrtF78UijgyzYbQhH7GA5aijUQ-C6XI0IQALe9jqO1id58SQwqTSnrXP_cuLntesy3fq7Un4GfSsWaYMAk-ptu9dqfmbge9RalpHkAIqBtTt4X3Nu1NpdL--J3vFitR6j7-DMSLeJ16ryBHWab5Aq8Cw0cVBje4X47C4Lv-Mjv2wLbNVakwrkGFRI5UCiW33PidNE80aDRAlRUyazUrbB1fyaJYdliij3IhJI7RdBchlW2uAN9lYo5i6iLdDdl5Gg-ZM0ma9U0cW2qxwDWIhPkhcv_OT8ZfpyVZSWBkzJUMqoAT4DiZ6zBPAbUq7xR&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9280",
+        "image": "/cafe-photos/woodstock-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Purple Haze Mocktail",
+        "description": "A psychedelic blend of mixed berries, lemon, and a hint of mint, creating a refreshing burst of flavor.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/woodstock-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Stairway to Heaven Pasta",
+        "description": "Ascend to culinary bliss with creamy Alfredo pasta, tender chicken, mushrooms, and a sprinkle of Parmesan.",
+        "price": "\u20b9480",
+        "image": "/cafe-photos/woodstock-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2781,7 +3320,7 @@
     "rating": 4.2,
     "user_ratings_total": 0,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [],
     "types": [
       "establishment",
@@ -2800,7 +3339,7 @@
     "theme": "Continental Fine Dining at Hotel Polo Towers",
     "introduction": "Tring Tring at Hotel Polo Towers is Shillong's most elegant rooftop dining experience. With sweeping panoramic views of the Khasi Hills and a menu blending continental classics with Indian touches, it is the city's prime venue for romantic dinners and celebratory meals.",
     "whyVisit": "For the unmatched panoramic view of Shillong's ridges from an elevated terrace while dining on refined continental cuisine.",
-    "hours": "Monday: 1:00 PM – 1:00 AM",
+    "hours": "Monday: 1:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
     "address": "Polo Grounds, Police Bazar, Shillong, Meghalaya 793001, India",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -2834,14 +3373,28 @@
       {
         "name": "Pan Seared River Trout",
         "description": "Fresh Meghalaya river trout, herb butter, lemon caper sauce, mashed potato.",
-        "price": "₹480",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vHyroMrX3gaLpz3gvmPkagLsTMYuC-pHQOtrlq78s-N2LylvVqL8ZZCTtSv8qwRTQd8a4yjRaxNtom5tLv0wYq0IJxhw7c_MKKuVkkVGcJs04-x2iqp7X7CB3ckwI3XrOOmB_ryg6BV-pKCfnECPL6gKM1s10M37bVjXf4MRLt6Uf9cxTedbBA36kDYINGaAwNuubetee0l-SRqBqh08X9YHh2Yh7fcIIIzcOzaFnVdJz2pidnnAruqSlmsbCJPwRHMSobclmqXYJRGzWaZJ4C8kqWneV0RoDDdSflrp67Op1C8qEhZeSP3fn6gRkg3whxhWh75piO8qIWhhnZfnemRzQZQAqyiCOPByJIyaOHwnFCmrwgTF2E0xhdu3-Xq2pNBeo8AdgrDS2TNAEHVcLU4WpDQ81gJG7bI_eOym0xk4HzbOOc9WKbtkXJZm4E&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9480",
+        "image": "/cafe-photos/tring-tring/photo-0.jpg"
       },
       {
         "name": "Mushroom Risotto with Truffle Oil",
         "description": "Arborio rice, wild hill mushrooms, parmesan, aged truffle oil drizzle.",
-        "price": "₹420",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vHyroMrX3gaLpz3gvmPkagLsTMYuC-pHQOtrlq78s-N2LylvVqL8ZZCTtSv8qwRTQd8a4yjRaxNtom5tLv0wYq0IJxhw7c_MKKuVkkVGcJs04-x2iqp7X7CB3ckwI3XrOOmB_ryg6BV-pKCfnECPL6gKM1s10M37bVjXf4MRLt6Uf9cxTedbBA36kDYINGaAwNuubetee0l-SRqBqh08X9YHh2Yh7fcIIIzcOzaFnVdJz2pidnnAruqSlmsbCJPwRHMSobclmqXYJRGzWaZJ4C8kqWneV0RoDDdSflrp67Op1C8qEhZeSP3fn6gRkg3whxhWh75piO8qIWhhnZfnemRzQZQAqyiCOPByJIyaOHwnFCmrwgTF2E0xhdu3-Xq2pNBeo8AdgrDS2TNAEHVcLU4WpDQ81gJG7bI_eOym0xk4HzbOOc9WKbtkXJZm4E&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9420",
+        "image": "/cafe-photos/tring-tring/photo-1.jpg"
+      },
+      {
+        "name": "Slow-Braised Lamb Shank with Rosemary Jus",
+        "description": "Succulent lamb shank slow-braised to perfection, served with a rich rosemary jus, creamy polenta, and seasonal glazed vegetables.",
+        "price": "\u20b9825",
+        "image": "/cafe-photos/tring-tring/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Pan-Seared Chicken Roulade with Sun-Dried Tomato & Spinach",
+        "description": "Tender chicken breast roulade filled with sun-dried tomatoes, spinach, and feta, pan-seared and served with a vibrant red pepper coulis.",
+        "price": "\u20b9695",
+        "image": "/cafe-photos/tring-tring/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2858,15 +3411,15 @@
     "rating": 4.7,
     "user_ratings_total": 553,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 1:00 PM – 1:00 AM",
-      "Tuesday: 1:00 PM – 1:00 AM",
-      "Wednesday: 1:00 PM – 1:00 AM",
-      "Thursday: 1:00 PM – 1:00 AM",
-      "Friday: 1:00 PM – 1:00 AM",
-      "Saturday: 1:00 PM – 1:00 AM",
-      "Sunday: 1:00 PM – 1:00 AM"
+      "Monday: 1:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Tuesday: 1:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Wednesday: 1:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Thursday: 1:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Friday: 1:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Saturday: 1:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Sunday: 1:00\u202fPM\u2009\u2013\u20091:00\u202fAM"
     ],
     "types": [
       "establishment",
@@ -2887,7 +3440,7 @@
     "theme": "Live Grilling Theatre & International Fusion Kitchen",
     "introduction": "Qzine brings theatrical live-fire cooking to Shillong. Skilled chefs grill meats and vegetables right before your eyes, blending local Meghalayan ingredients with international techniques for a dramatic dining experience unlike anything else in the city.",
     "whyVisit": "For the live grilling theatre, innovative fusion dishes, and the most theatrical dining presentation in Shillong.",
-    "hours": "Monday: 10:30 AM – 9:30 PM",
+    "hours": "Monday: 10:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
     "address": "Police Bazar, Shillong, Meghalaya 793001, India",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -2922,14 +3475,28 @@
       {
         "name": "Live Grill Mixed Platter",
         "description": "Chef's daily selection of meats and vegetables grilled live at the table.",
-        "price": "₹550",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tGS0xoxek6HRrBlgC8qOgNXGLEVTAatvkRTyhqN5SmwXUkqDPq7ubdyvpWbZYUoRKaf7c00YMnr7LaKeOGYDS_mzyvoal2sDms70uNjqVy2PSxPSNTwAuT6dJqxMiyfBzLVoTmQTEDuhWiVci4fT3plW6fbsp32bcvkvXBDgJ2VSKEoOe_kMnbMHrnHhDSha8-KdIpLH_FVhgRbW42D66Efy2PnYuCc7x0zoOhfpPgVAMQd7Vuy13n82sAA2GRgtdh4MlLKTT8RP9uRJHNplBhxTj4DAnlMgBEKNyFIRD0UgLaa8b-_mdK42VcDT7jZhQ84Ml2jgk35c-EI2xDimBCbhElOzXSVKaJww9NDcetibg-DoFrzRpdcCK42IK6XQW057jbOW7V0IEENik6fdZ5AY1xNaVqodNf07NYpxtoiQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9550",
+        "image": "/cafe-photos/qzine-restaurant/photo-0.jpg"
       },
       {
         "name": "Meghalaya Fusion Pork Chop",
         "description": "Hill pork chop, local herbs, smoked pineapple chutney, grilled corn.",
-        "price": "₹380",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tGS0xoxek6HRrBlgC8qOgNXGLEVTAatvkRTyhqN5SmwXUkqDPq7ubdyvpWbZYUoRKaf7c00YMnr7LaKeOGYDS_mzyvoal2sDms70uNjqVy2PSxPSNTwAuT6dJqxMiyfBzLVoTmQTEDuhWiVci4fT3plW6fbsp32bcvkvXBDgJ2VSKEoOe_kMnbMHrnHhDSha8-KdIpLH_FVhgRbW42D66Efy2PnYuCc7x0zoOhfpPgVAMQd7Vuy13n82sAA2GRgtdh4MlLKTT8RP9uRJHNplBhxTj4DAnlMgBEKNyFIRD0UgLaa8b-_mdK42VcDT7jZhQ84Ml2jgk35c-EI2xDimBCbhElOzXSVKaJww9NDcetibg-DoFrzRpdcCK42IK6XQW057jbOW7V0IEENik6fdZ5AY1xNaVqodNf07NYpxtoiQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9380",
+        "image": "/cafe-photos/qzine-restaurant/photo-1.jpg"
+      },
+      {
+        "name": "Spicy Korean Gochujang Grilled Chicken Skewers",
+        "description": "Tender chicken marinated in spicy Korean gochujang, perfectly grilled and served on skewers with a refreshing kimchi slaw.",
+        "price": "\u20b9495",
+        "image": "/cafe-photos/qzine-restaurant/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Mediterranean Lamb Kofta Sliders",
+        "description": "Juicy grilled lamb kofta patties, served in mini buns with crisp lettuce, tomato, and creamy homemade tzatziki sauce.",
+        "price": "\u20b9585",
+        "image": "/cafe-photos/qzine-restaurant/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -2946,15 +3513,15 @@
     "rating": 4,
     "user_ratings_total": 1889,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 10:30 AM – 9:30 PM",
-      "Tuesday: 10:30 AM – 9:30 PM",
-      "Wednesday: 10:30 AM – 9:30 PM",
-      "Thursday: 10:30 AM – 9:30 PM",
-      "Friday: 10:30 AM – 9:30 PM",
-      "Saturday: 10:30 AM – 9:30 PM",
-      "Sunday: 10:30 AM – 9:30 PM"
+      "Monday: 10:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 10:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 10:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 10:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 10:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 10:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 10:30\u202fAM\u2009\u2013\u20099:30\u202fPM"
     ],
     "types": [
       "establishment",
@@ -2973,7 +3540,7 @@
     "theme": "Retro Lounge Vibes & Underground Music Scene",
     "introduction": "Dejavu is Shillong's premier lounge-cafe hybrid, pulling in the city's young creative crowd with its moody lighting, eclectic playlist, and a menu that runs from all-day coffee to late-night cocktails. The vibe is retro-chic with a northeast underground energy.",
     "whyVisit": "For Shillong's best late-night lounge atmosphere, craft cocktails, and indie music discoveries.",
-    "hours": "Monday: 11:00 AM – 10:00 PM",
+    "hours": "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
     "address": "Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003, India",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -3007,15 +3574,29 @@
     "mustTry": [
       {
         "name": "Smoked Pork Nachos",
-        "description": "Corn tortilla chips, pulled smoked pork, jalapeños, cheddar, sour cream.",
-        "price": "₹280",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vyi7LYkkY8mLSbwLMgD95An52X14oXl8kqpj4haDa8XWI_Akv88lKBZ0QX_M-KuD4jBIzcovgzwNBmsGt2h7iwJcFouYdUS08IkJDOw3-TUn5rLTVCAOXn8WQ2yCbY7voK5sjUjGZysX0TK7YmdfsdE8r6thKTfxj04foxaXx5Cb-8pUQyttlhyNyPjhZG1jzDbGDM2sg91RB_bcwcyg2YHVYreFdx57bC_ejziU1qGDfYS949QxAm3NWyN20WmITgxLtvxsyUG6aFeqqlx1N_fYJbcppLLLEPc4cezRz4duES_VRyFLs_j4z1a_Z6Bke4cly25eLq8PCZyiL3OOWSSzGfvAJgyEYg1c930S8tWJROMiJOaqCSlpUdFSp_z0DVRoUJkz0EFH7itlGdqdtf1-DKSp3KdHqU3dUdjBNvWkFXbci-9P55gVFf32BJ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "description": "Corn tortilla chips, pulled smoked pork, jalape\u00f1os, cheddar, sour cream.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/dejavu-cafe-lounge/photo-0.jpg"
       },
       {
         "name": "Passionfruit Mojito",
         "description": "Fresh passionfruit, mint, lime, soda, light rum.",
-        "price": "₹220",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vyi7LYkkY8mLSbwLMgD95An52X14oXl8kqpj4haDa8XWI_Akv88lKBZ0QX_M-KuD4jBIzcovgzwNBmsGt2h7iwJcFouYdUS08IkJDOw3-TUn5rLTVCAOXn8WQ2yCbY7voK5sjUjGZysX0TK7YmdfsdE8r6thKTfxj04foxaXx5Cb-8pUQyttlhyNyPjhZG1jzDbGDM2sg91RB_bcwcyg2YHVYreFdx57bC_ejziU1qGDfYS949QxAm3NWyN20WmITgxLtvxsyUG6aFeqqlx1N_fYJbcppLLLEPc4cezRz4duES_VRyFLs_j4z1a_Z6Bke4cly25eLq8PCZyiL3OOWSSzGfvAJgyEYg1c930S8tWJROMiJOaqCSlpUdFSp_z0DVRoUJkz0EFH7itlGdqdtf1-DKSp3KdHqU3dUdjBNvWkFXbci-9P55gVFf32BJ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9220",
+        "image": "/cafe-photos/dejavu-cafe-lounge/photo-1.jpg"
+      },
+      {
+        "name": "Groovy Glazed Wings",
+        "description": "Succulent chicken wings tossed in a secret tangy-sweet glaze, perfect for sharing and late-night cravings.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/dejavu-cafe-lounge/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Purple Haze Potion",
+        "description": "An enchanting gin-based cocktail with butterfly pea flower, citrus, and a hint of elderflower, delivering a mystical, vibrant taste.",
+        "price": "\u20b9620",
+        "image": "/cafe-photos/dejavu-cafe-lounge/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3032,15 +3613,15 @@
     "rating": 4.4,
     "user_ratings_total": 2229,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 11:00 AM – 10:00 PM",
-      "Thursday: 11:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 10:00 PM",
-      "Saturday: 11:00 AM – 10:00 PM",
-      "Sunday: 11:00 AM – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "types": [
       "establishment",
@@ -3059,7 +3640,7 @@
     "theme": "Colonial Heritage Tea Tradition & Intimate Parlour",
     "introduction": "The smallest cafe in this guide with only 7 covers, Enchante Tea Room is a miniature masterpiece of old-Shillong tea culture. Mismatched vintage crockery, lace curtains, and a handwritten menu of estate teas make this the most intimate and charming stop in the city.",
     "whyVisit": "For Meghalaya's finest heritage teas served in proper pots with homemade scones in a tiny, utterly charming parlour.",
-    "hours": "Monday: 10:30 AM – 7:00 PM",
+    "hours": "Monday: 10:30\u202fAM\u2009\u2013\u20097:00\u202fPM",
     "address": "Lummawrie, Laitumkhrah, Shillong, Meghalaya 793003, India",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -3094,14 +3675,28 @@
       {
         "name": "Darjeeling First Flush Pot",
         "description": "Authentic first-flush Darjeeling, loose-leaf brewed in a china pot, served with honey.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vTNi3hKt659vmkEAFQGlyvvryKIr_pqa-DaTNfy6n1HxVJd8pkamBJS_onckgAiq4UubC2beqAmhOXhDRTkEbBTHb7as7011AR9d8cSpIkgNP5kJE-3XzA0zJ1Hzix5N-ZCcD2CnGAYTXx7mTHNJA7YlBcvnvz4lr-swql4j2HXrUdr_Fau6XEpZ3dyEQFH39m3k4_fpWQ6imdyIeVRPj935tk_vkrqd8v8OKg1X343a33fVFdQjGg9wrJK4IqXwIgOvpEZzqBSyJhYiYJSsC-JKgYb4X53jHzvSOx-ehpV4dz9AKTrP6OBYgeyVsE65va1wBZ4hOz9YE0vpxiTGJF-YAElXZJZmG3M01qE9Ap_l894_loRBHdepykr3QOZpYi5Vir1WM4PKbklww4d4OQAHEtnSnxUa640Tk8ew_Y9B5UR3h7mma7TnJiGINl&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/enchante-tea-room/photo-0.jpg"
       },
       {
         "name": "Butter Scone with Jam",
         "description": "Homemade scone, local honey, strawberry preserve, clotted cream.",
-        "price": "₹140",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vTNi3hKt659vmkEAFQGlyvvryKIr_pqa-DaTNfy6n1HxVJd8pkamBJS_onckgAiq4UubC2beqAmhOXhDRTkEbBTHb7as7011AR9d8cSpIkgNP5kJE-3XzA0zJ1Hzix5N-ZCcD2CnGAYTXx7mTHNJA7YlBcvnvz4lr-swql4j2HXrUdr_Fau6XEpZ3dyEQFH39m3k4_fpWQ6imdyIeVRPj935tk_vkrqd8v8OKg1X343a33fVFdQjGg9wrJK4IqXwIgOvpEZzqBSyJhYiYJSsC-JKgYb4X53jHzvSOx-ehpV4dz9AKTrP6OBYgeyVsE65va1wBZ4hOz9YE0vpxiTGJF-YAElXZJZmG3M01qE9Ap_l894_loRBHdepykr3QOZpYi5Vir1WM4PKbklww4d4OQAHEtnSnxUa640Tk8ew_Y9B5UR3h7mma7TnJiGINl&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9140",
+        "image": "/cafe-photos/enchante-tea-room/photo-1.jpg"
+      },
+      {
+        "name": "Victorian Rose Tea Latte",
+        "description": "A delicate black tea infused with fragrant rose and a hint of vanilla, topped with frothy milk, evoking classic elegance.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/enchante-tea-room/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Coronation Chicken Finger Sandwiches",
+        "description": "Delicate finger sandwiches filled with tender chicken in a creamy, mildly spiced apricot and curry mayonnaise, a true colonial classic.",
+        "price": "\u20b9350",
+        "image": "/cafe-photos/enchante-tea-room/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3118,14 +3713,14 @@
     "rating": 4.3,
     "user_ratings_total": 149,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 10:30 AM – 7:00 PM",
-      "Tuesday: 10:30 AM – 7:00 PM",
-      "Wednesday: 10:30 AM – 7:00 PM",
-      "Thursday: 10:30 AM – 7:00 PM",
-      "Friday: 10:30 AM – 7:00 PM",
-      "Saturday: 10:30 AM – 7:00 PM",
+      "Monday: 10:30\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Tuesday: 10:30\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Wednesday: 10:30\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Thursday: 10:30\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 10:30\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Saturday: 10:30\u202fAM\u2009\u2013\u20097:00\u202fPM",
       "Sunday: Closed"
     ],
     "types": [
@@ -3141,9 +3736,9 @@
     "name": "Inside Out Cafe",
     "tagline": "Where Chinese Chowmein Meets South Indian Dosa",
     "theme": "East-South Fusion Street Food & Casual Bites",
-    "introduction": "Inside Out Cafe is Shillong's most delightfully eclectic fusion spot — a tiny casual cafe where Chinese stir-fries and South Indian tiffin items share equal billing on the menu. Popular with students and office workers for quick, affordable, and genuinely tasty food.",
-    "whyVisit": "For the best value fusion meal in Laitumkhrah — half Chinese, half South Indian, completely Shillong.",
-    "hours": "10:00 AM — 9:00 PM",
+    "introduction": "Inside Out Cafe is Shillong's most delightfully eclectic fusion spot \u2014 a tiny casual cafe where Chinese stir-fries and South Indian tiffin items share equal billing on the menu. Popular with students and office workers for quick, affordable, and genuinely tasty food.",
+    "whyVisit": "For the best value fusion meal in Laitumkhrah \u2014 half Chinese, half South Indian, completely Shillong.",
+    "hours": "10:00 AM \u2014 9:00 PM",
     "address": "HV9X+HJ7, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003, India",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -3178,14 +3773,28 @@
       {
         "name": "Schezwan Chowmein",
         "description": "Wok-tossed noodles, Schezwan sauce, mixed vegetables, egg.",
-        "price": "₹120",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uT4T2YqVLLoPqI6BLDqrEWf8SdniJhT7ODnOGRcC_XI1Z1tQ-UDuWFfTEIW7LfKOyRVamNOAEzovufK0B_UBY0QB1AvmR93npvFdBmFpHfOrmSwdDB6VZ2XRmqbUMrVufU5JRJR9qHm3zDwHqGYmKJ7aIJoIuVifnarb7mFCslx4rgBet4u82Ub3irJPRUf6RBF3tZB1yXDyp1fld9qjdu7wzy3gom7CT62svI7SO_H3Tn6aINSL5RJiwCUkVUr3p6RK-_bGWZWeEAKOqu3r01mm0MyauIOp_ps5wTTz7Mu_wgwbrTt9gEABQUoRENERFj05ZlH0vrLLfBBwiG3mnnpOcnCm8pmv7y-fZosbRhPYveku0kDzoJaOmWhGldeqZri3VZ1mqya8P___UQR-pXejuAce2vM5O3J_9HxodvCQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9120",
+        "image": "/cafe-photos/inside-out-cafe/photo-0.jpg"
       },
       {
         "name": "Masala Dosa with Coconut Chutney",
         "description": "Crispy fermented dosa, spiced potato filling, freshly ground coconut chutney.",
-        "price": "₹100",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uT4T2YqVLLoPqI6BLDqrEWf8SdniJhT7ODnOGRcC_XI1Z1tQ-UDuWFfTEIW7LfKOyRVamNOAEzovufK0B_UBY0QB1AvmR93npvFdBmFpHfOrmSwdDB6VZ2XRmqbUMrVufU5JRJR9qHm3zDwHqGYmKJ7aIJoIuVifnarb7mFCslx4rgBet4u82Ub3irJPRUf6RBF3tZB1yXDyp1fld9qjdu7wzy3gom7CT62svI7SO_H3Tn6aINSL5RJiwCUkVUr3p6RK-_bGWZWeEAKOqu3r01mm0MyauIOp_ps5wTTz7Mu_wgwbrTt9gEABQUoRENERFj05ZlH0vrLLfBBwiG3mnnpOcnCm8pmv7y-fZosbRhPYveku0kDzoJaOmWhGldeqZri3VZ1mqya8P___UQR-pXejuAce2vM5O3J_9HxodvCQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9100",
+        "image": "/cafe-photos/inside-out-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Crispy Idli Manchurian",
+        "description": "Golden-fried idli cubes tossed in a tangy, spicy Manchurian sauce with bell peppers and fresh spring onions.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/inside-out-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Schezwan Paneer Uttapam",
+        "description": "A thick, savory South Indian uttapam generously topped with spicy Schezwan-tossed paneer and fresh spring onions.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/inside-out-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3202,7 +3811,7 @@
     "rating": 4,
     "user_ratings_total": 7,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [],
     "types": [
       "cafe",
@@ -3221,7 +3830,7 @@
     "theme": "Old Shillong Colonial Heritage Cafe",
     "introduction": "One of Shillong's oldest cafes, Cafe Regal at Regal Point has been serving the city since colonial times. With its high ceilings, dark wood paneling, and a menu of timeless Indian and continental classics, it is where old Shillong lives on untouched.",
     "whyVisit": "For old-world charm, heritage colonial ambience, and consistently good Indian-continental classics in the heart of Police Bazaar.",
-    "hours": "Monday: 10:00 AM – 9:30 PM",
+    "hours": "Monday: 10:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
     "address": "Near Dreamland, Khyndailad, Police Bazar, Shillong, Meghalaya 793001, India",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -3256,14 +3865,28 @@
       {
         "name": "Chicken Cutlet with Brown Sauce",
         "description": "Old-recipe crumbed chicken cutlet, house brown sauce, mashed potato.",
-        "price": "₹240",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-u22MUpcufVNxEPBf-XJ8AV7W49f3a70Kh7gBHiJv3irXqH81SxViOtJIT5CcPI1Zz3N4DInIuGwLbHqRXj-1I4uDd7xvJShIjyiPeYrQq81EfZbNcmOr3wHy2moxUZyH5gN9TO0-8KsXjHqglMhDIaNbr3KKVkXyvKmMCl-W1stmQp-CcDQwvMm4l4qMpOSRXdCyZXvMimm4x22jgJ2k16DGGk1usMnP7ESMMVYf10dfQRXOEGCCOxfNnee3mTRz2a7OZ-HfBgc12HpYZE8d_xbXLeNTjzbzC7gTUeqha7lNmxKPGyJC1HICNMB-CE4ePT648UwrwNiffCvhgSuQw61yPrvf6TFQpipzO35tiYGwwFotQRvkDgCTGLMWvfAdxe1xp6CuIymhZBw8ZTluTjSNfXXZCRqGibUMEJyN4KtA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9240",
+        "image": "/cafe-photos/cafe-regal/photo-0.jpg"
       },
       {
         "name": "Shillong Special Masala Chai",
         "description": "Strong Assam tea, whole spices, fresh ginger, full-fat milk.",
-        "price": "₹60",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-u22MUpcufVNxEPBf-XJ8AV7W49f3a70Kh7gBHiJv3irXqH81SxViOtJIT5CcPI1Zz3N4DInIuGwLbHqRXj-1I4uDd7xvJShIjyiPeYrQq81EfZbNcmOr3wHy2moxUZyH5gN9TO0-8KsXjHqglMhDIaNbr3KKVkXyvKmMCl-W1stmQp-CcDQwvMm4l4qMpOSRXdCyZXvMimm4x22jgJ2k16DGGk1usMnP7ESMMVYf10dfQRXOEGCCOxfNnee3mTRz2a7OZ-HfBgc12HpYZE8d_xbXLeNTjzbzC7gTUeqha7lNmxKPGyJC1HICNMB-CE4ePT648UwrwNiffCvhgSuQw61yPrvf6TFQpipzO35tiYGwwFotQRvkDgCTGLMWvfAdxe1xp6CuIymhZBw8ZTluTjSNfXXZCRqGibUMEJyN4KtA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b960",
+        "image": "/cafe-photos/cafe-regal/photo-1.jpg"
+      },
+      {
+        "name": "Regal Fisherman's Pie",
+        "description": "A rich, creamy fish and seafood medley baked under a golden crust of fluffy mashed potatoes, a comforting classic.",
+        "price": "\u20b9520",
+        "image": "/cafe-photos/cafe-regal/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Shillong Strawberry Trifle",
+        "description": "Layers of fresh Shillong strawberries, delicate sponge cake, creamy custard, and whipped cream, a delightful colonial-era indulgence.",
+        "price": "\u20b9350",
+        "image": "/cafe-photos/cafe-regal/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3280,15 +3903,15 @@
     "rating": 3.8,
     "user_ratings_total": 1585,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 10:00 AM – 9:30 PM",
-      "Tuesday: 10:00 AM – 9:30 PM",
-      "Wednesday: 10:00 AM – 9:30 PM",
-      "Thursday: 10:00 AM – 9:30 PM",
-      "Friday: 10:00 AM – 9:30 PM",
-      "Saturday: 10:00 AM – 9:30 PM",
-      "Sunday: 10:00 AM – 9:30 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20099:30\u202fPM"
     ],
     "types": [
       "bakery",
@@ -3309,7 +3932,7 @@
     "theme": "French Bistro & European Patisserie in the Khasi Hills",
     "introduction": "Chez Rodin brings a genuine slice of French bistro culture to Shillong's Laitumkhrah. With freshly baked croissants, authentic French press coffee, and a charcuterie board that surprises every visitor, it is the city's most unexpected and delightful culinary secret.",
     "whyVisit": "For fresh croissants, French press coffee, and an authentic European bistro experience you never expected to find in Meghalaya.",
-    "hours": "10:00 AM — 9:00 PM",
+    "hours": "10:00 AM \u2014 9:00 PM",
     "address": "Nongrimmaw, Laitumkhrah, Shillong, Meghalaya 793011, India",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -3342,16 +3965,30 @@
     "hasLiveMusic": false,
     "mustTry": [
       {
-        "name": "Butter Croissant & Café au Lait",
-        "description": "Freshly baked layered croissant with house cultured butter, café au lait.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v3JI8SSAaMWeymXvKzN3tRXYsZs2AZnuYY1Y9VQ8DdrwtZSxfK8LFRsTB2AtQYt46qtjHv84c6SBKwgkth6XCLlOWjmWhV9sEvCLB_mE1lqx92Jr2OyFiv8qkK3ML5SR669ipr63YLiVU5M3p_htxQeRNo_GwRbrvCKQCwnkTvrrvQ_PDkSuI3LQ8lzZ20jSqvKgByxh1qzhA9sTvHQ5TbiXsyl3F0WKpmKY1AYTqm-3dQVQ7XY6QD-fRLE5H808FCsc-LLVBaYFLxVCUXpUIS94Rh6VqNcLNIxqDYVHVzNelQDL62qchKk0Trjk55TBR094dVmbC6p6y2KqG4oO74cgiRSDyVR5JyZl8sQvLFT9HWQ7x6O3maMVDIkpE66k4PZvnprVXHNaR20L1ESFMm0rf-YDpo88FF_HeooIlyNGFi&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "name": "Butter Croissant & Caf\u00e9 au Lait",
+        "description": "Freshly baked layered croissant with house cultured butter, caf\u00e9 au lait.",
+        "price": "\u20b9180",
+        "image": "/cafe-photos/chez-rodin/photo-0.jpg"
       },
       {
         "name": "Charcuterie Board",
         "description": "Cured meats, aged cheese, local fruit jam, crackers, olives.",
-        "price": "₹380",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v3JI8SSAaMWeymXvKzN3tRXYsZs2AZnuYY1Y9VQ8DdrwtZSxfK8LFRsTB2AtQYt46qtjHv84c6SBKwgkth6XCLlOWjmWhV9sEvCLB_mE1lqx92Jr2OyFiv8qkK3ML5SR669ipr63YLiVU5M3p_htxQeRNo_GwRbrvCKQCwnkTvrrvQ_PDkSuI3LQ8lzZ20jSqvKgByxh1qzhA9sTvHQ5TbiXsyl3F0WKpmKY1AYTqm-3dQVQ7XY6QD-fRLE5H808FCsc-LLVBaYFLxVCUXpUIS94Rh6VqNcLNIxqDYVHVzNelQDL62qchKk0Trjk55TBR094dVmbC6p6y2KqG4oO74cgiRSDyVR5JyZl8sQvLFT9HWQ7x6O3maMVDIkpE66k4PZvnprVXHNaR20L1ESFMm0rf-YDpo88FF_HeooIlyNGFi&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9380",
+        "image": "/cafe-photos/chez-rodin/photo-1.jpg"
+      },
+      {
+        "name": "Canard Confit aux Fruits Rouges",
+        "description": "Crispy-skinned duck leg confit, slow-cooked to perfection, served with a vibrant red berry reduction and creamy potato gratin.",
+        "price": "\u20b9850",
+        "image": "/cafe-photos/chez-rodin/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Paris-Brest Classique",
+        "description": "A classic choux pastry ring filled with a rich hazelnut praline cream, garnished with toasted almond flakes.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/chez-rodin/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3368,7 +4005,7 @@
     "rating": 4.8,
     "user_ratings_total": 119,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [],
     "types": [
       "establishment",
@@ -3386,7 +4023,7 @@
     "theme": "Laitumkhrah Hidden Hideaway",
     "introduction": "Tucked above Laitumkhrah's busiest stretch, Marsoki Cafe is the neighborhood's most talked-about hidden gem. With warm interiors, a relaxed crowd, and genuinely good coffee, it draws regulars who return for the atmosphere as much as the food.",
     "whyVisit": "For the laid-back atmosphere, solid coffee, and the feeling of having found Shillong's best-kept secret.",
-    "hours": "Monday: 12:00 – 8:00 PM",
+    "hours": "Monday: 12:00\u2009\u2013\u20098:00\u202fPM",
     "address": "Elizabeth ville, opp. laitumkhrah, Nongkynrih, lammawrie, Laitumkhrah, Shillong, Meghalaya 793003, India",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -3420,14 +4057,28 @@
       {
         "name": "Marsoki Special Coffee",
         "description": "House blend espresso with steamed milk and a hint of cardamom.",
-        "price": "₹150",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tPVhGo2xVLOjwvGxFy8R9P7jSFqYR9FzT5jqAJNGjfL66y-Fwv0yfZNZgTl-ANySvGr3w8zSO1KjMWH4j_Bi1vuFfIP2SiESG1AXXZqa6D-YehLJFLfR1wOFhkN4-mjkqqCerIZOruZfZusxalVTa0HvAQD-ScUqH2pK3awFtf3kfHKymufv_I7d8MtSkAG1Xyo9sd_wDSFOdG_WwMC3-hCJ4bDxvK7yhZLrO8Tl37ShjuffRGpj8XqjgoUuHDPV8RZDv55dIFeBAQDiczMH-gP3bXJbCdiP3Od-kc4UZ0I8fR4BNys4XJJmNa4myyBhddDyAo9Al1eI8iL1Iop6VD964GtBsakKKg9IWg2IExscn4vaKP1ugfHOEH6zF_mQiEiej0zFCASSEPu3C-62O5Z-GLckt1XWkDJZC3X35R9ZXmff9lzpCJfyroMArq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9150",
+        "image": "/cafe-photos/marsoki-cafe/photo-0.jpg"
       },
       {
         "name": "Grilled Sandwich Platter",
         "description": "Toasted bread, fresh vegetables, cheese, served with soup.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tPVhGo2xVLOjwvGxFy8R9P7jSFqYR9FzT5jqAJNGjfL66y-Fwv0yfZNZgTl-ANySvGr3w8zSO1KjMWH4j_Bi1vuFfIP2SiESG1AXXZqa6D-YehLJFLfR1wOFhkN4-mjkqqCerIZOruZfZusxalVTa0HvAQD-ScUqH2pK3awFtf3kfHKymufv_I7d8MtSkAG1Xyo9sd_wDSFOdG_WwMC3-hCJ4bDxvK7yhZLrO8Tl37ShjuffRGpj8XqjgoUuHDPV8RZDv55dIFeBAQDiczMH-gP3bXJbCdiP3Od-kc4UZ0I8fR4BNys4XJJmNa4myyBhddDyAo9Al1eI8iL1Iop6VD964GtBsakKKg9IWg2IExscn4vaKP1ugfHOEH6zF_mQiEiej0zFCASSEPu3C-62O5Z-GLckt1XWkDJZC3X35R9ZXmff9lzpCJfyroMArq&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/marsoki-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Laitumkhrah Cocoa Embrace",
+        "description": "A rich, velvety hot chocolate infused with a hint of orange zest and a sprinkle of cinnamon, offering a perfect cozy treat.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/marsoki-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Creamy Mushroom & Spinach Quiche",
+        "description": "A flaky pastry tart filled with a rich blend of saut\u00e9ed mushrooms, fresh spinach, and creamy cheese, baked to golden perfection.",
+        "price": "\u20b9350",
+        "image": "/cafe-photos/marsoki-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3444,15 +4095,15 @@
     "rating": 3.3,
     "user_ratings_total": 26,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 12:00 – 8:00 PM",
-      "Tuesday: 12:00 PM – 8:00 AM",
-      "Wednesday: 12:00 – 8:00 PM",
-      "Thursday: 12:00 PM – 8:30 AM",
-      "Friday: 12:00 – 8:00 PM",
-      "Saturday: 12:00 – 8:00 PM",
-      "Sunday: 1:00 – 8:00 PM"
+      "Monday: 12:00\u2009\u2013\u20098:00\u202fPM",
+      "Tuesday: 12:00\u202fPM\u2009\u2013\u20098:00\u202fAM",
+      "Wednesday: 12:00\u2009\u2013\u20098:00\u202fPM",
+      "Thursday: 12:00\u202fPM\u2009\u2013\u20098:30\u202fAM",
+      "Friday: 12:00\u2009\u2013\u20098:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20098:00\u202fPM",
+      "Sunday: 1:00\u2009\u2013\u20098:00\u202fPM"
     ],
     "types": [
       "cafe",
@@ -3472,8 +4123,8 @@
     "tagline": "Shillong's Original Chinese Kitchen",
     "theme": "Authentic Chinese Street Food in a Bamboo Setting",
     "introduction": "Bamboo Hut is one of Shillong's most enduring Chinese food destinations, serving authentic Hakka noodles, dim sum, and steamed momos from a warmly lit bamboo-themed space near MG Road. A longtime local institution.",
-    "whyVisit": "For Shillong's most authentic Hakka Chinese food — the steamed dumplings and noodles are the real deal.",
-    "hours": "10:00 AM — 9:00 PM",
+    "whyVisit": "For Shillong's most authentic Hakka Chinese food \u2014 the steamed dumplings and noodles are the real deal.",
+    "hours": "10:00 AM \u2014 9:00 PM",
     "address": "MG Road, Secretariat Hills, Shillong, Meghalaya 793001, India",
     "neighborhood": "MG Road",
     "images": {
@@ -3508,14 +4159,28 @@
       {
         "name": "Steamed Pork Momos",
         "description": "Hand-folded pork dumplings, steamed fresh, served with chilli dipping sauce.",
-        "price": "₹100",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tV4b3aW9_ABC2CLAk7Fe28UdqiaVGFqvymwAHRUXzUqeuurDfUKFznsdiKS-UOGr-T2Belfu-LuF3RiMnqLCuSMJ9GuCKX6BCSXBOPf8EyK0RHDrhrb-MNto7MrtgEDvmCiDr5jJMX24FG6rm8r3QRYOFaT7MPa4tu3rR5XjRcDZzFpsNYiWXt1E12edFaP86msNmKBXvcfW-viroS9dBhFpDAtwhEJ4b2m456ri7hihnafdPo1-07ft4GCoN5JNXaMdEzf6b3YLM3y9aw3aGN9f_JMcpL-ysf2YHNWxNhBeTREQF0drV5xnHv1cTeEGTpm7nAkvzPAOvLQrD4bp0O9lOE0bivnJ8BW3jqughVXyjiNH1rtbi65aTacUMRNqfkMyppKYD9sp-59XRZ5oltPu5fo4k6HO-5duQvdvn5P7Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9100",
+        "image": "/cafe-photos/bamboo-hut/photo-0.jpg"
       },
       {
         "name": "Hakka Noodles with Pork",
         "description": "Wok-tossed Hakka noodles with minced pork, soy sauce, spring onions.",
-        "price": "₹130",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tV4b3aW9_ABC2CLAk7Fe28UdqiaVGFqvymwAHRUXzUqeuurDfUKFznsdiKS-UOGr-T2Belfu-LuF3RiMnqLCuSMJ9GuCKX6BCSXBOPf8EyK0RHDrhrb-MNto7MrtgEDvmCiDr5jJMX24FG6rm8r3QRYOFaT7MPa4tu3rR5XjRcDZzFpsNYiWXt1E12edFaP86msNmKBXvcfW-viroS9dBhFpDAtwhEJ4b2m456ri7hihnafdPo1-07ft4GCoN5JNXaMdEzf6b3YLM3y9aw3aGN9f_JMcpL-ysf2YHNWxNhBeTREQF0drV5xnHv1cTeEGTpm7nAkvzPAOvLQrD4bp0O9lOE0bivnJ8BW3jqughVXyjiNH1rtbi65aTacUMRNqfkMyppKYD9sp-59XRZ5oltPu5fo4k6HO-5duQvdvn5P7Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9130",
+        "image": "/cafe-photos/bamboo-hut/photo-1.jpg"
+      },
+      {
+        "name": "Pan-fried Chicken Momos",
+        "description": "Crispy pan-fried chicken dumplings, golden-brown and juicy, served with a spicy dipping sauce.",
+        "price": "\u20b9260",
+        "image": "/cafe-photos/bamboo-hut/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Chilli Garlic Fried Rice with Chicken",
+        "description": "Aromatic fried rice tossed with tender chicken, fiery chilli, and crunchy garlic, a flavorful street food classic.",
+        "price": "\u20b9380",
+        "image": "/cafe-photos/bamboo-hut/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3532,7 +4197,7 @@
     "rating": 4.1,
     "user_ratings_total": 30,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [],
     "types": [
       "establishment",
@@ -3546,11 +4211,11 @@
   {
     "id": "wok-la-chaumiere",
     "name": "Wok La Chaumiere",
-    "tagline": "Where the Wok Meets the Chaumière",
+    "tagline": "Where the Wok Meets the Chaumi\u00e8re",
     "theme": "Chinese-French Fusion Kitchen & Cozy Hideout",
-    "introduction": "An eclectic, beloved Shillong spot blending Chinese wok cooking with a French chaumière (cottage) aesthetic. Wok La Chaumiere is famous for creative fusion dishes, excellent momos, and an intimate cozy atmosphere that feels unlike anywhere else in the city.",
-    "whyVisit": "For the most creative Chinese-French fusion food in Shillong — the combination is unusual and utterly delicious.",
-    "hours": "Monday: 11:30 AM – 8:45 PM",
+    "introduction": "An eclectic, beloved Shillong spot blending Chinese wok cooking with a French chaumi\u00e8re (cottage) aesthetic. Wok La Chaumiere is famous for creative fusion dishes, excellent momos, and an intimate cozy atmosphere that feels unlike anywhere else in the city.",
+    "whyVisit": "For the most creative Chinese-French fusion food in Shillong \u2014 the combination is unusual and utterly delicious.",
+    "hours": "Monday: 11:30\u202fAM\u2009\u2013\u20098:45\u202fPM",
     "address": "Lower, Lachumiere, Shillong, Meghalaya 793001, India",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -3585,14 +4250,28 @@
       {
         "name": "French-Spiced Momos",
         "description": "Steamed dumplings with a unique French herb and local chilli filling.",
-        "price": "₹120",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vSxbrufW8THtbQaN040BfUwWFyGHJ4eRypKT1z3qwkww_135iZtkTFnOxw4Ukql0_Ow2KYk8CLWaOgqft_xzH2VpfQ3n3jU04XAGXt4JqYzOgaCWNw0X2Y399tvkIxuwKnrVhvmkayoBg4KrOGXBos5yfw2qJuCfdWs_kyeQDqZIXQvAAd-GrmU2xYRHl_hJz3mAfSNAvvrT0OirKTp68lQITkZVnybB5NrJqpmjUYD3kUJq-y1Edxdgp69VQZg7PihPHuidywrwoheV1jKWeFkIIixetOgILu2MhId5FZA6DQ1e_uObnQh_FcBcFIJCFfVfYt4-Cg6_z1zWzRaZ1bVrTy-O1WhDxzHwF9gpWKWRRrGBwnOAxhD8o3VfmI_iPZJOeEYOsEojUmCWol10gme7ppunN6cZ9IugxoRoqDIW6o&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9120",
+        "image": "/cafe-photos/wok-la-chaumiere/photo-0.jpg"
       },
       {
         "name": "Wok La Fried Rice",
         "description": "Wok-tossed jasmine rice with egg, vegetables, and house special sauce.",
-        "price": "₹140",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vSxbrufW8THtbQaN040BfUwWFyGHJ4eRypKT1z3qwkww_135iZtkTFnOxw4Ukql0_Ow2KYk8CLWaOgqft_xzH2VpfQ3n3jU04XAGXt4JqYzOgaCWNw0X2Y399tvkIxuwKnrVhvmkayoBg4KrOGXBos5yfw2qJuCfdWs_kyeQDqZIXQvAAd-GrmU2xYRHl_hJz3mAfSNAvvrT0OirKTp68lQITkZVnybB5NrJqpmjUYD3kUJq-y1Edxdgp69VQZg7PihPHuidywrwoheV1jKWeFkIIixetOgILu2MhId5FZA6DQ1e_uObnQh_FcBcFIJCFfVfYt4-Cg6_z1zWzRaZ1bVrTy-O1WhDxzHwF9gpWKWRRrGBwnOAxhD8o3VfmI_iPZJOeEYOsEojUmCWol10gme7ppunN6cZ9IugxoRoqDIW6o&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9140",
+        "image": "/cafe-photos/wok-la-chaumiere/photo-1.jpg"
+      },
+      {
+        "name": "Pork Belly Hachis Parmentier Cantonais",
+        "description": "Slow-cooked Cantonese-style pork belly in a rich gravy, topped with creamy mashed potatoes and baked to golden perfection.",
+        "price": "\u20b9595",
+        "image": "/cafe-photos/wok-la-chaumiere/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Bao Buns au Camembert et Confiture d'Oignon",
+        "description": "Fluffy steamed bao buns embracing warm, gooey Camembert cheese and a sweet caramelized onion jam.",
+        "price": "\u20b9395",
+        "image": "/cafe-photos/wok-la-chaumiere/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3609,15 +4288,15 @@
     "rating": 4.4,
     "user_ratings_total": 782,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 11:30 AM – 8:45 PM",
-      "Tuesday: 11:00 AM – 8:45 PM",
-      "Wednesday: 11:00 AM – 8:45 PM",
-      "Thursday: 11:00 AM – 8:45 PM",
-      "Friday: 11:00 AM – 8:45 PM",
-      "Saturday: 11:00 AM – 8:45 PM",
-      "Sunday: 11:00 AM – 8:45 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u20098:45\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20098:45\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20098:45\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20098:45\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20098:45\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20098:45\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20098:45\u202fPM"
     ],
     "types": [
       "establishment",
@@ -3635,8 +4314,8 @@
     "tagline": "A Piece of Chennai, High in the Meghalaya Hills",
     "theme": "Authentic South Indian Tiffin in the Khasi Hills",
     "introduction": "Madras Cafe brings authentic South Indian tiffin culture to Shillong. The crispy masala dosa, piping hot idlis, and freshly filtered coffee are the real draw for vegetarians and South Indian food lovers in the city.",
-    "whyVisit": "For the best South Indian breakfast in Shillong — a proper filter coffee and crispy dosa morning ritual.",
-    "hours": "Monday: 7:00 AM – 10:00 PM",
+    "whyVisit": "For the best South Indian breakfast in Shillong \u2014 a proper filter coffee and crispy dosa morning ritual.",
+    "hours": "Monday: 7:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
     "address": "HVGJ+MH4, Jail Road, Police Bazar, Shillong, Meghalaya 793001, India",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -3671,14 +4350,28 @@
       {
         "name": "Masala Dosa with Sambar",
         "description": "Crispy fermented rice crepe, spiced potato filling, lentil sambar, coconut chutney.",
-        "price": "₹90",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uKO__KmGwB2aTeZ8-LpB2NAafuEd5xKCjg8cwuokUdQPb3jhUIfTA2bJif_rIa4N4piq-aNmDiQ7B09zjYvUPSL18tKe-TXr9euH_N16ESxefUgOupWuu66r8d8SO2Kbo8lOlabheDnBN1JnEgTjPcul-id0kNQ3-KL29ag9GIHwXiwUdrRfquhQ02_DkbriPg-vr3NsjMtG4LILvMwaAGUkX1_s7U7f5hnoh7xjgIkTTJ770FFVvGDHYI6xcjFWQlWoXLVAvERGfMWmA3uoAl1-S6VicgWnEyVzcQCFakHEnhemAck9NWnkvS6TczC2WWleJETWmyYu-BS-PgU_ZbUU3XCchdI3KT7-_QUfxgqDMu3hncaRje-lyYGLu0gwOZe97ACnsygVzXGVOmfKzLObjB0oKSQjrKpS-2GKaY5FDdFtLrR1QQpali-Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b990",
+        "image": "/cafe-photos/madras-cafe/photo-0.jpg"
       },
       {
         "name": "Filter Coffee",
         "description": "Authentic South Indian filter coffee, chicory blend, steamed milk, served in a steel tumbler.",
-        "price": "₹50",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uKO__KmGwB2aTeZ8-LpB2NAafuEd5xKCjg8cwuokUdQPb3jhUIfTA2bJif_rIa4N4piq-aNmDiQ7B09zjYvUPSL18tKe-TXr9euH_N16ESxefUgOupWuu66r8d8SO2Kbo8lOlabheDnBN1JnEgTjPcul-id0kNQ3-KL29ag9GIHwXiwUdrRfquhQ02_DkbriPg-vr3NsjMtG4LILvMwaAGUkX1_s7U7f5hnoh7xjgIkTTJ770FFVvGDHYI6xcjFWQlWoXLVAvERGfMWmA3uoAl1-S6VicgWnEyVzcQCFakHEnhemAck9NWnkvS6TczC2WWleJETWmyYu-BS-PgU_ZbUU3XCchdI3KT7-_QUfxgqDMu3hncaRje-lyYGLu0gwOZe97ACnsygVzXGVOmfKzLObjB0oKSQjrKpS-2GKaY5FDdFtLrR1QQpali-Q&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b950",
+        "image": "/cafe-photos/madras-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Idli Vada Combo",
+        "description": "A classic pairing of soft steamed idlis and crispy urad dal vadas, served with fresh coconut chutney and piping hot sambar.",
+        "price": "\u20b9180",
+        "image": "/cafe-photos/madras-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Onion Rava Dosa",
+        "description": "A thin, crispy, lacy dosa made from semolina batter, generously studded with finely chopped onions, served with chutney and sambar.",
+        "price": "\u20b9170",
+        "image": "/cafe-photos/madras-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3695,15 +4388,15 @@
     "rating": 3.9,
     "user_ratings_total": 2584,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 7:00 AM – 10:00 PM",
-      "Tuesday: 7:00 AM – 10:00 PM",
-      "Wednesday: 7:30 AM – 10:00 PM",
-      "Thursday: 7:00 AM – 10:00 PM",
-      "Friday: 7:00 AM – 10:00 PM",
-      "Saturday: 7:00 AM – 10:00 PM",
-      "Sunday: 7:00 AM – 10:00 PM"
+      "Monday: 7:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 7:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 7:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 7:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 7:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 7:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 7:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "types": [
       "establishment",
@@ -3720,9 +4413,9 @@
     "name": "Corner Cafe",
     "tagline": "Everyone's Corner, Everyone's Cafe",
     "theme": "Classic Neighborhood Corner Cafe",
-    "introduction": "Exactly what its name promises — a warm, no-fuss corner cafe in the heart of Laitumkhrah where regulars linger over coffee and snacks. Corner Cafe is the purest expression of Shillong's neighborhood cafe culture: unpretentious, reliable, and always welcoming.",
-    "whyVisit": "For an authentic neighborhood cafe experience — good coffee, simple food, and friendly locals.",
-    "hours": "Monday: 10:00 AM – 11:00 PM",
+    "introduction": "Exactly what its name promises \u2014 a warm, no-fuss corner cafe in the heart of Laitumkhrah where regulars linger over coffee and snacks. Corner Cafe is the purest expression of Shillong's neighborhood cafe culture: unpretentious, reliable, and always welcoming.",
+    "whyVisit": "For an authentic neighborhood cafe experience \u2014 good coffee, simple food, and friendly locals.",
+    "hours": "Monday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
     "address": "opposite Little Chef, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793011, India",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -3757,14 +4450,28 @@
       {
         "name": "Cappuccino",
         "description": "Double shot espresso, steamed milk, thick velvety foam.",
-        "price": "₹130",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-unJBmbkc_Cq1US3EJ_1CR8iYhPnBAVMufAg0PkaeSFyY1rhcv0ouQn8B08inYfSjap4I0grqn_hrFgs_p9AUTD1zEf2UoMxggIXCGFwaJurx5oS61Pw1-DHbOA-e_Fg92Y8PvJiGN7RWPUjx8Ld2fXUZRC-pJQHCLI46X8-zVQ2jXL9PObCnlScC-zoJEPYGvlP9FqmhDjRRqPSDMBREAHJ9_-f2ware5y4rbPbBUO87D4AaVRW1Zn3K2wig-qL0tur0gh5xOk24lNxhXkTWcToN8pB7qE8XLzIFmOwjxx5D3z08e3VHR3HGBV_eOI7jQetPPemt47LlU4sF_PVqHfCR6r7tA2QK1J7kN9amIfPNEslGx7KWEb3zlreOyUc_yjS0Nk5VPTCoDPs_xKFpASEvoBB5QsKUZ7ptOsSRWCAA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9130",
+        "image": "/cafe-photos/corner-cafe/photo-0.jpg"
       },
       {
         "name": "Veg Wrap",
         "description": "Whole wheat tortilla, mixed vegetables, cheese, house sauce.",
-        "price": "₹110",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-unJBmbkc_Cq1US3EJ_1CR8iYhPnBAVMufAg0PkaeSFyY1rhcv0ouQn8B08inYfSjap4I0grqn_hrFgs_p9AUTD1zEf2UoMxggIXCGFwaJurx5oS61Pw1-DHbOA-e_Fg92Y8PvJiGN7RWPUjx8Ld2fXUZRC-pJQHCLI46X8-zVQ2jXL9PObCnlScC-zoJEPYGvlP9FqmhDjRRqPSDMBREAHJ9_-f2ware5y4rbPbBUO87D4AaVRW1Zn3K2wig-qL0tur0gh5xOk24lNxhXkTWcToN8pB7qE8XLzIFmOwjxx5D3z08e3VHR3HGBV_eOI7jQetPPemt47LlU4sF_PVqHfCR6r7tA2QK1J7kN9amIfPNEslGx7KWEb3zlreOyUc_yjS0Nk5VPTCoDPs_xKFpASEvoBB5QsKUZ7ptOsSRWCAA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9110",
+        "image": "/cafe-photos/corner-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Chicken & Cheese Grilled Sandwich",
+        "description": "A hearty grilled sandwich filled with tender shredded chicken, gooey cheese, and a hint of local herbs, served with crisp potato chips.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/corner-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Spiced Apple Crumble Latte",
+        "description": "A warm, comforting latte blending steamed milk with sweet apple, cinnamon, and a hint of crumble, perfect for a chilly Shillong afternoon.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/corner-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3781,15 +4488,15 @@
     "rating": 4,
     "user_ratings_total": 119,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 10:00 AM – 11:00 PM",
-      "Tuesday: 10:00 AM – 10:00 PM",
-      "Wednesday: 10:00 AM – 11:00 PM",
-      "Thursday: 10:00 AM – 11:00 PM",
-      "Friday: 10:00 AM – 11:00 PM",
-      "Saturday: 10:00 AM – 11:00 PM",
-      "Sunday: 10:00 AM – 11:00 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM"
     ],
     "types": [
       "cafe",
@@ -3808,7 +4515,7 @@
     "theme": "Vibrant Turquoise-Themed Instagram Cafe",
     "introduction": "Turquoise Cafe (a unit of Slice of Shillong) is Shillong's most visually striking cafe, with vibrant turquoise interiors, eclectic decor, and a menu of colorful drinks and desserts that photograph beautifully and taste even better.",
     "whyVisit": "For the most photogenic cafe interior in Shillong and surprisingly excellent coffee and cakes.",
-    "hours": "Monday: 10:00 AM – 8:30 PM",
+    "hours": "Monday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
     "address": "Woods Cafe Upper Elysium, Bomfyle Road, opposite United Democratic Party (UDP) Office, Laitumkhrah, Shillong, Meghalaya 793003, India",
     "neighborhood": "Laitumkhrah",
     "images": {
@@ -3843,14 +4550,28 @@
       {
         "name": "Turquoise Blue Latte",
         "description": "Butterfly pea flower latte with steamed oat milk, honey, citrus zest.",
-        "price": "₹170",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-suXVn3qz7ePT6EsrrPyUidet7383XPUfRvorwdJyJi4dInt40mDUX_QzrxCJNYrP6Saeqmm-Has7h_kZfjr6q8uFRcvp2ejW1LxqbYy-QAucU3ketmvgavc19ZNGKjVsyu4n91C2CcbV2WRSMKHFbptoUD41vZrDQ58YQtb9s4M4lwKLQxhU27_bS9QrtoSccr94LtdMh-yqzFB3o6VZB40otjFbwp44cbb1LYJDPNRjKoJh_hvfNSGBavhinjBUCwxFm9sUKN0h29j7hW-2ls-JKiz_DLF591fNuwfjDqxGHZ1dk9Qhp2OgKPyMN5MtyZAlAsXgRia1GXhrDyjW0OHyYQEeH7q_ClkcjdePOF9-Jmt_GH9Rd90tgVqSouvTSsgTDBCvpMAheExpolM2KC7GSBRC1IGdM92X8wKjEq4jNG-wxGxKfIgKuh9A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9170",
+        "image": "/cafe-photos/turquoise-cafe/photo-0.jpg"
       },
       {
         "name": "Pastel Rainbow Cake Slice",
         "description": "Layered vanilla sponge with pastel cream cheese frosting.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-suXVn3qz7ePT6EsrrPyUidet7383XPUfRvorwdJyJi4dInt40mDUX_QzrxCJNYrP6Saeqmm-Has7h_kZfjr6q8uFRcvp2ejW1LxqbYy-QAucU3ketmvgavc19ZNGKjVsyu4n91C2CcbV2WRSMKHFbptoUD41vZrDQ58YQtb9s4M4lwKLQxhU27_bS9QrtoSccr94LtdMh-yqzFB3o6VZB40otjFbwp44cbb1LYJDPNRjKoJh_hvfNSGBavhinjBUCwxFm9sUKN0h29j7hW-2ls-JKiz_DLF591fNuwfjDqxGHZ1dk9Qhp2OgKPyMN5MtyZAlAsXgRia1GXhrDyjW0OHyYQEeH7q_ClkcjdePOF9-Jmt_GH9Rd90tgVqSouvTSsgTDBCvpMAheExpolM2KC7GSBRC1IGdM92X8wKjEq4jNG-wxGxKfIgKuh9A&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/turquoise-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Turquoise Teal Tonic",
+        "description": "A refreshing, vibrant mocktail blending blue cura\u00e7ao (non-alcoholic), lime, and a hint of ginger ale for a sparkling, Instagrammable sip.",
+        "price": "\u20b9280",
+        "image": "/cafe-photos/turquoise-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Aegean Berry Pancakes",
+        "description": "Fluffy pancakes layered with a medley of fresh blueberries, strawberries, and a dollop of cream cheese frosting, dusted with powdered sugar.",
+        "price": "\u20b9420",
+        "image": "/cafe-photos/turquoise-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3867,15 +4588,15 @@
     "rating": 3.4,
     "user_ratings_total": 41,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 10:00 AM – 8:30 PM",
-      "Tuesday: 10:00 AM – 8:30 PM",
-      "Wednesday: 10:00 AM – 8:30 PM",
-      "Thursday: 10:00 AM – 8:30 PM",
-      "Friday: 10:00 AM – 8:30 PM",
-      "Saturday: 10:00 AM – 8:30 PM",
-      "Sunday: 10:00 AM – 8:30 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM"
     ],
     "types": [
       "cafe",
@@ -3890,11 +4611,11 @@
   {
     "id": "the-press-cafe",
     "name": "The Press Cafe",
-    "tagline": "Stop the Press — This Coffee Is Too Good",
+    "tagline": "Stop the Press \u2014 This Coffee Is Too Good",
     "theme": "Journalist's Den & Artisan Coffee Parlour",
     "introduction": "The Press Cafe in OB Shopping Mall is Police Bazaar's finest artisan coffee destination, sourcing and roasting locally grown blends from Meghalaya's hills. The Irish Coffee is legendary, and the housemade desserts draw a devoted daily crowd.",
     "whyVisit": "For Shillong's best Irish coffee and locally sourced artisan coffee blends in a warm, bookish atmosphere.",
-    "hours": "Monday: 10:30 AM – 8:30 PM",
+    "hours": "Monday: 10:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
     "address": "Jylli Shop, Nongthymmai, Shillong, Meghalaya 793014, India",
     "neighborhood": "Police Bazaar",
     "images": {
@@ -3929,14 +4650,28 @@
       {
         "name": "Irish Coffee",
         "description": "Hot strong coffee, Irish whiskey, lightly whipped cream float.",
-        "price": "₹200",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sanWEGKnA1m7BNnXAEPUH6XrOj9yIxsejY5KlYxrPtCQCZoSp-7zhSxSlFcPSGU8DjfD6A6CM0fDjdY2O1elZEN-0jdFY8DmSxju5xuNDsd3AJHlL87nRHovYPT-JCi0npu-ydpmgYTnMFgTVcBphp3jIZcGXqxaRqLAgPrroe6WTDWzfif_ar4H2uS0AlqOzQXSIVh0qSWUV-xZdnTmt704FUm5ZIt3WrO16Ja0OmzhuF1EFQVQRCm9XRditNK7SbZzbwIKV-bBf8cXADzrVU4ngzgIfcZepAXsiIbaEZCx9E488xb6oK8jzsfZUZ1J7agBdn8ZqFyt0whCrYK-Ec_qaNvyHcF390EiuTTRg_tdBUBGm0KDkoRmbX1X1rJ0Ilg7azoIYcFDwwjdj2b9T3VNZQ-DZZhR6R-qNbbKE_plCUdyNTkSlXgl2HvSts&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9200",
+        "image": "/cafe-photos/the-press-cafe/photo-0.jpg"
       },
       {
         "name": "Locally Sourced Cold Brew",
         "description": "Meghalaya hill beans, 18-hour cold brew, served over ice.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sanWEGKnA1m7BNnXAEPUH6XrOj9yIxsejY5KlYxrPtCQCZoSp-7zhSxSlFcPSGU8DjfD6A6CM0fDjdY2O1elZEN-0jdFY8DmSxju5xuNDsd3AJHlL87nRHovYPT-JCi0npu-ydpmgYTnMFgTVcBphp3jIZcGXqxaRqLAgPrroe6WTDWzfif_ar4H2uS0AlqOzQXSIVh0qSWUV-xZdnTmt704FUm5ZIt3WrO16Ja0OmzhuF1EFQVQRCm9XRditNK7SbZzbwIKV-bBf8cXADzrVU4ngzgIfcZepAXsiIbaEZCx9E488xb6oK8jzsfZUZ1J7agBdn8ZqFyt0whCrYK-Ec_qaNvyHcF390EiuTTRg_tdBUBGm0KDkoRmbX1X1rJ0Ilg7azoIYcFDwwjdj2b9T3VNZQ-DZZhR6R-qNbbKE_plCUdyNTkSlXgl2HvSts&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9180",
+        "image": "/cafe-photos/the-press-cafe/photo-1.jpg"
+      },
+      {
+        "name": "The Byline Brew",
+        "description": "A meticulously prepared single-origin pour-over, showcasing the unique notes of Meghalaya's finest local beans.",
+        "price": "\u20b9320",
+        "image": "/cafe-photos/the-press-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "The Inkwell Espresso Brownie",
+        "description": "A rich, fudgy brownie infused with local espresso, offering a perfect blend of sweetness and coffee intensity.",
+        "price": "\u20b9270",
+        "image": "/cafe-photos/the-press-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -3953,15 +4688,15 @@
     "rating": 4.8,
     "user_ratings_total": 96,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
-      "Monday: 10:30 AM – 8:30 PM",
-      "Tuesday: 10:30 AM – 8:30 PM",
-      "Wednesday: 10:30 AM – 8:30 PM",
-      "Thursday: 10:30 AM – 8:30 PM",
-      "Friday: 10:30 AM – 8:30 PM",
-      "Saturday: 10:30 AM – 8:30 PM",
-      "Sunday: 12:00 – 8:30 PM"
+      "Monday: 10:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Tuesday: 10:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Wednesday: 10:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Thursday: 10:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Friday: 10:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Saturday: 10:30\u202fAM\u2009\u2013\u20098:30\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20098:30\u202fPM"
     ],
     "types": [
       "cafe",
@@ -4015,14 +4750,28 @@
       {
         "name": "Spicy Hotdog",
         "description": "Grilled pork hotdog, spicy tangy dip, mustard, caramelized onions.",
-        "price": "₹110",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tfY8fxFrITL4Knkt_KtJL5L_JsHIcfmW4330UUCvcLqr6WmpXwDV0qHRTzHYg0NGLf9zkwnTaV-_wgzDKPrLynNPTwE9EGHXp_AWkI3fsN1YccX5dzm8n1wegTXroigO00i-M-oUn2ymuhD3I7AbglukVaSxh2ehrCbKMagZBI0H-occ_P8CfydQum5FtDUusu4MlVxe873n37uPC8O6IofgFnFJ8XyNPp5S0q8Kcw7Z5jkNU3IqhbCEnBR_cV8fdyg5MbfSah-Y-JxQ_zCWjQ8cVrDMWui19XXxiV8aQGKA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b9110",
+        "image": "/cafe-photos/open-up-cafe/photo-0.jpg"
       },
       {
         "name": "Steamed Veg Momos",
         "description": "Fresh vegetable dumplings, steamed, served with spicy red chilli sauce.",
-        "price": "₹90",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tfY8fxFrITL4Knkt_KtJL5L_JsHIcfmW4330UUCvcLqr6WmpXwDV0qHRTzHYg0NGLf9zkwnTaV-_wgzDKPrLynNPTwE9EGHXp_AWkI3fsN1YccX5dzm8n1wegTXroigO00i-M-oUn2ymuhD3I7AbglukVaSxh2ehrCbKMagZBI0H-occ_P8CfydQum5FtDUusu4MlVxe873n37uPC8O6IofgFnFJ8XyNPp5S0q8Kcw7Z5jkNU3IqhbCEnBR_cV8fdyg5MbfSah-Y-JxQ_zCWjQ8cVrDMWui19XXxiV8aQGKA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
+        "price": "\u20b990",
+        "image": "/cafe-photos/open-up-cafe/photo-1.jpg"
+      },
+      {
+        "name": "Vibrant Cheese Melt Toastie",
+        "description": "Our signature triple-layered toastie, packed with a medley of colorful cheeses and secret herbs, perfect for a cheerful and cheesy bite.",
+        "price": "\u20b9299",
+        "image": "/cafe-photos/open-up-cafe/photo-2.jpg",
+        "ai_suggested": true
+      },
+      {
+        "name": "Open Up's Rainbow Fizz",
+        "description": "A dazzling layered mocktail featuring a vibrant blend of tropical juices, blue curacao, and a fizzy lemon twist for ultimate refreshment.",
+        "price": "\u20b9229",
+        "image": "/cafe-photos/open-up-cafe/photo-3.jpg",
+        "ai_suggested": true
       }
     ],
     "coordinates": {
@@ -4039,15 +4788,15 @@
     "rating": 4.3,
     "user_ratings_total": 1029,
     "price_level": 2,
-    "price_display": "₹₹",
+    "price_display": "\u20b9\u20b9",
     "opening_hours": [
       "Monday: Closed",
-      "Tuesday: 1:30 – 9:30 PM",
-      "Wednesday: 1:30 – 9:30 PM",
-      "Thursday: 1:30 – 9:30 PM",
-      "Friday: 1:30 – 9:30 PM",
-      "Saturday: 1:30 – 9:30 PM",
-      "Sunday: 1:30 – 9:30 PM"
+      "Tuesday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 1:30\u2009\u2013\u20099:30\u202fPM",
+      "Sunday: 1:30\u2009\u2013\u20099:30\u202fPM"
     ],
     "types": [
       "cafe",

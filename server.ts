@@ -4,8 +4,12 @@ import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
 import fs from "fs";
-import { CAFES as initialCafes } from "./src/data";
 import { enrichCafeWithLabet } from "./src/labet_data";
+
+// Empty fallback — DB always exists in this deployment. If it ever doesn't,
+// the API returns an empty list and the client shows zero cafes (better
+// than crashing the server bundle on transitive JPG imports from ./src/data).
+const initialCafes: any[] = [];
 
 // Load environment variables
 dotenv.config();
