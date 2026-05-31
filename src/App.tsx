@@ -109,13 +109,13 @@ export default function App() {
 
   // Setup tabs
   const tabsList = [
-    { id: "explore", label: "Discovery" },
-    { id: "discover", label: "Discover Meghalaya" },
-    { id: "cafes", label: "Cozy Cafés" },
-    { id: "cuisine", label: "Khasi Cuisine" },
-    { id: "walks", label: "District Walks" },
-    { id: "guides", label: "Editorial" },
-    { id: "about", label: "About Chronicles" }
+    { id: "explore", label: "Discovery", tooltip: "Home page with featured cafes, map & search" },
+    { id: "discover", label: "Discover Meghalaya", tooltip: "Adventure route planner with 12 curated road trips across Meghalaya" },
+    { id: "cafes", label: "Cozy Cafés", tooltip: "Browse all 49 cafes in grid or map view with filters" },
+    { id: "cuisine", label: "Khasi Cuisine", tooltip: "Traditional Khasi dishes: Jadoh, Dohkhlieh, Tungrymbai & more" },
+    { id: "walks", label: "District Walks", tooltip: "Guided walking itineraries through Shillong neighborhoods" },
+    { id: "guides", label: "Editorial", tooltip: "Stories, reviews & cultural articles about Shillong" },
+    { id: "about", label: "About Chronicles", tooltip: "About this project and the story behind the guide" }
   ];
 
   // Helper for rendering search placeholder items
@@ -163,6 +163,7 @@ export default function App() {
                 <button
                   id={`nav-tab-${tab.id}`}
                   key={tab.id}
+                  title={tab.tooltip}
                   onClick={() => {
                     if (tab.id === "walks") {
                       setSelectedNeighborhoodId(NEIGHBORHOODS[0].id);
@@ -190,6 +191,7 @@ export default function App() {
           {/* Desktop Data Hub Action */}
           <div className="hidden md:flex items-center ml-2">
             <button
+              title="Admin panel: enrich cafes from Google Places, sweep new venues, edit taxonomy"
               onClick={() => setDataHubOpen(true)}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono tracking-wider font-semibold uppercase cursor-pointer border border-stone-200 hover:border-amber-700 bg-white hover:bg-amber-50 text-stone-700 hover:text-amber-800 transition-all duration-300 shadow-xs"
             >
@@ -201,6 +203,7 @@ export default function App() {
           {/* Mobile hamburger menu */}
           <div className="md:hidden">
             <button
+              title={mobileMenuOpen ? "Close menu" : "Open navigation menu"}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-1.5 rounded-lg text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition-colors"
             >
@@ -222,6 +225,7 @@ export default function App() {
                 {tabsList.map((tab) => (
                   <button
                     key={tab.id}
+                    title={tab.tooltip}
                     onClick={() => {
                       if (tab.id === "walks") {
                         setSelectedNeighborhoodId(NEIGHBORHOODS[0].id);
@@ -742,17 +746,56 @@ export default function App() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 font-mono text-[10px] uppercase tracking-wider">
-            <button onClick={() => setActiveTab("explore")} className="hover:text-stone-100 cursor-pointer">Explore Main</button>
-            <button onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer text-amber-600">Discover Meghalaya</button>
-            <button onClick={() => setActiveTab("cafes")} className="hover:text-stone-100 cursor-pointer">Cozy List</button>
-            <button onClick={() => setActiveTab("cuisine")} className="hover:text-stone-100 cursor-pointer">Khasi Food</button>
-            <button onClick={() => setActiveTab("guides")} className="hover:text-stone-100 cursor-pointer">Guides Periodic</button>
-            <button onClick={() => setActiveTab("about")} className="hover:text-stone-100 cursor-pointer">Owner Letter</button>
+            <button title="Home page with featured cafes, map & search" onClick={() => setActiveTab("explore")} className="hover:text-stone-100 cursor-pointer">Explore Main</button>
+            <button title="Adventure route planner with 12 curated road trips across Meghalaya" onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer text-amber-600">Discover Meghalaya</button>
+            <button title="Browse all 49 cafes in grid or map view" onClick={() => setActiveTab("cafes")} className="hover:text-stone-100 cursor-pointer">Cozy List</button>
+            <button title="Traditional Khasi dishes: Jadoh, Dohkhlieh & more" onClick={() => setActiveTab("cuisine")} className="hover:text-stone-100 cursor-pointer">Khasi Food</button>
+            <button title="Stories, reviews & cultural articles" onClick={() => setActiveTab("guides")} className="hover:text-stone-100 cursor-pointer">Guides Periodic</button>
+            <button title="About this project and the story behind the guide" onClick={() => setActiveTab("about")} className="hover:text-stone-100 cursor-pointer">Owner Letter</button>
           </div>
 
           <p className="text-[10px] font-mono text-stone-500 leading-relaxed max-w-xs text-center md:text-right">
             Hand-drawn cartography and local independent review logs compiled inside Meghalaya's misty ridges.
           </p>
+        </div>
+
+        {/* ── SITEMAP ─────────────────────────────────────── */}
+        <div className="max-w-7xl mx-auto mt-10 pt-8 border-t border-stone-700/60 grid grid-cols-2 md:grid-cols-4 gap-6 text-stone-400">
+          <div>
+            <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">🗺️ Sitemap — Browse</p>
+            <ul className="space-y-1.5 text-[11px] font-sans">
+              <li><button onClick={() => setActiveTab("explore")} className="hover:text-amber-400 cursor-pointer">→ Discovery (Home)</button></li>
+              <li><button onClick={() => setActiveTab("cafes")} className="hover:text-amber-400 cursor-pointer">→ Cozy Cafés (49)</button></li>
+              <li><button onClick={() => setActiveTab("walks")} className="hover:text-amber-400 cursor-pointer">→ District Walks (3)</button></li>
+              <li><button onClick={() => setActiveTab("cuisine")} className="hover:text-amber-400 cursor-pointer">→ Khasi Cuisine</button></li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">🧭 Sitemap — Plan</p>
+            <ul className="space-y-1.5 text-[11px] font-sans">
+              <li><button onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer">→ Adventure Routes (12)</button></li>
+              <li><button onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer">→ City Route</button></li>
+              <li><button onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer">→ Cherrapunji Route</button></li>
+              <li><button onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer">→ Dawki & More</button></li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">📖 Sitemap — Read</p>
+            <ul className="space-y-1.5 text-[11px] font-sans">
+              <li><button onClick={() => setActiveTab("guides")} className="hover:text-amber-400 cursor-pointer">→ Editorial Stories</button></li>
+              <li><button onClick={() => setActiveTab("about")} className="hover:text-amber-400 cursor-pointer">→ About Chronicles</button></li>
+              <li><button onClick={() => { document.getElementById("ai-chat-launcher")?.click(); }} className="hover:text-amber-400 cursor-pointer">→ Ask Kong Labet (AI)</button></li>
+              <li><button onClick={() => setDataHubOpen(true)} className="hover:text-amber-400 cursor-pointer">→ Data Hub Admin</button></li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">🏔️ Neighborhoods</p>
+            <ul className="space-y-1.5 text-[11px] font-sans">
+              <li><button onClick={() => { setSelectedNeighborhoodId("laitumkhrah"); setActiveTab("walks"); }} className="hover:text-amber-400 cursor-pointer">→ Laitumkhrah</button></li>
+              <li><button onClick={() => { setSelectedNeighborhoodId("police-bazaar"); setActiveTab("walks"); }} className="hover:text-amber-400 cursor-pointer">→ Police Bazaar</button></li>
+              <li><button onClick={() => { setSelectedNeighborhoodId("golf-links"); setActiveTab("walks"); }} className="hover:text-amber-400 cursor-pointer">→ Golf Links</button></li>
+            </ul>
+          </div>
         </div>
       </footer>
 
