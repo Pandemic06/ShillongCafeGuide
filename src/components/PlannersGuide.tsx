@@ -569,7 +569,7 @@ export default function PlannersGuide() {
     if (!loc) return;
     const prompt = `Tell me about "${loc.name}" on the ${activeRoute.name} in Meghalaya. What should I know before visiting? Any tips on timing, difficulty, or what to bring?`;
     window.dispatchEvent(new CustomEvent("ask-kong-labet", { detail: { prompt } }));
-  }, [selectedMarkerId]);
+  }, [selectedMarkerId, activeRoute.name]);
 
   // Get stops in customized order, with customized active state
   const routeState = customStates[activeRoute.id] || {

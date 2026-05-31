@@ -83,11 +83,11 @@ export class DiscoveryEngine {
     const venue = this.foundVenues.get(id);
     if (!venue) return;
 
-    if (venue.aliases && !venue.aliases.includes(raw.extracted_name)) {
+    if (Array.isArray(venue.aliases) && !venue.aliases.includes(raw.extracted_name)) {
       venue.aliases.push(raw.extracted_name);
     }
-    
-    if (venue.discovery_sources && !venue.discovery_sources.includes(raw.source)) {
+
+    if (Array.isArray(venue.discovery_sources) && !venue.discovery_sources.includes(raw.source)) {
       venue.discovery_sources.push(raw.source);
     }
 

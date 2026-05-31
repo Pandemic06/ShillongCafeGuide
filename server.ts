@@ -604,7 +604,7 @@ Make sure to return only valid JSON inside a standard json block. Do not write t
 `;
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.5-flash",
       contents: sweepPrompt,
       config: {
         tools: [{ googleSearch: {} }],
@@ -899,9 +899,9 @@ ${serializedCafes}
 - teases the user gently or reflects on their state.
 `;
 
-    // Query the recommended general purpose model: gemini-3.5-flash
+    // Query the recommended general purpose model: gemini-2.5-flash
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.5-flash",
       contents: conversationHistory,
       config: {
         systemInstruction,
@@ -912,7 +912,18 @@ ${serializedCafes}
     res.json({ text: response.text });
   } catch (error: any) {
     console.error("Gemini API Proxy Error:", error);
-    res.status(500).json({ error: "The local guide encountered a heavy mist! Please try speaking again." });
+    const msg = error?.message || "";
+    if (msg.includes("429") || msg.includes("RESOURCE_EXHAUSTED") || msg.includes("prepayment")) {
+      res.status(200).json({
+        text: "Ah. My memory is sharp but my connection to the AI clouds has run dry today — quota exhausted. The developer needs to top up the Gemini API credits at ai.studio/projects. Come back soon, the hills will still be here."
+      });
+    } else if (msg.includes("API_KEY") || msg.includes("403")) {
+      res.status(200).json({
+        text: "The API key is not valid or not set. Check GEMINI_API_KEY in the .env file."
+      });
+    } else {
+      res.status(200).json({ text: "The local guide encountered a heavy mist! Please try speaking again." });
+    }
   }
 });
 
@@ -936,7 +947,7 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     // In production, serve compiled static assets from 'dist'
-    const distPath = path.join(process.cwd(), "dist");
+    const distPath = path.join(process.cwd(), "dist", "public");
     app.use(express.static(distPath));
     app.get("*", (req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
