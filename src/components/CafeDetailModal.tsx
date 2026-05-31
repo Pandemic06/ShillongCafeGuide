@@ -185,21 +185,36 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
   }
 };
 
-const getMediaAssets = (cafeId: string) => {
-  return MEDIA_DATABASE[cafeId] || {
-    gallery: [
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=800"
-    ],
-    menuImages: [
-      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800"
-    ]
-  };
+/**
+ * Resolve gallery + menuImages from the live cafe object first.
+ * cafe.gallery holds real cached Google Places photos for the "Google
+ * Shared Photos" tab; cafe.mustTry[].image (which we already cache to
+ * /cafe-photos/) seeds the "Menu Slate Scans" tab. Fall back to
+ * MEDIA_DATABASE (legacy Unsplash hardcodes) only if the cafe has zero
+ * cached assets — should never happen for current 47-cafe dataset.
+ */
+const getMediaAssets = (cafe: Cafe) => {
+  const galleryFromDb = (cafe.gallery || []).filter(Boolean);
+  const photosFromDb = (cafe.photos || []).filter(Boolean);
+  const mustTryImgs = (cafe.mustTry || [])
+    .map((m) => m.image)
+    .filter((u): u is string => !!u);
+
+  const gallery = galleryFromDb.length
+    ? galleryFromDb
+    : photosFromDb.length
+    ? photosFromDb
+    : MEDIA_DATABASE[cafe.id]?.gallery || [];
+
+  // Prefer mustTry images for the menu tab (they're tagged dish-level);
+  // fall back to extra cafe photos so the grid is never empty.
+  const menuImages = mustTryImgs.length
+    ? mustTryImgs
+    : photosFromDb.length
+    ? photosFromDb.slice(0, 4)
+    : MEDIA_DATABASE[cafe.id]?.menuImages || [];
+
+  return { gallery, menuImages };
 };
 
 export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps) {
@@ -691,10 +706,10 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                 {/* Custom Menu Scan Picture Gallery */}
                 <div className="space-y-4 pt-4 border-t border-stone-200/60">
                   <h5 className="text-xs uppercase font-mono tracking-widest text-[#713f12] font-bold">
-                    Menu Slate Scans & Platter Photos ({getMediaAssets(cafe.id).menuImages.length} items found)
+                    Menu Slate Scans & Platter Photos ({getMediaAssets(cafe).menuImages.length} items found)
                   </h5>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    {getMediaAssets(cafe.id).menuImages.map((mImg, idx) => (
+                    {getMediaAssets(cafe).menuImages.map((mImg, idx) => (
                       <div
                         key={idx}
                         className="h-44 rounded-xl overflow-hidden border border-stone-200/80 bg-stone-100 relative group cursor-pointer"
@@ -737,7 +752,7 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
 
                 {/* Dynamic Google Search style Cards grids */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {getMediaAssets(cafe.id).gallery.map((gImg, idx) => (
+                  {getMediaAssets(cafe).gallery.map((gImg, idx) => (
                     <div
                       key={idx}
                       className="h-36 rounded-xl overflow-hidden border border-stone-200 bg-stone-50 relative group cursor-pointer"

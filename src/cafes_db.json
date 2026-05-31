@@ -2947,7 +2947,8 @@
     "images": {
       "hero": "/cafe-photos/smoky-falls-tribe-coffee/hero-0.jpg",
       "card": "/cafe-photos/smoky-falls-tribe-coffee/card-0.jpg",
-      "interior": "/cafe-photos/smoky-falls-tribe-coffee/interior-0.jpg"
+      "interior": "/cafe-photos/smoky-falls-tribe-coffee/interior-0.jpg",
+      "details": "/cafe-photos/smoky-falls-tribe-coffee/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/smoky-falls-tribe-coffee/photo-0.jpg",
@@ -3048,7 +3049,8 @@
     "images": {
       "hero": "/cafe-photos/click-cafe/hero-0.jpg",
       "card": "/cafe-photos/click-cafe/card-0.jpg",
-      "interior": "/cafe-photos/click-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/click-cafe/interior-0.jpg",
+      "details": "/cafe-photos/click-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/click-cafe/photo-0.jpg",
@@ -3151,7 +3153,8 @@
     "images": {
       "hero": "/cafe-photos/latte-love-cafe/hero-0.jpg",
       "card": "/cafe-photos/latte-love-cafe/card-0.jpg",
-      "interior": "/cafe-photos/latte-love-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/latte-love-cafe/interior-0.jpg",
+      "details": "/cafe-photos/latte-love-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/latte-love-cafe/photo-0.jpg",
@@ -3253,7 +3256,8 @@
     "images": {
       "hero": "/cafe-photos/woodstock-cafe/hero-0.jpg",
       "card": "/cafe-photos/woodstock-cafe/card-0.jpg",
-      "interior": "/cafe-photos/woodstock-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/woodstock-cafe/interior-0.jpg",
+      "details": "/cafe-photos/woodstock-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/woodstock-cafe/photo-0.jpg",
@@ -3345,7 +3349,8 @@
     "images": {
       "hero": "/cafe-photos/tring-tring/hero-0.jpg",
       "card": "/cafe-photos/tring-tring/card-0.jpg",
-      "interior": "/cafe-photos/tring-tring/interior-0.jpg"
+      "interior": "/cafe-photos/tring-tring/interior-0.jpg",
+      "details": "/cafe-photos/tring-tring/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/tring-tring/photo-0.jpg",
@@ -3446,7 +3451,8 @@
     "images": {
       "hero": "/cafe-photos/qzine-restaurant/hero-0.jpg",
       "card": "/cafe-photos/qzine-restaurant/card-0.jpg",
-      "interior": "/cafe-photos/qzine-restaurant/interior-0.jpg"
+      "interior": "/cafe-photos/qzine-restaurant/interior-0.jpg",
+      "details": "/cafe-photos/qzine-restaurant/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/qzine-restaurant/photo-0.jpg",
@@ -3546,7 +3552,8 @@
     "images": {
       "hero": "/cafe-photos/dejavu-cafe-lounge/hero-0.jpg",
       "card": "/cafe-photos/dejavu-cafe-lounge/card-0.jpg",
-      "interior": "/cafe-photos/dejavu-cafe-lounge/interior-0.jpg"
+      "interior": "/cafe-photos/dejavu-cafe-lounge/interior-0.jpg",
+      "details": "/cafe-photos/dejavu-cafe-lounge/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/dejavu-cafe-lounge/photo-0.jpg",
@@ -3646,7 +3653,8 @@
     "images": {
       "hero": "/cafe-photos/enchante-tea-room/hero-0.jpg",
       "card": "/cafe-photos/enchante-tea-room/card-0.jpg",
-      "interior": "/cafe-photos/enchante-tea-room/interior-0.jpg"
+      "interior": "/cafe-photos/enchante-tea-room/interior-0.jpg",
+      "details": "/cafe-photos/enchante-tea-room/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/enchante-tea-room/photo-0.jpg",
@@ -3744,7 +3752,8 @@
     "images": {
       "hero": "/cafe-photos/inside-out-cafe/hero-0.jpg",
       "card": "/cafe-photos/inside-out-cafe/card-0.jpg",
-      "interior": "/cafe-photos/inside-out-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/inside-out-cafe/interior-0.jpg",
+      "details": "/cafe-photos/inside-out-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/inside-out-cafe/photo-0.jpg",
@@ -3836,7 +3845,8 @@
     "images": {
       "hero": "/cafe-photos/cafe-regal/hero-0.jpg",
       "card": "/cafe-photos/cafe-regal/card-0.jpg",
-      "interior": "/cafe-photos/cafe-regal/interior-0.jpg"
+      "interior": "/cafe-photos/cafe-regal/interior-0.jpg",
+      "details": "/cafe-photos/cafe-regal/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/cafe-regal/photo-0.jpg",
@@ -3938,7 +3948,8 @@
     "images": {
       "hero": "/cafe-photos/chez-rodin/hero-0.jpg",
       "card": "/cafe-photos/chez-rodin/card-0.jpg",
-      "interior": "/cafe-photos/chez-rodin/interior-0.jpg"
+      "interior": "/cafe-photos/chez-rodin/interior-0.jpg",
+      "details": "/cafe-photos/chez-rodin/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/chez-rodin/photo-0.jpg",
@@ -4029,7 +4040,8 @@
     "images": {
       "hero": "/cafe-photos/marsoki-cafe/hero-0.jpg",
       "card": "/cafe-photos/marsoki-cafe/card-0.jpg",
-      "interior": "/cafe-photos/marsoki-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/marsoki-cafe/interior-0.jpg",
+      "details": "/cafe-photos/marsoki-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/marsoki-cafe/photo-0.jpg",
@@ -4130,7 +4142,8 @@
     "images": {
       "hero": "/cafe-photos/bamboo-hut/hero-0.jpg",
       "card": "/cafe-photos/bamboo-hut/card-0.jpg",
-      "interior": "/cafe-photos/bamboo-hut/interior-0.jpg"
+      "interior": "/cafe-photos/bamboo-hut/interior-0.jpg",
+      "details": "/cafe-photos/bamboo-hut/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/bamboo-hut/photo-0.jpg",
@@ -4221,7 +4234,8 @@
     "images": {
       "hero": "/cafe-photos/wok-la-chaumiere/hero-0.jpg",
       "card": "/cafe-photos/wok-la-chaumiere/card-0.jpg",
-      "interior": "/cafe-photos/wok-la-chaumiere/interior-0.jpg"
+      "interior": "/cafe-photos/wok-la-chaumiere/interior-0.jpg",
+      "details": "/cafe-photos/wok-la-chaumiere/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/wok-la-chaumiere/photo-0.jpg",
@@ -4321,7 +4335,8 @@
     "images": {
       "hero": "/cafe-photos/madras-cafe/hero-0.jpg",
       "card": "/cafe-photos/madras-cafe/card-0.jpg",
-      "interior": "/cafe-photos/madras-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/madras-cafe/interior-0.jpg",
+      "details": "/cafe-photos/madras-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/madras-cafe/photo-0.jpg",
@@ -4421,7 +4436,8 @@
     "images": {
       "hero": "/cafe-photos/corner-cafe/hero-0.jpg",
       "card": "/cafe-photos/corner-cafe/card-0.jpg",
-      "interior": "/cafe-photos/corner-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/corner-cafe/interior-0.jpg",
+      "details": "/cafe-photos/corner-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/corner-cafe/photo-0.jpg",
@@ -4521,7 +4537,8 @@
     "images": {
       "hero": "/cafe-photos/turquoise-cafe/hero-0.jpg",
       "card": "/cafe-photos/turquoise-cafe/card-0.jpg",
-      "interior": "/cafe-photos/turquoise-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/turquoise-cafe/interior-0.jpg",
+      "details": "/cafe-photos/turquoise-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/turquoise-cafe/photo-0.jpg",
@@ -4621,7 +4638,8 @@
     "images": {
       "hero": "/cafe-photos/the-press-cafe/hero-0.jpg",
       "card": "/cafe-photos/the-press-cafe/card-0.jpg",
-      "interior": "/cafe-photos/the-press-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/the-press-cafe/interior-0.jpg",
+      "details": "/cafe-photos/the-press-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/the-press-cafe/photo-0.jpg",
@@ -4721,7 +4739,8 @@
     "images": {
       "hero": "/cafe-photos/open-up-cafe/hero-0.jpg",
       "card": "/cafe-photos/open-up-cafe/card-0.jpg",
-      "interior": "/cafe-photos/open-up-cafe/interior-0.jpg"
+      "interior": "/cafe-photos/open-up-cafe/interior-0.jpg",
+      "details": "/cafe-photos/open-up-cafe/photo-2.jpg"
     },
     "photos": [
       "/cafe-photos/open-up-cafe/photo-0.jpg",
