@@ -10,6 +10,12 @@ import { APIProvider, Map, AdvancedMarker, Pin, useMap, useMapsLibrary } from "@
 import { GOOGLE_MAPS_API_KEY, hasValidKey } from "../config";
 import { PLANNER_ROUTES, PlannerLocation, PlannerRoute, RHINO_GYAN_RULES } from "../data/plannerData";
 import { motion, AnimatePresence } from "motion/react";
+// @ts-expect-error - image asset import
+import policeBazarMorningImg from "../assets/images/routes/police-bazar-morning.jpg";
+// @ts-expect-error - image asset import
+import umiamLakeImg from "../assets/images/routes/umiam-lake.jpg";
+// @ts-expect-error - image asset import
+import laitlumCanyonImg from "../assets/images/routes/laitlum-canyon.jpg";
 
 // --- Typings ---
 interface ThemedJourney {
@@ -43,7 +49,7 @@ const THEMED_JOURNEYS: ThemedJourney[] = [
     name: "Caves & Canyons Expedition",
     description: "Venture deep underground into ancient calcareous fossil tunnels, dark crevices, and remote river canyons.",
     routeIds: ["cherrapunji", "silchar", "tura"],
-    banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Laitlum%20Canyon%2C%20Meghalaya.jpg?width=1200",
+    banner: laitlumCanyonImg,
     primaryFilter: "Adventure"
   },
   {
@@ -66,7 +72,7 @@ const THEMED_JOURNEYS: ThemedJourney[] = [
 
 // --- Curated Beautiful Banner Images per Route Group ---
 const ROUTE_BANNER_IMAGES: Record<string, string> = {
-  city: "https://commons.wikimedia.org/wiki/Special:FilePath/Police%20Bazar%20Road%2C%20Shillong%20in%20Morning.jpg?width=1200",
+  city: policeBazarMorningImg,
   cherrapunji: "https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?auto=format&fit=crop&w=800&q=80",
   "wei-sawdong": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80",
   dawki: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
@@ -77,7 +83,7 @@ const ROUTE_BANNER_IMAGES: Record<string, string> = {
   nongstoin: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
   tura: "https://images.unsplash.com/photo-1618083707368-b3823daa2726?auto=format&fit=crop&w=800&q=80",
   umiam: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
-  guwahati: "https://commons.wikimedia.org/wiki/Special:FilePath/Umiam_lake.jpg?width=1200"
+  guwahati: umiamLakeImg
 };
 
 // --- Custom Unsplash Pictures per category for Live Map Markers ---
