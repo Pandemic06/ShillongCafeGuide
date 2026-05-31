@@ -3,12 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shillong Cafe Map — Editorial Guide</title>
+    <meta name="theme-color" content="#543d1b" />
+
+    <!-- Primary SEO -->
+    <title>Shillong Café Map — Cafés, Khasi Food, Districts & Routes in Meghalaya</title>
+    <meta name="description" content="An editorial guide to the best cafés in Shillong, Khasi food like Jadoh and Dohneiiong, walkable districts (Laitumkhrah, Police Bazaar, Golf Links) and curated road-trip routes across Meghalaya including Cherrapunji and Dawki." />
+    <meta name="keywords" content="Shillong cafes, best cafes in Shillong, Laitumkhrah cafes, Police Bazaar Shillong, Khasi food, Jadoh, Dohneiiong, Cherrapunji route, Meghalaya travel guide, Shillong food guide" />
+    <meta name="author" content="Shillong Café Map" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://shillongcafemap.in/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shillong Café Map" />
+    <meta property="og:title" content="Shillong Café Map — Cafés, Khasi Food & Routes" />
+    <meta property="og:description" content="An editorial guide to the best cafés in Shillong, Khasi food, walkable districts, and curated road-trip routes across Meghalaya." />
+    <meta property="og:url" content="https://shillongcafemap.in/" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="https://shillongcafemap.in/cafe-photos/rynsan-cafe/hero-0.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:alt" content="A Shillong café table set with Khasi dishes" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shillong Café Map — Cafés, Khasi Food & Routes" />
+    <meta name="twitter:description" content="The editorial guide to cafés, Khasi food, districts, and road-trip routes across Shillong and Meghalaya." />
+    <meta name="twitter:image" content="https://shillongcafemap.in/cafe-photos/rynsan-cafe/hero-0.jpg" />
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
+    <!-- JSON-LD: WebSite + Organization (site-wide) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://shillongcafemap.in/#website",
+          "url": "https://shillongcafemap.in/",
+          "name": "Shillong Café Map",
+          "description": "Editorial guide to Shillong cafés, Khasi food, walkable districts and Meghalaya road-trip routes.",
+          "inLanguage": "en-IN",
+          "publisher": { "@id": "https://shillongcafemap.in/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://shillongcafemap.in/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://shillongcafemap.in/#organization",
+          "name": "Shillong Café Map",
+          "url": "https://shillongcafemap.in/",
+          "logo": "https://shillongcafemap.in/logo.png",
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Shillong, Meghalaya, India"
+          },
+          "sameAs": []
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <h1>Shillong Café Map</h1>
+      <p>An editorial guide to cafés in Shillong, Khasi food, neighborhood walks (Laitumkhrah, Police Bazaar, Golf Links), and curated road-trip routes across Meghalaya including Cherrapunji, Dawki and beyond. Please enable JavaScript to explore the interactive map.</p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

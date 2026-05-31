@@ -31,7 +31,11 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
       <div className="relative h-56 w-full overflow-hidden bg-stone-100">
         <img
           src={cafe.images.card}
-          alt={cafe.name}
+          alt={`${cafe.name} cafe in ${cafe.neighborhood}, Shillong`}
+          loading="lazy"
+          decoding="async"
+          width={600}
+          height={400}
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           referrerPolicy="no-referrer"
         />

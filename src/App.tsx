@@ -21,6 +21,30 @@ import DataHubModal from "./components/DataHubModal";
 import InteractiveMap from "./components/GoogleMap";
 import PlannersGuide from "./components/PlannersGuide";
 import { getCustomCafesFromFirestore } from "./services/db";
+import SEO, { PAGE_SEO } from "./components/SEO";
+import { FAQBlock, faqPageSchema, ModuleSummary } from "./components/SEOExtras";
+
+// Shared FAQ datasets — used both for rendered <details> and JSON-LD FAQPage.
+const FAQ_HOME = [
+  { q: "What are the best cafés in Shillong?", a: "Cafe Shillong (Laitumkhrah), Dylan's Cafe (Dhankheti), Rynsan (Boyce Road) for Khasi food, ML 05 Cafe (NH 44) for highway views and Cherry Bean Cafe (Kench's Trace) for bakes consistently top local lists. Our map ranks 47 verified cafés across the city." },
+  { q: "Where can I try authentic Khasi food in Shillong?", a: "Trattoria and Jadoh Stall near Police Bazaar are the most-cited Jadoh and Dohneiiong spots. Rynsan plates the same dishes in a sit-down format with live Ka Duitara music." },
+  { q: "Which Shillong neighborhood is best for café-hopping?", a: "Laitumkhrah for student energy, vinyl shops and acoustic stages. Police Bazaar for street-food adjacency. Golf Links for quiet, pine-scented mornings." },
+  { q: "Are there cafés in Shillong with live music?", a: "The Evening Club (Laitumkhrah), Cafe Shillong, Dylan's Cafe and Rynsan run regular acoustic and folk sets. Filter by 'Live Music' on the map." },
+  { q: "Does the route planner cover places outside Shillong city?", a: "Yes. The Adventure Route Planner has 12 curated road-trips including Cherrapunji (Sohra), Dawki, Jowai, Mawsynram, Laitlum Canyons, Wei Sawdong, Umiam Lake and Guwahati." },
+];
+
+const FAQ_CUISINE = [
+  { q: "What is Jadoh?", a: "Jadoh is the staple Khasi rice-and-pork dish — short-grain red hill rice slow-cooked in pork stock, ginger, shallots and mountain herbs. Best eaten with raw red onions and Lal-cha (unsweetened black tea)." },
+  { q: "What is Dohneiiong?", a: "Dohneiiong is a Khasi pork curry slow-cooked in dry-roasted black sesame seeds (Nei-long), local ginger and peppercorns. Velvety, nutty, and unmistakably regional — best with steamed red rice." },
+  { q: "What is Tungrymbai?", a: "Tungrymbai is fermented soybean paste slow-stewed with pork fat. Pungent, deep, traditional. Goes with red rice." },
+  { q: "Where can I try Khasi food in Shillong?", a: "Trattoria, Jadoh Stall, Heritage Inn Kitchen, and Rynsan are the most-recommended kitchens. The cuisine tab links each dish to the cafés serving it." },
+];
+
+const FAQ_WALKS = [
+  { q: "What's special about Laitumkhrah?", a: "Laitumkhrah is Shillong's student and music heart — elite schools, vinyl record stalls, acoustic cafés like Cafe Shillong, The Evening Club, Cherry Bean. Best walked late afternoon to dusk." },
+  { q: "Is Police Bazaar walkable?", a: "Yes. The central circle is dense and energetic — Khasi handicraft stalls, Bhaichung Jadoh street food, Melody & Beans live music, and the heritage cathedral within 800 metres." },
+  { q: "Why visit Golf Links?", a: "Quiet, misty, pine-shaded. Best for slow morning walks past botanical gardens. Fern & Mist Garden, ML 05 Cafe, and The Pine Loft are the anchor cafés." },
+];
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<"explore" | "cafes" | "cuisine" | "walks" | "guides" | "about" | "discover">("explore");
@@ -153,9 +177,11 @@ export default function App() {
               />
             </div>
             <div>
-              <h1 className="font-display font-bold text-base tracking-wide text-stone-900">
+              {/* Brand wordmark: visually styled like a heading but kept as <p>
+                  so each page has exactly one semantic <h1> in its content area. */}
+              <p className="font-display font-bold text-base tracking-wide text-stone-900">
                 Shillong Café Map
-              </h1>
+              </p>
               <span className="text-[10px] font-mono tracking-widest text-amber-800 uppercase font-bold">
                 Editorial Hearth Guide
               </span>
@@ -267,6 +293,51 @@ export default function App() {
         </AnimatePresence>
       </header>
 
+      {/* Per-tab SEO sync — drives <title>, meta, OG/Twitter cards, JSON-LD.
+          Invisible to users; rewrites <head> as tabs change. */}
+      <SEO
+        title={(PAGE_SEO[activeTab as keyof typeof PAGE_SEO] || PAGE_SEO.explore).title}
+        description={(PAGE_SEO[activeTab as keyof typeof PAGE_SEO] || PAGE_SEO.explore).description}
+        canonical={(PAGE_SEO[activeTab as keyof typeof PAGE_SEO] || PAGE_SEO.explore).canonical}
+        breadcrumbs={[
+          { name: "Home", url: "https://shillongcafemap.in/" },
+          ...(activeTab !== "explore"
+            ? [{
+                name: (PAGE_SEO[activeTab as keyof typeof PAGE_SEO] || PAGE_SEO.explore).title.split(" | ")[0].split(" — ")[0],
+                url: (PAGE_SEO[activeTab as keyof typeof PAGE_SEO] || PAGE_SEO.explore).canonical,
+              }]
+            : []),
+        ]}
+        schema={
+          activeTab === "explore"
+            ? faqPageSchema(FAQ_HOME)
+            : activeTab === "cuisine"
+            ? faqPageSchema(FAQ_CUISINE)
+            : activeTab === "walks"
+            ? faqPageSchema(FAQ_WALKS)
+            : activeTab === "cafes"
+            ? {
+                "@type": "ItemList",
+                name: "Cafés in Shillong",
+                numberOfItems: cafes.length,
+                itemListElement: cafes.slice(0, 20).map((c, i) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  item: {
+                    "@type": "CafeOrCoffeeShop",
+                    name: c.name,
+                    address: c.formatted_address || c.address,
+                    image: c.images?.hero,
+                    aggregateRating: c.rating
+                      ? { "@type": "AggregateRating", ratingValue: c.rating, reviewCount: c.user_ratings_total || 1 }
+                      : undefined,
+                  },
+                })),
+              }
+            : undefined
+        }
+      />
+
       {/* Main Container Wrapper */}
       <main className={`flex-1 w-full ${activeTab === "discover" ? "px-4 sm:px-6 lg:px-12 xl:px-20" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"} py-8 md:py-12`}>
         <AnimatePresence mode="wait">
@@ -301,6 +372,13 @@ export default function App() {
 
                   <p className="text-sm md:text-base text-stone-300 max-w-md font-sans leading-relaxed font-light">
                     A Curated Chronicle of cozy hearths, acoustic circles, and culinary heritage in Shillong's misty ridges.
+                  </p>
+
+                  {/* Plain-language SEO supporting line — small, design-aligned,
+                      keeps the artistic h1 above while giving Google a clear
+                      topical sentence with target keywords. */}
+                  <p className="text-xs text-stone-400 max-w-md font-sans leading-relaxed">
+                    A guide to the best cafés in Shillong, Khasi food like Jadoh and Dohneiiong, walkable districts (Laitumkhrah, Police Bazaar, Golf Links) and curated road-trip routes across Meghalaya.
                   </p>
 
                   {/* Curated Interactive Search */}
@@ -375,12 +453,26 @@ export default function App() {
                   </div>
                 </div>
                 <div className="rounded-3xl overflow-hidden border border-stone-250 border-stone-200/80 shadow-md">
-                  <InteractiveMap 
-                    cafes={cafes} 
-                    onSelectCafe={(c) => handleSelectCafe(c.id)} 
-                    activeCafeId={selectedCafe?.id} 
+                  <InteractiveMap
+                    cafes={cafes}
+                    onSelectCafe={(c) => handleSelectCafe(c.id)}
+                    activeCafeId={selectedCafe?.id}
                   />
                 </div>
+
+                {/* Crawlable companion text — Google needs prose context for the
+                    interactive map. Visually a soft caption, but rich in topic
+                    keywords and internal links to the dedicated tabs. */}
+                <ModuleSummary
+                  topic="What this map covers"
+                  body="49 hand-picked cafés across Shillong's main neighborhoods — Laitumkhrah, Police Bazaar, Golf Links, Boyce Road, Nongkynrih, Kench's Trace and Dhankheti. Filter by Khasi cuisine, live music, rooftop, fine dining or local eats. Each pin links to a full café card with photos, hours, ratings and signature dishes like Jadoh and Dohneiiong."
+                  links={[
+                    { label: "Browse all 49 cafés", onClick: () => setActiveTab("cafes") },
+                    { label: "Khasi food guide", onClick: () => setActiveTab("cuisine") },
+                    { label: "Neighborhood walks", onClick: () => setActiveTab("walks") },
+                    { label: "Meghalaya route planner", onClick: () => setActiveTab("discover") },
+                  ]}
+                />
               </div>
 
               {/* Editor's Choice Highlights section (Layout 1: Editor's choice) */}
@@ -562,6 +654,10 @@ export default function App() {
                   ))}
                 </div>
               </div>
+
+              {/* SEO: home FAQ — also emitted as FAQPage JSON-LD via the SEO
+                  component above for rich-result eligibility. */}
+              <FAQBlock items={FAQ_HOME} title="Shillong cafés, Khasi food & routes — quick answers" />
             </motion.div>
           )}
 
@@ -574,7 +670,21 @@ export default function App() {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
             >
+              {/* Screen-reader-only H1 for SEO. Visible page title is the
+                  artistic "Adventure Route Planner" inside PlannersGuide. */}
+              <h1 className="sr-only">Shillong &amp; Meghalaya Route Planner — Plan Your Adventure</h1>
               <PlannersGuide />
+              {/* Crawlable text companion for the interactive route planner. */}
+              <ModuleSummary
+                topic="What this planner covers"
+                body="12 curated road-trip routes radiating out of Shillong across Meghalaya: a 16-stop City Loop through Laitumkhrah and Police Bazaar, the 25-stop Cherrapunji circuit (Mawkdok, Nohkalikai, Mawsmai Caves, Double Decker Living Root Bridge), Dawki's crystal Umngot river, Jowai's monoliths and Phe Phe falls, Laitlum Canyons, Wei Sawdong, Mawsynram, Nongstoin, the Garo Hills via Tura, plus Umiam Lake and the Guwahati corridor. Toggle stops, see live drive distances, and export to Google Maps."
+                links={[
+                  { label: "City Route", href: "https://shillongcafemap.in/?tab=discover&route=city" },
+                  { label: "Cherrapunji Route", href: "https://shillongcafemap.in/?tab=discover&route=cherrapunji" },
+                  { label: "Dawki Route", href: "https://shillongcafemap.in/?tab=discover&route=dawki" },
+                  { label: "Laitlum Route", href: "https://shillongcafemap.in/?tab=discover&route=laitlum" },
+                ]}
+              />
             </motion.div>
           )}
 
@@ -588,6 +698,9 @@ export default function App() {
               transition={{ duration: 0.35 }}
               className="space-y-12"
             >
+              {/* SEO H1 — visually hidden; the styled h2 below is the visible
+                  heading for users. */}
+              <h1 className="sr-only">All Cafés in Shillong — Curated List &amp; Map</h1>
               <div className="text-center space-y-3">
                 <span className="text-[11px] font-mono uppercase tracking-widest text-[#8b5c1a] font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
                   Curated Ranks
@@ -690,7 +803,9 @@ export default function App() {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
             >
+              <h1 className="sr-only">Khasi Food in Shillong — Jadoh, Dohneiiong, Tungrymbai &amp; Where to Eat</h1>
               <CuisineGuide />
+              <FAQBlock items={FAQ_CUISINE} title="Khasi food in Shillong — common questions" />
             </motion.div>
           )}
 
@@ -703,11 +818,13 @@ export default function App() {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
             >
+              <h1 className="sr-only">Shillong Neighborhood Walks — Laitumkhrah, Police Bazaar, Golf Links</h1>
               <NeighborhoodGuide
                 onSelectCafe={handleSelectCafe}
                 initialNeighborhoodId={selectedNeighborhoodId}
                 cafes={cafes}
               />
+              <FAQBlock items={FAQ_WALKS} title="Shillong neighborhoods — walker questions" />
             </motion.div>
           )}
 
@@ -720,6 +837,7 @@ export default function App() {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
             >
+              <h1 className="sr-only">Shillong Editorial — Stories, Reviews &amp; Culture</h1>
               <GuidesList />
             </motion.div>
           )}
@@ -733,6 +851,7 @@ export default function App() {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35 }}
             >
+              <h1 className="sr-only">About Shillong Café Map</h1>
               <AboutPanel />
             </motion.div>
           )}
