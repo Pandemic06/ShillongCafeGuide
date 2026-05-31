@@ -499,6 +499,25 @@ export const ARTICLES: GuideArticle[] = [
     readTime: "5 min read",
     category: "culture",
     featured: true,
+    status: "published",
+    tags: ["monsoon", "coffee", "laitumkhrah", "atmosphere"],
+    body_blocks: [
+      { type: "paragraph", dropCap: true, text: "There is an unspoken agreement among residents of Shillong: when the first thick drops of rain begin to strike the iron roofs, the pace of the city slows, and everyone heads for their favourite café shelter. The hills go quiet. Engines fade. Conversations soften to match the drumming on the tin." },
+      { type: "paragraph", text: "Shillong, often called the \"Scotland of the East,\" draws its climate and personality from the monsoon clouds sweeping up off the Bangladesh plains. But instead of hiding indoors, locals walk out into it — umbrellas tilted, boots damp — until they find a doorway warm with the smell of roasted beans." },
+      { type: "image", url: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1600", caption: "Laitumkhrah window-light during an afternoon shower.", layout: "wide" },
+      { type: "heading", level: 2, text: "A different sensory experience" },
+      { type: "paragraph", text: "In places like Cafe Shillong or Dylan's Cafe, rain tapping on windowpanes becomes a kind of natural percussion. The misty hills of Laitumkhrah dissolve into soft water-colour wash, while inside, fireplaces crackle and local musicians lift acoustic guitars off their stands." },
+      { type: "pullquote", text: "The crisp mountain air makes the mug warm your hands twice — once on the way up, once when you wrap them around it.", attribution: "An old Khasi saying, loosely translated" },
+      { type: "heading", level: 3, text: "Beans of the hills" },
+      { type: "paragraph", text: "Locally harvested Khasi Hills beans reveal notes of deep roasted pine and citrus blossom. The cold elevation slows cherry growth, concentrating sugars. You taste mountain honey first, then a long resinous finish that stays with you while the rain stays with the windows." },
+      { type: "gallery", images: [
+        { url: "https://images.unsplash.com/photo-1442550528053-c431ecb55509?auto=format&fit=crop&q=80&w=800", caption: "Pour-over at Cafe Shillong" },
+        { url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800", caption: "Hand-roasted Arabica beans" },
+      ]},
+      { type: "divider" },
+      { type: "heading", level: 2, text: "Don't run for a taxi" },
+      { type: "paragraph", text: "Next time the sky darkens over Police Bazaar, don't run for a taxi. Slip inside a small café corner, order an organic pour-over, and listen to the rain drum on the roof. It is the closest you will ever get to the true, restful soul of Shillong — the one that doesn't trend on Instagram, doesn't post itself, just sits with you for an hour while the hills wash themselves clean." },
+    ],
     content: `
 # Why Rain is the Best Time for Coffee in Shillong
 
@@ -506,7 +525,7 @@ There is an unspoken agreement among the residents of Shillong: when the first t
 
 Shillong, often called the "Scotland of the East," gets its climate and personality from the monsoon clouds that sweep up from Bangladesh plains. But instead of hiding at home, we head out.
 
-In places like **Cafe Shillong** or **Dylan's Cafe**, the sound of rain tapping on windowpanes becomes a beautiful natural percussion. The misty hills of Laitumkhrah fade into soft gray water-color wash, while inside, fireplaces crackle and local musicians take up acoustic wooden guitars.
+In places like Cafe Shillong or Dylan's Cafe, the sound of rain tapping on windowpanes becomes a beautiful natural percussion. The misty hills of Laitumkhrah fade into soft gray water-color wash, while inside, fireplaces crackle and local musicians take up acoustic wooden guitars.
 
 ### The True Mountain Sip
 

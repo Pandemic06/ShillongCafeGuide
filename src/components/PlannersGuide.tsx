@@ -43,7 +43,7 @@ const THEMED_JOURNEYS: ThemedJourney[] = [
     name: "Caves & Canyons Expedition",
     description: "Venture deep underground into ancient calcareous fossil tunnels, dark crevices, and remote river canyons.",
     routeIds: ["cherrapunji", "silchar", "tura"],
-    banner: "https://images.unsplash.com/photo-1548252737-12962635ccca?auto=format&fit=crop&w=800&q=80",
+    banner: "https://commons.wikimedia.org/wiki/Special:FilePath/Laitlum%20Canyon%2C%20Meghalaya.jpg?width=1200",
     primaryFilter: "Adventure"
   },
   {
@@ -66,7 +66,7 @@ const THEMED_JOURNEYS: ThemedJourney[] = [
 
 // --- Curated Beautiful Banner Images per Route Group ---
 const ROUTE_BANNER_IMAGES: Record<string, string> = {
-  city: "https://images.unsplash.com/photo-1548252737-12962635ccca?auto=format&fit=crop&w=800&q=80",
+  city: "https://commons.wikimedia.org/wiki/Special:FilePath/Police%20Bazar%20Road%2C%20Shillong%20in%20Morning.jpg?width=1200",
   cherrapunji: "https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?auto=format&fit=crop&w=800&q=80",
   "wei-sawdong": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80",
   dawki: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
@@ -77,7 +77,7 @@ const ROUTE_BANNER_IMAGES: Record<string, string> = {
   nongstoin: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
   tura: "https://images.unsplash.com/photo-1618083707368-b3823daa2726?auto=format&fit=crop&w=800&q=80",
   umiam: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
-  guwahati: "https://images.unsplash.com/photo-1596701062951-df6890f50ab1?auto=format&fit=crop&w=800&q=80"
+  guwahati: "https://commons.wikimedia.org/wiki/Special:FilePath/Umiam_lake.jpg?width=1200"
 };
 
 // --- Custom Unsplash Pictures per category for Live Map Markers ---
@@ -796,6 +796,34 @@ export default function PlannersGuide() {
     });
   };
 
+  // Stops in master list belonging to catGroup but currently NOT active (i.e. skipped)
+  const getSkippedStopsInCategory = (catGroup: "cafes" | "waterfalls" | "treks" | "caves") => {
+    return masterLocationsOptionList.filter(loc =>
+      getLocationCategoryGroup(loc) === catGroup &&
+      !routeState.activeStopIds.includes(loc.id)
+    );
+  };
+
+  // Count of master stops in category (regardless of active state) — drives Restore button visibility
+  const countCategoryInRoute = (catGroup: "cafes" | "waterfalls" | "treks" | "caves") => {
+    return masterLocationsOptionList.filter(loc => getLocationCategoryGroup(loc) === catGroup).length;
+  };
+
+  const handleRestoreCategory = (catGroup: "cafes" | "waterfalls" | "treks" | "caves") => {
+    const idsToRestore = getSkippedStopsInCategory(catGroup).map(l => l.id);
+    if (idsToRestore.length === 0) return;
+    updateRouteState(activeRoute.id, {
+      activeStopIds: [...routeState.activeStopIds, ...idsToRestore]
+    });
+  };
+
+  const handleAddSingleStop = (stopId: string) => {
+    if (routeState.activeStopIds.includes(stopId)) return;
+    updateRouteState(activeRoute.id, {
+      activeStopIds: [...routeState.activeStopIds, stopId]
+    });
+  };
+
   const handleOptimizeRoute = () => {
     const activeLocs = masterLocationsOptionList.filter(loc =>
       routeState.activeStopIds.includes(loc.id)
@@ -913,7 +941,7 @@ export default function PlannersGuide() {
             <h3 className="font-display font-medium text-stone-900 text-sm">Fine-Tune Trek or Drive Intent</h3>
           </div>
           {activeFilters.length > 0 && (
-            <button 
+            <button
               onClick={() => { setActiveFilters([]); setSelectedThemedId(null); }}
               className="font-mono text-[10px] text-stone-500 hover:text-amber-800 transition-colors uppercase tracking-wider font-bold"
             >
@@ -921,6 +949,10 @@ export default function PlannersGuide() {
             </button>
           )}
         </div>
+        {/* Fine-Tune explainer */}
+        <p className="text-[11px] text-stone-500 font-sans leading-relaxed -mt-1">
+          Tag your trip intent (cafés, treks, waterfalls, scenic views, adventure) and we narrow the curated routes below to match. Stack multiple tags for hybrid trips. Skip entirely to browse all 12 routes freely.
+        </p>
         <div className="flex flex-wrap gap-2">
           {ALL_FILTERS.map((f) => {
             const isSelected = activeFilters.includes(f);
@@ -941,50 +973,27 @@ export default function PlannersGuide() {
           })}
         </div>
 
-        {/* Bulk Category Omitters */}
-        <div id="bulk-category-removal" className="border-t border-stone-200/50 pt-4 space-y-2">
-          <div className="flex items-center gap-1.5 text-stone-700">
-            <Trash className="w-3.5 h-3.5 text-amber-800" />
-            <span className="text-[10px] font-mono uppercase tracking-wider font-bold">Skip a Category of Spots from Route</span>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => handleRemoveCategory("cafes")}
-              disabled={countCategoryActive("cafes") === 0}
-              className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white text-stone-700 border-amber-205 hover:border-amber-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer flex items-center gap-1.5 shadow-2xs hover:bg-stone-50"
-            >
-              ☕ Skip Cafés ({countCategoryActive("cafes")})
-            </button>
-            <button
-              onClick={() => handleRemoveCategory("waterfalls")}
-              disabled={countCategoryActive("waterfalls") === 0}
-              className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white text-stone-700 border-sky-200 hover:border-sky-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer flex items-center gap-1.5 shadow-2xs hover:bg-stone-50"
-            >
-              🌊 Skip Waterfalls ({countCategoryActive("waterfalls")})
-            </button>
-            <button
-              onClick={() => handleRemoveCategory("treks")}
-              disabled={countCategoryActive("treks") === 0}
-              className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white text-stone-700 border-orange-200 hover:border-orange-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer flex items-center gap-1.5 shadow-2xs hover:bg-stone-50"
-            >
-              🥾 Skip Treks ({countCategoryActive("treks")})
-            </button>
-            <button
-              onClick={() => handleRemoveCategory("caves")}
-              disabled={countCategoryActive("caves") === 0}
-              className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white text-stone-700 border-stone-250 hover:border-stone-400 disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer flex items-center gap-1.5 shadow-2xs hover:bg-stone-50"
-            >
-              ⛰️ Skip Caves ({countCategoryActive("caves")})
-            </button>
-          </div>
-        </div>
+        {/* Bulk category-skip moved to map overlay (top-left of immersive map) */}
       </div>
 
       {/* Curated Themed Journeys (Persisted list) */}
       <div id="themed-journeys-container" className="space-y-4">
-        <div className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-amber-800" />
-          <h3 className="font-display font-medium text-stone-900 text-base md:text-lg">Pre-Saved Themed Journeys</h3>
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-amber-800" />
+            <h3 className="font-display font-medium text-stone-900 text-base md:text-lg">Pre-Saved Themed Journeys</h3>
+          </div>
+          <button
+            onClick={() => {
+              setSelectedThemedId(null);
+              setActiveFilters([]);
+              document.getElementById("planner-split-workspace")?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            className="font-mono text-[10px] text-stone-600 hover:text-amber-800 transition-colors uppercase tracking-wider font-bold border border-stone-300 hover:border-amber-700 px-3 py-1.5 rounded-full bg-white cursor-pointer"
+            title="Skip theme picking — browse all 12 curated routes directly"
+          >
+            Skip Theme → Explore Freely
+          </button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {THEMED_JOURNEYS.map((theme) => {
@@ -1310,6 +1319,7 @@ export default function PlannersGuide() {
             <div className="absolute top-5 inset-x-5 z-20 flex items-center justify-between gap-4">
               <button
                 onClick={() => {
+                  resetRouteToDefault(); // Clear any skipped categories so next entry starts fresh
                   setIsFullscreenMode(false);
                   setIsMobileDrawerExpanded(false);
                 }}
@@ -1350,6 +1360,69 @@ export default function PlannersGuide() {
 
             {/* Immersive Expanded Map Box takes up 100% space */}
             <div className="flex-1 w-full h-full relative bg-neutral-950">
+              {/* Skip-Category overlay: 3-state per category (Skip-all → Restore-all → Expand for per-stop re-add). */}
+              <div className="absolute top-3 right-3 z-30 max-w-[calc(100%-1.5rem)] md:max-w-xs bg-neutral-900/85 backdrop-blur-md border border-neutral-800/80 p-2 rounded-2xl shadow-xl space-y-1.5">
+                <div className="flex items-center justify-between gap-2 px-1">
+                  <span className="text-[9px] font-mono uppercase tracking-wider font-bold text-amber-400">Skip Categories</span>
+                  <button
+                    onClick={resetRouteToDefault}
+                    title="Restore all skipped stops + reset route"
+                    className="text-[9px] font-mono uppercase tracking-wider text-neutral-400 hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Reset all
+                  </button>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {([
+                    { key: "cafes", emoji: "☕", label: "Cafés" },
+                    { key: "waterfalls", emoji: "🌊", label: "Waterfalls" },
+                    { key: "treks", emoji: "🥾", label: "Treks" },
+                    { key: "caves", emoji: "⛰️", label: "Caves" },
+                  ] as const).map(c => {
+                    const activeCount = countCategoryActive(c.key);
+                    const totalInRoute = countCategoryInRoute(c.key);
+                    const skipped = getSkippedStopsInCategory(c.key);
+                    const isSkipped = activeCount === 0 && skipped.length > 0;
+
+                    if (totalInRoute === 0) {
+                      return (
+                        <button
+                          key={c.key}
+                          disabled
+                          title={`No ${c.label.toLowerCase()} on this route`}
+                          className="px-2.5 py-1.5 rounded-lg border border-neutral-700 bg-neutral-950/60 text-neutral-200 text-[10px] font-mono font-semibold uppercase tracking-wide opacity-35 cursor-not-allowed flex items-center gap-1"
+                        >
+                          <span>{c.emoji}</span><span>{c.label}</span><span>(0)</span>
+                        </button>
+                      );
+                    }
+
+                    if (isSkipped) {
+                      return (
+                        <button
+                          key={c.key}
+                          onClick={() => handleRestoreCategory(c.key)}
+                          title={`Restore all ${skipped.length} ${c.label.toLowerCase()} — or re-add individually from the route stops list on the left`}
+                          className="px-2.5 py-1.5 rounded-lg border border-amber-700 bg-amber-900/40 hover:bg-amber-800/60 text-amber-100 text-[10px] font-mono font-semibold uppercase tracking-wide cursor-pointer transition-colors flex items-center gap-1"
+                        >
+                          <span>↻</span><span>{c.label}</span><span className="text-amber-300 font-bold">({skipped.length})</span>
+                        </button>
+                      );
+                    }
+
+                    return (
+                      <button
+                        key={c.key}
+                        onClick={() => handleRemoveCategory(c.key)}
+                        title={`Skip ${activeCount} ${c.label.toLowerCase()} from route + map`}
+                        className="px-2.5 py-1.5 rounded-lg border border-neutral-700 bg-neutral-950/60 hover:bg-neutral-800 text-neutral-200 text-[10px] font-mono font-semibold uppercase tracking-wide cursor-pointer transition-colors flex items-center gap-1"
+                      >
+                        <span>{c.emoji}</span><span>{c.label}</span><span className="text-amber-400 font-bold">({activeCount})</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
               {hasValidKey ? (
                 <APIProvider apiKey={GOOGLE_MAPS_API_KEY} version="weekly">
                   <Map
@@ -1392,7 +1465,7 @@ export default function PlannersGuide() {
                             title={loc.name}
                             onClick={() => setSelectedMarkerId(selectedMarkerId === loc.id ? null : loc.id)}
                           >
-                            <div 
+                            <div
                               className={`relative cursor-pointer transition-all duration-350 ${
                                 isHovered || isSelected ? "scale-120 z-50" : "scale-100 z-10"
                               }`}
@@ -1400,6 +1473,19 @@ export default function PlannersGuide() {
                               onMouseLeave={() => setHoveredLocId(null)}
                               style={{ width: "32px", height: "32px" }}
                             >
+                              {/* Pulsating ripple when selected */}
+                              {isSelected && (
+                                <>
+                                  <span
+                                    className="absolute inset-[-10px] rounded-full animate-ping pointer-events-none"
+                                    style={{ background: pinColor, opacity: 0.35 }}
+                                  />
+                                  <span
+                                    className="absolute inset-[-4px] rounded-full pointer-events-none"
+                                    style={{ background: pinColor, opacity: 0.18 }}
+                                  />
+                                </>
+                              )}
                               <Pin background={pinColor} borderColor="#ffffff" glyphColor="#ffffff" scale={isSelected || isHovered ? 1.15 : 0.9} />
                               
                               {/* Sequence number overlay on map pin */}

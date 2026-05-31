@@ -13,6 +13,10 @@ import {
   MEGHALAYA_DESTINATIONS, DESTINATION_CATEGORIES, TYPE_COLORS,
   type Destination, type DestinationType
 } from "../data/meghalaya-destinations";
+import {
+  PICNIC_ROUTES, PICNIC_KIND_META,
+  type PicnicRoute, type PicnicPoint
+} from "../data/picnic-routes";
 import { type Cafe } from "../types";
 
 interface Props {
@@ -25,6 +29,13 @@ interface ItineraryStop {
   coordinates: { lat: number; lng: number };
   type: DestinationType | "cafe";
   region: string;
+  // Picnic-route extras (present when added from a Rhino Picnic route)
+  ser?: number;
+  picnicKind?: string;
+  distKm?: number;
+  visitTime?: string;
+  remarks?: string;
+  unverified?: boolean;
 }
 
 interface RouteMetrics {
@@ -111,13 +122,37 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
   const [mapReady, setMapReady] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [selectedDest, setSelectedDest] = useState<Destination | null>(null);
-  const [itinerary, setItinerary] = useState<ItineraryStop[]>([]);
-  const [itineraryOpen, setItineraryOpen] = useState(false);
+  const [itinerary, setItinerary] = useState<ItineraryStop[]>(() => {
+    try {
+      const saved = localStorage.getItem("meg-itinerary");
+      return saved ? JSON.parse(saved) : [];
+    } catch { return []; }
+  });
+  const [itineraryOpen, setItineraryOpen] = useState(() => {
+    try { return localStorage.getItem("meg-itinerary-open") === "1"; } catch { return false; }
+  });
   const [metrics, setMetrics] = useState<RouteMetrics | null>(null);
   const [routeLoading, setRouteLoading] = useState(false);
   const [guidelinesOpen, setGuidelinesOpen] = useState(false);
   const [openGuideline, setOpenGuideline] = useState<number | null>(null);
   const [filterOpen, setFilterOpen] = useState(true);
+
+  // Rhino Picnic route mode
+  const mapWrapRef = useRef<HTMLDivElement>(null);
+  const [activeRouteId, setActiveRouteId] = useState<string | null>(null);
+  const [routeResolving, setRouteResolving] = useState(false);
+  const [resolveProgress, setResolveProgress] = useState({ done: 0, total: 0 });
+  const [schematicOpen, setSchematicOpen] = useState(true);
+  const activeRoute = PICNIC_ROUTES.find((r) => r.id === activeRouteId) || null;
+
+  // Persist itinerary to localStorage
+  useEffect(() => {
+    try { localStorage.setItem("meg-itinerary", JSON.stringify(itinerary)); } catch {}
+  }, [itinerary]);
+
+  useEffect(() => {
+    try { localStorage.setItem("meg-itinerary-open", itineraryOpen ? "1" : "0"); } catch {}
+  }, [itineraryOpen]);
 
   // Fetch API key
   useEffect(() => {
@@ -277,28 +312,33 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
       return;
     }
 
-    // Place numbered markers
-    itinerary.forEach((stop, i) => {
+    // Only geolocated (verified) stops go on the map + route. Unverified points
+    // stay in the schematic list but are skipped here so they don't distort the road line.
+    const routable = itinerary.filter((s) => !s.unverified);
+
+    // Place numbered markers (verified stops only)
+    routable.forEach((stop, i) => {
       const marker = new google.maps.Marker({
         position: stop.coordinates,
         map,
         icon: {
-          url: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(itineraryMarkerSvg(i)),
+          url: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(itineraryMarkerSvg(stop.ser != null ? stop.ser - 1 : i)),
           scaledSize: new google.maps.Size(44, 44),
           anchor: new google.maps.Point(22, 22),
         },
-        title: `${i + 1}. ${stop.name}`,
+        title: `${stop.ser ?? i + 1}. ${stop.name}`,
         zIndex: 100,
       });
       itineraryMarkersRef.current.push(marker);
     });
 
-    if (itinerary.length < 2) {
+    if (routable.length < 2) {
       setMetrics(null);
       return;
     }
 
-    // Calculate routes between consecutive stops
+    // Single Directions request with waypoints — one API call instead of N.
+    // Google caps waypoints at 25 (incl origin+dest), so chunk longer routes.
     setRouteLoading(true);
     setMetrics(null);
 
@@ -306,18 +346,30 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
     const allLegs: { distance: string; duration: string }[] = [];
     let totalDistM = 0;
     let totalDurS = 0;
-
     const colors = ["#b45309", "#059669", "#0369a1", "#7c3aed", "#be123c"];
 
-    for (let i = 0; i < itinerary.length - 1; i++) {
-      const origin = itinerary[i].coordinates;
-      const dest = itinerary[i + 1].coordinates;
+    const CHUNK = 10; // max stops per request (API key waypoint cap)
+    const chunks: ItineraryStop[][] = [];
+    for (let i = 0; i < routable.length; i += CHUNK - 1) {
+      chunks.push(routable.slice(i, i + CHUNK));
+    }
+
+    for (let c = 0; c < chunks.length; c++) {
+      const seg = chunks[c];
+      if (seg.length < 2) continue;
+      const origin = seg[0].coordinates;
+      const destination = seg[seg.length - 1].coordinates;
+      const waypoints = seg.slice(1, -1).map((s) => ({
+        location: new google.maps.LatLng(s.coordinates.lat, s.coordinates.lng),
+        stopover: true,
+      }));
 
       await new Promise<void>((resolve) => {
         service.route(
           {
             origin: new google.maps.LatLng(origin.lat, origin.lng),
-            destination: new google.maps.LatLng(dest.lat, dest.lng),
+            destination: new google.maps.LatLng(destination.lat, destination.lng),
+            waypoints,
             travelMode: google.maps.TravelMode.DRIVING,
           },
           (result, status) => {
@@ -325,8 +377,9 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
               const renderer = new google.maps.DirectionsRenderer({
                 map,
                 suppressMarkers: true,
+                preserveViewport: true,
                 polylineOptions: {
-                  strokeColor: colors[i % colors.length],
+                  strokeColor: colors[c % colors.length],
                   strokeWeight: 5,
                   strokeOpacity: 0.85,
                 },
@@ -334,15 +387,14 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
               renderer.setDirections(result);
               directionsRenderersRef.current.push(renderer);
 
-              const leg = result.routes[0].legs[0];
-              totalDistM += leg.distance?.value || 0;
-              totalDurS += leg.duration?.value || 0;
-              allLegs.push({
-                distance: leg.distance?.text || "—",
-                duration: leg.duration?.text || "—",
+              result.routes[0].legs.forEach((leg) => {
+                totalDistM += leg.distance?.value || 0;
+                totalDurS += leg.duration?.value || 0;
+                allLegs.push({
+                  distance: leg.distance?.text || "—",
+                  duration: leg.duration?.text || "—",
+                });
               });
-            } else {
-              allLegs.push({ distance: "—", duration: "—" });
             }
             resolve();
           }
@@ -405,6 +457,166 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
   };
 
   const inItinerary = (id: string) => itinerary.some((s) => s.id === id);
+
+  // Optimize stop order using Google Directions waypoint optimization
+  const optimizeRoute = useCallback(async () => {
+    if (!mapReady || itinerary.length < 3) return;
+    setRouteLoading(true);
+    const service = new google.maps.DirectionsService();
+    const origin = itinerary[0].coordinates;
+    const destination = itinerary[itinerary.length - 1].coordinates;
+    const waypoints = itinerary.slice(1, -1).map((s) => ({
+      location: new google.maps.LatLng(s.coordinates.lat, s.coordinates.lng),
+      stopover: true,
+    }));
+    service.route(
+      {
+        origin: new google.maps.LatLng(origin.lat, origin.lng),
+        destination: new google.maps.LatLng(destination.lat, destination.lng),
+        waypoints,
+        optimizeWaypoints: true,
+        travelMode: google.maps.TravelMode.DRIVING,
+      },
+      (result, status) => {
+        setRouteLoading(false);
+        if (status === "OK" && result) {
+          const order = result.routes[0].waypoint_order;
+          // Rebuild itinerary: first stop + reordered midpoints + last stop
+          const middle = itinerary.slice(1, -1);
+          const reordered = [
+            itinerary[0],
+            ...order.map((i: number) => middle[i]),
+            itinerary[itinerary.length - 1],
+          ];
+          setItinerary(reordered);
+        }
+      }
+    );
+  }, [mapReady, itinerary]);
+
+  // ── Rhino Picnic route loading ──────────────────────────────
+  // Geocode a place name to coordinates via Google Places (cached in localStorage).
+  const geocodePlace = useCallback(
+    (query: string): Promise<{ lat: number; lng: number } | null> => {
+      const cacheKey = "geo:" + query;
+      try {
+        const cached = localStorage.getItem(cacheKey);
+        if (cached) return Promise.resolve(JSON.parse(cached));
+      } catch {}
+      if (!mapRef.current) return Promise.resolve(null);
+      const meghalayaBounds = new google.maps.LatLngBounds(
+        { lat: 24.9, lng: 89.8 },
+        { lat: 26.4, lng: 92.9 }
+      );
+      const svc = new google.maps.places.PlacesService(mapRef.current);
+      return new Promise((resolve) => {
+        svc.findPlaceFromQuery(
+          { query, fields: ["geometry"], locationBias: meghalayaBounds },
+          (results, status) => {
+            if (
+              status === google.maps.places.PlacesServiceStatus.OK &&
+              results &&
+              results[0]?.geometry?.location
+            ) {
+              const loc = results[0].geometry.location;
+              const coords = { lat: loc.lat(), lng: loc.lng() };
+              try { localStorage.setItem(cacheKey, JSON.stringify(coords)); } catch {}
+              resolve(coords);
+            } else {
+              resolve(null);
+            }
+          }
+        );
+      });
+    },
+    []
+  );
+
+  const selectRoute = useCallback(
+    async (route: PicnicRoute) => {
+      if (!mapReady || !mapRef.current) return;
+      setActiveRouteId(route.id);
+      setSchematicOpen(true);
+      setItineraryOpen(true);
+
+      // Scroll map into view + go fullscreen
+      mapWrapRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      try {
+        if (mapWrapRef.current && !document.fullscreenElement) {
+          await mapWrapRef.current.requestFullscreen?.();
+        }
+      } catch {}
+
+      // Build query list: trip origin + each route point
+      const queries: { label: string; query: string; point?: PicnicPoint }[] = [
+        { label: "Start: Anjali Petrol Pump", query: route.startName },
+        ...route.points.map((p) => ({
+          label: p.name,
+          query: `${p.name}, ${route.region}, Meghalaya, India`,
+          point: p,
+        })),
+      ];
+
+      setRouteResolving(true);
+      setResolveProgress({ done: 0, total: queries.length });
+
+      const stops: ItineraryStop[] = [];
+      for (let i = 0; i < queries.length; i++) {
+        const q = queries[i];
+        const coords = await geocodePlace(q.query);
+        if (q.point) {
+          // Keep every point. Unresolved ones fall back to the region center and
+          // are flagged so the user can hand-fix them (they're excluded from the
+          // drawn road route + distance math to avoid distorting it).
+          stops.push({
+            id: `${route.id}-${q.point.ser}`,
+            name: q.point.name,
+            coordinates: coords || route.center,
+            type: "scenic",
+            region: route.region,
+            ser: q.point.ser,
+            picnicKind: q.point.kind,
+            distKm: q.point.distKm,
+            visitTime: q.point.time,
+            remarks: q.point.remarks,
+            unverified: !coords,
+          });
+        } else if (coords) {
+          stops.push({
+            id: `${route.id}-start`,
+            name: "Anjali Petrol Pump (Start)",
+            coordinates: coords,
+            type: "cafe",
+            region: route.region,
+            ser: 0,
+            picnicKind: "Misc",
+          });
+        }
+        setResolveProgress({ done: i + 1, total: queries.length });
+      }
+
+      setRouteResolving(false);
+      setItinerary(stops);
+    },
+    [mapReady, geocodePlace]
+  );
+
+  const exitRoute = useCallback(() => {
+    setActiveRouteId(null);
+    if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+  }, []);
+
+  // Keep Google map sized correctly when entering/exiting fullscreen
+  useEffect(() => {
+    const onFsChange = () => {
+      if (mapRef.current) {
+        setTimeout(() => google.maps.event.trigger(mapRef.current!, "resize"), 150);
+      }
+      if (!document.fullscreenElement) setActiveRouteId((cur) => cur); // no-op keep state
+    };
+    document.addEventListener("fullscreenchange", onFsChange);
+    return () => document.removeEventListener("fullscreenchange", onFsChange);
+  }, []);
 
   return (
     <div className="space-y-0 w-full max-w-screen-2xl mx-auto">
@@ -478,8 +690,14 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
         )}
       </AnimatePresence>
 
+      {/* Fullscreen sizing override (inline max-height would otherwise cap the map) */}
+      <style>{`
+        .meg-map-wrap:fullscreen, .meg-map-wrap:-webkit-full-screen {
+          max-height: none !important; height: 100vh !important; width: 100vw !important;
+        }
+      `}</style>
       {/* ── Immersive Map Container ─────────────────────────── */}
-      <div className="relative w-full" style={{ height: "calc(100vh - 130px)", minHeight: 560, maxHeight: 900 }}>
+      <div ref={mapWrapRef} className="meg-map-wrap relative w-full bg-stone-900" style={{ height: "calc(100vh - 130px)", minHeight: 560, maxHeight: 900 }}>
 
         {/* Map Canvas */}
         {!apiKey ? (
@@ -493,12 +711,143 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
           <div ref={mapDivRef} className="w-full h-full" />
         )}
 
+        {/* ── Route resolving overlay ──────────────────────────── */}
+        <AnimatePresence>
+          {routeResolving && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 z-40 flex items-center justify-center bg-stone-950/60 backdrop-blur-sm pointer-events-auto"
+            >
+              <div className="bg-stone-900/90 border border-stone-700 rounded-2xl px-6 py-5 text-center space-y-3 shadow-2xl">
+                <Loader2 className="w-7 h-7 animate-spin text-amber-400 mx-auto" />
+                <p className="text-white text-sm font-semibold">Mapping {activeRoute?.label} route…</p>
+                <p className="text-stone-400 text-xs font-mono">
+                  Locating {resolveProgress.done}/{resolveProgress.total} points via Google
+                </p>
+                <div className="w-48 h-1.5 bg-stone-800 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-amber-500 transition-all"
+                    style={{ width: `${resolveProgress.total ? (resolveProgress.done / resolveProgress.total) * 100 : 0}%` }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* ── Route Schematic Overlay (left) ───────────────────── */}
+        <AnimatePresence>
+          {activeRoute && schematicOpen && (
+            <motion.div
+              initial={{ opacity: 0, x: -80 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -80 }}
+              transition={{ type: "spring", damping: 26, stiffness: 130 }}
+              className="absolute top-4 left-4 bottom-4 z-30 w-[270px] max-w-[calc(100vw-2rem)] flex flex-col pointer-events-auto"
+            >
+              <div className="bg-stone-950/55 backdrop-blur-2xl border border-stone-700/70 rounded-2xl shadow-2xl flex flex-col overflow-hidden h-full">
+                {/* Header */}
+                <div className="p-3.5 border-b border-stone-700/60 flex items-start justify-between gap-2">
+                  <div>
+                    <p className="text-[9px] font-mono uppercase tracking-widest text-amber-400 font-bold">
+                      {activeRoute.emoji} Route Chart
+                    </p>
+                    <h3 className="text-white font-bold text-sm leading-tight mt-0.5">{activeRoute.label}</h3>
+                    <p className="text-stone-400 text-[9px] font-mono mt-0.5">
+                      {itinerary.filter((s) => (s.ser ?? 0) > 0).length} of {activeRoute.points.length} points
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setSchematicOpen(false)}
+                    className="p-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white transition-colors shrink-0"
+                    title="Hide chart"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+
+                {/* Schematic list */}
+                <div className="flex-1 overflow-y-auto p-3 scrollbar-thin">
+                  {itinerary.length === 0 ? (
+                    <p className="text-stone-500 text-xs text-center py-6">No points on this route yet.</p>
+                  ) : (
+                    itinerary.map((stop, i) => {
+                      const meta = stop.picnicKind
+                        ? PICNIC_KIND_META[stop.picnicKind as keyof typeof PICNIC_KIND_META]
+                        : undefined;
+                      return (
+                        <div key={stop.id} className={`relative ${stop.unverified ? "opacity-50" : ""}`}>
+                          <div className="flex items-start gap-2.5 group">
+                            <div className="flex flex-col items-center shrink-0">
+                              <div
+                                className="w-6 h-6 rounded-full flex items-center justify-center text-white text-[10px] font-bold shadow"
+                                style={{ background: stop.unverified ? "#57534e" : meta?.color || "#b45309" }}
+                              >
+                                {stop.ser ?? i + 1}
+                              </div>
+                              {i < itinerary.length - 1 && (
+                                <div className="w-[2px] flex-1 min-h-[18px] bg-stone-600/60 my-0.5" />
+                              )}
+                            </div>
+                            <div className="flex-1 min-w-0 pb-2.5">
+                              <p className="text-white text-[11px] font-semibold leading-tight">{stop.name}</p>
+                              <p className="text-stone-400 text-[9px] font-mono mt-0.5">
+                                {meta?.emoji} {stop.picnicKind}
+                                {stop.distKm != null ? ` · ${stop.distKm} km` : ""}
+                                {stop.visitTime ? ` · ${stop.visitTime}` : ""}
+                              </p>
+                              {stop.unverified && (
+                                <span className="inline-block mt-1 text-[8px] font-mono uppercase tracking-wider text-amber-300/90 bg-amber-900/40 border border-amber-700/50 rounded px-1.5 py-0.5">
+                                  ⚠ location unverified
+                                </span>
+                              )}
+                            </div>
+                            <button
+                              onClick={() => removeFromItinerary(stop.id)}
+                              className="p-1 rounded text-stone-600 hover:text-red-400 opacity-0 group-hover:opacity-100 transition-all shrink-0"
+                              title="Remove from route"
+                            >
+                              <X className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+
+                {/* Footer: exit route */}
+                <div className="p-3 border-t border-stone-700/60">
+                  <button
+                    onClick={exitRoute}
+                    className="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider text-stone-400 hover:text-white bg-stone-800/70 hover:bg-stone-700 transition-all"
+                  >
+                    Exit Route View
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Show-chart button when schematic hidden but route active */}
+        {activeRoute && !schematicOpen && (
+          <button
+            onClick={() => setSchematicOpen(true)}
+            className="absolute top-4 left-4 z-30 flex items-center gap-1.5 px-3 py-2 bg-stone-950/70 backdrop-blur-xl border border-stone-700 rounded-xl text-[10px] font-bold uppercase tracking-wider text-stone-200 hover:text-white shadow-xl pointer-events-auto"
+          >
+            {activeRoute.emoji} Route Chart
+          </button>
+        )}
+
         {/* ── Floating Category Filters ──────────────────── */}
         <div className="absolute top-4 left-4 right-4 z-10 flex items-start justify-between gap-3 pointer-events-none">
 
           {/* Filter chip strip */}
           <AnimatePresence>
-            {filterOpen && (
+            {filterOpen && !activeRoute && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -563,10 +912,10 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}
               transition={{ type: "spring", damping: 25, stiffness: 120 }}
-              className="absolute top-4 right-4 bottom-4 z-20 w-[320px] max-w-[calc(100vw-2rem)] flex flex-col gap-3 pointer-events-auto"
+              className="absolute top-4 right-4 bottom-4 z-30 w-[320px] max-w-[calc(100vw-2rem)] flex flex-col gap-3 pointer-events-auto"
             >
               {/* Panel header */}
-              <div className="bg-stone-950/85 backdrop-blur-2xl border border-stone-800 rounded-2xl p-4 flex items-center justify-between shadow-2xl">
+              <div className="bg-stone-950/55 backdrop-blur-2xl border border-stone-700/70 rounded-2xl p-4 flex items-center justify-between shadow-2xl">
                 <div>
                   <h3 className="text-white font-bold text-sm flex items-center gap-2">
                     <Route className="w-4 h-4 text-amber-400" />
@@ -584,56 +933,36 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
                 </button>
               </div>
 
-              {/* Route metrics */}
-              <AnimatePresence>
-                {(metrics || routeLoading) && itinerary.length >= 2 && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    className="bg-stone-950/85 backdrop-blur-2xl border border-stone-800 rounded-2xl p-4 shadow-2xl"
-                  >
-                    {routeLoading ? (
-                      <div className="flex items-center gap-2 text-stone-400 text-xs">
-                        <Loader2 className="w-4 h-4 animate-spin text-amber-400" />
-                        Calculating real road routes…
-                      </div>
-                    ) : metrics ? (
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-1 text-[9px] font-mono uppercase tracking-widest text-amber-400 font-bold">
-                          <Milestone className="w-3 h-3" />
-                          Route Metrics
+              {/* Route metrics bar — always visible when ≥2 stops */}
+              {itinerary.length >= 2 && (
+                <div className="bg-stone-950/55 backdrop-blur-2xl border border-stone-700/70 rounded-2xl p-3 shadow-2xl">
+                  {routeLoading ? (
+                    <div className="flex items-center gap-2 text-stone-400 text-xs py-1">
+                      <Loader2 className="w-4 h-4 animate-spin text-amber-400" />
+                      <span className="font-mono">Calculating road route…</span>
+                    </div>
+                  ) : metrics ? (
+                    <div className="space-y-2">
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="bg-stone-900 rounded-xl p-2.5 text-center">
+                          <p className="text-[8px] font-mono text-stone-500 uppercase tracking-wider mb-0.5">Total Distance</p>
+                          <p className="text-amber-400 font-bold text-base font-mono">{metrics.totalDistance}</p>
                         </div>
-                        <div className="grid grid-cols-2 gap-3">
-                          <div className="bg-stone-900 rounded-xl p-3 text-center">
-                            <p className="text-[9px] font-mono text-stone-400 uppercase tracking-wider mb-1">Total Distance</p>
-                            <p className="text-amber-400 font-bold text-lg font-mono">{metrics.totalDistance}</p>
-                          </div>
-                          <div className="bg-stone-900 rounded-xl p-3 text-center">
-                            <p className="text-[9px] font-mono text-stone-400 uppercase tracking-wider mb-1">Drive Time</p>
-                            <p className="text-emerald-400 font-bold text-lg font-mono">{metrics.totalDuration}</p>
-                          </div>
+                        <div className="bg-stone-900 rounded-xl p-2.5 text-center">
+                          <p className="text-[8px] font-mono text-stone-500 uppercase tracking-wider mb-0.5">Drive Time</p>
+                          <p className="text-emerald-400 font-bold text-base font-mono">{metrics.totalDuration}</p>
                         </div>
-                        {metrics.legs.length > 1 && (
-                          <div className="space-y-1.5">
-                            {metrics.legs.map((leg, i) => (
-                              <div key={i} className="flex items-center justify-between text-[10px] text-stone-400 bg-stone-900/60 rounded-lg px-3 py-1.5">
-                                <span className="text-stone-300 font-semibold truncate max-w-[120px]">
-                                  {itinerary[i]?.name?.split(" ").slice(0, 2).join(" ")} → {itinerary[i + 1]?.name?.split(" ").slice(0, 2).join(" ")}
-                                </span>
-                                <span className="font-mono text-amber-400/80 shrink-0 ml-2">{leg.distance} · {leg.duration}</span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
                       </div>
-                    ) : null}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                      <p className="text-[8px] text-stone-600 font-mono text-center">
+                        {itinerary.length} stops · live road data via Google Maps
+                      </p>
+                    </div>
+                  ) : null}
+                </div>
+              )}
 
-              {/* Stops list */}
-              <div className="bg-stone-950/85 backdrop-blur-2xl border border-stone-800 rounded-2xl shadow-2xl flex-1 overflow-hidden flex flex-col">
+              {/* Stops list with inline leg metrics */}
+              <div className="bg-stone-950/55 backdrop-blur-2xl border border-stone-700/70 rounded-2xl shadow-2xl flex-1 overflow-hidden flex flex-col">
                 {itinerary.length === 0 ? (
                   <div className="flex-1 flex flex-col items-center justify-center p-6 text-center space-y-3">
                     <div className="w-12 h-12 rounded-2xl bg-stone-900 border border-stone-800 flex items-center justify-center">
@@ -644,51 +973,85 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
                     </p>
                   </div>
                 ) : (
-                  <div className="flex-1 overflow-y-auto p-3 space-y-2 scrollbar-thin">
+                  <div className="flex-1 overflow-y-auto p-3 space-y-0 scrollbar-thin">
                     {itinerary.map((stop, i) => (
-                      <motion.div
-                        key={stop.id}
-                        layout
-                        className="flex items-center gap-2 bg-stone-900/60 border border-stone-800 rounded-xl p-2.5"
-                      >
-                        <div className="w-6 h-6 rounded-full bg-amber-800 flex items-center justify-center shrink-0">
-                          <span className="text-white text-[10px] font-bold">{i + 1}</span>
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-white text-xs font-semibold truncate">{stop.name}</p>
-                          <p className="text-stone-400 text-[9px] font-mono truncate">{stop.region}</p>
-                        </div>
-                        <div className="flex items-center gap-1 shrink-0">
-                          <button
-                            onClick={() => moveStop(i, "up")}
-                            disabled={i === 0}
-                            className="p-1 rounded text-stone-500 hover:text-stone-200 disabled:opacity-30 transition-colors"
-                          >
-                            <ChevronUp className="w-3 h-3" />
-                          </button>
-                          <button
-                            onClick={() => moveStop(i, "down")}
-                            disabled={i === itinerary.length - 1}
-                            className="p-1 rounded text-stone-500 hover:text-stone-200 disabled:opacity-30 transition-colors"
-                          >
-                            <ChevronDown className="w-3 h-3" />
-                          </button>
-                          <button
-                            onClick={() => removeFromItinerary(stop.id)}
-                            className="p-1 rounded text-stone-600 hover:text-red-400 transition-colors"
-                          >
-                            <Trash2 className="w-3 h-3" />
-                          </button>
-                        </div>
-                      </motion.div>
+                      <div key={stop.id}>
+                        <motion.div
+                          layout
+                          className="flex items-center gap-2 bg-stone-900/60 border border-stone-800 rounded-xl p-2.5"
+                        >
+                          {/* Numbered circle */}
+                          <div className="w-7 h-7 rounded-full bg-amber-800 flex items-center justify-center shrink-0">
+                            <span className="text-white text-[11px] font-bold">{stop.ser ?? i + 1}</span>
+                          </div>
+                          <div className="flex-1 min-w-0" title={stop.remarks || ""}>
+                            <p className="text-white text-xs font-semibold truncate">{stop.name}</p>
+                            <p className="text-stone-500 text-[9px] font-mono truncate">
+                              {stop.picnicKind
+                                ? `${PICNIC_KIND_META[stop.picnicKind as keyof typeof PICNIC_KIND_META]?.emoji ?? "📍"} ${stop.picnicKind}${stop.visitTime ? ` · ${stop.visitTime}` : ""}`
+                                : `${TYPE_EMOJI[stop.type]} ${stop.region}`}
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-0.5 shrink-0">
+                            <button
+                              onClick={() => moveStop(i, "up")}
+                              disabled={i === 0}
+                              className="p-1 rounded text-stone-600 hover:text-stone-200 disabled:opacity-20 transition-colors"
+                              title="Move up"
+                            >
+                              <ChevronUp className="w-3.5 h-3.5" />
+                            </button>
+                            <button
+                              onClick={() => moveStop(i, "down")}
+                              disabled={i === itinerary.length - 1}
+                              className="p-1 rounded text-stone-600 hover:text-stone-200 disabled:opacity-20 transition-colors"
+                              title="Move down"
+                            >
+                              <ChevronDown className="w-3.5 h-3.5" />
+                            </button>
+                            <button
+                              onClick={() => removeFromItinerary(stop.id)}
+                              className="p-1 rounded text-stone-600 hover:text-red-400 transition-colors ml-0.5"
+                              title="Remove stop"
+                            >
+                              <X className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                        </motion.div>
+
+                        {/* Leg connector between stops */}
+                        {i < itinerary.length - 1 && (
+                          <div className="flex items-center gap-2 px-3 py-1">
+                            <div className="w-[1px] h-5 bg-amber-800/40 ml-3" />
+                            {metrics?.legs[i] ? (
+                              <span className="text-[9px] font-mono text-amber-600/80 bg-stone-900/50 rounded px-1.5 py-0.5 border border-stone-800">
+                                {metrics.legs[i].distance} · {metrics.legs[i].duration}
+                              </span>
+                            ) : routeLoading ? (
+                              <span className="text-[9px] font-mono text-stone-600">…</span>
+                            ) : null}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
+
                 {itinerary.length > 0 && (
-                  <div className="p-3 border-t border-stone-800">
+                  <div className="p-3 border-t border-stone-800 space-y-2">
+                    {itinerary.length >= 3 && (
+                      <button
+                        onClick={optimizeRoute}
+                        disabled={routeLoading}
+                        className="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider text-amber-400 hover:text-amber-300 hover:bg-stone-900 border border-stone-800 hover:border-amber-800/50 transition-all disabled:opacity-50"
+                      >
+                        <Sparkles className="w-3.5 h-3.5" />
+                        Optimize Route Order
+                      </button>
+                    )}
                     <button
                       onClick={clearItinerary}
-                      className="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider text-stone-500 hover:text-red-400 hover:bg-stone-900 transition-all"
+                      className="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider text-stone-600 hover:text-red-400 hover:bg-stone-900 transition-all"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
                       Clear All Stops
@@ -837,29 +1200,31 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { region: "Shillong", emoji: "🏙️", desc: "Hill station life, cafés & culture", dest: { lat: 25.5788, lng: 91.8900 }, zoom: 13 },
-            { region: "Cherrapunji", emoji: "🌊", desc: "World's wettest — waterfalls & caves", dest: { lat: 25.2797, lng: 91.7262 }, zoom: 12 },
-            { region: "Dawki", emoji: "🏞️", desc: "Crystal river & cleanest village", dest: { lat: 25.1919, lng: 92.0261 }, zoom: 12 },
-            { region: "Jowai", emoji: "💎", desc: "Monoliths, sacred lakes & hidden falls", dest: { lat: 25.4459, lng: 92.2011 }, zoom: 12 },
-          ].map(({ region, emoji, desc, dest, zoom }) => (
+        <p className="text-center text-xs text-stone-500 font-sans -mt-3 mb-6 max-w-xl mx-auto">
+          Tap a route to auto-load every stop from the Rhino Picnic Planner onto the map — distances and drive times are calculated live, and you can fine-tune by removing points.
+        </p>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {PICNIC_ROUTES.map((route) => (
             <button
-              key={region}
-              onClick={() => {
-                if (mapRef.current) {
-                  mapRef.current.panTo(dest);
-                  mapRef.current.setZoom(zoom);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-              }}
-              className="group bg-[#FAF8F5] border border-stone-200 hover:border-amber-300 hover:shadow-md rounded-2xl p-4 text-left transition-all duration-200 space-y-1.5"
+              key={route.id}
+              onClick={() => selectRoute(route)}
+              disabled={routeResolving}
+              className="group bg-[#FAF8F5] border border-stone-200 hover:border-amber-300 hover:shadow-md rounded-2xl p-4 text-left transition-all duration-200 space-y-1.5 disabled:opacity-50"
             >
-              <span className="text-2xl">{emoji}</span>
-              <p className="font-display font-bold text-stone-900 text-sm group-hover:text-amber-800 transition-colors">{region}</p>
-              <p className="text-[10px] text-stone-500 font-sans leading-relaxed">{desc}</p>
+              <div className="flex items-center justify-between">
+                <span className="text-2xl">{route.emoji}</span>
+                <span
+                  className="text-[9px] font-mono font-bold text-white px-1.5 py-0.5 rounded-full"
+                  style={{ background: route.color }}
+                >
+                  {route.points.length} stops
+                </span>
+              </div>
+              <p className="font-display font-bold text-stone-900 text-sm group-hover:text-amber-800 transition-colors">{route.label}</p>
+              <p className="text-[10px] text-stone-500 font-sans leading-relaxed">{route.blurb}</p>
               <div className="flex items-center gap-1 text-[9px] text-amber-700 font-mono font-bold uppercase tracking-wider pt-1">
-                Explore on Map <ArrowRight className="w-3 h-3" />
+                Load Route <ArrowRight className="w-3 h-3" />
               </div>
             </button>
           ))}

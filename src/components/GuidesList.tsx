@@ -1,8 +1,92 @@
 import React, { useState } from "react";
 import { ARTICLES } from "../data";
-import { GuideArticle } from "../types";
-import { BookOpen, Calendar, Mail, ArrowLeft, ArrowUpRight, Compass, Filter } from "lucide-react";
+import { GuideArticle, StoryBlock } from "../types";
+import { BookOpen, Mail, ArrowLeft, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { getReadingTime } from "../utils/readingTime";
+
+// --- Long-form block renderer ---
+function renderBlock(block: StoryBlock, idx: number) {
+  switch (block.type) {
+    case "paragraph":
+      return (
+        <p
+          key={idx}
+          className={`text-stone-800 leading-[1.85] font-sans text-[15px] md:text-base font-light ${
+            block.dropCap ? "first-letter:font-display first-letter:text-5xl first-letter:font-bold first-letter:text-amber-800 first-letter:mr-2 first-letter:float-left first-letter:leading-none first-letter:mt-1" : ""
+          }`}
+        >
+          {block.text}
+        </p>
+      );
+    case "heading":
+      if (block.level === 2) {
+        return (
+          <h2 key={idx} className="text-2xl md:text-3xl mt-10 mb-2 font-display font-bold text-stone-900 tracking-tight">
+            {block.text}
+          </h2>
+        );
+      }
+      return (
+        <h3 key={idx} className="text-xs mt-8 mb-1 font-mono uppercase tracking-[0.18em] text-amber-800 font-bold">
+          {block.text}
+        </h3>
+      );
+    case "pullquote":
+      return (
+        <blockquote key={idx} className="my-10 pl-6 border-l-4 border-amber-700 text-stone-800">
+          <p className="font-display italic text-xl md:text-2xl leading-snug text-stone-900">
+            &ldquo;{block.text}&rdquo;
+          </p>
+          {block.attribution && (
+            <footer className="mt-3 text-[11px] font-mono uppercase tracking-widest text-stone-500">
+              — {block.attribution}
+            </footer>
+          )}
+        </blockquote>
+      );
+    case "image": {
+      const widthClass =
+        block.layout === "full" ? "-mx-4 md:-mx-12 lg:-mx-24" :
+        block.layout === "wide" ? "-mx-2 md:-mx-8" : "";
+      return (
+        <figure key={idx} className={`my-8 ${widthClass}`}>
+          <div className="rounded-2xl overflow-hidden bg-stone-100 border border-stone-200">
+            <img src={block.url} alt={block.caption || ""} className="w-full h-auto object-cover" referrerPolicy="no-referrer" />
+          </div>
+          {block.caption && (
+            <figcaption className="mt-2 text-[11px] font-sans italic text-stone-500 text-center">
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    }
+    case "gallery":
+      return (
+        <div key={idx} className="my-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {block.images.map((img, i) => (
+            <figure key={i} className="space-y-1">
+              <div className="rounded-xl overflow-hidden bg-stone-100 border border-stone-200 aspect-[4/3]">
+                <img src={img.url} alt={img.caption || ""} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+              {img.caption && (
+                <figcaption className="text-[10px] font-sans italic text-stone-500 px-1">{img.caption}</figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      );
+    case "divider":
+      return (
+        <div key={idx} className="my-12 flex items-center justify-center gap-3 text-amber-700/60">
+          <span className="h-px w-16 bg-amber-700/30" />
+          <span className="text-xs font-mono tracking-widest">✦</span>
+          <span className="h-px w-16 bg-amber-700/30" />
+        </div>
+      );
+  }
+}
 
 export default function GuidesList() {
   const [selectedArticle, setSelectedArticle] = useState<GuideArticle | null>(null);
@@ -17,9 +101,19 @@ export default function GuidesList() {
     { key: "area-guides", label: "Area Walks" }
   ];
 
+  // Hide drafts + scheduled-in-future stories from public view
+  const now = new Date();
+  const publishedArticles = ARTICLES.filter((a) => {
+    if (a.status === "draft") return false;
+    if (a.status === "scheduled" && a.scheduled_publish_at) {
+      return new Date(a.scheduled_publish_at) <= now;
+    }
+    return true;
+  });
+
   const filteredArticles = activeCategory === "all"
-    ? ARTICLES
-    : ARTICLES.filter((a) => a.category === activeCategory);
+    ? publishedArticles
+    : publishedArticles.filter((a) => a.category === activeCategory);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,7 +159,7 @@ export default function GuidesList() {
                 <span className="text-stone-300">•</span>
                 <span>{selectedArticle.date}</span>
                 <span className="text-stone-300">•</span>
-                <span>{selectedArticle.readTime}</span>
+                <span>{getReadingTime(selectedArticle)}</span>
               </div>
             </div>
 
@@ -79,34 +173,23 @@ export default function GuidesList() {
               />
             </div>
 
-            {/* Article Content Layout */}
-            <div className="prose prose-stone max-w-none text-stone-800 font-sans text-sm md:text-base leading-relaxed font-light space-y-6">
-              {/* Parse paragraph strings formatted as markdown */}
-              {selectedArticle.content.split("\n\n").map((para, idx) => {
-                const trimmed = para.trim();
-                if (!trimmed) return null;
-
-                // Simple custom parsing matching standard headers markdown patterns
-                if (trimmed.startsWith("# ")) {
-                  return (
-                    <h2 key={idx} className="text-2xl mt-8 font-display font-bold text-stone-900">
-                      {trimmed.replace("# ", "")}
-                    </h2>
-                  );
-                }
-                if (trimmed.startsWith("### ")) {
-                  return (
-                    <h3 key={idx} className="text-md mt-6 font-display font-bold text-stone-900 uppercase tracking-wide">
-                      {trimmed.replace("### ", "")}
-                    </h3>
-                  );
-                }
-                return (
-                  <p key={idx} className="first-letter:font-serif first-letter:text-lg">
-                    {trimmed}
-                  </p>
-                );
-              })}
+            {/* Article Content — block renderer (rich) or legacy markdown parse */}
+            <div className="max-w-none space-y-4">
+              {selectedArticle.body_blocks && selectedArticle.body_blocks.length > 0 ? (
+                selectedArticle.body_blocks.map((b, idx) => renderBlock(b, idx))
+              ) : (
+                selectedArticle.content.split("\n\n").map((para, idx) => {
+                  const trimmed = para.trim();
+                  if (!trimmed) return null;
+                  if (trimmed.startsWith("# ")) {
+                    return renderBlock({ type: "heading", level: 2, text: trimmed.slice(2) }, idx);
+                  }
+                  if (trimmed.startsWith("### ")) {
+                    return renderBlock({ type: "heading", level: 3, text: trimmed.slice(4) }, idx);
+                  }
+                  return renderBlock({ type: "paragraph", text: trimmed, dropCap: idx === 0 }, idx);
+                })
+              )}
             </div>
 
             {/* Curated quote bottom box */}
@@ -177,7 +260,7 @@ export default function GuidesList() {
                           {article.category.replace("-", " ")}
                         </span>
                         <span className="text-[10px] text-stone-400 font-mono italic">
-                          {article.readTime}
+                          {getReadingTime(article)}
                         </span>
                       </div>
 

@@ -147,7 +147,7 @@ export default function AIGuideChat() {
                         : "bg-white text-stone-800 border border-stone-200/80 rounded-tl-none shadow-xs"
                     }`}
                   >
-                    <p className="whitespace-pre-line">{m.text}</p>
+                    <p className="whitespace-pre-line" dangerouslySetInnerHTML={{ __html: m.text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>') }} />
                     <span className="block text-[9px] mt-1.5 opacity-60 text-right font-mono">
                       {m.role === "user" ? "You" : "Kong Labet"}
                     </span>

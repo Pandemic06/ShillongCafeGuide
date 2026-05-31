@@ -34,6 +34,11 @@ export default function App() {
   const [dataHubOpen, setDataHubOpen] = useState(false);
   const [cafeViewMode, setCafeViewMode] = useState<"grid" | "map">("map");
 
+  // Global scroll-to-top on tab change (fixes Editorial-opens-at-bottom + menu nav scroll bugs)
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+  }, [activeTab]);
+
   useEffect(() => {
     const loadCafes = async () => {
       try {
@@ -113,7 +118,7 @@ export default function App() {
   const tabsList = [
     { id: "explore", label: "Discovery", tooltip: "Home page with featured cafes, map & search" },
     { id: "discover", label: "Plan Your Adventure", tooltip: "Adventure route planner with 12 curated road trips across Meghalaya" },
-    { id: "cafes", label: "Cozy Cafés", tooltip: "Browse all 49 cafes in grid or map view with filters" },
+    // Cozy Cafés tab removed from nav — directory still reachable via hero "Find" button (route id "cafes" preserved)
     { id: "cuisine", label: "Khasi Cuisine", tooltip: "Traditional Khasi dishes: Jadoh, Dohkhlieh, Tungrymbai & more" },
     { id: "walks", label: "District Walks", tooltip: "Guided walking itineraries through Shillong neighborhoods" },
     { id: "guides", label: "Editorial", tooltip: "Stories, reviews & cultural articles about Shillong" },
@@ -312,7 +317,7 @@ export default function App() {
                           setActiveTab("cafes");
                         }
                       }}
-                      className="flex-1 bg-transparent px-2 py-2.5 text-xs md:text-sm text-stone-850 outline-none font-sans"
+                      className="flex-1 bg-transparent px-2 py-2.5 text-xs md:text-sm text-[#3d2817] placeholder:text-[#3d2817]/50 outline-none font-sans"
                     />
                     <button
                       onClick={() => setActiveTab("cafes")}
@@ -337,15 +342,15 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Right Visual Video */}
-                <div className="w-full md:w-80 shrink-0 h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl relative border border-stone-800">
+                {/* Right Visual Video — width +50% (md:w-80 → md:w-[480px]); object-contain prevents final-frame text crop */}
+                <div className="w-full md:w-[480px] shrink-0 h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl relative border border-stone-800 bg-stone-900">
                   <video
                     src={heroVideo}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                   <div className="absolute inset-0 bg-stone-900/20 pointer-events-none" />
                   <div className="absolute top-4 left-4 font-mono text-[9px] bg-stone-900/60 backdrop-blur-md text-amber-200 px-2.5 py-1 rounded-sm border border-stone-700 uppercase tracking-widest font-bold">
@@ -752,7 +757,6 @@ export default function App() {
           <div className="flex flex-wrap justify-center gap-6 font-mono text-[10px] uppercase tracking-wider">
             <button title="Home page with featured cafes, map & search" onClick={() => setActiveTab("explore")} className="hover:text-stone-100 cursor-pointer">Explore Main</button>
             <button title="Adventure route planner with 12 curated road trips across Meghalaya" onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer text-amber-600">Plan Your Adventure</button>
-            <button title="Browse all 49 cafes in grid or map view" onClick={() => setActiveTab("cafes")} className="hover:text-stone-100 cursor-pointer">Cozy List</button>
             <button title="Traditional Khasi dishes: Jadoh, Dohkhlieh & more" onClick={() => setActiveTab("cuisine")} className="hover:text-stone-100 cursor-pointer">Khasi Food</button>
             <button title="Stories, reviews & cultural articles" onClick={() => setActiveTab("guides")} className="hover:text-stone-100 cursor-pointer">Guides Periodic</button>
             <button title="About this project and the story behind the guide" onClick={() => setActiveTab("about")} className="hover:text-stone-100 cursor-pointer">Owner Letter</button>
@@ -769,7 +773,6 @@ export default function App() {
             <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">🗺️ Sitemap — Browse</p>
             <ul className="space-y-1.5 text-[11px] font-sans">
               <li><button onClick={() => setActiveTab("explore")} className="hover:text-amber-400 cursor-pointer">→ Discovery (Home)</button></li>
-              <li><button onClick={() => setActiveTab("cafes")} className="hover:text-amber-400 cursor-pointer">→ Cozy Cafés (49)</button></li>
               <li><button onClick={() => setActiveTab("walks")} className="hover:text-amber-400 cursor-pointer">→ District Walks (3)</button></li>
               <li><button onClick={() => setActiveTab("cuisine")} className="hover:text-amber-400 cursor-pointer">→ Khasi Cuisine</button></li>
             </ul>

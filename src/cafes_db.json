@@ -8,7 +8,7 @@
     "whyVisit": "To experience traditional live acoustic music, featuring local artists playing the Ka Duitara string instrument while eating beautifully curated Khasi-style hearth dishes.",
     "hours": "Lunch: 2:00 PM — 4:00 PM | Dinner: 6:00 PM — 10:00 PM",
     "address": "Newlands Compound, Boyce Road, Near Shillong College, Laitumkhrah, Shillong 793003",
-    "neighborhood": "Boyce Road",
+    "neighborhood": "Nongkynrih",
     "images": {
       "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vp0BjmAGDmNdM8vVzFjaop1_ZlxGaH994NYYpJfJdAMRXvbSFFzCOp5Sa7IO-DDeb8kIXXvPElszhIBaSFaUvCEZBGioymaBkC6co40itcOvxpF075d4CkOJcnOW-AAUZfspOjtyFG8LEinTEoXS43pz8CvHDIJ_MEcsoIq6M61IVJNLTm0ZAIeCtRVm_9idc6vP-0JLGB1BqDrsnhD_Rky0fZmLUVRtMFBszhaMzv9QQjfcl3HAt11HePezrQg8Oby67AXZo7oJHE9jTOhfh-7YI4ppxHoOUTau2FNqDE-EUsDy8XjsRZlu30iVu0I3c9BljUSDbWh_vtdtwkjwvMcYPM6-lyWfEvquCt3rd6gE2lqaQ23dU7lAjgPGB5wiececWN5fOBw67fFGuP3lidFQTG7KRPzxdZIxCJgPogtt2T&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
       "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v2rT6mcbmbATJ0QOZwW3DUXFTEkk54zvEJlj9a3II_GHq8MRqKIb45w-k6f2x90rJCgzBAAGzJRxVIuxcARIxcbVcKWyuYcj4-E9-hhD4T-frb1xnwn8ZhmteRp5iMfLk9iJZRZEj_Q6TH2gP6hHQA9cS6wJTqBQRDWW-whWVrkC-JOhvYRBPAioUq3394g04mLIY8m4ULtpHLnWvVu0tDrAeCBD_hn49oeEdnzeUDn9SU19oS3YRyVdkPKyO6XcZ0XXPwcR2CqPsGGkNoRAK35Kj9OPOfCnGGAwug2YQIKfblyWmlQnr3ZO0NR82LFj63dHpjMv7LNslaXg998l24n4jVndJZ92IqF8JIkct4M7TwTrPiWBbP1UnJqMns7ujBvcbTauO30mJ0B99UIKUm6eVBAmaQ8kiP3TCkF4g-Ar_v&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
@@ -115,7 +115,10 @@
     "average_spend_for_two": 1500,
     "menu_url": "https://www.rynsan.com/menu",
     "menu_pdf_lunch": "https://www.rynsan.com/Lunch.pdf",
-    "menu_pdf_dinner": "https://www.rynsan.com/Dinner.pdf"
+    "menu_pdf_dinner": "https://www.rynsan.com/Dinner.pdf",
+    "neighborhood_verified": true,
+    "neighborhood_source": "address-inferred",
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "ahavah-cafe",
@@ -138,9 +141,9 @@
     "vibeTags": [
       "Valley View",
       "Hearth Fire",
-      "Outdoor Deck",
       "Cozy Blankets",
-      "Acoustic Soul"
+      "Acoustic Soul",
+      "Limited Outdoor Seating"
     ],
     "hasLiveMusic": true,
     "mustTry": [
@@ -212,7 +215,9 @@
     "verification_status": "verified",
     "price_display": "₹₹",
     "price_per_person": 500,
-    "average_spend_for_two": 1000
+    "average_spend_for_two": 1000,
+    "rooftop_verified": false,
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "cherry-bean-cafe",
@@ -223,7 +228,7 @@
     "whyVisit": "To study, chat, or read in a warm, garden-filled wooden loft with a masterful single-estate espresso and freshly-kneaded sourdough pizza.",
     "hours": "10:30 AM — 8:30 PM (Daily)",
     "address": "Kench's Trace, Shillong 793004 (Opposite Pinewood)",
-    "neighborhood": "Kench's Trace",
+    "neighborhood": "Police Bazaar",
     "images": {
       "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-sJHmZP-7EKLiGyB4p3WTcIoYn_iOGP4FDG6SUcifapne3SY2Z8iot4csMu-08vDjaoayTgCLIEkRLGdffSItkl8MO2tLAOMpk2ByueNV6iqlmdsMRTXADCRmmyHyqx_lCDuiWXtqQfoTa3R4JqF0wfvvFDdAzcZWbrp-zbojfa3WoDT8yRz0abnz8uiuV0oQBmk0I-Ec07F3iqFYnG-bueP7DylpvOQyNgGeLXJooQxXMl5njKUPKGSD1bQ7tiNoZXS4z4rZFFivLZGgYuVhdgG7FYBF6KTpxnlcH1z-oI8w&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
       "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uBOduieHSgHirEAY1lmxVNBM1-NzQyGJVQcxU5tYlz8tpK7eAbCPBixSGuUTYb4jrDbZd2MTPwmTsET5VCIDH9RIIbXc3-sWQXAXctVyHNcFeOtm4XaWz_smze-iSeWrNujwFvoDPsl2JrxkM-PjxA7ayi8eABXrFXSobOQrhk6f1bpgedKqVQVY05SiI2Shkz1Aad8X8K-nsHJvbSPuftnlfgn8pEEnf_yJdMR8LYsKeAzKlnz31Jq7RzvqlBEyw2r5EC0YEG1cbCe22nINn2rs9Qd89KhW6aSaBZj6lcpunA2bqeyJ8ilZ0jP0FvTLmM_zBuhjqPgR9E4noNxA5qA-B5HelIoLBoAgGfy_uvD1OclcbYSyjxIobcHnHgiXijlRbADMRYiNAvZw5rT3dUCm6FZDj6ECWqfsCx3bAhmwabKN-ce6U4F6QIzYhW&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
@@ -302,7 +307,10 @@
     "verification_status": "verified",
     "price_display": "₹₹",
     "price_per_person": 350,
-    "average_spend_for_two": 700
+    "average_spend_for_two": 700,
+    "neighborhood_verified": true,
+    "neighborhood_source": "address-inferred",
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "cafe-shillong",
@@ -923,19 +931,19 @@
     "id": "evening-club-laitumkhrah",
     "name": "The Evening Club",
     "tagline": "Vintage Vinyls & Unbound Mountain Acoustics",
-    "theme": "Cozy Rooftop Deck, Classic Rock Vibe & Live Mic Stage",
+    "theme": "Classic Rock Lounge with Live Mic & Vinyl",
     "introduction": "The Evening Club is one of Shillong's oldest and most iconic live music spots. Nestled on a high balcony overlooking the valley, it features an elegant wooden rooftop lounge where classic vintage rock vinyls, warm firepits, and acoustic stages keep Laitumkhrah's musical hearth burning.",
     "whyVisit": "To grab a drink on their elevated rooftop deck during the golden hour, followed by live classic rock band gigs under warm yellow lanterns.",
     "hours": "4:00 PM — 11:00 PM (Closed Tuesdays)",
     "address": "Khyndailad, Laitumkhrah Main Road, Shillong 793003",
-    "neighborhood": "Laitumkhrah",
+    "neighborhood": "Police Bazaar",
     "hasLiveMusic": true,
     "vibeTags": [
-      "Rooftop Cafe",
       "Live Stage",
       "Vintage Vinyl",
       "Cozy Hearth",
-      "Valley View"
+      "Bar & Lounge",
+      "Live Music"
     ],
     "mustTry": [
       {
@@ -998,7 +1006,11 @@
     "verification_status": "verified",
     "price_display": "₹₹",
     "price_per_person": 350,
-    "average_spend_for_two": 700
+    "average_spend_for_two": 700,
+    "neighborhood_verified": true,
+    "rooftop_verified": false,
+    "neighborhood_source": "manual",
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "jiva-grill-nongkynrih",
@@ -1014,9 +1026,10 @@
     "vibeTags": [
       "Premium Dining",
       "Cascading Pools",
-      "Outdoor Deck",
       "Waterfalls",
-      "Fire Pits"
+      "Fire Pits",
+      "Outdoor Seating",
+      "Scenic View"
     ],
     "mustTry": [
       {
@@ -1080,7 +1093,9 @@
     "verification_status": "verified",
     "price_display": "₹₹",
     "price_per_person": 350,
-    "average_spend_for_two": 700
+    "average_spend_for_two": 700,
+    "rooftop_verified": false,
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "bread-cafe-pb",
@@ -1351,88 +1366,6 @@
     "average_spend_for_two": 800
   },
   {
-    "id": "heads-up-cafe",
-    "name": "Heads Up Cafe",
-    "tagline": "The Rooftop Hub for Creative Minds",
-    "theme": "High-Rise Glass Decks & Neon String Lights",
-    "introduction": "Perched atop Dhankheti's commercial square, Heads Up Cafe features a stunning open-air glass patio with panoramic views of Shillong’s mist-laden valleys. Modern neon lighting signs, pastel custom sofas, and beautiful vertical plant columns create a photogenic, youth-driven atmosphere filled with remote creatives and university students.",
-    "whyVisit": "To observe the sun setting behind Dhankheti’s pine slopes, sipping a cold-pressed mountain berry juice under glowing fairylights.",
-    "hours": "11:00 AM — 10:00 PM (Daily)",
-    "address": "Malki Point Road, Behind State Bank, Dhankheti, Shillong 793001",
-    "neighborhood": "Dhankheti",
-    "images": {
-      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vMMTjpUuAPnTSNFq0zHdkg6Sd0I5yAsRf7qQHUPKw4RLEfAuoSBxpx-iZ-XUVCguNCHcW03TB_Cb5bd6GFv4cBcX3KaOvBwXAOeB4rlz7rFji95-FPgUJRnCioLjv4XRTU6k3EPon0c5KqV5HCcR98tNV0lvL2J7IgCFmB0yKUChhMgk3dN5EzHi4LQNQiUb-2JIYqygNm4J5d-IeL0q9Pk8tzsjzrYYuIknRs7XiPzipWivqgso2oLgBS7Znh-iEa597xiMmpjdadb3A0AddIa25oG8-F2Yjvio8H3B5IIw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tLeGED6I_po5z5Hhc-g1VuH3Hf9GlErCH5yXjzxPXBct0MpEvVTot3mrZ0d4PWTmUO4OWXYfHXYRRnVua5T1Po8ApmP59VPyF7nr0bT_0Ozs6UdEYPFLKFVNPMp-8BQEMjXN0EidvVRLCeZ4kvr1d2myYcBCtFNfZ3qKILoj2NZiy_DxYz3Bh5Ghj-NPI15Dfgo6LBwNaoaFQNBnT8QsUmeUXCf0mPJOY1na4MjqRhUsMExIx7ceKrUNZnI2LfXLa4KjPqmL1TozhYMwBuq7u8fIMwmva7bk3SA9MXDB9clA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tEH_EZYcyihBxbJdWdj0UKDy_EJHsA-DcFrGTLBAyAwfIoljYHVIw_2H6doWWugjlPtJFUo4EmbFxJA4ThnPphImlRQ8KAN4zYWg_xsh8gVG375SlmxMKS9LnWsbVuor5iGJv0QA5ySmnrRhq0UmibPnHXaigv1OjOhLUWybEze_wZ3BDleQ2XpgqF_yKZztXmgZrOLYR5XCW8dmCtVKYjx7c9DfG0_iHTa4ZPtGKYzP4Hl6cytA8iUuR9kJa8tn_8Nfih_73Wa4lAd3XwkVhM3OnvAC8b7yl4f2q3DWjNTQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "details": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tks9jcIvlqGN8vEeVfOqTh0sc0bJvphz9tE_MqqKCzhc0jqi1pb5FqcAnJXU4kp3Fg4qg01H14ZyPcjhhmssSvIAOYmUUlS0CIk6ALBuff978805W4tQavAriUEZCS5crA99CXK3PHzqlOJX6lL7RKwSEv6fQOk1xOKwCJNn445omcqGNvDBfzEjASBGaPlPNKHmC0Cutu3aCWitGnxPIv93zgDoLzHRb0ERcLyHpim3UN7El4d8v1Uiz5S7WlI46bjCjB9X1yunYcLOMYErAwa8Q-T83MVqFN0YpIIrcjbw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-    },
-    "vibeTags": [
-      "Rooftop Cafe",
-      "Valley View",
-      "Fairy Lights",
-      "Neon Style",
-      "Vibrant Chatter"
-    ],
-    "hasLiveMusic": true,
-    "mustTry": [
-      {
-        "name": "Meghalaya Wild Honey Waffles",
-        "description": "Thick, crispy Belgian waffles drizzled with organic, smoky forest honey and served with a scoop of Madagascar vanilla ice cream.",
-        "price": "₹180",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tLeGED6I_po5z5Hhc-g1VuH3Hf9GlErCH5yXjzxPXBct0MpEvVTot3mrZ0d4PWTmUO4OWXYfHXYRRnVua5T1Po8ApmP59VPyF7nr0bT_0Ozs6UdEYPFLKFVNPMp-8BQEMjXN0EidvVRLCeZ4kvr1d2myYcBCtFNfZ3qKILoj2NZiy_DxYz3Bh5Ghj-NPI15Dfgo6LBwNaoaFQNBnT8QsUmeUXCf0mPJOY1na4MjqRhUsMExIx7ceKrUNZnI2LfXLa4KjPqmL1TozhYMwBuq7u8fIMwmva7bk3SA9MXDB9clA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-      }
-    ],
-    "coordinates": {
-      "lat": 25.5662297,
-      "lng": 91.89173629999999
-    },
-    "gallery": [
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tLeGED6I_po5z5Hhc-g1VuH3Hf9GlErCH5yXjzxPXBct0MpEvVTot3mrZ0d4PWTmUO4OWXYfHXYRRnVua5T1Po8ApmP59VPyF7nr0bT_0Ozs6UdEYPFLKFVNPMp-8BQEMjXN0EidvVRLCeZ4kvr1d2myYcBCtFNfZ3qKILoj2NZiy_DxYz3Bh5Ghj-NPI15Dfgo6LBwNaoaFQNBnT8QsUmeUXCf0mPJOY1na4MjqRhUsMExIx7ceKrUNZnI2LfXLa4KjPqmL1TozhYMwBuq7u8fIMwmva7bk3SA9MXDB9clA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tEH_EZYcyihBxbJdWdj0UKDy_EJHsA-DcFrGTLBAyAwfIoljYHVIw_2H6doWWugjlPtJFUo4EmbFxJA4ThnPphImlRQ8KAN4zYWg_xsh8gVG375SlmxMKS9LnWsbVuor5iGJv0QA5ySmnrRhq0UmibPnHXaigv1OjOhLUWybEze_wZ3BDleQ2XpgqF_yKZztXmgZrOLYR5XCW8dmCtVKYjx7c9DfG0_iHTa4ZPtGKYzP4Hl6cytA8iUuR9kJa8tn_8Nfih_73Wa4lAd3XwkVhM3OnvAC8b7yl4f2q3DWjNTQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tks9jcIvlqGN8vEeVfOqTh0sc0bJvphz9tE_MqqKCzhc0jqi1pb5FqcAnJXU4kp3Fg4qg01H14ZyPcjhhmssSvIAOYmUUlS0CIk6ALBuff978805W4tQavAriUEZCS5crA99CXK3PHzqlOJX6lL7RKwSEv6fQOk1xOKwCJNn445omcqGNvDBfzEjASBGaPlPNKHmC0Cutu3aCWitGnxPIv93zgDoLzHRb0ERcLyHpim3UN7El4d8v1Uiz5S7WlI46bjCjB9X1yunYcLOMYErAwa8Q-T83MVqFN0YpIIrcjbw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tqZIqgOMiMoWGnLJ04tLRRH0RX4jUco6ZG9DkOyonn9IPy6aaL7Gen3pPEuLTgZHh82vMg_YazxFocOYxsCnrtBT8ZG4A0PWzv2v2OVmA-CDlu4vaTUrkdV0S9lX42It46vLF6xLZiBpBr3hhInsaljjYjQDHgtHIfFs1WADa0en-h_lG7l68Ykct0TnRlULmkdDB1fWT7X7ISnuoe_8C8mL59h6Ba6AWmq1zGLGoqVgc-cKAly1ZSAGlpuHnGdsaZT-bPGsLHX6aFqZbtYH84SPR4yU39lf_qdv0FmogSVHkN2m9Te6jq1uyNzx29W-C6cq9dpQB5yJ-ebo4LhC9bCmYX42RV0QarC8ZoUZ8QtIK6sqcIOGtq_LkUj7oLPOl8UJ5n2o4YnWioinsg1fIeqyhaV89AuDnE6kgVuWdiFg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uGHTIwSizC4FOd1OXZJx8ytgZp5DDVsGU9WCb7UKUZSkD4u8soJMuyuP0RqMtV_BI8doT672MRzLA5enhAyeMcKTj6tvJMf2CM1HajX7CSFHE7Fl68nRB33Q8w97IuQ_nxaFhECPnrliqhwBdVIgp76jtv2m4HwY2KT--ao336EyjBj71fGJBLS-YbwOIFJItrN4kwTYZ38YBYjrmcf920ep5uCmfOUcDUodh3-0Vrv_JS6kFhTRBUNLXC2RbWVslBMVYQzM8AAcivE7plW7ZCix8XScOBwle4Sm9DI8dMVA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-    ],
-    "place_id": "ChIJTYbdfJR_UDcRUT80_hhKYbo",
-    "formatted_address": "Dhankheti st Peter's building 1st floor, Malki, Shillong, Meghalaya 793003, India",
-    "latitude": 25.5662297,
-    "longitude": 91.89173629999999,
-    "google_maps_url": "https://maps.google.com/?cid=13430097035000037201",
-    "website": "https://www.instagram.com/clickcafeshillong",
-    "phone_number": "087875 98643",
-    "rating": 4.6,
-    "user_ratings_total": 253,
-    "types": [
-      "cafe",
-      "establishment",
-      "food",
-      "point_of_interest"
-    ],
-    "opening_hours": [
-      "Monday: 10:30 AM – 9:00 PM",
-      "Tuesday: 10:30 AM – 9:00 PM",
-      "Wednesday: 10:30 AM – 9:00 PM",
-      "Thursday: 10:30 AM – 9:00 PM",
-      "Friday: 10:30 AM – 9:00 PM",
-      "Saturday: 10:30 AM – 9:00 PM",
-      "Sunday: Closed"
-    ],
-    "photos": [
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vMMTjpUuAPnTSNFq0zHdkg6Sd0I5yAsRf7qQHUPKw4RLEfAuoSBxpx-iZ-XUVCguNCHcW03TB_Cb5bd6GFv4cBcX3KaOvBwXAOeB4rlz7rFji95-FPgUJRnCioLjv4XRTU6k3EPon0c5KqV5HCcR98tNV0lvL2J7IgCFmB0yKUChhMgk3dN5EzHi4LQNQiUb-2JIYqygNm4J5d-IeL0q9Pk8tzsjzrYYuIknRs7XiPzipWivqgso2oLgBS7Znh-iEa597xiMmpjdadb3A0AddIa25oG8-F2Yjvio8H3B5IIw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tLeGED6I_po5z5Hhc-g1VuH3Hf9GlErCH5yXjzxPXBct0MpEvVTot3mrZ0d4PWTmUO4OWXYfHXYRRnVua5T1Po8ApmP59VPyF7nr0bT_0Ozs6UdEYPFLKFVNPMp-8BQEMjXN0EidvVRLCeZ4kvr1d2myYcBCtFNfZ3qKILoj2NZiy_DxYz3Bh5Ghj-NPI15Dfgo6LBwNaoaFQNBnT8QsUmeUXCf0mPJOY1na4MjqRhUsMExIx7ceKrUNZnI2LfXLa4KjPqmL1TozhYMwBuq7u8fIMwmva7bk3SA9MXDB9clA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tEH_EZYcyihBxbJdWdj0UKDy_EJHsA-DcFrGTLBAyAwfIoljYHVIw_2H6doWWugjlPtJFUo4EmbFxJA4ThnPphImlRQ8KAN4zYWg_xsh8gVG375SlmxMKS9LnWsbVuor5iGJv0QA5ySmnrRhq0UmibPnHXaigv1OjOhLUWybEze_wZ3BDleQ2XpgqF_yKZztXmgZrOLYR5XCW8dmCtVKYjx7c9DfG0_iHTa4ZPtGKYzP4Hl6cytA8iUuR9kJa8tn_8Nfih_73Wa4lAd3XwkVhM3OnvAC8b7yl4f2q3DWjNTQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tks9jcIvlqGN8vEeVfOqTh0sc0bJvphz9tE_MqqKCzhc0jqi1pb5FqcAnJXU4kp3Fg4qg01H14ZyPcjhhmssSvIAOYmUUlS0CIk6ALBuff978805W4tQavAriUEZCS5crA99CXK3PHzqlOJX6lL7RKwSEv6fQOk1xOKwCJNn445omcqGNvDBfzEjASBGaPlPNKHmC0Cutu3aCWitGnxPIv93zgDoLzHRb0ERcLyHpim3UN7El4d8v1Uiz5S7WlI46bjCjB9X1yunYcLOMYErAwa8Q-T83MVqFN0YpIIrcjbw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tqZIqgOMiMoWGnLJ04tLRRH0RX4jUco6ZG9DkOyonn9IPy6aaL7Gen3pPEuLTgZHh82vMg_YazxFocOYxsCnrtBT8ZG4A0PWzv2v2OVmA-CDlu4vaTUrkdV0S9lX42It46vLF6xLZiBpBr3hhInsaljjYjQDHgtHIfFs1WADa0en-h_lG7l68Ykct0TnRlULmkdDB1fWT7X7ISnuoe_8C8mL59h6Ba6AWmq1zGLGoqVgc-cKAly1ZSAGlpuHnGdsaZT-bPGsLHX6aFqZbtYH84SPR4yU39lf_qdv0FmogSVHkN2m9Te6jq1uyNzx29W-C6cq9dpQB5yJ-ebo4LhC9bCmYX42RV0QarC8ZoUZ8QtIK6sqcIOGtq_LkUj7oLPOl8UJ5n2o4YnWioinsg1fIeqyhaV89AuDnE6kgVuWdiFg&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-uGHTIwSizC4FOd1OXZJx8ytgZp5DDVsGU9WCb7UKUZSkD4u8soJMuyuP0RqMtV_BI8doT672MRzLA5enhAyeMcKTj6tvJMf2CM1HajX7CSFHE7Fl68nRB33Q8w97IuQ_nxaFhECPnrliqhwBdVIgp76jtv2m4HwY2KT--ao336EyjBj71fGJBLS-YbwOIFJItrN4kwTYZ38YBYjrmcf920ep5uCmfOUcDUodh3-0Vrv_JS6kFhTRBUNLXC2RbWVslBMVYQzM8AAcivE7plW7ZCix8XScOBwle4Sm9DI8dMVA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.45,
-    "verification_status": "verified",
-    "price_display": "₹₹",
-    "price_per_person": 350,
-    "average_spend_for_two": 700
-  },
-  {
     "id": "mellow-mood-cafe",
     "name": "Mellow Mood Cafe",
     "tagline": "A Cozy Corner of Books & Acoustic Soul",
@@ -1441,7 +1374,7 @@
     "whyVisit": "To sit cross-legged on comfortable floor seating, sketching or writing while a resident acoustic musician plays gentle folk fingerpicking tunes.",
     "hours": "11:00 AM — 8:30 PM (Daily)",
     "address": "Boyce Road East, Next to pine groves, Laitumkhrah, Shillong 793003",
-    "neighborhood": "Boyce Road",
+    "neighborhood": "Nongkynrih",
     "images": {
       "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-s33v02ZuTFD-VhoEOVfU_mLCjZmj4pT7lRBD7QkL7GG5fxoiTk7IkkrUU3NDtfj0ZpZ8Z4M6LjAc4sTRH-Oj8UGnwXEt9fN4WCB0o_o965ENblYCyf6wy2LynOcUrc7volRUYwx1wlqovbQnrOyLpphmsrxHkcOpJ-Dd7uVfn4iH6bA58nDhxkQue14bZXnKhsHeivp3POmc8CH_Ir9YcZ2Tv9k959dVEgBCD4OjWAmtNQFz_DvAUxnaz7NqAGNGPdjpkbnM7p8nm8W1OC_Mx17OPCoXkzvGyblUGeq5Lq2XInYUapUFxIlN3908sbWgYX4y0PzevrNqekN3vRgILg8Ib4aULteP4FGdAfOA9zh73FJhHYuM4t1acLjk_IAkOzvECI2ZuNiV283IhOclyYCOoGhK-PVLYIWrKI0dIJ7xbT&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
       "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-tqXU13OoEqnRj0fRd99Nugfnfy5ToeXqoqcX6OnNkkMGOxS51PQhjm4I7sw-i9-tvXJRl6U_9laNyXESQZCn3HMycoxseV5VI1YtlK1Et0Blp-X6ADuqt4iIhgddpwIRL5L3hwXNjbodrDvzack-u4Tm1B5IOVsGpwlz-hGF3Fi75bA16V_UpMKCneEv5cCGjYtj0KwPmFe3pkbMONMgZG-q9CUJrEme1Cvi7hzl68jQ15V74rjcKY51IJaIrU_STQjuh42AUtbLHDZnzu2v2Ko2xlfqHQJwDLsmJLp_yvFeJwc3tEQb2NfQRRChMOcUpjPPgDxi4KoMHe1AW7eOChGmawbf9vO9Ifyc7_er_kAoDrJbmG3ABBJho1Q5Rf8Kxn3BvhvNqtn4RlkG5oABBCQYP4iGm2g2gusDglFX5hKw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
@@ -1507,7 +1440,10 @@
     "price_level": 2,
     "price_display": "₹₹",
     "price_per_person": 400,
-    "average_spend_for_two": 800
+    "average_spend_for_two": 800,
+    "neighborhood_verified": true,
+    "neighborhood_source": "address-inferred",
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "sip-and-bite-cafe",
@@ -1774,7 +1710,7 @@
     "whyVisit": "For an authentic taste of gourmet French pastries, classic sizzlers, and rich continental desserts crafted by some of Shillong's best confectioners.",
     "hours": "11:00 AM — 9:00 PM (Closed Sundays)",
     "address": "Nongrim Hills Road, Opposite Bethany Hospital, Laitumkhrah, Shillong 793003",
-    "neighborhood": "Nongrim Hills",
+    "neighborhood": "Laitumkhrah",
     "images": {
       "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-sUlSy8wsDwoGcmp7yY0yllfMzv7XbzJNpxOuNXrgIJXwEtKohyEl3hMBdq77LA4VXSrbwbqsQh30ZriUmwH-8tY13cKDuxDgpUWoMnGU-kbcz6NJe1kl1hN7nQ2I-zYz-WgdqX4KCQHU5r62H7Oq6tNaZFNpMKGRpqBo9e4UC0w7m1-GPLiCSK4Hs6hyMpTRgh2lxsjRhHEZs4JpvgO0-Vg2Hh0t8lQLvL6DdDEDuU3_zoQq4y5lAxNpeGCeX-hZ8UvxDJFrRK1ZawUCaEb8BVI0ytEOOMZxXWAoZ0a3Eo5rxxifsACIwtXpCJ1c4ABoP-mMrwwtqKc1olFXpZBPMBxeuKzD-IU71fXxmh7Jm1UDDH-zSXsb-eN0HigKbM_nOxJvzbMULqt7pyqicyU7339tXmP3h1GHBT8nH7pa4Ob4M&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
       "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-t2E3lb0DpqT-D2fvch5RFE3ili7yWQVnqYttfw-5ZmF6g8UBUSJ6UJfbp9qxPyDvFXW6XV1TdgDv5MALuiyoRpCwGAua9oMN51qPR2PNA-bRDLfYIjtIpbLy1E05Zr8edETV99zCdRYpW-WPyoZ42KMpuk5U9jvUSAi9FnskgQUpIowNUAfOotLw8F2Ub_axFYsevoyfoDFfa6o2AjKwxk6Ko1ct3m100b2nJoSXPgsBt1Gjwgs0PmAOyZdKf4o78YZEXDd_SFlqmqUmEY9cpZ_jM_OBetmO_E3MM3sY7Q-x85G_VW5yo4IN4At9JYcsg0x1DvdmWjOtWxKeNCHStmKkPjWrMAANVGhC5AWuhV60T1UuQ-XkieQGRDl1PPmu5JbR4eD11fum_ZT_kWJJyZ4OOtCGMEiq2IqlU3FZS-iA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
@@ -1852,7 +1788,10 @@
     "verification_status": "verified",
     "price_display": "₹₹",
     "price_per_person": 350,
-    "average_spend_for_two": 700
+    "average_spend_for_two": 700,
+    "neighborhood_verified": true,
+    "neighborhood_source": "address-inferred",
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "city-hut-family-dhaba",
@@ -2030,7 +1969,7 @@
     "whyVisit": "For Shillong’s ultimate Sunday brunch, exquisite smoked pork ribs, and standard premium dining with business associates.",
     "hours": "7:00 AM — 11:00 PM (Daily)",
     "address": "Hotel Polo Towers, Oakland Road, Polo Market, Shillong 793001",
-    "neighborhood": "Oakland",
+    "neighborhood": "Police Bazaar",
     "images": {
       "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-ukvd-p0PzSKT3QiQ-uwdGpEPkkkp5zpLJiqR2ShUOT_cHl8GbwGdew5vmiDRPiBLgiDoYa8k5mC7Q4T7FT5bv7iDUqfVbQ6MC7ICmwGFV6eNKvYhzgIJAu48DeEzEzbD0qVEni0hVfMfVZ0IAvjS2nR4d9utVmHEQiG_v0ajdrixF72i_DiFsc6gWUyOzBU7vPTGGvOGQ1wJU1yPt-B-UBrftNPBUvwh6tFNBd79KMewjXRN7wDm-TuvpktalWnUtyCFtQM87aEhIaQIYCSukuIn7xysCAaZcd9SlD_Z89TyMxRbaXXdhrqCRLSbMDl6jgf9C8z4SSqh8lZx1WDcWD58nPJQfHEnNVAaGMt-8HaNmbsVw7YAmKrIkrikik7L3NrGMxmV4MoRgffUhNytlcYPH-dtezdcolrCAqYbc&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
       "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vTjCO5ydg7fb3KuSSqXGqmWfW34HCsssyVb9S957gS6LJUH9g2XB_s6OkR89a-6U8EcfB4i7uBPNrwrjXi1j0cskZMYIb7SsdCbvC0OJB9rR-yrVa-rymE6JqhPB4s5EiwW6Csewaae_aXGLp3Rv7JvoM2ccI1zLcgiywr6ij10cOsjL--rOu1i58WV6Oerfs9aQe-k8Kub8g5P1OFGArU9kJm1PFw33l3Gza_4EsZWnH7D3v5DczbS3vivlB_3caaMzjRQdcTxRuLykab0TajP8e2N1Vbs6SlKXB98w359HeL7vtcVYUKbOENz2E7zg-AcvkXJm6Dsn7_fx-QOwNq_qUpEZwl9VSpn8-fa599SiPaRWLHUmByUTsfZjTI2fVLM56xlehqtwoKlsendHGNzZFLbxkejTDFdaTuapw&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
@@ -2102,7 +2041,10 @@
     "price_level": 2,
     "price_display": "₹₹",
     "price_per_person": 400,
-    "average_spend_for_two": 800
+    "average_spend_for_two": 800,
+    "neighborhood_verified": true,
+    "neighborhood_source": "address-inferred",
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "lamee-restaurant",
@@ -2505,7 +2447,9 @@
     "price_level": 2,
     "price_display": "₹₹",
     "price_per_person": 400,
-    "average_spend_for_two": 800
+    "average_spend_for_two": 800,
+    "rooftop_verified": true,
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "smoky-falls-tribe-coffee",
@@ -2603,7 +2547,7 @@
     "whyVisit": "For the warm creative atmosphere, local photography exhibitions, and consistently good espresso drinks.",
     "hours": "Monday: 10:30 AM – 9:00 PM",
     "address": "Dhankheti st Peter's building 1st floor, Malki, Shillong, Meghalaya 793003, India",
-    "neighborhood": "Laitumkhrah",
+    "neighborhood": "Dhankheti",
     "images": {
       "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uxv_fsmymX_4wWFwMVMbGwwoaV8XSKXkDqcdKE831Rd5Vsj9bS_evyNnFqOpLdiN689C5Svwr-UGx7gQMosmTGHySlXP1hpC7LYsN1jP-g4axYPo_VZV-ftOAOiy-_8YxoXIasd8gwo2Nw6JzSWFdMZoyD9kDQ-YDXxAacyh3lF94OBpo_jDpGGWl_Xc2t_SX4OtXiijCl1-kV4apnmJCDaY5IM1Q2mDoxgk35FBtZtIIytoR8mby3kdeiUzLO3j2ifio0mzUhjrxmXpmL5xBQRIp0IzvQhF6FBlJH5lXCmA&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
       "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-vYQMvzYPXqXoMKD3yB3Ahns8PLa12w4-29Ak8DyKFX7oluCPsumX7V-USoBw-xo_gvhuc12z3ZcoYFA9Xz8lX_AZHowUeqeMM3wc9LwBrG8vBaEHT6a4AtnrNB9m-cmYNiSeJwmrGyvhDfvh4KeLrdxCqjol9wlX8wZKltVfKPj1iMbSHFzb1uDh4_geYiZ-NCi3gzV1VTl2kXLFAeMLdT_rh0kxvVUWg8OorSZDAiA6UT4VZjXk9JIoEfLvrI6T8LGStp7BeS97Qt9EebKNkN-JP3AtLruqhgBpyNCFu4gQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
@@ -2678,7 +2622,10 @@
     ],
     "verification_status": "verified",
     "price_per_person": 400,
-    "average_spend_for_two": 800
+    "average_spend_for_two": 800,
+    "neighborhood_verified": true,
+    "neighborhood_source": "address-inferred",
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "latte-love-cafe",
@@ -2850,7 +2797,7 @@
     "id": "tring-tring",
     "name": "Tring Tring",
     "tagline": "Dine Above the Clouds, Below the Stars",
-    "theme": "Panoramic Valley View Rooftop Dining",
+    "theme": "Continental Fine Dining at Hotel Polo Towers",
     "introduction": "Tring Tring at Hotel Polo Towers is Shillong's most elegant rooftop dining experience. With sweeping panoramic views of the Khasi Hills and a menu blending continental classics with Indian touches, it is the city's prime venue for romantic dinners and celebratory meals.",
     "whyVisit": "For the unmatched panoramic view of Shillong's ridges from an elevated terrace while dining on refined continental cuisine.",
     "hours": "Monday: 1:00 PM – 1:00 AM",
@@ -2878,7 +2825,6 @@
     ],
     "vibeTags": [
       "Fine Dining",
-      "Rooftop",
       "Continental",
       "Hotel Restaurant",
       "Panoramic View"
@@ -2930,7 +2876,9 @@
     ],
     "verification_status": "verified",
     "price_per_person": 400,
-    "average_spend_for_two": 800
+    "average_spend_for_two": 800,
+    "rooftop_verified": false,
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "qzine-restaurant",
@@ -3435,7 +3383,7 @@
     "id": "marsoki-cafe",
     "name": "Marsoki Cafe",
     "tagline": "Shillong's Best-Kept Secret, One Floor Up",
-    "theme": "Laitumkhrah Hidden Rooftop Hideaway",
+    "theme": "Laitumkhrah Hidden Hideaway",
     "introduction": "Tucked above Laitumkhrah's busiest stretch, Marsoki Cafe is the neighborhood's most talked-about hidden gem. With warm interiors, a relaxed crowd, and genuinely good coffee, it draws regulars who return for the atmosphere as much as the food.",
     "whyVisit": "For the laid-back atmosphere, solid coffee, and the feeling of having found Shillong's best-kept secret.",
     "hours": "Monday: 12:00 – 8:00 PM",
@@ -3463,7 +3411,6 @@
     ],
     "vibeTags": [
       "Hidden Gem",
-      "Rooftop Vibe",
       "Cozy",
       "Local Hangout",
       "Coffee & Bites"
@@ -3515,86 +3462,9 @@
     ],
     "verification_status": "verified",
     "price_per_person": 400,
-    "average_spend_for_two": 800
-  },
-  {
-    "id": "grub-s-cafe-bakery",
-    "name": "Grub's Cafe & Bakery",
-    "tagline": "Baked Fresh, Served High, Eaten Happily",
-    "theme": "Rooftop Bakery with Breezy Khasi Hills Views",
-    "introduction": "Grub's Cafe & Bakery is Laitumkhrah's beloved rooftop bakery, celebrated for its sky-high cheesecakes, golden croissants, and fudgy brownies. The breezy terrace with panoramic neighborhood views makes every bite taste better.",
-    "whyVisit": "For Shillong's finest cheesecake on a rooftop with a hill breeze — the combination is unbeatable.",
-    "hours": "10:00 AM — 9:00 PM",
-    "address": "Laitumkhrah Main Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003, India",
-    "neighborhood": "Laitumkhrah",
-    "images": {
-      "hero": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uwR_Sx1rp64K6bFsYpVGuqkv3NDWFxLg2F-o_Q8zDan-Xw1qxtcsw2dofQFhnLXhwm1ntnSAr1jE9iS9lNXeeNmPt_whNxHp-d03r1qDc257tkImnElunEkJovJNtS2SWioLtIYi_BRd3-stGmCB8FiiDV1hsXFCWUYZNRdm5_2JFdHn6ojfGDRmyYNyxNJKQChrSyqHm84AJFfmCnvqbeifPiRR85_Xj3e-4YxrxTDi9lKgfMXwrgac6MQxR8TtGSmuSPUWWXrOzKlOmWAQZyOUr1kq8zPsP3XpCqgTHARfByy48hsaJmp_gZGMumKIjqfTqemqnmOeIKfKrns_6OklrgtoZ8089wTLH9dGO2jJcf8lfvCkctxyNxS8-vBd68g0bZRvoBZ1gmbycEsxhgjLfob8p3spqQoeuPlN9GEBNc&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "card": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sVKbL3fD_Gr5lPkE-u3Pde0l9bsF5YWLCd81cIryLStDfre5PaqapmUic1PzUBDT-2pOXaH72llYkqZUM8VF4o9tX6ry0O72dzUI9wntntV5g1ahpzhCSRXeljGHZv2LDKVcLGUQAarMsjieP93O3aDQw6e14BnAU-NVvQzDzRafNRoPOPkXy7yfOpO_qTDoD7w039dz9mNxyZyqGZCGIZvGsYOfYi89ABi1PXyzwgLu3MQa2kLpEiLL-abcZSIverbcXXX3iLefWxIlP80jKuhmsLnsLiHzdJIUePCt6c8y_Qn8FmLgsEeLNf_R7Cj0Nn76ySWRJreQTl2C2GRXtGojnFEVeZWhs0vFews427tu1MKC92DekzzSwmAkftBkAA_nVNiIod4z0eeIX6SlJUt82TDKKD305PvbA70izEaDqn&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "interior": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sa2_Mp04FkFAY4m68UafG-CUotlARQrHVT0rXHLfWwDKcjabVliXMRzvB6w4LOJ7O0onohC0li3GfAikz1zAK8LXbwz2D40PRHNgAw5HKE3qYkPKJQoHprj-7iAfI4Jn6VURpu5euP-zgVGSiQik-yTWja77O_EedViTwn2BUaSVQadFWzb38uq07YoMTZA71FTumZ3Ti0JW93pw0OuqH0zKGs_Gd0QlsAghzx0KQb_VeSzjA6L-awg9gFmQLeByBk_FZVSfwDKpqDM-Ir9tIxLYY76AgdxOkmpZmezYH_J_IMMsb0_vNrdh_WPIXo_XHWK9523dfji_XaGDIu0c-nyUj5sLRYakoVK7yjmDBeFVIi9C9qtvkTwKWU8GDb-qJ19xYtHgdCp_y_RcvvMtBe6GMEnM6a26cz-OXTWUOvStXoxqsRkVq5Rq99HGfr&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-    },
-    "photos": [
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uwR_Sx1rp64K6bFsYpVGuqkv3NDWFxLg2F-o_Q8zDan-Xw1qxtcsw2dofQFhnLXhwm1ntnSAr1jE9iS9lNXeeNmPt_whNxHp-d03r1qDc257tkImnElunEkJovJNtS2SWioLtIYi_BRd3-stGmCB8FiiDV1hsXFCWUYZNRdm5_2JFdHn6ojfGDRmyYNyxNJKQChrSyqHm84AJFfmCnvqbeifPiRR85_Xj3e-4YxrxTDi9lKgfMXwrgac6MQxR8TtGSmuSPUWWXrOzKlOmWAQZyOUr1kq8zPsP3XpCqgTHARfByy48hsaJmp_gZGMumKIjqfTqemqnmOeIKfKrns_6OklrgtoZ8089wTLH9dGO2jJcf8lfvCkctxyNxS8-vBd68g0bZRvoBZ1gmbycEsxhgjLfob8p3spqQoeuPlN9GEBNc&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sVKbL3fD_Gr5lPkE-u3Pde0l9bsF5YWLCd81cIryLStDfre5PaqapmUic1PzUBDT-2pOXaH72llYkqZUM8VF4o9tX6ry0O72dzUI9wntntV5g1ahpzhCSRXeljGHZv2LDKVcLGUQAarMsjieP93O3aDQw6e14BnAU-NVvQzDzRafNRoPOPkXy7yfOpO_qTDoD7w039dz9mNxyZyqGZCGIZvGsYOfYi89ABi1PXyzwgLu3MQa2kLpEiLL-abcZSIverbcXXX3iLefWxIlP80jKuhmsLnsLiHzdJIUePCt6c8y_Qn8FmLgsEeLNf_R7Cj0Nn76ySWRJreQTl2C2GRXtGojnFEVeZWhs0vFews427tu1MKC92DekzzSwmAkftBkAA_nVNiIod4z0eeIX6SlJUt82TDKKD305PvbA70izEaDqn&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sa2_Mp04FkFAY4m68UafG-CUotlARQrHVT0rXHLfWwDKcjabVliXMRzvB6w4LOJ7O0onohC0li3GfAikz1zAK8LXbwz2D40PRHNgAw5HKE3qYkPKJQoHprj-7iAfI4Jn6VURpu5euP-zgVGSiQik-yTWja77O_EedViTwn2BUaSVQadFWzb38uq07YoMTZA71FTumZ3Ti0JW93pw0OuqH0zKGs_Gd0QlsAghzx0KQb_VeSzjA6L-awg9gFmQLeByBk_FZVSfwDKpqDM-Ir9tIxLYY76AgdxOkmpZmezYH_J_IMMsb0_vNrdh_WPIXo_XHWK9523dfji_XaGDIu0c-nyUj5sLRYakoVK7yjmDBeFVIi9C9qtvkTwKWU8GDb-qJ19xYtHgdCp_y_RcvvMtBe6GMEnM6a26cz-OXTWUOvStXoxqsRkVq5Rq99HGfr&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ucX8JdD1GtcINO-Gd7W8vk4U2B8AUbcs6GS4DTRBnwbcCocHPGp2cRAu5YQGbz9dLsW4snzIttOsSCnoE0ett4jyZn97giThknZz0LGU06YO9DdlKvMZSfb7DzRps35ePym969mSzSnLk3aGcqaar6Hq5JeoFPHRApzNNdWvffJImvueqqIGtkVu6dntUQgtJweK3edqrburgZWvqB5hZWZhpgNroL6ZesI2N4CJv0B0bPCSzwNKMhotHrxh8qjmrfNmcqzTSiuWlNaXwWkotEBn55xK6Fn2uUb-Hsbl6JNqsTqpxXsuO3-w36MEiLhfUmwrMUgmCjJ4rhn8jGD2Wjtuqh6I7KwyfTS1t6MHtDce78GtGn0IZoN0kvJHCruRiA18-A-tJ876mya6EO2YehuqR3A53fdmAjRy1bRW3kFQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sKZvSd0V-czIqLKI2zU4vwLeDzoZCFNTDoSR6BBCQC8uV4ZnWdg4wIHi_v2GAl1bwvP_rOGxIpNOf5ewop7OCyNIlG177JWtgz2wqsGQhCdm8eSHVNxPcPByhQgWcjatA6aDI-LgtEGggrZFiJh0-ww4rNEJW6eLk3-ef-tCXmydqPubFFUqt87rve_23Q7PYpzlkKt9T0Nmue40tnsmzbpLXouY50rHf6MINxsoTork4DsPYVE7ag3opAE8-LXtkOMgPrbSEV0xOmClX4zctk6C0EzA5e0xHEmxXzVtPtwOUi7ajeORaCgbICYdVhM5pwNjHmBUQq1MoV_6P1WJtm-siACEG30pGf4Hgp3TS5jKBffVKki0il5pkt4q0tDPAlTIQR5O1qFqvXWny5Wmpierv198TVZzUKB08OSM8&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v8DSkxnLo_oSTFRqmH_II7r2X0As4pY4qUXObe5UHYccQTE9N4qdp4ZNm1hhO90clwYsy_MpVe5oG7AzSSQ6wLGRPnjjFwbwNEtCe2MkfDgqlTCulqVuxeEIHwvSeaT2TnG_elycYhmn8Ow-Ip3DlG3jrLFJSiFYlEpUOT8AOWWB8qvEWz1hi0_2U4PyzOVyYQwI5ItHD_-jl67brQZ42PFpAw8mlh5Dpq1fWbIjX5kUo1knkIZhq8PTWkZVMrS0yV_Iypk1em4avKYtnDq6um-8igGx6U5ciot-rC3DsvG__F9OlmxVRNVIfI1_sa-ZDo4sPe5KKw6-eXgQxGbLkLc9kQH5Ixn0Rn-APdus2RtonVGHzjC751dF30aDYI5GwW6Baq6FJoeuiNRMkSVlyyPgIQeaeERYm0yi_dwaCxUdk&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-    ],
-    "gallery": [
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sVKbL3fD_Gr5lPkE-u3Pde0l9bsF5YWLCd81cIryLStDfre5PaqapmUic1PzUBDT-2pOXaH72llYkqZUM8VF4o9tX6ry0O72dzUI9wntntV5g1ahpzhCSRXeljGHZv2LDKVcLGUQAarMsjieP93O3aDQw6e14BnAU-NVvQzDzRafNRoPOPkXy7yfOpO_qTDoD7w039dz9mNxyZyqGZCGIZvGsYOfYi89ABi1PXyzwgLu3MQa2kLpEiLL-abcZSIverbcXXX3iLefWxIlP80jKuhmsLnsLiHzdJIUePCt6c8y_Qn8FmLgsEeLNf_R7Cj0Nn76ySWRJreQTl2C2GRXtGojnFEVeZWhs0vFews427tu1MKC92DekzzSwmAkftBkAA_nVNiIod4z0eeIX6SlJUt82TDKKD305PvbA70izEaDqn&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sa2_Mp04FkFAY4m68UafG-CUotlARQrHVT0rXHLfWwDKcjabVliXMRzvB6w4LOJ7O0onohC0li3GfAikz1zAK8LXbwz2D40PRHNgAw5HKE3qYkPKJQoHprj-7iAfI4Jn6VURpu5euP-zgVGSiQik-yTWja77O_EedViTwn2BUaSVQadFWzb38uq07YoMTZA71FTumZ3Ti0JW93pw0OuqH0zKGs_Gd0QlsAghzx0KQb_VeSzjA6L-awg9gFmQLeByBk_FZVSfwDKpqDM-Ir9tIxLYY76AgdxOkmpZmezYH_J_IMMsb0_vNrdh_WPIXo_XHWK9523dfji_XaGDIu0c-nyUj5sLRYakoVK7yjmDBeFVIi9C9qtvkTwKWU8GDb-qJ19xYtHgdCp_y_RcvvMtBe6GMEnM6a26cz-OXTWUOvStXoxqsRkVq5Rq99HGfr&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ucX8JdD1GtcINO-Gd7W8vk4U2B8AUbcs6GS4DTRBnwbcCocHPGp2cRAu5YQGbz9dLsW4snzIttOsSCnoE0ett4jyZn97giThknZz0LGU06YO9DdlKvMZSfb7DzRps35ePym969mSzSnLk3aGcqaar6Hq5JeoFPHRApzNNdWvffJImvueqqIGtkVu6dntUQgtJweK3edqrburgZWvqB5hZWZhpgNroL6ZesI2N4CJv0B0bPCSzwNKMhotHrxh8qjmrfNmcqzTSiuWlNaXwWkotEBn55xK6Fn2uUb-Hsbl6JNqsTqpxXsuO3-w36MEiLhfUmwrMUgmCjJ4rhn8jGD2Wjtuqh6I7KwyfTS1t6MHtDce78GtGn0IZoN0kvJHCruRiA18-A-tJ876mya6EO2YehuqR3A53fdmAjRy1bRW3kFQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-sKZvSd0V-czIqLKI2zU4vwLeDzoZCFNTDoSR6BBCQC8uV4ZnWdg4wIHi_v2GAl1bwvP_rOGxIpNOf5ewop7OCyNIlG177JWtgz2wqsGQhCdm8eSHVNxPcPByhQgWcjatA6aDI-LgtEGggrZFiJh0-ww4rNEJW6eLk3-ef-tCXmydqPubFFUqt87rve_23Q7PYpzlkKt9T0Nmue40tnsmzbpLXouY50rHf6MINxsoTork4DsPYVE7ag3opAE8-LXtkOMgPrbSEV0xOmClX4zctk6C0EzA5e0xHEmxXzVtPtwOUi7ajeORaCgbICYdVhM5pwNjHmBUQq1MoV_6P1WJtm-siACEG30pGf4Hgp3TS5jKBffVKki0il5pkt4q0tDPAlTIQR5O1qFqvXWny5Wmpierv198TVZzUKB08OSM8&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc",
-      "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-v8DSkxnLo_oSTFRqmH_II7r2X0As4pY4qUXObe5UHYccQTE9N4qdp4ZNm1hhO90clwYsy_MpVe5oG7AzSSQ6wLGRPnjjFwbwNEtCe2MkfDgqlTCulqVuxeEIHwvSeaT2TnG_elycYhmn8Ow-Ip3DlG3jrLFJSiFYlEpUOT8AOWWB8qvEWz1hi0_2U4PyzOVyYQwI5ItHD_-jl67brQZ42PFpAw8mlh5Dpq1fWbIjX5kUo1knkIZhq8PTWkZVMrS0yV_Iypk1em4avKYtnDq6um-8igGx6U5ciot-rC3DsvG__F9OlmxVRNVIfI1_sa-ZDo4sPe5KKw6-eXgQxGbLkLc9kQH5Ixn0Rn-APdus2RtonVGHzjC751dF30aDYI5GwW6Baq6FJoeuiNRMkSVlyyPgIQeaeERYm0yi_dwaCxUdk&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-    ],
-    "vibeTags": [
-      "Rooftop",
-      "Bakery",
-      "Cheesecake",
-      "Breezy",
-      "Sweet Tooth"
-    ],
-    "hasLiveMusic": false,
-    "mustTry": [
-      {
-        "name": "New York Cheesecake Slice",
-        "description": "Dense, creamy baked cheesecake on a buttery graham crust, served cold.",
-        "price": "₹160",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ucX8JdD1GtcINO-Gd7W8vk4U2B8AUbcs6GS4DTRBnwbcCocHPGp2cRAu5YQGbz9dLsW4snzIttOsSCnoE0ett4jyZn97giThknZz0LGU06YO9DdlKvMZSfb7DzRps35ePym969mSzSnLk3aGcqaar6Hq5JeoFPHRApzNNdWvffJImvueqqIGtkVu6dntUQgtJweK3edqrburgZWvqB5hZWZhpgNroL6ZesI2N4CJv0B0bPCSzwNKMhotHrxh8qjmrfNmcqzTSiuWlNaXwWkotEBn55xK6Fn2uUb-Hsbl6JNqsTqpxXsuO3-w36MEiLhfUmwrMUgmCjJ4rhn8jGD2Wjtuqh6I7KwyfTS1t6MHtDce78GtGn0IZoN0kvJHCruRiA18-A-tJ876mya6EO2YehuqR3A53fdmAjRy1bRW3kFQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-      },
-      {
-        "name": "Hazelnut Brownie",
-        "description": "Fudgy dark chocolate brownie with roasted hazelnuts and a dusting of cocoa.",
-        "price": "₹120",
-        "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ucX8JdD1GtcINO-Gd7W8vk4U2B8AUbcs6GS4DTRBnwbcCocHPGp2cRAu5YQGbz9dLsW4snzIttOsSCnoE0ett4jyZn97giThknZz0LGU06YO9DdlKvMZSfb7DzRps35ePym969mSzSnLk3aGcqaar6Hq5JeoFPHRApzNNdWvffJImvueqqIGtkVu6dntUQgtJweK3edqrburgZWvqB5hZWZhpgNroL6ZesI2N4CJv0B0bPCSzwNKMhotHrxh8qjmrfNmcqzTSiuWlNaXwWkotEBn55xK6Fn2uUb-Hsbl6JNqsTqpxXsuO3-w36MEiLhfUmwrMUgmCjJ4rhn8jGD2Wjtuqh6I7KwyfTS1t6MHtDce78GtGn0IZoN0kvJHCruRiA18-A-tJ876mya6EO2YehuqR3A53fdmAjRy1bRW3kFQ&key=AIzaSyCtMyco4WWLl9zOTBD_ys6-JSxjwPJ5ECc"
-      }
-    ],
-    "coordinates": {
-      "lat": 25.569266,
-      "lng": 91.89821950000001
-    },
-    "latitude": 25.569266,
-    "longitude": 91.89821950000001,
-    "formatted_address": "Laitumkhrah Main Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003, India",
-    "place_id": "ChIJ3Zm457p-UDcRnAtO1JosnBg",
-    "phone_number": "070850 69008",
-    "website": null,
-    "google_maps_url": "https://maps.google.com/?cid=1773341396775603100",
-    "rating": 4,
-    "user_ratings_total": 750,
-    "price_level": 3,
-    "price_display": "₹₹₹",
-    "opening_hours": [],
-    "types": [
-      "cafe",
-      "establishment",
-      "food",
-      "point_of_interest",
-      "store"
-    ],
-    "verification_status": "verified",
-    "price_per_person": 700,
-    "average_spend_for_two": 1400
+    "average_spend_for_two": 800,
+    "rooftop_verified": false,
+    "last_normalized_at": "2026-05-31"
   },
   {
     "id": "bamboo-hut",

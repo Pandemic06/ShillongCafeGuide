@@ -6,3 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+.gstack/
+.claude/
+src/cafes_db.backup-*.json
+/tmp/

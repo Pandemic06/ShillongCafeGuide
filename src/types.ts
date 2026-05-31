@@ -29,7 +29,12 @@ export interface Cafe {
   whyVisit: string;
   hours: string;
   address: string;
-  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti";
+  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti" | "Mawroh" | "Nongrim Hills" | "Oakland" | "Cleve Colony" | "MG Road" | "Mawlai";
+  // Normalization audit metadata (Part 7)
+  neighborhood_verified?: boolean;
+  neighborhood_source?: "manual" | "address-inferred" | "google" | "legacy";
+  rooftop_verified?: boolean;
+  last_normalized_at?: string;
   images: {
     hero: string;
     card: string;
@@ -148,17 +153,34 @@ export interface NeighborhoodInfo {
   };
 }
 
+// --- Editorial story content blocks (Part 5 long-form support) ---
+export type StoryBlock =
+  | { type: "paragraph"; text: string; dropCap?: boolean }
+  | { type: "heading"; level: 2 | 3; text: string }
+  | { type: "pullquote"; text: string; attribution?: string }
+  | { type: "image"; url: string; caption?: string; layout?: "inline" | "wide" | "full" }
+  | { type: "gallery"; images: { url: string; caption?: string }[] }
+  | { type: "divider" };
+
 export interface GuideArticle {
   id: string;
   title: string;
   excerpt: string;
+  /** Legacy markdown-ish content. Used when body_blocks is absent. */
   content: string;
+  /** Rich long-form content. When present, renders via block renderer instead of content. */
+  body_blocks?: StoryBlock[];
   category: "reviews" | "khasi-food" | "area-guides" | "itineraries" | "culture";
   image: string;
   author: string;
   date: string;
+  /** Hand-set fallback. If body_blocks present, calculated read time is shown instead. */
   readTime: string;
   featured?: boolean;
+  // Editorial workflow metadata
+  status?: "draft" | "scheduled" | "published";
+  scheduled_publish_at?: string;
+  tags?: string[];
 }
 
 export interface FoodDish {

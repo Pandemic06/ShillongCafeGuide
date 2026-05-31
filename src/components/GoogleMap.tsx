@@ -201,8 +201,10 @@ export default function GoogleMap({ cafes, onSelectCafe, activeCafeId }: GoogleM
         const infoWindow = new google.maps.InfoWindow({ content: infoContent });
 
         marker.addListener("click", () => {
+          // Suppressed onSelectCafe(cafe) — caller's handler opens the full CafeDetailModal,
+          // which duplicated the in-map dark card. Only show the dark "Google verified" card here.
+          // Grid-view CafeCard still calls onViewDetails to open the full modal as expected.
           setSelectedCafe(cafe);
-          onSelectCafe(cafe);
           map.panTo({ lat: coords.lat - 0.002, lng: coords.lng });
           map.setZoom(16);
           infoWindow.open(map, marker);
@@ -222,6 +224,34 @@ export default function GoogleMap({ cafes, onSelectCafe, activeCafeId }: GoogleM
     mapRef.current.panTo({ lat: cafe.coordinates.lat - 0.002, lng: cafe.coordinates.lng });
     mapRef.current.setZoom(16);
   }, [activeCafeId, mapReady]);
+
+  // Auto-focus when filter narrows results to a single cafe (search-from-Find flow)
+  useEffect(() => {
+    if (!mapReady || !mapRef.current) return;
+    if (cafes.length !== 1) return;
+    const only = cafes[0];
+    if (!only.coordinates) return;
+    setSelectedCafe(only);
+    mapRef.current.panTo({ lat: only.coordinates.lat - 0.002, lng: only.coordinates.lng });
+    mapRef.current.setZoom(17);
+  }, [cafes, mapReady]);
+
+  // Attach name label to selected marker so searched place is visually labelled
+  useEffect(() => {
+    markersRef.current.forEach((m, id) => {
+      if (selectedCafe && id === selectedCafe.id) {
+        m.setLabel({
+          text: selectedCafe.name,
+          color: "#3d2817",
+          fontSize: "11px",
+          fontWeight: "700",
+          className: "gmap-cafe-label",
+        } as google.maps.MarkerLabel);
+      } else {
+        m.setLabel(null as any);
+      }
+    });
+  }, [selectedCafe]);
 
   // Calculate route
   const calculateRoute = useCallback(
