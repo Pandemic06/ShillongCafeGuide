@@ -7,6 +7,8 @@ import { Cafe } from "./types";
 
 // @ts-ignore
 import logoImage from "./assets/images/shillong_cafe_logo_1779948676706.png";
+// @ts-ignore
+import heroVideo from "./assets/videos/hero.mp4";
 
 import CafeCard from "./components/CafeCard";
 import CafeDetailModal from "./components/CafeDetailModal";
@@ -335,17 +337,19 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Right Visual Image */}
+                {/* Right Visual Video */}
                 <div className="w-full md:w-80 shrink-0 h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl relative border border-stone-800">
-                  <img
-                    src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800"
-                    alt="Cozy mist cafe window view"
+                  <video
+                    src={heroVideo}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-stone-900/35" />
+                  <div className="absolute inset-0 bg-stone-900/20 pointer-events-none" />
                   <div className="absolute top-4 left-4 font-mono text-[9px] bg-stone-900/60 backdrop-blur-md text-amber-200 px-2.5 py-1 rounded-sm border border-stone-700 uppercase tracking-widest font-bold">
-                    Rynsan Valley Elevation
+                    Shillong in Motion
                   </div>
                 </div>
               </div>
