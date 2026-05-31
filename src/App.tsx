@@ -117,12 +117,49 @@ export default function App() {
     );
   });
 
+  // ── Per-cafe deep URLs (/cafe/{id}) ─────────────────────────
+  // Pushes a real history entry per cafe so each modal open gets a unique,
+  // crawlable URL with its own <title>, meta, OG image and JSON-LD.
+  // Server already serves index.html for any unknown path (SPA fallback),
+  // so /cafe/rynsan-cafe loads the app then this handler opens the modal.
   const handleSelectCafe = (cafeId: string) => {
     const found = cafes.find((c) => c.id === cafeId);
     if (found) {
       setSelectedCafe(found);
+      const target = `/cafe/${cafeId}`;
+      if (typeof window !== "undefined" && window.location.pathname !== target) {
+        window.history.pushState({ cafeId }, "", target);
+      }
     }
   };
+
+  const handleCloseCafe = () => {
+    setSelectedCafe(null);
+    if (typeof window !== "undefined" && window.location.pathname.startsWith("/cafe/")) {
+      window.history.pushState({}, "", "/");
+    }
+  };
+
+  // Mount: open modal from pathname (/cafe/<id>) — runs after cafes load.
+  useEffect(() => {
+    if (typeof window === "undefined" || cafes.length === 0) return;
+    const m = window.location.pathname.match(/^\/cafe\/([\w-]+)\/?$/);
+    if (m) {
+      const found = cafes.find((c) => c.id === m[1]);
+      if (found) setSelectedCafe(found);
+    }
+    const onPop = () => {
+      const m2 = window.location.pathname.match(/^\/cafe\/([\w-]+)\/?$/);
+      if (m2) {
+        const f = cafes.find((c) => c.id === m2[1]);
+        setSelectedCafe(f || null);
+      } else {
+        setSelectedCafe(null);
+      }
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [cafes]);
 
   const navigateToNeighborhood = (districtId: string) => {
     setSelectedNeighborhoodId(districtId);
@@ -337,6 +374,83 @@ export default function App() {
             : undefined
         }
       />
+
+      {/* Per-cafe SEO override — fires only when a cafe modal is open.
+          Overrides title/meta/OG with cafe-specific copy and emits a full
+          CafeOrCoffeeShop JSON-LD with address, geo, ratings, opening hours
+          and images. Key by selectedCafe.id so the effect re-runs per cafe. */}
+      {selectedCafe && (
+        <SEO
+          key={selectedCafe.id}
+          title={`${selectedCafe.name} — ${selectedCafe.neighborhood} Café, Shillong`}
+          description={`${selectedCafe.name}: ${(selectedCafe.tagline || selectedCafe.theme || "").slice(0, 120)}. Address, hours, photos, must-try dishes and reviews — part of Shillong Café Map.`}
+          canonical={`https://shillongcafemap.in/cafe/${selectedCafe.id}`}
+          image={
+            selectedCafe.images?.hero?.startsWith("/")
+              ? `https://shillongcafemap.in${selectedCafe.images.hero}`
+              : selectedCafe.images?.hero
+          }
+          breadcrumbs={[
+            { name: "Home", url: "https://shillongcafemap.in/" },
+            { name: "Cafés", url: "https://shillongcafemap.in/?tab=cafes" },
+            { name: selectedCafe.name, url: `https://shillongcafemap.in/cafe/${selectedCafe.id}` },
+          ]}
+          schema={{
+            "@type": "CafeOrCoffeeShop",
+            "@id": `https://shillongcafemap.in/cafe/${selectedCafe.id}#cafe`,
+            name: selectedCafe.name,
+            image: (selectedCafe.photos || [selectedCafe.images?.hero])
+              .filter(Boolean)
+              .slice(0, 6)
+              .map((u) => (u.startsWith("/") ? `https://shillongcafemap.in${u}` : u)),
+            description: selectedCafe.introduction || selectedCafe.tagline || selectedCafe.theme,
+            url: `https://shillongcafemap.in/cafe/${selectedCafe.id}`,
+            telephone: selectedCafe.phone_number,
+            servesCuisine: selectedCafe.khasi_food_available
+              ? ["Khasi", "Indian", "Café"]
+              : ["Café", "Indian"],
+            priceRange: selectedCafe.price_display || "₹₹",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: selectedCafe.formatted_address || selectedCafe.address,
+              addressLocality: "Shillong",
+              addressRegion: "Meghalaya",
+              addressCountry: "IN",
+            },
+            geo: selectedCafe.coordinates
+              ? {
+                  "@type": "GeoCoordinates",
+                  latitude: selectedCafe.coordinates.lat,
+                  longitude: selectedCafe.coordinates.lng,
+                }
+              : undefined,
+            aggregateRating:
+              selectedCafe.rating != null
+                ? {
+                    "@type": "AggregateRating",
+                    ratingValue: selectedCafe.rating,
+                    reviewCount: selectedCafe.user_ratings_total || 1,
+                  }
+                : undefined,
+            openingHours: selectedCafe.opening_hours,
+            hasMenu: (selectedCafe.mustTry || []).length
+              ? {
+                  "@type": "Menu",
+                  hasMenuSection: {
+                    "@type": "MenuSection",
+                    name: "Must-try",
+                    hasMenuItem: (selectedCafe.mustTry || []).map((m) => ({
+                      "@type": "MenuItem",
+                      name: m.name,
+                      description: m.description,
+                      offers: m.price ? { "@type": "Offer", price: String(m.price).replace(/[^\d]/g, ""), priceCurrency: "INR" } : undefined,
+                    })),
+                  },
+                }
+              : undefined,
+          }}
+        />
+      )}
 
       {/* Main Container Wrapper */}
       <main className={`flex-1 w-full ${activeTab === "discover" ? "px-4 sm:px-6 lg:px-12 xl:px-20" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"} py-8 md:py-12`}>
@@ -933,7 +1047,7 @@ export default function App() {
         {selectedCafe && (
           <CafeDetailModal
             cafe={selectedCafe}
-            onClose={() => setSelectedCafe(null)}
+            onClose={handleCloseCafe}
           />
         )}
       </AnimatePresence>

@@ -151,13 +151,21 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
               </span>
             )}
 
-            <button
+            {/* Real <a> for crawlers + onClick interception for SPA users.
+                Cmd/Ctrl/middle-click still opens a fresh tab at /cafe/{id}. */}
+            <a
               id={`btn-view-${cafe.id}`}
-              onClick={() => onViewDetails(cafe.id)}
+              href={`/cafe/${cafe.id}`}
+              aria-label={`Open ${cafe.name} cafe details`}
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+                e.preventDefault();
+                onViewDetails(cafe.id);
+              }}
               className="text-xs text-amber-800 font-sans font-medium border-b border-amber-800 hover:text-amber-900 hover:border-amber-900 hover:pb-0.5 transition-all cursor-pointer"
             >
               Explore Hearth →
-            </button>
+            </a>
           </div>
         </div>
       </div>
