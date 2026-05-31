@@ -17,6 +17,7 @@ export interface Review {
   comment: string;
   date: string;
   isLocalGuide?: boolean;
+  userId?: string;
 }
 
 export interface Cafe {

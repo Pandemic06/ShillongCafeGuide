@@ -1,0 +1,68 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 1. Global safety net - Deny all by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Primitive Global helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isEmailVerified() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Validation definitions representing Schema integrity
+    function isValidReview(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.cafeId is string && data.cafeId.size() <= 128
+        && data.userName is string && data.userName.size() <= 200
+        && data.rating is number && data.rating >= 1 && data.rating <= 5
+        && data.comment is string && data.comment.size() <= 5000
+        && data.date is string && data.date.size() <= 64;
+    }
+
+    function isValidCustomCafe(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.name is string && data.name.size() <= 200
+        && data.theme is string && data.theme.size() <= 200
+        && data.neighborhood is string && data.neighborhood.size() <= 200;
+    }
+
+    // Rules for reviews collection
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isValidId(reviewId) 
+                    && isValidReview(incoming());
+      allow update: if isValidId(reviewId) 
+                    && isValidReview(incoming());
+      allow delete: if false;
+    }
+
+    // Rules for cafes collection
+    match /cafes/{cafeId} {
+      allow read: if true;
+      allow create: if isValidId(cafeId) 
+                    && isValidCustomCafe(incoming());
+      allow update: if isValidId(cafeId) 
+                    && isValidCustomCafe(incoming());
+      allow delete: if false;
+    }
+  }
+}

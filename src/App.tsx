@@ -18,6 +18,7 @@ import AIGuideChat from "./components/AIGuideChat";
 import DataHubModal from "./components/DataHubModal";
 import InteractiveMap from "./components/GoogleMap";
 import PlannersGuide from "./components/PlannersGuide";
+import { getCustomCafesFromFirestore } from "./services/db";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<"explore" | "cafes" | "cuisine" | "walks" | "guides" | "about" | "discover">("explore");
@@ -32,17 +33,32 @@ export default function App() {
   const [cafeViewMode, setCafeViewMode] = useState<"grid" | "map">("map");
 
   useEffect(() => {
-    fetch("/api/cafes")
-      .then((res) => {
+    const loadCafes = async () => {
+      try {
+        const res = await fetch("/api/cafes");
         if (!res.ok) throw new Error("HTTP status " + res.status);
-        return res.json();
-      })
-      .then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
-          setCafes(data);
+        const apiCafes: Cafe[] = await res.json();
+
+        try {
+          const firestoreCafes = await getCustomCafesFromFirestore();
+          if (Array.isArray(firestoreCafes) && firestoreCafes.length > 0) {
+            const merged = [...firestoreCafes];
+            apiCafes.forEach((c) => {
+              if (!merged.some((m) => m.id === c.id)) merged.push(c);
+            });
+            setCafes(merged);
+            return;
+          }
+        } catch (err) {
+          console.warn("Firestore custom cafes fetch failed, using API data:", err);
         }
-      })
-      .catch((err) => console.error("Error loading cafes from database API:", err));
+
+        if (Array.isArray(apiCafes) && apiCafes.length > 0) setCafes(apiCafes);
+      } catch (err) {
+        console.error("Error loading cafes:", err);
+      }
+    };
+    loadCafes();
   }, []);
 
   // Filter cafes based on search and strict category rules for public view
