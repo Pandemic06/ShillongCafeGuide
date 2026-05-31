@@ -110,7 +110,7 @@ export default function App() {
   // Setup tabs
   const tabsList = [
     { id: "explore", label: "Discovery", tooltip: "Home page with featured cafes, map & search" },
-    { id: "discover", label: "Discover Meghalaya", tooltip: "Adventure route planner with 12 curated road trips across Meghalaya" },
+    { id: "discover", label: "Plan Your Adventure", tooltip: "Adventure route planner with 12 curated road trips across Meghalaya" },
     { id: "cafes", label: "Cozy Cafés", tooltip: "Browse all 49 cafes in grid or map view with filters" },
     { id: "cuisine", label: "Khasi Cuisine", tooltip: "Traditional Khasi dishes: Jadoh, Dohkhlieh, Tungrymbai & more" },
     { id: "walks", label: "District Walks", tooltip: "Guided walking itineraries through Shillong neighborhoods" },
@@ -747,7 +747,7 @@ export default function App() {
 
           <div className="flex flex-wrap justify-center gap-6 font-mono text-[10px] uppercase tracking-wider">
             <button title="Home page with featured cafes, map & search" onClick={() => setActiveTab("explore")} className="hover:text-stone-100 cursor-pointer">Explore Main</button>
-            <button title="Adventure route planner with 12 curated road trips across Meghalaya" onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer text-amber-600">Discover Meghalaya</button>
+            <button title="Adventure route planner with 12 curated road trips across Meghalaya" onClick={() => setActiveTab("discover")} className="hover:text-amber-400 cursor-pointer text-amber-600">Plan Your Adventure</button>
             <button title="Browse all 49 cafes in grid or map view" onClick={() => setActiveTab("cafes")} className="hover:text-stone-100 cursor-pointer">Cozy List</button>
             <button title="Traditional Khasi dishes: Jadoh, Dohkhlieh & more" onClick={() => setActiveTab("cuisine")} className="hover:text-stone-100 cursor-pointer">Khasi Food</button>
             <button title="Stories, reviews & cultural articles" onClick={() => setActiveTab("guides")} className="hover:text-stone-100 cursor-pointer">Guides Periodic</button>
