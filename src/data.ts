@@ -1,5 +1,18 @@
 import { Cafe, NeighborhoodInfo, GuideArticle, FoodDish, Review } from "./types";
 
+// @ts-ignore
+import laitumkhrah1 from "./assets/images/neighborhoods/laitumkhrah-1.jpg";
+// @ts-ignore
+import laitumkhrah2 from "./assets/images/neighborhoods/laitumkhrah-2.jpg";
+// @ts-ignore
+import policeBazaar1 from "./assets/images/neighborhoods/police-bazaar-1.jpg";
+// @ts-ignore
+import policeBazaar2 from "./assets/images/neighborhoods/police-bazaar-2.jpg";
+// @ts-ignore
+import golfLinks1 from "./assets/images/neighborhoods/golf-links-1.jpg";
+// @ts-ignore
+import golfLinks2 from "./assets/images/neighborhoods/golf-links-2.jpg";
+
 export const CAFES: Cafe[] = [
   {
     id: "rynsan-cafe",
@@ -331,11 +344,11 @@ export const NEIGHBORHOODS: NeighborhoodInfo[] = [
     name: "Laitumkhrah",
     title: "The Student Heartbeat",
     description: "Built along high-altitude winding ridges, Laitumkhrah is the vibrant academic center of Shillong. Home to elite legacy schools and college hubs, its lively streets are lined with vinyl record shops, vintage clothing stalls, cozy cafes, and young local artists playing wooden guitars on the curbs during the blue hour.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Night_View_-Shillong.JPG?width=1200",
+    image: laitumkhrah1,
     vitals: {
       vibe: "Intelligent, student-centric, classic music hubs & vinyl lanes",
       bestTime: "Late afternoon to early dusk",
-      accentUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset%20in%20Shillong.JPG?width=1200"
+      accentUrl: laitumkhrah2
     },
     itinerary: {
       title: "The Perfect Laitumkhrah Afternoon Walk",
@@ -369,11 +382,11 @@ export const NEIGHBORHOODS: NeighborhoodInfo[] = [
     name: "Police Bazaar",
     title: "The Pulsing Capital Center",
     description: "The fast, sprawling marketplace heart of Shillong. Streets come alive with reflective neon pools in the rain, filled with local street foods, traditional shawls, wood carving stalls, and independent acoustic clubs tucked behind dark alleys.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Shillong%20from%20Shillong%20Peak.jpg?width=1200",
+    image: policeBazaar1,
     vitals: {
       vibe: "Energetic, bustling, traditional Khasi market lanes",
       bestTime: "Evening when neon lights reflect on wet streets",
-      accentUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Night_View_-Shillong.JPG?width=1200"
+      accentUrl: policeBazaar2
     },
     itinerary: {
       title: "Neon Reflections Street Crawl",
@@ -402,11 +415,11 @@ export const NEIGHBORHOODS: NeighborhoodInfo[] = [
     name: "Golf Links",
     title: "Misty Pined Slopes",
     description: "A landscape of rolling, deep green lawns surrounded by legacy pines. Golf Links is where Shillong comes to breathe—its quiet, misty slopes are perfect for morning joggers, artists sketching mossy branches, and seekers of quiet greenhouse sanctuaries.",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Umiam%20Lake,%20Shillong,%20Meghalaya.jpg?width=1200",
+    image: golfLinks1,
     vitals: {
       vibe: "Silent, misty, botanical greenhouse spaces & custom riders",
       bestTime: "Early dawn or misty midday rains",
-      accentUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset%20in%20Shillong.JPG?width=1200"
+      accentUrl: golfLinks2
     },
     itinerary: {
       title: "Pine-Scented Escape",
