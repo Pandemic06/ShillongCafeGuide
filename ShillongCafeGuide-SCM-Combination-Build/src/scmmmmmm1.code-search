@@ -1,0 +1,61 @@
+# Query: rising
+# ContextLines: 1
+
+14 results - 6 files
+
+ShillongCafeGuide-SCM-Combination-Build\firebase-applet-config.json:
+  1  {
+  2:   "projectId": "shillong-cafe-map",
+  3    "appId": "1:944568937001:web:5ac14e919440466a2a8a38",
+  4    "apiKey": "AIzaSyBQjJzq5r6eDAT0LA4QoiKlcFuDLprC0u0",
+  5:   "authDomain": "shillong-cafe-map.firebaseapp.com",
+  6    "firestoreDatabaseId": "shillong-cafe-map",
+  7:   "storageBucket": "shillong-cafe-map.firebasestorage.app",
+  8    "messagingSenderId": "944568937001",
+
+ShillongCafeGuide-SCM-Combination-Build\scripts\add-new-cafes.ts:
+  36    { name: "Corner Cafe", address: "Laitumkhrah, Shillong", neighborhood: "Laitumkhrah", vibeTags: ["Corner Spot", "Local Hangout", "Coffee", "Snacks", "Casual"], theme: "Classic Neighborhood Corner Cafe", tagline: "Everyone's Corner, Everyone's Cafe", introduction: "Exactly what its name promises — a warm, no-fuss corner cafe in the heart of Laitumkhrah where regulars linger over coffee and snacks. Corner Cafe is the purest expression of Shillong's neighborhood cafe culture: unpretentious, reliable, and always welcoming.", whyVisit: "For an authentic neighborhood cafe experience — good coffee, simple food, and friendly locals.", mustTry: [{ name: "Cappuccino", description: "Double shot espresso, steamed milk, thick velvety foam.", price: "₹130" }, { name: "Veg Wrap", description: "Whole wheat tortilla, mixed vegetables, cheese, house sauce.", price: "₹110" }] },
+  37: ⟪ 380 characters skipped ⟫rquoise interiors, eclectic decor, and a menu of colorful drinks and desserts that photograph beautifully and taste even better.", whyVisit: "For the most photogenic cafe interior in Shillong and surprisingly excellent coffee and cakes.", mustTry: [{ name: "Turquoise Blue Latte", description: "Butterfly pea flower latte with steamed oat milk, honey, citrus zest.", price: "₹170" }, { name: "Pastel Rainbow Cake Slice", description: "Layered vanilla sponge with pastel cream cheese frosting.", price: "₹180" }] },
+  38    { name: "The Press Cafe", address: "OB Shopping Mall, Police Bazar, Shillong", neighborhood: "Police Bazaar", vibeTags: ["Artisan Coffee", "Local Beans", "Irish Coffee", "Desserts", "Cozy"], theme: "Journalist's Den & Artisan Coffee Parlour", tagline: "Stop the Press — This Coffee Is Too Good", introduction: "The Press Cafe in OB Shopping Mall is Police Bazaar's finest artisan coffee destination, sourcing and roasting locally grown blends from Meghalaya's hills. The Irish Coffee is legendary, and the housemade desserts draw a devoted daily crowd.", whyVisit: "For Shillong's best Irish coffee and locally sourced artisan coffee blends in a warm, bookish atmosphere.", mustTry: [{ name: "Irish Coffee", description: "Hot strong coffee, Irish whiskey, lightly whipped cream float.", price: "₹200" }, { name: "Locally Sourced Cold Brew", description: "Meghalaya hill beans, 18-hour cold brew, served over ice.", price: "₹180" }] },
+  39:   { name: "Open Up Cafe", address: "Mawroh, Mawlai, Shillong", neighborhood: "Mawlai", vibeTags: ["Vibrant", "Games", "Diverse Menu", "Youth Crowd", "Mawlai"], theme: "Colorful Youth Hangout with Board Games & Food", tagline: "Open Up, Hang Out, Come Back Tomorrow", introduction: "Open Up Cafe in Mawlai's Mawroh neighborhood is the area's most beloved youth hangout, combining vibrant comic-character interiors (think Batman murals), a surprisingly diverse menu, and shelves of board games. Hotdogs, momos, and burgers rule the menu.", whyVisit: "For the most fun and energetic cafe atmosphere in Shillong's Mawlai area, complete with games and great hotdogs.", mustTry: [{ name: "Spicy Hotdog", description: "Grilled pork hotdog, spicy tangy dip, mustard, caramelized onions.", price: "₹110" }, { name: "Steamed Veg Momos", description: "Fresh vegetable dumplings, steamed, served with spicy red chilli sauce.", price: "₹90" }] },
+  40  ];
+
+ShillongCafeGuide-SCM-Combination-Build\src\cafes_db.json:
+  4532      "introduction": "Turquoise Cafe (a unit of Slice of Shillong) is Shillong's most visually striking cafe, with vibrant turquoise interiors, eclectic decor, and a menu of colorful drinks and desserts that photograph beautifully and taste even better.",
+  4533:     "whyVisit": "For the most photogenic cafe interior in Shillong and surprisingly excellent coffee and cakes.",
+  4534      "hours": "Monday: 10:00\u202fAM\u2009\u2013\u20098:30\u202fPM",
+
+  4733      "theme": "Colorful Youth Hangout with Board Games & Food",
+  4734:     "introduction": "Open Up Cafe in Mawlai's Mawroh neighborhood is the area's most beloved youth hangout, combining vibrant comic-character interiors (think Batman murals), a surprisingly diverse menu, and shelves of board games. Hotdogs, momos, and burgers rule the menu.",
+  4735      "whyVisit": "For the most fun and energetic cafe atmosphere in Shillong's Mawlai area, complete with games and great hotdogs.",
+
+ShillongCafeGuide-SCM-Combination-Build\src\labet_data.ts:
+  80    "fern-mist-garden": {
+  81:     tagline: "A glass dome greenhouse that makes you feel like an exotic plant. The wild mint cold brew is surprisingly wise.",
+  82      note: "The rain hitting the glass is the best background song in Shillong. Best visited slow.",
+
+ShillongCafeGuide-SCM-Combination-Build\src\data\pdf-routes.ts:
+  601          timeHM: "2:00",
+  602:         remarks: "Visit only Nov–Feb to see sunrise. Mist covers the valley below giving a mesmerising experience. Closed on Sundays as per latest inputs.",
+  603          coordinates: { lat: 25.4510, lng: 92.0500 },
+
+  610          timeHM: "2:16",
+  611:         remarks: "On the road to Wahrashi Falls, closed on Sundays. ~2 km easy trek (30-40 mins) through mesmerising landscape. Best seen in monsoons.",
+  612          coordinates: { lat: 25.4300, lng: 92.0820 },
+
+  883          timeHM: "1:41",
+  884:         remarks: "Massive rock feature worth the climb. View from top is scary and mesmerising — about 20-30 min of climb. Can be seen along with Khudoi Falls.",
+  885          coordinates: { lat: 25.5000, lng: 91.3820 },
+
+ShillongCafeGuide-SCM-Combination-Build\src\data\picnic-routes.ts:
+  163        { ser: 2, name: "Laitlum Canyon", kind: "Picnic Spot", distKm: 23, time: "1:00", remarks: "Beautiful meadow, valley view, sunset must-see. Try local rice beer. Closed on Sundays." },
+  164:       { ser: 3, name: "Nongjrong View Point", kind: "Picnic Spot", distKm: 49, time: "2:00", remarks: "Visit only Nov–Feb for sunrise. Mist over the valley is mesmerising. Closed on Sundays." },
+  165        { ser: 4, name: "Pdem Falls", kind: "Tourist Spot", distKm: 55, time: "2:16", remarks: "On the road to Wahrashi Falls, closed Sunday. ~2 km trek (30–40 min). Best in monsoons." },
+
+  188        { ser: 9, name: "Amkoi Sliang Wah Umngot", kind: "Trek", distKm: 107, time: "3:30", remarks: "Challenging 2-hr one-way trek (~1000 ft descent), warm/humid; do in winters. Carry water/electrolytes. Guide a must (₹500). Google inaccurate near end via Nongbareh." },
+  189:       { ser: 10, name: "Noh Kawang Falls", kind: "Tourist Spot", distKm: 109, time: "3:19", remarks: "Mesmerising; two small falls en route. ~15–20 min trek. Road beyond Amlarem bad (~22 km) + 2 km mud track; avoid car if raining." },
+  190      ],
+
+  241        { ser: 1, name: "Khudoi Falls", kind: "Picnic Spot", distKm: 52, time: "1:25", remarks: "Google inaccurate. After Mairang Village, right turn from St Thomas Higher Secondary School. Ask locals." },
+  242:       { ser: 2, name: "Kyllang Rock", kind: "Tourist Spot", distKm: 54, time: "1:41", remarks: "Massive rock; scary + mesmerising view, ~20–30 min climb. See with Khudoi Falls." },
+  243        { ser: 3, name: "Dommurok View Point (Markhan Valley)", kind: "Picnic Spot", distKm: 59, time: "1:45", remarks: "Last 8–9 km muddy/no road; avoid monsoons. Best immediately post-monsoon. Good group picnic." },

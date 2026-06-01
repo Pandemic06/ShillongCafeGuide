@@ -1,0 +1,16 @@
+# Query: rising-lead-85xj8
+# ContextLines: 1
+
+3 results - 1 file
+
+ShillongCafeGuide-SCM-Combination-Build\firebase-applet-config.json:
+  1  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBQjJzq5r6eDAT0LA4QoiKlcFuDLprC0u0",
+  authDomain: "shillong-cafe-map.firebaseapp.com",
+  projectId: "shillong-cafe-map",
+  storageBucket: "shillong-cafe-map.firebasestorage.app",
+  messagingSenderId: "944568937001",
+  appId: "1:944568937001:web:5ac14e919440466a2a8a38",
+  measurementId: "G-QZB4VR1S34"
+};

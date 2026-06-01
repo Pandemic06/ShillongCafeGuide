@@ -1,0 +1,6 @@
+{
+  "name": "Shillong Cafe Map",
+  "description": "An editorial travel guide and taxonomy-governed directory of Shillong's cozy cafés, landmark walks, and local food culture, featuring a premium custom metadata admin panel and a local AI assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "Review": {
+      "title": "Review",
+      "description": "User submitted reviews for specific cafes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "cafeId": { "type": "string" },
+        "userName": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "date": { "type": "string" },
+        "isLocalGuide": { "type": "boolean" },
+        "userId": { "type": "string" }
+      },
+      "required": ["id", "cafeId", "userName", "rating", "comment", "date"]
+    },
+    "CustomCafe": {
+      "title": "CustomCafe",
+      "description": "Custom or enriched cafe entries in Shillong Database",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "theme": { "type": "string" },
+        "introduction": { "type": "string" },
+        "whyVisit": { "type": "string" },
+        "hours": { "type": "string" },
+        "address": { "type": "string" },
+        "neighborhood": { "type": "string" },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" }
+          },
+          "required": ["lat", "lng"]
+        },
+        "vibeTags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["id", "name", "theme", "neighborhood"]
+    }
+  },
+  "firestore": {
+    "/reviews/{reviewId}": {
+      "schema": "Review",
+      "description": "Exhaustive collection of verified cafe reviews"
+    },
+    "/cafes/{cafeId}": {
+      "schema": "CustomCafe",
+      "description": "Client-added or modified custom café records"
+    }
+  }
+}
