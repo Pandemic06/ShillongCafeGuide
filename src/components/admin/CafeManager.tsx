@@ -3,6 +3,7 @@ import { Cafe } from "../../types";
 import { getCustomCafesFromFirestore } from "../../services/db";
 import { saveCafe, deleteCafe } from "../../services/admin-db";
 import { Plus, Trash2, Save, X, ArrowLeft } from "lucide-react";
+import ImageUrlField from "./ImageUrlField";
 
 /**
  * Café CRUD.
@@ -229,9 +230,15 @@ function CafeEditor({
         </Section>
 
         <Section title="Images">
-          <Field label="Hero URL"><input value={cafe.images?.hero || ""} onChange={(e) => set("images", { ...cafe.images, hero: e.target.value })} className={inp} /></Field>
-          <Field label="Card URL"><input value={cafe.images?.card || ""} onChange={(e) => set("images", { ...cafe.images, card: e.target.value })} className={inp} /></Field>
-          <Field label="Interior URL"><input value={cafe.images?.interior || ""} onChange={(e) => set("images", { ...cafe.images, interior: e.target.value })} className={inp} /></Field>
+          <Field label="Hero">
+            <ImageUrlField value={cafe.images?.hero || ""} onChange={(v) => set("images", { ...cafe.images, hero: v })} folder="cafes" />
+          </Field>
+          <Field label="Card">
+            <ImageUrlField value={cafe.images?.card || ""} onChange={(v) => set("images", { ...cafe.images, card: v })} folder="cafes" />
+          </Field>
+          <Field label="Interior">
+            <ImageUrlField value={cafe.images?.interior || ""} onChange={(v) => set("images", { ...cafe.images, interior: v })} folder="cafes" />
+          </Field>
         </Section>
 
         <Section title="Must-try menu items">

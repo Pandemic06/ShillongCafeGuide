@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { GuideArticle } from "../../types";
 import { listGuides, saveGuide, deleteGuide } from "../../services/admin-db";
 import RichEditor from "./RichEditor";
+import ImageUrlField from "./ImageUrlField";
 import { Plus, Save, ArrowLeft, X, Trash2 } from "lucide-react";
 
 const CATEGORIES: GuideArticle["category"][] = [
@@ -131,10 +132,10 @@ export default function GuideManager() {
               <input type="date" value={editing.date} onChange={(e) => set("date", e.target.value)} className={inp} />
             </label>
           </div>
-          <label className="block">
-            <span className="block text-xs font-medium text-stone-700 mb-1">Hero image URL</span>
-            <input value={editing.image} onChange={(e) => set("image", e.target.value)} className={inp} />
-          </label>
+          <div>
+            <span className="block text-xs font-medium text-stone-700 mb-1">Hero image</span>
+            <ImageUrlField value={editing.image} onChange={(v) => set("image", v)} folder="guides" />
+          </div>
           <label className="block">
             <span className="block text-xs font-medium text-stone-700 mb-1">Tags (comma-separated)</span>
             <input

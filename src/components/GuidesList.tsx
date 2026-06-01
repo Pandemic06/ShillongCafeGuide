@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ARTICLES } from "../data";
 import { GuideArticle, StoryBlock } from "../types";
 import { BookOpen, Mail, ArrowLeft, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { getReadingTime } from "../utils/readingTime";
+import { getPublishedGuides } from "../services/public-content";
+
+// Heuristic: TipTap-authored content is HTML (contains tags). Legacy static
+// content is plain-text/markdown. Render the two differently to preserve
+// editorial formatting while keeping the existing block-renderer fallback.
+function looksLikeHtml(s: string): boolean {
+  return /<\/?(p|h[1-6]|ul|ol|li|blockquote|img|a|strong|em|hr|figure)[\s>]/i.test(s);
+}
 
 // --- Long-form block renderer ---
 function renderBlock(block: StoryBlock, idx: number) {
@@ -101,9 +109,22 @@ export default function GuidesList() {
     { key: "area-guides", label: "Area Walks" }
   ];
 
+  // Merge CMS-published guides on top of the static editorial seed. CMS
+  // entries win on id collision so admins can override seed content.
+  const [cmsGuides, setCmsGuides] = useState<GuideArticle[]>([]);
+  useEffect(() => {
+    getPublishedGuides().then(setCmsGuides).catch(() => setCmsGuides([]));
+  }, []);
+
+  const allArticles: GuideArticle[] = (() => {
+    if (cmsGuides.length === 0) return ARTICLES;
+    const cmsIds = new Set(cmsGuides.map((g) => g.id));
+    return [...cmsGuides, ...ARTICLES.filter((a) => !cmsIds.has(a.id))];
+  })();
+
   // Hide drafts + scheduled-in-future stories from public view
   const now = new Date();
-  const publishedArticles = ARTICLES.filter((a) => {
+  const publishedArticles = allArticles.filter((a) => {
     if (a.status === "draft") return false;
     if (a.status === "scheduled" && a.scheduled_publish_at) {
       return new Date(a.scheduled_publish_at) <= now;
@@ -173,10 +194,15 @@ export default function GuidesList() {
               />
             </div>
 
-            {/* Article Content — block renderer (rich) or legacy markdown parse */}
+            {/* Article Content — block renderer, TipTap HTML, or legacy markdown */}
             <div className="max-w-none space-y-4">
               {selectedArticle.body_blocks && selectedArticle.body_blocks.length > 0 ? (
                 selectedArticle.body_blocks.map((b, idx) => renderBlock(b, idx))
+              ) : looksLikeHtml(selectedArticle.content) ? (
+                <div
+                  className="prose prose-stone max-w-none prose-headings:font-display prose-headings:text-stone-900 prose-p:text-stone-800 prose-p:leading-[1.85] prose-a:text-amber-800 prose-img:rounded-2xl prose-blockquote:border-l-amber-700"
+                  dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
+                />
               ) : (
                 selectedArticle.content.split("\n\n").map((para, idx) => {
                   const trimmed = para.trim();

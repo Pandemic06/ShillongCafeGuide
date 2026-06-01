@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
@@ -5,8 +6,9 @@ import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
 import {
   Bold, Italic, Strikethrough, Heading2, Heading3, List, ListOrdered,
-  Quote, Image as ImageIcon, Link as LinkIcon, Undo, Redo, Minus,
+  Quote, Image as ImageIcon, Link as LinkIcon, Undo, Redo, Minus, Upload,
 } from "lucide-react";
+import { uploadImage } from "../../services/storage";
 
 /**
  * Thin TipTap wrapper for admin guide/article body editing.
@@ -38,7 +40,25 @@ export default function RichEditor({ value, onChange, placeholder }: Props) {
     },
   });
 
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [uploading, setUploading] = useState(false);
+
   if (!editor) return null;
+
+  const onFilePicked = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = ""; // allow re-pick same file
+    if (!file) return;
+    setUploading(true);
+    try {
+      const url = await uploadImage(file, "guides");
+      editor.chain().focus().setImage({ src: url }).run();
+    } catch (err: any) {
+      alert("Upload failed: " + (err.message || err));
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const Btn = ({
     onClick, active, label, children,
@@ -84,7 +104,11 @@ export default function RichEditor({ value, onChange, placeholder }: Props) {
         <Btn label="Numbered list" onClick={() => editor.chain().focus().toggleOrderedList().run()} active={editor.isActive("orderedList")}><ListOrdered className="w-4 h-4" /></Btn>
         <Btn label="Quote" onClick={() => editor.chain().focus().toggleBlockquote().run()} active={editor.isActive("blockquote")}><Quote className="w-4 h-4" /></Btn>
         <span className="w-px bg-stone-300 mx-1" />
-        <Btn label="Image" onClick={addImage}><ImageIcon className="w-4 h-4" /></Btn>
+        <Btn label="Image by URL" onClick={addImage}><ImageIcon className="w-4 h-4" /></Btn>
+        <Btn label={uploading ? "Uploading…" : "Upload image"} onClick={() => fileInputRef.current?.click()}>
+          <Upload className={`w-4 h-4 ${uploading ? "animate-pulse" : ""}`} />
+        </Btn>
+        <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={onFilePicked} />
         <Btn label="Link" onClick={addLink} active={editor.isActive("link")}><LinkIcon className="w-4 h-4" /></Btn>
         <Btn label="Divider" onClick={() => editor.chain().focus().setHorizontalRule().run()}><Minus className="w-4 h-4" /></Btn>
         <span className="w-px bg-stone-300 mx-1" />

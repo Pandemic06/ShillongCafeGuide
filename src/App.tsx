@@ -21,6 +21,8 @@ import DataHubModal from "./components/DataHubModal";
 import InteractiveMap from "./components/GoogleMap";
 import PlannersGuide from "./components/PlannersGuide";
 import { getCustomCafesFromFirestore } from "./services/db";
+import { getPublicSiteSettings } from "./services/public-content";
+import { SiteSettings } from "./services/admin-db";
 import SEO, { PAGE_SEO } from "./components/SEO";
 import { FAQBlock, faqPageSchema, ModuleSummary } from "./components/SEOExtras";
 
@@ -58,6 +60,13 @@ export default function App() {
   const [dataHubOpen, setDataHubOpen] = useState(false);
   const [cafeViewMode, setCafeViewMode] = useState<"grid" | "map">("map");
 
+  // CMS-managed site settings (banner, featured cafés order). Loaded async,
+  // public site renders defaults until the doc arrives.
+  const [siteSettings, setSiteSettings] = useState<SiteSettings | null>(null);
+  useEffect(() => {
+    getPublicSiteSettings().then(setSiteSettings).catch(() => setSiteSettings(null));
+  }, []);
+
   // Global scroll-to-top on tab change (fixes Editorial-opens-at-bottom + menu nav scroll bugs)
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
@@ -92,8 +101,21 @@ export default function App() {
     loadCafes();
   }, []);
 
+  // CMS-pinned featured cafés get sorted to the front of the list (in
+  // the order the admin set). Everything else keeps its natural order.
+  const sortedCafes = (() => {
+    const featured = siteSettings?.featuredCafes || [];
+    if (featured.length === 0) return cafes;
+    const featuredSet = new Set(featured);
+    const pinned = featured
+      .map((id) => cafes.find((c) => c.id === id))
+      .filter((c): c is Cafe => !!c);
+    const rest = cafes.filter((c) => !featuredSet.has(c.id));
+    return [...pinned, ...rest];
+  })();
+
   // Filter cafes based on search and strict category rules for public view
-  const filteredCafes = cafes.filter((cafe) => {
+  const filteredCafes = sortedCafes.filter((cafe) => {
     // Under Cozy Cafés tab, apply taxonomy content guidelines if primary category is declared
     if (activeTab === "cafes") {
       if (cafe.primary_category) {
@@ -196,6 +218,13 @@ export default function App() {
     <div className="min-h-screen bg-[#F5F2EB] text-stone-850 font-sans flex flex-col relative antialiased selection:bg-amber-800/20 selection:text-amber-900">
       {/* Visual background mist texture overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#8b5c1a_0.6px,transparent_0.6px)] [background-size:16px_16px] opacity-[0.04] pointer-events-none" />
+
+      {/* CMS-managed editorial banner — admins toggle from /admin/settings */}
+      {siteSettings?.bannerEnabled && siteSettings.bannerText && (
+        <div className="relative z-50 bg-amber-800 text-amber-50 text-center text-xs font-sans font-medium tracking-wide px-4 py-2">
+          {siteSettings.bannerText}
+        </div>
+      )}
 
       {/* Primary Header/Navbar (Layout 1) */}
       <header id="main-navbar" className="sticky top-0 z-40 bg-[#FAF8F5]/85 backdrop-blur-md border-b border-stone-200/80">
