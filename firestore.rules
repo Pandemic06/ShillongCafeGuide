@@ -1,4 +1,7 @@
 rules_version = '2';
+
+// Shillong Café Map — Firestore security rules
+// Admin model: `admins/{uid}` doc existence == admin (managed in Firebase console).
 service cloud.firestore {
   match /databases/{database}/documents {
 
@@ -7,13 +10,18 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
-    // Primitive Global helper functions
+    // ── Helpers ──────────────────────────────────────────────────────────
     function isSignedIn() {
       return request.auth != null;
     }
 
     function isEmailVerified() {
       return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
     }
 
     function incoming() {
@@ -28,7 +36,6 @@ service cloud.firestore {
       return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
     }
 
-    // Validation definitions representing Schema integrity
     function isValidReview(data) {
       return data.id is string && data.id.size() <= 128
         && data.cafeId is string && data.cafeId.size() <= 128
@@ -45,24 +52,50 @@ service cloud.firestore {
         && data.neighborhood is string && data.neighborhood.size() <= 200;
     }
 
-    // Rules for reviews collection
-    match /reviews/{reviewId} {
-      allow read: if true;
-      allow create: if isValidId(reviewId) 
-                    && isValidReview(incoming());
-      allow update: if isValidId(reviewId) 
-                    && isValidReview(incoming());
-      allow delete: if false;
+    // ── Admin allowlist ─────────────────────────────────────────────────
+    // Read: only admins (so the auth.ts check works for them).
+    // Write: never from client — managed in Firebase console.
+    match /admins/{uid} {
+      allow read: if isAdmin() || (isSignedIn() && request.auth.uid == uid);
+      allow write: if false;
     }
 
-    // Rules for cafes collection
+    // ── Reviews ─────────────────────────────────────────────────────────
+    // Public read. Anyone can create a validated review. Only admins can
+    // update (approve) or delete.
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isValidId(reviewId)
+                    && isValidReview(incoming());
+      allow update, delete: if isAdmin();
+    }
+
+    // ── Cafés ───────────────────────────────────────────────────────────
+    // Public read. Admin-only write (no more anonymous custom-cafe writes).
     match /cafes/{cafeId} {
       allow read: if true;
-      allow create: if isValidId(cafeId) 
-                    && isValidCustomCafe(incoming());
-      allow update: if isValidId(cafeId) 
-                    && isValidCustomCafe(incoming());
-      allow delete: if false;
+      allow create, update: if isAdmin()
+                            && isValidId(cafeId)
+                            && isValidCustomCafe(incoming());
+      allow delete: if isAdmin();
+    }
+
+    // ── Guides ──────────────────────────────────────────────────────────
+    // Public read of published; admin read of all; admin-only write.
+    match /guides/{id} {
+      allow read: if (resource != null && resource.data.status == 'published') || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    // ── Site settings ───────────────────────────────────────────────────
+    match /settings/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Connection-test doc used by src/firebase.ts startup probe.
+    match /test/connection {
+      allow read: if true;
     }
   }
 }
