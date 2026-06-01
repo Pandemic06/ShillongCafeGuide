@@ -1366,8 +1366,9 @@ export default function PlannersGuide() {
 
             {/* Immersive Expanded Map Box takes up 100% space */}
             <div className="flex-1 w-full h-full relative bg-neutral-950">
-              {/* Skip-Category overlay: 3-state per category (Skip-all → Restore-all → Expand for per-stop re-add). */}
-              <div className="absolute top-3 right-3 z-30 max-w-[calc(100%-1.5rem)] md:max-w-xs bg-neutral-900/85 backdrop-blur-md border border-neutral-800/80 p-2 rounded-2xl shadow-xl space-y-1.5">
+              {/* Skip-Category overlay: 3-state per category (Skip-all → Restore-all → Expand for per-stop re-add).
+                  Sits below the floating HUD top-bar (which holds Exit + Open-in-G-Maps) to avoid covering those controls. */}
+              <div className="absolute top-20 right-3 z-30 max-w-[calc(100%-1.5rem)] md:max-w-xs bg-neutral-900/85 backdrop-blur-md border border-neutral-800/80 p-2 rounded-2xl shadow-xl space-y-1.5">
                 <div className="flex items-center justify-between gap-2 px-1">
                   <span className="text-[9px] font-mono uppercase tracking-wider font-bold text-amber-400">Skip Categories</span>
                   <button
