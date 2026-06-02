@@ -122,11 +122,42 @@ export default function AdminApp() {
     );
   }
 
+  // ── Pending counts (badge in sidebar) ──────────────────────────────────
+  // Refresh every 60s so newly-agent-added cafés / reviews surface fast
+  // without manual reload. Failure swallowed — badge just shows 0.
+  const [pendingCafes, setPendingCafes] = useState(0);
+  const [pendingReviews, setPendingReviews] = useState(0);
+  useEffect(() => {
+    if (!isAdmin) return;
+    let cancelled = false;
+    const refresh = async () => {
+      try {
+        const [cafesRes, reviewsMod] = await Promise.all([
+          fetch("/api/cafes").then((r) => r.ok ? r.json() : []),
+          import("../../services/admin-db"),
+        ]);
+        if (cancelled) return;
+        const cafes = Array.isArray(cafesRes) ? cafesRes : [];
+        setPendingCafes(
+          cafes.filter((c: any) => c?.status === "pending" || c?.publish_eligibility_status === "pending").length
+        );
+        const reviews = await reviewsMod.listReviews().catch(() => []);
+        if (cancelled) return;
+        setPendingReviews(reviews.filter((r: any) => !r.approved).length);
+      } catch {
+        // ignore — badge is best-effort
+      }
+    };
+    refresh();
+    const iv = window.setInterval(refresh, 60_000);
+    return () => { cancelled = true; window.clearInterval(iv); };
+  }, [isAdmin]);
+
   // ── Admin shell ────────────────────────────────────────────────────────
-  const navItems: { id: Section; label: string; icon: React.ComponentType<any> }[] = [
-    { id: "cafes", label: "Cafés", icon: Coffee },
+  const navItems: { id: Section; label: string; icon: React.ComponentType<any>; badge?: number }[] = [
+    { id: "cafes", label: "Cafés", icon: Coffee, badge: pendingCafes },
     { id: "guides", label: "Guides", icon: BookOpen },
-    { id: "reviews", label: "Reviews", icon: MessageSquare },
+    { id: "reviews", label: "Reviews", icon: MessageSquare, badge: pendingReviews },
     { id: "settings", label: "Settings", icon: Settings },
   ];
 
@@ -170,7 +201,15 @@ export default function AdminApp() {
                 }`}
               >
                 <Icon className="w-4 h-4" />
-                {item.label}
+                <span className="flex-1 text-left">{item.label}</span>
+                {item.badge != null && item.badge > 0 && (
+                  <span
+                    className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full bg-rose-600 text-white text-[10px] font-bold tabular-nums"
+                    title={`${item.badge} pending`}
+                  >
+                    {item.badge}
+                  </span>
+                )}
               </button>
             );
           })}
