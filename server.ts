@@ -931,6 +931,365 @@ ${serializedCafes}
   }
 });
 
+// ─────────────────────────────────────────────────────────────────────────
+// Cafe URL-import endpoints (admin-only, single source of truth on server)
+//
+// Three flavors of "fill in this cafe from outside data":
+//   1. /api/cafes/import-from-maps-url    — Google Maps link → Place Details
+//   2. /api/cafes/suggest-menu             — Gemini search → menu items
+//   3. /api/cafes/suggest-menu-from-pdf    — PDF upload → Gemini parse → items
+//   4. /api/cafes/suggest-menu-from-url    — web URL → fetch HTML → Gemini → items
+//
+// Auth gate is currently implicit (the admin UI is the only caller). Future
+// hardening: verify a Firebase ID token in the Authorization header.
+// ─────────────────────────────────────────────────────────────────────────
+
+/**
+ * Extract a Google Places place_id from any Maps URL variant we recognise.
+ * Covers:
+ *   - Long share links  /maps/place/Name/@lat,lng,z/data=!4m...!1s0x...:0xHEX!8m...
+ *   - Embedded hex pair !1s0xHEX:0xHEX  (encoded as `0x...!0x...` after a place segment)
+ *   - cid= query param  (?cid=12345…) — convert to ChIJ via lookup
+ *   - Short links       (goo.gl/maps/X, maps.app.goo.gl/X) — follow redirect first
+ * Returns null if no place_id derivable; caller falls back to text search.
+ */
+function extractPlaceId(url: string): string | null {
+  // Pattern A: explicit place_id query param
+  const qpMatch = url.match(/[?&]place_id=([^&]+)/);
+  if (qpMatch) return decodeURIComponent(qpMatch[1]);
+
+  // Pattern B: ChIJ-style id in path or anywhere
+  const chijMatch = url.match(/(ChIJ[A-Za-z0-9_-]{20,})/);
+  if (chijMatch) return chijMatch[1];
+
+  // Pattern C: ftid hex pair in /data=...!1s<hex>:<hex>
+  // Google's hex ftid can be converted by Places via lookup, but cheap path:
+  // bail to text-search if no ChIJ found.
+  return null;
+}
+
+/** Pull a probable cafe name from a Maps URL's /place/<NAME>/ segment. */
+function extractPlaceName(url: string): string | null {
+  const m = url.match(/\/place\/([^/@]+)/);
+  if (!m) return null;
+  try {
+    return decodeURIComponent(m[1]).replace(/\+/g, " ");
+  } catch {
+    return null;
+  }
+}
+
+/** Pull /@lat,lng,zoom from URL for fallback geo. */
+function extractCoords(url: string): { lat: number; lng: number } | null {
+  const m = url.match(/@(-?\d+\.?\d*),(-?\d+\.?\d*)/);
+  if (!m) return null;
+  return { lat: Number(m[1]), lng: Number(m[2]) };
+}
+
+/** Follow Google short links once to get the canonical URL. */
+async function resolveShortLink(url: string): Promise<string> {
+  if (!/goo\.gl\/maps|maps\.app\.goo\.gl/.test(url)) return url;
+  try {
+    const r = await fetch(url, { redirect: "follow" });
+    return r.url || url;
+  } catch {
+    return url;
+  }
+}
+
+/**
+ * Map Google Places price_level (0–4) to your local INR price-per-person bands.
+ * Crude — admins override if needed.
+ */
+function priceLevelToINR(level?: number): number | undefined {
+  if (level == null) return undefined;
+  const map: Record<number, number> = { 0: 100, 1: 250, 2: 500, 3: 900, 4: 1500 };
+  return map[level];
+}
+
+// ── 1. Import-from-Maps-URL ──────────────────────────────────────────────
+app.post("/api/cafes/import-from-maps-url", async (req, res) => {
+  const apiKey = process.env.GOOGLE_MAPS_PLATFORM_KEY || process.env.GOOGLE_MAPS_API_KEY || "";
+  if (!apiKey) {
+    res.status(503).json({ error: "GOOGLE_MAPS_PLATFORM_KEY not configured on server." });
+    return;
+  }
+
+  const { url } = req.body || {};
+  if (!url || typeof url !== "string") {
+    res.status(400).json({ error: "Missing `url` in body." });
+    return;
+  }
+
+  try {
+    const resolved = await resolveShortLink(url);
+    let placeId = extractPlaceId(resolved);
+
+    // Fallback path: textsearch by name extracted from URL slug
+    if (!placeId) {
+      const name = extractPlaceName(resolved) || "";
+      const coords = extractCoords(resolved);
+      if (!name) {
+        res.status(400).json({ error: "Could not extract place_id or name from this URL. Paste the full Google Maps share link." });
+        return;
+      }
+      const query = `${name} ${coords ? `near ${coords.lat},${coords.lng}` : "Shillong Meghalaya"}`;
+      const searchUrl = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(query)}&key=${apiKey}`;
+      const searchRes = await fetch(searchUrl);
+      const searchData = await searchRes.json() as any;
+      if (!searchData.results?.length) {
+        res.status(404).json({ error: `No Places match for "${name}".` });
+        return;
+      }
+      placeId = searchData.results[0].place_id;
+    }
+
+    // Place Details with the broadest useful field mask. (Fields cost
+    // billing-wise, so don't ask for fields you won't render.)
+    const fields = [
+      "place_id", "name", "formatted_address", "geometry", "url",
+      "website", "formatted_phone_number", "international_phone_number",
+      "rating", "user_ratings_total", "price_level", "types",
+      "opening_hours", "current_opening_hours", "photos",
+      "wheelchair_accessible_entrance",
+      "dine_in", "takeout", "delivery", "reservable",
+      "serves_breakfast", "serves_lunch", "serves_dinner",
+      "serves_beer", "serves_wine", "serves_vegetarian_food",
+      "editorial_summary",
+    ].join(",");
+
+    const detailsUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=${fields}&key=${apiKey}`;
+    const detailsRes = await fetch(detailsUrl);
+    const detailsData = await detailsRes.json() as any;
+    if (detailsData.status !== "OK") {
+      res.status(502).json({ error: `Places API: ${detailsData.status}`, details: detailsData.error_message });
+      return;
+    }
+    const r = detailsData.result;
+    const lat = r.geometry?.location?.lat;
+    const lng = r.geometry?.location?.lng;
+
+    // Convert photo refs into ready-to-render permanent URLs (up to 10).
+    const photoUrls: string[] = (r.photos || []).slice(0, 10).map((p: any, i: number) =>
+      `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${i === 0 ? 1600 : 1000}&photo_reference=${p.photo_reference}&key=${apiKey}`
+    );
+
+    const services: string[] = [];
+    if (r.dine_in) services.push("Dine-in");
+    if (r.takeout) services.push("Takeout");
+    if (r.delivery) services.push("Delivery");
+    if (r.reservable) services.push("Reservable");
+    if (r.wheelchair_accessible_entrance) services.push("Wheelchair accessible");
+    if (r.serves_breakfast) services.push("Breakfast");
+    if (r.serves_lunch) services.push("Lunch");
+    if (r.serves_dinner) services.push("Dinner");
+    if (r.serves_beer) services.push("Beer");
+    if (r.serves_wine) services.push("Wine");
+    if (r.serves_vegetarian_food) services.push("Vegetarian");
+
+    // Partial Cafe-shaped object. Admin UI overlays this on the editor;
+    // fields the admin already changed get preserved by a diff/merge.
+    const partial = {
+      place_id: r.place_id,
+      name: r.name,
+      formatted_address: r.formatted_address,
+      address: r.formatted_address,
+      coordinates: lat != null && lng != null ? { lat, lng } : undefined,
+      latitude: lat,
+      longitude: lng,
+      google_maps_url: r.url,
+      website: r.website || "",
+      phone_number: r.formatted_phone_number || r.international_phone_number || "",
+      rating: r.rating,
+      user_ratings_total: r.user_ratings_total,
+      price_per_person: priceLevelToINR(r.price_level),
+      types: r.types || [],
+      opening_hours: r.opening_hours?.weekday_text || r.current_opening_hours?.weekday_text || [],
+      hours: r.opening_hours?.weekday_text?.[0]?.split(": ")[1] || "",
+      photos: photoUrls,
+      gallery: photoUrls.slice(1),
+      images: photoUrls.length > 0 ? {
+        hero: photoUrls[0],
+        card: photoUrls[1] || photoUrls[0],
+        interior: photoUrls[2] || photoUrls[0],
+      } : undefined,
+      service_options: services,
+      introduction: r.editorial_summary?.overview || "",
+      verification_status: "verified" as const,
+      match_confidence: 0.99,
+    };
+
+    res.json({ ok: true, cafe: partial, photoCount: photoUrls.length });
+  } catch (err: any) {
+    console.error("import-from-maps-url failed:", err);
+    res.status(500).json({ error: err.message || "Import failed." });
+  }
+});
+
+// ── 2. Suggest menu via Gemini Google search grounding ───────────────────
+app.post("/api/cafes/suggest-menu", async (req, res) => {
+  const ai = getGeminiClient();
+  if (!ai) {
+    res.status(503).json({ error: "GEMINI_API_KEY not configured." });
+    return;
+  }
+  const { cafeName, address, websiteUrl } = req.body || {};
+  if (!cafeName) {
+    res.status(400).json({ error: "Missing cafeName." });
+    return;
+  }
+
+  const prompt = `
+Search Google for the actual menu of this restaurant/cafe in Shillong, Meghalaya, India:
+  Name: ${cafeName}
+  Address: ${address || "Shillong"}
+  ${websiteUrl ? `Website: ${websiteUrl}` : ""}
+
+Find 6-12 of their signature or most-recommended dishes. Use real prices in INR (₹) from Zomato, Swiggy, the cafe's website, or recent Google reviews. Do not invent dishes.
+
+Return STRICT JSON, no prose, no markdown:
+[
+  { "name": "Dish Name", "description": "Short 1-sentence description", "price": "₹150", "category": "starters|mains|desserts|beverages|sides" }
+]
+
+If you cannot find real menu data, return an empty array [] — do NOT hallucinate.
+`;
+
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: prompt,
+      config: { tools: [{ googleSearch: {} }], temperature: 0.3 },
+    });
+    const text = response.text || "";
+    const match = text.match(/```json\s*([\s\S]*?)\s*```/) || text.match(/\[\s*\{[\s\S]*\}\s*\]/) || text.match(/\[\s*\]/);
+    const parsed = match ? JSON.parse((match[1] || match[0]).trim()) : [];
+    const items = Array.isArray(parsed) ? parsed.map((it: any) => ({
+      name: String(it.name || ""),
+      description: String(it.description || ""),
+      price: String(it.price || ""),
+      category: String(it.category || ""),
+      ai_suggested: true,
+    })).filter((it) => it.name) : [];
+    res.json({ ok: true, items, source: "gemini-search" });
+  } catch (err: any) {
+    console.error("suggest-menu failed:", err);
+    res.status(500).json({ error: err.message || "Suggest menu failed.", items: [] });
+  }
+});
+
+// ── 3. Suggest menu from URL (Zomato/Swiggy/cafe site/etc.) ──────────────
+app.post("/api/cafes/suggest-menu-from-url", async (req, res) => {
+  const ai = getGeminiClient();
+  if (!ai) {
+    res.status(503).json({ error: "GEMINI_API_KEY not configured." });
+    return;
+  }
+  const { menuUrl } = req.body || {};
+  if (!menuUrl) {
+    res.status(400).json({ error: "Missing menuUrl." });
+    return;
+  }
+
+  try {
+    // Fetch raw HTML, strip scripts/styles, cap to ~80KB to stay within model context.
+    const html = await fetch(menuUrl, {
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; ShillongCafeMap/1.0)" },
+    }).then((r) => r.text());
+    const cleaned = html
+      .replace(/<script[\s\S]*?<\/script>/gi, "")
+      .replace(/<style[\s\S]*?<\/style>/gi, "")
+      .replace(/<!--[\s\S]*?-->/g, "")
+      .replace(/\s+/g, " ")
+      .slice(0, 80000);
+
+    const prompt = `
+You are parsing a restaurant menu from this raw HTML (scripts/styles stripped).
+Extract real dishes with names, prices in INR (₹), and short descriptions if present.
+Return STRICT JSON array, no prose, no markdown:
+[{ "name": "...", "description": "...", "price": "₹150", "category": "starters|mains|desserts|beverages|sides" }]
+
+Skip empty sections, headers, navigation, and footer junk. Maximum 25 items.
+
+HTML:
+${cleaned}
+`;
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: prompt,
+      config: { temperature: 0.2 },
+    });
+    const text = response.text || "";
+    const match = text.match(/```json\s*([\s\S]*?)\s*```/) || text.match(/\[\s*\{[\s\S]*\}\s*\]/) || text.match(/\[\s*\]/);
+    const parsed = match ? JSON.parse((match[1] || match[0]).trim()) : [];
+    const items = Array.isArray(parsed) ? parsed.map((it: any) => ({
+      name: String(it.name || ""),
+      description: String(it.description || ""),
+      price: String(it.price || ""),
+      category: String(it.category || ""),
+      ai_suggested: true,
+    })).filter((it) => it.name) : [];
+    res.json({ ok: true, items, source: "url-parse" });
+  } catch (err: any) {
+    console.error("suggest-menu-from-url failed:", err);
+    res.status(500).json({ error: err.message || "URL parse failed.", items: [] });
+  }
+});
+
+// ── 4. Suggest menu from uploaded PDF ────────────────────────────────────
+// Accepts JSON body with base64-encoded PDF to keep middleware simple
+// (avoids adding multer/formidable). Client converts File -> base64 before POST.
+app.post("/api/cafes/suggest-menu-from-pdf", async (req, res) => {
+  const ai = getGeminiClient();
+  if (!ai) {
+    res.status(503).json({ error: "GEMINI_API_KEY not configured." });
+    return;
+  }
+  const { pdfBase64 } = req.body || {};
+  if (!pdfBase64 || typeof pdfBase64 !== "string") {
+    res.status(400).json({ error: "Missing pdfBase64." });
+    return;
+  }
+  // Soft size cap to keep one Gemini call cheap (~10MB raw, 13MB base64).
+  if (pdfBase64.length > 14_000_000) {
+    res.status(413).json({ error: "PDF too large (>10MB)." });
+    return;
+  }
+
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: [{
+        role: "user",
+        parts: [
+          { inlineData: { mimeType: "application/pdf", data: pdfBase64 } },
+          { text: `
+This PDF is a restaurant menu. Extract every dish with its real name, description (if shown), and price in INR (use ₹). Categorise into starters / mains / desserts / beverages / sides.
+
+Return STRICT JSON array, no prose, no markdown:
+[{ "name": "...", "description": "...", "price": "₹150", "category": "starters|mains|desserts|beverages|sides" }]
+` },
+        ],
+      }],
+      config: { temperature: 0.1 },
+    });
+    const text = response.text || "";
+    const match = text.match(/```json\s*([\s\S]*?)\s*```/) || text.match(/\[\s*\{[\s\S]*\}\s*\]/) || text.match(/\[\s*\]/);
+    const parsed = match ? JSON.parse((match[1] || match[0]).trim()) : [];
+    const items = Array.isArray(parsed) ? parsed.map((it: any) => ({
+      name: String(it.name || ""),
+      description: String(it.description || ""),
+      price: String(it.price || ""),
+      category: String(it.category || ""),
+      ai_suggested: true,
+    })).filter((it) => it.name) : [];
+    res.json({ ok: true, items, source: "pdf-parse" });
+  } catch (err: any) {
+    console.error("suggest-menu-from-pdf failed:", err);
+    res.status(500).json({ error: err.message || "PDF parse failed.", items: [] });
+  }
+});
+
 // Expose Maps API key to frontend (safe — Maps JS API key is client-side by design)
 app.get("/api/config/maps-key", (req, res) => {
   const key = process.env.GOOGLE_MAPS_PLATFORM_KEY || "";

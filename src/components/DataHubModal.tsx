@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { 
-  X, Sparkles, UploadCloud, Database, CheckCircle2, Loader2, MapPin, 
-  Coffee, Tag, Music, Clock, Map, Info, Download, Search, 
+import {
+  X, Sparkles, UploadCloud, Database, CheckCircle2, Loader2, MapPin,
+  Coffee, Tag, Music, Clock, Map, Info, Download, Search,
   FileSpreadsheet, Plus, AlertTriangle, Check, BookOpen, Trash2, Edit3, HelpCircle, BarChart3, Filter, ClipboardList
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Cafe } from "../types";
+import MapsUrlImport from "./admin/MapsUrlImport";
 
 interface DataHubModalProps {
   isOpen: boolean;
@@ -734,8 +735,30 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
           
           {/* TAB 1: MANUAL UPLOAD / TAXONOMY EDITOR GATE */}
           {activeTab === "upload" && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-              
+            <div className="space-y-6">
+              {/* Maps URL importer — translates incoming partial Cafe into
+                  this modal's flat `formData` shape, only filling blanks. */}
+              <MapsUrlImport
+                onImport={(p) => {
+                  const upd: any = {};
+                  if (!formData.name && p.name) upd.name = p.name;
+                  if (!formData.address && (p as any).formatted_address) upd.address = (p as any).formatted_address;
+                  if (!formData.address && p.address) upd.address = p.address;
+                  if (!formData.hours && p.hours) upd.hours = p.hours;
+                  if (!formData.phone && (p as any).phone_number) upd.phone = (p as any).phone_number;
+                  if ((p as any).coordinates) {
+                    if (!formData.lat || formData.lat === "25.568") upd.lat = String((p as any).coordinates.lat);
+                    if (!formData.lng || formData.lng === "91.885") upd.lng = String((p as any).coordinates.lng);
+                  }
+                  if (!formData.rating || formData.rating === "4.5") {
+                    if ((p as any).rating != null) upd.rating = String((p as any).rating);
+                  }
+                  if (!formData.introduction && p.introduction) upd.introduction = p.introduction;
+                  setFormData({ ...formData, ...upd });
+                }}
+              />
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Left Column: List select for audit + form core */}
               <div className="lg:col-span-4 space-y-4">
                 <div className="p-4 bg-amber-50/25 border border-amber-700/15 rounded-xl space-y-3.5">
@@ -1362,6 +1385,7 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
                   </div>
                 </div>
               </form>
+              </div>
             </div>
           )}
 

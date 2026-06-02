@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { Cafe } from "../../types";
 import { getCustomCafesFromFirestore } from "../../services/db";
 import { saveCafe, deleteCafe } from "../../services/admin-db";
-import { Plus, Trash2, Save, X, ArrowLeft } from "lucide-react";
+import { Plus, Trash2, Save, X, ArrowLeft, Sparkles } from "lucide-react";
 import ImageUrlField from "./ImageUrlField";
+import MapsUrlImport from "./MapsUrlImport";
+import MenuSuggester from "./MenuSuggester";
+import GalleryEditor from "./GalleryEditor";
 
 /**
  * Café CRUD.
@@ -182,6 +185,41 @@ function CafeEditor({
   const addMustTry = () => set("mustTry", [...(cafe.mustTry || []), { name: "", description: "", price: "" }]);
   const removeMustTry = (i: number) => set("mustTry", (cafe.mustTry || []).filter((_, idx) => idx !== i));
 
+  /**
+   * Merge a partial Cafe (from Maps URL import) over the current editor
+   * state. Strategy: only overwrite a field if its current value is empty
+   * (string blank, undefined, or empty array). Prevents the import from
+   * clobbering admin-authored copy.
+   */
+  const applyImport = (partial: Partial<Cafe>) => {
+    const merged: Cafe = { ...cafe };
+    const isEmpty = (v: any): boolean =>
+      v == null || v === "" || (Array.isArray(v) && v.length === 0);
+
+    (Object.keys(partial) as (keyof Cafe)[]).forEach((k) => {
+      const incoming = partial[k];
+      if (incoming == null) return;
+      if (k === "images") {
+        // Nested merge: fill in only empty image slots.
+        merged.images = {
+          hero: cafe.images?.hero || (incoming as any).hero || "",
+          card: cafe.images?.card || (incoming as any).card || "",
+          interior: cafe.images?.interior || (incoming as any).interior,
+          details: cafe.images?.details,
+        };
+        return;
+      }
+      if (isEmpty((cafe as any)[k])) {
+        (merged as any)[k] = incoming;
+      }
+    });
+    onChange(merged);
+  };
+
+  const addSuggestedMenuItems = (items: any[]) => {
+    set("mustTry", [...(cafe.mustTry || []), ...items]);
+  };
+
   return (
     <div className="max-w-4xl">
       <div className="flex items-center justify-between mb-6">
@@ -200,6 +238,8 @@ function CafeEditor({
       </div>
 
       <div className="bg-white border border-stone-200 rounded-xl p-6 space-y-5">
+        <MapsUrlImport onImport={applyImport} />
+
         <Section title="Identity">
           <Field label="ID (slug)"><input value={cafe.id} onChange={(e) => set("id", e.target.value)} className={inp} /></Field>
           <Field label="Name"><input value={cafe.name} onChange={(e) => set("name", e.target.value)} className={inp} /></Field>
@@ -229,19 +269,48 @@ function CafeEditor({
           </Field>
         </Section>
 
-        <Section title="Images">
-          <Field label="Hero">
+        <Section title="Card images (hero / card / interior)">
+          <Field label="Hero (top of detail modal)">
             <ImageUrlField value={cafe.images?.hero || ""} onChange={(v) => set("images", { ...cafe.images, hero: v })} folder="cafes" />
           </Field>
-          <Field label="Card">
+          <Field label="Card (in the listing grid)">
             <ImageUrlField value={cafe.images?.card || ""} onChange={(v) => set("images", { ...cafe.images, card: v })} folder="cafes" />
           </Field>
           <Field label="Interior">
             <ImageUrlField value={cafe.images?.interior || ""} onChange={(v) => set("images", { ...cafe.images, interior: v })} folder="cafes" />
           </Field>
+          <Field label="Details (Details & Vibe section)">
+            <ImageUrlField value={cafe.images?.details || ""} onChange={(v) => set("images", { ...cafe.images, details: v })} folder="cafes" />
+          </Field>
         </Section>
 
-        <Section title="Must-try menu items">
+        <Section title="Google Shared Photos">
+          <GalleryEditor
+            value={cafe.photos || []}
+            onChange={(v) => set("photos", v)}
+            folder="cafes"
+            title="Photos"
+            helpText="Shown in the 'Google Shared Photos' section. Order matters — top of list shows first. Auto-populated by the Maps URL import; add or rearrange here."
+          />
+        </Section>
+
+        <Section title="Extra gallery">
+          <GalleryEditor
+            value={cafe.gallery || []}
+            onChange={(v) => set("gallery", v)}
+            folder="cafes"
+            title="Gallery"
+            helpText="Optional secondary gallery, used by some detail sections."
+          />
+        </Section>
+
+        <Section title="Menu & Bites (Must-try)">
+          <MenuSuggester
+            cafeName={cafe.name}
+            address={cafe.formatted_address || cafe.address}
+            websiteUrl={cafe.website}
+            onAdd={addSuggestedMenuItems}
+          />
           {(cafe.mustTry || []).map((item, i) => (
             <div key={i} className="border border-stone-200 rounded-lg p-3 mb-2 bg-stone-50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -249,7 +318,16 @@ function CafeEditor({
                 <input placeholder="Price (₹180)" value={item.price || ""} onChange={(e) => updateMustTry(i, "price", e.target.value)} className={inp} />
               </div>
               <textarea placeholder="Description" value={item.description} onChange={(e) => updateMustTry(i, "description", e.target.value)} rows={2} className={`${inp} mt-2`} />
-              <button onClick={() => removeMustTry(i)} className="text-rose-600 hover:text-rose-800 text-xs mt-2 inline-flex items-center gap-1">
+              <div className="mt-2">
+                <span className="text-[10px] uppercase tracking-wider font-bold text-stone-500 mb-1 block">Dish image</span>
+                <ImageUrlField value={item.image || ""} onChange={(v) => updateMustTry(i, "image", v)} folder="cafes" />
+              </div>
+              {(item as any).ai_suggested && (
+                <span className="inline-flex items-center gap-1 text-[10px] mt-2 px-1.5 py-0.5 rounded bg-purple-50 text-purple-800 border border-purple-200">
+                  <Sparkles className="w-2.5 h-2.5" /> AI suggested
+                </span>
+              )}
+              <button onClick={() => removeMustTry(i)} className="text-rose-600 hover:text-rose-800 text-xs mt-2 inline-flex items-center gap-1 ml-2">
                 <Trash2 className="w-3 h-3" /> Remove
               </button>
             </div>
