@@ -121,6 +121,16 @@ const userReviews = [
   }
 ];
 
+// Lightweight liveness probe. Used by the external keep-awake pinger
+// (.github/workflows/keep-render-awake.yml) to prevent Render free tier
+// from sleeping after 15min of inactivity. Returns immediately, no DB
+// touch, no allocations. Cache-control prevents any CDN from short-
+// circuiting the request before it reaches the dyno (defeating the point).
+app.get("/api/health", (req, res) => {
+  res.set("Cache-Control", "no-store, max-age=0");
+  res.json({ ok: true, ts: Date.now() });
+});
+
 // API endpoint for reviews
 app.get("/api/reviews", (req, res) => {
   res.json(userReviews);
