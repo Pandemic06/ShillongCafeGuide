@@ -17,7 +17,26 @@ dotenv.config();
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
-app.use(express.json());
+app.use(express.json({ limit: "20mb" })); // raised cap for PDF base64 in suggest-menu-from-pdf
+
+/**
+ * Agent-key guard for write/agent endpoints. Headless agents (see the
+ * shillong-cafe-agents repo) send `X-Agent-Key` matching env AGENT_API_KEY.
+ * If AGENT_API_KEY is unset on the server, the guard is a no-op (back-
+ * compat). If set, every mutating /api/cafes* call must present the header.
+ *
+ * Browser CMS calls do NOT send this header — those are still allowed
+ * because the admin UI uses Firebase Auth + Firestore rules for security.
+ * Only the Express-level /api/cafes* endpoints (which write to cafes_db.json
+ * or trigger Places billing) are gated here.
+ */
+function requireAgentKey(req: any, res: any, next: any) {
+  const expected = process.env.AGENT_API_KEY || "";
+  if (!expected) return next(); // disabled if not configured
+  const presented = req.header("X-Agent-Key") || "";
+  if (presented && presented === expected) return next();
+  res.status(401).json({ error: "Missing or invalid X-Agent-Key header." });
+}
 
 // Persistent dynamic Cafe Database
 const DB_PATH = path.join(process.cwd(), "src", "cafes_db.json");
@@ -136,7 +155,7 @@ app.get("/api/cafes", (req, res) => {
   res.json(enriched);
 });
 
-app.post("/api/cafes", (req, res) => {
+app.post("/api/cafes", requireAgentKey, (req, res) => {
   const newCafe = req.body;
   if (!newCafe.name || !newCafe.neighborhood || !newCafe.theme) {
     res.status(400).json({ error: "Missing required core fields: name, neighborhood, theme" });
@@ -208,7 +227,7 @@ app.put("/api/cafes/:id", (req, res) => {
 });
 
 // GET and POST endpoint for manual or automatic coordinates validation and Place enrichment
-app.post("/api/cafes/enrich", async (req, res) => {
+app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
   const apiKey = process.env.GOOGLE_MAPS_PLATFORM_KEY || process.env.GOOGLE_MAPS_API_KEY || "";
   const hasKey = !!apiKey && apiKey !== "YOUR_API_KEY" && apiKey.trim().length > 10;
 
@@ -567,7 +586,7 @@ app.post("/api/cafes/enrich", async (req, res) => {
   });
 });
 
-app.post("/api/cafes/sweep", async (req, res) => {
+app.post("/api/cafes/sweep", requireAgentKey, async (req, res) => {
   const ai = getGeminiClient();
   if (!ai) {
     res.status(200).json({
