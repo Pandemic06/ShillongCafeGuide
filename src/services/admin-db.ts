@@ -10,7 +10,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { db, handleFirestoreError, OperationType } from "../firebase";
-import { Cafe, GuideArticle, Review } from "../types";
+import { Cafe, GuideArticle, Review, NeighborhoodInfo, FoodDish } from "../types";
 
 /**
  * Admin-side CRUD. Reads/writes assume the caller is an authenticated admin;
@@ -27,6 +27,8 @@ const CAFES = "cafes";
 const REVIEWS = "reviews";
 const GUIDES = "guides";
 const SETTINGS = "settings";
+const NEIGHBORHOODS = "neighborhoods";
+const DISHES = "dishes";
 
 // ── Cafés ─────────────────────────────────────────────────────────────────
 
@@ -137,6 +139,12 @@ export interface SiteSettings {
   bannerText?: string;
   bannerEnabled?: boolean;
   homepageHeroCafeId?: string;
+  // Homepage / brand media overrides. When set, the public site uses these
+  // instead of the bundled static asset imports.
+  heroVideoUrl?: string;
+  heroImageUrl?: string;
+  logoUrl?: string;
+  aboutImages?: string[];
 }
 
 export async function getSiteSettings(): Promise<SiteSettings> {
@@ -158,5 +166,50 @@ export async function saveSiteSettings(s: SiteSettings): Promise<void> {
     );
   } catch (err) {
     handleFirestoreError(err, OperationType.UPDATE, `${SETTINGS}/site`);
+  }
+}
+
+// ── Neighborhoods (District Walks) ────────────────────────────────────────
+// Firestore docs override the bundled static NEIGHBORHOODS by id. Only the
+// fields an admin edits need to be present; the public merge keeps static
+// values for anything absent.
+
+export async function listNeighborhoodOverrides(): Promise<NeighborhoodInfo[]> {
+  try {
+    const snap = await getDocs(collection(db, NEIGHBORHOODS));
+    return snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) } as NeighborhoodInfo));
+  } catch (err) {
+    return handleFirestoreError(err, OperationType.LIST, NEIGHBORHOODS);
+  }
+}
+
+export async function saveNeighborhood(n: NeighborhoodInfo): Promise<NeighborhoodInfo> {
+  if (!n.id) throw new Error("Neighborhood id required");
+  try {
+    await setDoc(doc(db, NEIGHBORHOODS, n.id), { ...n, updatedAt: serverTimestamp() }, { merge: true });
+    return n;
+  } catch (err) {
+    return handleFirestoreError(err, OperationType.UPDATE, `${NEIGHBORHOODS}/${n.id}`);
+  }
+}
+
+// ── Khasi Cuisine dishes ──────────────────────────────────────────────────
+
+export async function listDishOverrides(): Promise<FoodDish[]> {
+  try {
+    const snap = await getDocs(collection(db, DISHES));
+    return snap.docs.map((d) => ({ id: d.id, ...(d.data() as any) } as FoodDish));
+  } catch (err) {
+    return handleFirestoreError(err, OperationType.LIST, DISHES);
+  }
+}
+
+export async function saveDish(dish: FoodDish): Promise<FoodDish> {
+  if (!dish.id) throw new Error("Dish id required");
+  try {
+    await setDoc(doc(db, DISHES, dish.id), { ...dish, updatedAt: serverTimestamp() }, { merge: true });
+    return dish;
+  } catch (err) {
+    return handleFirestoreError(err, OperationType.UPDATE, `${DISHES}/${dish.id}`);
   }
 }

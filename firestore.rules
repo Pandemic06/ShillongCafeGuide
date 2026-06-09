@@ -93,6 +93,18 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    // ── Neighborhood (District Walks) overrides ─────────────────────────
+    match /neighborhoods/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ── Khasi Cuisine dish overrides ────────────────────────────────────
+    match /dishes/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
     // Connection-test doc used by src/firebase.ts startup probe.
     match /test/connection {
       allow read: if true;

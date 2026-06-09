@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NEIGHBORHOODS, CAFES } from "../data";
 import { NeighborhoodInfo, Cafe } from "../types";
 import { MapPin, Calendar, Clock, Compass, Navigation, ArrowRight, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { getMergedNeighborhoods } from "../services/public-content";
 
 interface NeighborhoodGuideProps {
   onSelectCafe: (id: string) => void;
@@ -13,7 +14,14 @@ interface NeighborhoodGuideProps {
 export default function NeighborhoodGuide({ onSelectCafe, initialNeighborhoodId, cafes }: NeighborhoodGuideProps) {
   const [selectedId, setSelectedId] = useState<string>(initialNeighborhoodId || NEIGHBORHOODS[0].id);
 
-  const activeNeighborhood = NEIGHBORHOODS.find((n) => n.id === selectedId) || NEIGHBORHOODS[0];
+  // Merge admin Firestore overrides over the static list. Falls back to
+  // static on any failure, so the section never breaks.
+  const [neighborhoods, setNeighborhoods] = useState<NeighborhoodInfo[]>(NEIGHBORHOODS);
+  useEffect(() => {
+    getMergedNeighborhoods(NEIGHBORHOODS).then(setNeighborhoods).catch(() => setNeighborhoods(NEIGHBORHOODS));
+  }, []);
+
+  const activeNeighborhood = neighborhoods.find((n) => n.id === selectedId) || neighborhoods[0];
 
   const cafesList = cafes || CAFES;
 
@@ -39,7 +47,7 @@ export default function NeighborhoodGuide({ onSelectCafe, initialNeighborhoodId,
 
       {/* Navigation Tabs */}
       <div className="flex justify-center border-b border-stone-200/80 max-w-lg mx-auto p-1.5 bg-stone-100/50 rounded-xl">
-        {NEIGHBORHOODS.map((n) => {
+        {neighborhoods.map((n) => {
           const isActive = selectedId === n.id;
           return (
             <button

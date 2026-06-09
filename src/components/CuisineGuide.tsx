@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DISHES } from "../data";
 import { FoodDish } from "../types";
 import { Coffee, Flame, UtensilsCrossed, Leaf, CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
+import { getMergedDishes } from "../services/public-content";
 
 export default function CuisineGuide() {
   const [selectedDishId, setSelectedDishId] = useState<string>(DISHES[0].id);
 
-  const activeDish = DISHES.find((d) => d.id === selectedDishId) || DISHES[0];
+  // Merge admin Firestore overrides over static dishes. Static fallback.
+  const [dishes, setDishes] = useState<FoodDish[]>(DISHES);
+  useEffect(() => {
+    getMergedDishes(DISHES).then(setDishes).catch(() => setDishes(DISHES));
+  }, []);
+
+  const activeDish = dishes.find((d) => d.id === selectedDishId) || dishes[0];
 
   return (
     <div id="cuisine-guide-container" className="space-y-12 max-w-5xl mx-auto">
@@ -26,7 +33,7 @@ export default function CuisineGuide() {
 
       {/* Culinary Navigation Circular Plates */}
       <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-2xl mx-auto">
-        {DISHES.map((d) => {
+        {dishes.map((d) => {
           const isSelected = selectedDishId === d.id;
           return (
             <button

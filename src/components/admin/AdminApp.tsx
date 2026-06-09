@@ -5,19 +5,21 @@ import CafeManager from "./CafeManager";
 import GuideManager from "./GuideManager";
 import ReviewModeration from "./ReviewModeration";
 import SiteSettings from "./SiteSettings";
-import { Coffee, BookOpen, MessageSquare, Settings, LogOut, ExternalLink, Shield } from "lucide-react";
+import NeighborhoodManager from "./NeighborhoodManager";
+import CuisineManager from "./CuisineManager";
+import { Coffee, BookOpen, MessageSquare, Settings, LogOut, ExternalLink, Shield, MapPin, Utensils } from "lucide-react";
 
 /**
  * Admin shell + auth gate. Lives at /admin and /admin/* (any subpath).
  * Routing is path-segment based: /admin/{section}.
- * Sections: cafes (default) | guides | reviews | settings
+ * Sections: cafes (default) | guides | reviews | walks | cuisine | settings
  */
 
-type Section = "cafes" | "guides" | "reviews" | "settings";
+type Section = "cafes" | "guides" | "reviews" | "walks" | "cuisine" | "settings";
 
 function readSection(): Section {
   const seg = window.location.pathname.split("/")[2] || "cafes";
-  const valid: Section[] = ["cafes", "guides", "reviews", "settings"];
+  const valid: Section[] = ["cafes", "guides", "reviews", "walks", "cuisine", "settings"];
   return (valid.includes(seg as Section) ? seg : "cafes") as Section;
 }
 
@@ -160,6 +162,8 @@ export default function AdminApp() {
     { id: "cafes", label: "Cafés", icon: Coffee, badge: pendingCafes },
     { id: "guides", label: "Guides", icon: BookOpen },
     { id: "reviews", label: "Reviews", icon: MessageSquare, badge: pendingReviews },
+    { id: "walks", label: "District Walks", icon: MapPin },
+    { id: "cuisine", label: "Khasi Cuisine", icon: Utensils },
     { id: "settings", label: "Settings", icon: Settings },
   ];
 
@@ -220,6 +224,8 @@ export default function AdminApp() {
           {section === "cafes" && <CafeManager />}
           {section === "guides" && <GuideManager />}
           {section === "reviews" && <ReviewModeration />}
+          {section === "walks" && <NeighborhoodManager />}
+          {section === "cuisine" && <CuisineManager />}
           {section === "settings" && <SiteSettings />}
         </main>
       </div>

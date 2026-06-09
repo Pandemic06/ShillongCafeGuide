@@ -67,6 +67,10 @@ export default function App() {
     getPublicSiteSettings().then(setSiteSettings).catch(() => setSiteSettings(null));
   }, []);
 
+  // Admin-overridable brand media. Fall back to the bundled static imports.
+  const heroVideoSrc = siteSettings?.heroVideoUrl || heroVideo;
+  const logoSrc = siteSettings?.logoUrl || logoImage;
+
   // Global scroll-to-top on tab change (fixes Editorial-opens-at-bottom + menu nav scroll bugs)
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
@@ -243,7 +247,7 @@ export default function App() {
           >
             <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center border border-stone-200 shadow-xs bg-white transition-transform group-hover:scale-105 duration-300">
               <img
-                src={logoImage}
+                src={logoSrc}
                 alt="Shillong Cafe Map Logo"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -573,7 +577,7 @@ export default function App() {
                 {/* Right Visual Video — width +50% (md:w-80 → md:w-[480px]); object-contain prevents final-frame text crop */}
                 <div className="w-full md:w-[480px] shrink-0 h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl relative border border-stone-800 bg-stone-900">
                   <video
-                    src={heroVideo}
+                    src={heroVideoSrc}
                     autoPlay
                     loop
                     muted
@@ -1014,7 +1018,7 @@ export default function App() {
           <div className="flex items-center gap-2.5 font-sans text-sm font-semibold tracking-wide text-stone-200">
             <div className="w-6 h-6 rounded-md overflow-hidden bg-white border border-stone-800">
               <img
-                src={logoImage}
+                src={logoSrc}
                 alt="Shillong Cafe Map Logo"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

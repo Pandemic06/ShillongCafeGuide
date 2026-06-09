@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Cafe } from "../../types";
 import { getSiteSettings, saveSiteSettings, SiteSettings as Settings } from "../../services/admin-db";
 import { Save, X, GripVertical } from "lucide-react";
+import ImageUrlField from "./ImageUrlField";
 
 export default function SiteSettings() {
   const [settings, setSettings] = useState<Settings>({ featuredCafes: [], bannerEnabled: false });
@@ -86,6 +87,32 @@ export default function SiteSettings() {
             placeholder="e.g. New: Cherrapunji monsoon route now live"
             className="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/30"
           />
+        </section>
+
+        {/* Homepage / brand media */}
+        <section>
+          <h3 className="text-xs uppercase tracking-wider font-bold text-stone-500 mb-3">Homepage & brand media</h3>
+          <p className="text-xs text-stone-500 mb-3">Override the hero video, hero fallback image, and logo. Leave blank to keep the bundled defaults.</p>
+          <div className="space-y-3">
+            <label className="block">
+              <span className="block text-xs font-medium text-stone-700 mb-1">Hero video URL (mp4)</span>
+              <input
+                type="url"
+                value={settings.heroVideoUrl || ""}
+                onChange={(e) => setSettings({ ...settings, heroVideoUrl: e.target.value || undefined })}
+                placeholder="https://…/hero.mp4"
+                className="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm"
+              />
+            </label>
+            <label className="block">
+              <span className="block text-xs font-medium text-stone-700 mb-1">Hero fallback image</span>
+              <ImageUrlField value={settings.heroImageUrl || ""} onChange={(v) => setSettings({ ...settings, heroImageUrl: v || undefined })} folder="misc" />
+            </label>
+            <label className="block">
+              <span className="block text-xs font-medium text-stone-700 mb-1">Logo</span>
+              <ImageUrlField value={settings.logoUrl || ""} onChange={(v) => setSettings({ ...settings, logoUrl: v || undefined })} folder="misc" />
+            </label>
+          </div>
         </section>
 
         {/* Hero cafe */}
