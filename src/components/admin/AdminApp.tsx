@@ -51,6 +51,39 @@ export default function AdminApp() {
     return () => window.removeEventListener("popstate", onPop);
   }, []);
 
+  // ── Pending counts (badge in sidebar) ──────────────────────────────────
+  // Refresh every 60s so newly-agent-added cafés / reviews surface fast
+  // without manual reload. Failure swallowed — badge just shows 0.
+  // MUST live above the early returns below: hooks have to run on every
+  // render path or React throws #310 (hook count changes when user signs in).
+  const [pendingCafes, setPendingCafes] = useState(0);
+  const [pendingReviews, setPendingReviews] = useState(0);
+  useEffect(() => {
+    if (!isAdmin) return;
+    let cancelled = false;
+    const refresh = async () => {
+      try {
+        const [cafesRes, reviewsMod] = await Promise.all([
+          fetch("/api/cafes").then((r) => r.ok ? r.json() : []),
+          import("../../services/admin-db"),
+        ]);
+        if (cancelled) return;
+        const cafes = Array.isArray(cafesRes) ? cafesRes : [];
+        setPendingCafes(
+          cafes.filter((c: any) => c?.status === "pending" || c?.publish_eligibility_status === "pending").length
+        );
+        const reviews = await reviewsMod.listReviews().catch(() => []);
+        if (cancelled) return;
+        setPendingReviews(reviews.filter((r: any) => !r.approved).length);
+      } catch {
+        // ignore — badge is best-effort
+      }
+    };
+    refresh();
+    const iv = window.setInterval(refresh, 60_000);
+    return () => { cancelled = true; window.clearInterval(iv); };
+  }, [isAdmin]);
+
   const navigate = (s: Section) => {
     setSection(s);
     pushSection(s);
@@ -121,37 +154,6 @@ export default function AdminApp() {
       </div>
     );
   }
-
-  // ── Pending counts (badge in sidebar) ──────────────────────────────────
-  // Refresh every 60s so newly-agent-added cafés / reviews surface fast
-  // without manual reload. Failure swallowed — badge just shows 0.
-  const [pendingCafes, setPendingCafes] = useState(0);
-  const [pendingReviews, setPendingReviews] = useState(0);
-  useEffect(() => {
-    if (!isAdmin) return;
-    let cancelled = false;
-    const refresh = async () => {
-      try {
-        const [cafesRes, reviewsMod] = await Promise.all([
-          fetch("/api/cafes").then((r) => r.ok ? r.json() : []),
-          import("../../services/admin-db"),
-        ]);
-        if (cancelled) return;
-        const cafes = Array.isArray(cafesRes) ? cafesRes : [];
-        setPendingCafes(
-          cafes.filter((c: any) => c?.status === "pending" || c?.publish_eligibility_status === "pending").length
-        );
-        const reviews = await reviewsMod.listReviews().catch(() => []);
-        if (cancelled) return;
-        setPendingReviews(reviews.filter((r: any) => !r.approved).length);
-      } catch {
-        // ignore — badge is best-effort
-      }
-    };
-    refresh();
-    const iv = window.setInterval(refresh, 60_000);
-    return () => { cancelled = true; window.clearInterval(iv); };
-  }, [isAdmin]);
 
   // ── Admin shell ────────────────────────────────────────────────────────
   const navItems: { id: Section; label: string; icon: React.ComponentType<any>; badge?: number }[] = [
