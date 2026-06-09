@@ -33,14 +33,17 @@ function initFirestore(): any {
   }
 
   try {
-    // Require lazily so the server still boots if firebase-admin isn't installed.
-    const admin = require("firebase-admin");
+    // Use the modular subpath API (firebase-admin v12+). The legacy
+    // namespace require ("firebase-admin").apps is undefined under v14's
+    // CJS interop, which crashed init with "Cannot read properties of
+    // undefined (reading 'length')". getApps()/initializeApp/cert/
+    // getFirestore from the subpaths are stable across the interop.
+    const { initializeApp, getApps, cert } = require("firebase-admin/app");
+    const { getFirestore } = require("firebase-admin/firestore");
     const json = JSON.parse(Buffer.from(b64, "base64").toString("utf-8"));
-    if (!admin.apps.length) {
-      admin.initializeApp({ credential: admin.credential.cert(json) });
-    }
+    const app = getApps().length ? getApps()[0] : initializeApp({ credential: cert(json) });
     // New project uses the default database; admin SDK targets it by default.
-    _db = admin.firestore();
+    _db = getFirestore(app);
     _available = true;
     console.log("[firestore] server-side Firestore writer initialised.");
     return _db;
