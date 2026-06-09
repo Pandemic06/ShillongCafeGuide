@@ -6,34 +6,49 @@
     <meta name="theme-color" content="#543d1b" />
 
     <!-- Primary SEO -->
-    <title>Shillong Café Map — Cafés, Khasi Food, Districts & Routes in Meghalaya</title>
-    <meta name="description" content="An editorial guide to the best cafés in Shillong, Khasi food like Jadoh and Dohneiiong, walkable districts (Laitumkhrah, Police Bazaar, Golf Links) and curated road-trip routes across Meghalaya including Cherrapunji and Dawki." />
-    <meta name="keywords" content="Shillong cafes, best cafes in Shillong, Laitumkhrah cafes, Police Bazaar Shillong, Khasi food, Jadoh, Dohneiiong, Cherrapunji route, Meghalaya travel guide, Shillong food guide" />
+    <title>Shillong Café Map — Best Cafés, Khasi Food, Districts &amp; Routes in Meghalaya</title>
+    <meta name="description" content="Discover the best cafés in Shillong, authentic Khasi food like Jadoh and Dohneiiong, walkable districts (Laitumkhrah, Police Bazaar, Golf Links), and curated road-trip routes across Meghalaya including Cherrapunji and Dawki." />
+    <meta name="keywords" content="best cafes in Shillong, Shillong cafes, Laitumkhrah cafes, Police Bazaar restaurants, Khasi food Shillong, Jadoh restaurant Shillong, Dohneiiong, Cherrapunji route, Meghalaya travel guide, Shillong food guide, cafes near Wards Lake, hidden cafes Shillong, aesthetic cafes Shillong" />
     <meta name="author" content="Shillong Café Map" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://shillongcafemap.in/" />
+
+    <!-- Geo targeting -->
+    <meta name="geo.region" content="IN-ML" />
+    <meta name="geo.placename" content="Shillong, Meghalaya, India" />
+    <meta name="geo.position" content="25.5788;91.8933" />
+    <meta name="ICBM" content="25.5788, 91.8933" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Shillong Café Map" />
-    <meta property="og:title" content="Shillong Café Map — Cafés, Khasi Food & Routes" />
-    <meta property="og:description" content="An editorial guide to the best cafés in Shillong, Khasi food, walkable districts, and curated road-trip routes across Meghalaya." />
+    <meta property="og:title" content="Shillong Café Map — Best Cafés, Khasi Food &amp; Routes in Meghalaya" />
+    <meta property="og:description" content="Discover the best cafés in Shillong, authentic Khasi food, walkable districts, and curated road-trip routes across Meghalaya." />
     <meta property="og:url" content="https://shillongcafemap.in/" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:image" content="https://shillongcafemap.in/cafe-photos/rynsan-cafe/hero-0.jpg" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="800" />
-    <meta property="og:image:alt" content="A Shillong café table set with Khasi dishes" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Rynsan Café in Shillong — traditional Khasi food and live Ka Duitara music" />
+    <meta property="og:image:type" content="image/jpeg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Shillong Café Map — Cafés, Khasi Food & Routes" />
+    <meta name="twitter:site" content="@ShillongCafeMap" />
+    <meta name="twitter:title" content="Shillong Café Map — Best Cafés, Khasi Food &amp; Routes" />
     <meta name="twitter:description" content="The editorial guide to cafés, Khasi food, districts, and road-trip routes across Shillong and Meghalaya." />
     <meta name="twitter:image" content="https://shillongcafemap.in/cafe-photos/rynsan-cafe/hero-0.jpg" />
+    <meta name="twitter:image:alt" content="Rynsan Café in Shillong — traditional Khasi food and live Ka Duitara music" />
 
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 
-    <!-- JSON-LD: WebSite + Organization (site-wide) -->
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- JSON-LD: WebSite + Organization + LocalBusiness (site-wide) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -43,12 +58,16 @@
           "@id": "https://shillongcafemap.in/#website",
           "url": "https://shillongcafemap.in/",
           "name": "Shillong Café Map",
-          "description": "Editorial guide to Shillong cafés, Khasi food, walkable districts and Meghalaya road-trip routes.",
+          "alternateName": "ShillongCafeMap",
+          "description": "Editorial guide to the best cafés in Shillong, authentic Khasi food, walkable districts and Meghalaya road-trip routes.",
           "inLanguage": "en-IN",
           "publisher": { "@id": "https://shillongcafemap.in/#organization" },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://shillongcafemap.in/?search={search_term_string}",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://shillongcafemap.in/?search={search_term_string}"
+            },
             "query-input": "required name=search_term_string"
           }
         },
@@ -57,12 +76,69 @@
           "@id": "https://shillongcafemap.in/#organization",
           "name": "Shillong Café Map",
           "url": "https://shillongcafemap.in/",
-          "logo": "https://shillongcafemap.in/logo.png",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://shillongcafemap.in/logo.png",
+            "width": 512,
+            "height": 512
+          },
           "areaServed": {
             "@type": "AdministrativeArea",
             "name": "Shillong, Meghalaya, India"
           },
-          "sameAs": []
+          "knowsAbout": [
+            "Cafes in Shillong",
+            "Khasi cuisine",
+            "Meghalaya travel",
+            "Jadoh",
+            "Dohneiiong",
+            "Laitumkhrah",
+            "Police Bazaar"
+          ],
+          "sameAs": [
+            "https://www.instagram.com/shillongcafemap"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://shillongcafemap.in/#webpage",
+          "url": "https://shillongcafemap.in/",
+          "name": "Shillong Café Map — Best Cafés, Khasi Food, Districts & Routes in Meghalaya",
+          "isPartOf": { "@id": "https://shillongcafemap.in/#website" },
+          "about": { "@id": "https://shillongcafemap.in/#organization" },
+          "description": "Discover the best cafés in Shillong, authentic Khasi food, walkable neighborhoods, and curated road-trip routes across Meghalaya.",
+          "inLanguage": "en-IN",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://shillongcafemap.in/"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://shillongcafemap.in/#cafe-directory",
+          "name": "Best Cafés in Shillong",
+          "description": "A curated directory of the best cafés, restaurants and food experiences in Shillong and Meghalaya.",
+          "url": "https://shillongcafemap.in/?tab=cafes",
+          "numberOfItems": 49,
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Rynsan Café", "url": "https://shillongcafemap.in/cafe/rynsan-cafe" },
+            { "@type": "ListItem", "position": 2, "name": "Ahavah Fine Dining", "url": "https://shillongcafemap.in/cafe/ahavah-cafe" },
+            { "@type": "ListItem", "position": 3, "name": "Dylans Café", "url": "https://shillongcafemap.in/cafe/dylans-cafe" },
+            { "@type": "ListItem", "position": 4, "name": "Trattoria Shillong", "url": "https://shillongcafemap.in/cafe/trattoria-shillong-pb" },
+            { "@type": "ListItem", "position": 5, "name": "Café Shillong", "url": "https://shillongcafemap.in/cafe/cafe-shillong" },
+            { "@type": "ListItem", "position": 6, "name": "Cherry Bean Café", "url": "https://shillongcafemap.in/cafe/cherry-bean-cafe" },
+            { "@type": "ListItem", "position": 7, "name": "Pine Loft", "url": "https://shillongcafemap.in/cafe/pine-loft" },
+            { "@type": "ListItem", "position": 8, "name": "Munchies Shillong", "url": "https://shillongcafemap.in/cafe/munchies-shillong" },
+            { "@type": "ListItem", "position": 9, "name": "Woodstock Café", "url": "https://shillongcafemap.in/cafe/woodstock-cafe" },
+            { "@type": "ListItem", "position": 10, "name": "The Living Roof", "url": "https://shillongcafemap.in/cafe/the-living-roof" }
+          ]
         }
       ]
     }
@@ -74,14 +150,31 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-QZB4VR1S34');
+      gtag('config', 'G-QZB4VR1S34', {
+        'send_page_view': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
     </script>
   </head>
   <body>
     <div id="root"></div>
     <noscript>
-      <h1>Shillong Café Map</h1>
-      <p>An editorial guide to cafés in Shillong, Khasi food, neighborhood walks (Laitumkhrah, Police Bazaar, Golf Links), and curated road-trip routes across Meghalaya including Cherrapunji, Dawki and beyond. Please enable JavaScript to explore the interactive map.</p>
+      <h1>Shillong Café Map — Best Cafés &amp; Food Guide, Meghalaya</h1>
+      <p>An editorial guide to the best cafés in Shillong, authentic Khasi cuisine (Jadoh, Dohneiiong, Tungrymbai), neighborhood walks through Laitumkhrah, Police Bazaar, and Golf Links, and curated road-trip routes across Meghalaya including Cherrapunji, Dawki, and Laitlum Canyons. Please enable JavaScript to explore the interactive map.</p>
+      <nav aria-label="Café directory">
+        <ul>
+          <li><a href="/cafe/rynsan-cafe">Rynsan Café — Traditional Khasi Food &amp; Live Ka Duitara Music</a></li>
+          <li><a href="/cafe/ahavah-cafe">Ahavah Fine Dining — Laitumkhrah, Shillong</a></li>
+          <li><a href="/cafe/dylans-cafe">Dylans Café — Bob Dylan Tribute &amp; Live Acoustic Music</a></li>
+          <li><a href="/cafe/trattoria-shillong-pb">Trattoria Shillong — Police Bazaar</a></li>
+          <li><a href="/cafe/cafe-shillong">Café Shillong — Heritage Café</a></li>
+          <li><a href="/cafe/cherry-bean-cafe">Cherry Bean Café</a></li>
+          <li><a href="/cafe/munchies-shillong">Munchies Shillong</a></li>
+          <li><a href="/cafe/woodstock-cafe">Woodstock Café</a></li>
+          <li><a href="/cafe/the-living-roof">The Living Roof</a></li>
+          <li><a href="/cafe/smoky-falls-tribe-coffee">Smoky Falls Tribe Coffee</a></li>
+        </ul>
+      </nav>
     </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>

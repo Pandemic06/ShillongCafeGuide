@@ -1,6 +1,24 @@
+# robots.txt — shillongcafemap.in
+# Updated: 2026-06-09
+
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /admin/
+Disallow: /*.json$
+Disallow: /api/
+
+# Allow Googlebot full access including images for rich results
+User-agent: Googlebot
+Allow: /
+Allow: /cafe-photos/
+
+# Allow Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay hint for less important bots
+User-agent: YandexBot
+Crawl-delay: 10
 
 Sitemap: https://shillongcafemap.in/sitemap.xml
