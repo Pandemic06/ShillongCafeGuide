@@ -82,7 +82,14 @@ export default function App() {
         try {
           const firestoreCafes = await getCustomCafesFromFirestore();
           if (Array.isArray(firestoreCafes) && firestoreCafes.length > 0) {
-            const merged = [...firestoreCafes];
+            // Hide agent-added entries awaiting review. Anything explicitly
+            // marked pending stays out of the public site until an admin
+            // flips it to approved. Café docs with no status are legacy/
+            // approved by default, so they remain visible.
+            const publicFs = firestoreCafes.filter(
+              (c: any) => c?.status !== "pending" && c?.publish_eligibility_status !== "pending"
+            );
+            const merged = [...publicFs];
             apiCafes.forEach((c) => {
               if (!merged.some((m) => m.id === c.id)) merged.push(c);
             });

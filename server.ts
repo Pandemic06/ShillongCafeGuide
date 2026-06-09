@@ -5,6 +5,7 @@ import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
 import fs from "fs";
 import { enrichCafeWithLabet } from "./src/labet_data";
+import { upsertCafeToFirestore } from "./server-firestore";
 
 // Empty fallback — DB always exists in this deployment. If it ever doesn't,
 // the API returns an empty list and the client shows zero cafes (better
@@ -212,7 +213,17 @@ app.post("/api/cafes", requireAgentKey, (req, res) => {
 
   cafesDb.unshift(validatedCafe);
   saveCafes();
-  res.status(201).json(validatedCafe);
+
+  // Mirror into Firestore so the entry survives Render's ephemeral disk.
+  // status="pending" → public site hides it, admin badge counts it, you
+  // approve later. Fire-and-forget: never block the HTTP response.
+  const status = (newCafe.status === "approved" || newCafe.publish_eligibility_status === "approved")
+    ? "approved" : "pending";
+  upsertCafeToFirestore({ ...validatedCafe, ...newCafe, id: cafeId }, status)
+    .then((ok) => { if (ok) console.log(`[firestore] persisted ${cafeId} (${status})`); })
+    .catch(() => { /* already logged inside */ });
+
+  res.status(201).json({ ...validatedCafe, status });
 });
 
 // Update a cafe by ID (Taxonomy and Content Governance editor)
