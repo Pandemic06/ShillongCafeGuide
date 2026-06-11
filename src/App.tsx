@@ -490,47 +490,47 @@ export default function App() {
                     const alayaCafe = cafes.find(c => c.id === "alaya-cafe");
                     if (!alayaCafe) return null;
                     return (
-                      <div className="bg-[#fdfbf7] border-2 border-amber-300 rounded-[32px] p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group space-y-6 text-left">
+                      <div className="bg-[#fdfbf7] border-2 border-amber-300 rounded-[32px] p-8 sm:p-12 shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group space-y-8 text-left">
                         {/* Spotlight Ribbon */}
                         <div className="flex items-center justify-between">
-                          <span className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-800 to-amber-900 text-amber-100 border border-amber-600 px-4 py-1.5 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase shadow-md">
-                            <Crown className="w-3.5 h-3.5 text-amber-300 shrink-0 animate-pulse" />
+                          <span className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-800 to-amber-900 text-amber-100 border border-amber-600 px-5 py-2 rounded-full text-[11px] font-mono font-bold tracking-widest uppercase shadow-md">
+                            <Crown className="w-4 h-4 text-amber-300 shrink-0 animate-pulse" />
                             Editor's Featured Choice
                           </span>
-                          <span className="flex items-center gap-1 text-xs font-mono font-bold text-amber-900 bg-amber-100/80 border border-amber-250 px-3 py-1 rounded-full">
-                            <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-600 shrink-0" />
+                          <span className="flex items-center gap-1.5 text-sm font-mono font-bold text-amber-900 bg-amber-100/80 border border-amber-250 px-4 py-1.5 rounded-full">
+                            <Star className="w-4 h-4 fill-amber-500 text-amber-600 shrink-0" />
                             {Number(alayaCafe.rating || 4.8).toFixed(1)}
                           </span>
                         </div>
 
                         {/* Cafe Info Header */}
-                        <div>
-                          <h3 className="text-3xl font-display font-black text-stone-900 leading-tight">
+                        <div className="space-y-2">
+                          <h3 className="text-4xl sm:text-5xl font-display font-black text-stone-900 leading-tight tracking-tight">
                             {alayaCafe.name}
                           </h3>
-                          <p className="text-xs text-stone-500 font-mono tracking-wide mt-1.5 flex items-center gap-1">
-                            <MapPin className="w-4 h-4 text-amber-800 shrink-0" />
+                          <p className="text-sm text-stone-500 font-mono tracking-wide flex items-center gap-1.5">
+                            <MapPin className="w-4.5 h-4.5 text-amber-800 shrink-0" />
                             {alayaCafe.neighborhood}, Shillong
                           </p>
                         </div>
 
                         {/* Multi-image gallery with lots of pics */}
-                        <div className="space-y-2">
+                        <div className="space-y-3">
                           {/* Main large image */}
-                          <div className="h-64 sm:h-80 rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md relative">
+                          <div className="h-80 sm:h-[420px] rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md relative">
                             <img
                               src={alayaCafe.images?.hero || "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800"}
                               alt={alayaCafe.name}
                               className="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
                               referrerPolicy="no-referrer"
                             />
-                            <span className="absolute bottom-3 left-3 bg-amber-950/90 text-amber-200 text-[10px] font-mono tracking-widest px-3 py-1 rounded-full uppercase font-bold border border-amber-800/40">
+                            <span className="absolute bottom-4 left-4 bg-amber-955/90 text-amber-200 text-xs font-mono tracking-widest px-4 py-1.5 rounded-full uppercase font-bold border border-amber-800/40">
                               Featured Hearth Space
                             </span>
                           </div>
 
                           {/* Secondary images grid (6 columns) */}
-                          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5">
                             {[
                               { img: alayaCafe.images?.interior, label: "Interior" },
                               { img: alayaCafe.images?.detail1, label: "Brewing" },
@@ -539,14 +539,14 @@ export default function App() {
                               { img: alayaCafe.images?.detail4, label: "Roast" },
                               { img: alayaCafe.images?.detail5, label: "Seating" }
                             ].map((item, idx) => (
-                              <div key={idx} className="h-16 sm:h-20 rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-2xs relative group/thumb cursor-pointer">
+                              <div key={idx} className="h-20 sm:h-26 rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-2xs relative group/thumb cursor-pointer">
                                 <img
                                   src={item.img || "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"}
                                   alt={item.label}
                                   className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
                                   referrerPolicy="no-referrer"
                                 />
-                                <span className="absolute bottom-1 left-1 bg-black/70 text-white text-[7px] font-mono tracking-widest px-1 py-0.5 rounded uppercase">
+                                <span className="absolute bottom-1 left-1 bg-black/70 text-white text-[7.5px] font-mono tracking-widest px-1.5 py-0.5 rounded uppercase">
                                   {item.label}
                                 </span>
                               </div>
@@ -555,28 +555,29 @@ export default function App() {
                         </div>
 
                         {/* Extra detail card showing Labet rating details */}
-                        <div className="bg-gradient-to-r from-amber-900 to-amber-950 text-amber-100 p-5 rounded-2xl border border-amber-950 shadow-sm">
-                          <span className="text-[10px] font-mono text-amber-400 tracking-widest font-extrabold uppercase">
-                            💬 Labet's Local Guide Notes
+                        <div className="bg-gradient-to-r from-amber-900 to-amber-950 text-amber-100 p-6 sm:p-8 rounded-2xl border border-amber-950 shadow-sm space-y-2">
+                          <span className="text-[11px] font-mono text-amber-400 tracking-widest font-extrabold uppercase flex items-center gap-1.5">
+                            <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
+                            Labet's Local Guide Notes
                           </span>
-                          <p className="text-sm font-sans italic text-amber-250 mt-1 leading-relaxed">
+                          <p className="text-sm sm:text-base font-sans italic text-amber-200 leading-relaxed">
                             "The light here in Laitumkhrah is beautiful, especially after a downpour. Order the Flat White, sit by the corner window, and don't spend all your time clicking photos. Some places are meant to be felt, not just framed."
                           </p>
                         </div>
 
                         {/* Tagline & details */}
-                        <div className="space-y-3">
-                          <p className="text-sm text-stone-700 font-sans leading-relaxed">
+                        <div className="space-y-4">
+                          <p className="text-base sm:text-lg text-stone-750 font-sans leading-relaxed">
                             {alayaCafe.tagline || alayaCafe.theme}
                           </p>
 
                           {/* Vibe Tags list */}
                           {alayaCafe.vibeTags && alayaCafe.vibeTags.length > 0 && (
-                            <div className="flex flex-wrap gap-2 pt-1">
+                            <div className="flex flex-wrap gap-2.5 pt-1.5">
                               {alayaCafe.vibeTags.map((tag) => (
                                 <span
                                   key={tag}
-                                  className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-950 bg-amber-100/50 border border-amber-200 px-3 py-1 rounded-xl"
+                                  className="text-[11px] font-mono font-bold uppercase tracking-wider text-amber-950 bg-amber-100/50 border border-amber-200 px-4 py-1.5 rounded-xl"
                                 >
                                   #{tag.toLowerCase().replace(/\s+/g, "-")}
                                 </span>
@@ -586,20 +587,20 @@ export default function App() {
                         </div>
 
                         {/* Actions */}
-                        <div className="flex items-center gap-3 pt-4 border-t border-stone-200/80">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-6 border-t border-stone-200/80">
                           <button
                             onClick={() => handleSelectCafe(alayaCafe.id)}
-                            className="flex-1 flex items-center justify-center gap-2 bg-amber-800 hover:bg-amber-900 text-white text-xs font-sans font-bold uppercase tracking-wider px-4 py-3.5 rounded-2xl transition-all cursor-pointer shadow-md active:scale-98"
+                            className="flex-1 flex items-center justify-center gap-2 bg-amber-800 hover:bg-amber-900 text-white text-xs sm:text-sm font-sans font-bold uppercase tracking-wider px-6 py-4 rounded-2xl transition-all cursor-pointer shadow-md active:scale-98"
                           >
                             <span>Explore Hearth Profile</span>
-                            <ArrowRight className="w-4 h-4" />
+                            <ArrowRight className="w-4.5 h-4.5" />
                           </button>
                           <button
                             onClick={() => {
                               handleSelectCafe(alayaCafe.id);
                               setActiveTab("explore");
                             }}
-                            className="px-5 py-3.5 rounded-2xl border border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-800 hover:bg-amber-50 text-xs font-sans font-bold uppercase tracking-wider transition-all cursor-pointer"
+                            className="px-6 py-4 rounded-2xl border border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-800 hover:bg-amber-50 text-xs sm:text-sm font-sans font-bold uppercase tracking-wider transition-all cursor-pointer"
                           >
                             Show on Map
                           </button>
@@ -622,49 +623,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* NEIGHBORHOOD WALKS TEASER */}
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <p className="text-[10px] font-mono tracking-widest text-[#8b5c1a] uppercase font-bold">SCENIC ITINERARIES</p>
-                    <h2 className="text-xl font-display font-bold text-stone-900">Walk Through districts</h2>
-                  </div>
-                  <button onClick={() => setActiveTab("walks")} className="text-xs font-mono text-[#8b5c1a] font-bold hover:underline flex items-center gap-1">All Walks Timeline <ArrowRight className="w-3 h-3" /></button>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {NEIGHBORHOODS.map(nbhd => (
-                    <button key={nbhd.id} onClick={() => selectDistrict(nbhd.id)} className="bg-white border border-stone-200 hover:border-amber-300 rounded-2xl p-4 text-left transition-all group hover:shadow-md">
-                      <p className="text-lg font-display font-bold text-stone-900 group-hover:text-amber-800 transition-colors">{nbhd.name}</p>
-                      <p className="text-xs text-stone-500 mt-1 font-sans">{nbhd.tagline}</p>
-                    </button>
-                  ))}
-                </div>
-              </div>
 
-              {/* EDITORIAL SECTION */}
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <p className="text-[10px] font-mono tracking-widest text-[#8b5c1a] uppercase font-bold">INDEPENDENT PUBLISHING</p>
-                    <h2 className="text-xl font-display font-bold text-stone-900">Latest Editorial Periodic Issues</h2>
-                  </div>
-                  <button onClick={() => setActiveTab("guides")} className="text-xs font-mono text-[#8b5c1a] font-bold hover:underline flex items-center gap-1">Enter Library Room <ArrowRight className="w-3 h-3" /></button>
-                </div>
-                <div className="space-y-3">
-                  {ARTICLES.slice(0, 2).map(article => (
-                    <div key={article.id} className="flex items-start gap-4 p-4 bg-white border border-stone-200 rounded-2xl hover:border-amber-200 hover:shadow-sm transition-all group">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1.5">
-                          <span className="text-[9px] font-mono tracking-widest font-bold uppercase text-amber-700 bg-amber-50 px-2 py-0.5 rounded">{article.category}</span>
-                          <span className="text-[9px] font-mono text-stone-400">{article.readTime} read</span>
-                        </div>
-                        <h3 className="text-sm font-display font-bold text-stone-900 leading-snug group-hover:text-amber-800 transition-colors">{article.title}</h3>
-                        <p className="text-xs text-stone-500 mt-1 leading-relaxed font-sans">{article.excerpt}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
               {/* TRENDING INDICATORS */}
               <section id="trending-indicators" className="bg-stone-900 text-[#FAF8F5] rounded-[32px] p-8 border border-stone-850 relative overflow-hidden shadow-lg select-none">
