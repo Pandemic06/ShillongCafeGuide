@@ -338,7 +338,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
             className="text-[11px] font-mono border border-stone-200 rounded-lg px-2 py-1 bg-white text-stone-700"
           >
             {DIFFICULTY_OPTIONS.map((d) => (
-              <option key={d.value} value={d.value}>{d.label}</option>
+              <option key={d} value={d}>{d === "all" ? "All Difficulties" : d}</option>
             ))}
           </select>
           <select
@@ -347,7 +347,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
             className="text-[11px] font-mono border border-stone-200 rounded-lg px-2 py-1 bg-white text-stone-700"
           >
             {TYPE_OPTIONS.map((t) => (
-              <option key={t.value} value={t.value}>{t.label}</option>
+              <option key={t} value={t}>{t === "all" ? "All Trail Types" : t.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</option>
             ))}
           </select>
         </div>
@@ -395,7 +395,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
               </div>
               <div className="flex gap-1.5 mt-2 flex-wrap">
                 <span className="text-[8px] px-1.5 py-0.5 bg-stone-100 text-stone-500 rounded font-mono uppercase">{trail.difficulty}</span>
-                <span className="text-[8px] px-1.5 py-0.5 bg-amber-50 text-amber-700 rounded font-mono uppercase">{trail.estimatedTime}</span>
+                <span className="text-[8px] px-1.5 py-0.5 bg-amber-50 text-amber-700 rounded font-mono uppercase">{trail.durationFallback}</span>
                 <span className="text-[8px] px-1.5 py-0.5 bg-stone-100 text-stone-500 rounded font-mono uppercase">{trail.stops.length} stops</span>
               </div>
             </button>

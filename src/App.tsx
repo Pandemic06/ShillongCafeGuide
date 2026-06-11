@@ -22,7 +22,7 @@ import DataHubModal from "./components/DataHubModal";
 import InteractiveMap from "./components/InteractiveMap";
 import PlannersGuide from "./components/PlannersGuide";
 import TrendingDestination from "./components/TrendingDestination";
-import SEO from "./components/SEO";
+import SEO, { PAGE_SEO } from "./components/SEO";
 import { APIProvider, Map, AdvancedMarker, Pin } from "@vis.gl/react-google-maps";
 import { GOOGLE_MAPS_API_KEY, hasValidKey } from "./config";
 
@@ -259,9 +259,23 @@ export default function App() {
     };
   };
 
+  const seoKey = activeTab === "planners" ? "discover" : activeTab;
+  const seoMeta = PAGE_SEO[seoKey as keyof typeof PAGE_SEO] || PAGE_SEO.explore;
+  const seoTitle = selectedCafe 
+    ? `${selectedCafe.name} — Cozy Café in ${selectedCafe.neighborhood}` 
+    : seoMeta.title;
+  const seoDescription = selectedCafe 
+    ? (selectedCafe.introduction || selectedCafe.tagline) 
+    : seoMeta.description;
+
   return (
     <>
-      <SEO schema={getDynamicSchema()} />
+      <SEO
+        title={seoTitle}
+        description={seoDescription}
+        canonical={selectedCafe ? `https://shillongcafemap.in/?tab=cafes&cafe=${selectedCafe.id}` : seoMeta.canonical}
+        schema={getDynamicSchema()}
+      />
       <div className="md:h-screen md:max-h-screen md:overflow-hidden bg-[#FAF8F5] text-stone-850 font-sans flex flex-col md:flex-row relative antialiased selection:bg-amber-800/20 selection:text-amber-900 w-full">
 
         {/* Subtle dot grid texture overlay */}
@@ -720,7 +734,7 @@ export default function App() {
             isOpen={dataHubOpen}
             onClose={() => setDataHubOpen(false)}
             currentCafes={cafes}
-            onRefresh={loadCafes}
+            onCafesUpdated={setCafes}
           />
         )}
       </div>

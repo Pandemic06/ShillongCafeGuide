@@ -48,6 +48,7 @@ export interface Cafe {
   vibeTags: string[];
   hasLiveMusic?: boolean;
   coordinates?: { lat: number; lng: number };
+  editorial_featured?: boolean;
   
   // Google Maps Platform Enriched Fields
   place_id?: string;
@@ -135,6 +136,7 @@ export interface NeighborhoodInfo {
   id: string;
   name: string;
   title: string;
+  tagline?: string;
   description: string;
   image: string;
   vitals: {
