@@ -195,7 +195,9 @@ export default function App() {
         if (!isApproved || !isVerifiedFit || (!isCozy && !meetsThreshold)) return false;
       }
     }
-    const combinedTexts = `${cafe.name} ${cafe.theme} ${cafe.neighborhood} ${cafe.vibeTags.join(" ")}`;
+    // Guard against undefined fields from API-sourced cafe objects
+    const vibeTags = Array.isArray(cafe.vibeTags) ? cafe.vibeTags.join(" ") : "";
+    const combinedTexts = `${cafe.name ?? ""} ${cafe.theme ?? ""} ${cafe.neighborhood ?? ""} ${vibeTags}`;
     return isFuzzyMatch(searchQuery, combinedTexts);
   });
 
