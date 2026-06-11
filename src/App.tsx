@@ -209,8 +209,6 @@ export default function App() {
 
   const tabsList = [
     { id: "explore", label: "Discovery" },
-    { id: "cafes", label: "Cozy Cafés" },
-    { id: "cuisine", label: "Khasi Cuisine" },
     { id: "walks", label: "District Walks" },
     { id: "planners", label: "Route Planner" },
     { id: "guides", label: "Editorial" },
@@ -478,6 +476,7 @@ export default function App() {
                     <span className="text-xs font-mono font-bold text-stone-300">22.5°C</span>
                   </div>
                 </div>
+              </div>
                   {/* EDITOR'S CHOICE SECTION (Massive Alaya Spotlight) */}
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -621,7 +620,6 @@ export default function App() {
                   <button onClick={() => setActiveTab("planners")} className="text-xs font-mono font-bold text-amber-400 hover:text-amber-300 border-b border-amber-400/40 hover:border-amber-300 transition-colors">Explore Route Planner</button>
                   <button onClick={() => setActiveTab("walks")} className="text-xs font-mono font-bold text-stone-400 hover:text-stone-200 border-b border-stone-600 hover:border-stone-300 transition-colors">Find District Walks →</button>
                 </div>
-              </div>
               </div>
 
               {/* NEIGHBORHOOD WALKS TEASER */}
