@@ -23,7 +23,9 @@ interface InteractiveMapProps {
   cafes: Cafe[];
   onSelectCafe: (cafe: Cafe) => void;
   activeCafeId?: string;
+  selectedCafeId?: string;
   hideSidebar?: boolean;
+  onNavigateToNeighborhood?: (neighborhoodId: string) => void;
 }
 
 // Custom Google Maps Dark Theme styling
@@ -42,7 +44,8 @@ const darkMapStyle = [
   { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#0c0a09" }] }
 ];
 
-export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hideSidebar = false }: InteractiveMapProps) {
+export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, selectedCafeId, hideSidebar = false, onNavigateToNeighborhood }: InteractiveMapProps) {
+  const resolvedActiveCafeId = activeCafeId ?? selectedCafeId;
   const [activeSubTab, setActiveSubTab] = useState<"cafes" | "trails">("cafes");
   const [mapTheme, setMapTheme] = useState<"light" | "dark">("light");
   const [selectedCafe, setSelectedCafe] = useState<Cafe | null>(null);
@@ -153,14 +156,14 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
   };
 
   useEffect(() => {
-    if (!activeCafeId) return;
-    const matchedCafe = cafesWithCategories.find((c) => c.id === activeCafeId);
+    if (!resolvedActiveCafeId) return;
+    const matchedCafe = cafesWithCategories.find((c) => c.id === resolvedActiveCafeId);
     if (matchedCafe) {
       setActiveSubTab("cafes");
       setSelectedDiscoveredPlace(null);
       setSelectedCafe(matchedCafe);
     }
-  }, [activeCafeId]);
+  }, [resolvedActiveCafeId]);
 
   const handleSelectTrail = (trail: Trail) => {
     setSelectedTrail(trail);
