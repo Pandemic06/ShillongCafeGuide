@@ -11,10 +11,8 @@ import { getCustomCafesFromFirestore } from "./services/db";
 import logoImage from "./assets/images/shillong_cafe_logo_1779948676706.png";
 
 import CafeCard from "./components/CafeCard";
-import EditorsChoiceCard from "./components/EditorsChoiceCard";
 import CafeDetailModal from "./components/CafeDetailModal";
 import NeighborhoodGuide from "./components/NeighborhoodGuide";
-import CuisineGuide from "./components/CuisineGuide";
 import GuidesList from "./components/GuidesList";
 import AboutPanel from "./components/AboutPanel";
 import AIGuideChat from "./components/AIGuideChat";
@@ -26,7 +24,7 @@ import SEO, { PAGE_SEO } from "./components/SEO";
 import { APIProvider, Map, AdvancedMarker, Pin } from "@vis.gl/react-google-maps";
 import { GOOGLE_MAPS_API_KEY, hasValidKey } from "./config";
 
-type TabType = "explore" | "cafes" | "cuisine" | "walks" | "planners" | "guides" | "about" | "trending";
+type TabType = "explore" | "walks" | "planners" | "guides" | "about" | "trending";
 
 export default function App() {
   const [cafes, setCafes] = useState<Cafe[]>(CAFES);
@@ -96,9 +94,13 @@ export default function App() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const tabParam = params.get("tab") as TabType;
-    if (tabParam && ["explore", "cafes", "cuisine", "walks", "planners", "guides", "about", "trending"].includes(tabParam)) {
-      setActiveTabState(tabParam);
+    const tabParam = params.get("tab");
+    if (tabParam) {
+      if (["explore", "walks", "planners", "guides", "about", "trending"].includes(tabParam)) {
+        setActiveTabState(tabParam as TabType);
+      } else if (tabParam === "cafes" || tabParam === "cuisine") {
+        setActiveTabState("explore");
+      }
     }
     const cafeslug = params.get("cafe");
     if (cafeslug && cafes.length > 0) {
@@ -423,13 +425,37 @@ export default function App() {
                         className="w-full h-full"
                         colorScheme="DARK"
                       >
-                        {cafes.slice(0, 5).map((cafe) => (
-                          cafe.coordinates?.lat && cafe.coordinates?.lng ? (
-                            <AdvancedMarker key={cafe.id} position={{ lat: cafe.coordinates.lat, lng: cafe.coordinates.lng }}>
-                              <Pin background={"#8b5c1a"} borderColor={"#3d2817"} glyphColor={"#faf8f5"} scale={0.6} />
+                        {cafes.slice(0, 5).map((cafe) => {
+                          if (!cafe.coordinates?.lat || !cafe.coordinates?.lng) return null;
+                          const isAlaya = cafe.id === "alaya-cafe";
+                          return (
+                            <AdvancedMarker
+                              key={cafe.id}
+                              position={{ lat: cafe.coordinates.lat, lng: cafe.coordinates.lng }}
+                              zIndex={isAlaya ? 100 : 10}
+                            >
+                              {isAlaya ? (
+                                <div className="relative flex flex-col items-center select-none filter drop-shadow-md scale-110">
+                                  {/* Glow halo */}
+                                  <div className="absolute -inset-1.5 rounded-full border border-amber-500 bg-amber-500/20 animate-pulse" />
+                                  <div className="absolute -inset-0.5 rounded-full border border-amber-400 bg-amber-400/10 animate-ping pointer-events-none" />
+                                  
+                                  {/* Custom gold gradient circle */}
+                                  <div className="w-7 h-7 rounded-full border border-amber-300 flex items-center justify-center shadow-lg bg-gradient-to-tr from-amber-700 via-amber-400 to-amber-800 text-stone-900">
+                                    <Crown className="w-3.5 h-3.5 text-stone-950 fill-amber-300 shrink-0" />
+                                  </div>
+                                  
+                                  {/* Tiny Label */}
+                                  <div className="absolute -top-5 bg-amber-900 border border-amber-400 text-[6px] px-1 py-0.2 rounded-full font-mono text-white whitespace-nowrap shadow-md leading-none">
+                                    ALAYA
+                                  </div>
+                                </div>
+                              ) : (
+                                <Pin background={"#8b5c1a"} borderColor={"#3d2817"} glyphColor={"#faf8f5"} scale={0.6} />
+                              )}
                             </AdvancedMarker>
-                          ) : null
-                        ))}
+                          );
+                        })}
                       </Map>
                     </APIProvider>
                   ) : (
@@ -452,24 +478,136 @@ export default function App() {
                     <span className="text-xs font-mono font-bold text-stone-300">22.5°C</span>
                   </div>
                 </div>
-              </div>
-
-              {/* EDITOR'S CHOICE CARDS */}
+                  {/* EDITOR'S CHOICE SECTION (Massive Alaya Spotlight) */}
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <p className="text-[10px] font-mono tracking-widest text-[#8b5c1a] uppercase font-bold">THE EDITORIAL HAND</p>
                     <h2 className="text-xl font-display font-bold text-stone-900">Editor's Choice</h2>
                   </div>
-                  <button onClick={() => setActiveTab("cafes")} className="text-xs font-mono text-[#8b5c1a] font-bold hover:underline flex items-center gap-1">View Hearth Map <ArrowRight className="w-3 h-3" /></button>
                 </div>
                 <div className="space-y-4">
-                  {cafes.filter(c => c.editorial_featured).slice(0, 3).map(cafe => (
-                    <EditorsChoiceCard key={cafe.id} cafe={cafe} onViewDetails={(id) => handleSelectCafe(id)} />
-                  ))}
-                  {cafes.filter(c => c.editorial_featured).length === 0 && cafes.slice(0, 3).map(cafe => (
-                    <EditorsChoiceCard key={cafe.id} cafe={cafe} onViewDetails={(id) => handleSelectCafe(id)} />
-                  ))}
+                  {(() => {
+                    const alayaCafe = cafes.find(c => c.id === "alaya-cafe");
+                    if (!alayaCafe) return null;
+                    return (
+                      <div className="bg-[#fdfbf7] border-2 border-amber-300 rounded-[32px] p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group space-y-6 text-left">
+                        {/* Spotlight Ribbon */}
+                        <div className="flex items-center justify-between">
+                          <span className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-800 to-amber-900 text-amber-100 border border-amber-600 px-4 py-1.5 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase shadow-md">
+                            <Crown className="w-3.5 h-3.5 text-amber-300 shrink-0 animate-pulse" />
+                            Editor's Featured Choice
+                          </span>
+                          <span className="flex items-center gap-1 text-xs font-mono font-bold text-amber-900 bg-amber-100/80 border border-amber-250 px-3 py-1 rounded-full">
+                            <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-600 shrink-0" />
+                            {Number(alayaCafe.rating || 4.8).toFixed(1)}
+                          </span>
+                        </div>
+
+                        {/* Cafe Info Header */}
+                        <div>
+                          <h3 className="text-3xl font-display font-black text-stone-900 leading-tight">
+                            {alayaCafe.name}
+                          </h3>
+                          <p className="text-xs text-stone-500 font-mono tracking-wide mt-1.5 flex items-center gap-1">
+                            <MapPin className="w-4 h-4 text-amber-800 shrink-0" />
+                            {alayaCafe.neighborhood}, Shillong
+                          </p>
+                        </div>
+
+                        {/* Multi-image gallery with lots of pics */}
+                        <div className="space-y-2">
+                          {/* Main large image */}
+                          <div className="h-64 sm:h-80 rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md relative">
+                            <img
+                              src={alayaCafe.images?.hero || "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800"}
+                              alt={alayaCafe.name}
+                              className="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
+                              referrerPolicy="no-referrer"
+                            />
+                            <span className="absolute bottom-3 left-3 bg-amber-950/90 text-amber-200 text-[10px] font-mono tracking-widest px-3 py-1 rounded-full uppercase font-bold border border-amber-800/40">
+                              Featured Hearth Space
+                            </span>
+                          </div>
+
+                          {/* Secondary images grid (6 columns) */}
+                          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                            {[
+                              { img: alayaCafe.images?.interior, label: "Interior" },
+                              { img: alayaCafe.images?.detail1, label: "Brewing" },
+                              { img: alayaCafe.images?.detail2, label: "Aesthetic" },
+                              { img: alayaCafe.images?.detail3, label: "Vibe" },
+                              { img: alayaCafe.images?.detail4, label: "Roast" },
+                              { img: alayaCafe.images?.detail5, label: "Seating" }
+                            ].map((item, idx) => (
+                              <div key={idx} className="h-16 sm:h-20 rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-2xs relative group/thumb cursor-pointer">
+                                <img
+                                  src={item.img || "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"}
+                                  alt={item.label}
+                                  className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
+                                  referrerPolicy="no-referrer"
+                                />
+                                <span className="absolute bottom-1 left-1 bg-black/70 text-white text-[7px] font-mono tracking-widest px-1 py-0.5 rounded uppercase">
+                                  {item.label}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Extra detail card showing Labet rating details */}
+                        <div className="bg-gradient-to-r from-amber-900 to-amber-950 text-amber-100 p-5 rounded-2xl border border-amber-950 shadow-sm">
+                          <span className="text-[10px] font-mono text-amber-400 tracking-widest font-extrabold uppercase">
+                            💬 Labet's Local Guide Notes
+                          </span>
+                          <p className="text-sm font-sans italic text-amber-250 mt-1 leading-relaxed">
+                            "The light here in Laitumkhrah is beautiful, especially after a downpour. Order the Flat White, sit by the corner window, and don't spend all your time clicking photos. Some places are meant to be felt, not just framed."
+                          </p>
+                        </div>
+
+                        {/* Tagline & details */}
+                        <div className="space-y-3">
+                          <p className="text-sm text-stone-700 font-sans leading-relaxed">
+                            {alayaCafe.tagline || alayaCafe.theme}
+                          </p>
+
+                          {/* Vibe Tags list */}
+                          {alayaCafe.vibeTags && alayaCafe.vibeTags.length > 0 && (
+                            <div className="flex flex-wrap gap-2 pt-1">
+                              {alayaCafe.vibeTags.map((tag) => (
+                                <span
+                                  key={tag}
+                                  className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-950 bg-amber-100/50 border border-amber-200 px-3 py-1 rounded-xl"
+                                >
+                                  #{tag.toLowerCase().replace(/\s+/g, "-")}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Actions */}
+                        <div className="flex items-center gap-3 pt-4 border-t border-stone-200/80">
+                          <button
+                            onClick={() => handleSelectCafe(alayaCafe.id)}
+                            className="flex-1 flex items-center justify-center gap-2 bg-amber-800 hover:bg-amber-900 text-white text-xs font-sans font-bold uppercase tracking-wider px-4 py-3.5 rounded-2xl transition-all cursor-pointer shadow-md active:scale-98"
+                          >
+                            <span>Explore Hearth Profile</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => {
+                              handleSelectCafe(alayaCafe.id);
+                              setActiveTab("explore");
+                            }}
+                            className="px-5 py-3.5 rounded-2xl border border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-800 hover:bg-amber-50 text-xs font-sans font-bold uppercase tracking-wider transition-all cursor-pointer"
+                          >
+                            Show on Map
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </div>
               </div>
 
@@ -480,9 +618,10 @@ export default function App() {
                 <h2 className="text-2xl font-display font-bold text-[#FAF8F5] leading-tight mb-3">Dohneiiong: Black Sesame Heritage Spot</h2>
                 <p className="text-stone-300 text-sm leading-relaxed font-sans font-light max-w-lg">Savor the earthy, complex deep flavors of slow-stewed pork belly simmered gently in a jet-black gravy of hand-roasted whole black sesame seed (Nei-long), local wild ginger, and peppercorns. It is a masterpiece of Northeast Indian tribal cuisine.</p>
                 <div className="flex gap-4 mt-6">
-                  <button onClick={() => setActiveTab("cuisine")} className="text-xs font-mono font-bold text-amber-400 hover:text-amber-300 border-b border-amber-400/40 hover:border-amber-300 transition-colors">Explore Khasi Foods</button>
-                  <button onClick={() => setActiveTab("cafes")} className="text-xs font-mono font-bold text-stone-400 hover:text-stone-200 border-b border-stone-600 hover:border-stone-300 transition-colors">Find Sourdough Toast Partner →</button>
+                  <button onClick={() => setActiveTab("planners")} className="text-xs font-mono font-bold text-amber-400 hover:text-amber-300 border-b border-amber-400/40 hover:border-amber-300 transition-colors">Explore Route Planner</button>
+                  <button onClick={() => setActiveTab("walks")} className="text-xs font-mono font-bold text-stone-400 hover:text-stone-200 border-b border-stone-600 hover:border-stone-300 transition-colors">Find District Walks →</button>
                 </div>
+              </div>
               </div>
 
               {/* NEIGHBORHOOD WALKS TEASER */}
@@ -597,84 +736,7 @@ export default function App() {
             </motion.div>
             )}
 
-            {/* CAFES TAB */}
-            {activeTab === "cafes" && (
-              <motion.div key="cafes-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full flex flex-col md:flex-row overflow-hidden">
-                {/* Left panel — filtered list */}
-                <div className="w-full md:w-[420px] md:max-w-[480px] shrink-0 h-auto md:h-full overflow-y-auto border-r border-[#E6E4DF] bg-white">
-                  <div className="p-4 border-b border-stone-100 sticky top-0 bg-white z-10">
-                    <div className="flex items-center gap-2 bg-[#FAF8F5] border border-stone-200 rounded-xl px-3 py-2.5">
-                      <Search className="w-4 h-4 text-stone-400 shrink-0" />
-                      <input type="text" placeholder="Search cozy lofts, acoustic stages..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="flex-1 bg-transparent text-xs text-stone-800 outline-none font-sans placeholder:text-stone-400" />
-                    </div>
-                    <div className="flex items-center gap-2 mt-3">
-                      <button
-                        onClick={() => setCafeViewMode("map")}
-                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-mono font-bold tracking-wide uppercase transition-all ${
-                          cafeViewMode === "map" ? "bg-stone-900 text-white" : "bg-stone-100 text-stone-600 hover:bg-stone-200"
-                        }`}
-                      >
-                        <MapPin className="w-3 h-3" /> Map
-                      </button>
-                      <button
-                        onClick={() => setCafeViewMode("grid")}
-                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-mono font-bold tracking-wide uppercase transition-all ${
-                          cafeViewMode === "grid" ? "bg-stone-900 text-white" : "bg-stone-100 text-stone-600 hover:bg-stone-200"
-                        }`}
-                      >
-                        <LayoutGrid className="w-3 h-3" /> Grid
-                      </button>
-                    </div>
-                  </div>
-                  <div className="p-4 space-y-3">
-                    {filteredCafes.length === 0 ? (
-                      <div className="text-center py-16">
-                        <p className="text-stone-400 text-sm font-sans">No cafés match your search.</p>
-                        <button onClick={() => setSearchQuery("")} className="mt-3 text-xs font-mono text-amber-700 hover:underline">Clear search</button>
-                      </div>
-                    ) : (
-                      filteredCafes.map((cafe) => (
-                        <CafeCard
-                          key={cafe.id}
-                          cafe={cafe}
-                          onViewDetails={(id) => handleSelectCafe(id)}
-                        />
-                      ))
-                    )}
-                  </div>
-                </div>
-                {/* Right panel — map or grid */}
-                <div className="flex-1 min-w-0 h-auto md:h-full overflow-hidden">
-                  {cafeViewMode === "map" ? (
-                    <InteractiveMap
-                      cafes={filteredCafes}
-                      selectedCafeId={selectedCafe?.id}
-                      onSelectCafe={(c) => handleSelectCafe(c.id)}
-                      onNavigateToNeighborhood={navigateToNeighborhood}
-                    />
-                  ) : (
-                    <div className="h-full overflow-y-auto p-4">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {filteredCafes.map((cafe) => (
-                          <CafeCard
-                            key={cafe.id}
-                            cafe={cafe}
-                            onViewDetails={(id) => handleSelectCafe(id)}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            )}
 
-            {/* CUISINE TAB */}
-            {activeTab === "cuisine" && (
-              <motion.div key="cuisine-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto">
-                <CuisineGuide />
-              </motion.div>
-            )}
 
             {/* WALKS TAB */}
             {activeTab === "walks" && (

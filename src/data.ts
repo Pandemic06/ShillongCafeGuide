@@ -15,6 +15,53 @@ import golfLinks2 from "./assets/images/neighborhoods/golf-links-2.jpg";
 
 export const CAFES: Cafe[] = [
   {
+    id: "alaya-cafe",
+    name: "Alaya Cafe",
+    tagline: "Where light meets coffee and calm fills the room.",
+    theme: "Minimalist warmth with artisan brews",
+    introduction: "Tucked inside the serene neighborhood of Laitumkhrah, Alaya Cafe is a minimalist sanctuary designed for slow conversations and creative productivity. Featuring clean lines, soft blonde timber details, and expansive windows that flood the space with natural Shillong daylight, Alaya is the perfect shelter from the misty rains.",
+    whyVisit: "For a quiet, focused headspace, beautifully poured single-estate lattes, and clean aesthetic surroundings.",
+    hours: "10:30 AM — 8:30 PM (Daily)",
+    address: "Laitumkhrah, Shillong, Meghalaya 793003",
+    neighborhood: "Laitumkhrah",
+    images: {
+      hero: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=1200",
+      card: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=600",
+      interior: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
+      detail1: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200",
+      detail2: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
+      detail3: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=1200",
+      detail4: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=1200",
+      detail5: "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=1200"
+    },
+    quote: "A quiet space where ideas brew as slow as our coffee.",
+    quoteAuthor: "Alaya Barista",
+    vibeTags: ["Minimalist", "Artisan Coffee", "Cozy", "Work-Friendly", "Aesthetic"],
+    hasLiveMusic: false,
+    editorial_featured: true,
+    rating: 4.8,
+    mustTry: [
+      {
+        name: "Artisan Flat White",
+        description: "Double shot of high-altitude Khasi Hills arabica beans with velvety, hand-textured steamed microfoam.",
+        price: "₹170",
+        image: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&q=80&w=600"
+      },
+      {
+        name: "Minimalist Avocado Toast",
+        description: "Freshly sliced avocado served over warm house sourdough bread, topped with a pinch of local wild herb sea salt.",
+        price: "₹210",
+        image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=600"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800"
+    ],
+    coordinates: { lat: 25.568, lng: 91.887 }
+  },
+  {
     id: "rynsan-cafe",
     name: "Rynsan",
     tagline: "The Hearth Stage of the Hills",

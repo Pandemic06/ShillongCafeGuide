@@ -237,9 +237,11 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
     }
   };
 
-  const filteredCafes = activeCategoryFilter === "all"
-    ? cafesWithCategories
-    : cafesWithCategories.filter((c) => c.category === activeCategoryFilter);
+  const filteredCafes = cafesWithCategories.filter((c) => {
+    if (c.id === "alaya-cafe") return true; // Always display Alaya Cafe
+    if (activeCategoryFilter === "all") return true;
+    return c.category === activeCategoryFilter;
+  });
 
   const filteredTrails = TRAILS.filter((trail) => {
     const matchDiff = difficultyFilter === "all" || trail.difficulty === difficultyFilter;
@@ -500,6 +502,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
             {activeSubTab === "cafes" && filteredCafes.map((cafe) => {
               const meta = categoryMeta[cafe.category] || categoryMeta["cafe"];
               const isSelected = selectedCafe?.id === cafe.id;
+              const isAlaya = cafe.id === "alaya-cafe";
               return (
                 <AdvancedMarker
                   key={cafe.id}
@@ -508,17 +511,40 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
                   title={cafe.name}
                 >
                   <div
-                    className={`relative flex flex-col items-center filter drop-shadow-md select-none transition-transform ${
-                      isSelected ? "scale-125 z-10" : "hover:scale-110"
+                    className={`relative flex flex-col items-center filter drop-shadow-lg select-none transition-all duration-300 ${
+                      isAlaya 
+                        ? (isSelected ? "scale-[2.0] z-50" : "scale-[1.6] z-40") 
+                        : (isSelected ? "scale-125 z-10" : "hover:scale-110")
                     }`}
                   >
-                    <div
-                      className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center shadow-lg"
-                      style={{ backgroundColor: meta.colorHex }}
-                    >
-                      <meta.icon className="w-3.5 h-3.5 text-white" />
-                    </div>
-                    {isSelected && (
+                    {isAlaya ? (
+                      <div className="relative flex flex-col items-center">
+                        {/* Glowing backdrop halo */}
+                        <div className="absolute -inset-4 rounded-full border-4 border-amber-500 bg-amber-500/30 animate-pulse blur-xs" />
+                        <div className="absolute -inset-2 rounded-full border-2 border-amber-400 bg-amber-400/20 animate-ping pointer-events-none" />
+                        
+                        {/* Custom gold crown pin */}
+                        <div
+                          className="w-14 h-14 rounded-full border-4 border-amber-300 flex items-center justify-center shadow-2xl bg-gradient-to-tr from-amber-700 via-amber-400 to-amber-900 text-stone-900"
+                        >
+                          <Crown className="w-7 h-7 text-amber-100 fill-amber-400 shrink-0 filter drop-shadow-md animate-pulse" />
+                        </div>
+                        
+                        {/* Floating Editor's Featured Choice Badge */}
+                        <div className="absolute -top-9 bg-amber-900 border-2 border-amber-400 text-[9px] px-3 py-1 rounded-full font-mono text-white font-black whitespace-nowrap shadow-2xl flex items-center gap-1 select-none leading-none animate-bounce">
+                          <Sparkles className="w-3 h-3 text-amber-300 animate-pulse" />
+                          <span>EDITOR'S FEATURED CHOICE</span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center shadow-lg"
+                        style={{ backgroundColor: meta.colorHex }}
+                      >
+                        <meta.icon className="w-3.5 h-3.5 text-white" />
+                      </div>
+                    )}
+                    {isSelected && !isAlaya && (
                       <div className="absolute -inset-1 rounded-full border-2 border-amber-400 animate-ping pointer-events-none" />
                     )}
                   </div>
@@ -583,6 +609,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
                 />
               </>
             )}
+            <MapCenterController selectedCafe={selectedCafe} activeStop={activeStop} />
           </Map>
         </APIProvider>
 
@@ -851,13 +878,16 @@ function CuratedCafeInfoCard({
   const cat = getCafeCategory(cafe);
   const meta = categoryMeta[cat] || categoryMeta["cafe"];
   const rating = getAvgRating(cafe.id);
+  const isAlaya = cafe.id === "alaya-cafe";
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 50, scale: 0.95 }}
-      className="absolute bottom-6 left-6 right-6 md:right-auto md:w-[400px] bg-white rounded-3xl border border-stone-200 shadow-2xl overflow-hidden max-h-[380px] md:max-h-[460px] flex flex-col select-none"
+      className={`absolute bottom-6 left-6 right-6 md:right-auto md:w-[400px] bg-white rounded-3xl border shadow-2xl overflow-hidden max-h-[380px] md:max-h-[460px] flex flex-col select-none ${
+        isAlaya ? "border-amber-450 ring-2 ring-amber-300/40" : "border-stone-200"
+      }`}
     >
       <button
         onClick={() => setSelectedCafe(null)}
@@ -875,15 +905,22 @@ function CuratedCafeInfoCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/10 to-transparent" />
         <div className="absolute bottom-3 left-4 right-10 text-left">
-          <span className={`text-[8px] uppercase font-mono tracking-widest font-bold leading-none px-1.5 py-0.5 rounded ${meta.bg} ${meta.text}`}>
-            {meta.label}
-          </span>
+          {isAlaya ? (
+            <span className="inline-flex items-center gap-1 text-[8px] uppercase font-mono tracking-widest font-bold leading-none px-2 py-1 rounded bg-amber-800 text-amber-250 border border-amber-600 shadow-sm">
+              <Crown className="w-2.5 h-2.5 text-amber-300" />
+              Editor's Featured Choice
+            </span>
+          ) : (
+            <span className={`text-[8px] uppercase font-mono tracking-widest font-bold leading-none px-1.5 py-0.5 rounded ${meta.bg} ${meta.text}`}>
+              {meta.label}
+            </span>
+          )}
           <h4 className="font-display font-extrabold text-white text-sm leading-tight mt-1 drop-shadow">
             {cafe.name}
           </h4>
         </div>
         <div className="absolute top-3 left-3 bg-stone-900/90 border border-stone-700 rounded-lg px-2 py-0.5 text-white text-[10px] font-sans font-bold flex items-center gap-1 shadow-md">
-          <Star className="w-3 h-3 fill-amber-500 text-amber-500 shrink-0" />
+          <Star className="w-3 h-3 fill-amber-500 text-amber-550 shrink-0 border-none" />
           <span>{rating}</span>
         </div>
       </div>
@@ -988,4 +1025,19 @@ function DiscoveredPlaceInfoCard({
       </a>
     </motion.div>
   );
+}
+
+function MapCenterController({ selectedCafe, activeStop }: { selectedCafe: Cafe | null; activeStop: TrailStop | null }) {
+  const map = useMap();
+  useEffect(() => {
+    if (!map) return;
+    if (selectedCafe && selectedCafe.coordinates?.lat && selectedCafe.coordinates?.lng) {
+      map.panTo({ lat: selectedCafe.coordinates.lat, lng: selectedCafe.coordinates.lng });
+      map.setZoom(16);
+    } else if (activeStop && activeStop.coordinates?.lat && activeStop.coordinates?.lng) {
+      map.panTo({ lat: activeStop.coordinates.lat, lng: activeStop.coordinates.lng });
+      map.setZoom(16);
+    }
+  }, [map, selectedCafe, activeStop]);
+  return null;
 }
