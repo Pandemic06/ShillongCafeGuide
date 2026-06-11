@@ -701,6 +701,12 @@ export default function App() {
             </motion.div>
           )}
 
+          {activeTab === "trending" && (
+            <motion.div key="trending-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto p-4 sm:p-6 lg:p-8 pb-16">
+              <TrendingDestination />
+            </motion.div>
+          )}
+
           {activeTab === "cafes" && (
             <motion.div key="cafes-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className={`h-full w-full flex flex-col ${cafeViewMode === "map" ? "overflow-hidden" : "overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-12 pb-16"}`}>
               {cafeViewMode !== "map" && (
@@ -716,4 +722,143 @@ export default function App() {
                       <input type="text" placeholder="Search cafes by name, mood, or tags..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="bg-transparent text-black outline-none w-full text-xs font-sans" />
                     </div>
                     <div className="flex bg-stone-100 p-1 rounded-xl border border-stone-200 shrink-0 w-full sm:w-auto">
-                      <button onClick={() => setCafeViewMode("grid")} className={`flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-sans font-semibold transition-all cursor-pointer ${cafeViewMode === "grid" ? "bg-amber-800 text-white shadow-xs" : "text-stone-600 hover:text-stone-800"}`}><LayoutGrid className="w-3.5 h-3.5" />
+                      <button onClick={() => setCafeViewMode("grid")} className={`flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-sans font-semibold transition-all cursor-pointer ${cafeViewMode === "grid" ? "bg-amber-800 text-white shadow-xs" : "text-stone-600 hover:text-stone-800"}`}><LayoutGrid className="w-3.5 h-3.5" /><span>Grid View</span></button>
+                      <button onClick={() => setCafeViewMode("map")} className={`flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-sans font-semibold transition-all cursor-pointer ${cafeViewMode === "map" ? "bg-amber-800 text-white shadow-xs" : "text-stone-600 hover:text-stone-800"}`}><MapPin className="w-3.5 h-3.5" /><span>Hearth Map</span></button>
+                    </div>
+                    <div className="font-mono text-[10px] uppercase text-stone-400 font-bold shrink-0">{filteredCafes.length} Landmarks Found</div>
+                  </div>
+                </>
+              )}
+              {filteredCafes.length === 0 ? (
+                <div className="text-center space-y-3 py-10 bg-[#FAF8F5] border border-stone-200 rounded-2xl">
+                  <p className="text-stone-400 font-sans italic">No mountain cafes match your tag search.</p>
+                  <button onClick={() => setSearchQuery("")} className="bg-stone-800 hover:bg-stone-700 text-white text-xs px-4 py-2 rounded-lg font-sans cursor-pointer">Clear Search Query</button>
+                </div>
+              ) : cafeViewMode === "map" ? (
+                <div className="flex-1 h-full w-full relative">
+                  <div className="absolute top-[84px] md:top-[20px] right-4 z-30 pointer-events-auto">
+                    <button onClick={() => setCafeViewMode("grid")} className="px-3.5 py-2.5 bg-stone-900 hover:bg-stone-950 text-amber-300 rounded-lg text-xs font-mono font-bold uppercase tracking-wider shadow-lg flex items-center gap-2 cursor-pointer border border-stone-800">
+                      <LayoutGrid className="w-3.5 h-3.5" />
+                      <span>Grid Directory</span>
+                    </button>
+                  </div>
+                  <InteractiveMap cafes={filteredCafes} onSelectCafe={(cafe) => handleSelectCafe(cafe.id)} activeCafeId={selectedCafe?.id} />
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2">
+                  {filteredCafes.map((cafe) => (
+                    <CafeCard key={cafe.id} cafe={cafe} onViewDetails={handleSelectCafe} />
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          )}
+
+          {activeTab === "cuisine" && (
+            <motion.div key="cuisine-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto p-4 sm:p-6 lg:p-8 pb-16">
+              <CuisineGuide />
+            </motion.div>
+          )}
+
+          {activeTab === "walks" && (
+            <motion.div key="walks-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto p-4 sm:p-6 lg:p-8 pb-16">
+              <NeighborhoodGuide onSelectCafe={handleSelectCafe} initialNeighborhoodId={selectedNeighborhoodId} cafes={cafes} />
+            </motion.div>
+          )}
+
+          {activeTab === "planners" && (
+            <motion.div key="planners-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto p-4 sm:p-6 lg:p-8 pb-16">
+              <PlannersGuide />
+            </motion.div>
+          )}
+
+          {activeTab === "guides" && (
+            <motion.div key="guides-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto p-4 sm:p-6 lg:p-8 pb-16">
+              <GuidesList />
+            </motion.div>
+          )}
+
+          {activeTab === "about" && (
+            <motion.div key="about-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto p-4 sm:p-6 lg:p-8 pb-16">
+              <AboutPanel />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </main>
+
+      <footer id="main-footer" className="bg-stone-900 text-stone-400 text-xs font-sans pb-16 pt-10 border-t border-stone-800/80 mt-auto">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 pb-10 border-b border-stone-800/50">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="space-y-3">
+              <h3 className="text-stone-300 font-mono text-[10px] uppercase tracking-widest font-bold">Explore By Area</h3>
+              <ul className="space-y-2 flex flex-col items-start">
+                <li><button onClick={() => { selectDistrict("laitumkhrah"); }} className="hover:text-amber-400 transition-colors">Cafes in Laitumkhrah</button></li>
+                <li><button onClick={() => { selectDistrict("police-bazaar"); }} className="hover:text-amber-400 transition-colors">Restaurants near Police Bazaar</button></li>
+                <li><button onClick={() => { selectDistrict("golf-links"); }} className="hover:text-amber-400 transition-colors">Golf Links Cafes</button></li>
+                <li><button onClick={() => { selectDistrict("boyce-road"); }} className="hover:text-amber-400 transition-colors">Boyce Road Coffee</button></li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-stone-300 font-mono text-[10px] uppercase tracking-widest font-bold">By Category</h3>
+              <ul className="space-y-2 flex flex-col items-start">
+                <li><button onClick={() => handleQuickTagSearch("Rooftop")} className="hover:text-amber-400 transition-colors">Rooftop Cafes Shillong</button></li>
+                <li><button onClick={() => handleQuickTagSearch("Live Music")} className="hover:text-amber-400 transition-colors">Live Music Cafes Shillong</button></li>
+                <li><button onClick={() => handleQuickTagSearch("Romantic")} className="hover:text-amber-400 transition-colors">Romantic Cafes for Dates</button></li>
+                <li><button onClick={() => handleQuickTagSearch("Work")} className="hover:text-amber-400 transition-colors">Work-Friendly Wifi Cafes</button></li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-stone-300 font-mono text-[10px] uppercase tracking-widest font-bold">Cuisine Types</h3>
+              <ul className="space-y-2 flex flex-col items-start">
+                <li><button onClick={() => setActiveTab("cuisine")} className="hover:text-amber-400 transition-colors">Khasi Food Shillong</button></li>
+                <li><button onClick={() => handleQuickTagSearch("Indigenous")} className="hover:text-amber-400 transition-colors">Traditional Khasi Restaurants</button></li>
+                <li><button onClick={() => handleQuickTagSearch("Jadoh")} className="hover:text-amber-400 transition-colors">Best Jadoh Shillong</button></li>
+                <li><button onClick={() => handleQuickTagSearch("Bakery")} className="hover:text-amber-400 transition-colors">Local Bakeries & Bread</button></li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-stone-300 font-mono text-[10px] uppercase tracking-widest font-bold">Popular Curations</h3>
+              <ul className="space-y-2 flex flex-col items-start">
+                <li><button onClick={() => handleQuickTagSearch("Budget")} className="hover:text-amber-400 transition-colors">Budget Cafes Shillong</button></li>
+                <li><button onClick={() => handleQuickTagSearch("Late Night")} className="hover:text-amber-400 transition-colors">Late-Night Food Shillong</button></li>
+                <li><button onClick={() => handleQuickTagSearch("Hidden Gem")} className="hover:text-amber-400 transition-colors">Hidden Gems & Trails</button></li>
+                <li><button onClick={() => setActiveTab("planners")} className="hover:text-amber-400 transition-colors">Shillong Food Guide 2026</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2.5 font-sans text-sm font-semibold tracking-wide text-stone-200">
+            <div className="w-6 h-6 rounded-md overflow-hidden bg-white border border-stone-800">
+              <img src={logoImage} alt="Shillong Cafe Map Logo" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <span>Shillong Café Map © 2026</span>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 font-mono text-[10px] uppercase tracking-wider">
+            <button onClick={() => setActiveTab("explore")} className="hover:text-stone-100 cursor-pointer">Explore Main</button>
+            <button onClick={() => setActiveTab("cafes")} className="hover:text-stone-100 cursor-pointer">Cozy List</button>
+            <button onClick={() => setActiveTab("cuisine")} className="hover:text-stone-100 cursor-pointer">Khasi Food</button>
+            <button onClick={() => setActiveTab("planners")} className="hover:text-stone-100 cursor-pointer">Route Planner</button>
+            <button onClick={() => setActiveTab("guides")} className="hover:text-stone-100 cursor-pointer">Editorial Periodicals</button>
+            <button onClick={() => setActiveTab("about")} className="hover:text-stone-100 cursor-pointer">Owner Letter</button>
+          </div>
+          <p className="text-[10px] font-mono text-stone-500 leading-relaxed max-w-xs text-center md:text-right">Hand-drawn cartography and local independent review logs compiled inside Meghalaya's misty ridges.</p>
+        </div>
+      </footer>
+
+      <AIGuideChat />
+
+      <AnimatePresence>
+        {selectedCafe && (
+          <CafeDetailModal cafe={selectedCafe} onClose={() => handleSelectCafe(null)} />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {dataHubOpen && (
+          <DataHubModal isOpen={dataHubOpen} onClose={() => setDataHubOpen(false)} onCafesUpdated={(updatedCafes) => setCafes(updatedCafes)} currentCafes={cafes} />
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
