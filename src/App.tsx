@@ -595,15 +595,14 @@ export default function App() {
                             <span>Explore Hearth Profile</span>
                             <ArrowRight className="w-4.5 h-4.5" />
                           </button>
-                          <button
-                            onClick={() => {
-                              handleSelectCafe(alayaCafe.id);
-                              setActiveTab("explore");
-                            }}
-                            className="px-6 py-4 rounded-2xl border border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-800 hover:bg-amber-50 text-xs sm:text-sm font-sans font-bold uppercase tracking-wider transition-all cursor-pointer"
+                          <a
+                            href="https://www.google.com/maps?client=opera-gx&hs=YXo&sca_esv=dd2fe0b82f78cb75&output=search&q=Alaya+Cafe+%26+Bar&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93EoculSWPsy9Mwi2OTVV6bg4sD9CY3vZjPiSFnibxqztMKYuxESLMKjghFfdj3DtL_JY6Nr0LC6iJMKCdm2EeOsvDp_4lHgUwQFW0uvPhtJpowQoHv8eP1gIs0O7SRrOIeywvCnZAYn1IoSS8MgNt57znu6AA&entry=mc&ved=1t:200715&ictx=111"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-6 py-4 rounded-2xl border border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-800 hover:bg-amber-50 text-xs sm:text-sm font-sans font-bold uppercase tracking-wider transition-all cursor-pointer text-center"
                           >
                             Show on Map
-                          </button>
+                          </a>
                         </div>
                       </div>
                     );
