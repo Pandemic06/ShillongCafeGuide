@@ -9,8 +9,7 @@ interface CafeCardProps {
 }
 
 export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
-  // Neighborhood colors for visual landmarks
-  const neighborhoodColors = {
+  const neighborhoodColors: Record<string, string> = {
     Laitumkhrah: "bg-blue-50 text-blue-800 border-blue-200/50",
     "Police Bazaar": "bg-emerald-50 text-emerald-800 border-emerald-200/50",
     "Golf Links": "bg-amber-50 text-amber-800 border-amber-200/50",
@@ -19,6 +18,13 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
     "Kench's Trace": "bg-rose-50 text-rose-800 border-rose-200/50",
     Dhankheti: "bg-indigo-50 text-indigo-800 border-indigo-200/50"
   };
+
+  // Safe defaults for fields that may be absent on API-fetched cafes
+  const vibeTags: string[] = Array.isArray(cafe.vibeTags) ? cafe.vibeTags : [];
+  const cardImage: string = cafe.images?.card ?? cafe.images?.hero ?? "";
+  const neighborhood: string = cafe.neighborhood ?? "Shillong";
+  const nbhdClass: string = neighborhoodColors[neighborhood] ?? "bg-stone-50 text-stone-700 border-stone-200/50";
+  const hoursText: string = cafe.hours ? cafe.hours.split("(")[0].trim() : "Open daily";
 
   return (
     <motion.div
@@ -29,24 +35,27 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
     >
       {/* Hero Image Container */}
       <div className="relative h-56 w-full overflow-hidden bg-stone-100">
-        <img
-          src={cafe.images.card}
-          alt={`${cafe.name} cafe in ${cafe.neighborhood}, Shillong`}
-          loading="lazy"
-          decoding="async"
-          width={600}
-          height={400}
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          referrerPolicy="no-referrer"
-        />
-        {/* Layer Gradient */}
+        {cardImage ? (
+          <img
+            src={cardImage}
+            alt={`${cafe.name} cafe in ${neighborhood}, Shillong`}
+            loading="lazy"
+            decoding="async"
+            width={600}
+            height={400}
+            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            referrerPolicy="no-referrer"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-stone-200">
+            <MapPin className="w-8 h-8 text-stone-400" />
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 via-transparent to-transparent opacity-60" />
-
-        {/* Neighborhood Pill Badge */}
         <div className="absolute top-4 left-4 z-10">
-          <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold font-sans tracking-wide border shadow-xs ${neighborhoodColors[cafe.neighborhood]}`}>
+          <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold font-sans tracking-wide border shadow-xs ${nbhdClass}`}>
             <MapPin className="w-3 h-3" />
-            {cafe.neighborhood}
+            {neighborhood}
           </span>
         </div>
       </div>
@@ -54,9 +63,8 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
       {/* Body Information */}
       <div className="p-6 flex-1 flex flex-col justify-between">
         <div>
-          {/* Header Theme Line */}
           <div className="flex flex-wrap items-center justify-between gap-1 mb-1.5">
-            <p className="text-[10px] tracking-widest font-mono text-amber-800 uppercase font-bold">{cafe.theme}</p>
+            <p className="text-[10px] tracking-widest font-mono text-amber-800 uppercase font-bold">{cafe.theme ?? ""}</p>
             {cafe.rating && (
               <div className="flex items-center gap-1 bg-amber-50/70 border border-amber-100 rounded px-1.5 py-0.5 text-[10px] font-mono font-bold text-amber-900">
                 <Star className="w-2.5 h-2.5 fill-amber-500 text-amber-550 border-none shrink-0" />
@@ -72,20 +80,19 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
           </h3>
 
           <p className="text-xs text-amber-900/90 font-serif italic mb-3 leading-relaxed">
-            "{cafe.kong_labet_tagline || cafe.quote || cafe.tagline}"
+            &ldquo;{cafe.kong_labet_tagline || cafe.quote || cafe.tagline || "A cozy spot in the hills."}&rdquo;
           </p>
 
           <p className="text-xs text-stone-600 font-sans line-clamp-3 mb-3 font-light">
-            {cafe.introduction}
+            {cafe.introduction ?? ""}
           </p>
 
-          {/* Labet's Note Container */}
           <div className="p-3 bg-[#FAF8F5] border border-stone-200/60 shadow-2xs rounded-xl text-stone-750 mb-1">
             <span className="text-[9px] uppercase font-mono tracking-widest text-[#713f12] font-bold block mb-1">
-              💬 Labet's Note
+              💬 Labet&apos;s Note
             </span>
             <p className="text-xs font-sans italic leading-relaxed text-[#713f12]/90">
-              "{cafe.kong_labet_note || 'Best visited slowly.'}"
+              &ldquo;{cafe.kong_labet_note || "Best visited slowly."}&rdquo;
             </p>
           </div>
         </div>
@@ -94,7 +101,7 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
         <div className="pt-4 border-t border-stone-200/60 mt-auto space-y-3">
           {/* Vibe tags pills */}
           <div className="flex flex-wrap items-center gap-1">
-            {cafe.vibeTags.slice(0, 2).map((vibe) => (
+            {vibeTags.slice(0, 2).map((vibe) => (
               <span
                 key={vibe}
                 className="text-[10px] font-mono text-stone-500 bg-stone-100 px-2 py-0.5 rounded-sm"
@@ -109,11 +116,10 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
             )}
           </div>
 
-          {/* Quick Google Insights: Phone & Website */}
           {(cafe.phone_number || cafe.website) && (
             <div className="flex flex-wrap gap-2 text-[10px] font-mono text-stone-500 pt-2 border-t border-dashed border-stone-200/50">
               {cafe.phone_number && (
-                <a 
+                <a
                   href={`tel:${cafe.phone_number}`}
                   className="inline-flex items-center gap-1 hover:text-amber-800 transition-colors bg-white hover:bg-stone-50 border border-stone-205 rounded px-2 py-0.5 cursor-pointer"
                   onClick={(e) => e.stopPropagation()}
@@ -123,7 +129,7 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
                 </a>
               )}
               {cafe.website && (
-                <a 
+                <a
                   href={cafe.website}
                   target="_blank"
                   rel="noreferrer"
@@ -139,7 +145,6 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
           )}
 
           <div className="flex items-center justify-between pt-1">
-            {/* Price or Hours */}
             {cafe.price_per_person ? (
               <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-900 bg-amber-50 border border-amber-100 px-2 py-0.5 rounded">
                 💰 ₹{cafe.price_per_person}/person
@@ -147,12 +152,10 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
             ) : (
               <span className="inline-flex items-center gap-1.5 text-xs text-stone-500 font-mono font-medium">
                 <Clock className="w-3.5 h-3.5 text-stone-400" />
-                {cafe.hours.split("(")[0].trim()}
+                {hoursText}
               </span>
             )}
 
-            {/* Real <a> for crawlers + onClick interception for SPA users.
-                Cmd/Ctrl/middle-click still opens a fresh tab at /cafe/{id}. */}
             <a
               id={`btn-view-${cafe.id}`}
               href={`/cafe/${cafe.id}`}
