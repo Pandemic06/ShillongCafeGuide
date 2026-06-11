@@ -43,9 +43,7 @@ const darkMapStyle = [
 ];
 
 export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hideSidebar = false }: InteractiveMapProps) {
-  // Navigation Tabs inside Map component
   const [activeSubTab, setActiveSubTab] = useState<"cafes" | "trails">("cafes");
-  
   const [mapTheme, setMapTheme] = useState<"light" | "dark">("light");
   const [selectedCafe, setSelectedCafe] = useState<Cafe | null>(null);
   const [zoomLevel, setZoomLevel] = useState<number>(14);
@@ -53,39 +51,27 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<string>("all");
   const [isMapFullscreen, setIsMapFullscreen] = useState<boolean>(false);
 
-  // Live Places API Discovery States
   const [searchQuery, setSearchQuery] = useState("");
   const [discoveredPlaces, setDiscoveredPlaces] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
   const [selectedDiscoveredPlace, setSelectedDiscoveredPlace] = useState<any | null>(null);
   const [isSyncing, setIsSyncing] = useState(false);
 
-  // ----------------------------------------------------
-  // TRAILS & ROUTING EXPLORER MOUNT STATES
-  // ----------------------------------------------------
   const [selectedTrail, setSelectedTrail] = useState<Trail | null>(null);
   const [orderedStops, setOrderedStops] = useState<TrailStop[]>([]);
   const [startStopId, setStartStopId] = useState<string | null>(null);
   const [travelMode, setTravelMode] = useState<"WALKING" | "DRIVING" | "TRANSIT" | "BICYCLING" | "TWO_WHEELER">("DRIVING");
-  
-  // Directions calculated results
   const [routeDuration, setRouteDuration] = useState("");
   const [routeDistance, setRouteDistance] = useState("");
   const [isRouteUnavailable, setIsRouteUnavailable] = useState(false);
-
-  // Travel trail filters state
   const [difficultyFilter, setDifficultyFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
-
-  // Selected single stop modal or sidebar view
   const [activeStop, setActiveStop] = useState<TrailStop | null>(null);
   const [isLoadingStopDetails, setIsLoadingStopDetails] = useState(false);
   const [stopPlacesData, setStopPlacesData] = useState<any | null>(null);
 
-  // Shillong Central Coordinates constant
   const shillongCenter = { lat: 25.5788, lng: 91.8920 };
 
-  // Freeze background scroll when in fullscreen
   useEffect(() => {
     if (isMapFullscreen) {
       document.body.style.overflow = "hidden";
@@ -97,7 +83,6 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
     };
   }, [isMapFullscreen]);
 
-  // Fetch local reviews to compute dynamic rating averages for cafes list
   useEffect(() => {
     fetch("/api/reviews")
       .then((res) => (res.ok ? res.json() : []))
@@ -105,7 +90,6 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
       .catch((err) => console.error("Error loading reviews inside Map:", err));
   }, []);
 
-  // Compute average rating for a cafe
   const getAvgRating = (cafeId: string) => {
     const cafeReviews = reviews.filter((r) => r.cafeId === cafeId);
     if (cafeReviews.length === 0) {
@@ -116,34 +100,27 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
     return (sum / cafeReviews.length).toFixed(1);
   };
 
-  // Classify curated cafe into custom categories
   const getCafeCategory = (cafe: Cafe) => {
     if (cafe.hasLiveMusic) return "live_music";
     const isTraditional = cafe.vibeTags?.some((t) => /traditional|khasi|indigenous|jadoh/i.test(t)) ||
       cafe.id === "rynsan-cafe";
     if (isTraditional) return "khasi_cuisine";
-    
-    const isRooftop = cafe.vibeTags?.some((t) => /rooftop|view|deck|canopy/i.test(t)) || 
-      cafe.tagline?.toLowerCase().includes("view") || 
+    const isRooftop = cafe.vibeTags?.some((t) => /rooftop|view|deck|canopy/i.test(t)) ||
+      cafe.tagline?.toLowerCase().includes("view") ||
       cafe.theme?.toLowerCase().includes("deck");
     if (isRooftop) return "rooftop";
-
-    const isPremium = cafe.name.toLowerCase().includes("fine dining") || 
+    const isPremium = cafe.name.toLowerCase().includes("fine dining") ||
       cafe.vibeTags?.some((t) => /premium|luxury|chandelier/i.test(t));
     if (isPremium) return "premium";
-
     const isBudget = cafe.vibeTags?.some((t) => /budget|street|jadoh stall/i.test(t));
     if (isBudget) return "budget";
-
-    const isRestaurant = cafe.name.toLowerCase().includes("restaurant") || 
+    const isRestaurant = cafe.name.toLowerCase().includes("restaurant") ||
       cafe.name.toLowerCase().includes("grill") ||
       cafe.vibeTags?.some((t) => /restaurant|dining/i.test(t));
     if (isRestaurant) return "restaurant";
-
     return "cafe";
   };
 
-  // Category visual metadata for curated cafes
   const categoryMeta: { [key: string]: { label: string; bg: string; text: string; border: string; icon: any; colorHex: string } } = {
     all: { label: "All Hubs", bg: "bg-stone-100", text: "text-stone-800", border: "border-stone-300", icon: MapPin, colorHex: "#7c2d12" },
     cafe: { label: "Cozy Cafés", bg: "bg-amber-50/90", text: "text-amber-800", border: "border-amber-300", icon: Coffee, colorHex: "#b45309" },
@@ -155,21 +132,18 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
     premium: { label: "Fine Dining", bg: "bg-stone-900", text: "text-amber-300", border: "border-amber-600", icon: Crown, colorHex: "#d97706" },
   };
 
-  // Pre-calculate curated cafe categories & ratings
   const cafesWithCategories = cafes.map((cafe) => ({
     ...cafe,
     category: getCafeCategory(cafe),
     rating: getAvgRating(cafe.id),
   }));
 
-  // Selecting a curated cafe marker
   const handleMarkerClick = (cafe: Cafe) => {
     setSelectedDiscoveredPlace(null);
     setSelectedCafe(cafe);
     onSelectCafe(cafe);
   };
 
-  // Floating conversational Labet AI prompt dispatch
   const triggerChatAsk = (cafe: Cafe) => {
     const customPrompt = `Tell me more details about "${cafe.name}" in ${cafe.neighborhood}, Shillong. What are its operating hours, popular dishes, and tribal acoustic vibe?`;
     const event = new CustomEvent("ask-kong-labet", {
@@ -178,7 +152,6 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
     window.dispatchEvent(event);
   };
 
-  // Sync external cafe selection
   useEffect(() => {
     if (!activeCafeId) return;
     const matchedCafe = cafesWithCategories.find((c) => c.id === activeCafeId);
@@ -189,9 +162,6 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
     }
   }, [activeCafeId]);
 
-  // ----------------------------------------------------
-  // TRAILS ACTIONS IMPLEMENTATION
-  // ----------------------------------------------------
   const handleSelectTrail = (trail: Trail) => {
     setSelectedTrail(trail);
     setOrderedStops(trail.stops);
@@ -202,7 +172,6 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
     setIsRouteUnavailable(false);
   };
 
-  // Shift start point of the trail orbitally
   const handleSetStartPoint = (stopId: string) => {
     if (!selectedTrail) return;
     const index = selectedTrail.stops.findIndex((s) => s.id === stopId);
@@ -213,908 +182,447 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, hide
       ];
       setOrderedStops(shifted);
       setStartStopId(stopId);
-      
-      // Update stop place marker selection too
       const clickedStop = selectedTrail.stops[index];
       handleFetchStopDetails(clickedStop);
     }
   };
 
-  // Fetch live Google Places API details for an active stop
   const handleFetchStopDetails = async (stop: TrailStop) => {
     setActiveStop(stop);
     setIsLoadingStopDetails(true);
     setStopPlacesData(null);
-
-    // Grab Google Maps Places service dynamically if Maps JS is loaded
     try {
-      const placesService = (window as any).google?.maps?.places;
-      if (!placesService) {
-        setIsLoadingStopDetails(false);
-        return;
+      const res = await fetch(`/api/places/nearby?name=${encodeURIComponent(stop.name)}&lat=${stop.coordinates.lat}&lng=${stop.coordinates.lng}`);
+      if (res.ok) {
+        const data = await res.json();
+        setStopPlacesData(data);
       }
-
-      // Quick query searching using Place.searchByText or TextSearch
-      // We implement a dual-fallback algorithm for absolute robustness
-      const divPlaceholder = document.createElement("div");
-      const mapInstance = (window as any).googleMapsInstanceForTrails;
-      const service = new (window as any).google.maps.places.PlacesService(mapInstance || divPlaceholder);
-
-      service.textSearch(
-        {
-          query: `${stop.placeNameQuery} Shillong Meghalaya`,
-          location: shillongCenter,
-          radius: 12000
-        },
-        (results: any[], status: any) => {
-          if (status === "OK" && results && results[0]) {
-            const res = results[0];
-            // Request detailed single place to grab opening hours, reviews, photos safely
-            service.getDetails(
-              {
-                placeId: res.place_id,
-                fields: ["name", "rating", "formatted_address", "opening_hours", "photos", "website"]
-              },
-              (details: any, detailsStatus: any) => {
-                if (detailsStatus === "OK" && details) {
-                  setStopPlacesData({
-                    place_id: res.place_id,
-                    name: details.name || res.name,
-                    rating: details.rating || res.rating || "N/A",
-                    address: details.formatted_address || res.formatted_address || "Shillong, Meghalaya",
-                    isOpenNow: details.opening_hours?.isOpen?.() ?? null,
-                    openingHours: details.opening_hours?.weekday_text?.[0] || "Confirm timings live on maps",
-                    photoUrl: details.photos?.[0]?.getUrl({ maxWidth: 600 }) || 
-                              res.photos?.[0]?.getUrl({ maxWidth: 600 }) || 
-                              "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
-                    website: details.website || null
-                  });
-                } else {
-                  // Core fallback if details fails but core search worked
-                  setStopPlacesData({
-                    place_id: res.place_id,
-                    name: res.name,
-                    rating: res.rating || "N/A",
-                    address: res.formatted_address || "Shillong, Meghalaya",
-                    photoUrl: res.photos?.[0]?.getUrl({ maxWidth: 600 }) || "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
-                  });
-                }
-                setIsLoadingStopDetails(false);
-              }
-            );
-          } else {
-            console.warn("No place resolved for: ", stop.placeNameQuery);
-            setIsLoadingStopDetails(false);
-          }
-        }
-      );
     } catch (e) {
-      console.error("Stop Details fetch crashed safely: ", e);
+      console.error("Failed to fetch stop details", e);
+    } finally {
       setIsLoadingStopDetails(false);
     }
   };
 
-  // Filter Trails
+  const handleLivePlacesSearch = async () => {
+    if (!searchQuery.trim()) return;
+    setIsSearching(true);
+    setDiscoveredPlaces([]);
+    setSelectedDiscoveredPlace(null);
+    try {
+      const res = await fetch(`/api/places/search?query=${encodeURIComponent(searchQuery + " Shillong")}`);
+      if (res.ok) {
+        const data = await res.json();
+        setDiscoveredPlaces(data.places || []);
+      }
+    } catch (e) {
+      console.error("Live search failed", e);
+    } finally {
+      setIsSearching(false);
+    }
+  };
+
+  const handleRouteCalculated = (duration: string, distance: string, failed: boolean) => {
+    if (failed) {
+      setIsRouteUnavailable(true);
+      setRouteDuration("");
+      setRouteDistance("");
+    } else {
+      setIsRouteUnavailable(false);
+      setRouteDuration(duration);
+      setRouteDistance(distance);
+    }
+  };
+
+  const filteredCafes = activeCategoryFilter === "all"
+    ? cafesWithCategories
+    : cafesWithCategories.filter((c) => c.category === activeCategoryFilter);
+
   const filteredTrails = TRAILS.filter((trail) => {
     const matchDiff = difficultyFilter === "all" || trail.difficulty === difficultyFilter;
     const matchType = typeFilter === "all" || trail.type === typeFilter;
     return matchDiff && matchType;
   });
 
-  // Display setup instructions if key is missing
+  const mapId = mapTheme === "dark" ? "dark-shillong-map" : "light-shillong-map";
+
   if (!hasValidKey) {
     return (
-      <div className="flex items-center justify-center min-h-[640px] bg-[#FAF8F5] border border-stone-200 rounded-3xl p-6 animate-pulse" id="gmaps-setup-splash">
-        <div className="text-center max-w-md p-6 bg-white rounded-2xl border border-stone-200/80 shadow-xl space-y-4">
-          <div className="w-12 h-12 bg-amber-50 text-amber-805 rounded-full flex items-center justify-center mx-auto mb-2">
-            <Info className="w-6 h-6 text-amber-800" />
-          </div>
-          <h2 className="text-xl font-display font-bold text-stone-900">Google Maps Keys Required</h2>
-          <p className="text-xs text-stone-600 leading-relaxed font-sans">
-            Please configure your <code>GOOGLE_MAPS_PLATFORM_KEY</code> inside Secrets to run the live Maps SDK, Directions APIs and Places discovery.
-          </p>
-          <div className="text-left space-y-2 p-4 bg-stone-50 rounded-xl border text-[11px] font-mono text-stone-600">
-            <p>1. Open top-right ⚙️ settings.</p>
-            <p>2. Select Secrets & Environment Variables.</p>
-            <p>3. Enter <code>GOOGLE_MAPS_PLATFORM_KEY</code> as the name.</p>
-          </div>
+      <div className="flex flex-col items-center justify-center h-[500px] bg-stone-100 rounded-2xl border border-stone-200 gap-4 text-stone-500 px-8 text-center">
+        <MapPin className="w-10 h-10 text-stone-300" />
+        <div>
+          <p className="font-semibold text-stone-700 mb-1">Map Preview Unavailable</p>
+          <p className="text-sm text-stone-400">A valid Google Maps API key is required to render the interactive map.</p>
         </div>
       </div>
     );
   }
 
   return (
-    <APIProvider apiKey={GOOGLE_MAPS_API_KEY} version="weekly" libraries={["places", "routes"]}>
-      <div 
-        id="interactive-map-panel" 
-        className={`relative w-full overflow-hidden bg-[#FAF8F5] flex flex-col md:flex-row transition-all duration-300 ${
-          isMapFullscreen 
-            ? "fixed inset-0 z-[1000] rounded-none border-none h-screen w-screen" 
-            : "h-full w-full border-none rounded-none shadow-none"
-        }`}
-      >
-        {/* ==================================================== */}
-        {/* 1. LEFT SIDE DECK: SWITCHER BETWEEN CAFES AND TRAILS */}
-        {/* ==================================================== */}
-        {!hideSidebar && (
-          <div className="w-full md:w-[42%] bg-white border-b md:border-b-0 md:border-r border-stone-200 flex flex-col shrink-0 h-[360px] md:h-full z-20 min-w-[340px] max-w-[480px]">
-            
-            {/* Deck tab header switch */}
-            <div className="p-4 border-b border-stone-150 flex gap-2 bg-stone-50">
-              <button
-                onClick={() => setActiveSubTab("cafes")}
-                className={`flex-1 py-2 px-3.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-2 ${
-                  activeSubTab === "cafes"
-                    ? "bg-stone-900 text-amber-300 shadow-md"
-                    : "bg-stone-100 text-stone-600 hover:bg-stone-200 hover:text-stone-900"
-                }`}
-              >
-                <Coffee className="w-3.5 h-3.5" />
-                <span>Coffee Hubs</span>
-              </button>
-              <button
-                onClick={() => {
-                  setActiveSubTab("trails");
-                  if (!selectedTrail && TRAILS.length > 0) {
-                    handleSelectTrail(TRAILS[0]);
-                  }
-                }}
-                className={`flex-1 py-2 px-3.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-2 ${
-                  activeSubTab === "trails"
-                    ? "bg-amber-850 bg-amber-800 text-stone-105 text-white shadow-md"
-                    : "bg-stone-100 text-stone-600 hover:bg-stone-200 hover:text-stone-900"
-                }`}
-              >
-                <Compass className="w-3.5 h-3.5" />
-                <span>Scenic Trails</span>
-              </button>
-            </div>
+    <div className={`relative ${isMapFullscreen ? "fixed inset-0 z-[9999] flex flex-col" : "w-full"}`}>
+      {/* Map Tab Bar */}
+      <div className={`${isMapFullscreen ? "bg-white border-b border-stone-200 px-4 py-2 flex items-center gap-3" : "flex items-center gap-2 mb-2"}`}>
+        <button
+          onClick={() => setActiveSubTab("cafes")}
+          className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-colors ${
+            activeSubTab === "cafes"
+              ? "bg-stone-900 text-amber-300"
+              : "bg-stone-100 text-stone-600 hover:bg-stone-200"
+          }`}
+        >
+          <Coffee className="w-3 h-3 inline mr-1" />
+          Cafes & Restaurants
+        </button>
+        <button
+          onClick={() => setActiveSubTab("trails")}
+          className={`px-3 py-1.5 text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-colors ${
+            activeSubTab === "trails"
+              ? "bg-amber-800 text-white"
+              : "bg-stone-100 text-stone-600 hover:bg-stone-200"
+          }`}
+        >
+          <Waypoints className="w-3 h-3 inline mr-1" />
+          Trail Explorer
+        </button>
 
-            <div className="flex-1 overflow-y-auto">
-              {/* SUB-VIEW 1: TRADITIONAL CAFES LISTING PANEL */}
-              {activeSubTab === "cafes" && (
-                <div className="p-4 space-y-4">
-                  <div className="space-y-1 select-none">
-                    <h4 className="text-xs font-mono font-bold uppercase text-stone-400">Curated Explorer</h4>
-                    <p className="text-[11px] text-stone-500 leading-normal font-sans">
-                      Discover handpicked local acoustic spots, tea hearths & viewpoint cafes inside Shillong.
-                    </p>
-                  </div>
-
-                  {/* Local search form inside deck */}
-                  <form 
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      if (searchQuery.trim()) {
-                        const formEvent = new CustomEvent("trigger-local-map-search", { detail: searchQuery });
-                        window.dispatchEvent(formEvent);
-                      }
-                    }}
-                    className="flex gap-1 bg-stone-100 p-1 rounded-xl border border-stone-200"
-                  >
-                    <input
-                      type="text"
-                      placeholder="Search Shillong via Google Places..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="flex-1 bg-transparent border-none text-xs text-stone-800 py-1 px-2 focus:outline-none placeholder-stone-400 font-sans"
-                    />
-                  <button 
-                    type="submit" 
-                    className="p-1 px-3 bg-stone-900 text-amber-300 text-[10px] font-mono font-bold uppercase tracking-wider rounded-lg hover:bg-stone-950 cursor-pointer"
-                  >
-                    Go
-                  </button>
-                </form>
-
-                {/* Filter chips category deck list */}
-                <div className="flex flex-wrap gap-1 pt-1">
-                  {Object.entries(categoryMeta).slice(0, 5).map(([key, val]) => (
-                    <button
-                      key={key}
-                      onClick={() => setActiveCategoryFilter(key)}
-                      className={`px-2 py-1 rounded-md text-[9px] font-sans font-bold tracking-wider uppercase border transition-colors cursor-pointer ${
-                        activeCategoryFilter === key
-                          ? "bg-stone-900 text-amber-300 border-stone-900"
-                          : "bg-white text-stone-600 border-stone-200 hover:bg-stone-50"
-                      }`}
-                    >
-                      {val.label}
-                    </button>
-                  ))}
-                </div>
-
-                {/* List scroll of curated matching cafes */}
-                <div className="space-y-2 pt-2 border-t border-stone-100">
-                  {cafesWithCategories
-                    .filter(c => activeCategoryFilter === "all" || c.category === activeCategoryFilter)
-                    .map((cafe) => {
-                      const isSel = selectedCafe?.id === cafe.id;
-                      return (
-                        <div
-                          key={cafe.id}
-                          onClick={() => handleMarkerClick(cafe)}
-                          className={`p-3 rounded-xl border transition-all cursor-pointer flex gap-3 items-center ${
-                            isSel 
-                              ? "bg-amber-500/10 border-amber-500 shadow-sm" 
-                              : "bg-white border-stone-200 hover:border-amber-700/60"
-                          }`}
-                        >
-                          <img 
-                            src={cafe.images.card} 
-                            alt={cafe.name} 
-                            className="w-12 h-12 object-cover rounded-lg bg-stone-50 shrink-0 border border-stone-100" 
-                            referrerPolicy="no-referrer"
-                          />
-                          <div className="flex-1 min-w-0">
-                            <h5 className="font-display font-bold text-stone-900 text-xs truncate leading-tight">{cafe.name}</h5>
-                            <span className="text-[9px] text-stone-400 font-mono block mt-0.5">{cafe.neighborhood}</span>
-                            <div className="flex items-center gap-1 mt-1 text-[10px] font-medium text-amber-800">
-                              <Star className="w-3 h-3 fill-amber-500 text-amber-500 shrink-0" />
-                              <span>{cafe.rating} • {cafe.theme}</span>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                </div>
-              </div>
-            )}
-
-            {/* SUB-VIEW 2: ADVANCED TRAILS AND PATHS EXPLORER */}
-            {activeSubTab === "trails" && (
-              <div className="p-4 space-y-4 text-left">
-                <div className="space-y-1 select-none">
-                  <h4 className="text-xs font-mono font-bold uppercase text-amber-800 flex items-center gap-1.5">
-                    <Compass className="w-4 h-4 text-amber-700" />
-                    <span>Trails & Walks Builder</span>
-                  </h4>
-                  <p className="text-[11px] text-stone-500 leading-normal font-sans">
-                    Toggle beautiful hiking loops or café treks. Recompute travel times live via directions server API.
-                  </p>
-                </div>
-
-                {/* Search / Multi-filter Group for Predefined Trails */}
-                <div className="p-3 bg-stone-50 rounded-xl border border-stone-200 space-y-2">
-                  <div className="space-y-1">
-                    <label className="text-[9px] font-mono uppercase tracking-wider text-stone-400 font-bold block">Difficulty Level</label>
-                    <div className="flex flex-wrap gap-1">
-                      {DIFFICULTY_OPTIONS.map((diff) => (
-                        <button
-                          key={diff}
-                          onClick={() => setDifficultyFilter(diff)}
-                          className={`px-2 py-0.5 rounded text-[9px] font-mono font-bold uppercase tracking-wide border cursor-pointer transition-all ${
-                            difficultyFilter === diff
-                              ? "bg-amber-800 text-white border-amber-800"
-                              : "bg-white text-stone-650 border-stone-200 hover:bg-stone-50"
-                          }`}
-                        >
-                          {diff === "all" ? "All Diff" : diff}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="space-y-1 pt-1 border-t border-stone-150">
-                    <label className="text-[9px] font-mono uppercase tracking-wider text-stone-400 font-bold block">Walk category</label>
-                    <div className="flex flex-wrap gap-1">
-                      {TYPE_OPTIONS.map((typeVal) => (
-                        <button
-                          key={typeVal}
-                          onClick={() => setTypeFilter(typeVal)}
-                          className={`px-2 py-0.5 rounded text-[9px] font-mono font-bold uppercase tracking-wide border cursor-pointer transition-all ${
-                            typeFilter === typeVal
-                              ? "bg-amber-800 text-white border-amber-800"
-                              : "bg-white text-stone-650 border-stone-200 hover:bg-stone-50"
-                          }`}
-                        >
-                          {typeVal === "all" ? "All categories" : typeVal}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* List Scroll of trails matched filters */}
-                <div className="space-y-2">
-                  <label className="text-[10px] font-mono uppercase text-stone-400 font-bold block px-1 select-none">Predefined Journeys</label>
-                  {filteredTrails.map((trail) => {
-                    const isSelected = selectedTrail?.id === trail.id;
-                    return (
-                      <div
-                        key={trail.id}
-                        onClick={() => handleSelectTrail(trail)}
-                        className={`p-3.5 rounded-xl border transition-all cursor-pointer flex flex-col text-left ${
-                          isSelected 
-                            ? "bg-amber-800/10 border-amber-700 shadow-md" 
-                            : "bg-white border-stone-200 hover:border-amber-700/60"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <h5 className="font-display font-medium text-xs text-stone-900 group-hover:text-amber-800 font-bold">
-                            {trail.name}
-                          </h5>
-                          <span className={`text-[8px] px-1.5 py-0.5 font-mono uppercase tracking-wide rounded ${
-                            trail.difficulty === "Easy" ? "bg-green-50 text-green-700 border border-green-200" :
-                            trail.difficulty === "Medium" ? "bg-yellow-50 text-yellow-800 border-amber-200" : "bg-red-50 text-red-700 border-red-200"
-                          }`}>
-                            {trail.difficulty}
-                          </span>
-                        </div>
-                        <p className="text-[10.5px] text-stone-500 font-sans mt-1 leading-snug line-clamp-2">
-                          {trail.description}
-                        </p>
-                        <div className="flex gap-2 items-center mt-2.5 text-[9px] font-mono text-stone-405 text-stone-500 uppercase tracking-widest leading-none">
-                          <span className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-bold">{trail.type}</span>
-                          <span>•</span>
-                          <span>{trail.stops.length} checkpoints</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                  {filteredTrails.length === 0 && (
-                    <p className="text-xs text-stone-400 italic font-sans text-center py-4">No custom trails match these filters.</p>
-                  )}
-                </div>
-
-                {/* Stops sequencing of currently active trail */}
-                {selectedTrail && (
-                  <div className="pt-4 border-t border-stone-150 space-y-3">
-                    <div className="space-y-0.5 select-none">
-                      <span className="text-[9px] font-mono uppercase text-stone-400 font-bold">Journey Route Steps</span>
-                      <h6 className="font-display font-extrabold text-stone-900 text-xs">Recommended Sequence</h6>
-                    </div>
-
-                    <div className="relative border-l ml-2.5 pl-4.5 pl-4 space-y-4">
-                      {orderedStops.map((stop, ind) => {
-                        const isPrimaryStart = stop.id === startStopId;
-                        const isStopActive = activeStop?.id === stop.id;
-                        return (
-                          <div 
-                            key={stop.id} 
-                            onClick={() => handleFetchStopDetails(stop)}
-                            className={`relative space-y-0.5 text-left group cursor-pointer p-1.5 rounded-lg transition-all ${
-                              isStopActive ? "bg-amber-500/10 border-l-2 border-amber-700" : "hover:bg-stone-50"
-                            }`}
-                          >
-                            {/* Sequence sphere */}
-                            <span className={`absolute -left-[24px] top-2.5 w-4 h-4 rounded-full flex items-center justify-center text-[8.5px] font-mono font-bold leading-none border-2 ${
-                              isPrimaryStart 
-                                ? "bg-stone-900 text-amber-300 border-stone-900 shadow-md animate-pulse" 
-                                : "bg-white text-stone-700 border-stone-300"
-                            }`}>
-                              {ind + 1}
-                            </span>
-
-                            <div className="flex items-center gap-1.5">
-                              <span className="font-display font-medium text-xs text-stone-850 text-stone-900 leading-tight block group-hover:text-amber-800 transition-colors">
-                                {stop.name}
-                              </span>
-                              {isPrimaryStart && (
-                                <span className="bg-stone-900 text-amber-300 text-[6.5px] px-1 font-mono tracking-widest rounded leading-relaxed select-none">START</span>
-                              )}
-                            </div>
-                            <p className="text-[10px] text-stone-500 font-light font-sans line-clamp-1 leading-normal">
-                              {stop.description}
-                            </p>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-        )}
-
-        {/* ==================================================== */}
-        {/* 2. LIVE INTERACTIVE GOOGLE MAP CANVAS & HUD OVERLAYS */}
-        {/* ==================================================== */}
-        <div className="flex-1 relative h-full flex flex-col justify-end" style={{ minHeight: isMapFullscreen ? "100vh" : "auto" }}>
-          
-          {/* Floating Navigation Controls, Category Switchers & Place Search Bars */}
-          <div className="absolute top-4 left-4 right-4 z-10 flex flex-col gap-3 pointer-events-none">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 max-w-full">
-              
-              {/* Controls bar left: curated filters or trail routing dynamic details */}
-              <div className="pointer-events-auto shrink-0 flex flex-wrap gap-1.5">
-                {activeSubTab === "cafes" ? (
-                  /* Cafe category scrolling bar */
-                  <div className="flex flex-wrap items-center gap-1.5 p-1 bg-stone-950/80 backdrop-blur-md rounded-xl border border-stone-800 shadow-xl max-w-full overflow-x-auto scrollbar-none">
-                    {Object.entries(categoryMeta).map(([catKey, val]: [string, any]) => {
-                      const Icon = val.icon;
-                      const isFilterActive = activeCategoryFilter === catKey;
-                      return (
-                        <button
-                          key={catKey}
-                          onClick={() => setActiveCategoryFilter(catKey)}
-                          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[9.5px] font-sans font-extrabold tracking-wider uppercase transition-all duration-205 cursor-pointer text-nowrap shrink-0 ${
-                            isFilterActive
-                              ? "bg-amber-800 text-stone-100 shadow-md"
-                              : "text-stone-300 hover:text-white hover:bg-stone-850/85"
-                          }`}
-                        >
-                          <Icon className={`w-3.5 h-3.5 ${isFilterActive ? "text-amber-300" : "text-stone-400 group-hover:text-amber-400"}`} />
-                          <span>{val.label}</span>
-                        </button>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  /* Trails routes active detail panel showing live dynamic calculations */
-                  selectedTrail && (
-                    <div className="flex flex-col gap-1.5 p-3.5 bg-stone-950/95 backdrop-blur-md rounded-2xl border border-stone-800 shadow-2xl max-w-sm text-left animate-fade-in text-white">
-                      <span className="text-[8.5px] font-mono uppercase tracking-widest text-amber-400 font-bold block leading-none">Directions Polyline Active</span>
-                      <h5 className="font-display font-black text-xs text-stone-100 mt-0.5 truncate max-w-[260px]">{selectedTrail.name}</h5>
-                      
-                      {/* Segmented Travel Modes button row */}
-                      <div className="flex items-center gap-1 mt-2.5 bg-stone-900 p-0.5 rounded-lg border border-stone-800">
-                        {(["WALKING", "DRIVING", "BICYCLING", "TRANSIT", "TWO_WHEELER"] as const).map((mode) => (
-                          <button
-                            key={mode}
-                            onClick={() => setTravelMode(mode)}
-                            className={`p-1.5 rounded text-[8.5px] font-mono tracking-wide uppercase transition-all cursor-pointer font-bold ${
-                              travelMode === mode
-                                ? "bg-amber-800 text-stone-100"
-                                : "text-stone-400 hover:text-white hover:bg-stone-800"
-                            }`}
-                            title={`Set Travel Mode to ${mode}`}
-                          >
-                            {mode === "DRIVING" ? "Car" :
-                             mode === "WALKING" ? "Walk" :
-                             mode === "BICYCLING" ? "Bike" :
-                             mode === "TRANSIT" ? "Transit" : "Two‑W"}
-                          </button>
-                        ))}
-                      </div>
-
-                      {/* Display live values calculated from directionsService */}
-                      <div className="flex items-center justify-between gap-4 pt-2.5 border-t border-stone-900 mt-2">
-                        <div className="space-y-0.5">
-                          <span className="text-[8px] font-mono text-stone-450 text-stone-400 block tracking-widest leading-none">DISTANCE</span>
-                          <span className="text-xs font-mono font-black text-amber-300 animate-fade-in">
-                            {routeDistance || selectedTrail.distanceFallback}
-                          </span>
-                        </div>
-                        <div className="space-y-0.5">
-                          <span className="text-[8px] font-mono text-stone-450 text-stone-400 block tracking-widest leading-none">EST. DURATION</span>
-                          <span className="text-xs font-mono font-black text-amber-300 animate-fade-in">
-                            {routeDuration || selectedTrail.durationFallback}
-                          </span>
-                        </div>
-                        <div className="space-y-0.5">
-                          <span className="text-[8px] font-mono text-stone-450 text-stone-400 block tracking-widest leading-none">ROUTE CONF</span>
-                          <span className="text-[9px] font-mono uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-505/20 px-1 rounded block">
-                            {isRouteUnavailable ? "FALLBACK" : "LIVE GOOGLE"}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Gentle disclaimer about Travel mode availability inside high-altitude hill topography */}
-                      {isRouteUnavailable && (
-                        <p className="text-[8px] text-amber-500 font-mono mt-1 font-light leading-none">
-                          * {travelMode} not direct or offline. Fallback metrics active.
-                        </p>
-                      )}
-                    </div>
-                  )
-                )}
-              </div>
-
-              {/* Utility action headers (fullscreen toggles, maps dark style) */}
-              <div className="flex items-center gap-2 pointer-events-auto self-end sm:self-auto shrink-0 animate-fade-in">
-                {isMapFullscreen && (
-                  <button
-                    onClick={() => {
-                      setIsMapFullscreen(false);
-                      setSelectedCafe(null);
-                      setSelectedDiscoveredPlace(null);
-                      setActiveStop(null);
-                    }}
-                    className="px-3.5 py-2 bg-stone-950/95 border border-stone-850 hover:bg-stone-900 text-amber-450 text-amber-300 rounded-xl shadow-2xl transition-all cursor-pointer flex items-center gap-1.5 text-[9.5px] font-mono tracking-wider font-bold h-10 select-none animate-bounce"
-                  >
-                    <X className="w-4 h-4 shrink-0 font-bold" />
-                    <span>CLOSE FULLSCREEN</span>
-                  </button>
-                )}
-
-                <button
-                  onClick={() => setIsMapFullscreen(!isMapFullscreen)}
-                  className="p-2.5 rounded-xl bg-stone-950/85 backdrop-blur-md border border-stone-800 hover:bg-stone-900 text-amber-300 shadow-xl transition-all cursor-pointer flex items-center justify-center shrink-0 w-10 h-10"
-                  title="Toggle Fullscreen Mode"
-                >
-                  <Navigation className="w-4.5 h-4.5 text-amber-350" />
-                </button>
-
-                <button
-                  onClick={() => setMapTheme(mapTheme === "light" ? "dark" : "light")}
-                  className="p-2.5 rounded-xl bg-stone-950/85 backdrop-blur-md border border-stone-800 hover:bg-stone-900 text-amber-300 shadow-xl transition-all cursor-pointer flex items-center justify-center shrink-0 w-10 h-10"
-                  title="Toggle Google Map Visual Theme"
-                >
-                  {mapTheme === "light" ? <Moon className="w-4.5 h-4.5 text-amber-30s text-amber-300" /> : <Sun className="w-4.5 h-4.5 text-amber-400" />}
-                </button>
-              </div>
-            </div>
-
-            {/* Quick autocomplete google places search for active cafes tab */}
-            {activeSubTab === "cafes" && (
-              <form 
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  if (!searchQuery.trim()) return;
-                  setIsSearching(true);
-                  try {
-                    const dynamicPlacesLib = (window as any).google?.maps?.places;
-                    const mapInstance = (window as any).googleMapsInstanceForTrails;
-                    if (!dynamicPlacesLib || !mapInstance) return;
-
-                    const searchService = new dynamicPlacesLib.PlacesService(mapInstance);
-                    searchService.textSearch(
-                      {
-                        query: `${searchQuery} in Shillong Meghalaya`,
-                        location: mapInstance.getCenter() || shillongCenter,
-                        radius: 8000
-                      },
-                      (results: any[], status: any) => {
-                        if (status === "OK" && results) {
-                          const formattedPay = results.map((r: any) => ({
-                            id: r.place_id,
-                            displayName: r.name,
-                            location: r.geometry?.location,
-                            formattedAddress: r.formatted_address,
-                            rating: r.rating || null,
-                            userRatingsTotal: r.user_ratings_total || null,
-                            photos: r.photos || []
-                          }));
-                          setDiscoveredPlaces(formattedPay);
-                          if (formattedPay[0]?.location) {
-                            mapInstance.panTo(formattedPay[0].location);
-                            mapInstance.setZoom(15);
-                          }
-                        }
-                        setIsSearching(false);
-                      }
-                    );
-                  } catch (err) {
-                    console.error("Live discovery failed:", err);
-                    setIsSearching(false);
-                  }
-                }}
-                className="flex items-center gap-1.5 max-w-sm pointer-events-auto shadow-2xl p-1 bg-stone-950/90 border border-stone-800 rounded-xl w-full animate-fade-in"
-              >
-                <div className="flex-1 flex items-center gap-1.5 px-2 bg-stone-900 rounded-lg">
-                  <Search className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-                  <input 
-                    type="text" 
-                    placeholder="Search cafes or landmarks..." 
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full bg-transparent border-none text-white text-[11px] font-sans placeholder-stone-500 py-1.5 focus:outline-none"
-                  />
-                  {searchQuery && (
-                    <button 
-                      type="button" 
-                      onClick={() => {
-                        setSearchQuery("");
-                        setDiscoveredPlaces([]);
-                        setSelectedDiscoveredPlace(null);
-                      }}
-                      className="text-stone-400 hover:text-white p-1"
-                    >
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
-                </div>
-                <button
-                  type="submit"
-                  className="bg-amber-800 hover:bg-amber-900 text-stone-100 text-[9.5px] font-mono font-bold tracking-wide uppercase px-3 py-2 rounded-lg shrink-0 cursor-pointer disabled:opacity-50"
-                  disabled={isSearching}
-                >
-                  {isSearching ? "Searching..." : "Search"}
-                </button>
-              </form>
-            )}
-          </div>
-
-          {/* Actual Google Map Instance wrapping with map attributes */}
-          <div className="w-full h-full relative" style={{ minHeight: isMapFullscreen ? "100vh" : "100%" }}>
-            <LiveMapCanvas 
-              cafes={cafesWithCategories}
-              activeCategoryFilter={activeCategoryFilter}
-              selectedCafe={selectedCafe}
-              onSelectCafe={(c) => {
-                setSelectedCafe(c);
-                onSelectCafe(c);
-                setSelectedDiscoveredPlace(null);
-                setActiveStop(null);
-              }}
-              mapTheme={mapTheme}
-              setZoomLevel={setZoomLevel}
-              shillongCenter={shillongCenter}
-              discoveredPlaces={discoveredPlaces}
-              selectedDiscoveredPlace={selectedDiscoveredPlace}
-              setSelectedDiscoveredPlace={(p) => {
-                setSelectedCafe(null);
-                setSelectedDiscoveredPlace(p);
-                setActiveStop(null);
-              }}
-              activeSubTab={activeSubTab}
-              selectedTrail={selectedTrail}
-              orderedStops={orderedStops}
-              startStopId={startStopId}
-              travelMode={travelMode}
-              onRouteCalculated={(duration, distance, orderFailed) => {
-                setRouteDuration(duration);
-                setRouteDistance(distance);
-                setIsRouteUnavailable(orderFailed);
-              }}
-              onSelectTrailStop={(stop) => {
-                setSelectedCafe(null);
-                setSelectedDiscoveredPlace(null);
-                handleFetchStopDetails(stop);
-              }}
-            />
-          </div>
-
-          {/* ==================================================== */}
-          {/* 3. RESPONSIVE sidebar INFO PANEL CARD OR BOTTOM SHEET */}
-          {/* ==================================================== */}
-          <AnimatePresence>
-            {/* Case A: Curated static cafe popup */}
-            {selectedCafe && activeSubTab === "cafes" && (
-              <CuratedCafeInfoCard 
-                cafe={selectedCafe}
-                categoryMeta={categoryMeta}
-                getAvgRating={getAvgRating}
-                getCafeCategory={getCafeCategory}
-                setSelectedCafe={setSelectedCafe}
-                triggerChatAsk={triggerChatAsk}
-                isSyncing={isSyncing}
-                setIsSyncing={setIsSyncing}
-              />
-            )}
-
-            {/* Case B: Discovered Google Place live query card */}
-            {selectedDiscoveredPlace && activeSubTab === "cafes" && (
-              <DiscoveredPlaceInfoCard 
-                place={selectedDiscoveredPlace}
-                setSelectedDiscoveredPlace={setSelectedDiscoveredPlace}
-              />
-            )}
-
-            {/* Case C: Trails Step POI verified stop overview card */}
-            {activeStop && activeSubTab === "trails" && (
-              <TrailStopDetailsPanel 
-                stop={activeStop}
-                placesData={stopPlacesData}
-                isLoading={isLoadingStopDetails}
-                isStartingPoint={activeStop.id === startStopId}
-                onSetAsStartPoint={() => handleSetStartPoint(activeStop.id)}
-                onClose={() => setActiveStop(null)}
-              />
-            )}
-          </AnimatePresence>
+        <div className="ml-auto flex items-center gap-2">
+          <button
+            onClick={() => setMapTheme(mapTheme === "dark" ? "light" : "dark")}
+            className="p-1.5 bg-stone-100 hover:bg-stone-200 text-stone-600 rounded-lg transition-colors"
+            aria-label="Toggle map theme"
+          >
+            {mapTheme === "dark" ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
+          </button>
+          <button
+            onClick={() => setIsMapFullscreen(!isMapFullscreen)}
+            className="p-1.5 bg-stone-100 hover:bg-stone-200 text-stone-600 rounded-lg transition-colors"
+            aria-label="Toggle fullscreen"
+          >
+            <Eye className="w-3.5 h-3.5" />
+          </button>
         </div>
       </div>
-    </APIProvider>
-  );
-}
 
-/* ==================================================== */
-/* MAP CANVAS VIEW COMPONENT WITH HOOKS BINDING         */
-/* ==================================================== */
-function LiveMapCanvas({
-  cafes,
-  activeCategoryFilter,
-  selectedCafe,
-  onSelectCafe,
-  mapTheme,
-  setZoomLevel,
-  shillongCenter,
-  discoveredPlaces,
-  selectedDiscoveredPlace,
-  setSelectedDiscoveredPlace,
-  activeSubTab,
-  selectedTrail,
-  orderedStops,
-  startStopId,
-  travelMode,
-  onRouteCalculated,
-  onSelectTrailStop
-}: {
-  cafes: any[];
-  activeCategoryFilter: string;
-  selectedCafe: any | null;
-  onSelectCafe: (c: any) => void;
-  mapTheme: "light" | "dark";
-  setZoomLevel: (z: number) => void;
-  shillongCenter: google.maps.LatLngLiteral;
-  discoveredPlaces: any[];
-  selectedDiscoveredPlace: any | null;
-  setSelectedDiscoveredPlace: (p: any | null) => void;
-  activeSubTab: "cafes" | "trails";
-  selectedTrail: Trail | null;
-  orderedStops: TrailStop[];
-  startStopId: string | null;
-  travelMode: "WALKING" | "DRIVING" | "TRANSIT" | "BICYCLING" | "TWO_WHEELER";
-  onRouteCalculated: (duration: string, distance: string, failed: boolean) => void;
-  onSelectTrailStop: (stop: TrailStop) => void;
-}) {
-  const map = useMap();
-  
-  useEffect(() => {
-    if (map) {
-      (window as any).googleMapsInstanceForTrails = map;
-    }
-  }, [map]);
+      {/* Category Filter Bar (Cafes Mode) */}
+      {activeSubTab === "cafes" && (
+        <div className="flex gap-1.5 flex-wrap mb-2">
+          {Object.entries(categoryMeta).map(([key, val]) => {
+            const Icon = val.icon;
+            return (
+              <button
+                key={key}
+                onClick={() => setActiveCategoryFilter(key)}
+                className={`flex items-center gap-1 px-2 py-1 text-[10px] font-mono uppercase tracking-wider rounded-lg border transition-colors ${
+                  activeCategoryFilter === key
+                    ? `${val.bg} ${val.text} ${val.border} border`
+                    : "bg-stone-50 text-stone-500 border-stone-200 hover:bg-stone-100"
+                }`}
+              >
+                <Icon className="w-3 h-3" />
+                {val.label}
+              </button>
+            );
+          })}
+        </div>
+      )}
 
-  useEffect(() => {
-    if (!map) return;
-    if (activeSubTab === "cafes" && selectedCafe && selectedCafe.coordinates) {
-      map.panTo({ lat: selectedCafe.coordinates.lat - 0.0015, lng: selectedCafe.coordinates.lng });
-      map.setZoom(16);
-    }
-  }, [selectedCafe, map, activeSubTab]);
+      {/* Trails Filter + Live Search (Trails Mode) */}
+      {activeSubTab === "trails" && (
+        <div className="flex flex-wrap items-center gap-2 mb-2">
+          <select
+            value={difficultyFilter}
+            onChange={(e) => setDifficultyFilter(e.target.value)}
+            className="text-[11px] font-mono border border-stone-200 rounded-lg px-2 py-1 bg-white text-stone-700"
+          >
+            {DIFFICULTY_OPTIONS.map((d) => (
+              <option key={d.value} value={d.value}>{d.label}</option>
+            ))}
+          </select>
+          <select
+            value={typeFilter}
+            onChange={(e) => setTypeFilter(e.target.value)}
+            className="text-[11px] font-mono border border-stone-200 rounded-lg px-2 py-1 bg-white text-stone-700"
+          >
+            {TYPE_OPTIONS.map((t) => (
+              <option key={t.value} value={t.value}>{t.label}</option>
+            ))}
+          </select>
+        </div>
+      )}
 
-  useEffect(() => {
-    if (!map || activeSubTab !== "trails" || orderedStops.length === 0) return;
-    const bounds = new google.maps.LatLngBounds();
-    orderedStops.forEach((stop) => bounds.extend(stop.coordinates));
-    map.fitBounds(bounds);
-    const zoomLimit = map.getZoom() || 14;
-    if (zoomLimit > 15) {
-      map.setZoom(14);
-    }
-  }, [orderedStops, map, activeSubTab]);
+      {/* Live Discovery Search Bar */}
+      {activeSubTab === "cafes" && (
+        <div className="flex items-center gap-2 mb-2">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-stone-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleLivePlacesSearch()}
+              placeholder="Discover a place live on map…"
+              className="w-full pl-8 pr-3 py-1.5 text-[11px] font-sans bg-white border border-stone-200 rounded-xl text-stone-700 placeholder-stone-400 focus:outline-none focus:border-stone-400"
+            />
+          </div>
+          <button
+            onClick={handleLivePlacesSearch}
+            disabled={isSearching}
+            className="px-3 py-1.5 bg-stone-900 text-amber-300 text-[10px] font-mono uppercase tracking-wider rounded-xl hover:bg-stone-800 transition-colors disabled:opacity-50"
+          >
+            {isSearching ? <RefreshCw className="w-3 h-3 animate-spin" /> : "Go"}
+          </button>
+        </div>
+      )}
 
-  useEffect(() => {
-    if (!map) return;
-    const l = map.addListener("zoom_changed", () => {
-      setZoomLevel(map.getZoom() || 14);
-    });
-    return () => l.remove();
-  }, [map, setZoomLevel]);
+      {/* Trails List Sidebar or Inline */}
+      {activeSubTab === "trails" && !selectedTrail && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+          {filteredTrails.map((trail) => (
+            <button
+              key={trail.id}
+              onClick={() => handleSelectTrail(trail)}
+              className="text-left bg-white border border-stone-200 rounded-2xl p-3 hover:border-amber-400 hover:bg-amber-50/30 transition-all group"
+            >
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <p className="text-[11px] font-mono font-bold text-stone-800 group-hover:text-amber-900 leading-tight">{trail.name}</p>
+                  <p className="text-[9px] text-stone-400 mt-0.5 font-sans leading-snug line-clamp-2">{trail.description}</p>
+                </div>
+                <ChevronRight className="w-4 h-4 text-stone-300 group-hover:text-amber-600 shrink-0 mt-0.5" />
+              </div>
+              <div className="flex gap-1.5 mt-2 flex-wrap">
+                <span className="text-[8px] px-1.5 py-0.5 bg-stone-100 text-stone-500 rounded font-mono uppercase">{trail.difficulty}</span>
+                <span className="text-[8px] px-1.5 py-0.5 bg-amber-50 text-amber-700 rounded font-mono uppercase">{trail.estimatedTime}</span>
+                <span className="text-[8px] px-1.5 py-0.5 bg-stone-100 text-stone-500 rounded font-mono uppercase">{trail.stops.length} stops</span>
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
 
-  const filteredCafes = cafes.filter(
-    (c) => activeCategoryFilter === "all" || c.category === activeCategoryFilter
-  );
+      {/* Active Trail Info Strip */}
+      {activeSubTab === "trails" && selectedTrail && (
+        <div className="flex items-center gap-3 bg-amber-950 text-amber-100 rounded-xl px-3 py-2 mb-2 text-[11px] font-mono">
+          <Waypoints className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+          <span className="font-bold text-amber-300 truncate">{selectedTrail.name}</span>
+          <span className="text-amber-600">·</span>
+          <span className="text-amber-400 shrink-0">{orderedStops.length} stops</span>
+          {routeDuration && (
+            <>
+              <span className="text-amber-600">·</span>
+              <span className="text-amber-300 flex items-center gap-1 shrink-0">
+                <Gauge className="w-3 h-3" />{routeDuration}
+              </span>
+              <span className="text-amber-600">·</span>
+              <span className="text-amber-300 shrink-0">{routeDistance}</span>
+            </>
+          )}
+          {isRouteUnavailable && (
+            <span className="text-amber-500 ml-auto flex items-center gap-1">
+              <HelpCircle className="w-3 h-3" /> Route unavailable
+            </span>
+          )}
+          <button
+            onClick={() => {
+              setSelectedTrail(null);
+              setOrderedStops([]);
+              setActiveStop(null);
+            }}
+            className="ml-auto text-amber-500 hover:text-white transition-colors shrink-0"
+          >
+            <X className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
 
-  return (
-    <div className="w-full h-full relative">
-      <Map
-        id="gmaps-live-canvas"
-        defaultCenter={shillongCenter}
-        defaultZoom={14}
-        gestureHandling="cooperative"
-        disableDefaultUI={true}
-        zoomControl={true}
-        mapId={mapTheme === "dark" ? "SHILLONG_DARK_ID" : "DEMO_MAP_ID"}
-        styles={mapTheme === "dark" ? darkMapStyle : []}
-        style={{ width: "100%", height: "100%" }}
-        internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
-      >
-        {/* ==================================================== */}
-        {/* VIEW A: CAFES DISCOVERY LAYER MARKERS */}
-        {/* ==================================================== */}
-        {activeSubTab === "cafes" && (
-          <>
-            {filteredCafes.map((cafe) => {
+      {/* Travel Mode Selector */}
+      {activeSubTab === "trails" && selectedTrail && (
+        <div className="flex gap-1.5 mb-2 flex-wrap">
+          {(["DRIVING", "WALKING", "BICYCLING", "TRANSIT"] as const).map((mode) => (
+            <button
+              key={mode}
+              onClick={() => setTravelMode(mode)}
+              className={`flex items-center gap-1 px-2 py-1 text-[9px] font-mono uppercase tracking-wider rounded-lg border transition-colors ${
+                travelMode === mode
+                  ? "bg-stone-900 text-amber-300 border-stone-700"
+                  : "bg-stone-50 text-stone-500 border-stone-200 hover:bg-stone-100"
+              }`}
+            >
+              {mode === "DRIVING" && <Car className="w-3 h-3" />}
+              {mode === "WALKING" && <Navigation className="w-3 h-3" />}
+              {mode === "BICYCLING" && <ArrowRight className="w-3 h-3" />}
+              {mode === "TRANSIT" && <Gauge className="w-3 h-3" />}
+              {mode}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Ordered Stop Strip for selected trail */}
+      {activeSubTab === "trails" && selectedTrail && orderedStops.length > 0 && (
+        <div className="flex gap-1.5 overflow-x-auto pb-1 mb-2 scrollbar-none">
+          {orderedStops.map((stop, i) => (
+            <button
+              key={stop.id}
+              onClick={() => handleFetchStopDetails(stop)}
+              className={`shrink-0 flex items-center gap-1.5 px-2 py-1 rounded-lg border text-[9px] font-mono uppercase tracking-wider transition-colors ${
+                activeStop?.id === stop.id
+                  ? "bg-amber-800 text-white border-amber-700"
+                  : stop.id === startStopId
+                  ? "bg-stone-900 text-amber-300 border-stone-700"
+                  : "bg-white text-stone-600 border-stone-200 hover:bg-stone-50"
+              }`}
+            >
+              <span className="font-black text-[8px]">{i + 1}</span>
+              <span className="max-w-[80px] truncate">{stop.name}</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* THE MAP */}
+      <div className={`relative rounded-2xl overflow-hidden border border-stone-200 ${isMapFullscreen ? "flex-1" : "h-[480px] md:h-[560px]"}`}>
+        <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>
+          <Map
+            mapId={mapId}
+            defaultCenter={shillongCenter}
+            defaultZoom={zoomLevel}
+            gestureHandling="greedy"
+            disableDefaultUI={false}
+            styles={mapTheme === "dark" ? darkMapStyle : undefined}
+            onZoomChanged={(ev) => setZoomLevel(ev.detail.zoom)}
+            className="w-full h-full"
+          >
+            {/* Curated Cafe Markers */}
+            {activeSubTab === "cafes" && filteredCafes.map((cafe) => {
+              const meta = categoryMeta[cafe.category] || categoryMeta["cafe"];
               const isSelected = selectedCafe?.id === cafe.id;
               return (
                 <AdvancedMarker
                   key={cafe.id}
-                  position={cafe.coordinates || shillongCenter}
-                  onClick={() => onSelectCafe(cafe)}
+                  position={cafe.coordinates}
+                  onClick={() => handleMarkerClick(cafe)}
                   title={cafe.name}
                 >
-                  <div className={`relative flex flex-col items-center filter drop-shadow-md select-none group transition-all duration-300 ${
-                    isSelected ? "scale-115" : "hover:scale-110"
-                  }`}>
+                  <div
+                    className={`relative flex flex-col items-center filter drop-shadow-md select-none transition-transform ${
+                      isSelected ? "scale-125 z-10" : "hover:scale-110"
+                    }`}
+                  >
+                    <div
+                      className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center shadow-lg"
+                      style={{ backgroundColor: meta.colorHex }}
+                    >
+                      <meta.icon className="w-3.5 h-3.5 text-white" />
+                    </div>
                     {isSelected && (
-                      <div className="absolute -inset-2 rounded-full border border-dashed border-amber-600 animate-spin-slow pointer-events-none" />
+                      <div className="absolute -inset-1 rounded-full border-2 border-amber-400 animate-ping pointer-events-none" />
                     )}
-
-                    <div className={`w-8.5 h-8.5 rounded-full border-2 flex items-center justify-center shadow-lg transition-colors ${
-                      isSelected ? "border-amber-500 bg-stone-900 text-amber-300" : "border-stone-250 bg-white text-stone-800"
-                    }`}>
-                      <Coffee className="w-4 h-4 text-amber-800" />
-                    </div>
-
-                    <div className="absolute -top-1.5 -right-1.5 bg-zinc-950 border border-stone-800 px-1 py-0.5 rounded text-[8px] font-black text-amber-400 leading-none flex items-center gap-0.5">
-                      <span>★</span><span>{cafe.rating}</span>
-                    </div>
-
-                    <div className={`absolute -bottom-6 whitespace-nowrap bg-stone-900 text-stone-105 px-2 py-0.5 border border-stone-800 text-[9px] text-white rounded shadow-xl transition-all pointer-events-none ${
-                      isSelected ? "scale-100 opacity-100 font-bold" : "scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100"
-                    }`}>
-                      {cafe.name}
-                    </div>
                   </div>
                 </AdvancedMarker>
               );
             })}
 
-            {/* Discovered dynamic search markers */}
-            {discoveredPlaces.map((pl) => {
-              const pos = pl.location ? { lat: pl.location.lat(), lng: pl.location.lng() } : null;
-              if (!pos) return null;
-              const isSel = selectedDiscoveredPlace?.id === pl.id;
+            {/* Live Discovered Place Markers */}
+            {activeSubTab === "cafes" && discoveredPlaces.map((place) => (
+              <AdvancedMarker
+                key={place.id}
+                position={{ lat: place.location?.latitude, lng: place.location?.longitude }}
+                onClick={() => {
+                  setSelectedCafe(null);
+                  setSelectedDiscoveredPlace(place);
+                }}
+                title={place.displayName}
+              >
+                <div className="w-7 h-7 rounded-full bg-emerald-600 border-2 border-white flex items-center justify-center shadow-md hover:scale-110 transition-transform">
+                  <Sparkles className="w-3 h-3 text-white" />
+                </div>
+              </AdvancedMarker>
+            ))}
 
-              return (
-                <AdvancedMarker
-                  key={pl.id}
-                  position={pos}
-                  onClick={() => setSelectedDiscoveredPlace(pl)}
-                  title={pl.displayName}
-                >
-                  <div className={`relative flex flex-col items-center select-none group transition-transform ${
-                    isSel ? "scale-115 animate-bounce" : "hover:scale-110"
-                  }`}>
-                    <div className={`w-8 h-8 rounded-full border flex items-center justify-center shadow-lg ${
-                      isSel ? "border-emerald-500 bg-emerald-950 text-emerald-300" : "border-emerald-300 bg-white text-emerald-800"
-                    }`}>
-                      <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
-                    </div>
-
-                    {pl.rating && (
-                      <div className="absolute -top-1.5 -right-1.5 bg-neutral-900 border border-stone-800 px-1 py-0.5 rounded text-[7px] font-bold text-emerald-400">
-                        {pl.rating}
+            {/* Trail Stop Markers */}
+            {activeSubTab === "trails" && selectedTrail && (
+              <>
+                {orderedStops.map((stop, ind) => {
+                  const isStart = stop.id === startStopId;
+                  return (
+                    <AdvancedMarker
+                      key={stop.id}
+                      position={stop.coordinates}
+                      onClick={() => handleFetchStopDetails(stop)}
+                      title={`Stop ${ind + 1}: ${stop.name}`}
+                    >
+                      <div className={`relative flex flex-col items-center filter drop-shadow-md select-none group hover:scale-110 transition-transform`}>
+                        {isStart ? (
+                          <div className="absolute -inset-2 bg-amber-500/10 rounded-full animate-ping pointer-events-none" />
+                        ) : (
+                          <div className="absolute -inset-1.5 bg-stone-900/10 rounded-full pointer-events-none" />
+                        )}
+                        <div className={`w-8.5 h-8.5 rounded-full border-2 flex items-center justify-center shadow-xl transition-colors ${
+                          isStart
+                            ? "bg-stone-900 text-amber-300 border-amber-500"
+                            : "bg-amber-800 text-white border-white"
+                        }`}>
+                          <span className="font-mono text-xs font-black">{ind + 1}</span>
+                        </div>
+                        <div className="absolute -bottom-6 bg-stone-950 text-stone-100 border border-stone-800 text-[8.5px] px-1.5 py-0.5 rounded whitespace-nowrap shadow-md select-none font-sans scale-85 sm:scale-100">
+                          {stop.name}
+                        </div>
                       </div>
-                    )}
-                  </div>
-                </AdvancedMarker>
-              );
-            })}
-          </>
-        )}
+                    </AdvancedMarker>
+                  );
+                })}
 
-        {/* ==================================================== */}
-        {/* VIEW B: ACTIVE TRAIL AND ROUTING GEOMETRY LAYER */}
-        {/* ==================================================== */}
-        {activeSubTab === "trails" && selectedTrail && (
-          <>
-            {orderedStops.map((stop, ind) => {
-              const isStart = stop.id === startStopId;
-              return (
-                <AdvancedMarker
-                  key={stop.id}
-                  position={stop.coordinates}
-                  onClick={() => onSelectTrailStop(stop)}
-                  title={`Stop ${ind + 1}: ${stop.name}`}
-                >
-                  <div className={`relative flex flex-col items-center filter drop-shadow-md select-none group hover:scale-110 transition-transform`}>
-                    {isStart ? (
-                      <div className="absolute -inset-2 bg-amber-500/10 rounded-full animate-ping pointer-events-none" />
-                    ) : (
-                      <div className="absolute -inset-1.5 bg-stone-900/10 rounded-full pointer-events-none" />
-                    )}
+                <DirectionsCalculator
+                  stops={orderedStops}
+                  travelMode={travelMode}
+                  onRouteCalculated={handleRouteCalculated}
+                />
+              </>
+            )}
+          </Map>
+        </APIProvider>
 
-                    <div className={`w-8.5 h-8.5 rounded-full border-2 flex items-center justify-center shadow-xl transition-colors ${
-                      isStart 
-                        ? "bg-stone-900 text-amber-300 border-amber-500" 
-                        : "bg-amber-800 text-white border-white"
-                    }`}>
-                      <span className="font-mono text-xs font-black">{ind + 1}</span>
-                    </div>
-
-                    <div className="absolute -bottom-6 bg-stone-950 text-stone-100 border border-stone-800 text-[8.5px] px-1.5 py-0.5 rounded whitespace-nowrap shadow-md select-none font-sans scale-85 sm:scale-100">
-                      {stop.name}
-                    </div>
-                  </div>
-                </AdvancedMarker>
-              );
-            })}
-
-            <DirectionsCalculator 
-              stops={orderedStops}
-              travelMode={travelMode}
-              onRouteCalculated={onRouteCalculated}
+        {/* Curated Cafe Info Card */}
+        <AnimatePresence>
+          {activeSubTab === "cafes" && selectedCafe && (
+            <CuratedCafeInfoCard
+              cafe={selectedCafe}
+              categoryMeta={categoryMeta}
+              getAvgRating={getAvgRating}
+              getCafeCategory={getCafeCategory}
+              setSelectedCafe={setSelectedCafe}
+              triggerChatAsk={triggerChatAsk}
+              isSyncing={isSyncing}
+              setIsSyncing={setIsSyncing}
             />
-          </>
-        )}
-      </Map>
+          )}
+        </AnimatePresence>
+
+        {/* Discovered Place Info Card */}
+        <AnimatePresence>
+          {activeSubTab === "cafes" && selectedDiscoveredPlace && (
+            <DiscoveredPlaceInfoCard
+              place={selectedDiscoveredPlace}
+              setSelectedDiscoveredPlace={setSelectedDiscoveredPlace}
+            />
+          )}
+        </AnimatePresence>
+
+        {/* Trail Stop Detail Panel */}
+        <AnimatePresence>
+          {activeSubTab === "trails" && activeStop && (
+            <TrailStopDetailsPanel
+              stop={activeStop}
+              placesData={stopPlacesData}
+              isLoading={isLoadingStopDetails}
+              isStartingPoint={activeStop.id === startStopId}
+              onSetAsStartPoint={() => handleSetStartPoint(activeStop.id)}
+              onClose={() => setActiveStop(null)}
+            />
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
@@ -1161,7 +669,6 @@ function DirectionsCalculator({
     else if (travelMode === "TRANSIT") apiTravelMode = google.maps.TravelMode.TRANSIT;
 
     const directionsService = new routesLib.DirectionsService();
-
     const origin = stops[0].coordinates;
     const destination = stops[stops.length - 1].coordinates;
     const waypoints = stops.slice(1, -1).map((s) => ({
@@ -1180,7 +687,6 @@ function DirectionsCalculator({
       (result, status) => {
         if (status === google.maps.DirectionsStatus.OK && result) {
           renderer.setDirections(result);
-
           let totalMeters = 0;
           let totalSeconds = 0;
           const routeLegs = result.routes[0]?.legs;
@@ -1190,13 +696,11 @@ function DirectionsCalculator({
               totalSeconds += routeLegs[i].duration?.value || 0;
             }
           }
-
           const estKm = (totalMeters / 1000).toFixed(1) + " km";
           const totMins = Math.round(totalSeconds / 60);
-          const estDur = totMins >= 60 
-            ? `${Math.floor(totMins / 60)}h ${totMins % 60}m` 
+          const estDur = totMins >= 60
+            ? `${Math.floor(totMins / 60)}h ${totMins % 60}m`
             : `${totMins} mins`;
-
           onRouteCalculated(estDur, estKm, false);
         } else {
           onRouteCalculated("", "", true);
@@ -1254,7 +758,6 @@ function TrailStopDetailsPanel({
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent" />
-        
         <div className="absolute bottom-3 left-4 right-4 text-left">
           <span className="text-[8px] uppercase font-mono tracking-widest text-[#d97706] font-bold leading-none select-none flex items-center gap-1">
             <Compass className="w-3 h-3 text-amber-500 animate-spin-slow" />
@@ -1264,7 +767,6 @@ function TrailStopDetailsPanel({
             {displayName}
           </h4>
         </div>
-
         <div className="absolute top-3 left-3 bg-[#1c1917]/95 border border-stone-800 rounded-lg px-2 py-0.5 text-white text-[10px] font-sans font-bold flex items-center gap-1 shadow-md">
           <Star className="w-3 h-3 fill-amber-500 text-amber-500 shrink-0" />
           <span>{displayRating}</span>
@@ -1272,4 +774,215 @@ function TrailStopDetailsPanel({
       </div>
 
       <div className="space-y-3.5 text-left flex-1">
-   
+        {isLoading ? (
+          <div className="flex flex-col gap-3 animate-pulse">
+            <div className="h-3 bg-stone-800 rounded w-3/4" />
+            <div className="h-3 bg-stone-800 rounded w-1/2" />
+            <div className="h-3 bg-stone-800 rounded w-2/3" />
+          </div>
+        ) : (
+          <>
+            <div className="flex items-start gap-2">
+              <MapPin className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+              <p className="text-[11px] text-stone-300 font-sans leading-snug">{displayAddress}</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <Clock className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+              <p className="text-[11px] text-stone-300 font-sans leading-snug">{displayHours}</p>
+            </div>
+            <p className="text-[11px] text-stone-400 font-sans leading-relaxed line-clamp-3 border-t border-stone-800 pt-3">
+              {stop.description}
+            </p>
+            <div className="flex gap-2 pt-1">
+              {!isStartingPoint && (
+                <button
+                  onClick={onSetAsStartPoint}
+                  className="flex-1 py-2 px-3 bg-amber-800 hover:bg-amber-700 text-white text-[10px] font-mono font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer flex items-center justify-center gap-1.5"
+                >
+                  <Navigation className="w-3 h-3" />
+                  <span>Set as Start</span>
+                </button>
+              )}
+              {isStartingPoint && (
+                <div className="flex-1 py-2 px-3 bg-stone-800 text-amber-300 text-[10px] font-mono font-bold uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 select-none">
+                  <CheckCircle2 className="w-3 h-3" />
+                  <span>Starting Point</span>
+                </div>
+              )}
+              <button
+                onClick={onClose}
+                className="py-2 px-3 bg-stone-800 hover:bg-stone-700 text-stone-300 text-[10px] font-mono uppercase tracking-wider rounded-xl transition-colors cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </motion.div>
+  );
+}
+
+/* ==================================================== */
+/* CURATED CAFE INFO CARD (STATIC CURATED DATA POPUP)   */
+/* ==================================================== */
+function CuratedCafeInfoCard({
+  cafe,
+  categoryMeta,
+  getAvgRating,
+  getCafeCategory,
+  setSelectedCafe,
+  triggerChatAsk,
+  isSyncing,
+  setIsSyncing
+}: {
+  cafe: any;
+  categoryMeta: any;
+  getAvgRating: (id: string) => string;
+  getCafeCategory: (cafe: any) => string;
+  setSelectedCafe: (c: any) => void;
+  triggerChatAsk: (cafe: any) => void;
+  isSyncing: boolean;
+  setIsSyncing: (v: boolean) => void;
+}) {
+  const cat = getCafeCategory(cafe);
+  const meta = categoryMeta[cat] || categoryMeta["cafe"];
+  const rating = getAvgRating(cafe.id);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 50, scale: 0.95 }}
+      className="absolute bottom-6 left-6 right-6 md:right-auto md:w-[400px] bg-white rounded-3xl border border-stone-200 shadow-2xl overflow-hidden max-h-[380px] md:max-h-[460px] flex flex-col select-none"
+    >
+      <button
+        onClick={() => setSelectedCafe(null)}
+        className="absolute top-4 right-4 z-20 p-1.5 bg-white/80 backdrop-blur-sm border border-stone-200 text-stone-500 rounded-full hover:text-stone-900 hover:bg-white transition-colors"
+      >
+        <X className="w-3.5 h-3.5" />
+      </button>
+
+      <div className="relative h-36 md:h-44 w-full overflow-hidden bg-stone-100 shrink-0">
+        <img
+          src={cafe.images?.card || cafe.images?.hero || "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200"}
+          alt={cafe.name}
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/10 to-transparent" />
+        <div className="absolute bottom-3 left-4 right-10 text-left">
+          <span className={`text-[8px] uppercase font-mono tracking-widest font-bold leading-none px-1.5 py-0.5 rounded ${meta.bg} ${meta.text}`}>
+            {meta.label}
+          </span>
+          <h4 className="font-display font-extrabold text-white text-sm leading-tight mt-1 drop-shadow">
+            {cafe.name}
+          </h4>
+        </div>
+        <div className="absolute top-3 left-3 bg-stone-900/90 border border-stone-700 rounded-lg px-2 py-0.5 text-white text-[10px] font-sans font-bold flex items-center gap-1 shadow-md">
+          <Star className="w-3 h-3 fill-amber-500 text-amber-500 shrink-0" />
+          <span>{rating}</span>
+        </div>
+      </div>
+
+      <div className="p-4 space-y-3 overflow-y-auto flex-1">
+        <div className="flex items-center gap-1.5">
+          <MapPin className="w-3.5 h-3.5 text-amber-700 shrink-0" />
+          <span className="text-[11px] text-stone-500 font-sans">{cafe.neighborhood}, Shillong</span>
+        </div>
+        {cafe.tagline && (
+          <p className="text-[11px] text-stone-600 font-sans leading-snug italic border-l-2 border-amber-300 pl-2">
+            "{cafe.tagline}"
+          </p>
+        )}
+        {cafe.vibeTags && cafe.vibeTags.length > 0 && (
+          <div className="flex flex-wrap gap-1">
+            {cafe.vibeTags.slice(0, 5).map((tag: string) => (
+              <span key={tag} className="text-[9px] px-1.5 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 rounded font-mono uppercase tracking-wide">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+        <div className="flex gap-2 pt-1 border-t border-stone-100">
+          <button
+            onClick={() => triggerChatAsk(cafe)}
+            className="flex-1 py-2 px-3 bg-stone-900 hover:bg-stone-800 text-amber-300 text-[10px] font-mono font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer flex items-center justify-center gap-1.5"
+          >
+            <MessageSquare className="w-3 h-3" />
+            <span>Ask AI</span>
+          </button>
+          <button
+            onClick={() => {
+              setIsSyncing(true);
+              setTimeout(() => setIsSyncing(false), 1500);
+            }}
+            className="py-2 px-3 bg-stone-100 hover:bg-stone-200 text-stone-600 text-[10px] font-mono uppercase tracking-wider rounded-xl transition-colors cursor-pointer flex items-center gap-1.5"
+          >
+            <RefreshCw className={`w-3 h-3 ${isSyncing ? "animate-spin" : ""}`} />
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ==================================================== */
+/* DISCOVERED PLACE INFO CARD (LIVE GOOGLE PLACES DATA) */
+/* ==================================================== */
+function DiscoveredPlaceInfoCard({
+  place,
+  setSelectedDiscoveredPlace
+}: {
+  place: any;
+  setSelectedDiscoveredPlace: (p: any) => void;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 50, scale: 0.95 }}
+      className="absolute bottom-6 left-6 right-6 md:right-auto md:w-[380px] bg-white rounded-3xl border border-emerald-200 shadow-2xl p-5 flex flex-col gap-3 select-none max-h-[340px] overflow-y-auto"
+    >
+      <button
+        onClick={() => setSelectedDiscoveredPlace(null)}
+        className="absolute top-4 right-4 z-20 p-1.5 bg-stone-100 border border-stone-200 text-stone-500 rounded-full hover:text-stone-900 transition-colors"
+      >
+        <X className="w-3.5 h-3.5" />
+      </button>
+      <div className="pr-8">
+        <span className="text-[8px] uppercase font-mono tracking-widest text-emerald-700 font-bold flex items-center gap-1">
+          <Sparkles className="w-3 h-3" />
+          <span>Live Discovery Result</span>
+        </span>
+        <h4 className="font-display font-extrabold text-stone-900 text-sm leading-tight mt-1">
+          {place.displayName}
+        </h4>
+      </div>
+      {place.rating && (
+        <div className="flex items-center gap-1.5">
+          <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500 shrink-0" />
+          <span className="text-[11px] font-bold text-stone-700">{place.rating}</span>
+          {place.userRatingsTotal && (
+            <span className="text-[10px] text-stone-400 font-sans">({place.userRatingsTotal} reviews)</span>
+          )}
+        </div>
+      )}
+      {place.formattedAddress && (
+        <div className="flex items-start gap-2">
+          <MapPin className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+          <p className="text-[11px] text-stone-500 font-sans leading-snug">{place.formattedAddress}</p>
+        </div>
+      )}
+      <a
+        href={`https://www.google.com/maps/place/?q=place_id:${place.id}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-1.5 py-2 px-4 bg-emerald-700 hover:bg-emerald-800 text-white text-[10px] font-mono font-bold uppercase tracking-wider rounded-xl transition-colors cursor-pointer mt-1"
+      >
+        <Globe className="w-3 h-3" />
+        <span>View on Google Maps</span>
+      </a>
+    </motion.div>
+  );
+}
