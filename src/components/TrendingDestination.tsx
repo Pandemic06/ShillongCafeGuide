@@ -1,6 +1,6 @@
-// TrendingDestination.tsx — Sohra (Cherrapunji) Trending Page
-// Injected into App.tsx via activeTab === "trending"
+import React from "react";
 
+// ── Sohra / Cherrapunji data ───────────────────────────────────────────────
 const ATTRACTIONS = [
   {
     name: "Nohkalikai Falls",
