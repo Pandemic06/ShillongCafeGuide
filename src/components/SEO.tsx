@@ -154,4 +154,10 @@ export const PAGE_SEO = {
       "About the Shillong Café Map: an editorial guide to cafés, Khasi food, neighborhoods and travel routes across Meghalaya — written and curated locally.",
     canonical: `${SITE}/?tab=about`,
   },
+  trending: {
+    title: "Sohra (Cherrapunji) — Trending Destination in Meghalaya",
+    description:
+      "Complete guide to Sohra (Cherrapunji): Nohkalikai Falls, Double Decker Living Root Bridge, Seven Sisters Falls, Mawsmai Cave, local cafés, curated day-trip routes and travel tips from Shillong.",
+    canonical: `${SITE}/?tab=trending`,
+  },
 } as const;
