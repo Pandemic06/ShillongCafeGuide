@@ -380,16 +380,16 @@ export default function App() {
                   </div>
                   <h1 className="text-4xl sm:text-5xl font-display font-bold text-[#faf8f5] leading-none tracking-tight">
                     The Heart of<br />the Hills
-                    <span className="text-amber-100 font-serif italic text-3xl sm:text-4xl font-normal block mt-2">Discover the Hearth of the Hills</span>
+                    <span className="text-amber-100 font-serif italic text-3xl sm:text-4xl font-normal block mt-2">A Curated Chronicle of cozy hearths, acoustic circles, and culinary heritage in Shillong's misty ridges.</span>
                   </h1>
-                  <p className="text-stone-300 text-sm md:text-base max-w-xl font-sans leading-relaxed font-light">An independent, data-driven digest mapping Shillong's celebrated local bakers, roasting cultivators, and traditional Khasi culinary guardians across Meghalaya's deep ridges.</p>
+                  <p className="text-stone-300 text-sm md:text-base max-w-xl font-sans leading-relaxed font-light">A guide to the best cafés in Shillong, Khasi food like Jadoh and Dohneiiong, walkable districts (Laitumkhrah, Police Bazaar, Golf Links) and curated road-trip routes across Meghalaya.</p>
                   <div className="bg-white hover:bg-white p-1.5 rounded-2xl border border-stone-200/80 flex items-center gap-2 max-w-md shadow-xl transition-all duration-300">
                     <Search className="w-5 h-5 text-stone-400 shrink-0 ml-3" />
-                    <input id="hero-input" type="text" placeholder="Search cafes by vibe, neighborhood, or specialty..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") setActiveTab("cafes"); }} className="flex-1 text-[#1c1917] bg-transparent px-2 py-3 text-xs md:text-sm outline-none font-sans" />
-                    <button onClick={() => setActiveTab("cafes")} className="bg-amber-800 hover:bg-amber-900 text-white transition-colors px-5 py-2.5 rounded-xl text-xs font-sans font-semibold cursor-pointer active:scale-98">Search</button>
+                    <input id="hero-input" type="text" placeholder="Search cozy lofts, acoustic stages..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") setActiveTab("cafes"); }} className="flex-1 text-[#1c1917] bg-transparent px-2 py-3 text-xs md:text-sm outline-none font-sans" />
+                    <button onClick={() => setActiveTab("cafes")} className="bg-amber-800 hover:bg-amber-900 text-white transition-colors px-5 py-2.5 rounded-xl text-xs font-sans font-semibold cursor-pointer active:scale-98">Find</button>
                   </div>
                   <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 text-stone-400 text-[11px] font-mono">
-                    <span className="font-semibold text-stone-350">Quick Tags:</span>
+                    <span className="font-semibold text-stone-350">Cozy Tags:</span>
                     {["Jazz Beats", "Book Heaven", "Greenhouse", "Rider Haven"].map((tag) => (
                       <button key={tag} onClick={() => handleQuickTagSearch(tag)} className="text-stone-350 hover:text-amber-400 transition-colors border-b border-stone-700/60 hover:border-amber-400 cursor-pointer">{tag}</button>
                     ))}
@@ -436,87 +436,6 @@ export default function App() {
                     <span className="text-xs font-mono font-bold text-stone-300">22.5°C</span>
                   </div>
                 </div>
-              </div>
-
-              {/* EDITOR'S CHOICE SECTION */}
-              <div className="bg-[#FAF8F5] border border-stone-200 shadow-md rounded-[28px] overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 relative">
-                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-700 via-[#8b5c1a] to-[#543d1b]" />
-                <div className="p-6 lg:col-span-12">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="inline-block p-1 bg-amber-50 border border-amber-200 rounded-lg"><Radio className="w-4 h-4 text-amber-800 animate-pulse" /></span>
-                    <span className="text-[10px] font-mono font-bold tracking-widest text-[#8b5c1a] uppercase bg-amber-50 px-2.5 py-0.5 rounded">Ingest Sequence Panel</span>
-                  </div>
-                  <h2 className="text-2xl font-display font-bold text-stone-900 leading-tight">Meghalaya Google Places Discovery Ingester</h2>
-                  <p className="text-xs md:text-sm text-stone-500 leading-relaxed font-sans font-light">Query the live Google Places Registry to dynamically discover, deduplicate, and catalog cafes and restaurants across separate Meghalaya regions.</p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-stone-200/60 px-6 pb-6 lg:col-span-12">
-                  <div>
-                    <label className="text-[10px] font-mono tracking-wide uppercase text-stone-500 font-bold block">Select Patrol Locality</label>
-                    <select value={scanRegion} onChange={(e) => setScanRegion(e.target.value)} disabled={isScanning} className="w-full bg-white border border-stone-200 text-stone-800 rounded-xl px-3.5 py-2.5 text-xs font-sans outline-none focus:border-amber-700 transition-all cursor-pointer font-medium">
-                      <option value="Shillong">Shillong, Meghalaya</option>
-                      <option value="Cherrapunji">Cherrapunji, Meghalaya</option>
-                      <option value="Dawki">Dawki, Meghalaya</option>
-                      <option value="Jowai">Jowai, Meghalaya</option>
-                      <option value="Tura">Tura, Meghalaya</option>
-                      <option value="Nongstoin">Nongstoin, Meghalaya</option>
-                      <option value="Mawsynram">Mawsynram, Meghalaya</option>
-                      <option value="Sohra">Sohra, Meghalaya</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="text-[10px] font-mono tracking-wide uppercase text-stone-500 font-bold block">Select Food Classification</label>
-                    <select value={scanCategory} onChange={(e) => setScanCategory(e.target.value)} disabled={isScanning} className="w-full bg-white border border-stone-200 text-stone-800 rounded-xl px-3.5 py-2.5 text-xs font-sans outline-none focus:border-amber-700 transition-all cursor-pointer font-medium">
-                      <option value="cafes">Cafes & Coffee Shops</option>
-                      <option value="restaurants">Restaurants & Eateries</option>
-                      <option value="bakeries">Bakeries & Pastry Shops</option>
-                      <option value="bars">Bars & Lounges</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="px-6 pb-6 lg:col-span-12">
-                  <button onClick={handleTriggerScan} disabled={isScanning} className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs font-mono font-bold tracking-widest uppercase cursor-pointer transition-all duration-300 shadow-lg bg-stone-900 text-[#FAF8F5] hover:bg-stone-800 disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isScanning ? <><RefreshCw className="w-3.5 h-3.5 animate-spin" />Scanning Registry...</> : <><Search className="w-3.5 h-3.5" />Initiate Discovery Scan</>}
-                  </button>
-                </div>
-                {(isScanning || scanLogs.length > 0) && (
-                  <div className="px-6 pb-6 lg:col-span-12">
-                    <div className="bg-stone-950 rounded-xl p-4 font-mono text-xs space-y-1.5 border border-stone-800 max-h-48 overflow-y-auto">
-                      {scanLogs.map((log, i) => (
-                        <p key={i} className={`leading-relaxed ${
-                          log.startsWith("[SUCCESS]") ? "text-green-400" :
-                          log.startsWith("[ERROR]") ? "text-red-400" :
-                          log.startsWith("[DATABASE]") ? "text-blue-300" :
-                          log.startsWith("[SCHEMATICS]") ? "text-yellow-300" :
-                          "text-stone-300"
-                        }`}>{log}</p>
-                      ))}
-                      {isScanning && <p className="text-stone-400 animate-pulse">▌</p>}
-                    </div>
-                    {scanProgress > 0 && (
-                      <div className="mt-3 bg-stone-800 rounded-full h-1.5 overflow-hidden">
-                        <div className="h-full bg-amber-600 transition-all duration-500 rounded-full" style={{ width: `${scanProgress}%` }} />
-                      </div>
-                    )}
-                  </div>
-                )}
-                {scanReport && (
-                  <div className="px-6 pb-6 lg:col-span-12">
-                    <div className="grid grid-cols-3 gap-3">
-                      <div className="bg-green-950/40 border border-green-800/30 rounded-xl p-3 text-center">
-                        <p className="text-2xl font-display font-bold text-green-400">{scanReport.summary.newAdded}</p>
-                        <p className="text-[10px] font-mono text-green-600 uppercase tracking-wide">New Added</p>
-                      </div>
-                      <div className="bg-blue-950/40 border border-blue-800/30 rounded-xl p-3 text-center">
-                        <p className="text-2xl font-display font-bold text-blue-400">{scanReport.summary.duplicatesDetected}</p>
-                        <p className="text-[10px] font-mono text-blue-600 uppercase tracking-wide">Duplicates</p>
-                      </div>
-                      <div className="bg-red-950/40 border border-red-800/30 rounded-xl p-3 text-center">
-                        <p className="text-2xl font-display font-bold text-red-400">{scanReport.summary.closedDetected}</p>
-                        <p className="text-[10px] font-mono text-red-600 uppercase tracking-wide">Closed</p>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* EDITOR'S CHOICE CARDS */}
