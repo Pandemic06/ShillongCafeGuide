@@ -2,9 +2,9 @@
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
-# Run and deploy your AI Studio app
+# ShillongCafeGuide — SCM Combination Build
 
-This contains everything you need to run your app locally.
+An independent, data-driven digest mapping Shillong's celebrated local cafes, roasting cultivators, and traditional Khasi culinary guardians across Meghalaya's deep ridges.
 
 View your app in AI Studio: https://ai.studio/apps/a86cc0ff-fd61-461d-9ea6-22181a3334b3
 
