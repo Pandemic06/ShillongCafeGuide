@@ -1,719 +1,632 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import {
-  TrendingUp, MapPin, Clock, Cloud, Droplets, Camera,
-  Utensils, Coffee, Car, Mountain, Waves, ChevronDown,
-  ChevronUp, ExternalLink, AlertCircle, Star, Leaf,
-  Navigation, Sunrise, ArrowRight, Info, Flame
-} from "lucide-react";
+// TrendingDestination.tsx — Sohra (Cherrapunji) Trending Page
+// Injected into App.tsx via activeTab === "trending"
 
-// ─────────────────────────────────────────────
-//  DATA
-// ─────────────────────────────────────────────
-
-const SOHRA_WATERFALLS = [
+const ATTRACTIONS = [
   {
     name: "Nohkalikai Falls",
-    height: "340 m",
-    tag: "India's Tallest Plunge",
-    desc: "The highest plunge waterfall in India. Fed by one of the wettest catchments on Earth, it free-falls into a blue-green gorge below the plateau edge. Best viewed 10–11 AM when mist lifts.",
-    tips: "Viewpoint is 5 min walk from car park. Bring a rain jacket — spray travels far. Full roar Jul–Sep; seasonal trickle Dec–Feb.",
-    coord: "25.2882° N, 91.7147° E",
-    driveMins: 12,
-    emoji: "💧",
-  },
-  {
-    name: "Seven Sisters Falls",
-    height: "315 m",
-    tag: "Seven-Streamed Cascade",
-    desc: "Seven parallel streams cascade down a single basalt cliff face — one of Meghalaya's most photogenic sights. The streams merge at the base into a white froth visible from the highway.",
-    tips: "Best viewed from NH6 lay-by 2 km before Sohra town. Active only during and just after monsoon — dry season visit is scenic but the falls are thin.",
-    coord: "25.2637° N, 91.7021° E",
-    driveMins: 8,
+    type: "Waterfall",
+    distance: "4 km from Sohra town",
+    scale: "340 m — 4th highest plunge waterfall in the world",
+    bestTime: "June–October (monsoon peak)",
+    tip: "Arrive before 9 AM to beat the cloud cover. The plunge pool turns vivid turquoise post-monsoon.",
     emoji: "🌊",
   },
   {
-    name: "Dainthlen Falls",
-    height: "60 m",
-    tag: "Mythological Gorge",
-    desc: "Named after the legendary serpent (Thlen) slain here in Khasi folklore. A broad, powerful curtain of water framed by moss-covered rock walls. A 10-minute walk from the road through mixed forest.",
-    tips: "Entry fee applies. Slippery rocks — wear grip shoes. Combine with Wei Sawdong on the same day.",
-    coord: "25.2791° N, 91.7268° E",
-    driveMins: 6,
-    emoji: "⚡",
-  },
-  {
-    name: "Wei Sawdong Falls",
-    height: "3-tier",
-    tag: "Hidden Three-Tier Secret",
-    desc: "Three tiers of cascades hidden 2 km off the main road. The bottom pool is swimmable outside monsoon months. Very few tourists reach tier 3 — the most dramatic level.",
-    tips: "Drive a dirt road to Wei Sawdong village, then trek 40 min down. Take a local guide from the village (₹200–300). Swimwear recommended.",
-    coord: "25.2718° N, 91.7434° E",
-    driveMins: 20,
-    emoji: "🏊",
-  },
-  {
-    name: "Kynrem Falls",
-    height: "305 m",
-    tag: "Thangkharang Park Centrepiece",
-    desc: "Three-tiered falls inside Thangkharang Park, near the Bangladesh border viewpoint. The Bangladesh plains stretch to the horizon below the park's cliff edge.",
-    tips: "Entry to Thangkharang Park required (₹20–40). Visit the Bangladesh viewpoint while here — it is extraordinary on clear days.",
-    coord: "25.1889° N, 91.6918° E",
-    driveMins: 30,
-    emoji: "🌅",
-  },
-  {
-    name: "Mawsmai Cave",
-    height: "150 m long",
-    tag: "Illuminated Limestone Caves",
-    desc: "Not a waterfall — but unmissable. A 150-metre lit limestone cave walk through sculpted stalactites and stalagmites carved by millions of years of water. Takes 20–30 minutes.",
-    tips: "Very crowded on weekends. Arrive before 9 AM or after 3 PM. Narrow passages — not suitable for claustrophobia. Photography allowed.",
-    coord: "25.2679° N, 91.7116° E",
-    driveMins: 5,
-    emoji: "🕳️",
-  },
-];
-
-const SOHRA_CAFES = [
-  {
-    name: "Sohra Coffee House",
-    area: "Sohra Town Centre",
-    vibe: "Local Institution",
-    mustTry: "Bamboo shoot broth & Tungrymbai rice",
-    desc: "The oldest sit-down café in Sohra. Stone-walled interior, hand-painted menu boards, and the most honest Khasi thali for 80 kilometres around. Run by the same family since the 1990s.",
-    priceRange: "₹80–220",
-    openHours: "8 AM – 6 PM",
-    emoji: "☕",
-  },
-  {
-    name: "Mist & Moss Cafe",
-    area: "Near Nohkalikai Viewpoint",
-    vibe: "Scenic Perch",
-    mustTry: "Black sesame tea & cardamom biscuits",
-    desc: "A small wooden shack perched 50 metres from the Nohkalikai viewpoint. Sells Meghalayan black sesame tea, local honey, and bamboo-steamed Jadoh parcels wrapped in Sirsak leaf.",
-    priceRange: "₹40–150",
-    openHours: "7 AM – 5 PM (closed heavy rain days)",
+    name: "Double Decker Living Root Bridge",
+    type: "Living Architecture",
+    distance: "Tyrna village → 3,500 steps down (~2–3 hr trek one way)",
+    scale: "Two-tiered; ~29 m long — oldest tier 180+ years",
+    bestTime: "October–April (dry trail, clear skies)",
+    tip: "Stay overnight in Nongriat village. The return trek is harder than the descent — start back by 2 PM.",
     emoji: "🌿",
   },
   {
-    name: "Rambler's Rest",
-    area: "Cherrapunji Holiday Resort Road",
-    vibe: "Trek Recovery",
-    mustTry: "Ginger-lemon honey tea & pork momos",
-    desc: "A hikers' hangout after the Double Decker Root Bridge trail. Bamboo-pole walls, hammocks, and heaters after wet treks. Very popular with the backpacking circuit.",
-    priceRange: "₹60–280",
-    openHours: "6:30 AM – 7 PM",
-    emoji: "🏕️",
+    name: "Seven Sisters Falls (Nohsngithiang)",
+    type: "Waterfall",
+    distance: "~1 km off NH 6 near Mawsmai",
+    scale: "315 m, seven-segmented cascade across a 70 m wide cliff",
+    bestTime: "July–September (all seven streams run full)",
+    tip: "Best viewed from the highway-side public viewpoint. Bring a telephoto lens for detail shots.",
+    emoji: "💧",
   },
   {
-    name: "Lum Shyllong Eatery",
-    area: "Market Road, Sohra",
-    vibe: "No-Frills Authentic",
-    mustTry: "Jadoh with Dohneiiong & raw red onions",
-    desc: "No signboard, no Instagram, just the best Jadoh you can find at 1500 metres. Point-and-eat counter with two rice options, always packed with drivers and trekkers by noon.",
-    priceRange: "₹60–130",
-    openHours: "7 AM – 2 PM only",
-    emoji: "🍚",
+    name: "Mawsmai Cave",
+    type: "Limestone Cave",
+    distance: "6 km from Sohra town center",
+    scale: "150 m lit passage through ancient stalactites",
+    bestTime: "Year-round; noticeably cooler in summer",
+    tip: "Takes 30 minutes. Wear non-slip footwear — floor is perpetually wet year-round.",
+    emoji: "🪨",
+  },
+  {
+    name: "Eco Park Viewpoint",
+    type: "Panoramic Viewpoint",
+    distance: "1 km from Sohra town center",
+    scale: "Overlooks Bangladesh plains from cliff edge",
+    bestTime: "Early morning for dramatic mist layers over the valley",
+    tip: "Entry ₹20. On clear October–March days you can see Sylhet district, Bangladesh.",
+    emoji: "🏔️",
+  },
+  {
+    name: "Mawkdok Dympep Valley",
+    type: "Valley Viewpoint + Zip-line",
+    distance: "~47 km from Shillong on the Sohra road",
+    scale: "Zip-line spans 1 km across the gorge at 150 m height",
+    bestTime: "October–March (clear skies, green valley)",
+    tip: "The roadside chai stalls here have stunning views. Zip-line ₹800; book at the kiosk on arrival.",
+    emoji: "🌄",
+  },
+  {
+    name: "Dainthlen Falls",
+    type: "Waterfall + Legend Site",
+    distance: "8 km from Sohra",
+    scale: "Tiered falls; Khasi legend of the serpent Thlen",
+    bestTime: "Monsoon season (July–September)",
+    tip: "Locals share the legend of how the Khasi hero Luh Lyndon slew the serpent here. Ask your guide.",
+    emoji: "🐍",
+  },
+  {
+    name: "Wakaba Falls",
+    type: "Hidden Waterfall",
+    distance: "~3 km trek from Sohra",
+    scale: "Secluded single-drop fall, less visited",
+    bestTime: "June–October",
+    tip: "Rarely crowded. Combine with the Nohkalikai visit for a full waterfall day.",
+    emoji: "🍃",
   },
 ];
 
-const SOHRA_ROUTES = [
+const CAFES_EATS = [
   {
-    id: "day-trip",
-    label: "One-Day Sohra Sprint",
-    duration: "7–9 hours",
-    distance: "~145 km round-trip",
-    difficulty: "Easy",
-    stops: [
-      { time: "7:00 AM", stop: "Depart Shillong (Police Bazaar)", note: "NH6 via Cherrapunji Road" },
-      { time: "9:30 AM", stop: "Mawsmai Cave", note: "30 min — arrive before crowds" },
-      { time: "10:30 AM", stop: "Seven Sisters Falls viewpoint", note: "15 min roadside stop" },
-      { time: "11:00 AM", stop: "Nohkalikai Falls", note: "45 min — prime mist-clear window" },
-      { time: "12:00 PM", stop: "Lunch at Sohra Coffee House or Lum Shyllong Eatery", note: "Jadoh thali" },
-      { time: "1:30 PM", stop: "Dainthlen Falls", note: "45 min trek + viewing" },
-      { time: "3:00 PM", stop: "Thangkharang Park & Kynrem Falls", note: "60 min — Bangladesh plains view" },
-      { time: "5:00 PM", stop: "Return to Shillong", note: "~75 km, 2.5 hrs" },
-    ],
+    name: "Cherrapunjee Holiday Resort Restaurant",
+    type: "Restaurant",
+    vibe: "Heritage bungalow, sweeping valley views, full dining room",
+    mustTry: "Jadoh, Tungrymbai, Dohneiiong pork curry, Maize soup",
+    priceRange: "₹₹",
+    note: "Most reliable full-service kitchen in Sohra. Pre-book for dinner during Oct–Jan peak season.",
   },
   {
-    id: "double-decker",
-    label: "Double Decker Root Bridge Trek",
-    duration: "Full day (10–12 hrs)",
-    distance: "Nongriat village: 3.5 km / 3,500 steps each way",
-    difficulty: "Moderate–Strenuous",
-    stops: [
-      { time: "6:00 AM", stop: "Depart Shillong — arrive Tyrna village by 8:30 AM", note: "Starting point of descent" },
-      { time: "8:30 AM", stop: "Begin descent from Tyrna", note: "3,500+ concrete steps downhill — ~2 hrs" },
-      { time: "10:30 AM", stop: "Single Root Bridge (lower)", note: "15 min crossing and rest" },
-      { time: "11:00 AM", stop: "Double Decker Living Root Bridge — Nongriat", note: "Iconic UNESCO-nominated ancient bridge" },
-      { time: "11:30 AM", stop: "Rainbow Falls (extra 45 min hike from Nongriat)", note: "Optional but spectacular" },
-      { time: "1:00 PM", stop: "Lunch at Nongriat village homestay", note: "Simple rice and dal — ₹80–150" },
-      { time: "2:00 PM", stop: "Begin ascent back to Tyrna", note: "~2.5 hrs uphill — harder than descent" },
-      { time: "4:30 PM", stop: "Reach Tyrna — drive back toward Sohra", note: "" },
-      { time: "5:00 PM", stop: "Tea & rest at Rambler's Rest or Mist & Moss Cafe", note: "Reward after the climb" },
-      { time: "6:30 PM", stop: "Return to Shillong", note: "~1.5 hrs" },
-    ],
+    name: "Polo Orchid Resort Dining",
+    type: "Restaurant",
+    vibe: "Modern eco-resort, cloud-level dining terrace",
+    mustTry: "Khasi thali, smoked pork with mustard greens, local herbal tea",
+    priceRange: "₹₹₹",
+    note: "Best breakfast view in Sohra. Open to non-guests; call ahead.",
   },
   {
-    id: "overnight",
-    label: "Overnight Sohra Immersion",
+    name: "Sohra Café & Local Eateries (Town Area)",
+    type: "Café / Street Stalls",
+    vibe: "Small, local, foggy-window aesthetic — the real Sohra",
+    mustTry: "Black sesame tea, local rice cakes (Pukhlein), fried pork momos",
+    priceRange: "₹",
+    note: "Several unnamed stalls near the taxi stand serve the best Jadoh in town. Cash only, close by 5 PM.",
+  },
+  {
+    name: "Conifer Café",
+    type: "Café",
+    vibe: "Pine forest adjacent, relaxed pitstop atmosphere",
+    mustTry: "Filter coffee, egg sandwiches, local ginger biscuits",
+    priceRange: "₹",
+    note: "Best pitstop on the drive in — just after Mawkdok viewpoint. Good cell signal here.",
+  },
+  {
+    name: "Nongriat Homestay Kitchens",
+    type: "Homestay Meals",
+    vibe: "Valley floor, post-trek, community-cooked",
+    mustTry: "Rice and bamboo shoot curry, smoked meat, eggs from the village",
+    priceRange: "₹",
+    note: "Meals included with overnight stay (₹600–1,200 full board). Book via local guides.",
+  },
+];
+
+const ROUTES = [
+  {
+    label: "Classic Day Trip from Shillong",
+    duration: "1 day",
+    distance: "~108 km round trip",
+    stops: [
+      "Shillong (Police Bazaar) — depart 6:30 AM",
+      "Mawkdok Valley Viewpoint — pit stop, photos, chai (45 min)",
+      "Nohkalikai Falls — walk to cliff viewpoint (1.5 hr)",
+      "Seven Sisters Falls viewpoint — roadside (30 min)",
+      "Mawsmai Cave — lit walkthrough (45 min)",
+      "Eco Park Viewpoint — Bangladesh plains panorama (1 hr)",
+      "Lunch at Cherrapunjee Holiday Resort or town stalls",
+      "Dainthlen Falls — optional on the drive back (30 min)",
+      "Return to Shillong by 6–7 PM",
+    ],
+    tips: "Rent a Bolero/Sumo from Police Bazaar (₹2,500–3,500 for the full day). Avoid Mondays — several sites close. Pack a light jacket; Sohra is 10°C cooler than Shillong in evenings.",
+  },
+  {
+    label: "Root Bridge Overnight Trek",
     duration: "2 days / 1 night",
-    distance: "~75 km from Shillong",
-    difficulty: "Easy (more leisure pace)",
+    distance: "Tyrna trailhead + 3,500 steps each way",
     stops: [
-      { time: "Day 1 — 9:00 AM", stop: "Depart Shillong", note: "Relax, no rush" },
-      { time: "11:00 AM", stop: "Mawkdok Valley Viewpoint (en route)", note: "Zipline available, stunning gorge" },
-      { time: "1:00 PM", stop: "Arrive Sohra — check in to homestay", note: "Book ahead: Cherry Top Homestay or Serene Sohra" },
-      { time: "2:00 PM", stop: "Nohkalikai Falls & Seven Sisters Falls", note: "Afternoon golden hour photography" },
-      { time: "4:30 PM", stop: "Mist & Moss Cafe — black sesame tea", note: "Wind down before dusk" },
-      { time: "7:00 PM", stop: "Dinner at homestay (Khasi home-cooked)", note: "Often included in stay package" },
-      { time: "Day 2 — 6:30 AM", stop: "Sunrise at Eco Park cliff edge", note: "Fog sea over Bangladesh plains" },
-      { time: "8:00 AM", stop: "Breakfast at Sohra Coffee House", note: "" },
-      { time: "9:30 AM", stop: "Mawsmai Cave + Dainthlen Falls", note: "Morning clarity, fewer crowds" },
-      { time: "12:30 PM", stop: "Thangkharang Park & Kynrem Falls", note: "" },
-      { time: "3:00 PM", stop: "Return to Shillong", note: "" },
+      "Day 1: Shillong → Sohra → Tyrna village trailhead (early morning)",
+      "Trek down to Nongriat village — 3,500 steps (2–3 hr)",
+      "Single Decker Root Bridge (1 hr exploration)",
+      "Double Decker Living Root Bridge (1.5 hr exploration)",
+      "Natural swimming pool at Nongriat (optional)",
+      "Night stay in Nongriat homestay (₹600–1,200 full board)",
+      "Day 2: Sunrise over the valley gorge",
+      "Trek back up to Tyrna (2.5–3 hr)",
+      "Drive back to Shillong via Sohra with stops",
     ],
+    tips: "Pack light — you carry everything down and back up. Trekking poles strongly recommended. Mobile signal is near-zero in the valley. Carry ₹500 cash for meals and tip the homestay family.",
+  },
+  {
+    label: "Sohra → Dawki Grand Loop",
+    duration: "2 days / 1 night",
+    distance: "~165 km total loop",
+    stops: [
+      "Day 1: Shillong → Mawkdok → Sohra full sightseeing day",
+      "Nohkalikai + Seven Sisters + Mawsmai Cave + Eco Park",
+      "Overnight in Sohra (Cherrapunjee Holiday Resort or Polo Orchid)",
+      "Day 2: Sohra → Pynursla road → Dawki (Umngot River)",
+      "Boating on the crystal-clear Umngot River (₹600/boat, 1 hr)",
+      "Border town Tamabil viewpoint — India-Bangladesh crossing (optional)",
+      "Shnongpdeng village — cliff jumping or kayaking (optional)",
+      "Return: Dawki → Shillong via Jowai road (3 hr)",
+    ],
+    tips: "Best October–March (Dawki is clearest and dry). Book Dawki boats in advance during Dec–Jan peak via Dawki Tourism. Start Day 2 early — Dawki gets crowded after 10 AM.",
+  },
+  {
+    label: "Mawsynram Extension Route",
+    duration: "1 long day or 2 days",
+    distance: "~30 km from Sohra to Mawsynram",
+    stops: [
+      "Sohra → Mawsynram (world's wettest place by record)",
+      "Mawjymbuin Cave — sacred stalactite shaped like a Shivling",
+      "Mawsmai to Mawsynram ridge road — misty forest drive",
+      "Nohwet Village — traditional Khasi long house (optional)",
+      "Return to Sohra or Shillong",
+    ],
+    tips: "Roads to Mawsynram can be rough post-monsoon. A 4WD vehicle is advisable June–September. Combine with Sohra day if staying overnight in the area.",
   },
 ];
 
-const TRAVEL_TIPS = [
-  {
-    icon: <Car className="w-4 h-4" />,
-    title: "Getting There",
-    color: "amber",
-    tips: [
-      "NH6 from Police Bazaar: 55–75 km, 2–2.5 hrs depending on traffic",
-      "Shared taxis from Bara Bazaar (Police Bazaar): ₹150–200 per seat, 2.5 hrs",
-      "Private cab: ₹1,800–2,500 for a full day from Shillong",
-      "No direct bus — shared jeeps are the standard local transport",
-    ],
-  },
-  {
-    icon: <Clock className="w-4 h-4" />,
-    title: "Best Time to Visit",
-    color: "blue",
-    tips: [
-      "October–April: Clear skies, all waterfalls visible, root bridges accessible",
-      "June–September: Monsoon — waterfalls at full roar but roads may wash out",
-      "December–February: Thin waterfalls but crisp visibility and zero crowds",
-      "Avoid May–June if road safety is a concern — heaviest rain of the year",
-    ],
-  },
-  {
-    icon: <AlertCircle className="w-4 h-4" />,
-    title: "Essential Warnings",
-    color: "red",
-    tips: [
-      "The Double Decker trek is 7,000+ steps total — begin before 8 AM",
-      "Mobile signal drops to zero between Mawkdok and Sohra — download offline maps",
-      "Carry cash — no ATMs near major waterfalls or in Nongriat village",
-      "Sohra receives 12,000 mm of rain per year — a rain jacket is non-negotiable",
-    ],
-  },
-  {
-    icon: <Leaf className="w-4 h-4" />,
-    title: "Responsible Travel",
-    color: "green",
-    tips: [
-      "The sacred forests and root bridges are fragile — carry out all waste",
-      "Hire local guides from Tyrna for the root bridge trek (₹200–300)",
-      "Buy local honey and bamboo products directly from village stalls",
-      "Do not pick plants — several species here are endangered and protected",
-    ],
-  },
+const PRACTICAL = [
+  { label: "Distance from Shillong", value: "54 km via NH 6 · ~1.5–2 hr drive (traffic-dependent)" },
+  { label: "Best season", value: "June–Oct for waterfalls at full flow · Oct–Mar for trekking, clear skies & Dawki combo" },
+  { label: "Avoid", value: "Mondays (many sites closed) · Dense fog: January mornings can cut visibility to 5 m" },
+  { label: "Getting there", value: "Shared sumo from Police Bazaar stand (~₹120–150 per seat) · Private taxi ₹2,500–3,500 for the day" },
+  { label: "Stay options", value: "Cherrapunjee Holiday Resort · Polo Orchid Resort · Nongriat village homestays (₹600–1,200 incl. meals)" },
+  { label: "Entry fees", value: "Nohkalikai ₹20 · Mawsmai Cave ₹20 · Eco Park ₹20 · Root Bridge ₹50 · Dainthlen ₹10" },
+  { label: "ATMs", value: "Only 1–2 ATMs in Sohra town; often out of cash. Carry cash from Shillong before departing." },
+  { label: "Mobile network", value: "BSNL most reliable. Airtel works in town. Jio weak. Zero signal in Nongriat valley." },
+  { label: "Weather note", value: "Can rain any time of year. Sohra averages 11,777 mm/year. Always carry a compact raincoat." },
+  { label: "Local guide", value: "Recommended for Root Bridge trek. Rates ₹800–1,500/day. Book via Cherrapunji resort or Tyrna village entry point." },
 ];
-
-const FAST_FACTS = [
-  { label: "Official Name", value: "Sohra (Cherrapunji is the colonial name)", icon: "📍" },
-  { label: "Elevation", value: "1,484 metres above sea level", icon: "⛰️" },
-  { label: "District", value: "East Khasi Hills, Meghalaya", icon: "🗺️" },
-  { label: "Annual Rainfall", value: "~11,777 mm (one of Earth's wettest places)", icon: "🌧️" },
-  { label: "Language", value: "Khasi (primary), Bengali, Hindi, English", icon: "🗣️" },
-  { label: "Famous For", value: "Waterfalls, Living Root Bridges, Limestone Caves", icon: "🌿" },
-  { label: "Distance from Shillong", value: "55–75 km via NH6 (2–2.5 hrs)", icon: "🚗" },
-  { label: "Best Entry Point", value: "Police Bazaar → Mawkdok → Sohra", icon: "🧭" },
-];
-
-// ─────────────────────────────────────────────
-//  SUB-COMPONENTS
-// ─────────────────────────────────────────────
-
-function TipCard({ tip }: { tip: typeof TRAVEL_TIPS[0] }) {
-  const [open, setOpen] = useState(false);
-  const colorMap: Record<string, string> = {
-    amber: "bg-amber-50 border-amber-200 text-amber-800",
-    blue: "bg-blue-50 border-blue-200 text-blue-800",
-    red: "bg-red-50 border-red-200 text-red-700",
-    green: "bg-emerald-50 border-emerald-200 text-emerald-800",
-  };
-  const iconClass = colorMap[tip.color] || colorMap.amber;
-  return (
-    <div className="bg-[#FAF8F5] border border-stone-200 rounded-xl overflow-hidden">
-      <button
-        className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
-        onClick={() => setOpen(!open)}
-        aria-expanded={open}
-      >
-        <div className="flex items-center gap-3">
-          <span className={`w-8 h-8 rounded-lg flex items-center justify-center border ${iconClass}`}>
-            {tip.icon}
-          </span>
-          <span className="text-sm font-display font-semibold text-stone-900">{tip.title}</span>
-        </div>
-        {open ? <ChevronUp className="w-4 h-4 text-stone-400" /> : <ChevronDown className="w-4 h-4 text-stone-400" />}
-      </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="content"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
-          >
-            <ul className="px-5 pb-4 space-y-2 border-t border-stone-100 pt-3">
-              {tip.tips.map((t, i) => (
-                <li key={i} className="flex items-start gap-2 text-xs text-stone-600 leading-relaxed font-sans">
-                  <span className="text-amber-700 mt-0.5 shrink-0">•</span>
-                  {t}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
-
-function RouteTimeline({ route }: { route: typeof SOHRA_ROUTES[0] }) {
-  const diffColor = {
-    Easy: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    "Moderate–Strenuous": "bg-red-50 text-red-700 border-red-200",
-    "Easy (more leisure pace)": "bg-blue-50 text-blue-700 border-blue-200",
-  }[route.difficulty] || "bg-stone-100 text-stone-600 border-stone-200";
-
-  return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap gap-2 items-center">
-        <span className={`text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full border font-bold ${diffColor}`}>
-          {route.difficulty}
-        </span>
-        <span className="text-[10px] font-mono text-stone-400">{route.duration}</span>
-        <span className="text-[10px] font-mono text-stone-400">·</span>
-        <span className="text-[10px] font-mono text-stone-400">{route.distance}</span>
-      </div>
-      <ol className="relative border-l-2 border-amber-200 pl-6 space-y-4">
-        {route.stops.map((stop, i) => (
-          <li key={i} className="relative">
-            <span className="absolute -left-[29px] top-0 w-4 h-4 rounded-full bg-amber-700 border-2 border-white ring-2 ring-amber-200 flex items-center justify-center">
-              <span className="w-1.5 h-1.5 rounded-full bg-white" />
-            </span>
-            <div className="flex flex-col sm:flex-row sm:items-start gap-0.5 sm:gap-3">
-              <span className="text-[10px] font-mono text-amber-700 font-bold shrink-0 mt-0.5 min-w-[90px]">{stop.time}</span>
-              <div>
-                <p className="text-xs font-display font-semibold text-stone-900">{stop.stop}</p>
-                {stop.note && <p className="text-[11px] text-stone-500 font-sans mt-0.5">{stop.note}</p>}
-              </div>
-            </div>
-          </li>
-        ))}
-      </ol>
-    </div>
-  );
-}
-
-// ─────────────────────────────────────────────
-//  MAIN COMPONENT
-// ─────────────────────────────────────────────
 
 export default function TrendingDestination() {
-  const [activeRoute, setActiveRoute] = useState(SOHRA_ROUTES[0].id);
-  const [expandedWaterfall, setExpandedWaterfall] = useState<string | null>(null);
-
-  const currentRoute = SOHRA_ROUTES.find((r) => r.id === activeRoute) || SOHRA_ROUTES[0];
-
   return (
-    <div className="space-y-14 max-w-5xl mx-auto">
-      {/* ── HERO BANNER ────────────────────────────── */}
-      <section>
-        <div className="relative bg-stone-900 rounded-2xl overflow-hidden">
-          {/* Background gradient canvas */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, #1a2a1a 0%, #0d1f0d 40%, #1c2b1a 60%, #0a1a10 100%)",
-            }}
-          />
-          {/* Mist overlay */}
-          <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(ellipse at 70% 40%, #4ade80 0%, transparent 60%), radial-gradient(ellipse at 20% 70%, #86efac 0%, transparent 50%)" }} />
-          <div className="relative z-10 px-6 sm:px-10 py-10 sm:py-14">
-            <div className="flex flex-wrap items-center gap-2 mb-4">
-              <span className="inline-flex items-center gap-1.5 bg-red-500/20 text-red-300 border border-red-500/30 text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full font-bold">
-                <Flame className="w-3 h-3" /> Trending Now
-              </span>
-              <span className="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full font-bold">
-                <TrendingUp className="w-3 h-3" /> June 2026
-              </span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white leading-tight tracking-tight">
-              Sohra
-              <span className="block text-emerald-400 font-light">Cherrapunji</span>
-            </h1>
-            <p className="mt-4 max-w-xl text-sm text-stone-300 leading-relaxed font-sans font-light">
-              The name that stopped the world — one of Earth's wettest inhabited places, now Meghalaya's most-searched destination on every travel platform. Waterfalls that dwarf buildings, caves sculpted over millennia, and living bridges grown over 500 years. This is where Meghalaya earns its name: <em>Abode of Clouds</em>.
-            </p>
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {[
-                { icon: <MapPin className="w-3.5 h-3.5" />, label: "75 km from Shillong", sub: "NH6 Route" },
-                { icon: <Droplets className="w-3.5 h-3.5" />, label: "11,777 mm rain/yr", sub: "World Record" },
-                { icon: <Mountain className="w-3.5 h-3.5" />, label: "1,484 m elevation", sub: "Above Sea Level" },
-                { icon: <Star className="w-3.5 h-3.5" />, label: "6 waterfalls", sub: "Within 30 km" },
-              ].map((stat, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-3">
-                  <div className="text-emerald-400 mb-1">{stat.icon}</div>
-                  <div className="text-xs font-display font-semibold text-white">{stat.label}</div>
-                  <div className="text-[10px] text-stone-400 font-mono mt-0.5">{stat.sub}</div>
-                </div>
-              ))}
-            </div>
+    <div className="trending-page">
+
+      {/* ── Hero ── */}
+      <section className="trending-hero">
+        <div className="trending-hero-badge">🔥 Trending Now in Meghalaya</div>
+        <h2 className="trending-hero-title">Sohra</h2>
+        <p className="trending-hero-sub">Cherrapunji &nbsp;·&nbsp; East Khasi Hills &nbsp;·&nbsp; Meghalaya, India</p>
+        <p className="trending-hero-desc">
+          The world's wettest place is also its most enchanting. Ancient living root bridges woven
+          by Khasi hands over centuries, waterfalls that vanish into monsoon cloud, limestone caves
+          carved by millennia of rain, and a valley silence only the hills understand.
+          Right now, Sohra is having a moment — and it deserves every bit of it.
+        </p>
+        <div className="trending-hero-stats">
+          <div className="trending-stat">
+            <span className="trending-stat-val">340 m</span>
+            <span className="trending-stat-label">Nohkalikai Falls</span>
+          </div>
+          <div className="trending-stat">
+            <span className="trending-stat-val">54 km</span>
+            <span className="trending-stat-label">from Shillong</span>
+          </div>
+          <div className="trending-stat">
+            <span className="trending-stat-val">11,777</span>
+            <span className="trending-stat-label">mm rain/year</span>
+          </div>
+          <div className="trending-stat">
+            <span className="trending-stat-val">3,500</span>
+            <span className="trending-stat-label">steps to Root Bridge</span>
           </div>
         </div>
       </section>
 
-      {/* ── FAST FACTS ─────────────────────────────── */}
-      <section>
-        <div className="flex items-center gap-2 mb-5">
-          <Info className="w-4 h-4 text-amber-700" />
-          <h2 className="text-lg font-display font-bold text-stone-900">At a Glance</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {FAST_FACTS.map((fact, i) => (
-            <div key={i} className="bg-[#FAF8F5] border border-stone-200 rounded-xl p-4 space-y-1">
-              <div className="text-xl">{fact.icon}</div>
-              <div className="text-[10px] font-mono uppercase tracking-widest text-stone-400 font-bold">{fact.label}</div>
-              <div className="text-xs font-sans text-stone-700 leading-snug">{fact.value}</div>
+      {/* ── Attractions ── */}
+      <section className="trending-section">
+        <h3 className="trending-section-title">Top Attractions</h3>
+        <div className="trending-attractions-grid">
+          {ATTRACTIONS.map((a) => (
+            <div key={a.name} className="trending-attraction-card">
+              <div className="trending-card-emoji">{a.emoji}</div>
+              <div className="trending-card-body">
+                <div className="trending-card-type">{a.type}</div>
+                <h4 className="trending-card-name">{a.name}</h4>
+                <ul className="trending-card-meta">
+                  <li><strong>Location:</strong> {a.distance}</li>
+                  <li><strong>Scale:</strong> {a.scale}</li>
+                  <li><strong>Best time:</strong> {a.bestTime}</li>
+                </ul>
+                <p className="trending-card-tip">💡 {a.tip}</p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── WATERFALLS & SIGHTS ────────────────────── */}
-      <section>
-        <div className="flex items-center gap-2 mb-2">
-          <Waves className="w-4 h-4 text-blue-600" />
-          <h2 className="text-lg font-display font-bold text-stone-900">Waterfalls & Sights</h2>
-        </div>
-        <p className="text-xs text-stone-500 mb-5 font-sans">
-          Sohra has more accessible major waterfalls per square kilometre than anywhere in the subcontinent. Listed in order of proximity to Sohra town.
-        </p>
-        <div className="space-y-3">
-          {SOHRA_WATERFALLS.map((wf) => {
-            const isOpen = expandedWaterfall === wf.name;
-            return (
-              <div
-                key={wf.name}
-                className="bg-[#FAF8F5] border border-stone-200 rounded-xl overflow-hidden"
-              >
-                <button
-                  className="w-full flex items-center gap-4 px-5 py-4 text-left cursor-pointer"
-                  onClick={() => setExpandedWaterfall(isOpen ? null : wf.name)}
-                  aria-expanded={isOpen}
-                >
-                  <span className="text-2xl shrink-0">{wf.emoji}</span>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-display font-bold text-stone-900 text-sm">{wf.name}</span>
-                      <span className="text-[10px] font-mono uppercase tracking-widest bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded-full font-bold">
-                        {wf.tag}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3 mt-0.5">
-                      <span className="text-[11px] text-stone-500 font-mono">{wf.height}</span>
-                      <span className="text-[11px] text-stone-400">·</span>
-                      <span className="text-[11px] text-stone-500 font-mono flex items-center gap-1">
-                        <Car className="w-3 h-3" />{wf.driveMins} min drive
-                      </span>
-                    </div>
-                  </div>
-                  {isOpen ? <ChevronUp className="w-4 h-4 text-stone-400 shrink-0" /> : <ChevronDown className="w-4 h-4 text-stone-400 shrink-0" />}
-                </button>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      key="wf-detail"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25 }}
-                    >
-                      <div className="px-5 pb-5 pt-2 border-t border-stone-100 space-y-3">
-                        <p className="text-xs text-stone-600 leading-relaxed font-sans">{wf.desc}</p>
-                        <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3">
-                          <div className="flex items-center gap-1.5 mb-1">
-                            <Star className="w-3 h-3 text-amber-700" />
-                            <span className="text-[10px] font-mono uppercase tracking-widest text-amber-800 font-bold">Visitor Tips</span>
-                          </div>
-                          <p className="text-xs text-amber-900 leading-relaxed font-sans">{wf.tips}</p>
-                        </div>
-                        <div className="flex items-center gap-1.5 text-[11px] text-stone-400 font-mono">
-                          <Navigation className="w-3 h-3" />
-                          {wf.coord}
-                          <a
-                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(wf.name + " Cherrapunji Meghalaya")}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="ml-2 text-amber-700 hover:text-amber-900 flex items-center gap-1"
-                          >
-                            Open in Maps <ExternalLink className="w-3 h-3" />
-                          </a>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* ── CAFES & FOOD ───────────────────────────── */}
-      <section>
-        <div className="flex items-center gap-2 mb-2">
-          <Coffee className="w-4 h-4 text-amber-700" />
-          <h2 className="text-lg font-display font-bold text-stone-900">Where to Eat & Drink in Sohra</h2>
-        </div>
-        <p className="text-xs text-stone-500 mb-5 font-sans">
-          Sohra's food scene is small but genuine. Khasi home cooking dominates — expect bamboo-steamed rice, dried pork preparations, and honey-laced teas.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {SOHRA_CAFES.map((cafe) => (
-            <div key={cafe.name} className="bg-[#FAF8F5] border border-stone-200 rounded-xl p-5 space-y-3 hover:border-amber-300 hover:shadow-md transition-all duration-200">
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <span className="text-xl">{cafe.emoji}</span>
-                  <h3 className="font-display font-bold text-stone-900 text-sm mt-1.5">{cafe.name}</h3>
-                  <div className="flex items-center gap-1.5 mt-1">
-                    <MapPin className="w-3 h-3 text-stone-400" />
-                    <span className="text-[11px] text-stone-500 font-mono">{cafe.area}</span>
-                  </div>
-                </div>
-                <span className="text-[10px] font-mono uppercase tracking-widest bg-amber-50 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-full font-bold shrink-0">
-                  {cafe.vibe}
-                </span>
-              </div>
-              <p className="text-xs text-stone-600 leading-relaxed font-sans">{cafe.desc}</p>
-              <div className="pt-1 border-t border-stone-100 space-y-1.5">
-                <div className="flex items-center gap-2">
-                  <Utensils className="w-3 h-3 text-amber-700 shrink-0" />
-                  <span className="text-[11px] text-stone-700 font-sans">
-                    <span className="font-semibold">Must try:</span> {cafe.mustTry}
-                  </span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-1.5">
-                    <Clock className="w-3 h-3 text-stone-400" />
-                    <span className="text-[11px] text-stone-500 font-mono">{cafe.openHours}</span>
-                  </div>
-                  <span className="text-[11px] text-stone-400 font-mono">{cafe.priceRange}</span>
+      {/* ── Routes ── */}
+      <section className="trending-section trending-section-alt">
+        <h3 className="trending-section-title">Curated Routes</h3>
+        <div className="trending-routes-grid">
+          {ROUTES.map((r) => (
+            <div key={r.label} className="trending-route-card">
+              <div className="trending-route-header">
+                <h4 className="trending-route-label">{r.label}</h4>
+                <div className="trending-route-meta">
+                  <span className="trending-badge">{r.duration}</span>
+                  <span className="trending-badge trending-badge-muted">{r.distance}</span>
                 </div>
               </div>
+              <ol className="trending-route-stops">
+                {r.stops.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ol>
+              <p className="trending-route-tips">📌 {r.tips}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── ROUTE PLANNER ──────────────────────────── */}
-      <section>
-        <div className="flex items-center gap-2 mb-2">
-          <Navigation className="w-4 h-4 text-emerald-700" />
-          <h2 className="text-lg font-display font-bold text-stone-900">Curated Routes to Sohra</h2>
-        </div>
-        <p className="text-xs text-stone-500 mb-5 font-sans">
-          Three tried-and-tested itineraries — from a tight day trip to a full overnight immersion. All start from Shillong city centre.
-        </p>
-
-        {/* Route selector tabs */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {SOHRA_ROUTES.map((r) => (
-            <button
-              key={r.id}
-              onClick={() => setActiveRoute(r.id)}
-              className={`px-4 py-2 rounded-lg text-xs font-display font-semibold transition-all duration-200 cursor-pointer ${
-                activeRoute === r.id
-                  ? "bg-stone-900 text-white"
-                  : "bg-[#FAF8F5] border border-stone-200 text-stone-600 hover:border-amber-300"
-              }`}
-            >
-              {r.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Route content */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeRoute}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="bg-[#FAF8F5] border border-stone-200 rounded-xl p-5 sm:p-7"
-          >
-            <h3 className="font-display font-bold text-stone-900 mb-4">{currentRoute.label}</h3>
-            <RouteTimeline route={currentRoute} />
-            <div className="mt-5 pt-4 border-t border-stone-100">
-              <a
-                href={`https://www.google.com/maps/dir/Shillong/Sohra,+Meghalaya`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white text-xs font-display font-semibold px-4 py-2.5 rounded-lg transition-colors duration-200"
-              >
-                <ExternalLink className="w-3.5 h-3.5" /> Open full route in Google Maps
-              </a>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </section>
-
-      {/* ── TRAVEL TIPS ────────────────────────────── */}
-      <section>
-        <div className="flex items-center gap-2 mb-5">
-          <AlertCircle className="w-4 h-4 text-amber-700" />
-          <h2 className="text-lg font-display font-bold text-stone-900">Before You Go</h2>
-        </div>
-        <div className="space-y-3">
-          {TRAVEL_TIPS.map((tip, i) => (
-            <TipCard key={i} tip={tip} />
-          ))}
-        </div>
-      </section>
-
-      {/* ── PHOTO SPOTS ────────────────────────────── */}
-      <section>
-        <div className="flex items-center gap-2 mb-5">
-          <Camera className="w-4 h-4 text-stone-600" />
-          <h2 className="text-lg font-display font-bold text-stone-900">Photographer's Hit List</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            { spot: "Nohkalikai viewpoint", timing: "9:30–11 AM", why: "Mist clears, golden light fills the gorge" },
-            { spot: "Seven Sisters Falls lay-by (NH6)", timing: "2–4 PM", why: "Back-lit streams against dark basalt cliff" },
-            { spot: "Double Decker Root Bridge", timing: "8–10 AM", why: "Dappled forest light before midday crowds" },
-            { spot: "Eco Park cliff edge", timing: "6–7 AM (sunrise)", why: "Fog sea over the Bangladesh plains at first light" },
-            { spot: "Mawkdok Valley zipline point", timing: "Any time en route", why: "360° gorge panorama with road sweeping through" },
-            { spot: "Dainthlen Falls gorge mouth", timing: "11 AM–1 PM", why: "Direct overhead light inside the dark canyon" },
-          ].map((photo, i) => (
-            <div key={i} className="bg-[#FAF8F5] border border-stone-200 rounded-xl p-4 space-y-2">
-              <div className="flex items-start gap-2">
-                <Camera className="w-3.5 h-3.5 text-stone-400 shrink-0 mt-0.5" />
-                <span className="text-xs font-display font-bold text-stone-900">{photo.spot}</span>
+      {/* ── Cafés & Eats ── */}
+      <section className="trending-section">
+        <h3 className="trending-section-title">Where to Eat &amp; Drink</h3>
+        <div className="trending-cafes-grid">
+          {CAFES_EATS.map((c) => (
+            <div key={c.name} className="trending-cafe-card">
+              <div className="trending-cafe-header">
+                <h4 className="trending-cafe-name">{c.name}</h4>
+                <span className="trending-price">{c.priceRange}</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <Sunrise className="w-3 h-3 text-amber-600" />
-                <span className="text-[11px] text-amber-800 font-mono font-bold">{photo.timing}</span>
-              </div>
-              <p className="text-[11px] text-stone-500 font-sans leading-snug">{photo.why}</p>
+              <div className="trending-cafe-type">{c.type} · {c.vibe}</div>
+              <p className="trending-cafe-must"><strong>Must try:</strong> {c.mustTry}</p>
+              <p className="trending-cafe-note">{c.note}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── SEASONAL SUMMARY ───────────────────────── */}
-      <section className="bg-stone-900 rounded-2xl p-7 sm:p-9">
-        <div className="flex items-center gap-2 mb-6">
-          <Cloud className="w-4 h-4 text-sky-400" />
-          <h2 className="text-lg font-display font-bold text-white">Sohra Through the Seasons</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            {
-              season: "Oct–Nov",
-              label: "Peak Season",
-              icon: "☀️",
-              text: "Clear skies, all waterfalls visible, root bridges fully accessible. Book accommodation 3 weeks ahead.",
-              badge: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-            },
-            {
-              season: "Dec–Feb",
-              label: "Cool & Clear",
-              icon: "❄️",
-              text: "Thinnest waterfalls but zero crowds, crisp air and vivid visibility. Mornings below 5°C — pack warm layers.",
-              badge: "bg-blue-500/20 text-blue-300 border-blue-500/30",
-            },
-            {
-              season: "Mar–May",
-              label: "Pre-Monsoon",
-              icon: "🌸",
-              text: "Wildflowers in bloom. Waterfalls building. Heat in the plains means Sohra's cool air is very welcome.",
-              badge: "bg-pink-500/20 text-pink-300 border-pink-500/30",
-            },
-            {
-              season: "Jun–Sep",
-              label: "Monsoon",
-              icon: "🌧️",
-              text: "Waterfalls at absolute maximum. Roads can flood suddenly. Experienced travellers only — but the views are unreal.",
-              badge: "bg-amber-500/20 text-amber-300 border-amber-500/30",
-            },
-          ].map((s, i) => (
-            <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-2">
-              <div className="text-2xl">{s.icon}</div>
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-[10px] font-mono text-stone-300 font-bold">{s.season}</span>
-                <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border font-bold ${s.badge}`}>{s.label}</span>
-              </div>
-              <p className="text-xs text-stone-400 font-sans leading-relaxed">{s.text}</p>
+      {/* ── Practical Info ── */}
+      <section className="trending-section trending-section-alt">
+        <h3 className="trending-section-title">Practical Info</h3>
+        <dl className="trending-practical-grid">
+          {PRACTICAL.map((p) => (
+            <div key={p.label} className="trending-practical-row">
+              <dt className="trending-practical-label">{p.label}</dt>
+              <dd className="trending-practical-value">{p.value}</dd>
             </div>
           ))}
-        </div>
+        </dl>
       </section>
 
-      {/* ── NEARBY CONNECTIONS ─────────────────────── */}
-      <section>
-        <div className="flex items-center gap-2 mb-5">
-          <ArrowRight className="w-4 h-4 text-stone-500" />
-          <h2 className="text-lg font-display font-bold text-stone-900">While You're in the Area</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {[
-            {
-              name: "Mawlynnong",
-              dist: "90 km from Sohra",
-              tag: "Asia's Cleanest Village",
-              desc: "The sky-walk here offers the best view of betel nut plantations and the Bangladesh flatlands. Tiny, spotless, extraordinary.",
-              emoji: "🌳",
-            },
-            {
-              name: "Dawki (Umngot River)",
-              dist: "65 km from Sohra",
-              tag: "Crystal River Boating",
-              desc: "The Umngot river at Dawki is so clear that boats appear to float in air. Best combined with Sohra on a 2-day loop from Shillong.",
-              emoji: "🚣",
-            },
-            {
-              name: "Mawsynram",
-              dist: "20 km from Sohra",
-              tag: "Wettest Place on Earth",
-              desc: "Officially the world's highest annual rainfall (competing with Sohra). A quick detour reveals a Shivalinga-shaped stalagmite cave at Mawjymbuin.",
-              emoji: "🌊",
-            },
-          ].map((place, i) => (
-            <div key={i} className="bg-[#FAF8F5] border border-stone-200 rounded-xl p-5 space-y-2">
-              <div className="text-2xl">{place.emoji}</div>
-              <div>
-                <h3 className="font-display font-bold text-stone-900 text-sm">{place.name}</h3>
-                <span className="text-[10px] font-mono text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full font-bold">
-                  {place.tag}
-                </span>
-              </div>
-              <p className="text-[11px] text-stone-400 font-mono">{place.dist}</p>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">{place.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ── Styles ── */}
+      <style>{`
+        .trending-page {
+          font-family: var(--font-body, 'Satoshi', sans-serif);
+          color: var(--color-text, #28251d);
+        }
+
+        /* ── Hero ── */
+        .trending-hero {
+          background: linear-gradient(160deg, #faf8f3 0%, #e8f0ee 100%);
+          border-bottom: 1px solid rgba(0,0,0,0.08);
+          padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 5vw, 3rem);
+          text-align: center;
+        }
+        .trending-hero-badge {
+          display: inline-block;
+          background: #01696f;
+          color: #fff;
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.09em;
+          text-transform: uppercase;
+          padding: 0.3rem 0.85rem;
+          border-radius: 9999px;
+          margin-bottom: 1.1rem;
+        }
+        .trending-hero-title {
+          font-family: var(--font-display, 'Boska', Georgia, serif);
+          font-size: clamp(2.75rem, 7vw, 5.5rem);
+          font-weight: 800;
+          color: #28251d;
+          margin-bottom: 0.3rem;
+          line-height: 1.05;
+          letter-spacing: -0.02em;
+        }
+        .trending-hero-sub {
+          font-size: 0.8rem;
+          color: #7a7974;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          margin-bottom: 1.4rem;
+        }
+        .trending-hero-desc {
+          max-width: 58ch;
+          margin: 0 auto 2.25rem;
+          font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+          color: #5a5955;
+          line-height: 1.8;
+        }
+        .trending-hero-stats {
+          display: flex;
+          gap: clamp(1.25rem, 4vw, 3rem);
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .trending-stat {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.2rem;
+        }
+        .trending-stat-val {
+          font-size: clamp(1.5rem, 3vw, 2.25rem);
+          font-weight: 800;
+          color: #01696f;
+          line-height: 1;
+        }
+        .trending-stat-label {
+          font-size: 0.68rem;
+          color: #7a7974;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          font-weight: 600;
+        }
+
+        /* ── Sections ── */
+        .trending-section {
+          padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 3rem);
+        }
+        .trending-section-alt {
+          background: #f3f0ec;
+        }
+        .trending-section-title {
+          font-family: var(--font-display, Georgia, serif);
+          font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+          font-weight: 700;
+          color: #28251d;
+          margin-bottom: 1.75rem;
+          padding-bottom: 0.65rem;
+          border-bottom: 2.5px solid #01696f;
+          display: inline-block;
+        }
+
+        /* ── Attractions ── */
+        .trending-attractions-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+          gap: 1.25rem;
+        }
+        .trending-attraction-card {
+          display: flex;
+          gap: 1rem;
+          background: #fff;
+          border: 1px solid rgba(40,37,29,0.1);
+          border-radius: 0.75rem;
+          padding: 1.25rem;
+          box-shadow: 0 1px 3px rgba(40,37,29,0.06);
+          transition: box-shadow 180ms ease, transform 180ms ease;
+        }
+        .trending-attraction-card:hover {
+          box-shadow: 0 4px 16px rgba(40,37,29,0.1);
+          transform: translateY(-2px);
+        }
+        .trending-card-emoji {
+          font-size: 2rem;
+          flex-shrink: 0;
+          line-height: 1;
+          padding-top: 0.1rem;
+        }
+        .trending-card-body {
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+        }
+        .trending-card-type {
+          font-size: 0.68rem;
+          color: #01696f;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+        }
+        .trending-card-name {
+          font-size: clamp(1rem, 1.5vw, 1.15rem);
+          font-weight: 700;
+          color: #28251d;
+          line-height: 1.25;
+          margin: 0;
+        }
+        .trending-card-meta {
+          list-style: none;
+          padding: 0;
+          margin: 0.1rem 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+          font-size: 0.82rem;
+          color: #5a5955;
+          line-height: 1.5;
+        }
+        .trending-card-tip {
+          font-size: 0.82rem;
+          color: #3d5e5b;
+          background: #deecea;
+          border-radius: 0.5rem;
+          padding: 0.5rem 0.7rem;
+          margin-top: 0.25rem;
+          line-height: 1.55;
+        }
+
+        /* ── Routes ── */
+        .trending-routes-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+          gap: 1.5rem;
+        }
+        .trending-route-card {
+          background: #fff;
+          border: 1px solid rgba(40,37,29,0.1);
+          border-radius: 0.75rem;
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          box-shadow: 0 1px 3px rgba(40,37,29,0.06);
+        }
+        .trending-route-header {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .trending-route-label {
+          font-size: clamp(1rem, 1.75vw, 1.15rem);
+          font-weight: 700;
+          color: #28251d;
+          margin: 0;
+          line-height: 1.3;
+        }
+        .trending-route-meta {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+        }
+        .trending-badge {
+          display: inline-block;
+          background: #01696f;
+          color: #fff;
+          font-size: 0.68rem;
+          font-weight: 700;
+          padding: 0.2rem 0.65rem;
+          border-radius: 9999px;
+          letter-spacing: 0.04em;
+        }
+        .trending-badge-muted {
+          background: #e6e4df;
+          color: #5a5955;
+        }
+        .trending-route-stops {
+          padding-left: 1.2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          font-size: 0.84rem;
+          color: #5a5955;
+          line-height: 1.55;
+          margin: 0;
+        }
+        .trending-route-tips {
+          font-size: 0.82rem;
+          background: #deecea;
+          border-radius: 0.5rem;
+          padding: 0.65rem 0.85rem;
+          color: #3d5e5b;
+          line-height: 1.55;
+          margin: 0;
+        }
+
+        /* ── Cafés ── */
+        .trending-cafes-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+          gap: 1.25rem;
+        }
+        .trending-cafe-card {
+          background: #fff;
+          border: 1px solid rgba(40,37,29,0.1);
+          border-radius: 0.75rem;
+          padding: 1.25rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          box-shadow: 0 1px 3px rgba(40,37,29,0.06);
+          transition: box-shadow 180ms ease;
+        }
+        .trending-cafe-card:hover {
+          box-shadow: 0 4px 14px rgba(40,37,29,0.09);
+        }
+        .trending-cafe-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+        .trending-cafe-name {
+          font-size: 1rem;
+          font-weight: 700;
+          color: #28251d;
+          line-height: 1.3;
+          margin: 0;
+        }
+        .trending-price {
+          font-size: 0.82rem;
+          color: #01696f;
+          font-weight: 800;
+          flex-shrink: 0;
+          letter-spacing: 0.05em;
+        }
+        .trending-cafe-type {
+          font-size: 0.75rem;
+          color: #7a7974;
+          line-height: 1.4;
+        }
+        .trending-cafe-must,
+        .trending-cafe-note {
+          font-size: 0.83rem;
+          color: #5a5955;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        /* ── Practical ── */
+        .trending-practical-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+          gap: 0.75rem;
+        }
+        .trending-practical-row {
+          background: #fff;
+          border: 1px solid rgba(40,37,29,0.09);
+          border-radius: 0.625rem;
+          padding: 0.85rem 1rem;
+          display: flex;
+          gap: 0.85rem;
+          align-items: baseline;
+        }
+        .trending-practical-label {
+          font-size: 0.78rem;
+          font-weight: 700;
+          color: #01696f;
+          min-width: 130px;
+          flex-shrink: 0;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          line-height: 1.4;
+        }
+        .trending-practical-value {
+          font-size: 0.84rem;
+          color: #5a5955;
+          line-height: 1.6;
+        }
+
+        @media (max-width: 480px) {
+          .trending-hero-stats { gap: 1.25rem; }
+          .trending-practical-row { flex-direction: column; gap: 0.2rem; }
+          .trending-practical-label { min-width: unset; }
+          .trending-card-emoji { font-size: 1.6rem; }
+        }
+      `}</style>
     </div>
   );
 }
