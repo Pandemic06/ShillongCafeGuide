@@ -1,14 +1,15 @@
 import React from "react";
-import { Star, MapPin, ArrowRight, Crown } from "lucide-react";
+import { Star, MapPin, ArrowRight, Crown, Sparkles } from "lucide-react";
 import { Cafe } from "../types";
 
 interface EditorsChoiceCardProps {
   cafe: Cafe;
   onViewDetails: (cafeId: string) => void;
   onOpenRoute?: (routeId: string) => void;
+  isFeaturedPartner?: boolean;
 }
 
-export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute }: EditorsChoiceCardProps) {
+export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, isFeaturedPartner }: EditorsChoiceCardProps) {
   const heroImage =
     cafe.images?.hero ||
     cafe.images?.card ||
@@ -16,7 +17,11 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute }: 
 
   return (
     <div
-      className="group relative bg-white border border-stone-200 rounded-[24px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col"
+      className={`group relative bg-white border rounded-[24px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col ${
+        isFeaturedPartner
+          ? "border-amber-400 ring-2 ring-amber-300/50 shadow-amber-100"
+          : "border-stone-200"
+      }`}
       onClick={() => onViewDetails(cafe.id)}
     >
       {/* Hero image */}
@@ -30,8 +35,19 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute }: 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
+        {/* Featured Partner ribbon — shown above Editor's Choice badge when applicable */}
+        {isFeaturedPartner && (
+          <div className="absolute top-0 left-0 right-0 flex justify-center pt-0 pointer-events-none">
+            <div className="flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-1 text-[9px] font-mono font-bold tracking-widest uppercase shadow-lg rounded-b-xl">
+              <Sparkles className="w-3 h-3 shrink-0" />
+              <span>Featured Partner</span>
+              <Sparkles className="w-3 h-3 shrink-0" />
+            </div>
+          </div>
+        )}
+
         {/* Editor's Choice badge */}
-        <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-amber-800/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-[9px] font-mono font-bold tracking-widest uppercase shadow">
+        <div className={`absolute flex items-center gap-1.5 bg-amber-800/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-[9px] font-mono font-bold tracking-widest uppercase shadow ${isFeaturedPartner ? "top-9 left-3" : "top-3 left-3"}`}>
           <Crown className="w-3 h-3 text-amber-300 shrink-0" />
           <span>Editor's Choice</span>
         </div>
@@ -88,7 +104,11 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute }: 
               e.stopPropagation();
               onViewDetails(cafe.id);
             }}
-            className="flex-1 flex items-center justify-center gap-1.5 bg-stone-900 hover:bg-stone-950 text-white text-[10px] font-sans font-semibold uppercase tracking-wider px-3 py-2.5 rounded-xl transition-all cursor-pointer"
+            className={`flex-1 flex items-center justify-center gap-1.5 text-white text-[10px] font-sans font-semibold uppercase tracking-wider px-3 py-2.5 rounded-xl transition-all cursor-pointer ${
+              isFeaturedPartner
+                ? "bg-amber-700 hover:bg-amber-800"
+                : "bg-stone-900 hover:bg-stone-950"
+            }`}
           >
             <span>View Profile</span>
             <ArrowRight className="w-3 h-3" />
