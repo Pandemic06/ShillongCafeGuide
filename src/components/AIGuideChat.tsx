@@ -34,6 +34,22 @@ export default function AIGuideChat() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  const startCustomItinerary = () => {
+    setMessages([
+      {
+        role: "model",
+        text: "What's the mood?",
+      },
+    ]);
+    setIsOpen(true);
+    setTimeout(() => {
+      const inputEl = document.getElementById("ai-chat-input");
+      if (inputEl) {
+        inputEl.focus();
+      }
+    }, 100);
+  };
+
   const suggestions = [
     "Tell me about traditional Jadoh & Dohneiiong",
     "Recommend a quiet cafe for reading",
@@ -104,10 +120,13 @@ export default function AIGuideChat() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       {/* Custom itinerary highlight banner */}
       {!isOpen && (
-        <div className="bg-amber-900 border border-amber-500 text-amber-250 text-[10px] font-mono tracking-wider px-3.5 py-1.5 rounded-full shadow-lg mb-2 flex items-center gap-1.5 leading-none select-none animate-bounce">
-          <Sparkles className="w-3 h-3 text-amber-350 animate-pulse" />
+        <button
+          onClick={startCustomItinerary}
+          className="bg-amber-900 border border-amber-500 text-white text-[10px] font-mono font-bold tracking-wider px-3.5 py-1.5 rounded-full shadow-lg mb-2 flex items-center gap-1.5 leading-none select-none animate-bounce cursor-pointer hover:bg-amber-800 hover:border-amber-400 transition-all duration-200"
+        >
+          <Sparkles className="w-3 h-3 text-white animate-pulse" />
           <span>Create a custom itinerary</span>
-        </div>
+        </button>
       )}
 
       {/* Launcher Button */}
