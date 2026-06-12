@@ -7,6 +7,21 @@ interface ChatMessage {
   text: string;
 }
 
+const parseItinerary = (text: string) => {
+  const match = text.match(/\[itinerary\]([\s\S]*?)\[\/itinerary\]/);
+  if (!match) return null;
+  try {
+    return JSON.parse(match[1].trim());
+  } catch (e) {
+    console.error("Failed to parse itinerary JSON:", e);
+    return null;
+  }
+};
+
+const getCleanText = (text: string) => {
+  return text.replace(/\[itinerary\]([\s\S]*?)\[\/itinerary\]/, "").trim();
+};
+
 export default function AIGuideChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
@@ -86,7 +101,15 @@ export default function AIGuideChat() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+      {/* Custom itinerary highlight banner */}
+      {!isOpen && (
+        <div className="bg-amber-900 border border-amber-500 text-amber-250 text-[10px] font-mono tracking-wider px-3.5 py-1.5 rounded-full shadow-lg mb-2 flex items-center gap-1.5 leading-none select-none animate-bounce">
+          <Sparkles className="w-3 h-3 text-amber-350 animate-pulse" />
+          <span>Create a custom itinerary</span>
+        </div>
+      )}
+
       {/* Launcher Button */}
       <motion.button
         id="ai-chat-launcher"
@@ -135,25 +158,133 @@ export default function AIGuideChat() {
 
             {/* Messages Body */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
-              {messages.map((m, idx) => (
-                <div
-                  key={idx}
-                  className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
-                >
+              {messages.map((m, idx) => {
+                const itinerary = m.role === "model" ? parseItinerary(m.text) : null;
+                const cleanText = m.role === "model" ? getCleanText(m.text) : m.text;
+                return (
                   <div
-                    className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
-                      m.role === "user"
-                        ? "bg-amber-800 text-white rounded-tr-none shadow-sm"
-                        : "bg-white text-stone-800 border border-stone-200/80 rounded-tl-none shadow-xs"
-                    }`}
+                    key={idx}
+                    className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
                   >
-                    <p className="whitespace-pre-line" dangerouslySetInnerHTML={{ __html: m.text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>') }} />
-                    <span className="block text-[9px] mt-1.5 opacity-60 text-right font-mono">
-                      {m.role === "user" ? "You" : "Kong Labet"}
-                    </span>
+                    <div
+                      className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
+                        m.role === "user"
+                          ? "bg-amber-800 text-white rounded-tr-none shadow-sm"
+                          : "bg-white text-stone-800 border border-stone-200/80 rounded-tl-none shadow-xs"
+                      }`}
+                    >
+                      <p className="whitespace-pre-line" dangerouslySetInnerHTML={{ __html: cleanText.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>') }} />
+                      
+                      {itinerary && (
+                        <div className="mt-3 bg-stone-50 border border-stone-200 rounded-xl p-3 space-y-3 text-left">
+                          <div className="flex items-center gap-1.5 text-amber-900 font-semibold text-xs border-b border-stone-250 pb-1.5">
+                            <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
+                            <span>Custom Itinerary</span>
+                          </div>
+                          
+                          <div className="space-y-2 max-h-[160px] overflow-y-auto pr-1">
+                            {itinerary.stops?.map((stop: any, i: number) => (
+                              <div key={i} className="flex gap-2 text-xs">
+                                <span className="bg-amber-800 text-white w-4.5 h-4.5 rounded-full flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">{i+1}</span>
+                                <div className="space-y-0.5">
+                                  <p className="font-semibold text-stone-900">{stop.name}</p>
+                                  {stop.description && <p className="text-[10px] text-stone-500 leading-snug">{stop.description}</p>}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                          
+                          {itinerary.summary && (
+                            <div className="bg-white border border-stone-200 p-2 rounded-lg text-[10px] text-stone-600 leading-relaxed font-sans">
+                              <strong>Summary:</strong> {itinerary.summary}
+                            </div>
+                          )}
+                          
+                          <div className="flex gap-1.5 pt-1.5 border-t border-stone-200">
+                            <a
+                              href={(() => {
+                                if (!itinerary.stops || itinerary.stops.length === 0) return "#";
+                                const origin = "Shillong, Meghalaya";
+                                const destination = itinerary.stops[itinerary.stops.length - 1].name + ", Shillong, Meghalaya";
+                                const waypoints = itinerary.stops.slice(0, -1).map((s: any) => s.name + ", Shillong, Meghalaya");
+                                return `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}&waypoints=${waypoints.map(encodeURIComponent).join('|')}`;
+                              })()}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1 py-1.5 bg-amber-800 hover:bg-amber-900 text-white text-[9px] font-mono font-bold uppercase tracking-wider rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1 shadow-xs text-center"
+                            >
+                              <span>Export to GMaps</span>
+                            </a>
+                            <button
+                              onClick={() => {
+                                const printWindow = window.open("", "_blank");
+                                if (!printWindow) return;
+                                const stopsHTML = itinerary.stops.map((stop: any, i: number) => `
+                                  <div class="stop">
+                                    <div class="number">${i + 1}</div>
+                                    <div class="details">
+                                      <h3>${stop.name}</h3>
+                                      <p>${stop.description || ''}</p>
+                                    </div>
+                                  </div>
+                                `).join('');
+                                printWindow.document.write(`
+                                  <html>
+                                    <head>
+                                      <title>Your Custom Shillong Itinerary</title>
+                                      <style>
+                                        body { font-family: 'Inter', sans-serif; padding: 40px; color: #1c1917; background-color: #FAF8F5; }
+                                        .header { text-align: center; border-bottom: 2px solid #8b5c1a; padding-bottom: 20px; margin-bottom: 30px; }
+                                        .logo { font-size: 24px; font-weight: bold; color: #8b5c1a; letter-spacing: 1px; }
+                                        .title { font-size: 20px; color: #44403c; margin-top: 10px; }
+                                        .summary { font-style: italic; color: #57534e; margin-bottom: 30px; line-height: 1.5; font-size: 14px; background: #fff; padding: 15px; border-left: 4px solid #8b5c1a; border-radius: 8px; }
+                                        .stop { display: flex; align-items: flex-start; margin-bottom: 20px; background: white; padding: 15px; border-radius: 12px; border: 1px solid #e7e5e4; }
+                                        .number { background: #8b5c1a; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; margin-right: 15px; flex-shrink: 0; }
+                                        .details h3 { margin: 0 0 5px 0; font-size: 16px; color: #1c1917; }
+                                        .details p { margin: 0; font-size: 13px; color: #57534e; line-height: 1.4; }
+                                        .footer { text-align: center; margin-top: 40px; font-size: 11px; color: #a8a29e; border-top: 1px solid #e7e5e4; padding-top: 20px; }
+                                      </style>
+                                    </head>
+                                    <body>
+                                      <div class="header">
+                                        <div class="logo">SHILLONG HEARTH & MAP</div>
+                                        <div class="title">Custom Travel Itinerary</div>
+                                      </div>
+                                      <div class="summary">
+                                        <strong>Summary:</strong> ${itinerary.summary}
+                                      </div>
+                                      <div class="stops">
+                                        ${stopsHTML}
+                                      </div>
+                                      <div class="footer">
+                                        Generated by Kong Labet AI Guide • shillongcafemap.in
+                                      </div>
+                                      <script>
+                                        window.onload = function() {
+                                          window.print();
+                                          setTimeout(function() { window.close(); }, 500);
+                                        }
+                                      </script>
+                                    </body>
+                                  </html>
+                                `);
+                                printWindow.document.close();
+                              }}
+                              className="flex-1 py-1.5 bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-300 text-[9px] font-mono font-bold uppercase tracking-wider rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1 shadow-2xs"
+                            >
+                              <span>Download PDF</span>
+                            </button>
+                          </div>
+                        </div>
+                      )}
+
+                      <span className="block text-[9px] mt-1.5 opacity-60 text-right font-mono">
+                        {m.role === "user" ? "You" : "Kong Labet"}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
 
               {isLoading && (
                 <div className="flex justify-start">

@@ -5,6 +5,15 @@ export interface LabetCommentary {
 }
 
 export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
+  "alaya-cafe": {
+    tagline: "Minimalist warmth with artisan brews and premium hearth spacing. The definitive choice for a quiet afternoon.",
+    note: "Order the Flat White and sit by the corner window. Settle down slowly and appreciate the hearth.",
+    observations: [
+      "The minimalist design lets you breathe without visual noise.",
+      "The artisan coffee is roasted to perfection, far better than typical street stalls.",
+      "The window views capture Laitumkhrah post-downpour lights beautifully."
+    ]
+  },
   "rynsan-cafe": {
     tagline: "Traditional Khasi slow-food served with wood-smoke and live Ka Duitara string chords. A recipe for simplifying your noisy modern complications.",
     note: "Order the Dohneiiong pork belly with black sesame. It is slow-cooked, like any good life decision.",
