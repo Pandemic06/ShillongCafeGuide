@@ -8,7 +8,7 @@ import { isFuzzyMatch } from "./utils";
 import { getCustomCafesFromFirestore } from "./services/db";
 
 // @ts-ignore
-import logoImage from "./assets/images/shillong_cafe_logo_1779948676706.png";
+import logoImage from "./assets/images/shillong_cafe_logo_official.png";
 
 import CafeCard from "./components/CafeCard";
 import CafeDetailModal from "./components/CafeDetailModal";
