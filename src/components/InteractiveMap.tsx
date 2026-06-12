@@ -104,6 +104,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
   };
 
   const getCafeCategory = (cafe: Cafe) => {
+    if (cafe.hasKhasiMusic) return "khasi_music";
     if (cafe.hasLiveMusic) return "live_music";
     const isTraditional = cafe.vibeTags?.some((t) => /traditional|khasi|indigenous|jadoh/i.test(t)) ||
       cafe.id === "rynsan-cafe";
@@ -131,6 +132,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
     khasi_cuisine: { label: "Khasi Hearth", bg: "bg-emerald-50/90", text: "text-emerald-800", border: "border-emerald-300", icon: Flame, colorHex: "#059669" },
     rooftop: { label: "Rooftop Decks", bg: "bg-cyan-50/90", text: "text-cyan-800", border: "border-cyan-300", icon: Sun, colorHex: "#0891b2" },
     live_music: { label: "Live Stage", bg: "bg-fuchsia-50/90", text: "text-fuchsia-800", border: "border-fuchsia-300", icon: Music, colorHex: "#c026d3" },
+    khasi_music: { label: "Khasi Music 🎵", bg: "bg-indigo-50/90", text: "text-indigo-800", border: "border-indigo-300", icon: Music, colorHex: "#4f46e5" },
     budget: { label: "Local Eateries", bg: "bg-yellow-50/90", text: "text-yellow-800", border: "border-yellow-300", icon: Info, colorHex: "#d97706" },
     premium: { label: "Fine Dining", bg: "bg-stone-900", text: "text-amber-300", border: "border-amber-600", icon: Crown, colorHex: "#d97706" },
   };
@@ -240,6 +242,9 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
   const filteredCafes = cafesWithCategories.filter((c) => {
     if (c.id === "alaya-cafe") return true; // Always display Alaya Cafe
     if (activeCategoryFilter === "all") return true;
+    if (activeCategoryFilter === "khasi_music") {
+      return c.hasKhasiMusic || c.vibeTags?.some(t => /khasi music|local music|tribal music/i.test(t));
+    }
     return c.category === activeCategoryFilter;
   });
 

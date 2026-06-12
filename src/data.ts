@@ -78,8 +78,9 @@ export const CAFES: Cafe[] = [
     },
     quote: "In the silence between sips, the forest speaks.",
     quoteAuthor: "Rynsan Staff",
-    vibeTags: ["Minimalist", "Silent Policy", "Book Heaven", "Light Wood", "Pine Canopy"],
+    vibeTags: ["Minimalist", "Silent Policy", "Book Heaven", "Light Wood", "Pine Canopy", "Khasi Music"],
     hasLiveMusic: true,
+    hasKhasiMusic: true,
     mustTry: [
       {
         name: "Dohneiiong Black Sesame Plate",
@@ -242,8 +243,9 @@ export const CAFES: Cafe[] = [
     },
     quote: "Come in on a foggy afternoon, choose a warm mug, and let the 70s folk rock take you away.",
     quoteAuthor: "Staff Note",
-    vibeTags: ["Student Haunt", "Bob Dylan", "Nostalgic Folk", "Creative Ceiling", "Mountain View"],
-    hasLiveMusic: false,
+    vibeTags: ["Student Haunt", "Bob Dylan", "Nostalgic Folk", "Creative Ceiling", "Mountain View", "Khasi Music"],
+    hasLiveMusic: true,
+    hasKhasiMusic: true,
     mustTry: [
       {
         name: "Blowin' in the Wind Cappuccino",
@@ -343,8 +345,9 @@ export const CAFES: Cafe[] = [
       hero: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=1200",
       card: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
     },
-    vibeTags: ["Live Stage", "Open Mic", "Brick Walls", "Bustling Center", "Acoustic Soul"],
+    vibeTags: ["Live Stage", "Open Mic", "Brick Walls", "Bustling Center", "Acoustic Soul", "Khasi Music"],
     hasLiveMusic: true,
+    hasKhasiMusic: true,
     mustTry: [
       {
         name: "Cinnamon Spiced Latte",

@@ -47,6 +47,7 @@ export interface Cafe {
   gallery: string[];
   vibeTags: string[];
   hasLiveMusic?: boolean;
+  hasKhasiMusic?: boolean;
   coordinates?: { lat: number; lng: number };
   editorial_featured?: boolean;
   
