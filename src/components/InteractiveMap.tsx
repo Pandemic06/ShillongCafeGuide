@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { 
   APIProvider, 
   Map, 
@@ -46,6 +47,61 @@ const darkMapStyle = [
 const lightMapStyle = [
   { "featureType": "poi", "stylers": [{ "visibility": "off" }] }
 ];
+
+interface CustomMapOverlayProps {
+  position: google.maps.LatLngLiteral;
+  zIndex?: number;
+  children: React.ReactNode;
+}
+
+export function CustomMapOverlay({ position, zIndex, children }: CustomMapOverlayProps) {
+  const map = useMap();
+  const [container, setContainer] = useState<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!map) return;
+
+    const div = document.createElement("div");
+    div.style.position = "absolute";
+    div.style.transform = "translate(-50%, -50%)";
+    if (zIndex !== undefined) {
+      div.style.zIndex = zIndex.toString();
+    }
+
+    class CustomOverlay extends google.maps.OverlayView {
+      onAdd() {
+        const panes = this.getPanes();
+        panes?.overlayMouseTarget.appendChild(div);
+        setContainer(div);
+      }
+      draw() {
+        const projection = this.getProjection();
+        if (!projection) return;
+        const point = projection.fromLatLngToDivPixel(new google.maps.LatLng(position));
+        if (point) {
+          div.style.left = `${point.x}px`;
+          div.style.top = `${point.y}px`;
+        }
+      }
+      onRemove() {
+        if (div.parentNode) {
+          div.parentNode.removeChild(div);
+        }
+        setContainer(null);
+      }
+    }
+
+    const overlay = new CustomOverlay();
+    overlay.setMap(map);
+
+    return () => {
+      overlay.setMap(null);
+    };
+  }, [map, position.lat, position.lng, zIndex]);
+
+  if (!container) return null;
+  return createPortal(children, container);
+}
 
 export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, selectedCafeId, hideSidebar = false, onNavigateToNeighborhood }: InteractiveMapProps) {
   const resolvedActiveCafeId = activeCafeId ?? selectedCafeId;
@@ -497,7 +553,6 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
       <div className={`relative rounded-2xl overflow-hidden border border-stone-200 ${isMapFullscreen ? "flex-1" : "h-[480px] md:h-[560px]"}`}>
         <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>
           <Map
-            mapId={mapId}
             defaultCenter={shillongCenter}
             defaultZoom={zoomLevel}
             gestureHandling="greedy"
@@ -512,15 +567,15 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
               const isSelected = selectedCafe?.id === cafe.id;
               const isAlaya = cafe.id === "alaya-cafe";
               return (
-                <AdvancedMarker
+                <CustomMapOverlay
                   key={cafe.id}
                   position={cafe.coordinates}
-                  onClick={() => handleMarkerClick(cafe)}
-                  title={cafe.name}
                   zIndex={isAlaya ? (isSelected ? 9999 : 999) : (isSelected ? 100 : 10)}
                 >
                   <div
-                    className={`relative flex flex-col items-center filter drop-shadow-lg select-none transition-all duration-300 ${
+                    onClick={() => handleMarkerClick(cafe)}
+                    title={cafe.name}
+                    className={`relative flex flex-col items-center filter drop-shadow-lg select-none transition-all duration-300 cursor-pointer ${
                       isAlaya 
                         ? (isSelected ? "scale-[2.0] z-50 alaya-marker-class" : "scale-[1.6] z-40 alaya-marker-class") 
                         : (isSelected ? "scale-125 z-10" : "hover:scale-110")
@@ -557,25 +612,28 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
                       <div className="absolute -inset-1 rounded-full border-2 border-amber-400 animate-ping pointer-events-none" />
                     )}
                   </div>
-                </AdvancedMarker>
+                </CustomMapOverlay>
               );
             })}
 
             {/* Live Discovered Place Markers */}
             {activeSubTab === "cafes" && discoveredPlaces.map((place) => (
-              <AdvancedMarker
+              <CustomMapOverlay
                 key={place.id}
                 position={{ lat: place.location?.latitude, lng: place.location?.longitude }}
-                onClick={() => {
-                  setSelectedCafe(null);
-                  setSelectedDiscoveredPlace(place);
-                }}
-                title={place.displayName}
+                zIndex={20}
               >
-                <div className="w-7 h-7 rounded-full bg-emerald-600 border-2 border-white flex items-center justify-center shadow-md hover:scale-110 transition-transform">
+                <div 
+                  onClick={() => {
+                    setSelectedCafe(null);
+                    setSelectedDiscoveredPlace(place);
+                  }}
+                  title={place.displayName}
+                  className="w-7 h-7 rounded-full bg-emerald-600 border-2 border-white flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer"
+                >
                   <Sparkles className="w-3 h-3 text-white" />
                 </div>
-              </AdvancedMarker>
+              </CustomMapOverlay>
             ))}
 
             {/* Trail Stop Markers */}
@@ -584,13 +642,16 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
                 {orderedStops.map((stop, ind) => {
                   const isStart = stop.id === startStopId;
                   return (
-                    <AdvancedMarker
+                    <CustomMapOverlay
                       key={stop.id}
                       position={stop.coordinates}
-                      onClick={() => handleFetchStopDetails(stop)}
-                      title={`Stop ${ind + 1}: ${stop.name}`}
+                      zIndex={isStart ? 150 : 50 + ind}
                     >
-                      <div className={`relative flex flex-col items-center filter drop-shadow-md select-none group hover:scale-110 transition-transform`}>
+                      <div 
+                        onClick={() => handleFetchStopDetails(stop)}
+                        title={`Stop ${ind + 1}: ${stop.name}`}
+                        className={`relative flex flex-col items-center filter drop-shadow-md select-none group hover:scale-110 transition-transform cursor-pointer`}
+                      >
                         {isStart ? (
                           <div className="absolute -inset-2 bg-amber-500/10 rounded-full animate-ping pointer-events-none" />
                         ) : (
@@ -607,7 +668,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
                           {stop.name}
                         </div>
                       </div>
-                    </AdvancedMarker>
+                    </CustomMapOverlay>
                   );
                 })}
 

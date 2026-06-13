@@ -17,7 +17,7 @@ import GuidesList from "./components/GuidesList";
 import AboutPanel from "./components/AboutPanel";
 import AIGuideChat from "./components/AIGuideChat";
 import DataHubModal from "./components/DataHubModal";
-import InteractiveMap from "./components/InteractiveMap";
+import InteractiveMap, { CustomMapOverlay } from "./components/InteractiveMap";
 import PlannersGuide from "./components/PlannersGuide";
 import TrendingDestination from "./components/TrendingDestination";
 import SEO, { PAGE_SEO } from "./components/SEO";
@@ -417,7 +417,6 @@ export default function App() {
                       <Map
                         defaultCenter={{ lat: 25.5788, lng: 91.8920 }}
                         defaultZoom={14}
-                        mapId="shillong_discovery_hero"
                         disableDefaultUI={true}
                         gestureHandling="none"
                         className="w-full h-full"
@@ -428,7 +427,7 @@ export default function App() {
                           if (!cafe.coordinates?.lat || !cafe.coordinates?.lng) return null;
                           const isAlaya = cafe.id === "alaya-cafe";
                           return (
-                            <AdvancedMarker
+                            <CustomMapOverlay
                               key={cafe.id}
                               position={{ lat: cafe.coordinates.lat, lng: cafe.coordinates.lng }}
                               zIndex={isAlaya ? 100 : 10}
@@ -450,9 +449,9 @@ export default function App() {
                                   </div>
                                 </div>
                               ) : (
-                                <Pin background={"#8b5c1a"} borderColor={"#3d2817"} glyphColor={"#faf8f5"} scale={0.6} />
+                                <div className="w-3.5 h-3.5 rounded-full bg-amber-850 border border-stone-250 shadow-md scale-90" />
                               )}
-                            </AdvancedMarker>
+                            </CustomMapOverlay>
                           );
                         })}
                       </Map>
