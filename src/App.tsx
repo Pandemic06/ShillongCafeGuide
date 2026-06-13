@@ -422,6 +422,7 @@ export default function App() {
                         gestureHandling="none"
                         className="w-full h-full"
                         colorScheme="DARK"
+                        styles={[{ featureType: "poi", stylers: [{ visibility: "off" }] }]}
                       >
                         {cafes.slice(0, 5).map((cafe) => {
                           if (!cafe.coordinates?.lat || !cafe.coordinates?.lng) return null;

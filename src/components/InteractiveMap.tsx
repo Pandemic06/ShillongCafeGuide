@@ -36,12 +36,15 @@ const darkMapStyle = [
   { "featureType": "administrative", "elementType": "geometry", "stylers": [{ "color": "#292524" }] },
   { "featureType": "administrative.country", "elementType": "labels.text.fill", "stylers": [{ "color": "#a8a29e" }] },
   { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#292524" }] },
-  { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#1c1917" }] },
-  { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [{ "color": "#d6d3d1" }] },
+  { "featureType": "poi", "stylers": [{ "visibility": "off" }] },
   { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#14211a" }] },
   { "featureType": "road", "elementType": "geometry", "stylers": [{ "color": "#44403c" }] },
   { "featureType": "road.highway", "elementType": "geometry", "stylers": [{ "color": "#57534e" }] },
   { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#0c0a09" }] }
+];
+
+const lightMapStyle = [
+  { "featureType": "poi", "stylers": [{ "visibility": "off" }] }
 ];
 
 export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, selectedCafeId, hideSidebar = false, onNavigateToNeighborhood }: InteractiveMapProps) {
@@ -499,7 +502,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
             defaultZoom={zoomLevel}
             gestureHandling="greedy"
             disableDefaultUI={false}
-            styles={mapTheme === "dark" ? darkMapStyle : undefined}
+            styles={mapTheme === "dark" ? darkMapStyle : lightMapStyle}
             onZoomChanged={(ev) => setZoomLevel(ev.detail.zoom)}
             className="w-full h-full"
           >
