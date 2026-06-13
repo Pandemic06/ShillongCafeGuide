@@ -519,7 +519,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
                   <div
                     className={`relative flex flex-col items-center filter drop-shadow-lg select-none transition-all duration-300 ${
                       isAlaya 
-                        ? (isSelected ? "scale-[2.0] z-50" : "scale-[1.6] z-40") 
+                        ? (isSelected ? "scale-[2.0] z-50 alaya-marker-class" : "scale-[1.6] z-40 alaya-marker-class") 
                         : (isSelected ? "scale-125 z-10" : "hover:scale-110")
                     }`}
                   >

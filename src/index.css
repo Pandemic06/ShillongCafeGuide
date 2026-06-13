@@ -61,3 +61,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   letter-spacing: 0.01em;
 }
+
+/* Force the parent container of Alaya Cafe custom crown marker to have a dominant z-index */
+gmp-advanced-marker:has(.alaya-marker-class) {
+  z-index: 99999999 !important;
+}
+
