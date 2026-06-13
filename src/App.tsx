@@ -490,47 +490,47 @@ export default function App() {
                     const alayaCafe = cafes.find(c => c.id === "alaya-cafe");
                     if (!alayaCafe) return null;
                     return (
-                      <div className="bg-[#fdfbf7] border-2 border-amber-300 rounded-[32px] p-8 sm:p-12 shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group space-y-8 text-left">
+                      <div className="bg-[#fdfbf7] border-2 border-amber-300 rounded-[36px] p-10 sm:p-14 shadow-2xl hover:shadow-3xl transition-all duration-300 relative overflow-hidden group space-y-10 text-left">
                         {/* Spotlight Ribbon */}
                         <div className="flex items-center justify-between">
-                          <span className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-800 to-amber-900 text-amber-100 border border-amber-600 px-5 py-2 rounded-full text-[11px] font-mono font-bold tracking-widest uppercase shadow-md">
-                            <Crown className="w-4 h-4 text-amber-300 shrink-0 animate-pulse" />
+                          <span className="inline-flex items-center gap-2.5 bg-gradient-to-r from-amber-800 to-amber-900 text-amber-100 border border-amber-600 px-6 py-2.5 rounded-full text-xs font-mono font-bold tracking-widest uppercase shadow-md animate-pulse">
+                            <Crown className="w-5 h-5 text-amber-350 shrink-0" />
                             Editor's Featured Choice
                           </span>
-                          <span className="flex items-center gap-1.5 text-sm font-mono font-bold text-amber-900 bg-amber-100/80 border border-amber-250 px-4 py-1.5 rounded-full">
-                            <Star className="w-4 h-4 fill-amber-500 text-amber-600 shrink-0" />
+                          <span className="flex items-center gap-1.5 text-base font-mono font-bold text-amber-900 bg-amber-100/80 border border-amber-250 px-5 py-2 rounded-full">
+                            <Star className="w-4.5 h-4.5 fill-amber-500 text-amber-600 shrink-0" />
                             {Number(alayaCafe.rating || 4.8).toFixed(1)}
                           </span>
                         </div>
 
                         {/* Cafe Info Header */}
-                        <div className="space-y-2">
-                          <h3 className="text-4xl sm:text-5xl font-display font-black text-stone-900 leading-tight tracking-tight">
+                        <div className="space-y-3">
+                          <h3 className="text-5xl sm:text-6xl font-display font-black text-stone-900 leading-tight tracking-tight">
                             {alayaCafe.name}
                           </h3>
-                          <p className="text-sm text-stone-500 font-mono tracking-wide flex items-center gap-1.5">
-                            <MapPin className="w-4.5 h-4.5 text-amber-800 shrink-0" />
+                          <p className="text-base text-stone-500 font-mono tracking-wide flex items-center gap-2">
+                            <MapPin className="w-5 h-5 text-amber-800 shrink-0" />
                             {alayaCafe.neighborhood}, Shillong
                           </p>
                         </div>
 
                         {/* Multi-image gallery with lots of pics */}
-                        <div className="space-y-3">
+                        <div className="space-y-4">
                           {/* Main large image */}
-                          <div className="h-80 sm:h-[420px] rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md relative">
+                          <div className="h-[380px] sm:h-[500px] rounded-3xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md relative">
                             <img
                               src={alayaCafe.images?.hero || "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800"}
                               alt={alayaCafe.name}
                               className="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
                               referrerPolicy="no-referrer"
                             />
-                            <span className="absolute bottom-4 left-4 bg-amber-955/90 text-amber-200 text-xs font-mono tracking-widest px-4 py-1.5 rounded-full uppercase font-bold border border-amber-800/40">
+                            <span className="absolute bottom-5 left-5 bg-amber-955/90 text-amber-200 text-xs font-mono tracking-widest px-5 py-2 rounded-full uppercase font-bold border border-amber-800/40">
                               Featured Hearth Space
                             </span>
                           </div>
 
                           {/* Secondary images grid (6 columns) */}
-                          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5">
+                          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
                             {[
                               { img: alayaCafe.images?.interior, label: "Interior" },
                               { img: alayaCafe.images?.detail1, label: "Brewing" },
@@ -539,14 +539,14 @@ export default function App() {
                               { img: alayaCafe.images?.detail4, label: "Roast" },
                               { img: alayaCafe.images?.detail5, label: "Seating" }
                             ].map((item, idx) => (
-                              <div key={idx} className="h-20 sm:h-26 rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-2xs relative group/thumb cursor-pointer">
+                              <div key={idx} className="h-24 sm:h-32 rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-2xs relative group/thumb cursor-pointer">
                                 <img
                                   src={item.img || "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"}
                                   alt={item.label}
                                   className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
                                   referrerPolicy="no-referrer"
                                 />
-                                <span className="absolute bottom-1 left-1 bg-black/70 text-white text-[7.5px] font-mono tracking-widest px-1.5 py-0.5 rounded uppercase">
+                                <span className="absolute bottom-1.5 left-1.5 bg-black/70 text-white text-[8px] font-mono tracking-widest px-2 py-0.5 rounded uppercase">
                                   {item.label}
                                 </span>
                               </div>
@@ -555,29 +555,29 @@ export default function App() {
                         </div>
 
                         {/* Extra detail card showing Labet rating details */}
-                        <div className="bg-gradient-to-r from-amber-900 to-amber-950 text-amber-100 p-6 sm:p-8 rounded-2xl border border-amber-950 shadow-sm space-y-2">
-                          <span className="text-[11px] font-mono text-amber-400 tracking-widest font-extrabold uppercase flex items-center gap-1.5">
-                            <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
+                        <div className="bg-gradient-to-r from-amber-900 to-amber-950 text-amber-100 p-8 sm:p-10 rounded-3xl border border-amber-950 shadow-md space-y-3">
+                          <span className="text-xs font-mono text-amber-400 tracking-widest font-extrabold uppercase flex items-center gap-2">
+                            <Sparkles className="w-5 h-5 text-amber-300 animate-pulse" />
                             Labet's Local Guide Notes
                           </span>
-                          <p className="text-sm sm:text-base font-sans italic text-amber-200 leading-relaxed">
+                          <p className="text-base sm:text-lg font-sans italic text-amber-200 leading-relaxed">
                             "The light here in Laitumkhrah is beautiful, especially after a downpour. Order the Flat White, sit by the corner window, and don't spend all your time clicking photos. Some places are meant to be felt, not just framed."
                           </p>
                         </div>
 
                         {/* Tagline & details */}
-                        <div className="space-y-4">
-                          <p className="text-base sm:text-lg text-stone-750 font-sans leading-relaxed">
+                        <div className="space-y-5">
+                          <p className="text-lg sm:text-xl text-stone-750 font-sans font-medium leading-relaxed">
                             {alayaCafe.tagline || alayaCafe.theme}
                           </p>
 
                           {/* Vibe Tags list */}
                           {alayaCafe.vibeTags && alayaCafe.vibeTags.length > 0 && (
-                            <div className="flex flex-wrap gap-2.5 pt-1.5">
+                            <div className="flex flex-wrap gap-3 pt-2">
                               {alayaCafe.vibeTags.map((tag) => (
                                 <span
                                   key={tag}
-                                  className="text-[11px] font-mono font-bold uppercase tracking-wider text-amber-950 bg-amber-100/50 border border-amber-200 px-4 py-1.5 rounded-xl"
+                                  className="text-xs font-mono font-bold uppercase tracking-wider text-amber-950 bg-amber-100/50 border border-amber-200 px-5 py-2 rounded-xl"
                                 >
                                   #{tag.toLowerCase().replace(/\s+/g, "-")}
                                 </span>
@@ -587,19 +587,19 @@ export default function App() {
                         </div>
 
                         {/* Actions */}
-                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-6 border-t border-stone-200/80">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-5 pt-8 border-t border-stone-200/80">
                           <button
                             onClick={() => handleSelectCafe(alayaCafe.id)}
-                            className="flex-1 flex items-center justify-center gap-2 bg-amber-800 hover:bg-amber-900 text-white text-xs sm:text-sm font-sans font-bold uppercase tracking-wider px-6 py-4 rounded-2xl transition-all cursor-pointer shadow-md active:scale-98"
+                            className="flex-1 flex items-center justify-center gap-2.5 bg-amber-800 hover:bg-amber-900 text-white text-sm sm:text-base font-sans font-bold uppercase tracking-wider px-8 py-5 rounded-2xl transition-all cursor-pointer shadow-md active:scale-98"
                           >
                             <span>Explore Hearth Profile</span>
-                            <ArrowRight className="w-4.5 h-4.5" />
+                            <ArrowRight className="w-5 h-5" />
                           </button>
                           <a
                             href="https://www.google.com/maps?client=opera-gx&hs=YXo&sca_esv=dd2fe0b82f78cb75&output=search&q=Alaya+Cafe+%26+Bar&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93EoculSWPsy9Mwi2OTVV6bg4sD9CY3vZjPiSFnibxqztMKYuxESLMKjghFfdj3DtL_JY6Nr0LC6iJMKCdm2EeOsvDp_4lHgUwQFW0uvPhtJpowQoHv8eP1gIs0O7SRrOIeywvCnZAYn1IoSS8MgNt57znu6AA&entry=mc&ved=1t:200715&ictx=111"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-6 py-4 rounded-2xl border border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-800 hover:bg-amber-50 text-xs sm:text-sm font-sans font-bold uppercase tracking-wider transition-all cursor-pointer text-center"
+                            className="px-8 py-5 rounded-2xl border border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-800 hover:bg-amber-50 text-sm sm:text-base font-sans font-bold uppercase tracking-wider transition-all cursor-pointer text-center"
                           >
                             Show on Map
                           </a>
@@ -609,53 +609,6 @@ export default function App() {
                   })()}
                 </div>
               </div>
-
-              {/* INDIGENOUS SPOTLIGHT */}
-              <div className="bg-stone-900 text-[#FAF8F5] rounded-[28px] p-8 overflow-hidden relative shadow-lg">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-amber-800/10 rounded-full blur-3xl" />
-                <p className="text-[10px] font-mono tracking-widest text-amber-400 uppercase font-bold mb-2">INDIGENOUS SPOTLIGHT</p>
-                <h2 className="text-2xl font-display font-bold text-[#FAF8F5] leading-tight mb-3">Dohneiiong: Black Sesame Heritage Spot</h2>
-                <p className="text-stone-300 text-sm leading-relaxed font-sans font-light max-w-lg">Savor the earthy, complex deep flavors of slow-stewed pork belly simmered gently in a jet-black gravy of hand-roasted whole black sesame seed (Nei-long), local wild ginger, and peppercorns. It is a masterpiece of Northeast Indian tribal cuisine.</p>
-                <div className="flex gap-4 mt-6">
-                  <button onClick={() => setActiveTab("planners")} className="text-xs font-mono font-bold text-amber-400 hover:text-amber-300 border-b border-amber-400/40 hover:border-amber-300 transition-colors">Explore Route Planner</button>
-                  <button onClick={() => setActiveTab("walks")} className="text-xs font-mono font-bold text-stone-400 hover:text-stone-200 border-b border-stone-600 hover:border-stone-300 transition-colors">Find District Walks →</button>
-                </div>
-              </div>
-
-
-
-              {/* TRENDING INDICATORS */}
-              <section id="trending-indicators" className="bg-stone-900 text-[#FAF8F5] rounded-[32px] p-8 border border-stone-850 relative overflow-hidden shadow-lg select-none">
-                <div className="absolute top-0 right-0 w-72 h-72 bg-amber-700/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/30 text-amber-300 px-3.5 py-1.5 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase">
-                    <Flame className="w-3 h-3 text-amber-400 animate-pulse" /> Trending Destination
-                  </span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#FAF8F5] leading-tight mb-2">
-                  Sohra (Cherrapunji)
-                </h2>
-                <p className="text-stone-400 text-sm font-sans font-light leading-relaxed max-w-lg mb-6">
-                  World's wettest place. Nohkalikai Falls, Double Decker Living Root Bridge, Seven Sisters Falls, Mawsmai Cave. 83 km from Shillong — the essential day-trip from the city.
-                </p>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-                  {[
-                    { label: "Distance", value: "83 km", sub: "from Shillong" },
-                    { label: "Drive", value: "2.5h", sub: "via NH6" },
-                    { label: "Best Time", value: "Oct–Mar", sub: "post-monsoon clarity" },
-                    { label: "Key Sites", value: "12+", sub: "falls, caves, bridges" }
-                  ].map(stat => (
-                    <div key={stat.label} className="bg-white/5 border border-white/10 rounded-2xl p-3 text-center">
-                      <p className="text-[10px] font-mono text-stone-500 uppercase tracking-wide mb-0.5">{stat.label}</p>
-                      <p className="text-lg font-display font-bold text-[#FAF8F5]">{stat.value}</p>
-                      <p className="text-[9px] font-mono text-stone-400">{stat.sub}</p>
-                    </div>
-                  ))}
-                </div>
-                <button onClick={() => setActiveTab("trending")} className="flex items-center gap-2 bg-amber-700 hover:bg-amber-600 text-white px-5 py-2.5 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-lg cursor-pointer">
-                  <Flame className="w-3.5 h-3.5" /> Explore Sohra Guide
-                </button>
-              </section>
 
               {/* FAQ */}
               <div className="bg-white border border-stone-200 rounded-[28px] p-6 shadow-xs">
