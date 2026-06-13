@@ -514,6 +514,7 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
                   position={cafe.coordinates}
                   onClick={() => handleMarkerClick(cafe)}
                   title={cafe.name}
+                  zIndex={isAlaya ? (isSelected ? 9999 : 999) : (isSelected ? 100 : 10)}
                 >
                   <div
                     className={`relative flex flex-col items-center filter drop-shadow-lg select-none transition-all duration-300 ${
