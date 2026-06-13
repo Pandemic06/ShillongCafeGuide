@@ -10,6 +10,7 @@ import { APIProvider, Map, AdvancedMarker, Pin, useMap, useMapsLibrary } from "@
 import { GOOGLE_MAPS_API_KEY, hasValidKey } from "../config";
 import { PLANNER_ROUTES, PlannerLocation, PlannerRoute, RHINO_GYAN_RULES } from "../data/plannerData";
 import { motion, AnimatePresence } from "motion/react";
+import { CustomMapOverlay } from "./InteractiveMap";
 // @ts-expect-error - image asset import
 import policeBazarMorningImg from "../assets/images/routes/police-bazar-morning.jpg";
 // @ts-expect-error - image asset import
@@ -1178,36 +1179,46 @@ export default function PlannersGuide() {
                     defaultZoom={11}
                     disableDefaultUI={true}
                     zoomControl={true}
-                    mapId="DEMO_MAP_ID"
+                    options={{
+                      styles: [{ featureType: "poi", stylers: [{ visibility: "off" }] }]
+                    }}
                     internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
                     style={{ width: "100%", height: "100%" }}
                   >
                     <LiveRoutePolylines activeCoords={activePolylinesCoords} travelMode={travelMode} isScenicMode={isScenicMode} />
-                    <AdvancedMarker 
+                    <CustomMapOverlay 
                       key="rhino-auditorium" 
                       position={RHINO_AUDITORIUM.coordinates} 
-                      title="Pinewalk Crossing Near Rhino Auditorium (Start/End)"
+                      zIndex={100}
                     >
-                      <div className="relative scale-110 z-50">
-                        <Pin background="#b45309" borderColor="#ffffff" glyphColor="#ffffff" scale={1.1} />
-                        <div className="absolute top-1 max-w-full flex justify-center inset-x-0 text-[10px] font-mono font-bold text-neutral-900 pointer-events-none select-none">
+                      <div className="relative flex flex-col items-center select-none filter drop-shadow-md scale-110 z-50">
+                        <div className="w-8 h-8 rounded-full bg-amber-700 border-2 border-white flex items-center justify-center shadow-lg text-sm">
                           🏛️
                         </div>
+                        <div className="w-2 h-2 bg-amber-700 rotate-45 -mt-1 border-r border-b border-white" />
                       </div>
-                    </AdvancedMarker>
+                    </CustomMapOverlay>
                     {customizedLocations
                       .filter((loc) => routeState.activeStopIds.includes(loc.id))
                       .map((loc) => {
+                        const pinColor = getCategoryColor(loc.type, loc.name, loc.remarks);
                         return (
-                          <AdvancedMarker 
+                          <CustomMapOverlay 
                             key={loc.id} 
-                            position={loc.coordinates} 
-                            title={loc.name}
+                            position={loc.coordinates}
+                            zIndex={50}
                           >
-                            <div className="relative scale-100 transition-transform duration-200">
-                              <Pin background={getCategoryColor(loc.type, loc.name, loc.remarks)} borderColor="#ffffff" glyphColor="#ffffff" scale={0.9} />
+                            <div className="relative flex flex-col items-center select-none filter drop-shadow-md scale-90 transition-transform duration-200">
+                              <div 
+                                className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center shadow-lg"
+                                style={{ backgroundColor: pinColor }}
+                              />
+                              <div 
+                                className="w-1.5 h-1.5 rotate-45 -mt-1 border-r border-b border-white" 
+                                style={{ backgroundColor: pinColor }}
+                              />
                             </div>
-                          </AdvancedMarker>
+                          </CustomMapOverlay>
                         );
                       })}
                   </Map>
@@ -1438,24 +1449,28 @@ export default function PlannersGuide() {
                     gestureHandling="greedy"
                     disableDefaultUI={true}
                     zoomControl={true}
-                    mapId="DEMO_MAP_ID"
+                    options={{
+                      styles: [{ featureType: "poi", stylers: [{ visibility: "off" }] }]
+                    }}
                     internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
                     style={{ width: "100%", height: "100%" }}
                   >
                     <LiveRoutePolylines activeCoords={activePolylinesCoords} travelMode={travelMode} isScenicMode={isScenicMode} />
-                    <AdvancedMarker 
+                    <CustomMapOverlay 
                       key="rhino-auditorium" 
                       position={RHINO_AUDITORIUM.coordinates} 
-                      title="Pinewalk Crossing Near Rhino Auditorium (Start/End)"
-                      onClick={() => setSelectedMarkerId(selectedMarkerId === "rhino-auditorium" ? null : "rhino-auditorium")}
+                      zIndex={150}
                     >
-                      <div className="relative scale-110 z-50 cursor-pointer" style={{ width: "32px", height: "32px" }}>
-                        <Pin background="#b45309" borderColor="#ffffff" glyphColor="#ffffff" scale={1.15} />
-                        <div className="absolute top-1 max-w-full flex justify-center inset-x-0 text-[10px] font-mono font-bold text-neutral-900 pointer-events-none select-none">
+                      <div 
+                        onClick={() => setSelectedMarkerId(selectedMarkerId === "rhino-auditorium" ? null : "rhino-auditorium")}
+                        className="relative scale-110 z-50 cursor-pointer flex flex-col items-center filter drop-shadow-md select-none"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-amber-700 border-2 border-white flex items-center justify-center shadow-lg text-sm">
                           🏛️
                         </div>
+                        <div className="w-2 h-2 bg-amber-700 rotate-45 -mt-1 border-r border-b border-white" />
                       </div>
-                    </AdvancedMarker>
+                    </CustomMapOverlay>
                     
                     {/* Immersive premium markers with interaction triggers */}
                     {customizedLocations
@@ -1466,48 +1481,51 @@ export default function PlannersGuide() {
                         const pinColor = getCategoryColor(loc.type, loc.name, loc.remarks);
 
                         return (
-                          <AdvancedMarker 
+                          <CustomMapOverlay 
                             key={loc.id} 
-                            position={loc.coordinates} 
-                            title={loc.name}
-                            onClick={() => setSelectedMarkerId(selectedMarkerId === loc.id ? null : loc.id)}
+                            position={loc.coordinates}
+                            zIndex={isSelected || isHovered ? 200 : 50 + idx}
                           >
                             <div
-                              className={`relative cursor-pointer transition-all duration-350 ${
+                              onClick={() => setSelectedMarkerId(selectedMarkerId === loc.id ? null : loc.id)}
+                              className={`relative cursor-pointer transition-all duration-355 flex flex-col items-center filter drop-shadow-md select-none ${
                                 isHovered || isSelected ? "scale-120 z-50" : "scale-100 z-10"
                               }`}
                               onMouseEnter={() => setHoveredLocId(loc.id)}
                               onMouseLeave={() => setHoveredLocId(null)}
-                              style={{ width: "32px", height: "32px" }}
                             >
                               {/* Pulsating ripple when selected */}
                               {isSelected && (
                                 <>
                                   <span
-                                    className="absolute inset-[-10px] rounded-full animate-ping pointer-events-none"
+                                    className="absolute -inset-2 rounded-full animate-ping pointer-events-none"
                                     style={{ background: pinColor, opacity: 0.35 }}
                                   />
                                   <span
-                                    className="absolute inset-[-4px] rounded-full pointer-events-none"
+                                    className="absolute -inset-1 rounded-full pointer-events-none"
                                     style={{ background: pinColor, opacity: 0.18 }}
                                   />
                                 </>
                               )}
-                              <Pin background={pinColor} borderColor="#ffffff" glyphColor="#ffffff" scale={isSelected || isHovered ? 1.15 : 0.9} />
                               
-                              {/* Sequence number overlay on map pin */}
-                              <div className="absolute top-1 max-w-full flex justify-center inset-x-0 text-[10px] font-mono font-bold text-neutral-900 pointer-events-none select-none">
-                                {idx + 1}
+                              <div 
+                                className="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center shadow-lg text-[10px] font-mono font-bold text-white relative"
+                                style={{ backgroundColor: pinColor }}
+                              >
+                                <span>{idx + 1}</span>
+                                {/* Added detour badge */}
+                                {addedDetours.some(d => d.id === loc.id) && (
+                                  <div className="absolute -top-1.5 -right-1.5 bg-amber-500 rounded-full p-0.5 border border-white">
+                                    <Sparkles className="w-2 h-2 text-white fill-white" />
+                                  </div>
+                                )}
                               </div>
-
-                              {/* Added detour badge */}
-                              {addedDetours.some(d => d.id === loc.id) && (
-                                <div className="absolute -top-1.5 -right-1.5 bg-amber-500 rounded-full p-1 border border-white">
-                                  <Sparkles className="w-2 h-2 text-white" />
-                                </div>
-                              )}
+                              <div 
+                                className="w-1.5 h-1.5 rotate-45 -mt-1 border-r border-b border-white" 
+                                style={{ backgroundColor: pinColor }}
+                              />
                             </div>
-                          </AdvancedMarker>
+                          </CustomMapOverlay>
                         );
                       })}
                   </Map>

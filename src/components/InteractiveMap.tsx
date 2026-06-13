@@ -557,7 +557,9 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
             defaultZoom={zoomLevel}
             gestureHandling="greedy"
             disableDefaultUI={false}
-            styles={mapTheme === "dark" ? darkMapStyle : lightMapStyle}
+            options={{
+              styles: mapTheme === "dark" ? darkMapStyle : lightMapStyle
+            }}
             onZoomChanged={(ev) => setZoomLevel(ev.detail.zoom)}
             className="w-full h-full"
           >

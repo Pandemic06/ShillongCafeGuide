@@ -122,7 +122,7 @@ export default function GoogleMap({ cafes, onSelectCafe, activeCafeId }: GoogleM
         zoom: 14,
         mapTypeId: "roadmap",
         styles: [
-          { featureType: "poi.business", stylers: [{ visibility: "off" }] },
+          { featureType: "poi", stylers: [{ visibility: "off" }] },
           { featureType: "transit", stylers: [{ visibility: "off" }] },
         ],
         mapTypeControl: false,

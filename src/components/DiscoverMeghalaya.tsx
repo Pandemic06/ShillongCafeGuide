@@ -178,7 +178,7 @@ export default function DiscoverMeghalaya({ cafes }: Props) {
         zoom: 9,
         mapTypeId: "roadmap",
         styles: [
-          { featureType: "poi.business", stylers: [{ visibility: "off" }] },
+          { featureType: "poi", stylers: [{ visibility: "off" }] },
           { featureType: "transit", stylers: [{ visibility: "off" }] },
           { featureType: "water", elementType: "geometry", stylers: [{ color: "#a8d5f5" }] },
           { featureType: "landscape.natural", elementType: "geometry", stylers: [{ color: "#dcedc8" }] },
