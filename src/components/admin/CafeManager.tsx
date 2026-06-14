@@ -20,6 +20,7 @@ const NEIGHBORHOODS: Cafe["neighborhood"][] = [
   "Laitumkhrah", "Police Bazaar", "Golf Links", "Boyce Road",
   "Nongkynrih", "Kench's Trace", "Dhankheti", "Mawroh",
   "Nongrim Hills", "Oakland", "Cleve Colony", "MG Road", "Mawlai",
+  "Nongthymmai",
 ];
 
 export default function CafeManager() {

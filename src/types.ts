@@ -29,7 +29,7 @@ export interface Cafe {
   whyVisit: string;
   hours: string;
   address: string;
-  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti" | "Mawroh" | "Nongrim Hills" | "Oakland" | "Cleve Colony" | "MG Road" | "Mawlai";
+  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti" | "Mawroh" | "Nongrim Hills" | "Oakland" | "Cleve Colony" | "MG Road" | "Mawlai" | "Nongthymmai";
   // Normalization audit metadata (Part 7)
   neighborhood_verified?: boolean;
   neighborhood_source?: "manual" | "address-inferred" | "google" | "legacy";

@@ -17,13 +17,13 @@ export const CAFES: Cafe[] = [
   {
     id: "alaya-cafe",
     name: "Alaya Cafe",
-    tagline: "Where light meets coffee and calm fills the room.",
-    theme: "Minimalist warmth with artisan brews",
-    introduction: "Tucked inside the serene neighborhood of Laitumkhrah, Alaya Cafe is a minimalist sanctuary designed for slow conversations and creative productivity. Featuring clean lines, soft blonde timber details, and expansive windows that flood the space with natural Shillong daylight, Alaya is the perfect shelter from the misty rains.",
-    whyVisit: "For a quiet, focused headspace, beautifully poured single-estate lattes, and clean aesthetic surroundings.",
+    tagline: "A classy yet homely mountain abode, serving premium coffee and weekly live acoustic tunes.",
+    theme: "Classy yet homely mountain abode with weekly live local musicians",
+    introduction: "Meaning 'Abode' in Sanskrit, Alaya Cafe & Bar is located in the serene neighborhood of Nongthymmai. It offers an experience that is classy, yet homely, yet premium feeling. Featuring comfortable wood-framed seating, warm local hospitality, and premium artisanal brews, it becomes a cozy musical sanctuary every week as local singer-songwriters perform live acoustic sets.",
+    whyVisit: "For a classy yet deeply homely mountain escape, weekly live acoustic sets by local musicians, and premium single-origin pour-overs.",
     hours: "10:30 AM — 8:30 PM (Daily)",
-    address: "Laitumkhrah, Shillong, Meghalaya 793003",
-    neighborhood: "Laitumkhrah",
+    address: "Nongthymmai, Shillong, Meghalaya 793014",
+    neighborhood: "Nongthymmai",
     images: {
       hero: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=1200",
       card: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=600",
@@ -34,10 +34,12 @@ export const CAFES: Cafe[] = [
       detail4: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=1200",
       detail5: "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=1200"
     },
-    quote: "A quiet space where ideas brew as slow as our coffee.",
+    quote: "Welcome to your mountaintop abode—where premium coffee meets the weekly heartbeat of local musicians.",
     quoteAuthor: "Alaya Barista",
-    vibeTags: ["Minimalist", "Artisan Coffee", "Cozy", "Work-Friendly", "Aesthetic"],
-    hasLiveMusic: false,
+    vibeTags: ["Classy", "Homely", "Premium", "Abode", "Live Music", "Khasi Music"],
+    hasLiveMusic: true,
+    hasKhasiMusic: true,
+    coordinates: { lat: 25.5615, lng: 91.9025 },
     editorial_featured: true,
     rating: 4.8,
     mustTry: [
@@ -58,8 +60,7 @@ export const CAFES: Cafe[] = [
       "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800"
-    ],
-    coordinates: { lat: 25.568, lng: 91.887 }
+    ]
   },
   {
     id: "rynsan-cafe",
