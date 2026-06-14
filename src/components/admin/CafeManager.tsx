@@ -36,7 +36,8 @@ export default function CafeManager() {
       const res = await fetch("/api/cafes");
       const apiCafes: Cafe[] = res.ok ? await res.json() : [];
       const fsCafes = await getCustomCafesFromFirestore().catch(() => []);
-      const merged = [...fsCafes];
+      const cleanFsCafes = fsCafes.filter((c: any) => c.id !== "alaya-cafe");
+      const merged = [...cleanFsCafes];
       apiCafes.forEach((c) => {
         if (!merged.some((m) => m.id === c.id)) merged.push(c);
       });

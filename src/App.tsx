@@ -169,7 +169,8 @@ export default function App() {
       try {
         const firestoreCafes = await getCustomCafesFromFirestore();
         if (Array.isArray(firestoreCafes) && firestoreCafes.length > 0) {
-          const merged = [...firestoreCafes];
+          const cleanFirestoreCafes = firestoreCafes.filter(c => c.id !== "alaya-cafe");
+          const merged = [...cleanFirestoreCafes];
           apiCafes.forEach((apiCafe: Cafe) => {
             if (!merged.some(c => c.id === apiCafe.id)) merged.push(apiCafe);
           });
