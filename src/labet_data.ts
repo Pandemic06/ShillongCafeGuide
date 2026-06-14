@@ -7,7 +7,7 @@ export interface LabetCommentary {
 export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
   "alaya-cafe": {
     tagline: "A classy yet homely abode in Nongthymmai, combining premium dining with the warm acoustic chords of local musicians weekly.",
-    note: "Order the Flat White, sit back during their weekly acoustic nights, and appreciate the classy hearth. It translates to 'Abode' for a reason.",
+    note: "Alaya translates to 'Abode' for a reason—it's a classy yet deeply homely mountaintop escape in Nongthymmai. Order the Flat White, sit back during their weekly acoustic nights with local musicians, and appreciate the warm, premium hearth. Some places are meant to be felt, not just framed.",
     observations: [
       "Alaya means 'Abode'—classy and premium, yet it instantly makes you feel right at home.",
       "Located in Nongthymmai, it's away from the crowded market lanes, offering a more peaceful, upscale ambiance.",

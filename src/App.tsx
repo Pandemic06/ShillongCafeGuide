@@ -583,7 +583,7 @@ export default function App() {
                             Labet's Local Guide Notes
                           </span>
                           <p className="text-base sm:text-lg font-sans italic text-amber-200 leading-relaxed">
-                            "The light here in Laitumkhrah is beautiful, especially after a downpour. Order the Flat White, sit by the corner window, and don't spend all your time clicking photos. Some places are meant to be felt, not just framed."
+                            "{alayaCafe.kong_labet_note || "Alaya translates to 'Abode' for a reason—it's a classy yet deeply homely mountaintop escape in Nongthymmai. Order the Flat White, sit back during their weekly acoustic nights with local musicians, and appreciate the warm, premium hearth. Some places are meant to be felt, not just framed."}"
                           </p>
                         </div>
 
