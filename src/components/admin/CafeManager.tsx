@@ -36,8 +36,27 @@ export default function CafeManager() {
       const res = await fetch("/api/cafes");
       const apiCafes: Cafe[] = res.ok ? await res.json() : [];
       const fsCafes = await getCustomCafesFromFirestore().catch(() => []);
-      const cleanFsCafes = fsCafes.filter((c: any) => c.id !== "alaya-cafe");
-      const merged = [...cleanFsCafes];
+      const merged = fsCafes.map((c: any) => {
+        if (c.id === "alaya-cafe") {
+          const localAlaya = apiCafes.find(ac => ac.id === "alaya-cafe");
+          if (localAlaya) {
+            return {
+              ...localAlaya,
+              images: c.images || localAlaya.images,
+              introduction: c.introduction || localAlaya.introduction,
+              mustTry: c.mustTry || localAlaya.mustTry,
+              gallery: c.gallery || localAlaya.gallery,
+              neighborhood: "Nongthymmai",
+              address: "Nongthymmai, Shillong, Meghalaya 793014",
+              coordinates: { lat: 25.5615, lng: 91.9025 },
+              vibeTags: localAlaya.vibeTags,
+              hasLiveMusic: true,
+              hasKhasiMusic: true,
+            };
+          }
+        }
+        return c;
+      });
       apiCafes.forEach((c) => {
         if (!merged.some((m) => m.id === c.id)) merged.push(c);
       });

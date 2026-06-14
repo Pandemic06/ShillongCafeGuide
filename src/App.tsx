@@ -169,8 +169,27 @@ export default function App() {
       try {
         const firestoreCafes = await getCustomCafesFromFirestore();
         if (Array.isArray(firestoreCafes) && firestoreCafes.length > 0) {
-          const cleanFirestoreCafes = firestoreCafes.filter(c => c.id !== "alaya-cafe");
-          const merged = [...cleanFirestoreCafes];
+          const merged = firestoreCafes.map((c: any) => {
+            if (c.id === "alaya-cafe") {
+              const localAlaya = apiCafes.find(ac => ac.id === "alaya-cafe");
+              if (localAlaya) {
+                return {
+                  ...localAlaya,
+                  images: c.images || localAlaya.images,
+                  introduction: c.introduction || localAlaya.introduction,
+                  mustTry: c.mustTry || localAlaya.mustTry,
+                  gallery: c.gallery || localAlaya.gallery,
+                  neighborhood: "Nongthymmai",
+                  address: "Nongthymmai, Shillong, Meghalaya 793014",
+                  coordinates: { lat: 25.5615, lng: 91.9025 },
+                  vibeTags: localAlaya.vibeTags,
+                  hasLiveMusic: true,
+                  hasKhasiMusic: true,
+                };
+              }
+            }
+            return c;
+          });
           apiCafes.forEach((apiCafe: Cafe) => {
             if (!merged.some(c => c.id === apiCafe.id)) merged.push(apiCafe);
           });
