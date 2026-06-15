@@ -10,18 +10,6 @@ interface CafeDetailModalProps {
   onClose: () => void;
 }
 
-/**
- * Derive a URL-safe slug from a cafe name, matching the logic in cafeSchema.ts
- * so the canonical URL is always consistent.
- */
-function cafeSlug(cafe: Cafe): string {
-  return cafe.name
-    .toLowerCase()
-    .replace(/[\u2018\u2019']/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
 // Media Database of High-Fidelity Google Image Search Results & Cozy menus
 const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }> = {
   "rynsan-cafe": {
@@ -244,7 +232,7 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
   // ── SEO values derived from cafe data ────────────────────────────────────
-  const slug = cafeSlug(cafe);
+  const slug = cafe.id;
   const cafeCanonical = `https://shillongcafemap.in/cafe/${slug}`;
   const seoTitle = `${cafe.name} — Café in ${cafe.neighborhood}, Shillong`;
   const seoDescription = (
@@ -279,9 +267,23 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
   const fetchReviews = async () => {
     try {
       const res = await fetch("/api/reviews");
-      const allReviews = await res.json();
-      // Filter reviews specific to this cafe
-      const filtered = allReviews.filter((r: Review) => r.cafeId === cafe.id);
+      const apiReviews = await res.json();
+      
+      let fsReviews: Review[] = [];
+      try {
+        fsReviews = await getReviewsFromFirestore();
+      } catch (err) {
+        console.warn("Firestore reviews download failed:", err);
+      }
+
+      const combined = [...fsReviews];
+      apiReviews.forEach((apiR: Review) => {
+        if (!combined.some(r => r.id === apiR.id)) {
+          combined.push(apiR);
+        }
+      });
+
+      const filtered = combined.filter((r: Review) => r.cafeId === cafe.id);
       setReviews(filtered);
     } catch (err) {
       console.error("Failed to load reviews:", err);
@@ -297,22 +299,21 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
     setSuccessMsg("");
 
     try {
-      const res = await fetch("/api/reviews", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          cafeId: cafe.id,
-          userName,
-          rating,
-          comment,
-        }),
+      await addReviewToFirestore({
+        cafeId: cafe.id,
+        userName,
+        rating,
+        comment,
+        isLocalGuide: false,
+        userId: "anonymous",
+        date: new Date().toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
       });
 
-      if (!res.ok) {
-        throw new Error("Server review submission failed");
-      }
-
-      await fetchReviews(); // Refresh from backend
+      await fetchReviews(); // Refresh review logs
       setUserName("");
       setComment("");
       setRating(5);
@@ -325,6 +326,8 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
       setIsSubmitting(false);
     }
   };
+
+  const currentUrl = `/?tab=cafes&cafe=${encodeURIComponent(cafe.id)}`;
 
   return (
     <>
@@ -822,6 +825,9 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                       </div>
                     ))}
                   </div>
+                  <p className="text-xs text-stone-400 font-sans italic pt-2 block text-left">
+                    “Photos for reference only. Photos are not authentic.”
+                  </p>
                 </div>
               )}
 

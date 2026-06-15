@@ -20,23 +20,13 @@ function neighborhoodSlug(neighborhood: string): string {
   return neighborhood.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 }
 
-/** Derives a consistent URL slug from a cafe name (fallback: cafe.id) */
-function cafeSlug(cafe: Cafe): string {
-  return cafe.name
-    .toLowerCase()
-    .replace(/[''']/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
-
 /**
  * Builds the full Schema.org JSON-LD object for a single café.
  * Returns a plain object — the caller is responsible for serialising
  * it into a <script type="application/ld+json"> tag (SEO.tsx handles this).
  */
 export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
-  const slug = cafeSlug(cafe);
-  const cafeUrl = `${BASE_URL}/cafe/${slug}`;
+  const cafeUrl = `${BASE_URL}/cafe/${cafe.id}`;
 
   // ── Geo coordinates ─────────────────────────────────────────────────────
   const lat = cafe.coordinates?.lat ?? cafe.latitude;

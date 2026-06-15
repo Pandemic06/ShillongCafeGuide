@@ -11,6 +11,7 @@ import { getCustomCafesFromFirestore } from "./services/db";
 import logoImage from "./assets/images/shillong_cafe_logo_official.png";
 
 import CafeCard from "./components/CafeCard";
+import EditorsChoiceCard from "./components/EditorsChoiceCard";
 import CafeDetailModal from "./components/CafeDetailModal";
 import NeighborhoodGuide from "./components/NeighborhoodGuide";
 import GuidesList from "./components/GuidesList";
@@ -102,10 +103,18 @@ export default function App() {
         setActiveTabState("explore");
       }
     }
-    const cafeslug = params.get("cafe");
+    
+    // Parse pathname for cafe slug (e.g. /cafe/the-living-roof)
+    const path = window.location.pathname;
+    const match = path.match(/^\/cafe\/([^/]+)/);
+    const cafeslug = match ? match[1] : params.get("cafe");
+
     if (cafeslug && cafes.length > 0) {
       const found = cafes.find(c => c.id === cafeslug);
-      if (found) setSelectedCafe(found);
+      if (found) {
+        setSelectedCafe(found);
+        setActiveTabState("explore");
+      }
     }
     const nbhd = params.get("district");
     if (nbhd) setSelectedNeighborhoodId(nbhd);
@@ -121,6 +130,9 @@ export default function App() {
     if (tab !== "cafes") {
       url.searchParams.delete("cafe");
       url.searchParams.delete("search");
+    }
+    if (url.pathname.startsWith("/cafe/")) {
+      url.pathname = "/";
     }
     window.history.pushState({}, "", url);
   };
@@ -139,12 +151,16 @@ export default function App() {
     if (!cafeId) {
       setSelectedCafe(null);
       url.searchParams.delete("cafe");
+      if (url.pathname.startsWith("/cafe/")) {
+        url.pathname = "/";
+      }
     } else {
       const found = cafes.find((c) => c.id === cafeId);
       if (found) {
         setSelectedCafe(found);
-        url.searchParams.set("cafe", cafeId);
-        url.searchParams.set("tab", "cafes");
+        url.pathname = `/cafe/${cafeId}`;
+        url.searchParams.delete("cafe");
+        url.searchParams.set("tab", "explore");
       }
     }
     window.history.pushState({}, "", url);
@@ -155,6 +171,9 @@ export default function App() {
     const url = new URL(window.location.href);
     url.searchParams.set("tab", "walks");
     url.searchParams.set("district", districtId);
+    if (url.pathname.startsWith("/cafe/")) {
+      url.pathname = "/";
+    }
     window.history.pushState({}, "", url);
   };
 
