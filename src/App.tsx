@@ -9,32 +9,60 @@ import { getCustomCafesFromFirestore } from "./services/db";
 
 // @ts-ignore
 import logoImage from "./assets/images/shillong_cafe_logo_official.png";
+// @ts-ignore
+import heroVideo from "./assets/videos/hero.mp4";
 
 import CafeCard from "./components/CafeCard";
 import EditorsChoiceCard from "./components/EditorsChoiceCard";
 import CafeDetailModal from "./components/CafeDetailModal";
 import NeighborhoodGuide from "./components/NeighborhoodGuide";
+import CuisineGuide from "./components/CuisineGuide";
 import GuidesList from "./components/GuidesList";
 import AboutPanel from "./components/AboutPanel";
 import AIGuideChat from "./components/AIGuideChat";
 import DataHubModal from "./components/DataHubModal";
-import InteractiveMap, { CustomMapOverlay } from "./components/InteractiveMap";
+import InteractiveMap from "./components/InteractiveMap";
 import PlannersGuide from "./components/PlannersGuide";
 import TrendingDestination from "./components/TrendingDestination";
 import SEO, { PAGE_SEO } from "./components/SEO";
-import { APIProvider, Map, AdvancedMarker, Pin } from "@vis.gl/react-google-maps";
+import { FAQBlock, faqPageSchema, ModuleSummary } from "./components/SEOExtras";
+import { getPublicSiteSettings } from "./services/public-content";
+import { SiteSettings } from "./services/admin-db";
 import { GOOGLE_MAPS_API_KEY, hasValidKey } from "./config";
 
-type TabType = "explore" | "walks" | "planners" | "guides" | "about" | "trending";
+type TabType = "explore" | "cafes" | "cuisine" | "walks" | "planners" | "guides" | "about" | "trending";
+
+// Shared FAQ datasets — used both for rendered <details> and JSON-LD FAQPage.
+const FAQ_HOME = [
+  { q: "What are the best cafés in Shillong?", a: "Cafe Shillong (Laitumkhrah), Dylan's Cafe (Dhankheti), Rynsan (Boyce Road) for Khasi food, ML 05 Cafe (NH 44) for highway views and Cherry Bean Cafe (Kench's Trace) for bakes consistently top local lists. Our map ranks 47 verified cafés across the city." },
+  { q: "Where can I try authentic Khasi food in Shillong?", a: "Trattoria and Jadoh Stall near Police Bazaar are the most-cited Jadoh and Dohneiiong spots. Rynsan plates the same dishes in a sit-down format with live Ka Duitara music." },
+  { q: "Which Shillong neighborhood is best for café-hopping?", a: "Laitumkhrah for student energy, vinyl shops and acoustic stages. Police Bazaar for street-food adjacency. Golf Links for quiet, pine-scented mornings." },
+  { q: "Are there cafés in Shillong with live music?", a: "The Evening Club (Laitumkhrah), Cafe Shillong, Dylan's Cafe and Rynsan run regular acoustic and folk sets. Filter by 'Live Music' on the map." },
+  { q: "Does the route planner cover places outside Shillong city?", a: "Yes. The Adventure Route Planner has 12 curated road-trips including Cherrapunji (Sohra), Dawki, Jowai, Mawsynram, Laitlum Canyons, Wei Sawdong, Umiam Lake and Guwahati." },
+];
+
+const FAQ_CUISINE = [
+  { q: "What is Jadoh?", a: "Jadoh is the staple Khasi rice-and-pork dish — short-grain red hill rice slow-cooked in pork stock, ginger, shallots and mountain herbs. Best eaten with raw red onions and Lal-cha (unsweetened black tea)." },
+  { q: "What is Dohneiiong?", a: "Dohneiiong is a Khasi pork curry slow-cooked in dry-roasted black sesame seeds (Nei-long), local ginger and peppercorns. Velvety, nutty, and unmistakably regional — best with steamed red rice." },
+  { q: "What is Tungrymbai?", a: "Tungrymbai is fermented soybean paste slow-stewed with pork fat. Pungent, deep, traditional. Goes with red rice." },
+  { q: "Where can I try Khasi food in Shillong?", a: "Trattoria, Jadoh Stall, Heritage Inn Kitchen, and Rynsan are the most-recommended kitchens. The cuisine tab links each dish to the cafés serving it." },
+];
+
+const FAQ_WALKS = [
+  { q: "What's special about Laitumkhrah?", a: "Laitumkhrah is Shillong's student and music heart — elite schools, vinyl record stalls, acoustic cafés like Cafe Shillong, The Evening Club, Cherry Bean. Best walked late afternoon to dusk." },
+  { q: "Is Police Bazaar walkable?", a: "Yes. The central circle is dense and energetic — Khasi handicraft stalls, Bhaichung Jadoh street food, Melody & Beans live music, and the heritage cathedral within 800 metres." },
+  { q: "Why visit Golf Links?", a: "Quiet, misty, pine-shaded. Best for slow morning walks past botanical gardens. Fern & Mist Garden, ML 05 Cafe, and The Pine Loft are the anchor cafés." },
+];
 
 export default function App() {
   const [cafes, setCafes] = useState<Cafe[]>(CAFES);
-
   const [activeTab, setActiveTabState] = useState<TabType>("explore");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCafe, setSelectedCafe] = useState<Cafe | null>(null);
   const [selectedNeighborhoodId, setSelectedNeighborhoodId] = useState<string | undefined>(undefined);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dataHubOpen, setDataHubOpen] = useState(false);
+  const [cafeViewMode, setCafeViewMode] = useState<"grid" | "map">("map");
 
   const [isScanning, setIsScanning] = useState(false);
   const [scanLogs, setScanLogs] = useState<string[]>([]);
@@ -42,6 +70,20 @@ export default function App() {
   const [scanRegion, setScanRegion] = useState("Shillong");
   const [scanCategory, setScanCategory] = useState("cafes");
   const [scanReport, setScanReport] = useState<any | null>(null);
+
+  // CMS-managed site settings
+  const [siteSettings, setSiteSettings] = useState<SiteSettings | null>(null);
+  useEffect(() => {
+    getPublicSiteSettings().then(setSiteSettings).catch(() => setSiteSettings(null));
+  }, []);
+
+  const heroVideoSrc = siteSettings?.heroVideoUrl || heroVideo;
+  const logoSrc = siteSettings?.logoUrl || logoImage;
+
+  // Global scroll-to-top on tab change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+  }, [activeTab]);
 
   const handleTriggerScan = async () => {
     setIsScanning(true);
@@ -93,15 +135,60 @@ export default function App() {
     }
   };
 
+  const loadCafes = async () => {
+    try {
+      const res = await fetch("/api/cafes");
+      if (!res.ok) throw new Error("HTTP status " + res.status);
+      const apiCafes = await res.json();
+      try {
+        const firestoreCafes = await getCustomCafesFromFirestore();
+        if (Array.isArray(firestoreCafes) && firestoreCafes.length > 0) {
+          const publicFs = firestoreCafes.filter(
+            (c: any) => c?.status !== "pending" && c?.publish_eligibility_status !== "pending"
+          ).map((c: any) => {
+            if (c.id === "alaya-cafe") {
+              const localAlaya = apiCafes.find(ac => ac.id === "alaya-cafe");
+              if (localAlaya) {
+                return {
+                  ...localAlaya,
+                  images: c.images || localAlaya.images,
+                  introduction: c.introduction || localAlaya.introduction,
+                  mustTry: c.mustTry || localAlaya.mustTry,
+                  gallery: c.gallery || localAlaya.gallery,
+                  neighborhood: "Nongthymmai",
+                  address: "Nongthymmai, Shillong, Meghalaya 793014",
+                  coordinates: { lat: 25.5615, lng: 91.9025 },
+                  vibeTags: localAlaya.vibeTags,
+                  hasLiveMusic: true,
+                  hasKhasiMusic: true,
+                };
+              }
+            }
+            return c;
+          });
+          const merged = [...publicFs];
+          apiCafes.forEach((apiCafe: Cafe) => {
+            if (!merged.some(c => c.id === apiCafe.id)) merged.push(apiCafe);
+          });
+          setCafes(merged);
+          return;
+        }
+      } catch (err) {
+        console.warn("Firestore custom cafes fetch failed:", err);
+      }
+      setCafes(apiCafes);
+    } catch (err) {
+      console.error("Error loading cafes from database API:", err);
+    }
+  };
+
+  useEffect(() => { loadCafes(); }, []);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const tabParam = params.get("tab");
-    if (tabParam) {
-      if (["explore", "walks", "planners", "guides", "about", "trending"].includes(tabParam)) {
-        setActiveTabState(tabParam as TabType);
-      } else if (tabParam === "cafes" || tabParam === "cuisine") {
-        setActiveTabState("explore");
-      }
+    const tabParam = params.get("tab") as TabType;
+    if (tabParam && ["explore", "cafes", "cuisine", "walks", "planners", "guides", "about", "trending"].includes(tabParam)) {
+      setActiveTabState(tabParam);
     }
     
     // Parse pathname for cafe slug (e.g. /cafe/the-living-roof)
@@ -139,11 +226,7 @@ export default function App() {
 
   const handleQuickTagSearch = (tag: string) => {
     setSearchQuery(tag);
-    const url = new URL(window.location.href);
-    url.searchParams.set("tab", "cafes");
-    url.searchParams.set("search", tag);
-    window.history.pushState({}, "", url);
-    setActiveTabState("cafes");
+    setActiveTab("cafes");
   };
 
   const handleSelectCafe = (cafeId: string | null) => {
@@ -166,65 +249,25 @@ export default function App() {
     window.history.pushState({}, "", url);
   };
 
-  const selectDistrict = (districtId: string) => {
-    setSelectedNeighborhoodId(districtId);
+  const handleCloseCafe = () => {
+    setSelectedCafe(null);
     const url = new URL(window.location.href);
-    url.searchParams.set("tab", "walks");
-    url.searchParams.set("district", districtId);
+    url.searchParams.delete("cafe");
     if (url.pathname.startsWith("/cafe/")) {
       url.pathname = "/";
     }
     window.history.pushState({}, "", url);
   };
 
-  const [dataHubOpen, setDataHubOpen] = useState(false);
-  const [cafeViewMode, setCafeViewMode] = useState<"grid" | "map">("map");
-
-  const loadCafes = async () => {
-    try {
-      const res = await fetch("/api/cafes");
-      if (!res.ok) throw new Error("HTTP status " + res.status);
-      const apiCafes = await res.json();
-      try {
-        const firestoreCafes = await getCustomCafesFromFirestore();
-        if (Array.isArray(firestoreCafes) && firestoreCafes.length > 0) {
-          const merged = firestoreCafes.map((c: any) => {
-            if (c.id === "alaya-cafe") {
-              const localAlaya = apiCafes.find(ac => ac.id === "alaya-cafe");
-              if (localAlaya) {
-                return {
-                  ...localAlaya,
-                  images: c.images || localAlaya.images,
-                  introduction: c.introduction || localAlaya.introduction,
-                  mustTry: c.mustTry || localAlaya.mustTry,
-                  gallery: c.gallery || localAlaya.gallery,
-                  neighborhood: "Nongthymmai",
-                  address: "Nongthymmai, Shillong, Meghalaya 793014",
-                  coordinates: { lat: 25.5615, lng: 91.9025 },
-                  vibeTags: localAlaya.vibeTags,
-                  hasLiveMusic: true,
-                  hasKhasiMusic: true,
-                };
-              }
-            }
-            return c;
-          });
-          apiCafes.forEach((apiCafe: Cafe) => {
-            if (!merged.some(c => c.id === apiCafe.id)) merged.push(apiCafe);
-          });
-          setCafes(merged);
-          return;
-        }
-      } catch (err) {
-        console.warn("Firestore custom cafes fetch failed:", err);
-      }
-      setCafes(apiCafes);
-    } catch (err) {
-      console.error("Error loading cafes from database API:", err);
-    }
+  const selectDistrict = (districtId: string) => {
+    setSelectedNeighborhoodId(districtId);
+    setActiveTab("walks");
   };
 
-  useEffect(() => { loadCafes(); }, []);
+  const navigateToNeighborhood = (districtId: string) => {
+    setSelectedNeighborhoodId(districtId);
+    setActiveTab("walks");
+  };
 
   const filteredCafes = cafes.filter((cafe) => {
     if (activeTab === "cafes") {
@@ -236,18 +279,15 @@ export default function App() {
         if (!isApproved || !isVerifiedFit || (!isCozy && !meetsThreshold)) return false;
       }
     }
-    // Guard against undefined fields from API-sourced cafe objects
     const vibeTags = Array.isArray(cafe.vibeTags) ? cafe.vibeTags.join(" ") : "";
     const combinedTexts = `${cafe.name ?? ""} ${cafe.theme ?? ""} ${cafe.neighborhood ?? ""} ${vibeTags}`;
     return isFuzzyMatch(searchQuery, combinedTexts);
   });
 
-  const navigateToNeighborhood = (districtId: string) => {
-    setSelectedNeighborhoodId(districtId);
-  };
-
   const tabsList = [
     { id: "explore", label: "Discovery" },
+    { id: "cafes", label: "Cozy Cafés" },
+    { id: "cuisine", label: "Khasi Cuisine" },
     { id: "walks", label: "District Walks" },
     { id: "planners", label: "Route Planner" },
     { id: "guides", label: "Editorial" },
@@ -315,100 +355,123 @@ export default function App() {
         canonical={selectedCafe ? `https://shillongcafemap.in/?tab=cafes&cafe=${selectedCafe.id}` : seoMeta.canonical}
         schema={getDynamicSchema()}
       />
-      <div className="md:h-screen md:max-h-screen md:overflow-hidden bg-[#FAF8F5] text-stone-850 font-sans flex flex-col md:flex-row relative antialiased selection:bg-amber-800/20 selection:text-amber-900 w-full">
-
+      
+      <div className="min-h-screen bg-[#F5F2EB] text-stone-850 font-sans flex flex-col relative antialiased selection:bg-amber-800/20 selection:text-amber-900 w-full">
         {/* Subtle dot grid texture overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(#8b5c1a_0.6px,transparent_0.6px)] [background-size:16px_16px] opacity-[0.04] pointer-events-none z-10" />
 
-        {/* === DESKTOP SIDEBAR NAV === */}
-        <aside className="hidden md:flex w-[260px] shrink-0 h-full border-r border-stone-200 bg-white flex-col justify-between z-30 font-sans">
-          <div>
+        {/* CMS-managed editorial banner */}
+        {siteSettings?.bannerEnabled && siteSettings.bannerText && (
+          <div className="relative z-50 bg-amber-800 text-amber-50 text-center text-xs font-sans font-medium tracking-wide px-4 py-2">
+            {siteSettings.bannerText}
+          </div>
+        )}
+
+        {/* === TOP NAVIGATION BAR === */}
+        <header id="main-navbar" className="sticky top-0 z-40 bg-[#FAF8F5]/85 backdrop-blur-md border-b border-stone-200/80 w-full font-sans">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            {/* Logo and Branding */}
             <div
               onClick={() => setActiveTab("explore")}
-              className="p-6 flex items-center gap-2.5 cursor-pointer leading-none group select-none border-b border-stone-100"
+              className="flex items-center gap-2.5 cursor-pointer leading-none group select-none"
             >
-              <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center border border-stone-200 shadow-xs bg-white transition-transform group-hover:scale-105 duration-300 shrink-0">
-                <img src={logoImage} alt="Shillong Cafe Map" className="w-full h-full object-cover" />
+              <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center border border-stone-200 shadow-xs bg-white transition-transform group-hover:scale-105 duration-300 shrink-0">
+                <img src={logoSrc} alt="Shillong Cafe Map Logo" className="w-full h-full object-cover" />
               </div>
               <div>
-                <span className="font-display font-bold text-sm tracking-wide text-stone-900 block">Shillong Café Map</span>
-                <span className="text-[10px] font-mono tracking-widest text-[#8b5c1a] uppercase font-bold">Editorial Hearth Guide</span>
+                <p className="font-display font-bold text-base tracking-wide text-stone-900">Shillong Café Map</p>
+                <span className="text-[10px] font-mono tracking-widest text-[#8b5c1a] uppercase font-bold block">Editorial Hearth Guide</span>
               </div>
             </div>
-            <nav className="p-4 flex flex-col gap-1">
+
+            {/* Desktop Navigation Links */}
+            <nav className="hidden lg:flex items-center gap-1">
               {tabsList.map((tab) => {
-                const isActive = activeTab === tab.id;
+                const isActive = activeTab === tab.id || (tab.id === "walks" && selectedNeighborhoodId !== undefined && activeTab === "explore");
                 return (
                   <button
                     key={tab.id}
-                    id={`sidebar-nav-tab-${tab.id}`}
-                    role="tab"
-                    aria-selected={isActive}
-                    onClick={() => setActiveTab(tab.id as TabType)}
-                    className={`w-full text-left px-4 py-3 rounded-xl text-xs font-sans tracking-wider font-semibold uppercase cursor-pointer relative transition-all flex items-center gap-3 ${
+                    id={`nav-tab-${tab.id}`}
+                    onClick={() => {
+                      if (tab.id === "walks") {
+                        setSelectedNeighborhoodId(NEIGHBORHOODS[0].id);
+                      }
+                      setActiveTab(tab.id as TabType);
+                    }}
+                    className={`px-3.5 py-2 rounded-xl text-xs font-sans tracking-wider font-semibold uppercase cursor-pointer relative transition-all ${
                       isActive
                         ? "text-amber-800 bg-amber-50"
-                        : "text-stone-500 hover:text-stone-850 hover:bg-stone-50"
+                        : "text-stone-500 hover:text-stone-850 hover:bg-stone-100/65"
                     }`}
                   >
-                    {isActive && <div className="w-1.5 h-1.5 bg-amber-800 rounded-full shrink-0" />}
                     {tab.label}
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeTabBadge"
+                        className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-amber-800 rounded-full"
+                      />
+                    )}
                   </button>
                 );
               })}
             </nav>
-          </div>
-          <div className="p-4 border-t border-stone-100 bg-[#FAF8F5]">
-            <button
-              onClick={() => setDataHubOpen(true)}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-mono tracking-wider font-bold uppercase cursor-pointer border border-stone-200 hover:border-amber-700 bg-white hover:bg-amber-50 text-stone-700 hover:text-amber-800 transition-all duration-300 shadow-2xs"
-            >
-              <Database className="w-4 h-4 text-[#8b5c1a]" />
-              Data Hub
-            </button>
-          </div>
-        </aside>
 
-        {/* === MOBILE HEADER === */}
-        <header id="main-navbar" className="md:hidden sticky top-0 z-40 bg-[#FAF8F5]/85 backdrop-blur-md border-b border-stone-200/80 w-full shrink-0">
-          <div className="flex items-center justify-between px-4 py-3">
+            {/* Right side: Data Hub & Mobile Menu Button */}
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center border border-stone-200 bg-white">
-                <img src={logoImage} alt="Shillong Cafe Map" className="w-full h-full object-cover" />
-              </div>
-              <div>
-                <span className="font-display font-bold text-sm tracking-wide text-stone-900 block">Shillong Café Map</span>
-                <span className="text-[9px] font-mono tracking-widest text-amber-805 uppercase font-bold block">Hearth Guide</span>
-              </div>
+              <button
+                onClick={() => setDataHubOpen(true)}
+                className="hidden lg:flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono tracking-wider font-bold uppercase cursor-pointer border border-stone-200 hover:border-amber-700 bg-white hover:bg-amber-50 text-stone-700 hover:text-amber-800 transition-all duration-300 shadow-2xs"
+              >
+                <Database className="w-3.5 h-3.5 text-[#8b5c1a]" />
+                <span>Data Hub</span>
+              </button>
+              
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden p-1.5 rounded-lg text-stone-600 hover:bg-stone-100 transition-colors"
+              >
+                {mobileMenuOpen ? <X className="w-5.5 h-5.5" /> : <Menu className="w-5.5 h-5.5" />}
+              </button>
             </div>
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-1.5 rounded-lg text-stone-600 hover:bg-stone-100 transition-colors">
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
           </div>
+
+          {/* Mobile/Tablet Dropdown Navigation */}
           <AnimatePresence>
             {mobileMenuOpen && (
-              <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="border-t border-stone-200 bg-[#FAF8F5]">
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                className="lg:hidden border-t border-stone-200 bg-[#FAF8F5] overflow-hidden"
+              >
                 <nav className="p-4 flex flex-col gap-2">
                   {tabsList.map((tab) => (
                     <button
                       key={tab.id}
                       onClick={() => {
+                        if (tab.id === "walks") {
+                          setSelectedNeighborhoodId(NEIGHBORHOODS[0].id);
+                        }
                         setActiveTab(tab.id as TabType);
                         setMobileMenuOpen(false);
                       }}
-                      className={`px-4 py-2.5 text-left rounded-lg text-xs font-sans font-medium tracking-wide uppercase ${
-                        activeTab === tab.id ? "bg-amber-50 text-amber-800" : "text-stone-500 hover:bg-stone-50"
+                      className={`px-4 py-3 text-left rounded-lg text-xs font-sans font-medium tracking-wide uppercase ${
+                        activeTab === tab.id ? "bg-amber-50 text-amber-855 text-amber-808" : "text-stone-500 hover:bg-stone-50"
                       }`}
                     >
                       {tab.label}
                     </button>
                   ))}
                   <button
-                    onClick={() => { setDataHubOpen(true); setMobileMenuOpen(false); }}
-                    className="px-4 py-2.5 mt-1 text-left rounded-lg text-xs font-mono font-bold tracking-wide uppercase text-amber-800 bg-amber-50 hover:bg-amber-100 flex items-center gap-2 border border-amber-200/60 font-sans"
+                    onClick={() => {
+                      setDataHubOpen(true);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="px-4 py-3 mt-1.5 text-left rounded-lg text-xs font-mono font-bold tracking-wide uppercase text-amber-808 bg-amber-50 hover:bg-amber-100 flex items-center gap-2.5 border border-amber-200/60 font-sans"
                   >
-                    <Database className="w-4 h-4 text-amber-700" />
-                    Data Hub
+                    <Database className="w-4 h-4 text-amber-705" />
+                    <span>Data Hub Admin</span>
                   </button>
                 </nav>
               </motion.div>
@@ -417,312 +480,553 @@ export default function App() {
         </header>
 
         {/* === MAIN CONTENT === */}
-        <main className="flex-1 min-w-0 flex flex-col h-auto md:h-full md:overflow-hidden relative">
+        <main className={`flex-1 w-full min-h-0 flex flex-col relative`}>
           <AnimatePresence mode="wait">
 
             {/* EXPLORE TAB */}
             {activeTab === "explore" && (
-              <motion.div key="explore-tab" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} className="flex-1 flex flex-col md:flex-row h-auto md:h-full overflow-visible md:overflow-hidden">
+              <motion.div
+                key="explore-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 space-y-16"
+              >
+                {/* Dynamic Sweep Hero Section */}
+                <div
+                  style={{ backgroundColor: "#543d1b" }}
+                  className="text-stone-100 rounded-3xl p-8 md:p-12 relative overflow-hidden border border-stone-800 shadow-xl flex flex-col md:flex-row items-center gap-10"
+                >
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-amber-800/10 blur-[130px] pointer-events-none" />
+                  <div className="flex-1 space-y-6 z-10 text-center md:text-left">
+                    <span className="inline-flex items-center gap-1.5 bg-amber-900/40 text-amber-300 px-4 py-2 rounded-full text-[11px] font-mono font-bold tracking-widest uppercase border border-amber-600/30">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-spin-slow" />
+                      Now Gathering Monsoons
+                    </span>
 
-              <div id="discovery-left-panel" className="w-full md:w-[42%] flex-none h-auto md:h-full overflow-y-auto border-r border-[#E6E4DF] bg-white p-4 md:p-6 space-y-12 select-none min-w-[340px] max-w-[480px]">
-              <div className="relative text-[#FAF8F5] rounded-[32px] p-8 md:p-14 overflow-hidden border border-stone-850 shadow-2xl flex flex-col lg:flex-row items-center gap-12 bg-gradient-to-br from-[#2E1E0F] via-[#3D2814] to-[#1F140A]">
-                <div className="absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full bg-amber-600/10 blur-[120px] pointer-events-none animate-pulse" />
-                <div className="absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full bg-stone-900/40 blur-[100px] pointer-events-none" />
-                <div className="flex-1 space-y-7 z-10 text-center lg:text-left">
-                  <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-300 px-4 py-2 rounded-full text-[11px] font-mono font-bold tracking-widest uppercase shadow-xs">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                    NOW GATHERING MONSOONS
+                    <h1 className="text-4xl sm:text-5.5xl font-display font-bold text-stone-100 leading-tight tracking-tight">
+                      The Heart of <br />the Hills
+                    </h1>
+
+                    <p className="text-sm md:text-base text-stone-300 max-w-md font-sans leading-relaxed font-light">
+                      A Curated Chronicle of cozy hearths, acoustic circles, and culinary heritage in Shillong's misty ridges.
+                    </p>
+
+                    <p className="text-xs text-stone-400 max-w-md font-sans leading-relaxed">
+                      A guide to the best cafés in Shillong, Khasi food like Jadoh and Dohneiiong, walkable districts (Laitumkhrah, Police Bazaar, Golf Links) and curated road-trip routes across Meghalaya.
+                    </p>
+
+                    {/* Curated Interactive Search */}
+                    <div className="bg-[#FAF8F5] p-1.5 rounded-xl border border-stone-700/50 flex items-center gap-2 max-w-md shadow-lg">
+                      <Search className="w-5 h-5 text-stone-400 shrink-0 ml-2" />
+                      <input
+                        id="hero-input"
+                        type="text"
+                        placeholder="Search cozy lofts, acoustic stages..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            setActiveTab("cafes");
+                          }
+                        }}
+                        className="flex-1 bg-transparent px-2 py-2.5 text-xs md:text-sm text-[#3d2817] placeholder:text-[#3d2817]/50 outline-none font-sans"
+                      />
+                      <button
+                        onClick={() => setActiveTab("cafes")}
+                        className="bg-amber-800 text-white hover:bg-amber-900 px-4 py-2 rounded-lg text-xs font-sans font-semibold transition-colors cursor-pointer"
+                      >
+                        Find
+                      </button>
+                    </div>
+
+                    {/* Suggestion tags */}
+                    <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1 text-stone-400 text-[11px] font-mono">
+                      <span className="font-semibold text-stone-400">Cozy Tags:</span>
+                      {["Jazz Beats", "Book Heaven", "Greenhouse", "Rider Haven"].map((tag) => (
+                        <button
+                          key={tag}
+                          onClick={() => handleQuickTagSearch(tag)}
+                          className="text-stone-300 hover:text-amber-400 transition-colors border-b border-stone-700 hover:border-amber-400 cursor-pointer"
+                        >
+                          {tag}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                  <h1 className="text-4xl sm:text-5xl font-display font-bold text-[#faf8f5] leading-none tracking-tight">
-                    The Heart of<br />the Hills
-                    <span className="text-amber-100 font-serif italic text-3xl sm:text-4xl font-normal block mt-2">A Curated Chronicle of cozy hearths, acoustic circles, and culinary heritage in Shillong's misty ridges.</span>
-                  </h1>
-                  <p className="text-stone-300 text-sm md:text-base max-w-xl font-sans leading-relaxed font-light">A guide to the best cafés in Shillong, Khasi food like Jadoh and Dohneiiong, walkable districts (Laitumkhrah, Police Bazaar, Golf Links) and curated road-trip routes across Meghalaya.</p>
-                  <div className="bg-white hover:bg-white p-1.5 rounded-2xl border border-stone-200/80 flex items-center gap-2 max-w-md shadow-xl transition-all duration-300">
-                    <Search className="w-5 h-5 text-stone-400 shrink-0 ml-3" />
-                    <input id="hero-input" type="text" placeholder="Search cozy lofts, acoustic stages..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") setActiveTab("cafes"); }} className="flex-1 text-[#1c1917] bg-transparent px-2 py-3 text-xs md:text-sm outline-none font-sans" />
-                    <button onClick={() => setActiveTab("cafes")} className="bg-amber-800 hover:bg-amber-900 text-white transition-colors px-5 py-2.5 rounded-xl text-xs font-sans font-semibold cursor-pointer active:scale-98">Find</button>
+
+                  {/* Right Visual Video */}
+                  <div className="w-full md:w-[480px] shrink-0 h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl relative border border-stone-800 bg-stone-900">
+                    <video
+                      src={heroVideoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-contain"
+                    />
+                    <div className="absolute inset-0 bg-stone-900/20 pointer-events-none" />
+                    <div className="absolute top-4 left-4 font-mono text-[9px] bg-stone-900/60 backdrop-blur-md text-amber-200 px-2.5 py-1 rounded-sm border border-stone-700 uppercase tracking-widest font-bold">
+                      Shillong in Motion
+                    </div>
                   </div>
-                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 text-stone-400 text-[11px] font-mono">
-                    <span className="font-semibold text-stone-350">Cozy Tags:</span>
-                    {["Jazz Beats", "Book Heaven", "Greenhouse", "Rider Haven"].map((tag) => (
-                      <button key={tag} onClick={() => handleQuickTagSearch(tag)} className="text-stone-350 hover:text-amber-400 transition-colors border-b border-stone-700/60 hover:border-amber-400 cursor-pointer">{tag}</button>
+                </div>
+
+                {/* Geographic Live Discovery Map Section */}
+                <div className="space-y-6 animate-fade-in">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 px-1">
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#8b5c1a] font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                        Pine & Hearth Geography
+                      </span>
+                      <h2 className="text-2xl md:text-3xl font-display font-medium text-stone-900">
+                        Discovery Hearth Map
+                      </h2>
+                      <p className="text-xs text-stone-500 max-w-xl font-sans font-light">
+                        Navigate physical pine hills, misty valleys, and historic alleys using exact geolocated coordinates. Filter through traditional Khasi hearths, luxury banquets, and acoustic cellars.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="rounded-3xl overflow-hidden border border-stone-250 border-stone-200/80 shadow-md">
+                    <InteractiveMap
+                      cafes={cafes}
+                      onSelectCafe={(c) => handleSelectCafe(c.id)}
+                      activeCafeId={selectedCafe?.id}
+                    />
+                  </div>
+
+                  <ModuleSummary
+                    topic="What this map covers"
+                    body="49 hand-picked cafés across Shillong's main neighborhoods — Laitumkhrah, Police Bazaar, Golf Links, Boyce Road, Nongkynrih, Kench's Trace and Dhankheti. Filter by Khasi cuisine, live music, rooftop, fine dining or local eats. Each pin links to a full café card with photos, hours, ratings and signature dishes like Jadoh and Dohneiiong."
+                    links={[
+                      { label: "Browse all 49 cafés", onClick: () => setActiveTab("cafes") },
+                      { label: "Khasi food guide", onClick: () => setActiveTab("cuisine") },
+                      { label: "Neighborhood walks", onClick: () => setActiveTab("walks") },
+                      { label: "Meghalaya route planner", onClick: () => setActiveTab("planners") },
+                    ]}
+                  />
+                </div>
+
+                {/* Editor's Choice Highlights section */}
+                <div className="space-y-6">
+                  <div className="flex justify-between items-end px-1">
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#8b5c1a] font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                        The Editorial Hand
+                      </span>
+                      <h2 className="text-2xl md:text-3xl font-display font-medium text-stone-900">
+                        Editor's Choice
+                      </h2>
+                    </div>
+                    <button
+                      onClick={() => setActiveTab("cafes")}
+                      className="text-xs text-amber-800 font-sans font-medium border-b border-amber-800 hover:text-amber-950 transition-colors pb-0.5 cursor-pointer"
+                    >
+                      View Hearth Map →
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {cafes.filter(c => c.editorial_featured).slice(0, 3).map(cafe => (
+                      <EditorsChoiceCard key={cafe.id} cafe={cafe} onViewDetails={(id) => handleSelectCafe(id)} />
+                    ))}
+                    {cafes.filter(c => c.editorial_featured).length === 0 && cafes.slice(0, 3).map(cafe => (
+                      <EditorsChoiceCard key={cafe.id} cafe={cafe} onViewDetails={(id) => handleSelectCafe(id)} />
                     ))}
                   </div>
                 </div>
-                <div className="w-full lg:w-[360px] shrink-0 h-72 lg:h-96 rounded-2xl overflow-hidden shadow-2xl relative border border-stone-800">
-                  {hasValidKey ? (
-                    <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>
-                      <Map
-                        defaultCenter={{ lat: 25.5788, lng: 91.8920 }}
-                        defaultZoom={14}
-                        disableDefaultUI={true}
-                        gestureHandling="none"
-                        className="w-full h-full"
-                        colorScheme="DARK"
-                        options={{
-                          styles: [{ featureType: "poi", stylers: [{ visibility: "off" }] }]
-                        }}
+
+                {/* Traditional Khasi Cuisine spotlight callout */}
+                <div className="bg-[#FAF8F5] border border-stone-200 rounded-3xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-xs">
+                  <div className="md:col-span-5 h-72 rounded-2xl overflow-hidden bg-stone-100 border border-stone-200">
+                    <img
+                      src="/cafe-photos/jadoh-restaurant/hero-0.jpg"
+                      alt="Traditional Dohneiiong dish with sesame"
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+
+                  <div className="md:col-span-7 space-y-4">
+                    <span className="inline-block text-[10px] font-mono tracking-widest text-amber-800 uppercase font-bold bg-amber-50 px-2.5 py-1 rounded">
+                      Indigenous Spotlight
+                    </span>
+                    <h3 className="text-2xl md:text-3.5xl font-display font-bold tracking-tight leading-none text-stone-900">
+                      Dohneiiong: Black Sesame Heritage Spot
+                    </h3>
+                    <p className="text-stone-600 text-sm leading-relaxed font-sans font-light">
+                      Savor the earthy, complex deep flavors of slow-stewed pork belly simmered gently in a jet-black gravy of hand-roasted whole black sesame seed (Nei-long), local wild ginger, and peppercorns. It is a masterpiece of Northeast Indian tribal cuisine.
+                    </p>
+                    <div className="pt-2 flex flex-wrap gap-3">
+                      <button
+                        onClick={() => setActiveTab("cuisine")}
+                        className="bg-amber-800 hover:bg-amber-900 text-white rounded-lg px-5 py-2.5 text-xs font-sans font-semibold transition-colors flex items-center gap-2 cursor-pointer shadow-xs"
                       >
-                        {cafes.slice(0, 5).map((cafe) => {
-                          if (!cafe.coordinates?.lat || !cafe.coordinates?.lng) return null;
-                          const isAlaya = cafe.id === "alaya-cafe";
-                          return (
-                            <CustomMapOverlay
-                              key={cafe.id}
-                              position={{ lat: cafe.coordinates.lat, lng: cafe.coordinates.lng }}
-                              zIndex={isAlaya ? 100 : 10}
-                            >
-                              {isAlaya ? (
-                                <div className="relative flex flex-col items-center select-none filter drop-shadow-md scale-110">
-                                  {/* Glow halo */}
-                                  <div className="absolute -inset-1.5 rounded-full border border-amber-500 bg-amber-500/20 animate-pulse" />
-                                  <div className="absolute -inset-0.5 rounded-full border border-amber-400 bg-amber-400/10 animate-ping pointer-events-none" />
-                                  
-                                  {/* Custom gold gradient circle */}
-                                  <div className="w-7 h-7 rounded-full border border-amber-300 flex items-center justify-center shadow-lg bg-gradient-to-tr from-amber-700 via-amber-400 to-amber-800 text-stone-900">
-                                    <Crown className="w-3.5 h-3.5 text-stone-950 fill-amber-300 shrink-0" />
-                                  </div>
-                                  
-                                  {/* Tiny Label */}
-                                  <div className="absolute -top-5 bg-amber-900 border border-amber-400 text-[6px] px-1 py-0.2 rounded-full font-mono text-white whitespace-nowrap shadow-md leading-none">
-                                    ALAYA
-                                  </div>
-                                </div>
-                              ) : (
-                                <div className="w-3.5 h-3.5 rounded-full bg-amber-850 border border-stone-250 shadow-md scale-90" />
-                              )}
-                            </CustomMapOverlay>
-                          );
-                        })}
-                      </Map>
-                    </APIProvider>
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-stone-900">
-                      <div className="text-center">
-                        <MapPin className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                        <p className="text-stone-400 text-xs font-mono">PINE & HEARTH GEOGRAPHY</p>
-                        <p className="text-stone-200 text-sm font-display">Discovery Hearth Map</p>
-                        <p className="text-stone-500 text-xs mt-1">Navigate physical pine hills, misty valleys,<br />and historic alleys using exact geolocated coordinates.</p>
-                        <p className="text-stone-600 text-[10px] mt-2 font-mono">Filter through traditional Khasi hearths,<br />luxury banquets, and acoustic cellars.</p>
-                      </div>
+                        <span>Explore Khasi Foods</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => handleSelectCafe("rynsan-cafe")}
+                        className="text-xs text-stone-600 font-sans font-medium px-4 py-2.5 hover:text-amber-800 transition-colors"
+                      >
+                        Find Sourdough Toast Partner →
+                      </button>
                     </div>
-                  )}
-                  <div className="absolute inset-0 bg-stone-900/20" />
-                  <div className="absolute bottom-5 left-5 right-5 bg-stone-900/75 backdrop-blur-md border border-stone-800/80 p-4 rounded-xl text-stone-100 flex items-center justify-between shadow-lg">
-                    <div>
-                      <p className="text-[10px] font-mono tracking-widest text-[#E6AD4E] uppercase font-bold">Local Climate</p>
-                      <h4 className="text-xs font-display font-medium text-[#FAF8F5]">Monsoon Ridge Patrol</h4>
-                    </div>
-                    <span className="text-xs font-mono font-bold text-stone-300">22.5°C</span>
                   </div>
                 </div>
-              </div>
-                  {/* EDITOR'S CHOICE SECTION (Massive Alaya Spotlight) */}
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <p className="text-[10px] font-mono tracking-widest text-[#8b5c1a] uppercase font-bold">THE EDITORIAL HAND</p>
-                    <h2 className="text-xl font-display font-bold text-stone-900">Editor's Choice</h2>
+
+                {/* District Walks summary listing sections */}
+                <div className="bg-stone-900 text-stone-100 rounded-3xl p-8 space-y-8 border border-stone-800 overflow-hidden relative shadow-lg">
+                  <div className="absolute top-0 right-0 w-44 h-44 opacity-[0.03] pointer-events-none transform translate-x-12 -translate-y-12">
+                    <Layers className="w-44 h-44 text-amber-500" />
                   </div>
-                </div>
-                <div className="space-y-4">
-                  {(() => {
-                    const alayaCafe = cafes.find(c => c.id === "alaya-cafe");
-                    if (!alayaCafe) return null;
-                    return (
-                      <div className="bg-[#fdfbf7] border-2 border-amber-300 rounded-[36px] p-10 sm:p-14 shadow-2xl hover:shadow-3xl transition-all duration-300 relative overflow-hidden group space-y-10 text-left">
-                        {/* Spotlight Ribbon */}
-                        <div className="flex items-center justify-between">
-                          <span className="inline-flex items-center gap-2.5 bg-gradient-to-r from-amber-800 to-amber-900 text-amber-100 border border-amber-600 px-6 py-2.5 rounded-full text-xs font-mono font-bold tracking-widest uppercase shadow-md animate-pulse">
-                            <Crown className="w-5 h-5 text-amber-350 shrink-0" />
-                            Editor's Featured Choice
-                          </span>
-                          <span className="flex items-center gap-1.5 text-base font-mono font-bold text-amber-900 bg-amber-100/80 border border-amber-250 px-5 py-2 rounded-full">
-                            <Star className="w-4.5 h-4.5 fill-amber-500 text-amber-600 shrink-0" />
-                            {Number(alayaCafe.rating || 4.8).toFixed(1)}
-                          </span>
-                        </div>
 
-                        {/* Cafe Info Header */}
-                        <div className="space-y-3">
-                          <h3 className="text-5xl sm:text-6xl font-display font-black text-stone-900 leading-tight tracking-tight">
-                            {alayaCafe.name}
-                          </h3>
-                          <p className="text-base text-stone-500 font-mono tracking-wide flex items-center gap-2">
-                            <MapPin className="w-5 h-5 text-amber-800 shrink-0" />
-                            {alayaCafe.neighborhood}, Shillong
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 px-1">
+                    <div className="space-y-1.5">
+                      <span className="text-[10px] font-mono tracking-widest text-amber-400 font-bold uppercase">
+                        Scenic Itineraries
+                      </span>
+                      <h3 className="text-2xl font-display font-bold text-stone-100">
+                        Walk Through districts
+                      </h3>
+                    </div>
+                    <button
+                      onClick={() => {
+                        setSelectedNeighborhoodId(NEIGHBORHOODS[0].id);
+                        setActiveTab("walks");
+                      }}
+                      className="text-xs text-amber-400 font-sans font-medium border-b border-amber-400 hover:text-amber-300 pb-0.5"
+                    >
+                      All Walks Timeline →
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {NEIGHBORHOODS.map((n) => (
+                      <div
+                        key={n.id}
+                        onClick={() => {
+                          setSelectedNeighborhoodId(n.id);
+                          setActiveTab("walks");
+                        }}
+                        className="border border-stone-800 bg-stone-950/60 p-6 rounded-2xl hover:border-amber-500 hover:-translate-y-1 cursor-pointer transition-all duration-300 space-y-4 shadow-sm relative group"
+                      >
+                        <div className="h-44 w-full rounded-xl overflow-hidden bg-stone-900 border border-stone-800">
+                          <img
+                            src={n.image}
+                            alt={n.name}
+                            className="w-full h-full object-cover opacity-85 group-hover:scale-103 transition-transform duration-500"
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                        <div className="space-y-1.5">
+                          <h4 className="font-display font-bold text-stone-100 text-md tracking-wide group-hover:text-amber-400 transition-colors">
+                            {n.name}
+                          </h4>
+                          <p className="text-[11px] text-stone-400 font-sans leading-relaxed line-clamp-2 italic">
+                            {n.itinerary.title}
                           </p>
-                        </div>
-
-                        {/* Multi-image gallery with lots of pics */}
-                        <div className="space-y-4">
-                          {/* Main large image */}
-                          <div className="h-[380px] sm:h-[500px] rounded-3xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md relative">
-                            <img
-                              src={alayaCafe.images?.hero || "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=800"}
-                              alt={alayaCafe.name}
-                              className="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700 ease-out"
-                              referrerPolicy="no-referrer"
-                            />
-                            <span className="absolute bottom-5 left-5 bg-amber-955/90 text-amber-200 text-xs font-mono tracking-widest px-5 py-2 rounded-full uppercase font-bold border border-amber-800/40">
-                              Featured Hearth Space
-                            </span>
-                          </div>
-
-                          {/* Secondary images grid (6 columns) */}
-                          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-                            {[
-                              { img: alayaCafe.images?.interior, label: "Interior" },
-                              { img: alayaCafe.images?.detail1, label: "Brewing" },
-                              { img: alayaCafe.images?.detail2, label: "Aesthetic" },
-                              { img: alayaCafe.images?.detail3, label: "Vibe" },
-                              { img: alayaCafe.images?.detail4, label: "Roast" },
-                              { img: alayaCafe.images?.detail5, label: "Seating" }
-                            ].map((item, idx) => (
-                              <div key={idx} className="h-24 sm:h-32 rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-2xs relative group/thumb cursor-pointer">
-                                <img
-                                  src={item.img || "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"}
-                                  alt={item.label}
-                                  className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
-                                  referrerPolicy="no-referrer"
-                                />
-                                <span className="absolute bottom-1.5 left-1.5 bg-black/70 text-white text-[8px] font-mono tracking-widest px-2 py-0.5 rounded uppercase">
-                                  {item.label}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Extra detail card showing Labet rating details */}
-                        <div className="bg-gradient-to-r from-amber-900 to-amber-950 text-amber-100 p-8 sm:p-10 rounded-3xl border border-amber-950 shadow-md space-y-3">
-                          <span className="text-xs font-mono text-amber-400 tracking-widest font-extrabold uppercase flex items-center gap-2">
-                            <Sparkles className="w-5 h-5 text-amber-300 animate-pulse" />
-                            Labet's Local Guide Notes
-                          </span>
-                          <p className="text-base sm:text-lg font-sans italic text-amber-200 leading-relaxed">
-                            "{alayaCafe.kong_labet_note || "Alaya translates to 'Abode' for a reason—it's a classy yet deeply homely mountaintop escape in Nongthymmai. Order the Flat White, sit back during their weekly acoustic nights with local musicians, and appreciate the warm, premium hearth. Some places are meant to be felt, not just framed."}"
-                          </p>
-                        </div>
-
-                        {/* Tagline & details */}
-                        <div className="space-y-5">
-                          <p className="text-lg sm:text-xl text-stone-750 font-sans font-medium leading-relaxed">
-                            {alayaCafe.tagline || alayaCafe.theme}
-                          </p>
-
-                          {/* Vibe Tags list */}
-                          {alayaCafe.vibeTags && alayaCafe.vibeTags.length > 0 && (
-                            <div className="flex flex-wrap gap-3 pt-2">
-                              {alayaCafe.vibeTags.map((tag) => (
-                                <span
-                                  key={tag}
-                                  className="text-xs font-mono font-bold uppercase tracking-wider text-amber-950 bg-amber-100/50 border border-amber-200 px-5 py-2 rounded-xl"
-                                >
-                                  #{tag.toLowerCase().replace(/\s+/g, "-")}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Actions */}
-                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-5 pt-8 border-t border-stone-200/80">
-                          <button
-                            onClick={() => handleSelectCafe(alayaCafe.id)}
-                            className="flex-1 flex items-center justify-center gap-2.5 bg-amber-800 hover:bg-amber-900 text-white text-sm sm:text-base font-sans font-bold uppercase tracking-wider px-8 py-5 rounded-2xl transition-all cursor-pointer shadow-md active:scale-98"
-                          >
-                            <span>Explore Hearth Profile</span>
-                            <ArrowRight className="w-5 h-5" />
-                          </button>
-                          <a
-                            href="https://www.google.com/maps?client=opera-gx&hs=YXo&sca_esv=dd2fe0b82f78cb75&output=search&q=Alaya+Cafe+%26+Bar&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93EoculSWPsy9Mwi2OTVV6bg4sD9CY3vZjPiSFnibxqztMKYuxESLMKjghFfdj3DtL_JY6Nr0LC6iJMKCdm2EeOsvDp_4lHgUwQFW0uvPhtJpowQoHv8eP1gIs0O7SRrOIeywvCnZAYn1IoSS8MgNt57znu6AA&entry=mc&ved=1t:200715&ictx=111"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-8 py-5 rounded-2xl border border-stone-300 hover:border-amber-700 text-stone-700 hover:text-amber-800 hover:bg-amber-50 text-sm sm:text-base font-sans font-bold uppercase tracking-wider transition-all cursor-pointer text-center"
-                          >
-                            Show on Map
-                          </a>
                         </div>
                       </div>
-                    );
-                  })()}
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* FAQ */}
-              <div className="bg-white border border-stone-200 rounded-[28px] p-6 shadow-xs">
-                <h2 className="text-lg font-display font-bold text-stone-900 mb-4">Shillong cafés, Khasi food & routes — quick answers</h2>
-                <div className="divide-y divide-stone-100">
-                  {[
-                    { q: "What are the best cafés in Shillong?", a: "Café Shillong (jazz tradition), Dylan's (Bob Dylan tribute, hillside), Rynsan (Khasi slow-food + live ka duitara), Ahavah Fine Dining (alpine chandeliers), Munchies Shillong (graffiti walls), Marsoki Café (hidden laitumkhrah gem)." },
-                    { q: "Where can I try authentic Khasi food in Shillong?", a: "Trattoria (Police Bazaar, 70 years old), Rynsan (Newlands Compound, organic), Jadoh Restaurant (clay cookpots), Meghalaya Heritage Inn." },
-                    { q: "Which Shillong neighborhood is best for café-hopping?", a: "Laitumkhrah for vinyl records + music cafés (afternoon to dusk). Police Bazaar for street food + neon reflections (evening). Golf Links for scenic pine-scented escape (morning)." },
-                    { q: "Are there cafés in Shillong with live music?", a: "Yes — Café Shillong (live mountain brew sessions), Dylan's (open mic, folk), Rynsan (ka duitara performances), Dejavu Café & Lounge (underground acoustic)." },
-                    { q: "Does the route planner cover places outside Shillong city?", a: "Yes — 12 curated routes including Cherrapunji (Nohkalikai, Root Bridge), Dawki (Umngot River), Laitlum Canyons, Jowai, Mawsynram, Garo Hills, and more." }
-                  ].map((faq, i) => (
-                    <details key={i} className="group py-4">
-                      <summary className="flex items-center justify-between cursor-pointer list-none">
-                        <span className="text-sm font-sans font-medium text-stone-900">{faq.q}</span>
-                        <span className="text-stone-400 group-open:rotate-45 transition-transform text-lg font-light ml-4 shrink-0">+</span>
-                      </summary>
-                      <p className="text-xs text-stone-500 mt-2 leading-relaxed font-sans">{faq.a}</p>
-                    </details>
-                  ))}
+                {/* Latest Guides section overview cards */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-2">
+                  <div className="md:col-span-4 space-y-3">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-amber-800 font-bold">
+                      Independent Publishing
+                    </span>
+                    <h3 className="text-2.5xl md:text-3xl font-display font-bold text-stone-900 leading-tight">
+                      Latest Editorial Periodic Issues
+                    </h3>
+                    <p className="text-stone-600 text-xs md:text-sm leading-relaxed font-sans font-light">
+                      Slip into our quiet review room to read notes on Shillong's celebrated local bakers, roasting cultivators, and rainfall routines.
+                    </p>
+                    <button
+                      onClick={() => setActiveTab("guides")}
+                      className="inline-flex items-center gap-1.5 text-xs text-amber-800 font-sans font-semibold border-b border-amber-800 hover:text-amber-950 transition-colors pb-0.5 cursor-pointer pt-2"
+                    >
+                      Enter Library Room →
+                    </button>
+                  </div>
+
+                  <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 pb-2">
+                    {ARTICLES.slice(0, 2).map((article) => (
+                      <div
+                        key={article.id}
+                        onClick={() => setActiveTab("guides")}
+                        className="bg-[#FAF8F5] border border-stone-200/80 p-5 rounded-2xl cursor-pointer hover:border-stone-400 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group space-y-4"
+                      >
+                        <div className="h-40 w-full rounded-xl overflow-hidden bg-stone-100 border border-stone-200">
+                          <img
+                            src={article.image}
+                            alt={article.title}
+                            className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                        <div className="space-y-1 px-1">
+                          <span className="text-[9px] font-mono uppercase text-amber-800 tracking-wider">
+                            {article.category}
+                          </span>
+                          <h4 className="font-display font-bold text-stone-900 text-xs sm:text-sm tracking-wide leading-snug group-hover:text-amber-800 transition-colors line-clamp-1">
+                            {article.title}
+                          </h4>
+                          <p className="text-[11px] text-stone-500 font-sans leading-relaxed line-clamp-2">
+                            {article.excerpt}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              </div>
+                {/* Trending indicators Spotlight */}
+                <section id="trending-indicators" className="bg-stone-900 text-[#FAF8F5] rounded-[32px] p-8 border border-stone-850 relative overflow-hidden shadow-lg select-none">
+                  <div className="absolute top-0 right-0 w-72 h-72 bg-amber-700/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="flex items-center gap-3 mb-5">
+                    <span className="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/30 text-amber-300 px-3.5 py-1.5 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase">
+                      <Flame className="w-3 h-3 text-amber-400 animate-pulse" /> Trending Destination
+                    </span>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#FAF8F5] leading-tight mb-2">
+                    Sohra (Cherrapunji)
+                  </h2>
+                  <p className="text-stone-400 text-sm font-sans font-light leading-relaxed max-w-lg mb-6">
+                    World's wettest place. Nohkalikai Falls, Double Decker Living Root Bridge, Seven Sisters Falls, Mawsmai Cave. 83 km from Shillong — the essential day-trip from the city.
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                    {[
+                      { label: "Distance", value: "83 km", sub: "from Shillong" },
+                      { label: "Drive", value: "2.5h", sub: "via NH6" },
+                      { label: "Best Time", value: "Oct–Mar", sub: "post-monsoon clarity" },
+                      { label: "Key Sites", value: "12+", sub: "falls, caves, bridges" }
+                    ].map(stat => (
+                      <div key={stat.label} className="bg-white/5 border border-white/10 rounded-2xl p-3 text-center">
+                        <p className="text-[10px] font-mono text-stone-500 uppercase tracking-wide mb-0.5">{stat.label}</p>
+                        <p className="text-lg font-display font-bold text-[#FAF8F5]">{stat.value}</p>
+                        <p className="text-[9px] font-mono text-stone-400">{stat.sub}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <button onClick={() => setActiveTab("trending")} className="flex items-center gap-2 bg-amber-700 hover:bg-amber-600 text-white px-5 py-2.5 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-lg cursor-pointer">
+                    <Flame className="w-3.5 h-3.5" /> Explore Sohra Guide
+                  </button>
+                </section>
 
-              {/* RIGHT PANEL — EXPLORE MAP */}
-              <div className="hidden md:flex flex-col flex-1 min-w-0 h-full overflow-hidden">
-                <InteractiveMap
-                  cafes={cafes}
-                  onSelectCafe={(c) => handleSelectCafe(c.id)}
-                  onNavigateToNeighborhood={navigateToNeighborhood}
-                />
-              </div>
-            </motion.div>
+                {/* FAQ Block */}
+                <FAQBlock items={FAQ_HOME} title="Shillong cafés, Khasi food & routes — quick answers" />
+              </motion.div>
             )}
 
+            {/* COZY CAFES TAB */}
+            {activeTab === "cafes" && (
+              <motion.div
+                key="cafes-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35 }}
+                className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 space-y-12"
+              >
+                <h1 className="sr-only">All Cafés in Shillong — Curated List &amp; Map</h1>
+                <div className="text-center space-y-3">
+                  <span className="text-[11px] font-mono uppercase tracking-widest text-[#8b5c1a] font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                    Curated Ranks
+                  </span>
+                  <h2 className="text-3xl font-display font-medium tracking-tight text-stone-900 sm:text-4.5xl leading-none">
+                    The Cozy Cafés of Shillong
+                  </h2>
+                  <p className="max-w-xl mx-auto text-sm text-stone-600 font-sans leading-relaxed">
+                    Filter by neighborhood name, acoustic music facilities, or read organic story profiles. Select any card to explore menu items and write active customer reviews.
+                  </p>
+                </div>
 
+                {/* Dynamic Search & Results Control Panel */}
+                <div className="bg-[#FAF8F5] border border-stone-200 p-4 rounded-2xl flex flex-col sm:flex-row items-center gap-4 max-w-4xl mx-auto shadow-xs animate-fade-in">
+                  <div className="relative flex-1 w-full bg-white border border-stone-200/80 rounded-xl px-3.5 py-2.5 flex items-center gap-2">
+                    <Search className="w-4 h-4 text-stone-400 shrink-0" />
+                    <input
+                      type="text"
+                      placeholder="Search cafes by name, mood, or tags (e.g., Laitumkhrah, minimal, scone)..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="bg-transparent text-stone-850 outline-none w-full text-xs font-sans"
+                    />
+                  </div>
+
+                  {/* View Mode Toggle Controls */}
+                  <div className="flex bg-stone-100 p-1 rounded-xl border border-stone-200 shrink-0 w-full sm:w-auto">
+                    <button
+                      onClick={() => setCafeViewMode("grid")}
+                      className={`flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-sans font-semibold transition-all cursor-pointer ${
+                        cafeViewMode === "grid"
+                          ? "bg-amber-800 text-white shadow-xs"
+                          : "text-stone-600 hover:text-stone-850"
+                      }`}
+                    >
+                      <LayoutGrid className="w-3.5 h-3.5" />
+                      <span>Grid View</span>
+                    </button>
+                    <button
+                      onClick={() => setCafeViewMode("map")}
+                      className={`flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-sans font-semibold transition-all cursor-pointer ${
+                        cafeViewMode === "map"
+                          ? "bg-amber-800 text-white shadow-xs"
+                          : "text-stone-600 hover:text-stone-850"
+                      }`}
+                    >
+                      <MapPin className="w-3.5 h-3.5" />
+                      <span>Hearth Map</span>
+                    </button>
+                  </div>
+
+                  {/* Counter */}
+                  <div className="font-mono text-[10px] uppercase text-stone-400 font-bold shrink-0">
+                    {filteredCafes.length} Landmarks Found
+                  </div>
+                </div>
+
+                {/* Cafe Directory Grid / Map */}
+                {filteredCafes.length === 0 ? (
+                  <div className="text-center space-y-3 py-10 bg-[#FAF8F5] border border-stone-200 rounded-2xl animate-fade-in">
+                    <p className="text-stone-400 font-sans italic">
+                      No mountain cafes match your tag search. Speak to Kong Labet AI guide below to discover more secret trails!
+                    </p>
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      className="bg-stone-800 hover:bg-stone-700 text-white text-xs px-4 py-2 rounded-lg font-sans cursor-pointer"
+                    >
+                      Clear Search Query
+                    </button>
+                  </div>
+                ) : cafeViewMode === "map" ? (
+                  <div className="rounded-3xl overflow-hidden border border-stone-200 shadow-lg">
+                    <InteractiveMap 
+                      cafes={filteredCafes} 
+                      onSelectCafe={(cafe) => handleSelectCafe(cafe.id)} 
+                      activeCafeId={selectedCafe?.id} 
+                    />
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2 animate-fade-in">
+                    {filteredCafes.map((cafe) => (
+                      <CafeCard
+                        key={cafe.id}
+                        cafe={cafe}
+                        onViewDetails={handleSelectCafe}
+                      />
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            )}
+
+            {/* CUISINE TAB */}
+            {activeTab === "cuisine" && (
+              <motion.div
+                key="cuisine-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35 }}
+                className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12"
+              >
+                <h1 className="sr-only">Khasi Food in Shillong — Jadoh, Dohneiiong, Tungrymbai &amp; Where to Eat</h1>
+                <CuisineGuide />
+                <FAQBlock items={FAQ_CUISINE} title="Khasi food in Shillong — common questions" />
+              </motion.div>
+            )}
 
             {/* WALKS TAB */}
             {activeTab === "walks" && (
-              <motion.div key="walks-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto">
+              <motion.div
+                key="walks-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35 }}
+                className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12"
+              >
+                <h1 className="sr-only">Shillong Neighborhood Walks — Laitumkhrah, Police Bazaar, Golf Links</h1>
                 <NeighborhoodGuide
                   cafes={cafes}
                   onSelectCafe={handleSelectCafe}
                   initialNeighborhoodId={selectedNeighborhoodId}
                 />
+                <FAQBlock items={FAQ_WALKS} title="Shillong neighborhoods — walker questions" />
               </motion.div>
             )}
 
             {/* PLANNERS TAB */}
             {activeTab === "planners" && (
-              <motion.div key="planners-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto">
+              <motion.div
+                key="planners-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12"
+              >
+                <h1 className="sr-only">Shillong &amp; Meghalaya Route Planner — Plan Your Adventure</h1>
                 <PlannersGuide />
+                <ModuleSummary
+                  topic="What this planner covers"
+                  body="12 curated road-trip routes radiating out of Shillong across Meghalaya: a 16-stop City Loop through Laitumkhrah and Police Bazaar, the 25-stop Cherrapunji circuit (Mawkdok, Nohkalikai, Mawsmai Caves, Double Decker Living Root Bridge), Dawki's crystal Umngot river, Jowai's monoliths and Phe Phe falls, Laitlum Canyons, Wei Sawdong, Mawsynram, Nongstoin, the Garo Hills via Tura, plus Umiam Lake and the Guwahati corridor. Toggle stops, see live drive distances, and export to Google Maps."
+                  links={[
+                    { label: "City Route", href: "https://shillongcafemap.in/?tab=planners&route=city" },
+                    { label: "Cherrapunji Route", href: "https://shillongcafemap.in/?tab=planners&route=cherrapunji" },
+                    { label: "Dawki Route", href: "https://shillongcafemap.in/?tab=planners&route=dawki" },
+                    { label: "Laitlum Route", href: "https://shillongcafemap.in/?tab=planners&route=laitlum" },
+                  ]}
+                />
               </motion.div>
             )}
 
             {/* GUIDES TAB */}
             {activeTab === "guides" && (
-              <motion.div key="guides-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto">
+              <motion.div
+                key="guides-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35 }}
+                className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12"
+              >
+                <h1 className="sr-only">Shillong Editorial — Stories, Reviews &amp; Culture</h1>
                 <GuidesList />
               </motion.div>
             )}
 
             {/* ABOUT TAB */}
             {activeTab === "about" && (
-              <motion.div key="about-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto">
+              <motion.div
+                key="about-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35 }}
+                className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12"
+              >
+                <h1 className="sr-only">About Shillong Café Map</h1>
                 <AboutPanel />
               </motion.div>
             )}
 
             {/* TRENDING TAB */}
             {activeTab === "trending" && (
-              <motion.div key="trending-tab" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.35 }} className="h-full w-full overflow-y-auto p-4 sm:p-6 lg:p-8 pb-16">
+              <motion.div
+                key="trending-tab"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35 }}
+                className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 pb-16"
+              >
+                <h1 className="sr-only">Sohra Trending Destination Guide</h1>
                 <TrendingDestination />
               </motion.div>
             )}
@@ -730,15 +1034,82 @@ export default function App() {
           </AnimatePresence>
         </main>
 
-        {/* CAFE DETAIL MODAL */}
-        <AnimatePresence>
-          {selectedCafe && (
-            <CafeDetailModal cafe={selectedCafe} onClose={() => handleSelectCafe(null)} />
-          )}
-        </AnimatePresence>
+        {/* Primary Footer */}
+        <footer id="main-footer" className="bg-stone-900 text-stone-400 text-xs font-sans pb-16 pt-10 border-t border-stone-800/80 mt-12 bg-stone-950 mt-auto">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-2.5 font-sans text-sm font-semibold tracking-wide text-stone-200">
+              <div className="w-6 h-6 rounded-md overflow-hidden bg-white border border-stone-800">
+                <img
+                  src={logoSrc}
+                  alt="Shillong Cafe Map Logo"
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <span>Shillong Café Map © 2026</span>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 font-mono text-[10px] uppercase tracking-wider">
+              <button title="Home page with featured cafes, map & search" onClick={() => setActiveTab("explore")} className="hover:text-stone-100 cursor-pointer bg-transparent border-0 p-0">Explore Main</button>
+              <button title="Adventure route planner with 12 curated road trips across Meghalaya" onClick={() => setActiveTab("planners")} className="hover:text-amber-400 cursor-pointer text-amber-600 bg-transparent border-0 p-0">Plan Your Adventure</button>
+              <button title="Traditional Khasi dishes: Jadoh, Dohkhlieh & more" onClick={() => setActiveTab("cuisine")} className="hover:text-stone-100 cursor-pointer bg-transparent border-0 p-0">Khasi Food</button>
+              <button title="Stories, reviews & cultural articles" onClick={() => setActiveTab("guides")} className="hover:text-stone-100 cursor-pointer bg-transparent border-0 p-0">Guides Periodic</button>
+              <button title="About this project and the story behind the guide" onClick={() => setActiveTab("about")} className="hover:text-stone-100 cursor-pointer bg-transparent border-0 p-0">Owner Letter</button>
+            </div>
+
+            <p className="text-[10px] font-mono text-stone-500 leading-relaxed max-w-xs text-center md:text-right">
+              Hand-drawn cartography and local independent review logs compiled inside Meghalaya's misty ridges.
+            </p>
+          </div>
+
+          {/* SITEMAP */}
+          <div className="max-w-7xl mx-auto mt-10 pt-8 border-t border-stone-700/60 grid grid-cols-2 md:grid-cols-4 gap-6 text-stone-400 px-4 sm:px-6 lg:px-8">
+            <div>
+              <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">🗺️ Sitemap — Browse</p>
+              <ul className="space-y-1.5 text-[11px] font-sans">
+                <li><button onClick={() => setActiveTab("explore")} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Discovery (Home)</button></li>
+                <li><button onClick={() => setActiveTab("walks")} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ District Walks (3)</button></li>
+                <li><button onClick={() => setActiveTab("cuisine")} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Khasi Cuisine</button></li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">🧭 Sitemap — Plan</p>
+              <ul className="space-y-1.5 text-[11px] font-sans">
+                <li><button onClick={() => setActiveTab("planners")} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Adventure Routes (12)</button></li>
+                <li><button onClick={() => { setActiveTab("planners"); }} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ City Route</button></li>
+                <li><button onClick={() => { setActiveTab("planners"); }} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Cherrapunji Route</button></li>
+                <li><button onClick={() => { setActiveTab("planners"); }} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Dawki & More</button></li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">📖 Sitemap — Read</p>
+              <ul className="space-y-1.5 text-[11px] font-sans">
+                <li><button onClick={() => setActiveTab("guides")} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Editorial Stories</button></li>
+                <li><button onClick={() => setActiveTab("about")} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ About Chronicles</button></li>
+                <li><button onClick={() => { document.getElementById("ai-chat-launcher")?.click(); }} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Ask Kong Labet (AI)</button></li>
+                <li><button onClick={() => setDataHubOpen(true)} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Data Hub Admin</button></li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-[9px] font-mono uppercase tracking-widest text-amber-500 font-bold mb-3">🏔️ Neighborhoods</p>
+              <ul className="space-y-1.5 text-[11px] font-sans">
+                <li><button onClick={() => { setSelectedNeighborhoodId("laitumkhrah"); setActiveTab("walks"); }} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Laitumkhrah</button></li>
+                <li><button onClick={() => { setSelectedNeighborhoodId("police-bazaar"); setActiveTab("walks"); }} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Police Bazaar</button></li>
+                <li><button onClick={() => { setSelectedNeighborhoodId("golf-links"); setActiveTab("walks"); }} className="hover:text-amber-400 cursor-pointer bg-transparent border-0 p-0">→ Golf Links</button></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
 
         {/* AI GUIDE CHAT */}
         <AIGuideChat />
+
+        {/* CAFE DETAIL MODAL */}
+        <AnimatePresence>
+          {selectedCafe && (
+            <CafeDetailModal cafe={selectedCafe} onClose={handleCloseCafe} />
+          )}
+        </AnimatePresence>
 
         {/* DATA HUB MODAL */}
         {dataHubOpen && (
