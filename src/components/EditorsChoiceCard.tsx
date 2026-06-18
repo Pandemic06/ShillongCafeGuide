@@ -28,7 +28,7 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
       onClick={() => onViewDetails(cafe.id)}
     >
       {/* Hero image */}
-      <div className={`relative overflow-hidden bg-stone-100 ${isFullWidth ? "h-64 md:h-auto md:w-5/12" : "h-52 w-full"}`}>
+      <div className={`relative overflow-hidden bg-stone-100 ${isFullWidth ? "h-80 md:h-auto md:w-1/2" : "h-52 w-full"}`}>
         <img
           src={heroImage}
           alt={cafe.name}
@@ -51,7 +51,7 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
 
         {/* Editor's Choice badge */}
         <div className={`absolute flex items-center gap-1.5 bg-amber-800/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-[9px] font-mono font-bold tracking-widest uppercase shadow ${isFeaturedPartner ? "top-9 left-3" : "top-3 left-3"}`}>
-          <Crown className="w-3 h-3 text-amber-300 shrink-0" />
+          <Crown className="w-3.5 h-3.5 text-amber-300 shrink-0" />
           <span>Editor's Choice</span>
         </div>
 
@@ -80,7 +80,7 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
       </div>
 
       {/* Card body */}
-      <div className={`p-6 flex flex-col gap-4 flex-1 justify-center ${isFullWidth ? "md:w-7/12" : ""}`}>
+      <div className={`p-8 flex flex-col gap-5 flex-1 justify-center ${isFullWidth ? "md:w-1/2" : ""}`}>
         {/* For full width, show name and location in body */}
         {isFullWidth && (
           <div className="space-y-1.5">

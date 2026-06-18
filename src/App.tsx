@@ -661,40 +661,6 @@ export default function App() {
                   </div>
                 </div>
 
-
-                {/* Trending indicators Spotlight */}
-                <section id="trending-indicators" className="bg-stone-900 text-[#FAF8F5] rounded-[32px] p-8 border border-stone-850 relative overflow-hidden shadow-lg select-none">
-                  <div className="absolute top-0 right-0 w-72 h-72 bg-amber-700/10 rounded-full blur-3xl pointer-events-none" />
-                  <div className="flex items-center gap-3 mb-5">
-                    <span className="inline-flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/30 text-amber-300 px-3.5 py-1.5 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase">
-                      <Flame className="w-3 h-3 text-amber-400 animate-pulse" /> Trending Destination
-                    </span>
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#FAF8F5] leading-tight mb-2">
-                    Sohra (Cherrapunji)
-                  </h2>
-                  <p className="text-stone-400 text-sm font-sans font-light leading-relaxed max-w-lg mb-6">
-                    World's wettest place. Nohkalikai Falls, Double Decker Living Root Bridge, Seven Sisters Falls, Mawsmai Cave. 83 km from Shillong — the essential day-trip from the city.
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-                    {[
-                      { label: "Distance", value: "83 km", sub: "from Shillong" },
-                      { label: "Drive", value: "2.5h", sub: "via NH6" },
-                      { label: "Best Time", value: "Oct–Mar", sub: "post-monsoon clarity" },
-                      { label: "Key Sites", value: "12+", sub: "falls, caves, bridges" }
-                    ].map(stat => (
-                      <div key={stat.label} className="bg-white/5 border border-white/10 rounded-2xl p-3 text-center">
-                        <p className="text-[10px] font-mono text-stone-500 uppercase tracking-wide mb-0.5">{stat.label}</p>
-                        <p className="text-lg font-display font-bold text-[#FAF8F5]">{stat.value}</p>
-                        <p className="text-[9px] font-mono text-stone-400">{stat.sub}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <button onClick={() => setActiveTab("trending")} className="flex items-center gap-2 bg-amber-700 hover:bg-amber-600 text-white px-5 py-2.5 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all shadow-lg cursor-pointer">
-                    <Flame className="w-3.5 h-3.5" /> Explore Sohra Guide
-                  </button>
-                </section>
-
                 {/* FAQ Block */}
                 <FAQBlock items={FAQ_HOME} title="Shillong cafés, Khasi food & routes — quick answers" />
               </motion.div>
