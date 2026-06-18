@@ -232,6 +232,11 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
   const [activeTab, setActiveTab] = useState<"overview" | "menu" | "gallery">("overview");
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
+  const hasMenu = (cafe.mustTry && cafe.mustTry.length > 0) || 
+                  !!cafe.menu_url || 
+                  !!(MEDIA_DATABASE[cafe.id]?.menuImages && MEDIA_DATABASE[cafe.id].menuImages.length > 0);
+
+
   // ── SEO values derived from cafe data ────────────────────────────────────
   const slug = cafe.id;
   const cafeCanonical = `https://shillongcafemap.in/cafe/${slug}`;
@@ -403,7 +408,7 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
             <div className="sticky top-0 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-stone-200/80 z-20 px-6 py-3.5 flex items-center justify-start gap-1.5 md:gap-3">
               {[
                 { id: "overview", label: "Details & Vibe", icon: <Info className="w-4 h-4" /> },
-                { id: "menu", label: "Menu & Bites", icon: <BookOpen className="w-4 h-4" /> },
+                ...(hasMenu ? [{ id: "menu", label: "Menu & Bites", icon: <BookOpen className="w-4 h-4" /> }] : []),
                 { id: "gallery", label: "Google Shared Photos", icon: <Camera className="w-4 h-4" /> }
               ].map((tab) => {
                 const active = activeTab === tab.id;
@@ -411,7 +416,13 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                   <button
                     key={tab.id}
                     type="button"
-                    onClick={() => setActiveTab(tab.id as any)}
+                    onClick={() => {
+                      if (tab.id === "menu" && cafe.menu_url && !(cafe.mustTry && cafe.mustTry.length > 0) && !(MEDIA_DATABASE[cafe.id]?.menuImages && MEDIA_DATABASE[cafe.id].menuImages.length > 0)) {
+                        window.open(cafe.menu_url, "_blank", "noopener,noreferrer");
+                      } else {
+                        setActiveTab(tab.id as any);
+                      }
+                    }}
                     className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-sans font-medium tracking-wide transition-all select-none cursor-pointer duration-200 border ${
                       active 
                         ? "bg-amber-805 bg-amber-800 border-amber-800 text-white shadow-sm font-semibold" 
@@ -709,52 +720,66 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                         Authentic prices and dishes compiled from Google Places and Zomato community updates.
                       </p>
                     </div>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
-                      ★ Verified Prices
-                    </span>
+                    <div className="flex items-center gap-2">
+                      {cafe.menu_url && (
+                        <a
+                          href={cafe.menu_url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-xs text-amber-800 hover:text-[#713f12] font-sans font-medium bg-amber-50 hover:bg-amber-105 border border-amber-200 px-3 py-1 rounded-full transition-colors flex items-center gap-1 cursor-pointer"
+                        >
+                          🍽️ View Full Menu
+                        </a>
+                      )}
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
+                        ★ Verified Prices
+                      </span>
+                    </div>
                   </div>
 
                   {/* Primary item list grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {cafe.mustTry.map((item, idx) => (
-                      <div key={idx} className="bg-white border border-stone-200/80 rounded-xl p-4 flex flex-col sm:flex-row gap-4 hover:shadow-md transition-shadow">
-                        {item.image && (
-                          <div 
-                            className="h-28 w-full sm:w-28 rounded-lg overflow-hidden shrink-0 bg-stone-100 relative group cursor-pointer"
-                            onClick={() => setSelectedPhoto(item.image)}
-                          >
-                            <img
-                              src={item.image}
-                              alt={item.name}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                              referrerPolicy="no-referrer"
-                            />
-                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                              <span className="text-[10px] text-white font-mono uppercase bg-stone-900/80 px-2 py-1 rounded">Zoom</span>
+                  {cafe.mustTry && cafe.mustTry.length > 0 && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {cafe.mustTry.map((item, idx) => (
+                        <div key={idx} className="bg-white border border-stone-200/80 rounded-xl p-4 flex flex-col sm:flex-row gap-4 hover:shadow-md transition-shadow">
+                          {item.image && (
+                            <div 
+                              className="h-28 w-full sm:w-28 rounded-lg overflow-hidden shrink-0 bg-stone-100 relative group cursor-pointer"
+                              onClick={() => setSelectedPhoto(item.image)}
+                            >
+                              <img
+                                src={item.image}
+                                alt={item.name}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                referrerPolicy="no-referrer"
+                              />
+                              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span className="text-[10px] text-white font-mono uppercase bg-stone-900/80 px-2 py-1 rounded">Zoom</span>
+                              </div>
                             </div>
-                          </div>
-                        )}
-                        <div className="flex-1 flex flex-col justify-between py-1">
-                          <div className="space-y-1">
-                            <div className="flex items-start justify-between">
-                              <h5 className="font-sans font-bold text-stone-900 text-sm">{item.name}</h5>
-                              {item.price && (
-                                <span className="text-amber-800 font-mono font-bold text-xs bg-amber-50 px-2 py-0.5 rounded border border-amber-100">
-                                  {item.price}
-                                </span>
-                              )}
+                          )}
+                          <div className="flex-1 flex flex-col justify-between py-1">
+                            <div className="space-y-1">
+                              <div className="flex items-start justify-between">
+                                <h5 className="font-sans font-bold text-stone-900 text-sm">{item.name}</h5>
+                                {item.price && (
+                                  <span className="text-amber-800 font-mono font-bold text-xs bg-amber-50 px-2 py-0.5 rounded border border-amber-100">
+                                    {item.price}
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-[11px] text-stone-500 font-sans font-light leading-relaxed">
+                                {item.description}
+                              </p>
                             </div>
-                            <p className="text-[11px] text-stone-500 font-sans font-light leading-relaxed">
-                              {item.description}
-                            </p>
+                            <span className="text-[9px] font-mono text-stone-400 block pt-2">
+                              ✦ Chef Recommendation
+                            </span>
                           </div>
-                          <span className="text-[9px] font-mono text-stone-400 block pt-2">
-                            ✦ Chef Recommendation
-                          </span>
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  )}
 
                   {/* Custom Menu Scan Picture Gallery */}
                   <div className="space-y-4 pt-4 border-t border-stone-200/60">
