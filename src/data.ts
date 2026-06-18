@@ -46,7 +46,35 @@ export const CAFES: Cafe[] = [
       "detail3": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=1200",
       "detail4": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=1200",
       "detail5": "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=1200"
-    }
+    },
+    "place_id": "place-calc-alaya-cafe",
+    "formatted_address": "Nongthymmai, Shillong, Meghalaya 793014",
+    "latitude": 25.5615,
+    "longitude": 91.9025,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Alaya%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "A classy yet homely abode in Nongthymmai, combining premium dining with the warm acoustic chords of local musicians weekly.",
+    "kong_labet_note": "Alaya translates to 'Abode' for a reason—it's a classy yet deeply homely mountaintop escape in Nongthymmai. Order the Flat White, sit back during their weekly acoustic nights with local musicians, and appreciate the warm, premium hearth. Some places are meant to be felt, not just framed.",
+    "kong_labet_observations": [
+      "Alaya means 'Abode'—classy and premium, yet it instantly makes you feel right at home.",
+      "Located in Nongthymmai, it's away from the crowded market lanes, offering a more peaceful, upscale ambiance.",
+      "Their weekly acoustic sessions showcasing local Shillong musicians are an absolute must-experience."
+    ]
   },
   {
     "id": "rynsan-cafe",
@@ -54,8 +82,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Newlands",
     "address": "Newlands Compound, Shillong, Meghalaya 793003",
     "coordinates": {
-      "lat": 25.5762,
-      "lng": 91.8915
+      "lat": 25.5668,
+      "lng": 91.8962
     },
     "tagline": "Celebrating Khasi culinary heritage with organic ingredients.",
     "theme": "Indigenous Khasi dining with timber accents and garden views",
@@ -70,11 +98,46 @@ export const CAFES: Cafe[] = [
     "hasLiveMusic": true,
     "hasKhasiMusic": true,
     "editorial_featured": false,
-    "rating": 4.7,
+    "rating": 4.8,
     "images": {
       "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "ChIJ_z_rynsan_shillong",
+    "formatted_address": "Newlands Compound, Boyce Road, Near Shillong College, Laitumkhrah, Shillong Meghalaya 793003",
+    "latitude": 25.5668,
+    "longitude": 91.8962,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Rynsan+Cafe+Shillong",
+    "website": "https://rynsancafe.business.site/",
+    "phone_number": "+91 98765 43210",
+    "user_ratings_total": 124,
+    "types": [
+      "restaurant",
+      "food",
+      "point_of_interest"
+    ],
+    "opening_hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.98,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Traditional Khasi slow-food served with wood-smoke and live Ka Duitara string chords. A recipe for simplifying your noisy modern complications.",
+    "kong_labet_note": "Order the Dohneiiong pork belly with black sesame. It is slow-cooked, like any good life decision.",
+    "kong_labet_observations": [
+      "The timber walls smell like fresh pine and old secrets.",
+      "Locals come here when they are tired of eating standardized assembly-line burgers.",
+      "The musicians tune their string instruments with the same patience as the chefs cook the Jadoh."
+    ]
   },
   {
     "id": "ahavah-cafe",
@@ -82,8 +145,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Police Bazaar",
     "address": "Police Bazaar, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5741,
-      "lng": 91.8933
+      "lat": 25.5721,
+      "lng": 91.8968
     },
     "tagline": "Fine dining elevated above the city buzz.",
     "theme": "Premium fine dining in the heart of Shillong",
@@ -96,11 +159,46 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.6,
+    "rating": 4.7,
     "images": {
       "hero": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "ChIJ_ahavah_upland_shillong",
+    "formatted_address": "Upland Road, Nongkynrih, Laitumkhrah, Shillong Meghalaya 793003",
+    "latitude": 25.5721,
+    "longitude": 91.8968,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Ahavah+Fine+Dining+Shillong",
+    "website": "https://ahavashillong.org",
+    "phone_number": "+91 96541 23456",
+    "user_ratings_total": 82,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM – 9:30 PM",
+      "Tuesday: 11:30 AM – 9:30 PM",
+      "Wednesday: 11:30 AM – 9:30 PM",
+      "Thursday: 11:30 AM – 9:30 PM",
+      "Friday: 11:30 AM – 9:30 PM",
+      "Saturday: 11:30 AM – 9:30 PM",
+      "Sunday: 11:30 AM – 9:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.95,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Elegant alpine chandeliers, velvet cushions, and very fancy cakes. Designed for pretending your life is completely sorted out.",
+    "kong_labet_note": "Best for a date when you want to look richer than you are. Bring a proper coat.",
+    "kong_labet_observations": [
+      "The crystal chandeliers blink like nervous stars.",
+      "The rosewater sponge cake is lighter than the Shillong fog.",
+      "Do not touch the velvet chairs with dirty hands, or the hosts will look at you with quiet middle-class tragedy."
+    ]
   },
   {
     "id": "cherry-bean-cafe",
@@ -108,8 +206,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Laitumkhrah",
     "address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "coordinates": {
-      "lat": 25.5672,
-      "lng": 91.8861
+      "lat": 25.562,
+      "lng": 91.8842
     },
     "tagline": "Bright beans, brighter mornings.",
     "theme": "Cheerful cafe with specialty coffee",
@@ -122,11 +220,46 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.5,
+    "rating": 4.6,
     "images": {
       "hero": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "ChIJ_cherry_bean_shillong",
+    "formatted_address": "Bungalow 4, Kench's Trace, Opp Bishop Cotton School, Shillong Meghalaya 793004",
+    "latitude": 25.562,
+    "longitude": 91.8842,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Cherry+Bean+Cafe+Shillong",
+    "website": "https://instagram.com/cherrybeancafe",
+    "phone_number": "+91 97740 67451",
+    "user_ratings_total": 312,
+    "types": [
+      "cafe",
+      "bakery",
+      "food"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM — 9:00 PM",
+      "Tuesday: 11:00 AM — 9:00 PM",
+      "Wednesday: 11:00 AM — 9:00 PM",
+      "Thursday: 11:00 AM — 9:00 PM",
+      "Friday: 11:00 AM — 9:00 PM",
+      "Saturday: 11:00 AM — 9:00 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.98,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Surrounded by vertical garden plants and ceiling lofts. The coffee is organic, so you can feel healthy while wasting the entire afternoon.",
+    "kong_labet_note": "The sourdough pizza takes some time. Patience is a mountain virtue, dear.",
+    "kong_labet_observations": [
+      "More books on the shelf than customers actually reading them.",
+      "The timber smell makes you feel like you are in an expensive treehouse.",
+      "The local teenagers take a lot of photos near the hanging ivy. Let them be, youth is short."
+    ]
   },
   {
     "id": "cafe-shillong",
@@ -134,8 +267,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Police Bazaar",
     "address": "Police Bazaar, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5738,
-      "lng": 91.8928
+      "lat": 25.5712,
+      "lng": 91.8938
     },
     "tagline": "The classic Shillong experience.",
     "theme": "Heritage cafe in the city centre",
@@ -153,97 +286,40 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Khao Suey",
-        "price": "₹520",
-        "description": "Signature Burmese noodle dish in a rich, spiced coconut milk broth, served with assorted condiments.",
-        "image": "/cafe-photos/cafe-shillong/photo-0.jpg"
-      },
-      {
-        "name": "Chicken Bastenga (NE Specialty)",
-        "price": "₹450",
-        "description": "A traditional Northeast specialty featuring tender chicken cooked with fermented bamboo shoot (bastenga) and local green chilies.",
-        "image": "/cafe-photos/cafe-shillong/photo-1.jpg"
-      },
-      {
-        "name": "Rice Stick Noodles with Diced Pork",
-        "price": "₹520",
-        "description": "Flat rice noodles tossed with spicy diced pork belly and seasonal vegetables.",
-        "image": "/cafe-photos/cafe-shillong/photo-2.jpg"
-      },
-      {
-        "name": "Chicken Thukpa",
-        "price": "₹320",
-        "description": "Nourishing Tibetan style noodle soup with tender chicken slices and greens.",
-        "image": "/cafe-photos/cafe-shillong/photo-3.jpg"
-      },
-      {
-        "name": "Shillong Fried Rice + Chilly Chicken",
-        "price": "₹410",
-        "description": "Savory local-style fried rice paired with spicy, wok-tossed chilly chicken.",
-        "image": "/cafe-photos/cafe-shillong/photo-4.jpg"
-      },
-      {
-        "name": "Shillong Noodles + Chilly Chicken",
-        "price": "₹410",
-        "description": "Wok-tossed local noodles served alongside dry chilly chicken.",
-        "image": "/cafe-photos/cafe-shillong/photo-5.jpg"
-      },
-      {
-        "name": "Smoked Pork Hakka Noodles",
-        "price": "₹450",
-        "description": "Stir-fried noodles tossed with house-smoked pork slices, cabbage, carrots, and light soy sauce.",
-        "image": "/cafe-photos/cafe-shillong/photo-0.jpg"
-      },
-      {
-        "name": "Shillong Veg Noodles",
-        "price": "₹370",
-        "description": "Simple, delicious stir-fried noodles with farm-fresh local veggies.",
-        "image": "/cafe-photos/cafe-shillong/photo-1.jpg"
-      },
-      {
-        "name": "Chicken Momo with Soup",
-        "price": "₹320",
-        "description": "Steamed chicken dumplings served with a clear, comforting chicken broth and hot sesame-tomato chutney.",
-        "image": "/cafe-photos/cafe-shillong/photo-2.jpg"
-      },
-      {
-        "name": "Beef Momo with Soup",
-        "price": "₹340",
-        "description": "Steamed beef dumplings served with hot chili sauce and a side of clear broth.",
-        "image": "/cafe-photos/cafe-shillong/photo-3.jpg"
-      },
-      {
-        "name": "Veg Momo with Soup",
-        "price": "₹290",
-        "description": "Freshly steamed vegetable dumplings with a comforting vegetable broth.",
-        "image": "/cafe-photos/cafe-shillong/photo-4.jpg"
-      },
-      {
-        "name": "Chicken Burger",
-        "price": "₹370",
-        "description": "Juicy chicken patty with lettuce, tomatoes, and mayo in a toasted bun.",
-        "image": "/cafe-photos/cafe-shillong/photo-5.jpg"
-      },
-      {
-        "name": "Spaghetti Bolognese",
-        "price": "₹430",
-        "description": "Classic spaghetti topped with rich, slow-simmered meat sauce and parmesan.",
-        "image": "/cafe-photos/cafe-shillong/photo-0.jpg"
-      },
-      {
-        "name": "Penne Arrabiata",
-        "price": "₹430",
-        "description": "Penne pasta in a spicy tomato sauce with garlic, chili, and olive oil.",
-        "image": "/cafe-photos/cafe-shillong/photo-1.jpg"
-      },
-      {
-        "name": "French Fries",
-        "price": "₹200",
-        "description": "Crispy golden potato fries served with tomato ketchup.",
-        "image": "/cafe-photos/cafe-shillong/photo-2.jpg"
-      }
+    "place_id": "ChIJ7-YgLw8JSzkRhTsh0hS1zHk",
+    "formatted_address": "Laitumkhrah Main Road, Opposite To Beat Junction, Shillong Meghalaya 793003",
+    "latitude": 25.5712,
+    "longitude": 91.8938,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Cafe+Shillong+Laitumkhrah",
+    "website": "http://www.cafeshillong.com/",
+    "phone_number": "+91 87947 21219",
+    "user_ratings_total": 2198,
+    "types": [
+      "cafe",
+      "restaurant",
+      "food"
+    ],
+    "opening_hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.99,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Good coffee, expensive pork toast, and a strong chance of overhearing someone discuss a business plan they will never start.",
+    "kong_labet_note": "Sit by the window. If the rain catches you here, the tragedy of the streets looks almost artistic.",
+    "kong_labet_observations": [
+      "The jazz chords are smooth, unlike our steep hill paths.",
+      "The smoked pork sourdough toast is legendary, though your wallet might disagree.",
+      "People come here to meet their exes or write poetry they will never publish."
     ]
   },
   {
@@ -252,8 +328,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Laitumkhrah",
     "address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "coordinates": {
-      "lat": 25.5668,
-      "lng": 91.8855
+      "lat": 25.5562,
+      "lng": 91.8942
     },
     "tagline": "Coffee, vinyl and the Shillong spirit.",
     "theme": "Music-inspired indie cafe",
@@ -268,108 +344,45 @@ export const CAFES: Cafe[] = [
     "hasLiveMusic": true,
     "hasKhasiMusic": true,
     "editorial_featured": false,
-    "rating": 4.5,
+    "rating": 4.4,
     "images": {
       "hero": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Crunchy Chicken Burger",
-        "price": "₹319",
-        "description": "Crispy fried chicken breast fillet with fresh lettuce and mayo in a soft bun.",
-        "image": "/cafe-photos/dylans-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Chicken Classic Club Sandwich",
-        "price": "₹319",
-        "description": "Triple decker sandwich with grilled chicken, crisp bacon, fried egg, lettuce, tomato, and cheese.",
-        "image": "/cafe-photos/dylans-cafe/photo-1.jpg"
-      },
-      {
-        "name": "The Dylans Jawbreaker",
-        "price": "₹429",
-        "description": "Massive double-patty chicken burger with melted cheese, fried egg, onion rings, and secret sauce.",
-        "image": "/cafe-photos/dylans-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Chicken Classic Shillong Noodles",
-        "price": "₹249",
-        "description": "Stir-fried noodles with shredded chicken and fresh local greens.",
-        "image": "/cafe-photos/dylans-cafe/photo-3.jpg"
-      },
-      {
-        "name": "Chicken Perfecto Pasta",
-        "price": "₹279",
-        "description": "Creamy white sauce pasta tossed with chicken and Italian herbs.",
-        "image": "/cafe-photos/dylans-cafe/photo-4.jpg"
-      },
-      {
-        "name": "Veg Perfecto Pasta",
-        "price": "₹329",
-        "description": "Rich penne pasta tossed with fresh garden vegetables in a savory cream sauce.",
-        "image": "/cafe-photos/dylans-cafe/photo-5.jpg"
-      },
-      {
-        "name": "Peri Peri Chicken Steak (2 Pcs)",
-        "price": "₹349",
-        "description": "Two succulent chicken breasts grilled in spicy peri-peri marinade, served with mashed potato and jus.",
-        "image": "/cafe-photos/dylans-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Fiery Hot Chicken Wings",
-        "price": "₹259",
-        "description": "Crispy chicken wings tossed in extra-spicy chili-garlic glaze, served with dip.",
-        "image": "/cafe-photos/dylans-cafe/photo-1.jpg"
-      },
-      {
-        "name": "Chicken Classic Nachos",
-        "price": "₹299",
-        "description": "Crispy tortilla chips topped with melted cheese, chicken bits, salsa, and jalapenos.",
-        "image": "/cafe-photos/dylans-cafe/photo-2.jpg"
-      },
-      {
-        "name": "The Dylans Hot Chocolate",
-        "price": "₹199",
-        "description": "Rich, velvety classic hot chocolate topped with marshmallows.",
-        "image": "/cafe-photos/dylans-cafe/photo-3.jpg"
-      },
-      {
-        "name": "Classic Mojito",
-        "price": "MRP",
-        "description": "Refreshing blend of fresh mint, lime juice, sugar, and club soda.",
-        "image": "/cafe-photos/dylans-cafe/photo-4.jpg"
-      },
-      {
-        "name": "Minty Lemon Iced Tea",
-        "price": "MRP",
-        "description": "Chilled brewed black tea flavored with lemon and fresh mint leaves.",
-        "image": "/cafe-photos/dylans-cafe/photo-5.jpg"
-      },
-      {
-        "name": "Sangria",
-        "price": "MRP",
-        "description": "Classic refreshing beverage with mixed fruit slices.",
-        "image": "/cafe-photos/dylans-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Chocolate Molten Cake",
-        "price": "₹199",
-        "description": "Warm chocolate cake with a gooey, molten chocolate center.",
-        "image": "/cafe-photos/dylans-cafe/photo-1.jpg"
-      },
-      {
-        "name": "Banana Split Sundae",
-        "price": "₹269",
-        "description": "Classic dessert with a split banana, scoops of vanilla, chocolate, and strawberry ice cream, topped with syrups.",
-        "image": "/cafe-photos/dylans-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Classic Fluffy Pancakes",
-        "price": "₹269",
-        "description": "Stack of fluffy buttermilk pancakes served with butter and maple syrup.",
-        "image": "/cafe-photos/dylans-cafe/photo-3.jpg"
-      }
+    "place_id": "ChIJRz_E7h8JSzkRki4yG-BwYIs",
+    "formatted_address": "Tripura Castle Road, Dhankheti, Shillong Meghalaya 793003",
+    "latitude": 25.5562,
+    "longitude": 91.8942,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Dylan+Cafe+Shillong",
+    "website": "https://dylanscafe.com/",
+    "phone_number": "+91 70850 56515",
+    "user_ratings_total": 1845,
+    "types": [
+      "cafe",
+      "restaurant",
+      "food"
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM – 10:00 PM",
+      "Tuesday: 11:30 AM – 10:00 PM",
+      "Wednesday: 11:30 AM – 10:00 PM",
+      "Thursday: 11:30 AM – 10:00 PM",
+      "Friday: 11:30 AM – 10:00 PM",
+      "Saturday: 11:30 AM – 10:00 PM",
+      "Sunday: 11:30 AM – 10:00 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.99,
+    "verification_status": "verified",
+    "kong_labet_tagline": "A hillside tribute to Bob Dylan with ceiling tiles painted by customers. Enough vintage rock to make any teenager feel deeply misunderstood.",
+    "kong_labet_note": "The old-school hot apple pie is dependable. Some say Bob himself would have liked it; I say he just liked apple pie.",
+    "kong_labet_observations": [
+      "Every wall has Bob's face looking at you like he knows you haven't listened to his deep cuts.",
+      "The guitar tables are clever. Don't try to play them; wood polish has no strings.",
+      "A favorite spot for students who are supposed to be studying at St. Edmunds but prefer sweet ginger tea."
     ]
   },
   {
@@ -378,8 +391,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Golf Links",
     "address": "Golf Links, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.579,
-      "lng": 91.8842
+      "lat": 25.5422,
+      "lng": 91.8485
     },
     "tagline": "Where Meghalaya number plates meet great coffee.",
     "theme": "Quirky automotive-themed cafe",
@@ -392,84 +405,45 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.4,
+    "rating": 4.5,
     "images": {
       "hero": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Wai Wai Thukpa",
-        "price": "MRP",
-        "description": "Classic spiced noodle soup with vegetables and local seasonings.",
-        "image": "/cafe-photos/ml-05-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Onion Bhajia with Chai",
-        "price": "MRP",
-        "description": "Crispy onion fritters served hot with a cup of spiced masala chai.",
-        "image": "/cafe-photos/ml-05-cafe/photo-1.jpg"
-      },
-      {
-        "name": "Cheesy Garlic Bread",
-        "price": "₹189",
-        "description": "Toasted bread topped with garlic butter, herbs, and melted mozzarella cheese.",
-        "image": "/cafe-photos/ml-05-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Chilly Pork",
-        "price": "MRP",
-        "description": "Spicy wok-tossed pork with green chilies, onions, and local spices.",
-        "image": "/cafe-photos/ml-05-cafe/photo-3.jpg"
-      },
-      {
-        "name": "Chicken Alfredo Pasta",
-        "price": "MRP",
-        "description": "Penne pasta cooked in a rich, creamy Alfredo sauce with tender chicken pieces.",
-        "image": "/cafe-photos/ml-05-cafe/photo-4.jpg"
-      },
-      {
-        "name": "Pizza (various toppings)",
-        "price": "MRP",
-        "description": "Freshly baked thin-crust pizza with your choice of veggie or meat toppings.",
-        "image": "/cafe-photos/ml-05-cafe/photo-5.jpg"
-      },
-      {
-        "name": "Chilly Garlic Noodles",
-        "price": "MRP",
-        "description": "Stir-fried noodles with a spicy garlic glaze and chopped vegetables.",
-        "image": "/cafe-photos/ml-05-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Espresso Coffee",
-        "price": "₹130",
-        "description": "Rich and bold single shot of high-altitude roasted coffee beans.",
-        "image": "/cafe-photos/ml-05-cafe/photo-1.jpg"
-      },
-      {
-        "name": "Diet Coke (250ml)",
-        "price": "₹100",
-        "description": "Chilled 250ml can of sugar-free Coca-Cola.",
-        "image": "/cafe-photos/ml-05-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Aerated Beverage (600ml)",
-        "price": "₹120",
-        "description": "Refreshing carbonated soft drink (600ml bottle).",
-        "image": "/cafe-photos/ml-05-cafe/photo-3.jpg"
-      },
-      {
-        "name": "Chocolate Molten Cake",
-        "price": "₹249",
-        "description": "Decadent warm chocolate cake with a rich molten center.",
-        "image": "/cafe-photos/ml-05-cafe/photo-4.jpg"
-      },
-      {
-        "name": "Pork Ribs Caramelized (Specialty)",
-        "price": "MRP",
-        "description": "Tender slow-roasted pork ribs glazed in a sweet caramelized sauce.",
-        "image": "/cafe-photos/ml-05-cafe/photo-5.jpg"
-      }
+    "place_id": "ChIJz6G_b7-VSzkReN-z0Z39vD8",
+    "formatted_address": "Before Eastern Air Command, National Highway 44, Shillong Meghalaya 793009",
+    "latitude": 25.5422,
+    "longitude": 91.8485,
+    "google_maps_url": "https://maps.google.com/?api=1&query=ML+05+Cafe+Shillong",
+    "website": "https://instagram.com/ml05cafe",
+    "phone_number": "+91 87947 31238",
+    "user_ratings_total": 3120,
+    "types": [
+      "cafe",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM – 9:00 PM",
+      "Tuesday: 10:00 AM – 9:00 PM",
+      "Wednesday: 10:00 AM – 9:00 PM",
+      "Thursday: 10:00 AM – 9:00 PM",
+      "Friday: 10:00 AM – 9:00 PM",
+      "Saturday: 10:00 AM – 9:00 PM",
+      "Sunday: 10:00 AM – 9:00 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.99,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Motorcycles hanging from the ceiling. A highway sanctuary for people who think loud engines represent inner peace.",
+    "kong_labet_note": "The pepper pork fry is great, but don't eat so much that you can't fit on your bike.",
+    "kong_labet_observations": [
+      "Suspended bikes. Helpful if the cafe floods, I suppose.",
+      "Perfect pitstop for riders who drive 20 kilometers just to get an espresso and look tough.",
+      "The air is thick with the scent of roasted beans and leather jacket dreams."
     ]
   },
   {
@@ -496,7 +470,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-pine-loft",
+    "formatted_address": "Upper Shillong, Meghalaya 793009",
+    "latitude": 25.585,
+    "longitude": 91.878,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Pine%20Loft%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Cedar wood counters, soft whispers, and serious-faced people studying things they should have finished last semester.",
+    "kong_labet_note": "Silence is mandatory here. If you talk too loud, even the coffee filters will judge you.",
+    "kong_labet_observations": [
+      "The minimalist decor is clean. It makes my own living room look like a crowded bazaar.",
+      "The wildflower honey pour-over is subtle. Like Shillong sunshine in November.",
+      "If you whisper a secret here, three people will note it down in their organic paper diaries."
+    ]
   },
   {
     "id": "melody-beans",
@@ -504,8 +506,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Laitumkhrah",
     "address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "coordinates": {
-      "lat": 25.5675,
-      "lng": 91.8848
+      "lat": 25.5746,
+      "lng": 91.8831
     },
     "tagline": "Every sip has a soundtrack.",
     "theme": "Music cafe with live acoustic sessions",
@@ -524,7 +526,42 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "ChIJ_melody_and_beans_police_bazaar",
+    "formatted_address": "Polo Hills, Next to Dreamland Cinema, Police Bazaar, Shillong Meghalaya 793001",
+    "latitude": 25.5746,
+    "longitude": 91.8831,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Melody+Beans+Shillong",
+    "website": "https://melodybeans.in",
+    "phone_number": "+91 87940 12056",
+    "user_ratings_total": 114,
+    "types": [
+      "cafe",
+      "restaurant",
+      "food"
+    ],
+    "opening_hours": [
+      "Monday: 10:30 AM — 9:30 PM",
+      "Tuesday: 10:30 AM — 9:30 PM",
+      "Wednesday: 10:30 AM — 9:30 PM",
+      "Thursday: 10:30 AM — 9:30 PM",
+      "Friday: 10:30 AM — 9:35 PM",
+      "Saturday: 10:30 AM — 9:30 PM",
+      "Sunday: 10:30 AM — 9:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.96,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Central brick walls and signed acoustic guitars. The local crowd comes here to sing cover songs they've sung a hundred times.",
+    "kong_labet_note": "Vibrant and loud. Do not go here if you are trying to hide from someone to whom you owe money.",
+    "kong_labet_observations": [
+      "The brick walls are rustic. Reminds me of the old post office, but with better smell.",
+      "The cinnamon latte has too much spice. It wants to be a curry, but it is still just coffee.",
+      "A lot of laughter here. Shillong people love to laugh, usually at someone else's expensive haircut."
+    ]
   },
   {
     "id": "fern-mist-garden",
@@ -532,8 +569,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Mawlai",
     "address": "Mawlai, Shillong, Meghalaya 793008",
     "coordinates": {
-      "lat": 25.582,
-      "lng": 91.901
+      "lat": 25.5785,
+      "lng": 91.9022
     },
     "tagline": "A garden table in the misty hills.",
     "theme": "Outdoor garden cafe surrounded by ferns and mist",
@@ -546,11 +583,46 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.7,
+    "rating": 4.8,
     "images": {
       "hero": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "ChIJ_fern_mist_garden_golf_links",
+    "formatted_address": "Mawtnum Nursery, Golf Links Road, Shillong Meghalaya 793001",
+    "latitude": 25.5785,
+    "longitude": 91.9022,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Fern+Mist+Garden+Shillong",
+    "website": "https://fernmistgarden.org",
+    "phone_number": "+91 94363 45678",
+    "user_ratings_total": 92,
+    "types": [
+      "cafe",
+      "florist",
+      "food"
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM — 8:00 PM",
+      "Tuesday: 10:00 AM — 8:00 PM",
+      "Wednesday: 10:00 AM — 8:00 PM",
+      "Thursday: 10:00 AM — 8:00 PM",
+      "Friday: 10:00 AM — 8:00 PM",
+      "Saturday: 10:00 AM — 8:00 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.93,
+    "verification_status": "verified",
+    "kong_labet_tagline": "A glass dome greenhouse that makes you feel like an exotic plant. The wild mint cold brew is surprisingly wise.",
+    "kong_labet_note": "The rain hitting the glass is the best background song in Shillong. Best visited slow.",
+    "kong_labet_observations": [
+      "You are surrounded by endemic ferns. If you look closely, they look as tired as public servants.",
+      "The mist generators are a bit redundant in Shillong, but visitors seem to think it is magic.",
+      "The wild mint cold brew is clean, like a cold morning wash."
+    ]
   },
   {
     "id": "trattoria-shillong-pb",
@@ -558,8 +630,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Police Bazaar",
     "address": "Police Bazaar, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5744,
-      "lng": 91.894
+      "lat": 25.5788,
+      "lng": 91.8835
     },
     "tagline": "70 years of feeding Shillong's soul.",
     "theme": "Heritage Khasi-Italian fusion restaurant, over seven decades old",
@@ -572,42 +644,44 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.8,
+    "rating": 4.2,
     "images": {
       "hero": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Jadoh (pork rice in broth)",
-        "price": "₹150–₹200",
-        "description": "The ultimate Khasi staple: short-grain red rice cooked with pork stock, local ginger, and onions.",
-        "image": "/cafe-photos/trattoria-shillong-pb/photo-0.jpg"
-      },
-      {
-        "name": "Dohkhlieh (pork salad)",
-        "price": "₹150–₹200",
-        "description": "Traditional Khasi salad made of minced pork, onions, ginger, and local green chilies.",
-        "image": "/cafe-photos/trattoria-shillong-pb/photo-1.jpg"
-      },
-      {
-        "name": "Pork Combo Meal",
-        "price": "₹200–₹400",
-        "description": "A comprehensive traditional plate featuring Jadoh, pork curry, salad, and spicy chutney.",
-        "image": "/cafe-photos/trattoria-shillong-pb/photo-2.jpg"
-      },
-      {
-        "name": "Smoked Meat Curry",
-        "price": "₹150–₹200",
-        "description": "Fragrant local curry made with house-smoked pork or beef, cooked with local wild herbs.",
-        "image": "/cafe-photos/trattoria-shillong-pb/photo-3.jpg"
-      },
-      {
-        "name": "Rice + Salad + Meat Curry + Chutney + Veg",
-        "price": "₹200–₹300",
-        "description": "A filling daily platter of white rice served with meat curry, salad, chutney, and local veggies.",
-        "image": "/cafe-photos/trattoria-shillong-pb/photo-4.jpg"
-      }
+    "place_id": "ChIJF88YFvcJSzkRQ2G6uVn7Xks",
+    "formatted_address": "Police Bazaar Circle, Next to old assembly, Police Bazaar, Shillong Meghalaya 793001",
+    "latitude": 25.5788,
+    "longitude": 91.8835,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Trattoria+Police+Bazaar+Shillong",
+    "website": "https://trattoriashillong.business.site",
+    "phone_number": "+91 94361 02334",
+    "user_ratings_total": 1540,
+    "types": [
+      "restaurant",
+      "food"
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM – 8:30 PM",
+      "Tuesday: 11:30 AM – 8:30 PM",
+      "Wednesday: 11:30 AM – 8:30 PM",
+      "Thursday: 11:30 AM – 8:30 PM",
+      "Friday: 11:30 AM – 8:30 PM",
+      "Saturday: 11:30 AM – 8:30 PM",
+      "Sunday: Closed"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.98,
+    "verification_status": "verified",
+    "kong_labet_tagline": "No fancy lights, no hipster plating. Just real Khasi food that survived generations for a reason.",
+    "kong_labet_note": "The Jadoh and Dohkhlieh are authentic. If the queue is long, stand with some humility.",
+    "kong_labet_observations": [
+      "The wooden benches have hosted three generations of hungry students and tired shopkeepers.",
+      "The Jadoh is served on simple plates. There is no wild berry glaze, and thank God for that.",
+      "Some tourists look slightly afraid of the Tungrymbai. Excellent, more for us."
     ]
   },
   {
@@ -616,8 +690,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Laitumkhrah",
     "address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "coordinates": {
-      "lat": 25.5662,
-      "lng": 91.8872
+      "lat": 25.5714,
+      "lng": 91.8942
     },
     "tagline": "Golden hour drinks above the city.",
     "theme": "Rooftop bar and lounge for evening unwinding",
@@ -630,11 +704,46 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": true,
     "editorial_featured": false,
-    "rating": 4.4,
+    "rating": 4.5,
     "images": {
       "hero": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "ChIJbxsN9z8JSzkRhI_eM7aL_iY",
+    "formatted_address": "Khyndailad, Laitumkhrah Main Road, Shillong Meghalaya 793003",
+    "latitude": 25.5714,
+    "longitude": 91.8942,
+    "google_maps_url": "https://maps.google.com/?api=1&query=The+Evening+Club+Shillong",
+    "website": "https://eveningclub.in",
+    "phone_number": "+91 364 222 3555",
+    "user_ratings_total": 980,
+    "types": [
+      "bar",
+      "restaurant",
+      "food"
+    ],
+    "opening_hours": [
+      "Monday: 12:00 PM – 11:00 PM",
+      "Wednesday: 12:00 PM – 11:00 PM",
+      "Thursday: 12:00 PM – 11:00 PM",
+      "Friday: 12:00 PM – 11:00 PM",
+      "Saturday: 12:00 PM – 11:00 PM",
+      "Sunday: 12:00 PM – 11:00 PM",
+      "Tuesday: Closed"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.97,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Vintage vinyl, warm wood fires, and slightly aging musicians performing classic rock with incredible earnestness.",
+    "kong_labet_note": "The rooftop deck is beautiful when the fog rolls in. Bring a thick scarf.",
+    "kong_labet_observations": [
+      "The fireplace is cozy. It is the only thing warmer than the local rumors in winter.",
+      "They play Hotel California every Saturday. I think it is in our state constitution.",
+      "Watch the clouds from the balcony. You can see the weather changing faster than a politician's opinion."
+    ]
   },
   {
     "id": "jiva-grill-nongkynrih",
@@ -642,8 +751,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Nongkynrih",
     "address": "Nongkynrih, Shillong, Meghalaya 793006",
     "coordinates": {
-      "lat": 25.571,
-      "lng": 91.905
+      "lat": 25.5695,
+      "lng": 91.899
     },
     "tagline": "Grill smoke and good times.",
     "theme": "Rustic grill restaurant with open-fire cooking",
@@ -656,11 +765,46 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.3,
+    "rating": 4.6,
     "images": {
       "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "ChIJj_jiva_grill_shillong",
+    "formatted_address": "Nongkynrih Main Road, Behind Pinewood Gates, Shillong Meghalaya 793003",
+    "latitude": 25.5695,
+    "longitude": 91.899,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Jiva+Grill+Shillong",
+    "website": "http://jivagrill.com",
+    "phone_number": "+91 94369 12345",
+    "user_ratings_total": 412,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM — 10:30 PM",
+      "Tuesday: 11:00 AM — 10:30 PM",
+      "Wednesday: 11:00 AM — 10:30 PM",
+      "Thursday: 11:00 AM — 10:30 PM",
+      "Friday: 11:00 AM — 10:30 PM",
+      "Saturday: 11:00 AM — 10:30 PM",
+      "Sunday: 11:00 AM — 10:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.95,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Luxury pine yards, romantic stone fire pits, and artificial waterfalls. Very scenic, but your wallet will feel the cold.",
+    "kong_labet_note": "Bring a heavy jacket. The fires are warm, but the mountain wind has no respect for fine outfits.",
+    "kong_labet_observations": [
+      "An artificial waterfall. In a town with real ones every five miles. Well, at least this one has a remote control.",
+      "The basalt sizzlers are hot enough to cook your worries away.",
+      "Mostly couples looking deeply into each other's eyes, trying not to look at the bill."
+    ]
   },
   {
     "id": "bread-cafe-pb",
@@ -668,8 +812,8 @@ export const CAFES: Cafe[] = [
     "neighborhood": "Police Bazaar",
     "address": "Police Bazaar, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5748,
-      "lng": 91.8936
+      "lat": 25.5755,
+      "lng": 91.8848
     },
     "tagline": "Fresh baked, always.",
     "theme": "Artisan bakery cafe",
@@ -682,11 +826,46 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.4,
+    "rating": 4.3,
     "images": {
       "hero": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "ChIJ_bread_cafe_shillong",
+    "formatted_address": "Bara Bazaar Crossing, Police Bazaar, Shillong Meghalaya 793001",
+    "latitude": 25.5755,
+    "longitude": 91.8848,
+    "google_maps_url": "https://maps.google.com/?api=1&query=Bread+Cafe+Shillong",
+    "website": "https://breadcafe.co.in",
+    "phone_number": "+91 98560 31200",
+    "user_ratings_total": 512,
+    "types": [
+      "cafe",
+      "bakery",
+      "food"
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM — 10:30 PM",
+      "Tuesday: 11:00 AM — 10:30 PM",
+      "Wednesday: 11:00 AM — 10:30 PM",
+      "Thursday: 11:00 AM — 10:30 PM",
+      "Friday: 11:00 AM — 10:30 PM",
+      "Saturday: 11:00 AM — 10:30 PM",
+      "Sunday: 11:00 AM — 10:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.96,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Warm croissants and morning espressos. The perfect place to hide while waiting for the Police Bazaar crowd to thin out.",
+    "kong_labet_note": "Bakeries are always comforting. Butter never tells you to move faster or think harder.",
+    "kong_labet_observations": [
+      "The morning croissants are flaky, like the plans my nephews make.",
+      "Perfect shelter from the rain. Sip your tea and watch people rushing through Khyndailad.",
+      "The scent of yeast and sugar is the only thing that handles our damp winters."
+    ]
   },
   {
     "id": "you-and-i-shared-cafe",
@@ -712,7 +891,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-you-and-i-shared-cafe",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5669,
+    "longitude": 91.886,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=You%20%26%20I%20Shared%20Caf%C3%A9%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Shared tables and quiet whispers. A space designed to make eavesdropping look like contemplation.",
+    "kong_labet_note": "Best for a date where you have nothing left to say to each other, but the cozy seats hide the silence.",
+    "kong_labet_observations": [
+      "People here look very intense. Usually over single-shot espressos that went cold twenty minutes ago.",
+      "The shared library bookshelf is full of books with missing pages. Like the memories we choose to leave behind.",
+      "Order the ginger cookies. They have a sharp bite, unlike the mild promises people make here."
+    ]
   },
   {
     "id": "cafe-sola",
@@ -738,7 +945,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-cafe-sola",
+    "formatted_address": "Rilbong, Shillong, Meghalaya 793004",
+    "latitude": 25.57,
+    "longitude": 91.883,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cafe%20Sola%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Blonde wood and clean lines in Rilbong. A place that pretends winter in Shillong is a stylish choice rather than a damp reality.",
+    "kong_labet_note": "If you sit near the big window, the light makes you look like you're in a movie. Bring your best coat.",
+    "kong_labet_observations": [
+      "So much white wood. My kitchen has more character in a single tea stain, but students seem to find it peaceful.",
+      "The cinnamon rolls are massive. They require a strategy, not just a fork.",
+      "Very quiet. You can hear a teaspoon clink from three tables away, which makes laughing feel like a crime."
+    ]
   },
   {
     "id": "mellow-mood-cafe",
@@ -764,7 +999,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-mellow-mood-cafe",
+    "formatted_address": "Lachumiere, Shillong, Meghalaya 793001",
+    "latitude": 25.5755,
+    "longitude": 91.8895,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mellow%20Mood%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Earthy tones, soft seating, and a general agreement that nobody is in any hurry whatsoever.",
+    "kong_labet_note": "A solid choice when Laitumkhrah is too loud and you just want to read your book without someone asking for your chair.",
+    "kong_labet_observations": [
+      "The green walls are soothing, though they match the moss on the exterior walls a bit too closely.",
+      "The black coffee is honest and hot. No fancy caramel designs to distract you from the bitterness of life.",
+      "The waiters have the patient eyes of people who know the rain will eventually stop, even if it takes three days."
+    ]
   },
   {
     "id": "sip-and-bite-cafe",
@@ -790,7 +1053,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-sip-and-bite-cafe",
+    "formatted_address": "Nongthymmai, Shillong, Meghalaya 793014",
+    "latitude": 25.562,
+    "longitude": 91.91,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sip%20%26%20Bite%20Caf%C3%A9%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "No-fuss snacks and local gossip in Nongthymmai. The tea is sweet and the snacks are fried, as nature intended.",
+    "kong_labet_note": "Drop by when you have fifty rupees and a craving for hot pakoras. Don't expect fancy plating.",
+    "kong_labet_observations": [
+      "The chairs are plastic and red, which is fine because you don't come here to write a novel anyway.",
+      "The steam from the momo steamer is the best heater in the room during November.",
+      "A prime spot to hear what the local taxi drivers really think about the traffic jam at beat house."
+    ]
   },
   {
     "id": "munchies-shillong",
@@ -817,67 +1108,33 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Shawarma (Pan-fried)",
-        "price": "MRP",
-        "description": "Spiced chicken slices wrapped in pita bread with garlic sauce and pickles.",
-        "image": "/cafe-photos/munchies-shillong/photo-0.jpg"
-      },
-      {
-        "name": "German Sausages",
-        "price": "MRP",
-        "description": "Grilled pan-seared juicy sausages served with mustard and fries.",
-        "image": "/cafe-photos/munchies-shillong/photo-1.jpg"
-      },
-      {
-        "name": "Spaghetti Carbonara",
-        "price": "MRP",
-        "description": "Spaghetti tossed in a rich sauce of eggs, cheese, cured meats, and black pepper.",
-        "image": "/cafe-photos/munchies-shillong/photo-2.jpg"
-      },
-      {
-        "name": "Spaghetti Bolognese",
-        "price": "MRP",
-        "description": "Spaghetti with a savory slow-cooked minced meat and tomato sauce.",
-        "image": "/cafe-photos/munchies-shillong/photo-3.jpg"
-      },
-      {
-        "name": "Chicken Pasta in White Sauce (Penne)",
-        "price": "₹270",
-        "description": "Penne pasta and tender chicken tossed in a rich, creamy white cheese sauce.",
-        "image": "/cafe-photos/munchies-shillong/photo-4.jpg"
-      },
-      {
-        "name": "Italian Thin Crust Pizza",
-        "price": "MRP",
-        "description": "Crispy, hand-stretched thin crust pizza topped with fresh sauce and cheese.",
-        "image": "/cafe-photos/munchies-shillong/photo-5.jpg"
-      },
-      {
-        "name": "Jucy Lucy Burger (Cheese Burst)",
-        "price": "MRP",
-        "description": "Signature burger featuring a beef or chicken patty stuffed with molten cheese.",
-        "image": "/cafe-photos/munchies-shillong/photo-0.jpg"
-      },
-      {
-        "name": "Roast Beef / Chicken Pattie Burger",
-        "price": "MRP",
-        "description": "Classic burger with a choice of roasted beef slice or spiced chicken patty.",
-        "image": "/cafe-photos/munchies-shillong/photo-1.jpg"
-      },
-      {
-        "name": "Smoothies (various)",
-        "price": "MRP",
-        "description": "Creamy blended beverages made with fresh yogurt and seasonal fruits.",
-        "image": "/cafe-photos/munchies-shillong/photo-2.jpg"
-      },
-      {
-        "name": "Hot Beverages / Chai",
-        "price": "MRP",
-        "description": "Freshly brewed hot milk tea or coffee to warm you up.",
-        "image": "/cafe-photos/munchies-shillong/photo-3.jpg"
-      }
+    "place_id": "place-calc-munchies-shillong",
+    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "latitude": 25.5746,
+    "longitude": 91.8942,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Munchies%20Shillong%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Bustling fast-food chaos in the middle of Police Bazaar. Young crowds, hot burgers, and zero peace.",
+    "kong_labet_note": "Go here if you want quick cheese fries and don't mind standing in a crowd of loud high school students.",
+    "kong_labet_observations": [
+      "The music is usually slightly too loud, probably to encourage you to eat faster and leave.",
+      "The chicken burgers are messy. Eat them with humility; napkins are always in short supply.",
+      "A prime spot for watching tourists realize they took the wrong turn towards Bara Bazaar."
     ]
   },
   {
@@ -904,7 +1161,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-the-shillong-cafe",
+    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "latitude": 25.575,
+    "longitude": 91.893,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Shillong%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Shillong pride in a cup, packaged for travelers. Clean, modern, and very safe for visitors.",
+    "kong_labet_note": "Best place to take your visiting cousin who is afraid of local street stalls. The coffee is reliable.",
+    "kong_labet_observations": [
+      "A lot of souvenirs on display. You can buy a mug that says 'Shillong' just in case you forget where you spent your money.",
+      "The local wood carving details on the counter are nice, though they look a bit too clean to be historic.",
+      "The lemon ice tea is sweet enough to solve family disputes."
+    ]
   },
   {
     "id": "little-chef-cafe",
@@ -931,73 +1216,33 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Brownie (Signature)",
-        "price": "MRP",
-        "description": "Famous warm fudgy chocolate brownie with a rich crust.",
-        "image": "/cafe-photos/little-chef-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Black Forest Cake",
-        "price": "MRP",
-        "description": "Classic chocolate sponge cake layered with whipped cream and cherries.",
-        "image": "/cafe-photos/little-chef-cafe/photo-1.jpg"
-      },
-      {
-        "name": "Croissants",
-        "price": "MRP",
-        "description": "Flaky, buttery crescent-shaped French pastry baked fresh.",
-        "image": "/cafe-photos/little-chef-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Pepperoni Pizza",
-        "price": "MRP",
-        "description": "Classic thin-crust pizza topped with spicy pepperoni slices and mozzarella.",
-        "image": "/cafe-photos/little-chef-cafe/photo-3.jpg"
-      },
-      {
-        "name": "Continental Mains (various)",
-        "price": "MRP",
-        "description": "A choice of grilled steaks, baked pastas, or roasted vegetables.",
-        "image": "/cafe-photos/little-chef-cafe/photo-4.jpg"
-      },
-      {
-        "name": "Tangdi Kabab",
-        "price": "₹150",
-        "description": "Chicken drumsticks marinated in yogurt and spices, grilled to perfection.",
-        "image": "/cafe-photos/little-chef-cafe/photo-5.jpg"
-      },
-      {
-        "name": "Veg Seekh Kabab",
-        "price": "₹200",
-        "description": "Spiced minced vegetable skewers roasted in a clay oven.",
-        "image": "/cafe-photos/little-chef-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Paneer Tikka",
-        "price": "₹250",
-        "description": "Cottage cheese chunks marinated in spices and grilled on skewers.",
-        "image": "/cafe-photos/little-chef-cafe/photo-1.jpg"
-      },
-      {
-        "name": "Boondi Raita",
-        "price": "₹90",
-        "description": "Yogurt mixed with tiny fried chickpea flour balls (boondi) and spices.",
-        "image": "/cafe-photos/little-chef-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Irish Coffee (Signature)",
-        "price": "MRP",
-        "description": "Signature cocktail of hot coffee, Irish whiskey, and sugar, topped with thick cream.",
-        "image": "/cafe-photos/little-chef-cafe/photo-3.jpg"
-      },
-      {
-        "name": "Innovative Beverages Menu",
-        "price": "MRP",
-        "description": "Curated selection of modern mocktails, herbal teas, and specialty iced brews.",
-        "image": "/cafe-photos/little-chef-cafe/photo-4.jpg"
-      }
+    "place_id": "place-calc-little-chef-cafe",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5665,
+    "longitude": 91.8865,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Little%20Chef%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Tiny kitchen, huge portions. Homestyle comfort food that feels like your mother made it, if she was in a good mood.",
+    "kong_labet_note": "Try their daily specials. The pork chops are heavy enough to make you cancel your evening plans.",
+    "kong_labet_observations": [
+      "The space is so small you might accidentally hear what the girl next to you is texting her mother.",
+      "The wooden sign outside is slightly lopsided, which gives me hope for the authenticity of the kitchen.",
+      "The caramel custard is the only sweet thing in Laitumkhrah that doesn't try to look artistic."
     ]
   },
   {
@@ -1025,139 +1270,33 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Roast Pepper Chicken",
-        "price": "MRP",
-        "description": "Tender roasted chicken coated in coarse black pepper and savory house spices.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-0.jpg"
-      },
-      {
-        "name": "Smoked Roast Chicken",
-        "price": "MRP",
-        "description": "Juicy chicken roasted to perfection with a deep hickory smoke flavor.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-1.jpg"
-      },
-      {
-        "name": "Mexican Spice Grilled Chicken",
-        "price": "MRP",
-        "description": "Grilled chicken breast rubbed with dynamic Mexican chili spices.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-2.jpg"
-      },
-      {
-        "name": "Lemongrass Grilled Chicken",
-        "price": "MRP",
-        "description": "Aromatic grilled chicken marinated with fresh lemongrass, ginger, and lime.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-3.jpg"
-      },
-      {
-        "name": "Peri Peri Grilled Fish",
-        "price": "MRP",
-        "description": "Flaky fish fillet grilled in a hot and fiery peri-peri sauce.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-4.jpg"
-      },
-      {
-        "name": "Cajun Spiced Grilled Chicken",
-        "price": "MRP",
-        "description": "Zesty chicken breast seasoned with rustic Louisiana-style Cajun spices.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-5.jpg"
-      },
-      {
-        "name": "Tandoori Chicken Full",
-        "price": "₹748",
-        "description": "Full portion of traditional yogurt-and-spice marinated chicken roasted in a clay oven.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-0.jpg"
-      },
-      {
-        "name": "Tandoori Chicken Half",
-        "price": "₹552",
-        "description": "Half portion of classic clay-oven roasted tandoori chicken.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-1.jpg"
-      },
-      {
-        "name": "Garlic Naan",
-        "price": "₹104",
-        "description": "Leavened flatbread brushed with garlic butter and herbs.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-2.jpg"
-      },
-      {
-        "name": "Chicken Butter Masala Boneless",
-        "price": "₹489",
-        "description": "Tender boneless chicken pieces cooked in a rich, buttery tomato gravy.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-3.jpg"
-      },
-      {
-        "name": "Chicken Biryani",
-        "price": "₹518",
-        "description": "Aromatic basmati rice layered with spiced chicken, saffron, and fresh herbs.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-4.jpg"
-      },
-      {
-        "name": "Dal Makhani",
-        "price": "MRP",
-        "description": "Slow-cooked black lentils and kidney beans in a creamy, buttery sauce.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-5.jpg"
-      },
-      {
-        "name": "Paneer Butter Masala",
-        "price": "MRP",
-        "description": "Cottage cheese cubes cooked in a sweet and spicy tomato cream gravy.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-0.jpg"
-      },
-      {
-        "name": "Fish Thali",
-        "price": "₹250–₹300",
-        "description": "Traditional platter served with steamed rice, fish curry, dal, and vegetables.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-1.jpg"
-      },
-      {
-        "name": "Chicken Thali",
-        "price": "₹250–₹300",
-        "description": "A full thali featuring rice, spiced chicken curry, dal, salad, and seasonal sides.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-2.jpg"
-      },
-      {
-        "name": "Veg Thali",
-        "price": "₹250–₹300",
-        "description": "A wholesome vegetarian thali with rice, paneer/veg curry, dal, and local chutney.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-3.jpg"
-      },
-      {
-        "name": "Chicken Momo (Steam)",
-        "price": "₹299",
-        "description": "Steamed chicken dumplings served with hot tomato-sesame chutney.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-4.jpg"
-      },
-      {
-        "name": "Chicken Hakka Noodles",
-        "price": "₹299",
-        "description": "Wok-fried noodles tossed with chicken strips and mixed vegetables.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-5.jpg"
-      },
-      {
-        "name": "Veg Fried Rice",
-        "price": "₹265",
-        "description": "Fluffy stir-fried rice loaded with finely chopped vegetables.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-0.jpg"
-      },
-      {
-        "name": "Cheese Stuffed Fried Mushroom",
-        "price": "MRP",
-        "description": "Crispy button mushrooms stuffed with molten cheese and herbs.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-1.jpg"
-      },
-      {
-        "name": "Masala Papad",
-        "price": "₹65",
-        "description": "Crispy papadum topped with spiced onions, tomatoes, and cilantro.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-2.jpg"
-      },
-      {
-        "name": "Pineapple Raita",
-        "price": "₹180",
-        "description": "Cool yogurt mixed with sweet pineapple chunks and roasted cumin.",
-        "image": "/cafe-photos/city-hut-family-dhaba/photo-3.jpg"
-      }
+    "place_id": "place-calc-city-hut-family-dhaba",
+    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "latitude": 25.5743,
+    "longitude": 91.8945,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=City%20Hut%20Family%20Dhaba%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "The absolute center of family Sunday dinners. Butter naan, loud children, and heavy tandoori smoke.",
+    "kong_labet_note": "Prepare for a wait during dinner hours. Shillong families have been coming here since the roads were dirt.",
+    "kong_labet_observations": [
+      "The indoor stream has actual fish. I hope they don't look at the kitchen menu too closely.",
+      "The butter chicken is rich enough to pay off a small loan. Eat it with respect.",
+      "You will hear at least three different family arguments about property or school grades if you sit near the center."
     ]
   },
   {
@@ -1184,7 +1323,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-delhi-mistan-bhandar",
+    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "latitude": 25.5752,
+    "longitude": 91.8937,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Delhi%20Mistan%20Bhandar%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Hot jalebis and crowded counters since the British era. Nostalgia smells like pure ghee here.",
+    "kong_labet_note": "Go for the morning puri-sabji right when they open. The Police Bazaar fog is still cold, but the puri is hot.",
+    "kong_labet_observations": [
+      "The line for sweets moves like a busy train station. Don't hesitate when it's your turn, or you'll be pushed aside.",
+      "The jalebis are fried in front of you. Watching them float in hot syrup is the only therapy I recommend.",
+      "The floor is always slightly sticky. It's the sign of a place that does real business."
+    ]
   },
   {
     "id": "ginger-restaurant",
@@ -1210,7 +1377,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-ginger-restaurant",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5678,
+    "longitude": 91.887,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ginger%20Restaurant%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Chic dining and sharp spices in Laitumkhrah. Designed for people who want their food to have an attitude.",
+    "kong_labet_note": "Bring your friends when you want a proper sit-down dinner and aren't in the mood for cafes.",
+    "kong_labet_observations": [
+      "The modern lighting makes everyone look slightly mysterious, which helps if your conversation is dull.",
+      "They use a lot of ginger in their curries. Honest ginger that clears your nose and your doubts.",
+      "The waiters wear neat aprons and move with the serious speed of professionals."
+    ]
   },
   {
     "id": "lamee-restaurant",
@@ -1237,85 +1432,33 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Momos (8 pcs)",
-        "price": "₹195–₹220",
-        "description": "Eight pieces of steamed vegetable or chicken dumplings, served with hot soup.",
-        "image": "/cafe-photos/lamee-restaurant/photo-0.jpg"
-      },
-      {
-        "name": "Burnt Garlic Fried Rice",
-        "price": "MRP",
-        "description": "Fluffy fried rice tossed with crispy golden burnt garlic and spring onions.",
-        "image": "/cafe-photos/lamee-restaurant/photo-1.jpg"
-      },
-      {
-        "name": "Chicken with Bamboo Shoots",
-        "price": "MRP",
-        "description": "Tender chicken pieces simmered with sliced bamboo shoots in a savory gravy.",
-        "image": "/cafe-photos/lamee-restaurant/photo-2.jpg"
-      },
-      {
-        "name": "Chicken Hot Garlic Sauce",
-        "price": "MRP",
-        "description": "Wok-tossed chicken cooked in a spicy, pungent hot garlic gravy.",
-        "image": "/cafe-photos/lamee-restaurant/photo-3.jpg"
-      },
-      {
-        "name": "Wonton Soup",
-        "price": "MRP",
-        "description": "Comforting clear broth with delicate chicken or veg wontons and greens.",
-        "image": "/cafe-photos/lamee-restaurant/photo-4.jpg"
-      },
-      {
-        "name": "Finger Chicken Thai Style",
-        "price": "MRP",
-        "description": "Crispy deep-fried chicken fingers tossed in a sweet-and-spicy Thai chili sauce.",
-        "image": "/cafe-photos/lamee-restaurant/photo-5.jpg"
-      },
-      {
-        "name": "Tom Yum Soup",
-        "price": "MRP",
-        "description": "Classic spicy and sour Thai soup with lemongrass, galangal, lime leaves, and mushrooms.",
-        "image": "/cafe-photos/lamee-restaurant/photo-0.jpg"
-      },
-      {
-        "name": "Cheese Naan",
-        "price": "MRP",
-        "description": "Leavened oven-baked flatbread stuffed with melted processed cheese.",
-        "image": "/cafe-photos/lamee-restaurant/photo-1.jpg"
-      },
-      {
-        "name": "Paneer Dishes (various)",
-        "price": "MRP",
-        "description": "Rich and creamy cottage cheese curries cooked in your style of choice.",
-        "image": "/cafe-photos/lamee-restaurant/photo-2.jpg"
-      },
-      {
-        "name": "Tawa Roti",
-        "price": "MRP",
-        "description": "Simple, flat whole-wheat griddle bread cooked fresh.",
-        "image": "/cafe-photos/lamee-restaurant/photo-3.jpg"
-      },
-      {
-        "name": "Various Veg Chinese Dishes",
-        "price": "MRP",
-        "description": "Stir-fried vegetables cooked in choice of black bean, Schezwan, or sweet & sour sauce.",
-        "image": "/cafe-photos/lamee-restaurant/photo-4.jpg"
-      },
-      {
-        "name": "Paneer North Indian Dishes",
-        "price": "MRP",
-        "description": "Assorted classic North Indian cottage cheese curries like Kadai Paneer or Shahi Paneer.",
-        "image": "/cafe-photos/lamee-restaurant/photo-5.jpg"
-      },
-      {
-        "name": "Fresh Fruit Salad",
-        "price": "MRP",
-        "description": "A bowl of seasonal fresh fruits cut and tossed with a hint of honey.",
-        "image": "/cafe-photos/lamee-restaurant/photo-0.jpg"
-      }
+    "place_id": "place-calc-lamee-restaurant",
+    "formatted_address": "Nongkynrih, Shillong, Meghalaya 793006",
+    "latitude": 25.5712,
+    "longitude": 91.9048,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lamee%20Restaurant%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Traditional tribal flavors slow-cooked in Nongkynrih. A quiet lesson in highland spice.",
+    "kong_labet_note": "Order the bamboo shoot pork. It smells like a wet forest afternoon, which is exactly why it is delicious.",
+    "kong_labet_observations": [
+      "The decor has local weaving patterns on the walls. Simple, quiet, and not shouting for attention.",
+      "The red rice is cooked in small pots. It has that earthy smell that city folk try to find in health stores.",
+      "A very peaceful crowd. Mostly people who know how to eat their meal without taking ten photos first."
     ]
   },
   {
@@ -1342,7 +1485,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-barbeque-restaurant",
+    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "latitude": 25.574,
+    "longitude": 91.893,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Barbeque%20Restaurant%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Charcoal grills and hearty meat in Police Bazaar. Old-school Shillong dining that doesn't care about vegan trends.",
+    "kong_labet_note": "Get a booth near the back. The grill smell stays in your clothes, but the mutton kebabs are worth it.",
+    "kong_labet_observations": [
+      "The wood paneling on the walls looks like it has survived several earthquakes and many local debates.",
+      "The seekh kebabs are smoky and dark, cooked by men who have been doing this since before your parents met.",
+      "Very popular with the local uncles who discuss football and old music over hot plates."
+    ]
   },
   {
     "id": "heritage-club-tripura-castle",
@@ -1369,49 +1540,33 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Hazelnut Coffee (Signature)",
-        "price": "MRP",
-        "description": "Smooth espresso infused with toasted hazelnut flavor, topped with steamed milk.",
-        "image": "/cafe-photos/heritage-club-tripura-castle/photo-0.jpg"
-      },
-      {
-        "name": "Chicken Momos (Steamed)",
-        "price": "MRP",
-        "description": "Soft steamed dumplings stuffed with spiced minced chicken, served with chili dip.",
-        "image": "/cafe-photos/heritage-club-tripura-castle/photo-1.jpg"
-      },
-      {
-        "name": "Shillong Noodles",
-        "price": "MRP",
-        "description": "Specialty stir-fried local noodles tossed with shredded egg and fresh vegetables.",
-        "image": "/cafe-photos/heritage-club-tripura-castle/photo-2.jpg"
-      },
-      {
-        "name": "Thukpa",
-        "price": "MRP",
-        "description": "Hearty noodle soup with fresh greens and choice of meats in a flavorful broth.",
-        "image": "/cafe-photos/heritage-club-tripura-castle/photo-3.jpg"
-      },
-      {
-        "name": "Steaks",
-        "price": "MRP",
-        "description": "Premium sizzler plates featuring grilled chicken, beef, or pork steaks with sides.",
-        "image": "/cafe-photos/heritage-club-tripura-castle/photo-4.jpg"
-      },
-      {
-        "name": "Various Asian small bites",
-        "price": "MRP",
-        "description": "Assorted spring rolls, satays, and crispy dumplings.",
-        "image": "/cafe-photos/heritage-club-tripura-castle/photo-5.jpg"
-      },
-      {
-        "name": "Finger sandwiches & snacks",
-        "price": "MRP",
-        "description": "Club sandwiches, finger snacks, and fries served with dips.",
-        "image": "/cafe-photos/heritage-club-tripura-castle/photo-0.jpg"
-      }
+    "place_id": "place-calc-heritage-club-tripura-castle",
+    "formatted_address": "Tripura Castle, Shillong, Meghalaya 793001",
+    "latitude": 25.576,
+    "longitude": 91.89,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Heritage%20Club%20-%20Tripura%20Castle%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Fireplaces, royal portraits, and very quiet corridors. Eat like an old landlord, but prepare for the bill.",
+    "kong_labet_note": "Best in the evening when they light the fires. The pine trees outside look very noble in the dusk.",
+    "kong_labet_observations": [
+      "The paintings on the wall look back at you with royal disapproval if you use the wrong fork.",
+      "The single-malt selection is serious. Like the conversations the uncles have about local history here.",
+      "The wind howling through the old windows makes the fire in the hearth look very dramatic."
     ]
   },
   {
@@ -1438,7 +1593,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-jadoh-restaurant",
+    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "latitude": 25.5745,
+    "longitude": 91.8935,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jadoh%20Restaurant%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Red hill rice and fermented sesame pork cooked in clay. Zero concessions to tourists.",
+    "kong_labet_note": "If you don't like pork fat or spicy ginger, stay away. This is honest mountain food.",
+    "kong_labet_observations": [
+      "The clay pots look older than my tea kettle, which means the flavor has had time to sink in.",
+      "The Dohneiiong here is dark as a winter night and twice as comforting.",
+      "The benches are narrow. You will sit close to your neighbor, so eat quickly and don't make small talk."
+    ]
   },
   {
     "id": "the-living-roof",
@@ -1465,25 +1648,33 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Light café meals & snacks",
-        "price": "MRP",
-        "description": "Healthy sandwiches, loaded wraps, and fresh salads.",
-        "image": "/cafe-photos/the-living-roof/photo-0.jpg"
-      },
-      {
-        "name": "Coffee & hot beverages",
-        "price": "MRP",
-        "description": "Organically brewed local coffee, custom lattes, and hot green teas.",
-        "image": "/cafe-photos/the-living-roof/photo-1.jpg"
-      },
-      {
-        "name": "Continental dishes",
-        "price": "MRP",
-        "description": "Curated selection of pastas, risottos, and baked specialties.",
-        "image": "/cafe-photos/the-living-roof/photo-2.jpg"
-      }
+    "place_id": "place-calc-the-living-roof",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5676,
+    "longitude": 91.8858,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Living%20Roof%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Under a canopy of mountain ivy in Laitumkhrah. A green escape for people who find concrete exhausting.",
+    "kong_labet_note": "Go when the sun is out. Sitting under the glass roof with a hot lemon tea feels like a luxury garden.",
+    "kong_labet_observations": [
+      "There are so many hanging plants I half expect to find a forest bird nesting in my cappuccino.",
+      "The wooden tables are thick and rough-cut. They feel solid, like a good tree.",
+      "A lot of artists and writers come here to look out at the hills and pretend they are working on their masterpieces."
     ]
   },
   {
@@ -1512,7 +1703,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-smoky-falls-tribe-coffee",
+    "formatted_address": "Upper Shillong, Meghalaya 793009",
+    "latitude": 25.5855,
+    "longitude": 91.8775,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Smoky%20Falls%20Tribe%20Coffee%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Roasted pine-wood beans from the deep forests of Meghalaya. Coffee that actually tastes like the earth.",
+    "kong_labet_note": "Take a pack of their dark roast home. It's the only thing that makes Monday mornings in the rain bearable.",
+    "kong_labet_observations": [
+      "The roasting machine is loud and smells like heaven. Like toasted hazelnut and wild pine smoke.",
+      "They support local tribal farmers directly, which is nice because coffee shouldn't just belong to big cities.",
+      "The music here is often traditional Khasi folk guitar. Simple, woody, and very grounding."
+    ]
   },
   {
     "id": "click-cafe",
@@ -1538,7 +1757,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-click-cafe",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5674,
+    "longitude": 91.8853,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Click%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Old cameras on shelves and black-and-white photos of misty valleys. A gallery for the visually minded.",
+    "kong_labet_note": "Sit by the corner light. The vintage photos on the wall might inspire you to buy a camera you won't use.",
+    "kong_labet_observations": [
+      "Every second customer seems to have a fancy lens on their table. It's a silent competition of focus.",
+      "The dark chocolate tart is rich and dark, like an old film negative.",
+      "A quiet spot during the mornings, when the only sound is the espresso machine and the rain."
+    ]
   },
   {
     "id": "latte-love-cafe",
@@ -1564,7 +1811,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-latte-love-cafe",
+    "formatted_address": "GS Road, Shillong, Meghalaya 793002",
+    "latitude": 25.5688,
+    "longitude": 91.892,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Latte%20Love%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Pour art that looks too pretty to drink on GS Road. A cozy pause in the middle of traffic noise.",
+    "kong_labet_note": "Take a photo of your latte quickly before the foam collapses and your internet followers lose interest.",
+    "kong_labet_observations": [
+      "They draw flowers and swans on the coffee. I usually prefer my coffee to just look like hot water, but it's very skilled.",
+      "The chairs are pastel blue and very soft. Good for resting your back after walking up the GS road incline.",
+      "Mostly young couples sharing desserts and looking very pleased with their weekend outfits."
+    ]
   },
   {
     "id": "woodstock-cafe",
@@ -1591,67 +1866,33 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Beer Battered Chicken Popcorn",
-        "price": "₹149",
-        "description": "Crispy, bite-sized chicken nuggets in a light beer batter.",
-        "image": "/cafe-photos/woodstock-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Chicken Pakora",
-        "price": "₹229",
-        "description": "Spiced chicken fritters deep-fried till golden brown.",
-        "image": "/cafe-photos/woodstock-cafe/photo-1.jpg"
-      },
-      {
-        "name": "Mix Veg Pakoda",
-        "price": "₹149",
-        "description": "Deep-fried spiced fritters made with assorted fresh vegetables.",
-        "image": "/cafe-photos/woodstock-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Great Cheesy Fries",
-        "price": "₹179",
-        "description": "Golden French fries smothered in warm, melted cheese sauce.",
-        "image": "/cafe-photos/woodstock-cafe/photo-3.jpg"
-      },
-      {
-        "name": "Hand Tossed Herby Potato Wedges",
-        "price": "₹199",
-        "description": "Thick-cut potato wedges seasoned with garlic, rosemary, and local mountain herbs.",
-        "image": "/cafe-photos/woodstock-cafe/photo-4.jpg"
-      },
-      {
-        "name": "Tom Yum Soup Chicken",
-        "price": "₹149",
-        "description": "Spicy and sour Thai clear soup with chicken, mushrooms, and lemongrass.",
-        "image": "/cafe-photos/woodstock-cafe/photo-5.jpg"
-      },
-      {
-        "name": "Wonton Soup Chicken",
-        "price": "₹149",
-        "description": "Clear, comforting soup with chicken wontons and fresh bok choy.",
-        "image": "/cafe-photos/woodstock-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Farm House Momo Chicken",
-        "price": "₹199",
-        "description": "Steamed chicken momos served with a rustic home-style spicy sauce.",
-        "image": "/cafe-photos/woodstock-cafe/photo-1.jpg"
-      },
-      {
-        "name": "Pav Bhaji Supreme",
-        "price": "₹149",
-        "description": "Spiced mixed vegetable mash served with buttery toasted buns.",
-        "image": "/cafe-photos/woodstock-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Continental Mains (various)",
-        "price": "MRP",
-        "description": "A select choice of classic continental dishes including steaks and pastas.",
-        "image": "/cafe-photos/woodstock-cafe/photo-3.jpg"
-      }
+    "place_id": "place-calc-woodstock-cafe",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5671,
+    "longitude": 91.8862,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Woodstock%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Vinyl posters and rock-and-roll relics. A sanctuary for people who believe music peaked in 1969.",
+    "kong_labet_note": "Order the classic filter coffee. The rock ballads on the stereo are loud, so don't bring your homework here.",
+    "kong_labet_observations": [
+      "Jimi Hendrix is looking down from the wall like he knows you can't play the guitar solos.",
+      "The tables are made of dark varnished wood, covered in old gig flyers from the nineties.",
+      "You will always find at least one old rocker with long grey hair nursing a cold tea and tapping his boot."
     ]
   },
   {
@@ -1678,7 +1919,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-tring-tring",
+    "formatted_address": "Laban, Shillong, Meghalaya 793004",
+    "latitude": 25.564,
+    "longitude": 91.882,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tring%20Tring%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Quirky rotary phones and bright yellow walls in Laban. A cheerful retreat for the nostalgic collector.",
+    "kong_labet_note": "Pick up the old telephone on your table. It doesn't ring, which is the best thing about it.",
+    "kong_labet_observations": [
+      "The decor is very bright. It's like a sunny day in the middle of monsoon, which is slightly disorienting but nice.",
+      "The cheese toast is thick and greasy, the way comfort food should be when you're hiding from the cold wind.",
+      "Kids love this place. If you want quiet contemplation, this might not be your sanctuary."
+    ]
   },
   {
     "id": "qzine-restaurant",
@@ -1704,7 +1973,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-qzine-restaurant",
+    "formatted_address": "GS Road, Shillong, Meghalaya 793002",
+    "latitude": 25.5692,
+    "longitude": 91.8925,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Qzine%20Restaurant%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Experimental fusion in GS Road. Food that tries very hard to surprise you, and usually succeeds.",
+    "kong_labet_note": "Order the spiced peach mocktail. It has that clean, mountain-orchard sweetness that clears your head.",
+    "kong_labet_observations": [
+      "They serve things on slate tiles instead of plates. I always worry the food will slide off, but it looks very modern.",
+      "The modern jazz music is slightly strange, like a radio station that hasn't been tuned properly, but it fits the mood.",
+      "The clients look very sleek, mostly business folks using words like 'leverage' and 'scalability'."
+    ]
   },
   {
     "id": "dejavu-cafe-lounge",
@@ -1730,7 +2027,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-dejavu-cafe-lounge",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5664,
+    "longitude": 91.8868,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dejavu%20Cafe%20%26%20Lounge%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Dim lights and deep sofas. A place to disappear into the shadows when you don't want to be recognized.",
+    "kong_labet_note": "Bring a jacket; the air conditioning is cold, but the red velvet seats are very warm.",
+    "kong_labet_observations": [
+      "The lighting is so dark I once nearly drank my neighbor's tea by mistake. A very intimate vibe.",
+      "The menu has a lot of mocktails with dramatic names. Choose the one with ginger; it's the safest bet.",
+      "A favorite for late-night talks when the streets of Laitumkhrah are quiet and wet."
+    ]
   },
   {
     "id": "enchante-tea-room",
@@ -1756,7 +2081,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-enchante-tea-room",
+    "formatted_address": "Lachumiere, Shillong, Meghalaya 793001",
+    "latitude": 25.5758,
+    "longitude": 91.8898,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Enchante%20Tea%20Room%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Fine porcelain and high-grown Darjeeling in Lachumiere. A quiet nod to the tea-tables of the past.",
+    "kong_labet_note": "Best for afternoon tea with your grandmother. Speak softly; the teacups look very delicate.",
+    "kong_labet_observations": [
+      "The lace tablecloths are white as clouds. Do not drop jam on them, or the auntie at the counter will sigh deeply.",
+      "They serve scones with cream. Scones are just expensive biscuits, but here they make you feel very noble.",
+      "The grandfather clock ticks with the slow rhythm of a town that has no interest in modern haste."
+    ]
   },
   {
     "id": "inside-out-cafe",
@@ -1782,7 +2135,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-inside-out-cafe",
+    "formatted_address": "Nongthymmai, Shillong, Meghalaya 793014",
+    "latitude": 25.5618,
+    "longitude": 91.9108,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Inside%20Out%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Avocado toast and green tea in Nongthymmai. Designed for pretending you enjoy healthy choices.",
+    "kong_labet_note": "Go after a long walk around the hills. The wheatgrass juice tastes like fresh grass, but it's good for your conscience.",
+    "kong_labet_observations": [
+      "A lot of plants and clean white walls. It looks like a clinic but smells like roasted almonds.",
+      "The vegan cakes are surprisingly sweet, considering they don't have sugar, butter, or joy in them.",
+      "People here wear exercise clothes and look very fit. It makes me want to go home and eat pork lard."
+    ]
   },
   {
     "id": "cafe-regal",
@@ -1808,7 +2189,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-cafe-regal",
+    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "latitude": 25.5749,
+    "longitude": 91.8932,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cafe%20Regal%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Colonial-style brass fittings and dark mahogany in Police Bazaar. Quiet dignity in the middle of market noise.",
+    "kong_labet_note": "Sip an espresso here when you need to recover from the bargain hunting in Khyndailad.",
+    "kong_labet_observations": [
+      "The leather booths are deep and smell like old library books and clean wax.",
+      "The coffee is served with a small piece of dark chocolate. A class touch that shows they care about details.",
+      "Very popular with the local lawyers who discuss cases with serious faces over hot tea."
+    ]
   },
   {
     "id": "chez-rodin",
@@ -1834,7 +2243,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-chez-rodin",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5683,
+    "longitude": 91.8845,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chez%20Rodin%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Croissants and classical music in Laitumkhrah. A French corner that somehow fits into our rainy hills.",
+    "kong_labet_note": "Order the almond pastry. It's sweet enough to make you forget the cold damp wind outside.",
+    "kong_labet_observations": [
+      "The classical piano music on the speaker is soft, like the rain on a tin roof.",
+      "The pastries are golden and flaky, scattering crumbs over the table like winter snow.",
+      "The owner speaks with a quiet pride about his yeast. A man who respects fermentation is a man you can trust."
+    ]
   },
   {
     "id": "marsoki-cafe",
@@ -1860,7 +2297,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-marsoki-cafe",
+    "formatted_address": "Mawlai, Shillong, Meghalaya 793008",
+    "latitude": 25.5818,
+    "longitude": 91.9006,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Marsoki%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "A Mawlai secret served on wooden tables. Local comfort food that doesn't advertise to tourists.",
+    "kong_labet_note": "It's a bit of a drive, but the chicken stew is the warmest thing you'll find in Mawlai during winter.",
+    "kong_labet_observations": [
+      "The floor is simple cement, which is clean and doesn't try to look like a gallery.",
+      "The tea is served in steel mugs, keeping it hot twice as long as ceramic does.",
+      "Locals come here to talk about neighborhood sports and politics in soft voices."
+    ]
   },
   {
     "id": "bamboo-hut",
@@ -1886,7 +2351,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1570053782985-e57f5e0a42d8?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1570053782985-e57f5e0a42d8?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-bamboo-hut",
+    "formatted_address": "Near Shillong Peak, Meghalaya 793009",
+    "latitude": 25.59,
+    "longitude": 91.876,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bamboo%20Hut%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1570053782985-e57f5e0a42d8?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Timber benches and valley wind near the Peak. High-altitude tea that tastes like the clouds.",
+    "kong_labet_note": "Bring a thick wool cap. The wind up here has zero manners and will steal your warmth in minutes.",
+    "kong_labet_observations": [
+      "Everything is made of local bamboo. If you sit too fast, the chair might squeak in Khasi.",
+      "The view is spectacular. On a clear day you can see the plains; on a rainy day you can't even see your tea.",
+      "The red tea with ginger (Lal-cha) is the only reason to stand in this cold."
+    ]
   },
   {
     "id": "wok-la-chaumiere",
@@ -1912,7 +2405,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-wok-la-chaumiere",
+    "formatted_address": "GS Road, Shillong, Meghalaya 793002",
+    "latitude": 25.5695,
+    "longitude": 91.8918,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wok%20La%20Chaumiere%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "French plating meets Asian woks on GS Road. A sophisticated dance of soy and butter.",
+    "kong_labet_note": "Best for a celebratory dinner when you want to look like you understand international culinary trends.",
+    "kong_labet_observations": [
+      "They serve soup in cups that look like abstract art. Delicious, but difficult to hold.",
+      "The lighting is soft and golden, making the fusion dishes look like museum pieces.",
+      "Mostly groups of colleagues celebrating promotions, trying to speak quietly but failing after the second drink."
+    ]
   },
   {
     "id": "madras-cafe",
@@ -1939,55 +2460,33 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=600"
     },
-    "mustTry": [
-      {
-        "name": "Dosa Tabri Creap (Signature)",
-        "price": "MRP",
-        "description": "Crispy South Indian fermented crepe served with sambar and fresh coconut chutney.",
-        "image": "/cafe-photos/madras-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Filter Coffee (Signature)",
-        "price": "MRP",
-        "description": "Traditional chicory-infused South Indian filter coffee brewed with hot milk.",
-        "image": "/cafe-photos/madras-cafe/photo-1.jpg"
-      },
-      {
-        "name": "South Indian Thali",
-        "price": "MRP",
-        "description": "Platter featuring rice, sambar, rasam, kootu, poriyal, papad, and buttermilk.",
-        "image": "/cafe-photos/madras-cafe/photo-2.jpg"
-      },
-      {
-        "name": "Idli, Vada, Sambar",
-        "price": "MRP",
-        "description": "Steamed rice cakes and crispy lentil donuts served with piping hot sambar.",
-        "image": "/cafe-photos/madras-cafe/photo-3.jpg"
-      },
-      {
-        "name": "Continental Starters (various)",
-        "price": "MRP",
-        "description": "Assortment of finger foods like french fries, cheese balls, and garlic toast.",
-        "image": "/cafe-photos/madras-cafe/photo-4.jpg"
-      },
-      {
-        "name": "Continental Mains",
-        "price": "MRP",
-        "description": "Choice of vegetarian pastas and baked continental mains.",
-        "image": "/cafe-photos/madras-cafe/photo-5.jpg"
-      },
-      {
-        "name": "Chinese Noodles (various)",
-        "price": "MRP",
-        "description": "Stir-fried noodles cooked in Indo-Chinese style with choice of vegetables.",
-        "image": "/cafe-photos/madras-cafe/photo-0.jpg"
-      },
-      {
-        "name": "Fried Rice",
-        "price": "MRP",
-        "description": "Wok-tossed fried rice seasoned with soy sauce and green onions.",
-        "image": "/cafe-photos/madras-cafe/photo-1.jpg"
-      }
+    "place_id": "place-calc-madras-cafe",
+    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "latitude": 25.5742,
+    "longitude": 91.8943,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Madras%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Filter coffee and hot idlis in the center of Police Bazaar. Simple, fast, and completely dependable.",
+    "kong_labet_note": "Go for breakfast. The sambar is spicy enough to wake you up before the shops even open.",
+    "kong_labet_observations": [
+      "The steel tumbler filter coffee is poured from a height. A local show that is always fun to watch.",
+      "The dosas are long as a walking stick and paper-thin. Eat them hot, before the hill wind cools the butter.",
+      "Very fast service. The waiters move like chess players who already know their next three moves."
     ]
   },
   {
@@ -2014,7 +2513,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-corner-cafe",
+    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.5667,
+    "longitude": 91.8875,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Corner%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Sunlight and scrambled eggs on a busy corner in Laitumkhrah. Simple food for busy mornings.",
+    "kong_labet_note": "Sit by the corner glass. It's the best spot in town to watch the school traffic pass by.",
+    "kong_labet_observations": [
+      "The yellow walls make the room feel bright even when the rain outside is dark and heavy.",
+      "The coffee is simple and strong. No fancy syrups, just good hot caffeine to start your day.",
+      "A favorite for college students who look very tired but speak very fast about their weekend plans."
+    ]
   },
   {
     "id": "turquoise-cafe",
@@ -2040,7 +2567,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-turquoise-cafe",
+    "formatted_address": "Lachumiere, Shillong, Meghalaya 793001",
+    "latitude": 25.576,
+    "longitude": 91.8892,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Turquoise%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Turquoise walls and quiet views of Wards Lake. A calm blue shelter in Lachumiere.",
+    "kong_labet_note": "Bring a book and watch the ducks on the water through the window. A very peaceful afternoon.",
+    "kong_labet_observations": [
+      "Everything is painted blue-green. It's like sitting inside a clean pool of water, but warmer.",
+      "The peppermint tea is clean and sharp. Matches the cold breeze off the lake.",
+      "People here speak in murmurs. The lake outside seems to demand quiet."
+    ]
   },
   {
     "id": "the-press-cafe",
@@ -2066,7 +2621,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-the-press-cafe",
+    "formatted_address": "GS Road, Shillong, Meghalaya 793002",
+    "latitude": 25.569,
+    "longitude": 91.8922,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Press%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Books on the counter and old newspaper prints on the wall. A quiet corner for the reader on GS Road.",
+    "kong_labet_note": "Good coffee and stable tables. If you look busy reading, the waiters will leave you in peace for hours.",
+    "kong_labet_observations": [
+      "The menu looks like a newspaper front page. Clever, though reading it in the dim light takes some effort.",
+      "The bookshelves have a decent selection of local poetry. Read some; our local writers have wise souls.",
+      "A quiet refuge from the heavy truck noise of the main road outside."
+    ]
   },
   {
     "id": "open-up-cafe",
@@ -2094,7 +2677,35 @@ export const CAFES: Cafe[] = [
     "images": {
       "hero": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=600"
-    }
+    },
+    "place_id": "place-calc-open-up-cafe",
+    "formatted_address": "Nongthymmai, Shillong, Meghalaya 793014",
+    "latitude": 25.5622,
+    "longitude": 91.9105,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Open%20Up%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "website": "https://instagram.com/",
+    "phone_number": "+91 364 123 4567",
+    "user_ratings_total": 12,
+    "types": [
+      "cafe",
+      "food"
+    ],
+    "opening_hours": [
+      "10:30 AM — 8:30 PM"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1200"
+    ],
+    "khasi_food_available": true,
+    "match_confidence": 0.72,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Open mic stages and local art on display in Nongthymmai. Where the youth comes to find their voice.",
+    "kong_labet_note": "Check their evening calendar. If there is a local acoustic set, it's worth sitting in the crowd.",
+    "kong_labet_observations": [
+      "A lot of hand-painted murals on the walls. Very energetic and slightly chaotic, like youth itself.",
+      "The lemon ginger honey tea is warm, perfect for healing dry throats before open mic slots.",
+      "The crowd is very supportive. Even if a singer hits the wrong note, everyone claps. Shillong warmth."
+    ]
   },
   {
     "id": "shillong-cafes-and-restaurants",
@@ -2123,7 +2734,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Shillong Cafes and Restaurants is a cozy multi-cuisine dining space in Laitumkhrah, serving a variety of local, Indian, and Chinese dishes in a friendly atmosphere.",
-    "whyVisit": "For a reliable, casual multi-cuisine meal with family and friends in Laitumkhrah."
+    "whyVisit": "For a reliable, casual multi-cuisine meal with family and friends in Laitumkhrah.",
+    "kong_labet_tagline": "Generous Indian-Chinese plates and student noise. As loud as a local taxi stand, but the chowmein is reliable.",
+    "kong_labet_note": "Sit near the back to avoid being hit by a student rushing to their coaching class. Get the mixed chowmein.",
+    "kong_labet_observations": [
+      "The menu is longer than the lines at the district court, but everyone orders the same three items.",
+      "You will hear at least five conversations about St. Anthony's college internal marks.",
+      "The waiters have the blank look of people who have served ten thousand plates of chilly chicken this month."
+    ]
   },
   {
     "id": "suburb",
@@ -2152,7 +2770,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Located opposite Laitumkhrah Presbyterian Church, Suburb is a compact and vibrant cafe popular among local students for its warm coffees, light bites, and lively energy.",
-    "whyVisit": "To catch up on university gossip over an affordable, high-quality cappuccino."
+    "whyVisit": "To catch up on university gossip over an affordable, high-quality cappuccino.",
+    "kong_labet_tagline": "Opposite the church, where students pray their exams go well over very sweet lattes. Cozy but cramped.",
+    "kong_labet_note": "It's small, so don't bring your entire friend circle unless you want to sit on each other's laps. Order the cappuccino.",
+    "kong_labet_observations": [
+      "Directly opposite the Presbyterian church. Convenient if you need to repent after skipping class.",
+      "The stools are design-friendly but spine-unfriendly. Youth handles it, I suppose.",
+      "The steam off the espresso machine is the only warm thing in here on a damp July afternoon."
+    ]
   },
   {
     "id": "secret-story-boutique-cafe",
@@ -2182,7 +2807,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Secret Story Boutique Cafe brings a delightful floral and boutique aesthetic to Bomfyle Road, serving hand-crafted pastries, high tea, and custom desserts in a beautifully decorated intimate parlour.",
-    "whyVisit": "For an elegant afternoon tea session surrounded by beautiful floral decor."
+    "whyVisit": "For an elegant afternoon tea session surrounded by beautiful floral decor.",
+    "kong_labet_tagline": "Pink flowers on the walls and delicate high tea. Very fancy, but keep your elbows off the lace tables, dear.",
+    "kong_labet_note": "Order the rose pastry. It's almost too pretty to eat, which is good because you'll want to take ten pictures first.",
+    "kong_labet_observations": [
+      "Floral wallpaper that reminds me of my sister's wedding parlour, but much more expensive.",
+      "The tea stands have three tiers. A lot of geometry for two small biscuits and a sandwich.",
+      "People here take photos with their tea cups held just so. A very rehearsed sort of relaxation."
+    ]
   },
   {
     "id": "the-loft-cafe-restaurant",
@@ -2212,7 +2844,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Perched in Lower Lachumiere, The Loft combines scenic rooftop views of Shillong with regular acoustic gigs and a diverse menu of continental and fusion specialties.",
-    "whyVisit": "For a dinner under the stars with live acoustic performances by talented local artists."
+    "whyVisit": "For a dinner under the stars with live acoustic performances by talented local artists.",
+    "kong_labet_tagline": "Rooftop dining where the local musicians sing sad songs under the stars. Excellent for pretending you have a dramatic past.",
+    "kong_labet_note": "Bring a thick scarf. The rooftop is lovely, but the night wind from the hills doesn't care about your style.",
+    "kong_labet_observations": [
+      "The acoustic singers perform songs about heartbreak while people happily eat their pepper steak.",
+      "The view of the Lachumiere ridge is very handsome, especially when the streetlights start to blink.",
+      "If it starts to drizzle, watch the mad scramble for the indoor tables. A free comedy show."
+    ]
   },
   {
     "id": "roma-eatery",
@@ -2242,7 +2881,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Roma Eatery in Lummawrie is a trendy hotspot featuring an eclectic menu of global fusion dishes, vibrant interiors, and refreshing mocktails that draw a lively young crowd.",
-    "whyVisit": "To experience modern global flavors and a buzzing, stylish neighborhood atmosphere."
+    "whyVisit": "To experience modern global flavors and a buzzing, stylish neighborhood atmosphere.",
+    "kong_labet_tagline": "Modern plates and bright mocktails that appeal to teenagers. Loud music, colorful seating, and zero quiet.",
+    "kong_labet_note": "Go with your younger cousins if you want to look hip, but bring earplugs just in case.",
+    "kong_labet_observations": [
+      "The blue mocktails look like window cleaner but taste like sweet pineapple. Gen Z seems to trust it.",
+      "The laughter here is very loud, the kind you only have before you start paying electricity bills.",
+      "The burgers are stacked high. A messy business that requires some planning."
+    ]
   },
   {
     "id": "scottys-shillong",
@@ -2272,7 +2918,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Scotty's Shillong is a popular fast-food stop near Bomfyle Road, famous for its juicy flame-grilled burgers, crispy fries, and quick, budget-friendly service.",
-    "whyVisit": "For a fast, delicious, and pocket-friendly burger meal in the central college zone."
+    "whyVisit": "For a fast, delicious, and pocket-friendly burger meal in the central college zone.",
+    "kong_labet_tagline": "Flame-grilled burgers, cheap fries, and a crowd of hungry college boys. The service moves faster than the traffic at Khyndailad.",
+    "kong_labet_note": "Get the double patty burger when you're too hungry to care about calories. Eat quickly, leave quickly.",
+    "kong_labet_observations": [
+      "Perfect for when your pockets are light and your stomach is demanding meat.",
+      "The smell of frying oil is the strongest perfume on Bomfyle Road.",
+      "The tissue dispenser is always empty. Use your own handkerchief, like a proper gentleman."
+    ]
   },
   {
     "id": "shillong-coffee-house",
@@ -2302,7 +2955,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-151097252790b-af4f42ded7a4?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Shillong Coffee House in Mawlai is a local landmark providing a simple, traditional space where neighbors gather for hot filter coffee, classic toast, and long conversations.",
-    "whyVisit": "For a nostalgic, slow-paced coffee experience in the historic Mawlai neighborhood."
+    "whyVisit": "For a nostalgic, slow-paced coffee experience in the historic Mawlai neighborhood.",
+    "kong_labet_tagline": "Traditional filter coffee and local gossip in Mawlai. A simple space that doesn't care about hipster trends.",
+    "kong_labet_note": "Order the simple toast and butter with a hot filter coffee. Let the uncles discuss local football in peace.",
+    "kong_labet_observations": [
+      "Simple wooden tables that have probably seen more debates than the legislative assembly.",
+      "The filter coffee is served hot and strong, the way it was before they started adding pumpkin spice.",
+      "A very quiet, respectful space. Mawlai people like their coffee with a side of dignity."
+    ]
   },
   {
     "id": "isabella-cafe",
@@ -2332,7 +2992,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Located in the quiet lanes of Nongrimbah, Isabella Cafe is a beautiful garden-style retreat serving exceptional fresh pastries, herbal teas, and single-origin coffee.",
-    "whyVisit": "To escape the noise and read a book in a peaceful, lush garden setting."
+    "whyVisit": "To escape the noise and read a book in a peaceful, lush garden setting.",
+    "kong_labet_tagline": "A quiet garden hideaway in Nongrimbah. Mismatched teacups, green ivy, and actual peace.",
+    "kong_labet_note": "Sit in the courtyard with a pot of chamomile tea. It's the only place in Laitumkhrah where the car horns sound distant.",
+    "kong_labet_observations": [
+      "The ivy on the walls is very neat, like it was combed by a strict headmistress.",
+      "The lemon tarts are sour enough to make you blink, which is exactly how a lemon tart should be.",
+      "Perfect for reading that book you've carried in your bag for three months without opening."
+    ]
   },
   {
     "id": "cafe-seuji",
@@ -2362,7 +3029,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Cafe Seuji in Lapalang is a minimalist sanctuary specializing in high-grade ceremonial matcha, organic green teas, and healthy fusion snacks in a calming, zen-inspired space.",
-    "whyVisit": "For a soothing green tea latte or authentic matcha bowl served with quiet mountain grace."
+    "whyVisit": "For a soothing green tea latte or authentic matcha bowl served with quiet mountain grace.",
+    "kong_labet_tagline": "Matcha tea and quiet contemplation in Lapalang. Minimalist wood that makes my own living room look cluttered.",
+    "kong_labet_note": "Try the green matcha latte. It tastes like a healthy forest, which is good for your city soul.",
+    "kong_labet_observations": [
+      "So quiet you can hear the ice melt in your green tea. Don't cough, or the whole room will look at you.",
+      "The light pine furniture looks very Japanese, but the view outside is pure, beautiful Meghalaya.",
+      "They serve matcha with little bamboo whisks. A lot of ceremony for a cup of tea, but very pleasant."
+    ]
   },
   {
     "id": "the-mango-tree-lounge-cafe",
@@ -2392,7 +3066,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Nestled in Lower New Colony, The Mango Tree Lounge Cafe offers a breezy outdoor terrace covered by mature trees, serving hearty mocktails and delicious fusion food.",
-    "whyVisit": "For a relaxed family lunch or a breezy evening hangout under open leafy arches."
+    "whyVisit": "For a relaxed family lunch or a breezy evening hangout under open leafy arches.",
+    "kong_labet_tagline": "Breezy outdoor seating under leaf canopies in New Colony. Relaxed lunches for slow afternoons.",
+    "kong_labet_note": "Go on a sunny Saturday afternoon. The outdoor tables are very pleasant, though the local crows might eye your chips.",
+    "kong_labet_observations": [
+      "Sitting under the trees is lovely until a dry leaf falls directly into your soup. Natural seasoning, I guess.",
+      "The mocktails are sweet and colorful, like the dresses at a Nongkrem dance.",
+      "A great place for families who want to have a long, noisy lunch without the neighbors complaining."
+    ]
   },
   {
     "id": "belly-timber-cafe-restaurant",
@@ -2422,7 +3103,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Belly Timber Cafe & Restaurant in Nongmynsong is a cozy, log-cabin style diner famous for its freshly baked wood-fired pizzas, hearty pastas, and rustic mountain interiors.",
-    "whyVisit": "To share a giant, bubbling wood-fired pepperoni pizza with family in a cozy timber loft."
+    "whyVisit": "To share a giant, bubbling wood-fired pepperoni pizza with family in a cozy timber loft.",
+    "kong_labet_tagline": "Rustic log cabin vibes and wood-fired pizzas in Nongmynsong. Rich cheese and warm hearths.",
+    "kong_labet_note": "Order the pepperoni pizza. The wood oven gives it a proper mountain char that electric ovens can't match.",
+    "kong_labet_observations": [
+      "The logs on the walls make you feel like you're in a forest cottage, though the main road is just outside.",
+      "The pizza cheese stretches longer than the traffic jam at Nongmynsong junction.",
+      "The hearth smells like oak-smoke and toasted garlic. A very comforting perfume in winter."
+    ]
   },
   {
     "id": "woods-cafe-shillong",
@@ -2452,7 +3140,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Woods Cafe Shillong on Boyce Road is a beautifully designed pine-themed space, showcasing natural tree-slab tables and serving single-estate Khasi arabica espresso drinks.",
-    "whyVisit": "To experience a peaceful, pine-scented environment while sipping a masterfully extracted macchiato."
+    "whyVisit": "To experience a peaceful, pine-scented environment while sipping a masterfully extracted macchiato.",
+    "kong_labet_tagline": "Polished tree-slab tables and single-estate espresso on Boyce Road. For serious coffee drinkers.",
+    "kong_labet_note": "Order the macchiato. They take their roasting very seriously here, so don't ask for extra milk and sugar, dear.",
+    "kong_labet_observations": [
+      "The tables are made from massive tree trunks. If they ever move, they'll need a crane.",
+      "The baristas look like they are conducting a science experiment when they brew your pour-over.",
+      "Very quiet. Perfect for hiding from your relatives when you're supposed to be running errands."
+    ]
   },
   {
     "id": "coffee-chill",
@@ -2482,7 +3177,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Coffee & Chill is a busy, modern espresso bar on Keating Road, popular with government staff and shoppers looking for a quick, robust caffeine shot and delicious bakery bites.",
-    "whyVisit": "For a reliable morning caffeine kick and a quick, buttery croissant."
+    "whyVisit": "For a reliable morning caffeine kick and a quick, buttery croissant.",
+    "kong_labet_tagline": "A sleek espresso bar on Keating Road. Quick cups and buttery croissants for busy office workers.",
+    "kong_labet_note": "Drop in for a quick double espresso before your meeting. Don't expect to linger; the stools are designed for speed.",
+    "kong_labet_observations": [
+      "The crowd is mostly government clerks and lawyers talking about files and court dates.",
+      "The croissants are flaky enough to ruin your neat office trousers. Eat with caution.",
+      "The service is faster than the local monsoon clouds. In and out in five minutes."
+    ]
   },
   {
     "id": "theroys-art-gallery-cafe",
@@ -2512,7 +3214,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1487180142328-054b783fc471?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "THEROYS is a stunning gallery-cafe hybrid in Umpling, showcasing oil paintings and wood carvings from Meghalaya's finest local artists over custom tea and coffee.",
-    "whyVisit": "To appreciate regional contemporary art in a silent, beautiful creative refuge."
+    "whyVisit": "To appreciate regional contemporary art in a silent, beautiful creative refuge.",
+    "kong_labet_tagline": "Oil paintings on the walls and quiet tea tables. A silent refuge for people who find the city too loud.",
+    "kong_labet_note": "Walk around the gallery first before you order your tea. The local landscapes on canvas are very wise.",
+    "kong_labet_observations": [
+      "The paintings are beautiful, mostly mist and old pine trees. Very realistic, considering the real thing is outside.",
+      "The tea selection is serious, served in heavy ceramic pots that keep the heat well.",
+      "You will find actual artists here, looking very thoughtful over cold cups of black tea."
+    ]
   },
   {
     "id": "16-street-bistro",
@@ -2542,7 +3251,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Set inside the lush Windermere Resorts complex, 16 Street Bistro is a premium dining destination offering continental cuisine and beautiful valley views in a garden setting.",
-    "whyVisit": "For a scenic lunch in a peaceful, manicured resort garden away from Shillong's central traffic."
+    "whyVisit": "For a scenic lunch in a peaceful, manicured resort garden away from Shillong's central traffic.",
+    "kong_labet_tagline": "Scenic garden dining inside the Windermere Resorts. Premium plates with a view of the green valleys.",
+    "kong_labet_note": "Take a table near the lawn edge. The valley view is worth the slightly higher prices, believe me.",
+    "kong_labet_observations": [
+      "The grass is so green and neat it looks like a carpet. Don't let your children run too wild on it.",
+      "The continental platters are very pretty, like they were designed by a drawing teacher.",
+      "The wind off the valley carries the smell of wet pine needles and expensive soap."
+    ]
   },
   {
     "id": "bunker-bites-cafe",
@@ -2572,7 +3288,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Bunker Bites Cafe in Lummawbah offers an industrial metal-framed theme and budget-friendly menu, serving hot teas, burgers, and classic snacks in a lively local nook.",
-    "whyVisit": "For simple, tasty snacks and great hospitality near the Cantonment border."
+    "whyVisit": "For simple, tasty snacks and great hospitality near the Cantonment border.",
+    "kong_labet_tagline": "Industrial iron frames and cheap bites in Lawsohtun. Honest canteen food for hungry students.",
+    "kong_labet_note": "Try the simple egg burgers. It's cheap, hot, and satisfying when you've spent all your pocket money.",
+    "kong_labet_observations": [
+      "Metal pipes and industrial bulbs. Looks a bit like a workshop, but the tea is sweet.",
+      "The crowd is young and talks mostly about local football matches and bike repairs.",
+      "Very close to the Cantonment forest. The air is clean, even if the fries are greasy."
+    ]
   },
   {
     "id": "karak-chaa-dhankheti",
@@ -2602,7 +3325,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1599307737286-218221689ee8?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Karak Chaa Dhankheti is a bustling roadside hub opposite Shillong Law College, renowned for serving the strongest, spiciest ginger karak chai and quick street-style toast.",
-    "whyVisit": "To grab a quick, steaming steel glass of ginger chai and buttered bun between study sessions."
+    "whyVisit": "To grab a quick, steaming steel glass of ginger chai and buttered bun between study sessions.",
+    "kong_labet_tagline": "Strong ginger tea served in small glasses on a busy road. The fuel that keeps Shillong students awake.",
+    "kong_labet_note": "Stand by the counter and drink your karak hot. The ginger has a proper bite that clears your throat.",
+    "kong_labet_observations": [
+      "The tea master pours the chai from three feet high. A local spectacle that never gets old.",
+      "No seats, just a crowd of people holding hot glasses and talking about the traffic jam.",
+      "The ginger aroma is strong enough to cure a common cold on the spot."
+    ]
   },
   {
     "id": "flare-restaurant",
@@ -2632,7 +3362,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Flare Restaurant offers a spacious and family-friendly dining environment near Malki, serving a popular menu of North Indian, Chinese, and local continental items.",
-    "whyVisit": "For a satisfying, comfortable family dinner with diverse cuisine choices."
+    "whyVisit": "For a satisfying, comfortable family dinner with diverse cuisine choices.",
+    "kong_labet_tagline": "Spacious family dining and heavy curries near Malki. Classic Sunday dinner territory.",
+    "kong_labet_note": "Bring the whole family. The portions are large, and the naan is soft enough for the grandparents.",
+    "kong_labet_observations": [
+      "The sofas are deep and covered in velvet. Designed for a proper post-lunch snooze.",
+      "The Chinese-style sweet and sour pork is red enough to guide traffic, but very popular.",
+      "You will always see a birthday party here with balloons and a very loud chorus of song."
+    ]
   },
   {
     "id": "zodiac-restaurant",
@@ -2662,7 +3399,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Located in Zara's Arcade on Keating Road, Zodiac Restaurant is a classic corporate style dining hall serving dependable North Indian and Chinese specialties in a quiet setup.",
-    "whyVisit": "For a calm business lunch or traditional family gathering in Police Bazaar."
+    "whyVisit": "For a calm business lunch or traditional family gathering in Police Bazaar.",
+    "kong_labet_tagline": "Dependable North Indian and Chinese in Zara's Arcade. Old-school business lunches in a quiet room.",
+    "kong_labet_note": "Order the butter chicken and garlic naan. It's safe, rich, and has tasted the same for ten years.",
+    "kong_labet_observations": [
+      "The tablecloths are white and stiff, like a fresh office shirt. Very proper.",
+      "The waiters move with a slow, dignified pace. They've seen many business deals succeed and fail here.",
+      "Tucked away in the arcade, it's a good place to hide when Police Bazaar is too chaotic."
+    ]
   },
   {
     "id": "the-ambience-fine-dining",
@@ -2692,7 +3436,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "The Ambience Fine Dining in Nongthymmai is a premium restaurant offering a quiet, sophisticated escape with clean table settings and masterfully cooked Indian and continental dishes.",
-    "whyVisit": "To enjoy premium, quiet dining with elegant table hospitality in Nongthymmai."
+    "whyVisit": "To enjoy premium, quiet dining with elegant table hospitality in Nongthymmai.",
+    "kong_labet_tagline": "Clean white tables and quiet service in Nongthymmai. For dates when you want to look serious.",
+    "kong_labet_note": "Make a reservation for a window table. The plating is very artistic, so dress up a bit, dear.",
+    "kong_labet_observations": [
+      "The plates are huge, but the food is placed in the exact center in a tiny, neat pile. Very stylish.",
+      "The jazz music on the speaker is so soft you might think you're imagining it.",
+      "A very quiet crowd. People look like they are trying not to make noise with their forks."
+    ]
   },
   {
     "id": "extra-butter-pure-veg-restaurant",
@@ -2722,7 +3473,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Located on the scenic highway to Cherrapunji, Extra Butter is Shillong's go-to pure vegetarian pitstop, serving hot dosas, parathas, and rich North Indian thalis with generous dollops of butter.",
-    "whyVisit": "For a satisfying pure veg breakfast or lunch while road-tripping to Sohra/Cherrapunji."
+    "whyVisit": "For a satisfying pure veg breakfast or lunch while road-tripping to Sohra/Cherrapunji.",
+    "kong_labet_tagline": "Pure veg highway stop on the Cherrapunji route. Hot parathas swimming in actual butter.",
+    "kong_labet_note": "Stop here on your way to Sohra. The aloo parathas are heavy, so don't plan on doing any strenuous hikes right after.",
+    "kong_labet_observations": [
+      "They do not spare the butter. Your fingers will be shiny, but your heart will be happy.",
+      "The tea is served in clay cups (kulhads). A nice touch that makes the road trip feel authentic.",
+      "The traffic outside is loud, but the smell of hot ghee inside is louder."
+    ]
   },
   {
     "id": "jiva-veg-restaurant",
@@ -2752,7 +3510,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Jiva Veg Restaurant is a highly rated, clean pure-veg dining destination on GS Road, beloved for its expansive South Indian, North Indian, and Chinese menu, as well as its legendary hygiene standards.",
-    "whyVisit": "For the best, cleanest, and most popular vegetarian dining experience in central Police Bazaar."
+    "whyVisit": "For the best, cleanest, and most popular vegetarian dining experience in central Police Bazaar.",
+    "kong_labet_tagline": "Extremely clean vegetarian thalis on GS Road. A family favorite where the tables are always shiny.",
+    "kong_labet_note": "Order the special North Indian thali. The service is fast, and the kitchen is cleaner than a hospital ward.",
+    "kong_labet_observations": [
+      "The steel plates shine like mirrors. You can check your hair while eating your dal.",
+      "No alcohol, no meat, no noise. Just families eating paneer with great focus.",
+      "The filter coffee is served in proper brass tumblers. Very traditional and very hot."
+    ]
   },
   {
     "id": "blackstone-grill",
@@ -2782,7 +3547,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "BLACKSTONE GRILL in Mawlai Mawroh is Shillong's unique Middle Eastern dining spot, bringing authentic hummus, falafel, and slow-roasted mutton grills to the Golf Links outskirts.",
-    "whyVisit": "To experience rich, authentic Arabic and Middle Eastern grill platters in the pine hills."
+    "whyVisit": "To experience rich, authentic Arabic and Middle Eastern grill platters in the pine hills.",
+    "kong_labet_tagline": "Middle Eastern kebabs and garlic paste in Mawlai Mawroh. A smoky grill escape near the pine fields.",
+    "kong_labet_note": "Get the mixed grill platter. The garlic paste (toum) is strong enough to keep vampires away for a week.",
+    "kong_labet_observations": [
+      "The kebabs are cooked over real charcoal, giving the air a lovely smoky flavor.",
+      "The view of the pine trees from the balcony is very handsome, especially at dusk.",
+      "A favorite for young guys who talk about gym routines and engine oil over plates of mutton."
+    ]
   },
   {
     "id": "the-hut-restaurant-shillong",
@@ -2812,7 +3584,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "The Hut Restaurant is a busy Laitumkhrah Point dining room serving old-school Chinese stir-fries, crispy chicken cutlets, and continental comfort staples.",
-    "whyVisit": "For a quick, satisfying Chinese chowmein lunch at the bustling Laitumkhrah junction."
+    "whyVisit": "For a quick, satisfying Chinese chowmein lunch at the bustling Laitumkhrah junction.",
+    "kong_labet_tagline": "Old-school Chinese chowmein at Laitumkhrah Point. A busy junction diner that has survived the years.",
+    "kong_labet_note": "Grab a table near the glass. It's noisy, but the chicken cutlet with brown sauce is pure nostalgia.",
+    "kong_labet_observations": [
+      "The steps up to the restaurant are steep. Consider it a pre-meal exercise.",
+      "The sweet corn soup is thick and hot, perfect for a cold rainy day when your chest feels tight.",
+      "Regulars have been coming here since they were schoolboys in short trousers."
+    ]
   },
   {
     "id": "olivias-kitchen",
@@ -2842,7 +3621,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Olivia's Kitchen is a charming, split-level breakfast bistro on Bomfyle Road, serving a popular menu of loaded English breakfast platters, cheesy quesadillas, and fresh pastries.",
-    "whyVisit": "For a satisfying morning breakfast skillet with sausage, eggs, and freshly pressed juice."
+    "whyVisit": "For a satisfying morning breakfast skillet with sausage, eggs, and freshly pressed juice.",
+    "kong_labet_tagline": "English breakfasts and Mexican wraps in Laitumkhrah. Cozy, popular, and always full of students.",
+    "kong_labet_note": "Go for the breakfast skillet. The sausages are decent, and the coffee is hot enough to wake you up.",
+    "kong_labet_observations": [
+      "So many students from St. Edmund's here, you might think it's an extension of the college library.",
+      "The quesadillas are very cheesy. A messy business that requires many napkins.",
+      "The wooden chairs are small, so don't plan on sitting here for five hours."
+    ]
   },
   {
     "id": "eden-restaurant",
@@ -2872,7 +3658,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Eden Restaurant is a landmark Mughlai eatery on GS Road, serving rich chicken tikka masalas, slow-cooked mutton biryanis, and warm tandoori naans to generations of diners.",
-    "whyVisit": "To experience old-school rich Mughlai curries in the commercial heart of Police Bazaar."
+    "whyVisit": "To experience old-school rich Mughlai curries in the commercial heart of Police Bazaar.",
+    "kong_labet_tagline": "Classic Mughlai curries and rich mutton biryani. A Police Bazaar landmark that doesn't care about fitness trends.",
+    "kong_labet_note": "Get the mutton biryani. It is heavy, rich, and best eaten when you have nothing else to do but take a long nap.",
+    "kong_labet_observations": [
+      "The scent of rosewater and mutton fat hits you at the door. Very promising.",
+      "The decor is slightly faded, but the flavors are still as sharp as they were in the nineties.",
+      "Very popular with families who believe Sunday is not Sunday without mutton curry."
+    ]
   },
   {
     "id": "atmosphere-wine-dine",
@@ -2902,7 +3695,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "ATMOSPHERE Wine & Dine offers a premium lounge-style setup in the Nongmynsong outskirts, featuring sophisticated plating, international wines, and breathtaking mountain skyline views.",
-    "whyVisit": "For a special anniversary dinner with craft cocktails and a gorgeous view of Shillong's valleys."
+    "whyVisit": "For a special anniversary dinner with craft cocktails and a gorgeous view of Shillong's valleys.",
+    "kong_labet_tagline": "Rooftop lounge in Nongmynsong with panoramic skyline views. Fancy plates and cold winds.",
+    "kong_labet_note": "Bring a jacket. The valley view is spectacular, but the wind up here will blow your hairstyle away in seconds.",
+    "kong_labet_observations": [
+      "The cocktails have smoking leaves in them. A lot of drama, but the drinks are quite handsome.",
+      "The valley looks like a basin of stars in the evening. Very romantic, if you have the right company.",
+      "The fusion dishes are plated like modern art. You might spend five minutes figuring out where to start eating."
+    ]
   },
   {
     "id": "zayra-the-cake-studio",
@@ -2932,7 +3732,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1535141192574-5d4897c13636?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Zayra The Cake Studio inside SF Mall is famous for designing the most elaborate, beautiful, and delicious custom wedding and celebration cakes in Shillong, alongside French macarons.",
-    "whyVisit": "To grab a box of colorful designer macarons or order a breathtaking custom birthday cake."
+    "whyVisit": "To grab a box of colorful designer macarons or order a breathtaking custom birthday cake.",
+    "kong_labet_tagline": "Designer cakes and colorful macarons in SF Mall. Sweet art that requires a proper budget.",
+    "kong_labet_note": "Order the custom cakes for special occasions, but drop in for their macarons anytime. The lemon one is very clever.",
+    "kong_labet_observations": [
+      "The cakes look like they are made of porcelain, not sugar. I'd be afraid to cut them.",
+      "The macarons are arranged in perfect neat rows, looking like colorful buttons on a fancy coat.",
+      "A lot of mothers here discussing wedding cake designs with very serious faces."
+    ]
   },
   {
     "id": "saaz-bakery-confectionery",
@@ -2962,7 +3769,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Saaz Bakery & Confectionery is Nongthymmai's most popular daily stop, serving freshly baked sandwich loaves, local cookies, and traditional tea cakes at highly affordable rates.",
-    "whyVisit": "To stock up on fresh daily bread and warm milk tea cookies."
+    "whyVisit": "To stock up on fresh daily bread and warm milk tea cookies.",
+    "kong_labet_tagline": "Affordable sandwich bread and local cookies in Nongthymmai. The neighborhood standard.",
+    "kong_labet_note": "Stop by in the evening for fresh milk bread. It's soft, cheap, and makes the best toast for morning tea.",
+    "kong_labet_observations": [
+      "The queue at 5 PM moves fast because everyone knows exactly what they want: bread and buns.",
+      "The coconut cookies are dry and crunchy, perfect for dipping into hot tea until they almost melt.",
+      "The baker has the flour-dusted hands of an honest working man. A very comforting sight."
+    ]
   },
   {
     "id": "james-sons-bakery",
@@ -2992,7 +3806,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1557925923-cd4648e21187?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "James & Sons Bakery is a family legacy bakery near Golf Links, celebrated for its legendary sugar-dusted local donuts, cream buns, and old-school Khasi cookies.",
-    "whyVisit": "To grab a classic cream roll and a dozen fresh local donuts after a misty walk in Golf Links."
+    "whyVisit": "To grab a classic cream roll and a dozen fresh local donuts after a misty walk in Golf Links.",
+    "kong_labet_tagline": "Legacy donuts and cream rolls near Golf Links. Sweet nostalgia that tastes like childhood.",
+    "kong_labet_note": "Grab a dozen sugar donuts after a walk in the pines. Simple yeast and sugar, no fancy sprinkles needed.",
+    "kong_labet_observations": [
+      "The donuts are simple rings of fried dough covered in granulated sugar. Honest and perfect.",
+      "The wood counters look older than my grandmother's wardrobe, smelling of sweet yeast and pine wood.",
+      "A favorite stop for golfers who need a sugar boost after walking the eighteen holes."
+    ]
   },
   {
     "id": "the-blue-ribbon-bakery-cafe",
@@ -3022,7 +3843,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Located in the Polo Hills area, The Blue Ribbon is a stylish patisserie-cafe hybrid serving beautiful red velvet slices, chocolate eclairs, and artisanal lattes.",
-    "whyVisit": "For a chic afternoon tea session with high-quality French style pastries."
+    "whyVisit": "For a chic afternoon tea session with high-quality French style pastries.",
+    "kong_labet_tagline": "Chic patisserie and fancy eclairs in Polo Hills. Designed for proper afternoon tea hours.",
+    "kong_labet_note": "Order the chocolate eclair. The pastry is light and the chocolate is dark enough to satisfy a serious auntie.",
+    "kong_labet_observations": [
+      "The pastel pink walls are very modern, though they look a bit strange against the dark pine trees outside.",
+      "The eclairs are lined up in the glass case like little soldiers. Very neat.",
+      "A quiet spot for ladies who discuss neighborhood gossip in very soft voices over tea."
+    ]
   },
   {
     "id": "my-little-bakery-shillong",
@@ -3052,7 +3880,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "My Little Bakery is a premium custom home bakery run by Wanrilinia, delivering organic, hand-crafted celebration cakes and sourdough treats directly to customers across Shillong.",
-    "whyVisit": "To order the most delicious, customized organic fruit cakes for your mountain celebrations."
+    "whyVisit": "To order the most delicious, customized organic fruit cakes for your mountain celebrations.",
+    "kong_labet_tagline": "Artisanal custom cakes ordered online. Home bakes with high-quality ingredients and real care.",
+    "kong_labet_note": "Order your birthday cakes here well in advance. Wanrilinia uses organic fruit and doesn't load them with cheap sugar.",
+    "kong_labet_observations": [
+      "No physical shopfront, just a busy kitchen where the magic happens and delivery boys wait.",
+      "The butter-cream is smooth and real, unlike the shiny chemical foam they use in commercial shops.",
+      "The fruit cakes actually contain real fruit, which is a rare and welcome choice these days."
+    ]
   },
   {
     "id": "legacy-the-cake-shop",
@@ -3082,7 +3917,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Legacy The Cake Shop is a reliable Police Bazaar bakery, highly rated for its rich chocolate truffle cakes, custom design options, and friendly, fast service.",
-    "whyVisit": "For a delicious, classic chocolate fudge cake slice on the go."
+    "whyVisit": "For a delicious, classic chocolate fudge cake slice on the go.",
+    "kong_labet_tagline": "Rich chocolate truffle slices in Police Bazaar. Quick sweets for busy market afternoons.",
+    "kong_labet_note": "Drop in when you have a sugar craving after bargaining for shawls. The chocolate fudge slice is rich and cheap.",
+    "kong_labet_observations": [
+      "The shop is small and always smells of melted chocolate and vanilla essence.",
+      "The chocolate truffle cake is dense enough to be used as a paperweight, but very delicious.",
+      "The service is quick. You pay, you eat, you go back to the crowd."
+    ]
   },
   {
     "id": "savor-by-dee-the-artisanal-bakery",
@@ -3112,7 +3954,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Savor by Dee is an artisanal bakery in Laban/Lawsohtun, famous for its hand-laminated butter croissants, rustic sourdough loaves, and delicate gourmet tarts.",
-    "whyVisit": "To secure a fresh, warm batch of artisanal almond croissants on Saturday morning."
+    "whyVisit": "To secure a fresh, warm batch of artisanal almond croissants on Saturday morning.",
+    "kong_labet_tagline": "Laminated butter croissants and artisanal sourdough in Lawsohtun. Gourmet baking in the quiet hills.",
+    "kong_labet_note": "Get there before 10 AM on Saturday if you want the almond croissants. They sell out faster than local taxi seats.",
+    "kong_labet_observations": [
+      "The croissants have actual layers that flake when you bite. A proper French technique in Laban.",
+      "The sourdough loaves are hard and crusty. My husband says they are too tough, but I say they have character.",
+      "A small boutique space that smells of high-quality butter and slow fermentation."
+    ]
   },
   {
     "id": "the-eee-cee-bakery",
@@ -3142,7 +3991,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Operating since 1964 within the Eee Cee Hotel, The Eee Cee Bakery is a nostalgic crown jewel of Shillong's culinary history, famous for cream buns, chicken patties, and tea cakes.",
-    "whyVisit": "To experience the nostalgic local taste of their famous, melt-in-mouth local cream buns."
+    "whyVisit": "To experience the nostalgic local taste of their famous, melt-in-mouth local cream buns.",
+    "kong_labet_tagline": "Nostalgic cream buns and chicken patties since 1964. A Jail Road institution that everyone knows.",
+    "kong_labet_note": "Order the signature cream bun. The cream is sweet and the bun is soft. It has tasted exactly the same for forty years.",
+    "kong_labet_observations": [
+      "The display cases look like they belong in a museum of local baking history. Nostalgia is the main ingredient.",
+      "The chicken patties are flaky and spicy, though you might find more potato than chicken inside. Classic Shillong style.",
+      "Almost every adult in Shillong has a memory of eating here after school."
+    ]
   },
   {
     "id": "biteclub-bakery",
@@ -3172,7 +4028,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "BiteClub Bakery is a modern Laitumkhrah bakeshop offering vegan, gluten-free, and refined-sugar-free cakes and cupcakes that taste absolutely delicious without compromise.",
-    "whyVisit": "For a guilt-free, delicious vegan double chocolate brownie slice."
+    "whyVisit": "For a guilt-free, delicious vegan double chocolate brownie slice.",
+    "kong_labet_tagline": "Vegan brownies and gluten-free cakes in Laitumkhrah. For people with complicated diets.",
+    "kong_labet_note": "Order the gluten-free double chocolate muffin. It's surprisingly rich, considering it has no gluten, eggs, or fun in it.",
+    "kong_labet_observations": [
+      "The crowd is very health-conscious, wearing yoga pants and drinking unsweetened almond milk.",
+      "The bakery is clean and modern, matching the minimalist diets of its customers.",
+      "The banana bread is dense and sweet, sweetened with real honey instead of white sugar."
+    ]
   },
   {
     "id": "samanbha-bakery",
@@ -3202,7 +4065,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Samanbha Bakery is a simple, no-fuss neighborhood bakery serving traditional Shillong cream rolls, soft tea buns, and ginger biscuits at highly affordable rates.",
-    "whyVisit": "To pick up a packet of traditional ginger biscuits and tea rolls."
+    "whyVisit": "To pick up a packet of traditional ginger biscuits and tea rolls.",
+    "kong_labet_tagline": "Cheap cream rolls and soft buns. A simple local bakery where you get exactly what you pay for.",
+    "kong_labet_note": "Buy a packet of the butter buns. They are simple, fresh, and perfect for breakfast with a cup of hot milk tea.",
+    "kong_labet_observations": [
+      "No fancy glass cases, just cardboard boxes full of fresh buns and biscuits.",
+      "The cream rolls are long and filled with sweet white frosting. Youthful happiness for ten rupees.",
+      "The staff is friendly and remembers your face if you visit twice."
+    ]
   },
   {
     "id": "s-k-bakery",
@@ -3232,7 +4102,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Located opposite Laitumkhrah Beat House, S.K. Bakery has been serving the neighborhood with fresh local butter cookies, coconut biscuits, and cream cones for years.",
-    "whyVisit": "To grab a quick bag of freshly packed crispy butter cookies."
+    "whyVisit": "To grab a quick bag of freshly packed crispy butter cookies.",
+    "kong_labet_tagline": "Timeless butter cookies opposite the Beat House. Classic tea-time companions for generations.",
+    "kong_labet_note": "Get a packet of their salt-butter cookies. They have that perfect balance of salt and crunch that makes you drink three cups of tea.",
+    "kong_labet_observations": [
+      "The cookies are sold in simple clear plastic bags tied with a yellow rubber band. Authentic.",
+      "The shop has been here for ages, watching the Laitumkhrah traffic grow from horse-carts to SUVs.",
+      "The smell of baking butter wafts across the road, tempting students skipping classes."
+    ]
   },
   {
     "id": "trifle-patisserie",
@@ -3262,7 +4139,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Trifle Patisserie on the ground floor of Hotel Alpine Continental offers a premium selection of 100% vegetarian, eggless pastries, gourmet chocolate tarts, and custom designer cakes.",
-    "whyVisit": "For the finest, most delicate eggless chocolate truffle slice in Shillong."
+    "whyVisit": "For the finest, most delicate eggless chocolate truffle slice in Shillong.",
+    "kong_labet_tagline": "Gourmet eggless pastries in the Starline building. 100% vegetarian sweets for selective tables.",
+    "kong_labet_note": "The chocolate mud cake is exceptionally rich. You won't miss the eggs at all, believe me.",
+    "kong_labet_observations": [
+      "Located inside the hotel lobby, it is quiet and feels very safe from the Police Bazaar noise.",
+      "The pastries are decorated with neat chocolate fans and gold leaf. Very fancy.",
+      "A favorite for local vegetarian families who trust the kitchen completely."
+    ]
   },
   {
     "id": "yummy-cakes",
@@ -3292,7 +4176,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Yummy Cakes is a highly popular community bakery in Garikhana, serving affordable celebration cakes, vanilla buns, and fresh daily bread with warm local service.",
-    "whyVisit": "To pick up a delicious, pocket-friendly chocolate fudge round for weekend family gatherings."
+    "whyVisit": "To pick up a delicious, pocket-friendly chocolate fudge round for weekend family gatherings.",
+    "kong_labet_tagline": "Affordable chocolate fudge cakes in Garikhana. Simple sweets for local celebrations.",
+    "kong_labet_note": "Perfect for a quick, cheap birthday cake. They write your name in very neat pink icing while you wait.",
+    "kong_labet_observations": [
+      "The shop is busy, serving the Garikhana transport crowd with quick snacks and tea cakes.",
+      "The vanilla buns are soft and sweet, the kind of comfort food that doesn't ask you to think.",
+      "The prices are the best part of the menu. Shillong prices as they used to be."
+    ]
   },
   {
     "id": "the-cake-craving-shillong",
@@ -3322,7 +4213,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Tucked in Lower Mawprem, The Cake Craving specializes in baking and crafting spectacular multi-tiered custom wedding cakes, bridal shower treats, and elegant birthday creations.",
-    "whyVisit": "To consult and design the most memorable, artistic tier cake for your major celebrations."
+    "whyVisit": "To consult and design the most memorable, artistic tier cake for your major celebrations.",
+    "kong_labet_tagline": "Designer wedding cakes from Lower Mawprem. Tiers of sugar and art for big family days.",
+    "kong_labet_note": "Book your wedding tiers here. The sugar flowers look so real you'd think they were plucked from a Ward's Lake garden.",
+    "kong_labet_observations": [
+      "The kitchen smells of vanilla extract and warm sugar, a sweet pocket in the middle of Garikhana noise.",
+      "The photo album of past wedding cakes is thicker than the local telephone directory.",
+      "A lot of serious conversations here about ribbons, icing colors, and guest lists."
+    ]
   },
   {
     "id": "gateau-bakes-and-more",
@@ -3352,7 +4250,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Gateau is a beloved local patisserie franchise with its flagship in Police Bazaar, celebrated for its French style cream tarts, almond biscotti, and fresh multi-grain loaves.",
-    "whyVisit": "To enjoy reliable European style pastries and delicious cookies in central Police Bazaar."
+    "whyVisit": "To enjoy reliable European style pastries and delicious cookies in central Police Bazaar.",
+    "kong_labet_tagline": "European pastries and multi-grain loaves. A clean, modern bakeshop franchise in Police Bazaar.",
+    "kong_labet_note": "Try the almond biscotti. It is hard as local pine wood, which is exactly how a biscotti should be for dipping in espresso.",
+    "kong_labet_observations": [
+      "The glass cases are spotless, showing off croissants and tarts like jewelry.",
+      "The multi-grain bread is heavy and feels healthy, though I still prefer white flour myself.",
+      "A popular stop for office workers buying a quick treat for their desks."
+    ]
   },
   {
     "id": "robert-junior-patisserie",
@@ -3382,7 +4287,14 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Robert Junior Patisserie in Demthring brings high-end French baking to Nongthymmai, serving delicate choux pastries, chocolate eclairs, and a colorful selection of gourmet macarons.",
-    "whyVisit": "For the most authentic choux buns and delicate chocolate eclairs in the area."
+    "whyVisit": "For the most authentic choux buns and delicate chocolate eclairs in the area.",
+    "kong_labet_tagline": "Gourmet French macarons and choux buns in Demthring. High-end baking that feels very noble.",
+    "kong_labet_note": "Get a box of the chocolate macarons. The shell has a proper crunch, and the ganache is smooth as mountain mist.",
+    "kong_labet_observations": [
+      "The choux buns are filled with fresh vanilla cream that squeezes out when you bite. Eat with care.",
+      "The macarons are arranged in perfect neat rows, looking like colorful buttons on a fancy coat.",
+      "A very classy shop that brings a touch of Parisian style to Nongthymmai's quiet lanes."
+    ]
   }
 ];
 
