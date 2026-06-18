@@ -227,6 +227,7 @@ export default function App() {
   const handleQuickTagSearch = (tag: string) => {
     setSearchQuery(tag);
     setActiveTab("cafes");
+    setCafeViewMode("grid");
   };
 
   const handleSelectCafe = (cafeId: string | null) => {
@@ -286,8 +287,6 @@ export default function App() {
 
   const tabsList = [
     { id: "explore", label: "Discovery" },
-    { id: "cafes", label: "Cozy Cafés" },
-    { id: "cuisine", label: "Khasi Cuisine" },
     { id: "walks", label: "District Walks" },
     { id: "planners", label: "Route Planner" },
     { id: "guides", label: "Editorial" },
@@ -529,12 +528,16 @@ export default function App() {
                         onKeyDown={(e) => {
                           if (e.key === "Enter") {
                             setActiveTab("cafes");
+                            setCafeViewMode("grid");
                           }
                         }}
                         className="flex-1 bg-transparent px-2 py-2.5 text-xs md:text-sm text-[#3d2817] placeholder:text-[#3d2817]/50 outline-none font-sans"
                       />
                       <button
-                        onClick={() => setActiveTab("cafes")}
+                        onClick={() => {
+                          setActiveTab("cafes");
+                          setCafeViewMode("grid");
+                        }}
                         className="bg-amber-800 text-white hover:bg-amber-900 px-4 py-2 rounded-lg text-xs font-sans font-semibold transition-colors cursor-pointer"
                       >
                         Find
@@ -600,7 +603,7 @@ export default function App() {
                     topic="What this map covers"
                     body={`${cafes.length} hand-picked cafés across Shillong's main neighborhoods — Laitumkhrah, Police Bazaar, Golf Links, Boyce Road, Nongkynrih, Kench's Trace and Dhankheti. Filter by Khasi cuisine, live music, rooftop, fine dining or local eats. Each pin links to a full café card with photos, hours, ratings and signature dishes like Jadoh and Dohneiiong.`}
                     links={[
-                      { label: `Browse all ${cafes.length} cafés`, onClick: () => setActiveTab("cafes") },
+                      { label: `Browse all ${cafes.length} cafés`, onClick: () => { setActiveTab("cafes"); setCafeViewMode("grid"); } },
                       { label: "Khasi food guide", onClick: () => setActiveTab("cuisine") },
                       { label: "Neighborhood walks", onClick: () => setActiveTab("walks") },
                       { label: "Meghalaya route planner", onClick: () => setActiveTab("planners") },
