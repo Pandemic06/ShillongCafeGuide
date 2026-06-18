@@ -203,22 +203,94 @@ export const CAFES: Cafe[] = [
     hasLiveMusic: true,
     mustTry: [
       {
-        name: "Shillong Special Coffee",
-        description: "Sourced from high-altitude organic plantations in the East Khasi Hills, medium-roasted, and brewed with crisp mountain spring water.",
-        price: "₹180",
-        image: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=600"
+        name: "Khao Suey",
+        description: "Signature Burmese noodle dish in a rich, spiced coconut milk broth, served with assorted condiments.",
+        price: "₹520",
+        image: "/cafe-photos/cafe-shillong/photo-0.jpg"
       },
       {
-        name: "Smoked Pork Toast",
-        description: "Crispy local sourdough toast topped slices of house-smoked Khasi pork belly, caramelized mountain onions, and wild mint leaves.",
-        price: "₹260",
-        image: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=80&w=600"
+        name: "Chicken Bastenga (NE Specialty)",
+        description: "A traditional Northeast specialty featuring tender chicken cooked with fermented bamboo shoot (bastenga) and local green chilies.",
+        price: "₹450",
+        image: "/cafe-photos/cafe-shillong/photo-1.jpg"
       },
       {
-        name: "Mountain Cardamom Infusion",
-        description: "A delicate local black tea infused with hand-crushed wild cardamom pods and local orange blossom honey.",
-        price: "₹140",
-        image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600"
+        name: "Rice Stick Noodles with Diced Pork",
+        description: "Flat rice noodles tossed with spicy diced pork belly and seasonal vegetables.",
+        price: "₹520",
+        image: "/cafe-photos/cafe-shillong/photo-2.jpg"
+      },
+      {
+        name: "Chicken Thukpa",
+        description: "Nourishing Tibetan style noodle soup with tender chicken slices and greens.",
+        price: "₹320",
+        image: "/cafe-photos/cafe-shillong/photo-3.jpg"
+      },
+      {
+        name: "Shillong Fried Rice + Chilly Chicken",
+        description: "Savory local-style fried rice paired with spicy, wok-tossed chilly chicken.",
+        price: "₹410",
+        image: "/cafe-photos/cafe-shillong/photo-4.jpg"
+      },
+      {
+        name: "Shillong Noodles + Chilly Chicken",
+        description: "Wok-tossed local noodles served alongside dry chilly chicken.",
+        price: "₹410",
+        image: "/cafe-photos/cafe-shillong/photo-5.jpg"
+      },
+      {
+        name: "Smoked Pork Hakka Noodles",
+        description: "Stir-fried noodles tossed with house-smoked pork slices, cabbage, carrots, and light soy sauce.",
+        price: "₹450",
+        image: "/cafe-photos/cafe-shillong/photo-0.jpg"
+      },
+      {
+        name: "Shillong Veg Noodles",
+        description: "Simple, delicious stir-fried noodles with farm-fresh local veggies.",
+        price: "₹370",
+        image: "/cafe-photos/cafe-shillong/photo-1.jpg"
+      },
+      {
+        name: "Chicken Momo with Soup",
+        description: "Steamed chicken dumplings served with a clear, comforting chicken broth and hot sesame-tomato chutney.",
+        price: "₹320",
+        image: "/cafe-photos/cafe-shillong/photo-2.jpg"
+      },
+      {
+        name: "Beef Momo with Soup",
+        description: "Steamed beef dumplings served with hot chili sauce and a side of clear broth.",
+        price: "₹340",
+        image: "/cafe-photos/cafe-shillong/photo-3.jpg"
+      },
+      {
+        name: "Veg Momo with Soup",
+        description: "Freshly steamed vegetable dumplings with a comforting vegetable broth.",
+        price: "₹290",
+        image: "/cafe-photos/cafe-shillong/photo-4.jpg"
+      },
+      {
+        name: "Chicken Burger",
+        description: "Juicy chicken patty with lettuce, tomatoes, and mayo in a toasted bun.",
+        price: "₹370",
+        image: "/cafe-photos/cafe-shillong/photo-5.jpg"
+      },
+      {
+        name: "Spaghetti Bolognese",
+        description: "Classic spaghetti topped with rich, slow-simmered meat sauce and parmesan.",
+        price: "₹430",
+        image: "/cafe-photos/cafe-shillong/photo-0.jpg"
+      },
+      {
+        name: "Penne Arrabiata",
+        description: "Penne pasta in a spicy tomato sauce with garlic, chili, and olive oil.",
+        price: "₹430",
+        image: "/cafe-photos/cafe-shillong/photo-1.jpg"
+      },
+      {
+        name: "French Fries",
+        description: "Crispy golden potato fries served with tomato ketchup.",
+        price: "₹200",
+        image: "/cafe-photos/cafe-shillong/photo-2.jpg"
       }
     ],
     gallery: [
@@ -249,16 +321,100 @@ export const CAFES: Cafe[] = [
     hasKhasiMusic: true,
     mustTry: [
       {
-        name: "Blowin' in the Wind Cappuccino",
-        description: "A dark double-ristretto with velvety micro-foam, dusted with organic cocoa powder in the shape of Dylan's signature acoustic guitar.",
-        price: "₹160",
-        image: "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=600"
+        name: "Crunchy Chicken Burger",
+        description: "Crispy fried chicken breast fillet with fresh lettuce and mayo in a soft bun.",
+        price: "₹319",
+        image: "/cafe-photos/dylans-cafe/photo-0.jpg"
       },
       {
-        name: "Old-School Hot Apple Pie",
-        description: "Fresh local hill apples spiced with cinnamon, baked under a rich, golden butter pastry lattice and served with wild vanilla cream.",
-        price: "₹190",
-        image: "https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=600"
+        name: "Chicken Classic Club Sandwich",
+        description: "Triple decker sandwich with grilled chicken, crisp bacon, fried egg, lettuce, tomato, and cheese.",
+        price: "₹319",
+        image: "/cafe-photos/dylans-cafe/photo-1.jpg"
+      },
+      {
+        name: "The Dylans Jawbreaker",
+        description: "Massive double-patty chicken burger with melted cheese, fried egg, onion rings, and secret sauce.",
+        price: "₹429",
+        image: "/cafe-photos/dylans-cafe/photo-2.jpg"
+      },
+      {
+        name: "Chicken Classic Shillong Noodles",
+        description: "Stir-fried noodles with shredded chicken and fresh local greens.",
+        price: "₹249",
+        image: "/cafe-photos/dylans-cafe/photo-3.jpg"
+      },
+      {
+        name: "Chicken Perfecto Pasta",
+        description: "Creamy white sauce pasta tossed with chicken and Italian herbs.",
+        price: "₹279",
+        image: "/cafe-photos/dylans-cafe/photo-4.jpg"
+      },
+      {
+        name: "Veg Perfecto Pasta",
+        description: "Rich penne pasta tossed with fresh garden vegetables in a savory cream sauce.",
+        price: "₹329",
+        image: "/cafe-photos/dylans-cafe/photo-5.jpg"
+      },
+      {
+        name: "Peri Peri Chicken Steak (2 Pcs)",
+        description: "Two succulent chicken breasts grilled in spicy peri-peri marinade, served with mashed potato and jus.",
+        price: "₹349",
+        image: "/cafe-photos/dylans-cafe/photo-0.jpg"
+      },
+      {
+        name: "Fiery Hot Chicken Wings",
+        description: "Crispy chicken wings tossed in extra-spicy chili-garlic glaze, served with dip.",
+        price: "₹259",
+        image: "/cafe-photos/dylans-cafe/photo-1.jpg"
+      },
+      {
+        name: "Chicken Classic Nachos",
+        description: "Crispy tortilla chips topped with melted cheese, chicken bits, salsa, and jalapenos.",
+        price: "₹299",
+        image: "/cafe-photos/dylans-cafe/photo-2.jpg"
+      },
+      {
+        name: "The Dylans Hot Chocolate",
+        description: "Rich, velvety classic hot chocolate topped with marshmallows.",
+        price: "₹199",
+        image: "/cafe-photos/dylans-cafe/photo-3.jpg"
+      },
+      {
+        name: "Classic Mojito",
+        description: "Refreshing blend of fresh mint, lime juice, sugar, and club soda.",
+        price: "MRP",
+        image: "/cafe-photos/dylans-cafe/photo-4.jpg"
+      },
+      {
+        name: "Minty Lemon Iced Tea",
+        description: "Chilled brewed black tea flavored with lemon and fresh mint leaves.",
+        price: "MRP",
+        image: "/cafe-photos/dylans-cafe/photo-5.jpg"
+      },
+      {
+        name: "Sangria",
+        description: "Classic refreshing beverage with mixed fruit slices.",
+        price: "MRP",
+        image: "/cafe-photos/dylans-cafe/photo-0.jpg"
+      },
+      {
+        name: "Chocolate Molten Cake",
+        description: "Warm chocolate cake with a gooey, molten chocolate center.",
+        price: "₹199",
+        image: "/cafe-photos/dylans-cafe/photo-1.jpg"
+      },
+      {
+        name: "Banana Split Sundae",
+        description: "Classic dessert with a split banana, scoops of vanilla, chocolate, and strawberry ice cream, topped with syrups.",
+        price: "₹269",
+        image: "/cafe-photos/dylans-cafe/photo-2.jpg"
+      },
+      {
+        name: "Classic Fluffy Pancakes",
+        description: "Stack of fluffy buttermilk pancakes served with butter and maple syrup.",
+        price: "₹269",
+        image: "/cafe-photos/dylans-cafe/photo-3.jpg"
       }
     ],
     gallery: [
@@ -286,16 +442,76 @@ export const CAFES: Cafe[] = [
     hasLiveMusic: false,
     mustTry: [
       {
-        name: "Highway French Press Coffee",
-        description: "A bold, dark-roasted tribal blend direct from regional growers, pressed rich and robust to warm travelers from the dense morning fog.",
-        price: "₹150",
-        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
+        name: "Wai Wai Thukpa",
+        description: "Classic spiced noodle soup with vegetables and local seasonings.",
+        price: "MRP",
+        image: "/cafe-photos/ml-05-cafe/photo-0.jpg"
       },
       {
-        name: "Wild Pepper Smoked Pork Fry",
-        description: "Spicy pork belly wok-tossed with local black pepper, hand-harvested wild coriander, and mountain ghost chilly flakes.",
-        price: "₹240",
-        image: "https://images.unsplash.com/photo-1623961990059-28355e229a87?auto=format&fit=crop&q=80&w=600"
+        name: "Onion Bhajia with Chai",
+        description: "Crispy onion fritters served hot with a cup of spiced masala chai.",
+        price: "MRP",
+        image: "/cafe-photos/ml-05-cafe/photo-1.jpg"
+      },
+      {
+        name: "Cheesy Garlic Bread",
+        description: "Toasted bread topped with garlic butter, herbs, and melted mozzarella cheese.",
+        price: "₹189",
+        image: "/cafe-photos/ml-05-cafe/photo-2.jpg"
+      },
+      {
+        name: "Chilly Pork",
+        description: "Spicy wok-tossed pork with green chilies, onions, and local spices.",
+        price: "MRP",
+        image: "/cafe-photos/ml-05-cafe/photo-3.jpg"
+      },
+      {
+        name: "Chicken Alfredo Pasta",
+        description: "Penne pasta cooked in a rich, creamy Alfredo sauce with tender chicken pieces.",
+        price: "MRP",
+        image: "/cafe-photos/ml-05-cafe/photo-4.jpg"
+      },
+      {
+        name: "Pizza (various toppings)",
+        description: "Freshly baked thin-crust pizza with your choice of veggie or meat toppings.",
+        price: "MRP",
+        image: "/cafe-photos/ml-05-cafe/photo-5.jpg"
+      },
+      {
+        name: "Chilly Garlic Noodles",
+        description: "Stir-fried noodles with a spicy garlic glaze and chopped vegetables.",
+        price: "MRP",
+        image: "/cafe-photos/ml-05-cafe/photo-0.jpg"
+      },
+      {
+        name: "Espresso Coffee",
+        description: "Rich and bold single shot of high-altitude roasted coffee beans.",
+        price: "₹130",
+        image: "/cafe-photos/ml-05-cafe/photo-1.jpg"
+      },
+      {
+        name: "Diet Coke (250ml)",
+        description: "Chilled 250ml can of sugar-free Coca-Cola.",
+        price: "₹100",
+        image: "/cafe-photos/ml-05-cafe/photo-2.jpg"
+      },
+      {
+        name: "Aerated Beverage (600ml)",
+        description: "Refreshing carbonated soft drink (600ml bottle).",
+        price: "₹120",
+        image: "/cafe-photos/ml-05-cafe/photo-3.jpg"
+      },
+      {
+        name: "Chocolate Molten Cake",
+        description: "Decadent warm chocolate cake with a rich molten center.",
+        price: "₹249",
+        image: "/cafe-photos/ml-05-cafe/photo-4.jpg"
+      },
+      {
+        name: "Pork Ribs Caramelized (Specialty)",
+        description: "Tender slow-roasted pork ribs glazed in a sweet caramelized sauce.",
+        price: "MRP",
+        image: "/cafe-photos/ml-05-cafe/photo-5.jpg"
       }
     ],
     gallery: [
