@@ -127,7 +127,7 @@ export const PAGE_SEO = {
   cafes: {
     title: "All Cafés in Shillong — Curated List & Map",
     description:
-      "Browse 49 hand-picked cafés across Shillong with photos, ratings, prices and live map. Filter by neighborhood, vibe, live music, rooftop, Khasi cuisine, and budget.",
+      "Browse 91 hand-picked cafés across Shillong with photos, ratings, prices and live map. Filter by neighborhood, vibe, live music, rooftop, Khasi cuisine, and budget.",
     canonical: `${SITE}/?tab=cafes`,
   },
   cuisine: {

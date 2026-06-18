@@ -194,7 +194,7 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
  * Shared Photos" tab; cafe.mustTry[].image (which we already cache to
  * /cafe-photos/) seeds the "Menu Slate Scans" tab. Fall back to
  * MEDIA_DATABASE (legacy Unsplash hardcodes) only if the cafe has zero
- * cached assets — should never happen for current 47-cafe dataset.
+ * cached assets — should never happen for current 91-cafe dataset.
  */
 const getMediaAssets = (cafe: Cafe) => {
   const galleryFromDb = (cafe.gallery || []).filter(Boolean);

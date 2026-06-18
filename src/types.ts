@@ -25,11 +25,11 @@ export interface Cafe {
   name: string;
   tagline: string;
   theme: string;
-  introduction: string;
-  whyVisit: string;
-  hours: string;
+  introduction?: string;
+  whyVisit?: string;
+  hours?: string;
   address: string;
-  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti" | "Mawroh" | "Nongrim Hills" | "Oakland" | "Cleve Colony" | "MG Road" | "Mawlai" | "Nongthymmai";
+  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti" | "Mawroh" | "Nongrim Hills" | "Oakland" | "Cleve Colony" | "MG Road" | "Mawlai" | "Nongthymmai" | "Newlands" | "Upper Shillong" | "Rilbong" | "Lachumiere" | "Tripura Castle" | "GS Road" | "Laban" | "Shillong Peak Area" | "Umpling" | "Nongmynsong" | "Cantonment" | "Malki" | "Shillong" | "Garikhana";
   // Normalization audit metadata (Part 7)
   neighborhood_verified?: boolean;
   neighborhood_source?: "manual" | "address-inferred" | "google" | "legacy";
@@ -48,8 +48,8 @@ export interface Cafe {
   };
   quote?: string;
   quoteAuthor?: string;
-  mustTry: MenuItem[];
-  gallery: string[];
+  mustTry?: MenuItem[];
+  gallery?: string[];
   vibeTags: string[];
   hasLiveMusic?: boolean;
   hasKhasiMusic?: boolean;

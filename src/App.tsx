@@ -34,7 +34,7 @@ type TabType = "explore" | "cafes" | "cuisine" | "walks" | "planners" | "guides"
 
 // Shared FAQ datasets — used both for rendered <details> and JSON-LD FAQPage.
 const FAQ_HOME = [
-  { q: "What are the best cafés in Shillong?", a: "Cafe Shillong (Laitumkhrah), Dylan's Cafe (Dhankheti), Rynsan (Boyce Road) for Khasi food, ML 05 Cafe (NH 44) for highway views and Cherry Bean Cafe (Kench's Trace) for bakes consistently top local lists. Our map ranks 47 verified cafés across the city." },
+  { q: "What are the best cafés in Shillong?", a: "Cafe Shillong (Laitumkhrah), Dylan's Cafe (Dhankheti), Rynsan (Boyce Road) for Khasi food, ML 05 Cafe (NH 44) for highway views and Cherry Bean Cafe (Kench's Trace) for bakes consistently top local lists. Our map ranks 91 verified cafés across the city." },
   { q: "Where can I try authentic Khasi food in Shillong?", a: "Trattoria and Jadoh Stall near Police Bazaar are the most-cited Jadoh and Dohneiiong spots. Rynsan plates the same dishes in a sit-down format with live Ka Duitara music." },
   { q: "Which Shillong neighborhood is best for café-hopping?", a: "Laitumkhrah for student energy, vinyl shops and acoustic stages. Police Bazaar for street-food adjacency. Golf Links for quiet, pine-scented mornings." },
   { q: "Are there cafés in Shillong with live music?", a: "The Evening Club (Laitumkhrah), Cafe Shillong, Dylan's Cafe and Rynsan run regular acoustic and folk sets. Filter by 'Live Music' on the map." },
@@ -598,9 +598,9 @@ export default function App() {
 
                   <ModuleSummary
                     topic="What this map covers"
-                    body="49 hand-picked cafés across Shillong's main neighborhoods — Laitumkhrah, Police Bazaar, Golf Links, Boyce Road, Nongkynrih, Kench's Trace and Dhankheti. Filter by Khasi cuisine, live music, rooftop, fine dining or local eats. Each pin links to a full café card with photos, hours, ratings and signature dishes like Jadoh and Dohneiiong."
+                    body={`${cafes.length} hand-picked cafés across Shillong's main neighborhoods — Laitumkhrah, Police Bazaar, Golf Links, Boyce Road, Nongkynrih, Kench's Trace and Dhankheti. Filter by Khasi cuisine, live music, rooftop, fine dining or local eats. Each pin links to a full café card with photos, hours, ratings and signature dishes like Jadoh and Dohneiiong.`}
                     links={[
-                      { label: "Browse all 49 cafés", onClick: () => setActiveTab("cafes") },
+                      { label: `Browse all ${cafes.length} cafés`, onClick: () => setActiveTab("cafes") },
                       { label: "Khasi food guide", onClick: () => setActiveTab("cuisine") },
                       { label: "Neighborhood walks", onClick: () => setActiveTab("walks") },
                       { label: "Meghalaya route planner", onClick: () => setActiveTab("planners") },
