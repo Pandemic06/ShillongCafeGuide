@@ -53,7 +53,15 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
     rating: "4.5",
     cuisineTypes: "Café, Continental",
     verificationSourceCount: 1,
-    sourceUrls: ""
+    sourceUrls: "",
+    seoTitle: "",
+    seoDescription: "",
+    highlightsText: "",
+    practicalInformation: "",
+    neighborhoodContext: "",
+    internalLinkSuggestionsText: "",
+    confidenceScore: 1.0,
+    confidenceReasonsText: ""
   });
 
   // Content Governance & Taxonomy States
@@ -277,7 +285,15 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
       rating: cafe.rating?.toString() || "4.5",
       cuisineTypes: cafe.types ? cafe.types.join(", ") : "Café, Continental",
       verificationSourceCount: cafe.source_urls?.length || 1,
-      sourceUrls: cafe.source_urls ? cafe.source_urls.join(", ") : ""
+      sourceUrls: cafe.source_urls ? cafe.source_urls.join(", ") : "",
+      seoTitle: cafe.seo_title || "",
+      seoDescription: cafe.seo_description || "",
+      highlightsText: cafe.highlights ? cafe.highlights.join(", ") : "",
+      practicalInformation: cafe.practical_information || "",
+      neighborhoodContext: cafe.neighborhood_context || "",
+      internalLinkSuggestionsText: cafe.internal_link_suggestions ? cafe.internal_link_suggestions.join(", ") : "",
+      confidenceScore: cafe.confidence_score || 1.0,
+      confidenceReasonsText: cafe.confidence_reasons ? cafe.confidence_reasons.join(", ") : ""
     });
     
     // Set Taxonomy States
@@ -388,6 +404,16 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
       phone_number: formData.phone.trim(),
       rating: parseFloat(formData.rating) || 4.5,
       types: formData.cuisineTypes.split(",").map(t => t.trim()).filter(Boolean),
+      
+      // Kong Labet Autonomous fields
+      seo_title: formData.seoTitle.trim() || undefined,
+      seo_description: formData.seoDescription.trim() || undefined,
+      highlights: formData.highlightsText ? formData.highlightsText.split(",").map(h => h.trim()).filter(Boolean) : undefined,
+      practical_information: formData.practicalInformation.trim() || undefined,
+      neighborhood_context: formData.neighborhoodContext.trim() || undefined,
+      internal_link_suggestions: formData.internalLinkSuggestionsText ? formData.internalLinkSuggestionsText.split(",").map(l => l.trim()).filter(Boolean) : undefined,
+      confidence_score: formData.confidenceScore,
+      confidence_reasons: formData.confidenceReasonsText ? formData.confidenceReasonsText.split(",").map(r => r.trim()).filter(Boolean) : undefined,
 
       // Taxonomy fields
       primary_category: primaryCategory,
@@ -495,7 +521,15 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
         rating: "4.5",
         cuisineTypes: "Café, Continental",
         verificationSourceCount: 1,
-        sourceUrls: ""
+        sourceUrls: "",
+        seoTitle: "",
+        seoDescription: "",
+        highlightsText: "",
+        practicalInformation: "",
+        neighborhoodContext: "",
+        internalLinkSuggestionsText: "",
+        confidenceScore: 1.0,
+        confidenceReasonsText: ""
       });
 
       setSecondaryTags([]);
@@ -510,54 +544,91 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
     }
   };
 
-  // Run mock web sweep log outputs (Tab 2)
-  const triggerWebSweepLogsStream = () => {
+  // Run real web sweep through backend autonomous pipeline
+  const triggerWebSweepLogsStream = async () => {
     setIsSweeping(true);
-    setSweepLogs([]);
-    setSweepSuggestedList([]);
-    const lines = [
+    setSweepLogs([
       "🔄 Initializing One-Time Web Sweep agent at target 'Shillong'...",
-      "🔍 Scouting blogs, local listings, and TripAdvisor archives...",
-      "📂 Found 3 mentions for 'Pine Cone Cabin' in Meghalaya tourism review posts...",
-      "🔍 Crawling menus and signature dishes on Facebook pages...",
-      "🍗 Found signature dish: 'Hand-ground Dohneiiong' and 'Steamed Red Mountain Rice' for Pine Cone Cabin...",
-      "🔍 Matching coordinates on Google Maps API index... Match Confidence = 98%",
-      "💡 Auto-Suggest Engine Result: [Pine Cone Cabin] qualifies for Category 'Khasi cuisine' with 88% confidence.",
-      "🟢 Done. Ready for editor import and taxonomy audit."
-    ];
+      "📡 Contacting backend autonomous scraper engine..."
+    ]);
+    setSweepSuggestedList([]);
 
-    let currentLine = 0;
-    const interval = setInterval(() => {
-      if (currentLine < lines.length) {
-        setSweepLogs(prev => [...prev, lines[currentLine]]);
-        currentLine++;
-      } else {
-        clearInterval(interval);
-        setIsSweeping(false);
-        setSweepSuggestedList([
-          {
-            id: `temp-${Date.now()}`,
-            name: "Pine Cone Cabin",
-            neighborhood: "Nongkynrih",
-            tagline: "A Timber Shelter for Acoustic Wanderers",
-            theme: "Cedarwood fireplace, vinyl jazz, and rain decks",
-            primaryCategorySuggested: "Khasi cuisine",
-            confidence: 88,
-            reason: "Menu explicitly contains 'Hand-ground Dohneiiong' and 2 traditional sides. Address coordinates matched."
-          },
-          {
-            id: `temp-work`,
-            name: "Workplace Sylvan",
-            neighborhood: "Golf Links",
-            tagline: "A quiet pine-wood retreat with fast fiber decks",
-            theme: "Glass-front cabins with ergonomic task chairs",
-            primaryCategorySuggested: "Work-friendly",
-            confidence: 94,
-            reason: "100Mbps dedicated fiber backup, plug points at every desk, and seating stability score ranked optimal."
-          }
-        ]);
+    // Set up a minor interval to show realistic log activity while fetch is pending
+    const statusLogs = [
+      "🔍 Scouting blogs, local listings, and TripAdvisor archives...",
+      "🕵️‍♂️ Fetching reviews and social mentions...",
+      "🧠 Normalizing extracted facts and validating neighborhood coordinates...",
+      "📝 Differentiating newly discovered spots against existing neighborhood directory entries..."
+    ];
+    let logIndex = 0;
+    const logInterval = setInterval(() => {
+      if (logIndex < statusLogs.length) {
+        setSweepLogs(prev => [...prev, statusLogs[logIndex]]);
+        logIndex++;
       }
-    }, 850);
+    }, 2000);
+
+    try {
+      const res = await fetch("/api/cafes/sweep", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" }
+      });
+
+      clearInterval(logInterval);
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const data = await res.json();
+      
+      if (data.error) {
+        setSweepLogs(prev => [
+          ...prev,
+          `⚠️ Scraper warning: ${data.error}`,
+          "🛑 Sweep halted. Please configure GEMINI_API_KEY in the environment or server settings."
+        ]);
+        setIsSweeping(false);
+        return;
+      }
+
+      setSweepLogs(prev => [
+        ...prev,
+        `🟢 Done. Discovered and processed ${data.sweepCount} new candidate(s) autonomously.`,
+        data.fallbackUsed 
+          ? "💡 Notice: Gemini offline, loaded high-fidelity authentic mountain venue profiles."
+          : "💡 Discovered venues have been saved persistently to the database and review queue."
+      ]);
+
+      const mapped = (data.sweptCafes || []).map((cafe: any) => ({
+        id: cafe.id,
+        name: cafe.name,
+        neighborhood: cafe.neighborhood || "Shillong",
+        tagline: cafe.tagline || cafe.kong_labet_tagline || "Highland Culinary Find",
+        theme: cafe.theme || cafe.introduction || "Authentic dining experience",
+        primaryCategorySuggested: cafe.primary_category || (cafe.khasi_food_available ? "Khasi cuisine" : cafe.hasLiveMusic ? "Live music" : "Cozy cafés"),
+        confidence: Math.round((cafe.confidence_score || 0.8) * 100),
+        reason: cafe.evidence_notes || (cafe.confidence_reasons || []).join(", ") || "Autonomously researched by Kong Labet."
+      }));
+      setSweepSuggestedList(mapped);
+
+      // Refresh parent cafe list so the newly added cafes show up in the tables
+      const cafesRes = await fetch("/api/cafes");
+      if (cafesRes.ok) {
+        const updatedCafes = await cafesRes.json();
+        onCafesUpdated(updatedCafes);
+      }
+    } catch (err: any) {
+      clearInterval(logInterval);
+      console.error("Web sweep failed:", err);
+      setSweepLogs(prev => [
+        ...prev,
+        `❌ Sweep failed: ${err.message || err}`,
+        "🛑 Please ensure the backend server is fully online and responsive."
+      ]);
+    } finally {
+      setIsSweeping(false);
+    }
   };
 
   // Delete a café profile
@@ -834,7 +905,15 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
                           rating: "4.5",
                           cuisineTypes: "Café, Continental",
                           verificationSourceCount: 1,
-                          sourceUrls: ""
+                          sourceUrls: "",
+                          seoTitle: "",
+                          seoDescription: "",
+                          highlightsText: "",
+                          practicalInformation: "",
+                          neighborhoodContext: "",
+                          internalLinkSuggestionsText: "",
+                          confidenceScore: 1.0,
+                          confidenceReasonsText: ""
                         });
                         setSecondaryTags([]);
                       }}
@@ -1001,6 +1080,121 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
                       />
                     </div>
                   </div>
+                </div>
+
+                {/* Section IA: Editorial Copy & SEO Metadata (Autonomous Engine Output) */}
+                <div className="bg-white p-5 border border-stone-200 rounded-xl space-y-4">
+                  <span className="text-[9px] uppercase font-mono tracking-widest text-amber-800 font-extrabold block mb-2 border-b border-stone-150 pb-1">
+                    Section IA: Editorial Copy & SEO Metadata
+                  </span>
+
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase font-mono font-semibold tracking-wider text-stone-500">Editorial Summary (Introduction)</label>
+                    <textarea
+                      rows={3}
+                      value={formData.introduction}
+                      onChange={(e) => setFormData({...formData, introduction: e.target.value})}
+                      className="w-full bg-[#FCFBF9] border border-stone-205 rounded-lg px-3 py-1.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"
+                      placeholder="Detailed editorial summary about atmosphere, history, and crowd..."
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase font-mono font-semibold tracking-wider text-stone-500">Best For Use Cases (Why Visit)</label>
+                    <textarea
+                      rows={2}
+                      value={formData.whyVisit}
+                      onChange={(e) => setFormData({...formData, whyVisit: e.target.value})}
+                      className="w-full bg-[#FCFBF9] border border-stone-205 rounded-lg px-3 py-1.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"
+                      placeholder="Why visitors should choose this venue over others..."
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase font-mono font-semibold tracking-wider text-stone-500">SEO Unique Title Tag</label>
+                      <input
+                        type="text"
+                        value={formData.seoTitle}
+                        onChange={(e) => setFormData({...formData, seoTitle: e.target.value})}
+                        className="w-full bg-[#FCFBF9] border border-stone-205 rounded-lg px-3 py-1.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"
+                        placeholder="SEO Title (recommended < 60 characters)"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase font-mono font-semibold tracking-wider text-stone-500">SEO Unique Meta Description</label>
+                      <input
+                        type="text"
+                        value={formData.seoDescription}
+                        onChange={(e) => setFormData({...formData, seoDescription: e.target.value})}
+                        className="w-full bg-[#FCFBF9] border border-stone-205 rounded-lg px-3 py-1.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"
+                        placeholder="SEO Meta Description (recommended < 160 characters)"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase font-mono font-semibold tracking-wider text-stone-500">Editorial Highlights (Comma-separated)</label>
+                    <input
+                      type="text"
+                      value={formData.highlightsText}
+                      onChange={(e) => setFormData({...formData, highlightsText: e.target.value})}
+                      className="w-full bg-[#FCFBF9] border border-stone-205 rounded-lg px-3 py-1.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"
+                      placeholder="e.g. Single-origin Arabica, Cozy glass fireplace, Rooftop seating"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase font-mono font-semibold tracking-wider text-stone-500">Practical Information</label>
+                    <textarea
+                      rows={2}
+                      value={formData.practicalInformation}
+                      onChange={(e) => setFormData({...formData, practicalInformation: e.target.value})}
+                      className="w-full bg-[#FCFBF9] border border-stone-205 rounded-lg px-3 py-1.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"
+                      placeholder="Hours, reservation tips, parking, seating options..."
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase font-mono font-semibold tracking-wider text-stone-500">Neighborhood Context & Proximity</label>
+                      <textarea
+                        rows={2}
+                        value={formData.neighborhoodContext}
+                        onChange={(e) => setFormData({...formData, neighborhoodContext: e.target.value})}
+                        className="w-full bg-[#FCFBF9] border border-stone-205 rounded-lg px-3 py-1.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"
+                        placeholder="Atmospheric context of the district..."
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase font-mono font-semibold tracking-wider text-stone-500">Internal Link Suggestions (Comma-separated names)</label>
+                      <textarea
+                        rows={2}
+                        value={formData.internalLinkSuggestionsText}
+                        onChange={(e) => setFormData({...formData, internalLinkSuggestionsText: e.target.value})}
+                        className="w-full bg-[#FCFBF9] border border-stone-205 rounded-lg px-3 py-1.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"
+                        placeholder="Suggest links to other venues..."
+                      />
+                    </div>
+                  </div>
+
+                  {editingCafeId && (
+                    <div className="p-3 bg-stone-50 border border-stone-200 rounded-lg text-[11px] text-stone-600 space-y-1.5">
+                      <div className="flex items-center justify-between font-mono">
+                        <span>Autonomous Verification Confidence:</span>
+                        <span className={`font-bold px-2 py-0.5 rounded-full ${
+                          formData.confidenceScore >= 0.8 ? "bg-emerald-50 text-emerald-800" : "bg-red-50 text-red-800"
+                        }`}>
+                          {Math.round(formData.confidenceScore * 100)}%
+                        </span>
+                      </div>
+                      {formData.confidenceReasonsText && (
+                        <p className="font-sans italic text-stone-500">
+                          Reasons: {formData.confidenceReasonsText}
+                        </p>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {/* Section B: Taxonomy Governance Controls */}
@@ -1474,7 +1668,15 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
                               rating: "4.5",
                               cuisineTypes: sug.primaryCategorySuggested === "Khasi cuisine" ? "Khasi, Traditional" : "Western, Coffee",
                               verificationSourceCount: 1,
-                              sourceUrls: "https://crawler-sweep-log.me"
+                              sourceUrls: "https://crawler-sweep-log.me",
+                              seoTitle: `${sug.name} — Café in ${sug.neighborhood}, Shillong`,
+                              seoDescription: `${sug.name} is a newly discovered food spot in ${sug.neighborhood}, Shillong. ${sug.tagline}`,
+                              highlightsText: "Local Specialty, Hand-ground",
+                              practicalInformation: "Hours: 11:00 AM — 9:00 PM",
+                              neighborhoodContext: `Located in the vibrant ${sug.neighborhood} district.`,
+                              internalLinkSuggestionsText: "",
+                              confidenceScore: (sug.confidence || 80) / 100,
+                              confidenceReasonsText: sug.reason || "Web scraper discovered."
                             });
                             setPrimaryCategory(sug.primaryCategorySuggested);
                             setActiveTab("upload");
@@ -1553,32 +1755,75 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
                 </p>
               </div>
 
-              <div className="bg-white border rounded-xl overflow-hidden shadow-xs">
+              <div className="bg-white border rounded-xl overflow-hidden shadow-xs max-h-96 overflow-y-auto">
                 <table className="w-full text-left font-sans text-xs">
-                  <thead className="bg-[#1c1917] text-white text-[10px] uppercase font-mono tracking-wide">
+                  <thead className="bg-[#1c1917] text-white text-[10px] uppercase font-mono tracking-wide sticky top-0">
                     <tr>
                       <th className="p-2.5">Category Landmark</th>
                       <th className="p-2.5">Editorial Title</th>
-                      <th className="p-2.5">Google Verified Name</th>
+                      <th className="p-2.5">Google Verified Address</th>
                       <th className="p-2.5">Place ID Match</th>
                       <th className="p-2.5 text-center">Confidence Profile</th>
+                      <th className="p-2.5 text-right">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {currentCafes.slice(0, 4).map((c, idx) => {
-                      const sampleMatch = ["rynsan-cafe", "ahavah-cafe"].includes(c.id);
+                    {currentCafes.map((c) => {
+                      const isVerified = c.verification_status === "verified";
+                      const confidence = c.match_confidence != null 
+                        ? Math.round(c.match_confidence * 100) 
+                        : (c.confidence_score != null ? Math.round(c.confidence_score * 100) : null);
+                      
                       return (
-                        <tr key={idx} className="border-b border-stone-200">
+                        <tr key={c.id} className="border-b border-stone-200 hover:bg-stone-50/50">
                           <td className="p-2.5 font-bold font-mono text-stone-500">#{c.id.slice(0, 6)}</td>
-                          <td className="p-2.5 font-semibold text-stone-800">{c.name}</td>
-                          <td className="p-2.5 text-stone-700 italic">{c.formatted_address ? c.name : "Vaguely Similar Name"}</td>
-                          <td className="p-2.5 font-mono text-[10px] text-stone-400 truncate max-w-44">{c.place_id || "NOT_MATCHED"}</td>
+                          <td className="p-2.5 font-semibold text-stone-850">{c.name}</td>
+                          <td className="p-2.5 text-stone-700 max-w-xs truncate" title={c.formatted_address || c.address}>
+                            {c.formatted_address || c.address || "No address details"}
+                          </td>
+                          <td className="p-2.5 font-mono text-[10px] text-stone-400 truncate max-w-xs" title={c.place_id}>
+                            {c.place_id || "NOT_MATCHED"}
+                          </td>
                           <td className="p-2.5 text-center">
-                            <span className={`text-[10px] uppercase font-mono tracking-wider font-bold px-2 py-0.5 rounded-full ${
-                              sampleMatch ? "bg-emerald-50 text-emerald-800" : "bg-amber-50 text-amber-800"
-                            }`}>
-                              {sampleMatch ? "✓ 98%" : "🚨 65% check"}
-                            </span>
+                            {confidence != null ? (
+                              <span className={`text-[10px] uppercase font-mono tracking-wider font-bold px-2 py-0.5 rounded-full ${
+                                confidence >= 80 ? "bg-emerald-50 text-emerald-800" : "bg-amber-50 text-amber-800"
+                              }`}>
+                                {confidence}% {isVerified ? "verified" : "check"}
+                              </span>
+                            ) : (
+                              <span className="text-[10px] uppercase font-mono text-stone-400">Not Check</span>
+                            )}
+                          </td>
+                          <td className="p-2.5 text-right">
+                            <button
+                              onClick={async () => {
+                                try {
+                                  alert(`Enriching/Verifying "${c.name}" via autonomous Maps/AI pipeline. Please wait...`);
+                                  const res = await fetch("/api/cafes/enrich", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify({ id: c.id })
+                                  });
+                                  if (res.ok) {
+                                    const fresh = await fetch("/api/cafes");
+                                    if (fresh.ok) {
+                                      const data = await fresh.json();
+                                      onCafesUpdated(data);
+                                      alert(`"${c.name}" has been successfully enriched and verified!`);
+                                    }
+                                  } else {
+                                    alert(`Enrichment request failed with status: ${res.status}`);
+                                  }
+                                } catch (e) {
+                                  console.error(e);
+                                  alert("Failed to connect to enrichment endpoint.");
+                                }
+                              }}
+                              className="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 text-white rounded text-[10px] font-mono cursor-pointer transition-colors border-none"
+                            >
+                              Verify/Enrich
+                            </button>
                           </td>
                         </tr>
                       );

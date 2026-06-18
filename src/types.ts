@@ -77,6 +77,16 @@ export interface Cafe {
   kong_labet_note?: string;
   kong_labet_observations?: string[];
 
+  // Kong Labet Autonomous Venue Intelligence Fields
+  seo_title?: string;
+  seo_description?: string;
+  highlights?: string[];
+  practical_information?: string;
+  neighborhood_context?: string;
+  internal_link_suggestions?: string[];
+  confidence_score?: number;
+  confidence_reasons?: string[];
+
   // Taxonomy & Content Governance
   primary_category?: string;
   secondary_tags?: string[];

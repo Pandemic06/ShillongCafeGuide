@@ -194,6 +194,14 @@ export function generateProgrammaticLabetCommentary(cafe: {
 }
 
 export function enrichCafeWithLabet(cafe: any): any {
+  // If the cafe already has Kong Labet fields defined in the database, preserve them!
+  if (cafe.kong_labet_tagline || cafe.kong_labet_note) {
+    return {
+      kong_labet_observations: [],
+      ...cafe
+    };
+  }
+
   const registered = KONG_LABET_REGISTRY[cafe.id];
   if (registered) {
     return {

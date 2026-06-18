@@ -50,8 +50,8 @@ async function run() {
     const schemaString = JSON.stringify(schema, null, 2);
     
     // Build specific SEO strings
-    const seoTitle = `${cafe.name} — Cozy Café in ${cafe.neighborhood}, Shillong`;
-    const seoDescription = (
+    const seoTitle = cafe.seo_title || `${cafe.name} — Cozy Café in ${cafe.neighborhood}, Shillong`;
+    const seoDescription = cafe.seo_description || (
       `${cafe.name} is a café in ${cafe.neighborhood}, Shillong. ` +
       (cafe.tagline || cafe.introduction?.slice(0, 110) || "")
     ).slice(0, 160);

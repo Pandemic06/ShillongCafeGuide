@@ -510,6 +510,59 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                       </p>
                     </div>
 
+                    {cafe.highlights && cafe.highlights.length > 0 && (
+                      <div className="space-y-2 pt-2">
+                        <span className="text-[10px] uppercase font-mono tracking-widest text-amber-800 font-bold border-b-2 border-amber-800 pb-1 block">
+                          Editorial Highlights
+                        </span>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-none pl-0">
+                          {cafe.highlights.map((h, i) => (
+                            <li key={i} className="text-xs text-stone-600 flex items-start gap-1.5 font-sans leading-relaxed">
+                              <span className="text-amber-800 font-bold">✦</span>
+                              {h}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {cafe.practical_information && (
+                      <div className="space-y-2 pt-2">
+                        <span className="text-[10px] uppercase font-mono tracking-widest text-amber-800 font-bold border-b-2 border-amber-800 pb-1 block">
+                          Practical Information
+                        </span>
+                        <p className="text-stone-600 text-xs leading-relaxed font-sans font-light bg-stone-50 p-3 rounded-lg border border-stone-200/60">
+                          {cafe.practical_information}
+                        </p>
+                      </div>
+                    )}
+
+                    {cafe.neighborhood_context && (
+                      <div className="space-y-2 pt-2">
+                        <span className="text-[10px] uppercase font-mono tracking-widest text-amber-800 font-bold border-b-2 border-amber-800 pb-1 block">
+                          Neighborhood Context
+                        </span>
+                        <p className="text-stone-600 text-xs leading-relaxed font-sans font-light italic">
+                          {cafe.neighborhood_context}
+                        </p>
+                      </div>
+                    )}
+
+                    {cafe.internal_link_suggestions && cafe.internal_link_suggestions.length > 0 && (
+                      <div className="space-y-2 pt-2">
+                        <span className="text-[10px] uppercase font-mono tracking-widest text-[#713f12] font-bold block">
+                          Explore Nearby Spots
+                        </span>
+                        <div className="flex flex-wrap gap-2 pt-1">
+                          {cafe.internal_link_suggestions.map((link, idx) => (
+                            <span key={idx} className="text-[10px] font-sans px-2.5 py-1 bg-amber-50 text-[#713f12] rounded-full border border-[#713f12]/15">
+                              {link}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     {/* Google Search & Maps Insights Card */}
                     <div className="bg-stone-50 border border-stone-200 rounded-xl p-5 space-y-4">
                       <div className="flex flex-wrap items-center justify-between gap-4">

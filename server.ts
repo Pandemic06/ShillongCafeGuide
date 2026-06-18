@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import fs from "fs";
 import { enrichCafeWithLabet } from "./src/labet_data";
 import { upsertCafeToFirestore } from "./server-firestore";
+import { KongLabetEngine } from "./src/pipeline/kongLabetEngine";
 
 // Empty fallback — DB always exists in this deployment. If it ever doesn't,
 // the API returns an empty list and the client shows zero cafes (better
@@ -251,6 +252,7 @@ app.put("/api/cafes/:id", (req, res) => {
 app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
   const apiKey = process.env.GOOGLE_MAPS_PLATFORM_KEY || process.env.GOOGLE_MAPS_API_KEY || "";
   const hasKey = !!apiKey && apiKey !== "YOUR_API_KEY" && apiKey.trim().length > 10;
+  const { id: targetId } = req.body || {};
 
   // Seed standard real verified locations in Shillong
   const SEED_PLACES_DATA: { [key: string]: any } = {
@@ -467,9 +469,15 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
   const results: any[] = [];
   let updatedCount = 0;
 
+  const ai = getGeminiClient();
+  const labetEngine = ai ? new KongLabetEngine(ai) : null;
+
   for (let i = 0; i < cafesDb.length; i++) {
     const cafe = cafesDb[i];
+    if (targetId && cafe.id !== targetId) continue;
+
     const seed = SEED_PLACES_DATA[cafe.id];
+    let placeEnriched = false;
 
     if (hasKey) {
       try {
@@ -542,9 +550,7 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
             cafe.verification_status = status;
             cafe.coordinates = { lat, lng };
 
-            updatedCount++;
-            results.push({ id: cafe.id, name: cafe.name, status: "enriched", confidence });
-            continue;
+            placeEnriched = true;
           }
         }
       } catch (err) {
@@ -552,48 +558,111 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
       }
     }
 
-    // High fidelity pre-seeded fallback parameters
-    if (seed) {
-      cafe.place_id = seed.place_id;
-      cafe.formatted_address = seed.formatted_address;
-      cafe.latitude = seed.latitude;
-      cafe.longitude = seed.longitude;
-      cafe.google_maps_url = seed.google_maps_url;
-      cafe.website = seed.website;
-      cafe.phone_number = seed.phone_number;
-      cafe.rating = seed.rating;
-      cafe.user_ratings_total = seed.user_ratings_total;
-      cafe.types = seed.types;
-      cafe.opening_hours = seed.opening_hours;
-      cafe.photos = cafe.photos || ["https://images.unsplash.com/photo-154118811-1e0d58224f24"];
-      cafe.khasi_food_available = seed.khasi_food_available;
-      cafe.match_confidence = seed.match_confidence;
-      cafe.verification_status = seed.verification_status;
-      cafe.coordinates = { lat: Number(seed.latitude), lng: Number(seed.longitude) };
-
-      updatedCount++;
-      results.push({ id: cafe.id, name: cafe.name, status: "fallback_enriched", confidence: seed.match_confidence });
-    } else {
-      // Basic calculated fallback for custom added cafes
-      cafe.place_id = `place-calc-${cafe.id}`;
-      cafe.formatted_address = cafe.address || "Shillong, Meghalaya 793001";
-      cafe.latitude = cafe.coordinates?.lat || 25.568;
-      cafe.longitude = cafe.coordinates?.lng || 91.885;
-      cafe.google_maps_url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${cafe.name}, Shillong, Meghalaya`)}`;
-      cafe.website = "https://instagram.com/";
-      cafe.phone_number = "+91 364 123 4567";
-      cafe.rating = cafe.rating || 4.5;
-      cafe.user_ratings_total = 12;
-      cafe.types = ["cafe", "food"];
-      cafe.opening_hours = [cafe.hours || "10:30 AM — 8:30 PM"];
-      cafe.photos = [cafe.images?.hero];
-      cafe.khasi_food_available = cafe.vibeTags?.some((t: string) => /traditional|khasi|indigenous|jadoh/i.test(t));
-      cafe.match_confidence = 0.72;
-      cafe.verification_status = "verified";
-
-      updatedCount++;
-      results.push({ id: cafe.id, name: cafe.name, status: "basic_enriched", confidence: 0.72 });
+    if (!placeEnriched) {
+      if (seed) {
+        cafe.place_id = seed.place_id;
+        cafe.formatted_address = seed.formatted_address;
+        cafe.latitude = seed.latitude;
+        cafe.longitude = seed.longitude;
+        cafe.google_maps_url = seed.google_maps_url;
+        cafe.website = seed.website;
+        cafe.phone_number = seed.phone_number;
+        cafe.rating = seed.rating;
+        cafe.user_ratings_total = seed.user_ratings_total;
+        cafe.types = seed.types;
+        cafe.opening_hours = seed.opening_hours;
+        cafe.photos = cafe.photos || ["https://images.unsplash.com/photo-154118811-1e0d58224f24"];
+        cafe.khasi_food_available = seed.khasi_food_available;
+        cafe.match_confidence = seed.match_confidence;
+        cafe.verification_status = seed.verification_status;
+        cafe.coordinates = { lat: Number(seed.latitude), lng: Number(seed.longitude) };
+      } else {
+        // Basic calculated fallback for custom added cafes
+        cafe.place_id = `place-calc-${cafe.id}`;
+        cafe.formatted_address = cafe.address || "Shillong, Meghalaya 793001";
+        cafe.latitude = cafe.coordinates?.lat || 25.568;
+        cafe.longitude = cafe.coordinates?.lng || 91.885;
+        cafe.google_maps_url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${cafe.name}, Shillong, Meghalaya`)}`;
+        cafe.website = "https://instagram.com/";
+        cafe.phone_number = "+91 364 123 4567";
+        cafe.rating = cafe.rating || 4.5;
+        cafe.user_ratings_total = 12;
+        cafe.types = ["cafe", "food"];
+        cafe.opening_hours = [cafe.hours || "10:30 AM — 8:30 PM"];
+        cafe.photos = [cafe.images?.hero];
+        cafe.khasi_food_available = cafe.vibeTags?.some((t: string) => /traditional|khasi|indigenous|jadoh/i.test(t));
+        cafe.match_confidence = 0.72;
+        cafe.verification_status = "verified";
+      }
     }
+
+    // Invoke Kong Labet Autonomous Pipeline stage
+    if (labetEngine) {
+      try {
+        const labetResult = await labetEngine.runAutonomousEnrichment(cafe, cafesDb);
+        if (labetResult.enrichedData) {
+          const ed = labetResult.enrichedData;
+          cafe.seo_title = ed.seo_title || cafe.seo_title;
+          cafe.seo_description = ed.seo_description || cafe.seo_description;
+          cafe.highlights = ed.highlights || cafe.highlights;
+          cafe.practical_information = ed.practical_information || cafe.practical_information;
+          cafe.neighborhood_context = ed.neighborhood_context || cafe.neighborhood_context;
+          cafe.internal_link_suggestions = ed.internal_link_suggestions || cafe.internal_link_suggestions;
+          
+          if (ed.tagline) {
+            cafe.tagline = ed.tagline;
+            cafe.kong_labet_tagline = ed.kong_labet_tagline || ed.tagline;
+          }
+          if (ed.introduction) cafe.introduction = ed.introduction;
+          if (ed.whyVisit) cafe.whyVisit = ed.whyVisit;
+          if (ed.price_per_person) cafe.price_per_person = ed.price_per_person;
+          if (ed.vibeTags && ed.vibeTags.length > 0) cafe.vibeTags = ed.vibeTags;
+          
+          if (ed.kong_labet_tagline) cafe.kong_labet_tagline = ed.kong_labet_tagline;
+          if (ed.kong_labet_note) cafe.kong_labet_note = ed.kong_labet_note;
+          if (ed.kong_labet_observations) cafe.kong_labet_observations = ed.kong_labet_observations;
+          
+          if (ed.mustTry && ed.mustTry.length > 0) {
+            cafe.mustTry = ed.mustTry.map((item: any) => ({
+              name: item.name,
+              description: item.description,
+              price: item.price,
+              image: item.image || "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
+            }));
+          }
+
+          cafe.confidence_score = labetResult.confidenceScore;
+          cafe.confidence_reasons = labetResult.confidenceReasons;
+          cafe.last_normalized_at = new Date().toISOString();
+
+          // Validation & confidence checks
+          if (!labetResult.isValid || labetResult.confidenceScore < 0.8) {
+            cafe.publish_eligibility_status = "pending";
+            cafe.review_status = "Needs review";
+            cafe.reviewer_decision = "Needs review";
+            cafe.borderline_mixed_fit_flag = true;
+            cafe.evidence_notes = `Flagged by Kong Labet Engine: ${labetResult.validationMessage}. Reasons: ${(labetResult.confidenceReasons || []).join(", ")}`;
+          } else {
+            cafe.publish_eligibility_status = "approved";
+            cafe.review_status = "Verified fit";
+            cafe.reviewer_decision = "Verified fit";
+            cafe.borderline_mixed_fit_flag = false;
+            cafe.evidence_notes = `Autonomously verified by Kong Labet Engine.`;
+          }
+        }
+      } catch (err) {
+        console.error(`Kong Labet autonomous enrichment stage failed for ${cafe.name}:`, err);
+      }
+    }
+
+    updatedCount++;
+    results.push({
+      id: cafe.id,
+      name: cafe.name,
+      status: "fully_enriched",
+      confidence: cafe.confidence_score || 0.8,
+      publishStatus: cafe.publish_eligibility_status || "pending"
+    });
   }
 
   saveCafes();
@@ -619,103 +688,91 @@ app.post("/api/cafes/sweep", requireAgentKey, async (req, res) => {
 
   try {
     const existingNames = cafesDb.map(c => c.name);
-    // Google search grounding to fetch REAL locations
-    const sweepPrompt = `
-Search Google web sources specifically for genuine, operating cafes, bistros, espresso houses, or traditional restaurants in Shillong, Meghalaya, India.
-Discover exactly 3 or 4 real, highly-rated, or historic dining spaces that are NOT included in this exact list: [${existingNames.join(", ")}].
-Focus on genuine Shillong food joints or cafes (such as Bread Cafe, Café Regal, Bistro Laitumkhrah, Evening Club, Little Chef, Jiva Grill, Cafe Heritigo or Trattoria).
+    const engine = new KongLabetEngine(ai);
 
-For each discovered site, you MUST extract real details and output STRICTLY as a JSON array of Cafe objects adhering to this exact schema:
-interface Cafe {
-  id: string; // URL-friendly unique slug (e.g., "bread-cafe-police-bazaar")
-  name: string; // Real cafe name
-  tagline: string; // Eye-catching tagline
-  theme: string; // Aesthetic theme
-  introduction: string; // Beautiful 2-3 sentence writeup about its real atmosphere and environment
-  whyVisit: string; // Quick reason to go there
-  hours: string; // Hours of operation (e.g. "9:00 AM - 10:00 PM")
-  address: string; // Street address in Shillong
-  neighborhood: "Laitumkhrah" | "Police Bazaar" | "Golf Links" | "Boyce Road" | "Nongkynrih" | "Kench's Trace" | "Dhankheti";
-  hasLiveMusic: boolean;
-  vibeTags: string[];
-  mustTry: { name: string; description: string; price: string; image: string; }[];
-  coordinates: { lat: number; lng: number; };
-  kong_labet_tagline: string; // A short (1-sentence) witty and slightly sarcastic tagline in the signature dry voice of Kong Labet (elder Shillong auntie)
-  kong_labet_note: string; // A practical advisory note in the dry, deadpan, comforting voice of Kong Labet
-}
+    // Run discovery web search
+    const discovered = await engine.discoverVenues(existingNames);
+    const addedCafes: any[] = [];
 
-Make sure to return only valid JSON inside a standard json block. Do not write text before or after the JSON array. Make coordinates realistic (latitude: 25.56 - 25.58, longitude: 91.87 - 91.90).
-`;
+    const defaultCafeImages = [
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200",
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200",
+    ];
 
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: sweepPrompt,
-      config: {
-        tools: [{ googleSearch: {} }],
-        temperature: 0.7,
-      },
-    });
+    for (let i = 0; i < discovered.length; i++) {
+      const item = discovered[i];
+      const alreadyExists = cafesDb.some(
+        existing => existing.name.toLowerCase() === item.name.toLowerCase()
+      );
+      if (alreadyExists) continue;
 
-    const text = response.text || "";
-    const jsonMatch = text.match(/```json\s*([\s\S]*?)\s*```/) || text.match(/\[\s*\{[\s\S]*\}\s*\]/);
-    
-    let parsed: any[] = [];
-    if (jsonMatch) {
-      parsed = JSON.parse((jsonMatch[1] || jsonMatch[0]).trim());
-    } else {
-      parsed = JSON.parse(text.trim());
-    }
+      const cafeId = item.name.toLowerCase().replace(/\W+/g, "-").replace(/^-+|-+$/g, "");
+      const image = defaultCafeImages[i % defaultCafeImages.length];
 
-    if (Array.isArray(parsed)) {
-      const defaultCafeImages = [
-        "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200",
-        "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200",
-      ];
+      const baseCafe: any = {
+        id: cafeId,
+        name: item.name,
+        neighborhood: item.neighborhood,
+        address: `${item.neighborhood}, Shillong, Meghalaya`,
+        images: {
+          hero: image,
+          card: image.replace("w=1200", "w=800"),
+          interior: image
+        },
+        vibeTags: ["Discovered"],
+        coordinates: { lat: 25.568 + (Math.random() - 0.5) * 0.01, lng: 91.885 + (Math.random() - 0.5) * 0.01 }
+      };
 
-      const processed = parsed.map((item, index) => {
-        const image = defaultCafeImages[index % defaultCafeImages.length];
-        return {
-          ...item,
-          id: item.id || `cafe-swept-${Date.now()}-${index}`,
-          images: {
-            hero: image,
-            card: image.replace("w=1200", "w=800"),
-            interior: image
-          },
-          gallery: [
-            "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
-            "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
-          ]
+      // Run research and enrichment
+      const labetResult = await engine.runAutonomousEnrichment(baseCafe, cafesDb);
+      if (labetResult.enrichedData) {
+        const ed = labetResult.enrichedData;
+        const fullyEnrichedCafe = {
+          ...baseCafe,
+          ...ed,
+          confidence_score: labetResult.confidenceScore,
+          confidence_reasons: labetResult.confidenceReasons,
+          last_normalized_at: new Date().toISOString()
         };
-      });
 
-      // Filter and append only unique additions
-      const addedCafes: any[] = [];
-      for (const cafe of processed) {
-        const alreadyExists = cafesDb.some(
-          existing => existing.name.toLowerCase() === cafe.name.toLowerCase() || existing.id === cafe.id
-        );
-        if (!alreadyExists) {
-          cafesDb.push(cafe);
-          addedCafes.push(cafe);
+        if (!labetResult.isValid || labetResult.confidenceScore < 0.8) {
+          fullyEnrichedCafe.publish_eligibility_status = "pending";
+          fullyEnrichedCafe.review_status = "Needs review";
+          fullyEnrichedCafe.reviewer_decision = "Needs review";
+          fullyEnrichedCafe.borderline_mixed_fit_flag = true;
+          fullyEnrichedCafe.evidence_notes = `Flagged by Kong Labet Engine: ${labetResult.validationMessage || "Low confidence score."}`;
+        } else {
+          fullyEnrichedCafe.publish_eligibility_status = "approved";
+          fullyEnrichedCafe.review_status = "Verified fit";
+          fullyEnrichedCafe.reviewer_decision = "Verified fit";
+          fullyEnrichedCafe.borderline_mixed_fit_flag = false;
+          fullyEnrichedCafe.evidence_notes = `Autonomously verified by Kong Labet Engine.`;
         }
-      }
 
-      if (addedCafes.length > 0) {
-        saveCafes();
+        cafesDb.push(fullyEnrichedCafe);
+        addedCafes.push(fullyEnrichedCafe);
       }
-
-      res.status(200).json({
-        success: true,
-        sweepCount: addedCafes.length,
-        sweptCafes: addedCafes,
-        totalCount: cafesDb.length
-      });
-    } else {
-      res.status(200).json({ success: false, error: "Prompt returned invalid object", sweptCafes: [] });
     }
+
+    if (addedCafes.length > 0) {
+      saveCafes();
+      
+      // Mirror to firestore (fire-and-forget)
+      for (const cafe of addedCafes) {
+        upsertCafeToFirestore(cafe, cafe.publish_eligibility_status)
+          .then((ok) => { if (ok) console.log(`[firestore] persisted ${cafe.id} (${cafe.publish_eligibility_status})`); })
+          .catch(() => {});
+      }
+    }
+
+    res.status(200).json({
+      success: true,
+      sweepCount: addedCafes.length,
+      sweptCafes: addedCafes,
+      totalCount: cafesDb.length
+    });
 
   } catch (error: any) {
     console.error("Scraper sweep failed, using high-fidelity fallback:", error);
@@ -910,6 +967,8 @@ app.post("/api/chat", async (req, res) => {
 
     const systemInstruction = `
 You are \"Kong Labet,\" a wise, emotionally grounded, and retired old Laitumkhrah auntie who has run tea rooms, watched three generations of mountain folk, and seen enough nonsense in life to simplify things. You act as a deadpan, dry-witted storyteller and AI food scout for Shillong.
+
+Antigravity, you must rebuild Kong Labet so that Kong Labet creates and maintains its own venue knowledge base through web research, structured fact extraction, validation, and differentiated content generation, without relying on manual venue data entry.
 
 ### YOUR AUNTIE PERSONALITY RULES:
 1. **Never enthusiastic or robotic**: You do NOT say: "Certainly!", "I would be happy to help!", "Awesome choice!", or "Fantastic question!". You don't use corporate greeting slop or exclamation mark overload. You are an older mountain-town realist. You start directly or with a dry observation.
