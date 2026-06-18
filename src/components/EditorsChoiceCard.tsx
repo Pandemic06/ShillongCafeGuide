@@ -7,9 +7,10 @@ interface EditorsChoiceCardProps {
   onViewDetails: (cafeId: string) => void;
   onOpenRoute?: (routeId: string) => void;
   isFeaturedPartner?: boolean;
+  isFullWidth?: boolean;
 }
 
-export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, isFeaturedPartner }: EditorsChoiceCardProps) {
+export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, isFeaturedPartner, isFullWidth }: EditorsChoiceCardProps) {
   const heroImage =
     cafe.images?.hero ||
     cafe.images?.card ||
@@ -17,7 +18,9 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
 
   return (
     <div
-      className={`group relative bg-white border rounded-[24px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col ${
+      className={`group relative bg-white border rounded-[24px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer flex ${
+        isFullWidth ? "flex-col md:flex-row md:col-span-3" : "flex-col"
+      } ${
         isFeaturedPartner
           ? "border-amber-400 ring-2 ring-amber-300/50 shadow-amber-100"
           : "border-stone-200"
@@ -25,7 +28,7 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
       onClick={() => onViewDetails(cafe.id)}
     >
       {/* Hero image */}
-      <div className="relative h-52 w-full overflow-hidden bg-stone-100">
+      <div className={`relative overflow-hidden bg-stone-100 ${isFullWidth ? "h-64 md:h-auto md:w-5/12" : "h-52 w-full"}`}>
         <img
           src={heroImage}
           alt={cafe.name}
@@ -35,13 +38,13 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
-        {/* Featured Partner ribbon — shown above Editor's Choice badge when applicable */}
+        {/* Featured Partner ribbon */}
         {isFeaturedPartner && (
           <div className="absolute top-0 left-0 right-0 flex justify-center pt-0 pointer-events-none">
             <div className="flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-1 text-[9px] font-mono font-bold tracking-widest uppercase shadow-lg rounded-b-xl">
-              <Sparkles className="w-3 h-3 shrink-0" />
+              <Sparkles className="w-3.5 h-3.5 shrink-0" />
               <span>Featured Partner</span>
-              <Sparkles className="w-3 h-3 shrink-0" />
+              <Sparkles className="w-3.5 h-3.5 shrink-0" />
             </div>
           </div>
         )}
@@ -55,41 +58,58 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
         {/* Rating badge */}
         {cafe.rating && (
           <div className="absolute top-3 right-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm text-stone-800 px-2 py-1 rounded-full text-[10px] font-mono font-bold shadow">
-            <Star className="w-3 h-3 fill-amber-400 text-amber-500 shrink-0" />
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500 shrink-0" />
             <span>{Number(cafe.rating).toFixed(1)}</span>
           </div>
         )}
 
         {/* Cafe name overlay */}
-        <div className="absolute bottom-0 left-0 right-0 p-4">
-          <h3 className="font-display font-bold text-white text-base leading-tight line-clamp-1 drop-shadow">
-            {cafe.name}
-          </h3>
-          {cafe.neighborhood && (
-            <p className="flex items-center gap-1 text-stone-300 text-[10px] font-mono mt-0.5">
-              <MapPin className="w-3 h-3 shrink-0" />
-              <span className="line-clamp-1">{cafe.neighborhood}</span>
-            </p>
-          )}
-        </div>
+        {!isFullWidth && (
+          <div className="absolute bottom-0 left-0 right-0 p-4">
+            <h3 className="font-display font-bold text-white text-base leading-tight line-clamp-1 drop-shadow">
+              {cafe.name}
+            </h3>
+            {cafe.neighborhood && (
+              <p className="flex items-center gap-1 text-stone-300 text-[10px] font-mono mt-0.5">
+                <MapPin className="w-3 h-3 shrink-0" />
+                <span className="line-clamp-1">{cafe.neighborhood}</span>
+              </p>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Card body */}
-      <div className="p-4 flex flex-col gap-3 flex-1">
+      <div className={`p-6 flex flex-col gap-4 flex-1 justify-center ${isFullWidth ? "md:w-7/12" : ""}`}>
+        {/* For full width, show name and location in body */}
+        {isFullWidth && (
+          <div className="space-y-1.5">
+            <h3 className="font-display font-bold text-stone-900 text-2xl md:text-3xl leading-tight">
+              {cafe.name}
+            </h3>
+            {cafe.neighborhood && (
+              <p className="flex items-center gap-1 text-[#8b5c1a] text-xs font-mono font-bold uppercase tracking-wider">
+                <MapPin className="w-3.5 h-3.5 shrink-0" />
+                <span>{cafe.neighborhood}, Shillong</span>
+              </p>
+            )}
+          </div>
+        )}
+
         {/* Tagline / theme */}
         {(cafe.tagline || cafe.theme) && (
-          <p className="text-stone-600 text-[11px] font-sans leading-relaxed line-clamp-2 font-light">
+          <p className="text-stone-600 text-xs md:text-sm font-sans leading-relaxed font-light">
             {cafe.tagline || cafe.theme}
           </p>
         )}
 
         {/* Vibe tags */}
         {cafe.vibeTags && cafe.vibeTags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5">
-            {cafe.vibeTags.slice(0, 3).map((tag) => (
+          <div className="flex flex-wrap gap-2">
+            {cafe.vibeTags.slice(0, 5).map((tag) => (
               <span
                 key={tag}
-                className="text-[9px] font-mono font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded"
+                className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-md"
               >
                 {tag}
               </span>
@@ -98,20 +118,20 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
         )}
 
         {/* Actions */}
-        <div className="flex items-center gap-2 mt-auto pt-2 border-t border-stone-100">
+        <div className="flex items-center gap-3 pt-3 border-t border-stone-100 mt-2">
           <button
             onClick={(e) => {
               e.stopPropagation();
               onViewDetails(cafe.id);
             }}
-            className={`flex-1 flex items-center justify-center gap-1.5 text-white text-[10px] font-sans font-semibold uppercase tracking-wider px-3 py-2.5 rounded-xl transition-all cursor-pointer ${
+            className={`flex-1 md:flex-none md:px-8 flex items-center justify-center gap-2 text-white text-xs font-sans font-semibold uppercase tracking-wider py-3 rounded-xl transition-all cursor-pointer ${
               isFeaturedPartner
                 ? "bg-amber-700 hover:bg-amber-800"
                 : "bg-stone-900 hover:bg-stone-950"
             }`}
           >
             <span>View Profile</span>
-            <ArrowRight className="w-3 h-3" />
+            <ArrowRight className="w-4 h-4" />
           </button>
           {onOpenRoute && (
             <button
@@ -119,7 +139,7 @@ export default function EditorsChoiceCard({ cafe, onViewDetails, onOpenRoute, is
                 e.stopPropagation();
                 onOpenRoute(cafe.id);
               }}
-              className="px-3 py-2.5 rounded-xl border border-stone-200 hover:border-amber-700 text-stone-600 hover:text-amber-800 hover:bg-amber-50 text-[10px] font-sans font-semibold uppercase tracking-wider transition-all cursor-pointer"
+              className="px-5 py-3 rounded-xl border border-stone-200 hover:border-amber-700 text-stone-600 hover:text-amber-800 hover:bg-amber-50 text-xs font-sans font-semibold uppercase tracking-wider transition-all cursor-pointer"
             >
               Route
             </button>

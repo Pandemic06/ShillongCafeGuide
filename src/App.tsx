@@ -626,12 +626,38 @@ export default function App() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {cafes.filter(c => c.editorial_featured).slice(0, 3).map(cafe => (
-                      <EditorsChoiceCard key={cafe.id} cafe={cafe} onViewDetails={(id) => handleSelectCafe(id)} />
-                    ))}
-                    {cafes.filter(c => c.editorial_featured).length === 0 && cafes.slice(0, 3).map(cafe => (
-                      <EditorsChoiceCard key={cafe.id} cafe={cafe} onViewDetails={(id) => handleSelectCafe(id)} />
-                    ))}
+                    {(() => {
+                      const featuredCafes = cafes.filter(c => c.editorial_featured).slice(0, 3);
+                      if (featuredCafes.length === 1) {
+                        return (
+                          <EditorsChoiceCard
+                            key={featuredCafes[0].id}
+                            cafe={featuredCafes[0]}
+                            onViewDetails={(id) => handleSelectCafe(id)}
+                            isFullWidth={true}
+                          />
+                        );
+                      }
+                      if (featuredCafes.length === 0) {
+                        const fallbackCafes = cafes.slice(0, 3);
+                        if (fallbackCafes.length === 1) {
+                          return (
+                            <EditorsChoiceCard
+                              key={fallbackCafes[0].id}
+                              cafe={fallbackCafes[0]}
+                              onViewDetails={(id) => handleSelectCafe(id)}
+                              isFullWidth={true}
+                            />
+                          );
+                        }
+                        return fallbackCafes.map(cafe => (
+                          <EditorsChoiceCard key={cafe.id} cafe={cafe} onViewDetails={(id) => handleSelectCafe(id)} />
+                        ));
+                      }
+                      return featuredCafes.map(cafe => (
+                        <EditorsChoiceCard key={cafe.id} cafe={cafe} onViewDetails={(id) => handleSelectCafe(id)} />
+                      ));
+                    })()}
                   </div>
                 </div>
 
