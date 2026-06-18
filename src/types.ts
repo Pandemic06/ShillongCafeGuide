@@ -40,6 +40,11 @@ export interface Cafe {
     card: string;
     interior?: string;
     details?: string;
+    detail1?: string;
+    detail2?: string;
+    detail3?: string;
+    detail4?: string;
+    detail5?: string;
   };
   quote?: string;
   quoteAuthor?: string;

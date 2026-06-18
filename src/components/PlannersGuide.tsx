@@ -1179,9 +1179,7 @@ export default function PlannersGuide() {
                     defaultZoom={11}
                     disableDefaultUI={true}
                     zoomControl={true}
-                    options={{
-                      styles: [{ featureType: "poi", stylers: [{ visibility: "off" }] }]
-                    }}
+                    styles={[{ featureType: "poi", stylers: [{ visibility: "off" }] }]}
                     internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
                     style={{ width: "100%", height: "100%" }}
                   >
@@ -1449,9 +1447,7 @@ export default function PlannersGuide() {
                     gestureHandling="greedy"
                     disableDefaultUI={true}
                     zoomControl={true}
-                    options={{
-                      styles: [{ featureType: "poi", stylers: [{ visibility: "off" }] }]
-                    }}
+                    styles={[{ featureType: "poi", stylers: [{ visibility: "off" }] }]}
                     internalUsageAttributionIds={['gmp_mcp_codeassist_v1_aistudio']}
                     style={{ width: "100%", height: "100%" }}
                   >

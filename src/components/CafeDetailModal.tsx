@@ -4,6 +4,7 @@ import { X, Clock, MapPin, Star, Sparkles, Send, CheckCircle, Navigation, Phone,
 import { motion } from "motion/react";
 import SEO from "./SEO";
 import { buildCafeSchema } from "../utils/cafeSchema";
+import { getReviewsFromFirestore, addReviewToFirestore } from "../services/db";
 
 interface CafeDetailModalProps {
   cafe: Cafe;

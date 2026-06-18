@@ -286,8 +286,6 @@ export default function App() {
 
   const tabsList = [
     { id: "explore", label: "Discovery" },
-    { id: "cafes", label: "Cozy Cafés" },
-    { id: "cuisine", label: "Khasi Cuisine" },
     { id: "walks", label: "District Walks" },
     { id: "planners", label: "Route Planner" },
     { id: "guides", label: "Editorial" },
