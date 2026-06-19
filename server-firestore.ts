@@ -67,6 +67,25 @@ export function isFirestoreWriteAvailable(): boolean {
  * throws — logs and resolves false on failure so the HTTP response isn't held
  * hostage to a Firestore hiccup.
  */
+/**
+ * Stable Firestore doc id for a café. Prefer place_id (globally unique per
+ * Google place) so re-adds of the same café overwrite one doc instead of
+ * piling up under fresh cafe-<timestamp> ids. Fall back to a normalized name
+ * slug, then to whatever id the caller passed.
+ *
+ * This is the fix for the duplicate explosion: the agent dedupes against the
+ * ephemeral /api/cafes list (which resets on deploy), so it kept re-adding the
+ * same cafés. A deterministic doc id makes those re-adds idempotent.
+ */
+export function stableCafeDocId(cafe: Record<string, any>): string {
+  const pid = cafe.place_id || cafe.placeId;
+  if (pid) return `gp_${String(pid).replace(/[^a-zA-Z0-9_-]/g, "")}`.slice(0, 128);
+  const name = (cafe.name || "").toString().toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  if (name) return `nm_${name}`.slice(0, 128);
+  return String(cafe.id || `cafe-${Date.now()}`);
+}
+
 export async function upsertCafeToFirestore(
   cafe: Record<string, any>,
   status: "pending" | "approved" = "pending"
@@ -74,7 +93,8 @@ export async function upsertCafeToFirestore(
   const db = initFirestore();
   if (!db || !cafe?.id) return false;
   try {
-    await db.collection("cafes").doc(String(cafe.id)).set(
+    const docId = stableCafeDocId(cafe);
+    await db.collection("cafes").doc(docId).set(
       {
         ...cafe,
         status,
@@ -89,4 +109,55 @@ export async function upsertCafeToFirestore(
     console.error(`[firestore] upsert cafe ${cafe.id} failed:`, err);
     return false;
   }
+}
+
+/**
+ * One-shot maintenance: collapse duplicate café docs. Groups every doc in the
+ * `cafes` collection by place_id (preferred) or normalized name, keeps the
+ * earliest-created doc in each group, deletes the rest. Static/seed cafés that
+ * were never duplicated are untouched.
+ *
+ * `dryRun` returns the plan without deleting. Returns counts + the ids removed.
+ */
+export async function cleanupDuplicateCafes(
+  dryRun = false
+): Promise<{ total: number; groups: number; deleted: number; deletedIds: string[]; kept: string[] }> {
+  const db = initFirestore();
+  if (!db) return { total: 0, groups: 0, deleted: 0, deletedIds: [], kept: [] };
+
+  const snap = await db.collection("cafes").get();
+  const docs: { id: string; data: any }[] = [];
+  snap.forEach((d: any) => docs.push({ id: d.id, data: d.data() }));
+
+  const norm = (s: any) => (s || "").toString().toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const groups = new Map<string, { id: string; data: any }[]>();
+  for (const doc of docs) {
+    const key = doc.data.place_id ? `pid:${doc.data.place_id}` : `nm:${norm(doc.data.name)}`;
+    if (!key || key === "nm:") continue;
+    const arr = groups.get(key) || [];
+    arr.push(doc);
+    groups.set(key, arr);
+  }
+
+  const deletedIds: string[] = [];
+  const kept: string[] = [];
+  for (const [, arr] of groups) {
+    if (arr.length <= 1) { if (arr[0]) kept.push(arr[0].id); continue; }
+    // Keep the earliest doc. cafe-<timestamp> ids sort by creation; otherwise
+    // fall back to updatedAt. Prefer an already-approved doc if one exists.
+    arr.sort((a, b) => {
+      const aApproved = a.data.status === "approved" ? 0 : 1;
+      const bApproved = b.data.status === "approved" ? 0 : 1;
+      if (aApproved !== bApproved) return aApproved - bApproved;
+      return String(a.id).localeCompare(String(b.id));
+    });
+    const [keepDoc, ...rest] = arr;
+    kept.push(keepDoc.id);
+    for (const r of rest) {
+      deletedIds.push(r.id);
+      if (!dryRun) await db.collection("cafes").doc(r.id).delete();
+    }
+  }
+
+  return { total: docs.length, groups: groups.size, deleted: deletedIds.length, deletedIds, kept };
 }

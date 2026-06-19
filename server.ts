@@ -5,7 +5,7 @@ import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
 import fs from "fs";
 import { enrichCafeWithLabet } from "./src/labet_data";
-import { upsertCafeToFirestore } from "./server-firestore";
+import { upsertCafeToFirestore, cleanupDuplicateCafes } from "./server-firestore";
 import { KongLabetEngine } from "./src/pipeline/kongLabetEngine";
 
 // Empty fallback — DB always exists in this deployment. If it ever doesn't,
@@ -225,6 +225,21 @@ app.post("/api/cafes", requireAgentKey, (req, res) => {
     .catch(() => { /* already logged inside */ });
 
   res.status(201).json({ ...validatedCafe, status });
+});
+
+// One-shot maintenance: collapse duplicate café docs in Firestore. Guarded by
+// X-Agent-Key. ?dryRun=1 returns the plan without deleting. Added to clean up
+// the duplicate explosion caused by the agent re-adding cafés on each run
+// before the deterministic-doc-id fix landed.
+app.post("/api/cafes/dedupe-firestore", requireAgentKey, async (req, res) => {
+  try {
+    const dryRun = req.query.dryRun === "1" || req.body?.dryRun === true;
+    const result = await cleanupDuplicateCafes(dryRun);
+    res.json({ ok: true, dryRun, ...result });
+  } catch (err: any) {
+    console.error("dedupe-firestore failed:", err);
+    res.status(500).json({ error: err.message || "dedupe failed" });
+  }
 });
 
 // Update a cafe by ID (Taxonomy and Content Governance editor)
