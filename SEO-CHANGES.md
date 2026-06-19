@@ -1,6 +1,6 @@
 # SEO Changes — ShillongCafeGuide
 
-> Last updated: 2026-06-09  
+> Last updated: 2026-06-19  
 > Branch: `SCM-Combination-Build`
 
 ---
@@ -80,12 +80,30 @@ Preconnect hints reduce render-blocking latency — improves LCP Core Web Vital.
 
 ---
 
-## Next Steps (Not in this commit)
+## Phase 1 — Per-Café Schema (Completed 2026-06-09)
 
-- [ ] Add `generateStaticParams` to pre-render all 49 café pages at build time (SSG)
-- [ ] Implement `generateMetadata` in each café route for dynamic per-page title/description
-- [ ] Add per-café `Restaurant` / `CafeOrCoffeeShop` JSON-LD on individual café pages
-- [ ] Add `CollectionPage` + `ItemList` schema on neighborhood walk pages
-- [ ] Add `TouristTrip` schema on route/adventure pages
-- [ ] Submit updated sitemap to Google Search Console
+- [x] `src/utils/cafeSchema.ts` — builds `CafeOrCoffeeShop` + `GeoCoordinates` + `AggregateRating` + `PostalAddress` JSON-LD for every café
+- [x] `src/components/CafeDetailModal.tsx` — injects per-café SEO: dynamic `<title>`, `<meta description>`, canonical URL, OG/Twitter tags, BreadcrumbList, and `CafeOrCoffeeShop` schema via `SEO.tsx`
+- [x] `src/components/SEO.tsx` — upserts all `<head>` tags from a React effect; wraps schemas in `{ "@context": "...", "@graph": [...] }`
+- [x] Fix: removed redundant `@context` from `cafeEntity` in `buildCafeSchema` (2026-06-19 — outer @graph wrapper already supplies it)
+
+## Phase 2 — Walks Page Schema (Completed 2026-06-19)
+
+- [x] `src/App.tsx` `getDynamicSchema()` — added `walks` case returning `CollectionPage` + `ItemList` schema
+  - `CollectionPage` at `https://shillongcafemap.in/?tab=walks`
+  - `ItemList` with one `ListItem` per neighborhood (Laitumkhrah, Police Bazaar, Golf Links)
+  - Each item is a `TouristAttraction` with `name`, `description`, `image`, `PostalAddress`, `containedInPlace` hierarchy
+  - Uses `NEIGHBORHOODS` array already imported in App.tsx — zero new dependencies
+
+## Phase 3 — Route Planner Schema (Completed 2026-06-19)
+
+- [x] `src/App.tsx` `getDynamicSchema()` — added `planners` case returning `CollectionPage` + `ItemList` of `TouristTrip` schemas
+  - `CollectionPage` at `https://shillongcafemap.in/?tab=planners`
+  - `ItemList` with one `TouristTrip` per route (12 routes total)
+  - Each `TouristTrip` has `name`, `url`, `provider` (Shillong Café Map), `geo` (centroid coords), and `itinerary` array of `TouristAttraction` stops
+  - Added `import { PLANNER_ROUTES } from "./data/plannerData"` to App.tsx
+
+## Remaining Next Steps
+
+- [ ] Submit updated sitemap to Google Search Console (manual — requires GSC access)
 - [ ] Set `trailingSlash: false` consistently in Vite/server config to eliminate redirect loops

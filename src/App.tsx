@@ -3,6 +3,7 @@ import { Compass, Search, Feather, FileText, Heart, MapPin, Sparkles, BookOpen, 
 import { motion, AnimatePresence } from "motion/react";
 
 import { CAFES, NEIGHBORHOODS, ARTICLES } from "./data";
+import { PLANNER_ROUTES } from "./data/plannerData";
 import { Cafe } from "./types";
 import { isFuzzyMatch } from "./utils";
 import { getCustomCafesFromFirestore } from "./services/db";
@@ -322,6 +323,95 @@ export default function App() {
         touristType: ["Adventure", "Nature", "Cultural"],
         geo: { "@type": "GeoCoordinates", latitude: 25.2802, longitude: 91.7196 },
         containedInPlace: { "@type": "State", name: "Meghalaya", containedInPlace: { "@type": "Country", name: "India" } }
+      };
+    }
+    if (activeTab === "planners") {
+      return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://shillongcafemap.in/?tab=planners",
+        name: "Shillong & Meghalaya Route Planner — Plan Your Adventure",
+        description: "Plan curated road-trip routes across Meghalaya from Shillong: city loop, Cherrapunji, Dawki, Jowai, Laitlum Canyons and more. Drop stops on the map, see real distances and times.",
+        url: "https://shillongcafemap.in/?tab=planners",
+        inLanguage: "en-IN",
+        mainEntity: {
+          "@type": "ItemList",
+          name: "Meghalaya Road-Trip Routes from Shillong",
+          numberOfItems: PLANNER_ROUTES.length,
+          itemListElement: PLANNER_ROUTES.map((route, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: route.name,
+            url: `https://shillongcafemap.in/?tab=planners&route=${route.id}`,
+            item: {
+              "@type": "TouristTrip",
+              name: route.name,
+              url: `https://shillongcafemap.in/?tab=planners&route=${route.id}`,
+              provider: {
+                "@type": "Organization",
+                name: "Shillong Café Map",
+                url: "https://shillongcafemap.in",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: route.centroid.lat,
+                longitude: route.centroid.lng,
+              },
+              itinerary: route.locations.map((loc) => ({
+                "@type": "TouristAttraction",
+                name: loc.name,
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: loc.coordinates.lat,
+                  longitude: loc.coordinates.lng,
+                },
+              })),
+            },
+          })),
+        },
+      };
+    }
+    if (activeTab === "walks") {
+      return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://shillongcafemap.in/?tab=walks",
+        name: "Shillong Neighborhood Walks — Laitumkhrah, Police Bazaar, Golf Links",
+        description: "Walking itineraries through Shillong's signature districts: Laitumkhrah student lanes, Police Bazaar market core, and Golf Links pine-shaded slopes with café and viewpoint stops.",
+        url: "https://shillongcafemap.in/?tab=walks",
+        inLanguage: "en-IN",
+        mainEntity: {
+          "@type": "ItemList",
+          name: "Shillong District Walking Routes",
+          numberOfItems: NEIGHBORHOODS.length,
+          itemListElement: NEIGHBORHOODS.map((n, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: `${n.name} — ${n.title}`,
+            url: `https://shillongcafemap.in/?tab=walks&district=${n.id}`,
+            item: {
+              "@type": "TouristAttraction",
+              name: n.name,
+              description: n.description,
+              image: typeof n.image === "string" && n.image.startsWith("http") ? n.image : `https://shillongcafemap.in${n.image}`,
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Shillong",
+                addressRegion: "Meghalaya",
+                addressCountry: "IN",
+              },
+              containedInPlace: {
+                "@type": "City",
+                name: "Shillong",
+                containedInPlace: {
+                  "@type": "State",
+                  name: "Meghalaya",
+                  containedInPlace: { "@type": "Country", name: "India" },
+                },
+              },
+            },
+          })),
+        },
       };
     }
     const breadcrumbItems: any[] = [{ "@type": "ListItem", position: 1, name: "Home", item: "https://shillongcafemap.com/?tab=explore" }];

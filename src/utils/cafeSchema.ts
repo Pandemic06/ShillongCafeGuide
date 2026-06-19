@@ -112,8 +112,9 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
   };
 
   // ── Main entity ──────────────────────────────────────────────────────────
+  // Note: @context is omitted here — SEO.tsx wraps the schema in a top-level
+  // { "@context": "...", "@graph": [...] } so nesting it would be redundant.
   const cafeEntity: Record<string, unknown> = {
-    '@context': 'https://schema.org',
     '@type': 'CafeOrCoffeeShop',
     '@id': cafeUrl,
     name: cafe.name,
