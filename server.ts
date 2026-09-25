@@ -1441,6 +1441,18 @@ async function startServer() {
   } else {
     // In production, serve compiled static assets from 'dist'
     const distPath = path.join(process.cwd(), "dist", "public");
+
+    // Serve pre-rendered café pages (scripts/generate-static-params.ts) at the
+    // canonical no-trailing-slash URL. Without this, express.static sees the
+    // /cafe/<id> directory and 301s to /cafe/<id>/, wasting crawl budget.
+    app.get("/cafe/:id", (req, res, next) => {
+      const { id } = req.params;
+      if (!/^[a-z0-9-]+$/i.test(id)) return next();
+      const file = path.join(distPath, "cafe", id, "index.html");
+      if (!fs.existsSync(file)) return next();
+      res.sendFile(file);
+    });
+
     app.use(express.static(distPath));
     app.get("*", (req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
