@@ -12,6 +12,7 @@
  */
 
 import type { Cafe } from '../types';
+import { toInternationalPhone } from './phone';
 
 const BASE_URL = 'https://shillongcafemap.in';
 
@@ -110,7 +111,7 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
       ? { openingHoursSpecification }
       : {}),
     ...(images.length ? { image: images.length === 1 ? images[0] : images } : {}),
-    ...(cafe.phone_number ? { telephone: cafe.phone_number } : {}),
+    ...(cafe.phone_number ? { telephone: toInternationalPhone(cafe.phone_number) } : {}),
     ...(menuUrl ? { hasMenu: menuUrl } : {}),
     servesCuisine: buildCuisineList(cafe),
     priceRange: buildPriceRange(cafe),

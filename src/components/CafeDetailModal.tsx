@@ -4,6 +4,7 @@ import { X, Clock, MapPin, Star, Sparkles, Send, CheckCircle, Navigation, Phone,
 import { motion } from "motion/react";
 import SEO from "./SEO";
 import { buildCafeSchema } from "../utils/cafeSchema";
+import { toInternationalPhone } from "../utils/phone";
 import { getReviewsFromFirestore, addReviewToFirestore } from "../services/db";
 
 interface CafeDetailModalProps {
@@ -650,11 +651,11 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                       <div className="flex flex-wrap gap-2 pt-4 border-t border-stone-200/60">
                         {cafe.phone_number && (
                           <a 
-                            href={`tel:${cafe.phone_number}`}
+                            href={`tel:${toInternationalPhone(cafe.phone_number)}`}
                             className="bg-white hover:bg-stone-100 border border-stone-200 text-stone-800 px-3.5 py-2 rounded-lg text-xs font-sans font-medium transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer"
                           >
                             <Phone className="w-3.5 h-3.5 text-amber-800" />
-                            Call: {cafe.phone_number}
+                            Call: {toInternationalPhone(cafe.phone_number)}
                           </a>
                         )}
 

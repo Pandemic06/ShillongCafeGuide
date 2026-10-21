@@ -188,7 +188,7 @@ app.post("/api/cafes", requireAgentKey, (req, res) => {
     theme: newCafe.theme,
     introduction: newCafe.introduction || `${newCafe.name} is a newly integrated local specialty hub in Shillong.`,
     whyVisit: newCafe.whyVisit || "For high-quality flavors, friendly hosts, and warm spaces.",
-    hours: newCafe.hours || undefined,
+    hours: newCafe.hours || "", // Firestore rejects undefined values
     address: newCafe.address || "Shillong, Meghalaya 793001",
     neighborhood: newCafe.neighborhood,
     images: {
@@ -507,7 +507,7 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
           const placeId = match.place_id;
 
           // STEP 2: Place Details
-          const detailsUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=place_id,name,formatted_address,geometry,url,website,formatted_phone_number,opening_hours,rating,user_ratings_total,photos,types&key=${apiKey}`;
+          const detailsUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=place_id,name,formatted_address,geometry,url,website,formatted_phone_number,international_phone_number,opening_hours,rating,user_ratings_total,photos,types&key=${apiKey}`;
           const detailsRes = await fetch(detailsUrl);
           const detailsData = await detailsRes.json() as any;
 
@@ -539,7 +539,7 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
             cafe.longitude = lng;
             cafe.google_maps_url = r.url || `https://www.google.com/maps/place/?q=place_id:${placeId}`;
             cafe.website = r.website || seed?.website || undefined;
-            cafe.phone_number = r.formatted_phone_number || seed?.phone_number || undefined;
+            cafe.phone_number = r.international_phone_number || r.formatted_phone_number || seed?.phone_number || undefined;
             cafe.rating = r.rating || match.rating || cafe.rating || undefined;
             cafe.user_ratings_total = r.user_ratings_total || match.user_ratings_total || seed?.user_ratings_total || undefined;
             cafe.types = r.types || seed?.types || ["cafe", "food"];
@@ -1228,7 +1228,7 @@ app.post("/api/cafes/import-from-maps-url", async (req, res) => {
       longitude: lng,
       google_maps_url: r.url,
       website: r.website || "",
-      phone_number: r.formatted_phone_number || r.international_phone_number || "",
+      phone_number: r.international_phone_number || r.formatted_phone_number || "",
       rating: r.rating,
       user_ratings_total: r.user_ratings_total,
       price_per_person: priceLevelToINR(r.price_level),

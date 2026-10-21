@@ -2,6 +2,7 @@ import React from "react";
 import { Cafe } from "../types";
 import { Clock, MapPin, Compass, ArrowUpRight, Star, Phone, Globe } from "lucide-react";
 import { motion } from "motion/react";
+import { toInternationalPhone } from "../utils/phone";
 
 interface CafeCardProps {
   cafe: Cafe;
@@ -122,12 +123,12 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
             <div className="flex flex-wrap gap-2 text-[10px] font-mono text-stone-500 pt-2 border-t border-dashed border-stone-200/50">
               {cafe.phone_number && (
                 <a
-                  href={`tel:${cafe.phone_number}`}
+                  href={`tel:${toInternationalPhone(cafe.phone_number)}`}
                   className="inline-flex items-center gap-1 hover:text-amber-800 transition-colors bg-white hover:bg-stone-50 border border-stone-205 rounded px-2 py-0.5 cursor-pointer"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <Phone className="w-2.5 h-2.5 text-stone-400" />
-                  {cafe.phone_number}
+                  {toInternationalPhone(cafe.phone_number)}
                 </a>
               )}
               {cafe.website && (

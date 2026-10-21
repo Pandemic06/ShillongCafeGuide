@@ -127,6 +127,7 @@ Preconnect hints reduce render-blocking latency — improves LCP Core Web Vital.
 - [x] Removed fakes: phone "+91 364 123 4567"/"+91 98765 43210", website "https://instagram.com/", review count 12.
 - [x] `server.ts` enrich + POST /api/cafes no longer invent phone, website, 4.5 rating, 12/25 review counts or "10:30 AM — 8:30 PM" hours.
 - [x] Café cards no longer show "(100)" when a café has no review count.
+- [x] Review fixes (2026-10-21): phones shown/dialled/labelled in international +91 form (`src/utils/phone.ts`) and the lookup script + server ask Google for `international_phone_number`; the 11 never-matched cafés lost their unverified rating; new-café `hours` defaults to "" (Firestore rejects undefined); `MAX_COST_USD` env override on `fetch-contact-details.ts` (stop path tested at cap $0.01: no calls, file unchanged).
 
 - [ ] Submit updated sitemap to Google Search Console (manual — requires GSC access)
 - [ ] Set `trailingSlash: false` consistently in Vite/server config to eliminate redirect loops

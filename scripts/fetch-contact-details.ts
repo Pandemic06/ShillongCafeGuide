@@ -25,12 +25,12 @@ const REPORT_PATH = process.argv[2];
 const FAKE_PHONES = new Set(["+91 364 123 4567", "+91 98765 43210"]);
 const FAKE_WEBSITES = new Set(["https://instagram.com/", "https://instagram.com"]);
 const FAKE_REVIEW_COUNTS = new Set([12, 25]);
-const MAX_COST_USD = 2.5;
+const MAX_COST_USD = Number(process.env.MAX_COST_USD ?? 2.5);
 const COST = { findPlace: 0.017, details: 0.025 }; // Details: basic + contact + atmosphere
 const MAX_DISTANCE_KM = 3;
 
 type Cafe = BaseCafe & { phone_number?: string; website?: string; rating?: number; user_ratings_total?: number };
-type Details = { name: string; formatted_phone_number?: string; website?: string; rating?: number; user_ratings_total?: number };
+type Details = { name: string; international_phone_number?: string; website?: string; rating?: number; user_ratings_total?: number };
 type Outcome = { id: string; name: string; result: "updated" | "fakes removed" | "skipped"; how: string; phone?: string; website?: string; rating?: string };
 
 let spent = 0;
@@ -43,7 +43,7 @@ function charge(amount: number) {
 
 async function getDetails(placeId: string): Promise<Details | null> {
   charge(COST.details);
-  const fields = "name,formatted_phone_number,website,rating,user_ratings_total";
+  const fields = "name,international_phone_number,website,rating,user_ratings_total";
   const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${encodeURIComponent(placeId)}&fields=${fields}&key=${API_KEY}`;
   const body = (await (await fetch(url)).json()) as { status: string; error_message?: string; result?: Details };
   if (/REQUEST_DENIED|OVER_QUERY_LIMIT|OVER_DAILY_LIMIT/.test(body.status)) {
@@ -63,6 +63,12 @@ async function confidentSearch(cafe: Cafe): Promise<string | null> {
   return match.place_id;
 }
 
+/** Like withoutFakes, and also drops the rating: with no Google match it did not come from Google. */
+function withoutUnverified(cafe: Cafe): Cafe {
+  const { rating: _unverified, ...rest } = withoutFakes(cafe);
+  return rest;
+}
+
 /** Removes known placeholder values; leaves real ones untouched. */
 function withoutFakes(cafe: Cafe): Cafe {
   const { phone_number, website, user_ratings_total, ...rest } = cafe;
@@ -79,7 +85,7 @@ function withGoogleDetails(cafe: Cafe, placeId: string, d: Details): Cafe {
   return {
     ...clean,
     place_id: placeId,
-    ...(d.formatted_phone_number ? { phone_number: d.formatted_phone_number } : {}),
+    ...(d.international_phone_number ? { phone_number: d.international_phone_number } : {}),
     ...(d.website ? { website: d.website } : {}),
     ...(d.rating && d.user_ratings_total ? { rating: d.rating, user_ratings_total: d.user_ratings_total } : {}),
   };
@@ -89,18 +95,18 @@ async function resolve(cafe: Cafe): Promise<{ cafe: Cafe; outcome: Outcome }> {
   const base = { id: cafe.id, name: cafe.name };
   const placeId = cafe.place_id ?? "";
   if (!placeId || placeId.startsWith("place-calc-")) {
-    return { cafe: withoutFakes(cafe), outcome: { ...base, result: "fakes removed", how: "never matched on Google, no lookup" } };
+    return { cafe: withoutUnverified(cafe), outcome: { ...base, result: "fakes removed", how: "never matched on Google, no lookup" } };
   }
   let id = placeId;
   let details = await getDetails(id);
   let how = "saved Google ID";
   if (!details || !namesMatch(cafe.name, details.name)) {
     const found = await confidentSearch(cafe);
-    if (!found) return { cafe: withoutFakes(cafe), outcome: { ...base, result: "fakes removed", how: "no confident Google match" } };
+    if (!found) return { cafe: withoutUnverified(cafe), outcome: { ...base, result: "fakes removed", how: "no confident Google match" } };
     id = found;
     details = await getDetails(id);
     how = "name + address search";
-    if (!details) return { cafe: withoutFakes(cafe), outcome: { ...base, result: "fakes removed", how: "Google details unavailable" } };
+    if (!details) return { cafe: withoutUnverified(cafe), outcome: { ...base, result: "fakes removed", how: "Google details unavailable" } };
   }
   const updated = withGoogleDetails(cafe, id, details);
   return {
