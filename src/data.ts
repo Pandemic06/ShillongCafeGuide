@@ -564,54 +564,6 @@ export const CAFES: Cafe[] = [
     ]
   },
   {
-    "id": "fern-mist-garden",
-    "name": "Fern & Mist Garden",
-    "neighborhood": "Mawlai",
-    "address": "Mawlai, Shillong, Meghalaya 793008",
-    "coordinates": {
-      "lat": 25.5785,
-      "lng": 91.9022
-    },
-    "tagline": "A garden table in the misty hills.",
-    "theme": "Outdoor garden cafe surrounded by ferns and mist",
-    "vibeTags": [
-      "Garden",
-      "Outdoor",
-      "Mist",
-      "Nature",
-      "Romantic"
-    ],
-    "hasLiveMusic": false,
-    "editorial_featured": false,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "ChIJ_fern_mist_garden_golf_links",
-    "formatted_address": "Mawtnum Nursery, Golf Links Road, Shillong Meghalaya 793001",
-    "latitude": 25.5785,
-    "longitude": 91.9022,
-    "google_maps_url": "https://maps.google.com/?api=1&query=Fern+Mist+Garden+Shillong",
-    "types": [
-      "cafe",
-      "florist",
-      "food"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.93,
-    "verification_status": "verified",
-    "kong_labet_tagline": "A glass dome greenhouse that makes you feel like an exotic plant. The wild mint cold brew is surprisingly wise.",
-    "kong_labet_note": "The rain hitting the glass is the best background song in Shillong. Best visited slow.",
-    "kong_labet_observations": [
-      "You are surrounded by endemic ferns. If you look closely, they look as tired as public servants.",
-      "The mist generators are a bit redundant in Shillong, but visitors seem to think it is magic.",
-      "The wild mint cold brew is clean, like a cold morning wash."
-    ]
-  },
-  {
     "id": "trattoria-shillong-pb",
     "name": "Trattoria",
     "neighborhood": "Police Bazaar",
@@ -4315,11 +4267,6 @@ export const NEIGHBORHOODS: NeighborhoodInfo[] = [
           time: "7:00 AM — Pine Ridge Walkway",
           title: "Mist Gathering",
           description: "Experience the sweeping, misty dew over empty emerald turf, under the protective shade of giant pine branches."
-        },
-        {
-          time: "9:30 AM — Botanical Serenity",
-          title: "Greenhouse Coffee",
-          description: "Enter Fern & Mist Garden, drinking cold brew among humid endemic plants while rain taps the dome."
         },
         {
           time: "11:30 AM — Highway Run to ML 05",

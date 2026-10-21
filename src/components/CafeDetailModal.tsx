@@ -138,18 +138,6 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
       "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800"
     ]
   },
-  "fern-mist-garden": {
-    gallery: [
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800"
-    ],
-    menuImages: [
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=800"
-    ]
-  },
   "evening-club-laitumkhrah": {
     gallery: [
       "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800",

@@ -399,17 +399,6 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
       match_confidence: 0.96,
       verification_status: "verified"
     },
-    "fern-mist-garden": {
-      place_id: "ChIJ_fern_mist_garden_golf_links",
-      formatted_address: "Mawtnum Nursery, Golf Links Road, Shillong Meghalaya 793001",
-      latitude: 25.5785,
-      longitude: 91.9022,
-      google_maps_url: "https://maps.google.com/?api=1&query=Fern+Mist+Garden+Shillong",
-      types: ["cafe", "florist", "food"],
-      khasi_food_available: false,
-      match_confidence: 0.93,
-      verification_status: "verified"
-    },
     "trattoria-shillong-pb": {
       place_id: "ChIJF88YFvcJSzkRQ2G6uVn7Xks",
       formatted_address: "Police Bazaar Circle, Next to old assembly, Police Bazaar, Shillong Meghalaya 793001",
@@ -1404,12 +1393,17 @@ async function startServer() {
       "jiva-grill-nongkynrih": "jiva-resort-cherrapunjee",
     };
 
+    // Cafés that never existed or have closed: 410 Gone tells search engines to
+    // drop the address, unlike an unknown /cafe/<id>, which still loads the app.
+    const REMOVED_CAFES = new Set(["fern-mist-garden"]);
+
     // Serve pre-rendered café pages (scripts/generate-static-params.ts) at the
     // canonical no-trailing-slash URL. Without this, express.static sees the
     // /cafe/<id> directory and 301s to /cafe/<id>/, wasting crawl budget.
     app.get("/cafe/:id", (req, res, next) => {
       const { id } = req.params;
       if (!/^[a-z0-9-]+$/i.test(id)) return next();
+      if (REMOVED_CAFES.has(id)) return res.status(410).sendFile(path.join(distPath, "404.html"));
       const movedTo = MOVED_CAFES[id];
       if (movedTo) return res.redirect(301, `/cafe/${movedTo}`);
       const file = path.join(distPath, "cafe", id, "index.html");

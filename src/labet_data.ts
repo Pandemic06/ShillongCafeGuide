@@ -86,15 +86,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "A lot of laughter here. Shillong people love to laugh, usually at someone else's expensive haircut."
     ]
   },
-  "fern-mist-garden": {
-    tagline: "A glass dome greenhouse that makes you feel like an exotic plant. The wild mint cold brew is surprisingly wise.",
-    note: "The rain hitting the glass is the best background song in Shillong. Best visited slow.",
-    observations: [
-      "You are surrounded by endemic ferns. If you look closely, they look as tired as public servants.",
-      "The mist generators are a bit redundant in Shillong, but visitors seem to think it is magic.",
-      "The wild mint cold brew is clean, like a cold morning wash."
-    ]
-  },
   "trattoria-shillong-pb": {
     tagline: "No fancy lights, no hipster plating. Just real Khasi food that survived generations for a reason.",
     note: "The Jadoh and Dohkhlieh are authentic. If the queue is long, stand with some humility.",
