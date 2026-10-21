@@ -1453,8 +1453,25 @@ async function startServer() {
       res.sendFile(file);
     });
 
+    // Pre-rendered section pages for /?tab=<id>, so crawlers get that section's
+    // title, description and canonical without running JavaScript.
+    app.get("/", (req, res, next) => {
+      const tab = req.query.tab;
+      if (typeof tab !== "string" || !/^[a-z]+$/.test(tab)) return next();
+      const file = path.join(distPath, "tab", `${tab}.html`);
+      if (!fs.existsSync(file)) return next();
+      res.sendFile(file);
+    });
+
     app.use(express.static(distPath));
+    // shortcut: unknown /cafe/<id> still gets the app (200), because CMS-approved
+    // cafés live in Firestore, not cafesDb; check Firestore here to 404 those too.
     app.get("*", (req, res) => {
+      const isAppRoute = req.path === "/" || /^\/(admin|cafe)(\/|$)/.test(req.path);
+      if (!isAppRoute) {
+        res.status(404).sendFile(path.join(distPath, "404.html"));
+        return;
+      }
       res.sendFile(path.join(distPath, "index.html"));
     });
   }

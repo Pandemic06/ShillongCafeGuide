@@ -296,23 +296,6 @@ export default function App() {
   ];
 
   const getDynamicSchema = () => {
-    if (selectedCafe) {
-      return {
-        "@context": "https://schema.org",
-        "@type": ["CafeOrCoffeeShop", "FoodEstablishment"],
-        "@id": `https://shillongcafemap.com/?tab=cafes&cafe=${selectedCafe.id}`,
-        name: selectedCafe.name,
-        description: selectedCafe.introduction || selectedCafe.tagline,
-        url: selectedCafe.website || `https://shillongcafemap.com/?tab=cafes&cafe=${selectedCafe.id}`,
-        image: [selectedCafe.images?.hero, selectedCafe.images?.card, selectedCafe.images?.interior].filter(Boolean),
-        address: { "@type": "PostalAddress", streetAddress: selectedCafe.address, addressLocality: "Shillong", addressRegion: "Meghalaya", postalCode: "793003", addressCountry: "IN" },
-        geo: { "@type": "GeoCoordinates", latitude: selectedCafe.coordinates?.lat || 25.5788, longitude: selectedCafe.coordinates?.lng || 91.8920 },
-        telephone: selectedCafe.phone_number || "",
-        servesCuisine: selectedCafe.khasi_food_available ? ["Khasi", "Local Meghalaya"] : ["Coffee", "Cafe", "Bakery"],
-        priceRange: "₹₹",
-        aggregateRating: selectedCafe.rating ? { "@type": "AggregateRating", ratingValue: selectedCafe.rating, reviewCount: selectedCafe.user_ratings_total || 25, bestRating: "5", worstRating: "1" } : undefined
-      };
-    }
     if (activeTab === "trending") {
       return {
         "@context": "https://schema.org",
@@ -414,36 +397,29 @@ export default function App() {
         },
       };
     }
-    const breadcrumbItems: any[] = [{ "@type": "ListItem", position: 1, name: "Home", item: "https://shillongcafemap.com/?tab=explore" }];
+    const breadcrumbItems: any[] = [{ "@type": "ListItem", position: 1, name: "Home", item: "https://shillongcafemap.in/" }];
     if (activeTab !== "explore") {
-      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: activeTab.charAt(0).toUpperCase() + activeTab.slice(1), item: `https://shillongcafemap.com/?tab=${activeTab}` });
+      breadcrumbItems.push({ "@type": "ListItem", position: 2, name: activeTab.charAt(0).toUpperCase() + activeTab.slice(1), item: `https://shillongcafemap.in/?tab=${activeTab}` });
     }
-    return {
-      "@context": "https://schema.org",
-      "@graph": [
-        { "@type": "WebSite", "@id": "https://shillongcafemap.com/#website", name: "Shillong Café Map", url: "https://shillongcafemap.com", description: "Discover cozy cafes, traditional Khasi cuisine, and neighborhood acoustic spaces in Shillong.", inLanguage: "en-IN", publisher: { "@type": "Organization", name: "Shillong Café Map", logo: { "@type": "ImageObject", url: "https://shillongcafemap.com/logo.png" } } },
-        { "@type": "BreadcrumbList", "@id": `https://shillongcafemap.com/?tab=${activeTab}#breadcrumbs`, itemListElement: breadcrumbItems }
-      ]
-    };
+    return [
+        { "@type": "WebSite", "@id": "https://shillongcafemap.in/#website", name: "Shillong Café Map", url: "https://shillongcafemap.in", description: "Discover cozy cafes, traditional Khasi cuisine, and neighborhood acoustic spaces in Shillong.", inLanguage: "en-IN", publisher: { "@type": "Organization", name: "Shillong Café Map", logo: { "@type": "ImageObject", url: "https://shillongcafemap.in/logo.png" } } },
+        { "@type": "BreadcrumbList", "@id": `https://shillongcafemap.in/?tab=${activeTab}#breadcrumbs`, itemListElement: breadcrumbItems }
+    ];
   };
 
-  const seoKey = activeTab === "planners" ? "discover" : activeTab;
-  const seoMeta = PAGE_SEO[seoKey as keyof typeof PAGE_SEO] || PAGE_SEO.explore;
-  const seoTitle = selectedCafe 
-    ? `${selectedCafe.name} — Cozy Café in ${selectedCafe.neighborhood}` 
-    : seoMeta.title;
-  const seoDescription = selectedCafe 
-    ? (selectedCafe.introduction || selectedCafe.tagline) 
-    : seoMeta.description;
+  const seoMeta = PAGE_SEO[activeTab as keyof typeof PAGE_SEO] || PAGE_SEO.explore;
 
   return (
     <>
-      <SEO
-        title={seoTitle}
-        description={seoDescription}
-        canonical={selectedCafe ? `https://shillongcafemap.in/?tab=cafes&cafe=${selectedCafe.id}` : seoMeta.canonical}
-        schema={getDynamicSchema()}
-      />
+      {/* CafeDetailModal sets its own SEO while a café is open; this would overwrite it. */}
+      {!selectedCafe && (
+        <SEO
+          title={seoMeta.title}
+          description={seoMeta.description}
+          canonical={seoMeta.canonical}
+          schema={getDynamicSchema()}
+        />
+      )}
       
       <div className="min-h-screen bg-[#F5F2EB] text-stone-850 font-sans flex flex-col relative antialiased selection:bg-amber-800/20 selection:text-amber-900 w-full">
         {/* Subtle dot grid texture overlay */}

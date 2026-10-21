@@ -2,8 +2,8 @@
  * cafeSchema.ts
  * Builds a Schema.org CafeOrCoffeeShop JSON-LD object from a Cafe record.
  * Used by CafeDetailModal (and future dedicated cafe pages) to inject
- * per-café structured data so Google can show rich results (star ratings,
- * opening hours, map pins) in SERPs.
+ * per-café structured data so Google can show rich results (opening hours,
+ * map pins) in SERPs.
  *
  * Usage:
  *   import { buildCafeSchema } from '../utils/cafeSchema';
@@ -49,21 +49,8 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
     addressCountry: 'IN',
   };
 
-  // ── Aggregate rating ─────────────────────────────────────────────────────
-  const ratingValue = cafe.rating ? Number(cafe.rating) : undefined;
-  const ratingCount = cafe.user_ratings_total
-    ? Number(cafe.user_ratings_total)
-    : undefined;
-  const aggregateRating =
-    ratingValue && ratingValue > 0
-      ? {
-          '@type': 'AggregateRating',
-          ratingValue,
-          bestRating: 5,
-          worstRating: 1,
-          ...(ratingCount ? { ratingCount } : {}),
-        }
-      : undefined;
+  // No aggregateRating: our ratings are copied from Google Maps, and Google's
+  // review-snippet policy only allows ratings collected on this site.
 
   // ── Opening hours ────────────────────────────────────────────────────────
   // opening_hours is string[] from Google e.g. ["Monday: 9:00 AM – 9:00 PM", …]
@@ -124,7 +111,6 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
     ...(cafe.google_maps_url ? { hasMap: cafe.google_maps_url } : {}),
     address,
     ...(geo ? { geo } : {}),
-    ...(aggregateRating ? { aggregateRating } : {}),
     ...(openingHoursSpecification
       ? { openingHoursSpecification }
       : {}),

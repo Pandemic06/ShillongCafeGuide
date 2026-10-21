@@ -1,5 +1,6 @@
 # robots.txt — shillongcafemap.in
-# Updated: 2026-06-09
+# Updated: 2026-10-21
+# Note: a crawler obeys only its most specific group, so each group repeats the Disallow rules.
 
 User-agent: *
 Allow: /
@@ -12,13 +13,19 @@ Disallow: /api/
 User-agent: Googlebot
 Allow: /
 Allow: /cafe-photos/
+Disallow: /admin
+Disallow: /api/
 
 # Allow Bingbot
 User-agent: Bingbot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 # Crawl-delay hint for less important bots
 User-agent: YandexBot
 Crawl-delay: 10
+Disallow: /admin
+Disallow: /api/
 
 Sitemap: https://shillongcafemap.in/sitemap.xml

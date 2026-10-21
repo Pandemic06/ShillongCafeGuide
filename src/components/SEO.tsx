@@ -100,7 +100,8 @@ export default function SEO({ title, description, canonical, image, schema, brea
     }
     if (schema) {
       const arr = Array.isArray(schema) ? schema : [schema];
-      graph.push(...arr);
+      // Items sit inside our @graph, so a per-item @context is redundant.
+      graph.push(...arr.map(({ "@context": _ctx, ...item }) => item));
     }
     if (graph.length) {
       upsertJsonLd("seo-jsonld", { "@context": "https://schema.org", "@graph": graph });
@@ -118,11 +119,11 @@ export const PAGE_SEO = {
       "An editorial guide to the best cafés in Shillong, Khasi food like Jadoh and Dohneiiong, walkable districts (Laitumkhrah, Police Bazaar, Golf Links) and curated Meghalaya road-trip routes.",
     canonical: `${SITE}/`,
   },
-  discover: {
+  planners: {
     title: "Shillong & Meghalaya Route Planner — Plan Your Adventure",
     description:
       "Plan curated road-trip routes across Meghalaya from Shillong: city loop, Cherrapunji, Dawki, Jowai, Laitlum Canyons and more. Drop stops on the map, see real distances and times.",
-    canonical: `${SITE}/?tab=discover`,
+    canonical: `${SITE}/?tab=planners`,
   },
   cafes: {
     title: "All Cafés in Shillong — Curated List & Map",

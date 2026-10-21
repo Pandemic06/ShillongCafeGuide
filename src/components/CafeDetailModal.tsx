@@ -574,11 +574,13 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                             <p className="text-[10px] font-mono uppercase tracking-wider text-stone-400">Google Places Rating</p>
                             <div className="flex items-center gap-1.5">
                               <span className="text-sm font-bold text-stone-900 font-display">
-                                {cafe.rating ?? "4.5"} / 5.0
+                                {cafe.rating ? `${cafe.rating} / 5.0` : "Not yet rated"}
                               </span>
-                              <span className="text-[11px] text-stone-500">
-                                ({cafe.user_ratings_total ? Number(cafe.user_ratings_total).toLocaleString() : "120+"} reviews verified on Google Maps)
-                              </span>
+                              {cafe.user_ratings_total ? (
+                                <span className="text-[11px] text-stone-500">
+                                  ({Number(cafe.user_ratings_total).toLocaleString()} reviews on Google Maps)
+                                </span>
+                              ) : null}
                             </div>
                           </div>
                         </div>

@@ -103,7 +103,18 @@ Preconnect hints reduce render-blocking latency — improves LCP Core Web Vital.
   - Each `TouristTrip` has `name`, `url`, `provider` (Shillong Café Map), `geo` (centroid coords), and `itinerary` array of `TouristAttraction` stops
   - Added `import { PLANNER_ROUTES } from "./data/plannerData"` to App.tsx
 
+## Phase 4 — SEO Audit Fixes (Completed 2026-10-21)
+
+- [x] Removed `aggregateRating` from café schema (ratings are copied from Google Maps; Google only allows on-site ratings). Visible rating stays, labelled as Google Maps; no more fake "4.5 / 120+" fallback.
+- [x] Each section (`/?tab=cafes|cuisine|walks|planners|guides|about|trending`) is pre-rendered to `dist/public/tab/<tab>.html` with its own title/description/canonical; `server.ts` serves it for `/?tab=<id>`. Route Planner got its own `PAGE_SEO.planners` entry (replacing the non-existent `discover` tab).
+- [x] Sitemap: `?tab=discover` → `?tab=planners`, removed 3 `&district=` duplicates, added `?tab=trending` (99 URLs).
+- [x] Café modal no longer overwritten by App's schema (which used `shillongcafemap.com` and fake geo/phone/review-count fallbacks); `.com` → `.in` everywhere; `/logo.png` now exists.
+- [x] Unknown paths outside `/`, `/cafe/*`, `/admin*` return a real 404 page (`public/404.html`). Unknown `/cafe/<id>` still returns 200 (CMS cafés live in Firestore).
+- [x] Café share previews use the real cached photo (47 cafés) and correct alt text; robots.txt now repeats Disallow rules in the Googlebot/Bingbot groups.
+
 ## Remaining Next Steps
+
+- [ ] 36 cafés have the placeholder `opening_hours: ["10:30 AM — 8:30 PM"]` (CMS default); verify or clear them. `openingHoursSpecification` also expects structured objects, not strings.
 
 - [ ] Submit updated sitemap to Google Search Console (manual — requires GSC access)
 - [ ] Set `trailingSlash: false` consistently in Vite/server config to eliminate redirect loops
