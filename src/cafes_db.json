@@ -253,11 +253,11 @@
   {
     "id": "cafe-shillong",
     "name": "Cafe Shillong",
-    "neighborhood": "Police Bazaar",
-    "address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "neighborhood": "Laitumkhrah",
+    "address": "LP Building, Laitumkhrah Main Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003",
     "coordinates": {
-      "lat": 25.5712,
-      "lng": 91.8938
+      "lat": 25.570314,
+      "lng": 91.894642
     },
     "tagline": "The classic Shillong experience.",
     "theme": "Heritage cafe in the city centre",
@@ -270,32 +270,31 @@
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.3,
+    "rating": 4.1,
     "images": {
       "hero": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "ChIJ7-YgLw8JSzkRhTsh0hS1zHk",
-    "formatted_address": "Laitumkhrah Main Road, Opposite To Beat Junction, Shillong Meghalaya 793003",
-    "latitude": 25.5712,
-    "longitude": 91.8938,
-    "google_maps_url": "https://maps.google.com/?api=1&query=Cafe+Shillong+Laitumkhrah",
-    "website": "http://www.cafeshillong.com/",
-    "phone_number": "+91 87947 21219",
-    "user_ratings_total": 2198,
+    "place_id": "ChIJ93XBhrt-UDcRCFuiFvkn9Ik",
+    "formatted_address": "LP Building, Laitumkhrah Main Rd, Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.570314,
+    "longitude": 91.894642,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ93XBhrt-UDcRCFuiFvkn9Ik",
+    "phone_number": "+91 87874 14183",
+    "user_ratings_total": 2736,
     "types": [
       "cafe",
       "restaurant",
       "food"
     ],
     "opening_hours": [
-      "Monday: 12:00 – 10:00 PM",
-      "Tuesday: 12:00 – 10:00 PM",
-      "Wednesday: 12:00 – 10:00 PM",
-      "Thursday: 12:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 10:00 PM"
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-154118811-1e0d58224f24"

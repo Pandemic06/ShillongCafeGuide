@@ -40,7 +40,7 @@ export const TRAILS: Trail[] = [
       {
         id: "stop-cafe-shillong",
         name: "Café Shillong",
-        coordinates: { lat: 25.5694, lng: 91.8988 },
+        coordinates: { lat: 25.570314, lng: 91.894642 },
         placeNameQuery: "Cafe Shillong Laitumkhrah",
         description: "The grandfather of Shillong's musical and coffee culture. Famous for local organic roasts and live guitar tunes."
       },
