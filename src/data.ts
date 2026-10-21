@@ -583,7 +583,6 @@ export const CAFES: Cafe[] = [
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.8,
     "images": {
       "hero": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80&w=600"
@@ -593,22 +592,10 @@ export const CAFES: Cafe[] = [
     "latitude": 25.5785,
     "longitude": 91.9022,
     "google_maps_url": "https://maps.google.com/?api=1&query=Fern+Mist+Garden+Shillong",
-    "website": "https://fernmistgarden.org",
-    "phone_number": "+91 94363 45678",
-    "user_ratings_total": 92,
     "types": [
       "cafe",
       "florist",
       "food"
-    ],
-    "opening_hours": [
-      "Monday: 10:00 AM — 8:00 PM",
-      "Tuesday: 10:00 AM — 8:00 PM",
-      "Wednesday: 10:00 AM — 8:00 PM",
-      "Thursday: 10:00 AM — 8:00 PM",
-      "Friday: 10:00 AM — 8:00 PM",
-      "Saturday: 10:00 AM — 8:00 PM",
-      "Sunday: Closed"
     ],
     "photos": [
       "https://images.unsplash.com/photo-154118811-1e0d58224f24"
