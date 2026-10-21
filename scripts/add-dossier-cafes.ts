@@ -339,27 +339,6 @@ const NEW_VENUES: Cafe[] = [
     whyVisit: "For a scenic lunch in a peaceful, manicured resort garden away from Shillong's central traffic."
   },
   {
-    id: "bunker-bites-cafe",
-    name: "Bunker Bites Cafe",
-    neighborhood: "Cantonment",
-    address: "Lummawbah, Shillong Cantonment, Lawsohtun, Shillong 793004",
-    coordinates: { lat: 25.5582, lng: 91.8712 },
-    tagline: "Cozy corner for snacks and teas.",
-    theme: "Industrial style canteen cafe",
-    vibeTags: ["Industrial Style", "Affordable", "Snacks", "Tea", "Friendly"],
-    hasLiveMusic: false,
-    hasKhasiMusic: false,
-    editorial_featured: false,
-    rating: 4.1,
-    user_ratings_total: 62,
-    images: {
-      hero: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=1200",
-      card: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=600"
-    },
-    introduction: "Bunker Bites Cafe in Lummawbah offers an industrial metal-framed theme and budget-friendly menu, serving hot teas, burgers, and classic snacks in a lively local nook.",
-    whyVisit: "For simple, tasty snacks and great hospitality near the Cantonment border."
-  },
-  {
     id: "karak-chaa-dhankheti",
     name: "Karak Chaa Dhankheti",
     neighborhood: "Dhankheti",

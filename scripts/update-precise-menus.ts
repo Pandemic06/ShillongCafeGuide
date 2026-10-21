@@ -151,18 +151,6 @@ const MENUS: Record<string, Omit<MenuItem, "image">[]> = {
     { name: "Irish Coffee (Signature)", price: "MRP", description: "Signature cocktail of hot coffee, Irish whiskey, and sugar, topped with thick cream." },
     { name: "Innovative Beverages Menu", price: "MRP", description: "Curated selection of modern mocktails, herbal teas, and specialty iced brews." }
   ],
-  "woodstock-cafe": [
-    { name: "Beer Battered Chicken Popcorn", price: "₹149", description: "Crispy, bite-sized chicken nuggets in a light beer batter." },
-    { name: "Chicken Pakora", price: "₹229", description: "Spiced chicken fritters deep-fried till golden brown." },
-    { name: "Mix Veg Pakoda", price: "₹149", description: "Deep-fried spiced fritters made with assorted fresh vegetables." },
-    { name: "Great Cheesy Fries", price: "₹179", description: "Golden French fries smothered in warm, melted cheese sauce." },
-    { name: "Hand Tossed Herby Potato Wedges", price: "₹199", description: "Thick-cut potato wedges seasoned with garlic, rosemary, and local mountain herbs." },
-    { name: "Tom Yum Soup Chicken", price: "₹149", description: "Spicy and sour Thai clear soup with chicken, mushrooms, and lemongrass." },
-    { name: "Wonton Soup Chicken", price: "₹149", description: "Clear, comforting soup with chicken wontons and fresh bok choy." },
-    { name: "Farm House Momo Chicken", price: "₹199", description: "Steamed chicken momos served with a rustic home-style spicy sauce." },
-    { name: "Pav Bhaji Supreme", price: "₹149", description: "Spiced mixed vegetable mash served with buttery toasted buns." },
-    { name: "Continental Mains (various)", price: "MRP", description: "A select choice of classic continental dishes including steaks and pastas." }
-  ],
   "the-living-roof": [
     { name: "Light café meals & snacks", price: "MRP", description: "Healthy sandwiches, loaded wraps, and fresh salads." },
     { name: "Coffee & hot beverages", price: "MRP", description: "Organically brewed local coffee, custom lattes, and hot green teas." },

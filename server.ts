@@ -1391,11 +1391,12 @@ async function startServer() {
     // search engines carry the old address over to the new one.
     const MOVED_CAFES: Record<string, string> = {
       "jiva-grill-nongkynrih": "jiva-resort-cherrapunjee",
+      "you-and-i-shared-cafe": "you-and-i-arts-cafe",
     };
 
     // Cafés that never existed or have closed: 410 Gone tells search engines to
     // drop the address, unlike an unknown /cafe/<id>, which still loads the app.
-    const REMOVED_CAFES = new Set(["fern-mist-garden"]);
+    const REMOVED_CAFES = new Set(["fern-mist-garden", "sip-and-bite-cafe", "woodstock-cafe", "chez-rodin", "turquoise-cafe", "jadoh-restaurant", "bunker-bites-cafe"]);
 
     // Serve pre-rendered café pages (scripts/generate-static-params.ts) at the
     // canonical no-trailing-slash URL. Without this, express.static sees the

@@ -113,7 +113,7 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "The scent of yeast and sugar is the only thing that handles our damp winters."
     ]
   },
-  "you-and-i-shared-cafe": {
+  "you-and-i-arts-cafe": {
     tagline: "Shared tables and quiet whispers. A space designed to make eavesdropping look like contemplation.",
     note: "Best for a date where you have nothing left to say to each other, but the cozy seats hide the silence.",
     observations: [
@@ -123,7 +123,7 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
     ]
   },
   "cafe-sola": {
-    tagline: "Blonde wood and clean lines in Rilbong. A place that pretends winter in Shillong is a stylish choice rather than a damp reality.",
+    tagline: "Blonde wood and clean lines in Lumsyiap. A place that pretends winter in Shillong is a stylish choice rather than a damp reality.",
     note: "If you sit near the big window, the light makes you look like you're in a movie. Bring your best coat.",
     observations: [
       "So much white wood. My kitchen has more character in a single tea stain, but students seem to find it peaceful.",
@@ -138,15 +138,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "The green walls are soothing, though they match the moss on the exterior walls a bit too closely.",
       "The black coffee is honest and hot. No fancy caramel designs to distract you from the bitterness of life.",
       "The waiters have the patient eyes of people who know the rain will eventually stop, even if it takes three days."
-    ]
-  },
-  "sip-and-bite-cafe": {
-    tagline: "No-fuss snacks and local gossip in Nongthymmai. The tea is sweet and the snacks are fried, as nature intended.",
-    note: "Drop by when you have fifty rupees and a craving for hot pakoras. Don't expect fancy plating.",
-    observations: [
-      "The chairs are plastic and red, which is fine because you don't come here to write a novel anyway.",
-      "The steam from the momo steamer is the best heater in the room during November.",
-      "A prime spot to hear what the local taxi drivers really think about the traffic jam at beat house."
     ]
   },
   "munchies-shillong": {
@@ -230,15 +221,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "The wind howling through the old windows makes the fire in the hearth look very dramatic."
     ]
   },
-  "jadoh-restaurant": {
-    tagline: "Red hill rice and fermented sesame pork cooked in clay. Zero concessions to tourists.",
-    note: "If you don't like pork fat or spicy ginger, stay away. This is honest mountain food.",
-    observations: [
-      "The clay pots look older than my tea kettle, which means the flavor has had time to sink in.",
-      "The Dohneiiong here is dark as a winter night and twice as comforting.",
-      "The benches are narrow. You will sit close to your neighbor, so eat quickly and don't make small talk."
-    ]
-  },
   "the-living-roof": {
     tagline: "Under a canopy of mountain ivy in Laitumkhrah. A green escape for people who find concrete exhausting.",
     note: "Go when the sun is out. Sitting under the glass roof with a hot lemon tea feels like a luxury garden.",
@@ -273,15 +255,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "They draw flowers and swans on the coffee. I usually prefer my coffee to just look like hot water, but it's very skilled.",
       "The chairs are pastel blue and very soft. Good for resting your back after walking up the GS road incline.",
       "Mostly young couples sharing desserts and looking very pleased with their weekend outfits."
-    ]
-  },
-  "woodstock-cafe": {
-    tagline: "Vinyl posters and rock-and-roll relics. A sanctuary for people who believe music peaked in 1969.",
-    note: "Order the classic filter coffee. The rock ballads on the stereo are loud, so don't bring your homework here.",
-    observations: [
-      "Jimi Hendrix is looking down from the wall like he knows you can't play the guitar solos.",
-      "The tables are made of dark varnished wood, covered in old gig flyers from the nineties.",
-      "You will always find at least one old rocker with long grey hair nursing a cold tea and tapping his boot."
     ]
   },
   "tring-tring": {
@@ -338,15 +311,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "Very popular with the local lawyers who discuss cases with serious faces over hot tea."
     ]
   },
-  "chez-rodin": {
-    tagline: "Croissants and classical music in Laitumkhrah. A French corner that somehow fits into our rainy hills.",
-    note: "Order the almond pastry. It's sweet enough to make you forget the cold damp wind outside.",
-    observations: [
-      "The classical piano music on the speaker is soft, like the rain on a tin roof.",
-      "The pastries are golden and flaky, scattering crumbs over the table like winter snow.",
-      "The owner speaks with a quiet pride about his yeast. A man who respects fermentation is a man you can trust."
-    ]
-  },
   "marsoki-cafe": {
     tagline: "A Mawlai secret served on wooden tables. Local comfort food that doesn't advertise to tourists.",
     note: "It's a bit of a drive, but the chicken stew is the warmest thing you'll find in Mawlai during winter.",
@@ -357,7 +321,7 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
     ]
   },
   "bamboo-hut": {
-    tagline: "Timber benches and valley wind near the Peak. High-altitude tea that tastes like the clouds.",
+    tagline: "Timber benches and valley wind in Nongkynrih. High-altitude tea that tastes like the clouds.",
     note: "Bring a thick wool cap. The wind up here has zero manners and will steal your warmth in minutes.",
     observations: [
       "Everything is made of local bamboo. If you sit too fast, the chair might squeak in Khasi.",
@@ -392,15 +356,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "A favorite for college students who look very tired but speak very fast about their weekend plans."
     ]
   },
-  "turquoise-cafe": {
-    tagline: "Turquoise walls and quiet views of Wards Lake. A calm blue shelter in Lachumiere.",
-    note: "Bring a book and watch the ducks on the water through the window. A very peaceful afternoon.",
-    observations: [
-      "Everything is painted blue-green. It's like sitting inside a clean pool of water, but warmer.",
-      "The peppermint tea is clean and sharp. Matches the cold breeze off the lake.",
-      "People here speak in murmurs. The lake outside seems to demand quiet."
-    ]
-  },
   "the-press-cafe": {
     tagline: "Books on the counter and old newspaper prints on the wall. A quiet corner for the reader on GS Road.",
     note: "Good coffee and stable tables. If you look busy reading, the waiters will leave you in peace for hours.",
@@ -411,7 +366,7 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
     ]
   },
   "open-up-cafe": {
-    tagline: "Open mic stages and local art on display in Nongthymmai. Where the youth comes to find their voice.",
+    tagline: "Open mic stages and local art on display in Mawlai. Where the youth comes to find their voice.",
     note: "Check their evening calendar. If there is a local acoustic set, it's worth sitting in the crowd.",
     observations: [
       "A lot of hand-painted murals on the walls. Very energetic and slightly chaotic, like youth itself.",
@@ -552,15 +507,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "The grass is so green and neat it looks like a carpet. Don't let your children run too wild on it.",
       "The continental platters are very pretty, like they were designed by a drawing teacher.",
       "The wind off the valley carries the smell of wet pine needles and expensive soap."
-    ]
-  },
-  "bunker-bites-cafe": {
-    tagline: "Industrial iron frames and cheap bites in Lawsohtun. Honest canteen food for hungry students.",
-    note: "Try the simple egg burgers. It's cheap, hot, and satisfying when you've spent all your pocket money.",
-    observations: [
-      "Metal pipes and industrial bulbs. Looks a bit like a workshop, but the tea is sweet.",
-      "The crowd is young and talks mostly about local football matches and bike repairs.",
-      "Very close to the Cantonment forest. The air is clean, even if the fries are greasy."
     ]
   },
   "karak-chaa-dhankheti": {

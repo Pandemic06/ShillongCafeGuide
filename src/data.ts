@@ -746,8 +746,8 @@ export const CAFES: Cafe[] = [
     ]
   },
   {
-    "id": "you-and-i-shared-cafe",
-    "name": "You & I Shared Café",
+    "id": "you-and-i-arts-cafe",
+    "name": "You & I Arts Cafe",
     "neighborhood": "Laitumkhrah",
     "address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "coordinates": {
@@ -770,7 +770,7 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-you-and-i-shared-cafe",
+    "place_id": "place-calc-you-and-i-arts-cafe",
     "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "latitude": 25.5669,
     "longitude": 91.886,
@@ -802,11 +802,11 @@ export const CAFES: Cafe[] = [
   {
     "id": "cafe-sola",
     "name": "Cafe Sola",
-    "neighborhood": "Rilbong",
-    "address": "Rilbong, Shillong, Meghalaya 793004",
+    "neighborhood": "Lumsyiap",
+    "address": "Langkyrding-Mawpat Rd, Lumsyiap, Shillong, Meghalaya 793019",
     "coordinates": {
-      "lat": 25.57,
-      "lng": 91.883
+      "lat": 25.591994,
+      "lng": 91.904549
     },
     "tagline": "Sun-kissed interiors and slow mornings.",
     "theme": "Bright Scandinavian-inspired cafe",
@@ -824,11 +824,11 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-cafe-sola",
-    "formatted_address": "Rilbong, Shillong, Meghalaya 793004",
-    "latitude": 25.57,
-    "longitude": 91.883,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cafe%20Sola%2C%20Shillong%2C%20Meghalaya",
+    "place_id": "ChIJ1dA_GQh_UDcR29__E8WanPc",
+    "formatted_address": "Langkyrding-Mawpat Rd, Lumsyiap, Shillong, Meghalaya 793019",
+    "latitude": 25.591994,
+    "longitude": 91.904549,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ1dA_GQh_UDcR29__E8WanPc",
     "website": "https://instagram.com/",
     "phone_number": "+91 364 123 4567",
     "user_ratings_total": 12,
@@ -845,7 +845,7 @@ export const CAFES: Cafe[] = [
     "khasi_food_available": false,
     "match_confidence": 0.72,
     "verification_status": "verified",
-    "kong_labet_tagline": "Blonde wood and clean lines in Rilbong. A place that pretends winter in Shillong is a stylish choice rather than a damp reality.",
+    "kong_labet_tagline": "Blonde wood and clean lines in Lumsyiap. A place that pretends winter in Shillong is a stylish choice rather than a damp reality.",
     "kong_labet_note": "If you sit near the big window, the light makes you look like you're in a movie. Bring your best coat.",
     "kong_labet_observations": [
       "So much white wood. My kitchen has more character in a single tea stain, but students seem to find it peaceful.",
@@ -905,60 +905,6 @@ export const CAFES: Cafe[] = [
       "The green walls are soothing, though they match the moss on the exterior walls a bit too closely.",
       "The black coffee is honest and hot. No fancy caramel designs to distract you from the bitterness of life.",
       "The waiters have the patient eyes of people who know the rain will eventually stop, even if it takes three days."
-    ]
-  },
-  {
-    "id": "sip-and-bite-cafe",
-    "name": "Sip & Bite Café",
-    "neighborhood": "Nongthymmai",
-    "address": "Nongthymmai, Shillong, Meghalaya 793014",
-    "coordinates": {
-      "lat": 25.562,
-      "lng": 91.91
-    },
-    "tagline": "Simple bites, satisfying sips.",
-    "theme": "Casual neighbourhood all-day cafe",
-    "vibeTags": [
-      "Casual",
-      "All-Day",
-      "Budget",
-      "Local",
-      "Snacks"
-    ],
-    "hasLiveMusic": false,
-    "editorial_featured": false,
-    "rating": 4.2,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "place-calc-sip-and-bite-cafe",
-    "formatted_address": "Nongthymmai, Shillong, Meghalaya 793014",
-    "latitude": 25.562,
-    "longitude": 91.91,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sip%20%26%20Bite%20Caf%C3%A9%2C%20Shillong%2C%20Meghalaya",
-    "website": "https://instagram.com/",
-    "phone_number": "+91 364 123 4567",
-    "user_ratings_total": 12,
-    "types": [
-      "cafe",
-      "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.72,
-    "verification_status": "verified",
-    "kong_labet_tagline": "No-fuss snacks and local gossip in Nongthymmai. The tea is sweet and the snacks are fried, as nature intended.",
-    "kong_labet_note": "Drop by when you have fifty rupees and a craving for hot pakoras. Don't expect fancy plating.",
-    "kong_labet_observations": [
-      "The chairs are plastic and red, which is fine because you don't come here to write a novel anyway.",
-      "The steam from the momo steamer is the best heater in the room during November.",
-      "A prime spot to hear what the local taxi drivers really think about the traffic jam at beat house."
     ]
   },
   {
@@ -1448,60 +1394,6 @@ export const CAFES: Cafe[] = [
     ]
   },
   {
-    "id": "jadoh-restaurant",
-    "name": "Jadoh Restaurant",
-    "neighborhood": "Police Bazaar",
-    "address": "Police Bazaar, Shillong, Meghalaya 793001",
-    "coordinates": {
-      "lat": 25.5745,
-      "lng": 91.8935
-    },
-    "tagline": "Red rice in clay pots — an ancient Khasi ritual.",
-    "theme": "Authentic Jadoh restaurant serving Khasi red rice specialties in clay cookpots",
-    "vibeTags": [
-      "Khasi Cuisine",
-      "Jadoh",
-      "Clay Pot",
-      "Authentic",
-      "Heritage"
-    ],
-    "hasLiveMusic": false,
-    "editorial_featured": false,
-    "rating": 4.7,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "place-calc-jadoh-restaurant",
-    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
-    "latitude": 25.5745,
-    "longitude": 91.8935,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jadoh%20Restaurant%2C%20Shillong%2C%20Meghalaya",
-    "website": "https://instagram.com/",
-    "phone_number": "+91 364 123 4567",
-    "user_ratings_total": 12,
-    "types": [
-      "cafe",
-      "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&q=80&w=1200"
-    ],
-    "khasi_food_available": true,
-    "match_confidence": 0.72,
-    "verification_status": "verified",
-    "kong_labet_tagline": "Red hill rice and fermented sesame pork cooked in clay. Zero concessions to tourists.",
-    "kong_labet_note": "If you don't like pork fat or spicy ginger, stay away. This is honest mountain food.",
-    "kong_labet_observations": [
-      "The clay pots look older than my tea kettle, which means the flavor has had time to sink in.",
-      "The Dohneiiong here is dark as a winter night and twice as comforting.",
-      "The benches are narrow. You will sit close to your neighbor, so eat quickly and don't make small talk."
-    ]
-  },
-  {
     "id": "the-living-roof",
     "name": "The Living Roof",
     "neighborhood": "Laitumkhrah",
@@ -1717,60 +1609,6 @@ export const CAFES: Cafe[] = [
       "They draw flowers and swans on the coffee. I usually prefer my coffee to just look like hot water, but it's very skilled.",
       "The chairs are pastel blue and very soft. Good for resting your back after walking up the GS road incline.",
       "Mostly young couples sharing desserts and looking very pleased with their weekend outfits."
-    ]
-  },
-  {
-    "id": "woodstock-cafe",
-    "name": "Woodstock Cafe",
-    "neighborhood": "Laitumkhrah",
-    "address": "Laitumkhrah, Shillong, Meghalaya 793003",
-    "coordinates": {
-      "lat": 25.5671,
-      "lng": 91.8862
-    },
-    "tagline": "Rock 'n' roll in every sip.",
-    "theme": "Music-themed cafe inspired by the 1969 festival",
-    "vibeTags": [
-      "Rock Music",
-      "Retro",
-      "Vintage",
-      "Coffee",
-      "Themed"
-    ],
-    "hasLiveMusic": true,
-    "editorial_featured": false,
-    "rating": 4.4,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "place-calc-woodstock-cafe",
-    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
-    "latitude": 25.5671,
-    "longitude": 91.8862,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Woodstock%20Cafe%2C%20Shillong%2C%20Meghalaya",
-    "website": "https://instagram.com/",
-    "phone_number": "+91 364 123 4567",
-    "user_ratings_total": 12,
-    "types": [
-      "cafe",
-      "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=1200"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.72,
-    "verification_status": "verified",
-    "kong_labet_tagline": "Vinyl posters and rock-and-roll relics. A sanctuary for people who believe music peaked in 1969.",
-    "kong_labet_note": "Order the classic filter coffee. The rock ballads on the stereo are loud, so don't bring your homework here.",
-    "kong_labet_observations": [
-      "Jimi Hendrix is looking down from the wall like he knows you can't play the guitar solos.",
-      "The tables are made of dark varnished wood, covered in old gig flyers from the nineties.",
-      "You will always find at least one old rocker with long grey hair nursing a cold tea and tapping his boot."
     ]
   },
   {
@@ -2098,60 +1936,6 @@ export const CAFES: Cafe[] = [
     ]
   },
   {
-    "id": "chez-rodin",
-    "name": "Chez Rodin",
-    "neighborhood": "Laitumkhrah",
-    "address": "Laitumkhrah, Shillong, Meghalaya 793003",
-    "coordinates": {
-      "lat": 25.5683,
-      "lng": 91.8845
-    },
-    "tagline": "A Parisian muse in the Khasi hills.",
-    "theme": "French-inspired bistro cafe",
-    "vibeTags": [
-      "French",
-      "Bistro",
-      "Elegant",
-      "Coffee",
-      "Pastry"
-    ],
-    "hasLiveMusic": false,
-    "editorial_featured": false,
-    "rating": 4.6,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "place-calc-chez-rodin",
-    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
-    "latitude": 25.5683,
-    "longitude": 91.8845,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chez%20Rodin%2C%20Shillong%2C%20Meghalaya",
-    "website": "https://instagram.com/",
-    "phone_number": "+91 364 123 4567",
-    "user_ratings_total": 12,
-    "types": [
-      "cafe",
-      "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.72,
-    "verification_status": "verified",
-    "kong_labet_tagline": "Croissants and classical music in Laitumkhrah. A French corner that somehow fits into our rainy hills.",
-    "kong_labet_note": "Order the almond pastry. It's sweet enough to make you forget the cold damp wind outside.",
-    "kong_labet_observations": [
-      "The classical piano music on the speaker is soft, like the rain on a tin roof.",
-      "The pastries are golden and flaky, scattering crumbs over the table like winter snow.",
-      "The owner speaks with a quiet pride about his yeast. A man who respects fermentation is a man you can trust."
-    ]
-  },
-  {
     "id": "marsoki-cafe",
     "name": "Marsoki Cafe",
     "neighborhood": "Mawlai",
@@ -2208,14 +1992,14 @@ export const CAFES: Cafe[] = [
   {
     "id": "bamboo-hut",
     "name": "Bamboo Hut",
-    "neighborhood": "Shillong Peak Area",
-    "address": "Near Shillong Peak, Meghalaya 793009",
+    "neighborhood": "Nongkynrih",
+    "address": "Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003",
     "coordinates": {
-      "lat": 25.59,
-      "lng": 91.876
+      "lat": 25.570709,
+      "lng": 91.897655
     },
     "tagline": "Bamboo walls, mountain views.",
-    "theme": "Eco-bamboo hut cafe near Shillong Peak",
+    "theme": "Eco-bamboo hut cafe in Nongkynrih",
     "vibeTags": [
       "Eco",
       "Bamboo",
@@ -2230,11 +2014,11 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1570053782985-e57f5e0a42d8?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1570053782985-e57f5e0a42d8?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-bamboo-hut",
-    "formatted_address": "Near Shillong Peak, Meghalaya 793009",
-    "latitude": 25.59,
-    "longitude": 91.876,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bamboo%20Hut%2C%20Shillong%2C%20Meghalaya",
+    "place_id": "ChIJm2wNe_F_UDcRe5DlvWzyKgE",
+    "formatted_address": "Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003",
+    "latitude": 25.570709,
+    "longitude": 91.897655,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJm2wNe_F_UDcRe5DlvWzyKgE",
     "website": "https://instagram.com/",
     "phone_number": "+91 364 123 4567",
     "user_ratings_total": 12,
@@ -2251,7 +2035,7 @@ export const CAFES: Cafe[] = [
     "khasi_food_available": false,
     "match_confidence": 0.72,
     "verification_status": "verified",
-    "kong_labet_tagline": "Timber benches and valley wind near the Peak. High-altitude tea that tastes like the clouds.",
+    "kong_labet_tagline": "Timber benches and valley wind in Nongkynrih. High-altitude tea that tastes like the clouds.",
     "kong_labet_note": "Bring a thick wool cap. The wind up here has zero manners and will steal your warmth in minutes.",
     "kong_labet_observations": [
       "Everything is made of local bamboo. If you sit too fast, the chair might squeak in Khasi.",
@@ -2422,60 +2206,6 @@ export const CAFES: Cafe[] = [
     ]
   },
   {
-    "id": "turquoise-cafe",
-    "name": "Turquoise Cafe",
-    "neighborhood": "Lachumiere",
-    "address": "Lachumiere, Shillong, Meghalaya 793001",
-    "coordinates": {
-      "lat": 25.576,
-      "lng": 91.8892
-    },
-    "tagline": "Calm as turquoise, warm as coffee.",
-    "theme": "Turquoise-themed calm cafe with lake views",
-    "vibeTags": [
-      "Calm",
-      "Turquoise",
-      "Lake View",
-      "Coffee",
-      "Relaxing"
-    ],
-    "hasLiveMusic": false,
-    "editorial_featured": false,
-    "rating": 4.5,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "place-calc-turquoise-cafe",
-    "formatted_address": "Lachumiere, Shillong, Meghalaya 793001",
-    "latitude": 25.576,
-    "longitude": 91.8892,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Turquoise%20Cafe%2C%20Shillong%2C%20Meghalaya",
-    "website": "https://instagram.com/",
-    "phone_number": "+91 364 123 4567",
-    "user_ratings_total": 12,
-    "types": [
-      "cafe",
-      "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1200"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.72,
-    "verification_status": "verified",
-    "kong_labet_tagline": "Turquoise walls and quiet views of Wards Lake. A calm blue shelter in Lachumiere.",
-    "kong_labet_note": "Bring a book and watch the ducks on the water through the window. A very peaceful afternoon.",
-    "kong_labet_observations": [
-      "Everything is painted blue-green. It's like sitting inside a clean pool of water, but warmer.",
-      "The peppermint tea is clean and sharp. Matches the cold breeze off the lake.",
-      "People here speak in murmurs. The lake outside seems to demand quiet."
-    ]
-  },
-  {
     "id": "the-press-cafe",
     "name": "The Press Cafe",
     "neighborhood": "GS Road",
@@ -2532,11 +2262,11 @@ export const CAFES: Cafe[] = [
   {
     "id": "open-up-cafe",
     "name": "Open Up Cafe",
-    "neighborhood": "Nongthymmai",
-    "address": "Nongthymmai, Shillong, Meghalaya 793014",
+    "neighborhood": "Mawlai",
+    "address": "Mawlai, Mawroh, Pdengshnong, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5622,
-      "lng": 91.9105
+      "lat": 25.595084,
+      "lng": 91.89456
     },
     "tagline": "Open doors, open minds, open cups.",
     "theme": "Community cafe with open-mic and creative events",
@@ -2556,11 +2286,11 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-open-up-cafe",
-    "formatted_address": "Nongthymmai, Shillong, Meghalaya 793014",
-    "latitude": 25.5622,
-    "longitude": 91.9105,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Open%20Up%20Cafe%2C%20Shillong%2C%20Meghalaya",
+    "place_id": "ChIJ4ZzhaPF-UDcRk4DIF4u5xh4",
+    "formatted_address": "Mawlai, Mawroh, Pdengshnong, Shillong, Meghalaya 793001",
+    "latitude": 25.595084,
+    "longitude": 91.89456,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJ4ZzhaPF-UDcRk4DIF4u5xh4",
     "website": "https://instagram.com/",
     "phone_number": "+91 364 123 4567",
     "user_ratings_total": 12,
@@ -2577,7 +2307,7 @@ export const CAFES: Cafe[] = [
     "khasi_food_available": true,
     "match_confidence": 0.72,
     "verification_status": "verified",
-    "kong_labet_tagline": "Open mic stages and local art on display in Nongthymmai. Where the youth comes to find their voice.",
+    "kong_labet_tagline": "Open mic stages and local art on display in Mawlai. Where the youth comes to find their voice.",
     "kong_labet_note": "Check their evening calendar. If there is a local acoustic set, it's worth sitting in the crowd.",
     "kong_labet_observations": [
       "A lot of hand-painted murals on the walls. Very energetic and slightly chaotic, like youth itself.",
@@ -3136,43 +2866,6 @@ export const CAFES: Cafe[] = [
       "The grass is so green and neat it looks like a carpet. Don't let your children run too wild on it.",
       "The continental platters are very pretty, like they were designed by a drawing teacher.",
       "The wind off the valley carries the smell of wet pine needles and expensive soap."
-    ]
-  },
-  {
-    "id": "bunker-bites-cafe",
-    "name": "Bunker Bites Cafe",
-    "neighborhood": "Cantonment",
-    "address": "Lummawbah, Shillong Cantonment, Lawsohtun, Shillong 793004",
-    "coordinates": {
-      "lat": 25.5582,
-      "lng": 91.8712
-    },
-    "tagline": "Cozy corner for snacks and teas.",
-    "theme": "Industrial style canteen cafe",
-    "vibeTags": [
-      "Industrial Style",
-      "Affordable",
-      "Snacks",
-      "Tea",
-      "Friendly"
-    ],
-    "hasLiveMusic": false,
-    "hasKhasiMusic": false,
-    "editorial_featured": false,
-    "rating": 4.1,
-    "user_ratings_total": 62,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=600"
-    },
-    "introduction": "Bunker Bites Cafe in Lummawbah offers an industrial metal-framed theme and budget-friendly menu, serving hot teas, burgers, and classic snacks in a lively local nook.",
-    "whyVisit": "For simple, tasty snacks and great hospitality near the Cantonment border.",
-    "kong_labet_tagline": "Industrial iron frames and cheap bites in Lawsohtun. Honest canteen food for hungry students.",
-    "kong_labet_note": "Try the simple egg burgers. It's cheap, hot, and satisfying when you've spent all your pocket money.",
-    "kong_labet_observations": [
-      "Metal pipes and industrial bulbs. Looks a bit like a workshop, but the tea is sweet.",
-      "The crowd is young and talks mostly about local football matches and bike repairs.",
-      "Very close to the Cantonment forest. The air is clean, even if the fries are greasy."
     ]
   },
   {
@@ -4287,7 +3980,7 @@ export const DISHES: FoodDish[] = [
     profile: "Comforting, savory, lightly spiced, warm soil ginger notes",
     pairing: "Perfect with sliced red onions, raw local green chili, and a hot, unsweetened cup of black tea (Lal-Cha).",
     image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=800",
-    matchCafes: ["Trattoria", "Jadoh Stall", "Meghalaya Heritage Inn"]
+    matchCafes: ["Trattoria"]
   },
   {
     id: "dohkhlieh",
@@ -4297,7 +3990,7 @@ export const DISHES: FoodDish[] = [
     profile: "Pungent, extremely fresh, crispy, with sharp chili heat",
     pairing: "Enjoyed as a contrasting side dish alongside a warm bowl of spiced Jadoh rice.",
     image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800",
-    matchCafes: ["Trattoria", "Hillside Kitchen"]
+    matchCafes: ["Trattoria"]
   },
   {
     id: "tungrymbai",
@@ -4307,7 +4000,7 @@ export const DISHES: FoodDish[] = [
     profile: "Rich, deeply savory, pungent umami, smooth gravy texture",
     pairing: "Spoon over plain white boiled rice or Jadoh for structural umami.",
     image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800",
-    matchCafes: ["Trattoria", "Khein-Kong Kitchen"]
+    matchCafes: ["Trattoria"]
   },
   {
     id: "dohneiiong",
@@ -4317,7 +4010,7 @@ export const DISHES: FoodDish[] = [
     profile: "Nutty, velvety, deeply herbal, moderate slow-heat spice",
     pairing: "Tastes exceptional on cloudy days alongside steaming hot red hill rice.",
     image: "/cafe-photos/jadoh-restaurant/hero-0.jpg",
-    matchCafes: ["Heritage Inn Kitchen", "Trattoria"]
+    matchCafes: ["Trattoria"]
   }
 ];
 
