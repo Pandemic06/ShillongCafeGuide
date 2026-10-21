@@ -1359,6 +1359,8 @@ async function startServer() {
     // search engines carry the old address over to the new one.
     const MOVED_CAFES: Record<string, string> = {
       "jiva-grill-nongkynrih": "jiva-resort-cherrapunjee",
+      "the-shillong-cafe": "cafe-shillong",
+      "shillong-cafes-and-restaurants": "cafe-shillong",
       "you-and-i-shared-cafe": "you-and-i-arts-cafe",
     };
 

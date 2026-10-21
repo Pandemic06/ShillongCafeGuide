@@ -845,60 +845,6 @@ export const CAFES: Cafe[] = [
     ]
   },
   {
-    "id": "the-shillong-cafe",
-    "name": "The Shillong Cafe",
-    "neighborhood": "Police Bazaar",
-    "address": "Police Bazaar, Shillong, Meghalaya 793001",
-    "coordinates": {
-      "lat": 25.575,
-      "lng": 91.893
-    },
-    "tagline": "Named for a city, brewed with pride.",
-    "theme": "Signature Shillong-branded cafe experience",
-    "vibeTags": [
-      "Signature",
-      "Coffee",
-      "City Pride",
-      "Tourist Friendly",
-      "Modern"
-    ],
-    "hasLiveMusic": false,
-    "editorial_featured": false,
-    "rating": 4.4,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "place-calc-the-shillong-cafe",
-    "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
-    "latitude": 25.575,
-    "longitude": 91.893,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Shillong%20Cafe%2C%20Shillong%2C%20Meghalaya",
-    "website": "https://instagram.com/",
-    "phone_number": "+91 364 123 4567",
-    "user_ratings_total": 12,
-    "types": [
-      "cafe",
-      "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.72,
-    "verification_status": "verified",
-    "kong_labet_tagline": "Shillong pride in a cup, packaged for travelers. Clean, modern, and very safe for visitors.",
-    "kong_labet_note": "Best place to take your visiting cousin who is afraid of local street stalls. The coffee is reliable.",
-    "kong_labet_observations": [
-      "A lot of souvenirs on display. You can buy a mug that says 'Shillong' just in case you forget where you spent your money.",
-      "The local wood carving details on the counter are nice, though they look a bit too clean to be historic.",
-      "The lemon ice tea is sweet enough to solve family disputes."
-    ]
-  },
-  {
     "id": "little-chef-cafe",
     "name": "Little Chef Cafe",
     "neighborhood": "Laitumkhrah",
@@ -2196,42 +2142,6 @@ export const CAFES: Cafe[] = [
       "A lot of hand-painted murals on the walls. Very energetic and slightly chaotic, like youth itself.",
       "The lemon ginger honey tea is warm, perfect for healing dry throats before open mic slots.",
       "The crowd is very supportive. Even if a singer hits the wrong note, everyone claps. Shillong warmth."
-    ]
-  },
-  {
-    "id": "shillong-cafes-and-restaurants",
-    "name": "Shillong Cafes and Restaurants",
-    "neighborhood": "Laitumkhrah",
-    "address": "LP Building, Laitumkhrah Main Rd, Nongkynrih, Shillong 793003",
-    "coordinates": {
-      "lat": 25.5682,
-      "lng": 91.8965
-    },
-    "tagline": "Hearty local multi-cuisine in Laitumkhrah.",
-    "theme": "Cozy local dining hub",
-    "vibeTags": [
-      "Local Hangout",
-      "Multi-cuisine",
-      "Casual",
-      "Comfort Food"
-    ],
-    "hasLiveMusic": false,
-    "hasKhasiMusic": false,
-    "editorial_featured": false,
-    "rating": 4.2,
-    "user_ratings_total": 68,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
-    },
-    "introduction": "Shillong Cafes and Restaurants is a cozy multi-cuisine dining space in Laitumkhrah, serving a variety of local, Indian, and Chinese dishes in a friendly atmosphere.",
-    "whyVisit": "For a reliable, casual multi-cuisine meal with family and friends in Laitumkhrah.",
-    "kong_labet_tagline": "Generous Indian-Chinese plates and student noise. As loud as a local taxi stand, but the chowmein is reliable.",
-    "kong_labet_note": "Sit near the back to avoid being hit by a student rushing to their coaching class. Get the mixed chowmein.",
-    "kong_labet_observations": [
-      "The menu is longer than the lines at the district court, but everyone orders the same three items.",
-      "You will hear at least five conversations about St. Anthony's college internal marks.",
-      "The waiters have the blank look of people who have served ten thousand plates of chilly chicken this month."
     ]
   },
   {

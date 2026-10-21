@@ -131,15 +131,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "A prime spot for watching tourists realize they took the wrong turn towards Bara Bazaar."
     ]
   },
-  "the-shillong-cafe": {
-    tagline: "Shillong pride in a cup, packaged for travelers. Clean, modern, and very safe for visitors.",
-    note: "Best place to take your visiting cousin who is afraid of local street stalls. The coffee is reliable.",
-    observations: [
-      "A lot of souvenirs on display. You can buy a mug that says 'Shillong' just in case you forget where you spent your money.",
-      "The local wood carving details on the counter are nice, though they look a bit too clean to be historic.",
-      "The lemon ice tea is sweet enough to solve family disputes."
-    ]
-  },
   "little-chef-cafe": {
     tagline: "Tiny kitchen, huge portions. Homestyle comfort food that feels like your mother made it, if she was in a good mood.",
     note: "Try their daily specials. The pork chops are heavy enough to make you cancel your evening plans.",
@@ -354,15 +345,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "A lot of hand-painted murals on the walls. Very energetic and slightly chaotic, like youth itself.",
       "The lemon ginger honey tea is warm, perfect for healing dry throats before open mic slots.",
       "The crowd is very supportive. Even if a singer hits the wrong note, everyone claps. Shillong warmth."
-    ]
-  },
-  "shillong-cafes-and-restaurants": {
-    tagline: "Generous Indian-Chinese plates and student noise. As loud as a local taxi stand, but the chowmein is reliable.",
-    note: "Sit near the back to avoid being hit by a student rushing to their coaching class. Get the mixed chowmein.",
-    observations: [
-      "The menu is longer than the lines at the district court, but everyone orders the same three items.",
-      "You will hear at least five conversations about St. Anthony's college internal marks.",
-      "The waiters have the blank look of people who have served ten thousand plates of chilly chicken this month."
     ]
   },
   "suburb": {

@@ -24,27 +24,6 @@ interface Cafe {
 
 const NEW_VENUES: Cafe[] = [
   {
-    id: "shillong-cafes-and-restaurants",
-    name: "Shillong Cafes and Restaurants",
-    neighborhood: "Laitumkhrah",
-    address: "LP Building, Laitumkhrah Main Rd, Nongkynrih, Shillong 793003",
-    coordinates: { lat: 25.5682, lng: 91.8965 },
-    tagline: "Hearty local multi-cuisine in Laitumkhrah.",
-    theme: "Cozy local dining hub",
-    vibeTags: ["Local Hangout", "Multi-cuisine", "Casual", "Comfort Food"],
-    hasLiveMusic: false,
-    hasKhasiMusic: false,
-    editorial_featured: false,
-    rating: 4.2,
-    user_ratings_total: 68,
-    images: {
-      hero: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
-      card: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
-    },
-    introduction: "Shillong Cafes and Restaurants is a cozy multi-cuisine dining space in Laitumkhrah, serving a variety of local, Indian, and Chinese dishes in a friendly atmosphere.",
-    whyVisit: "For a reliable, casual multi-cuisine meal with family and friends in Laitumkhrah."
-  },
-  {
     id: "suburb",
     name: "Suburb",
     neighborhood: "Laitumkhrah",
