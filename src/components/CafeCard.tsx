@@ -68,8 +68,10 @@ export default function CafeCard({ cafe, onViewDetails }: CafeCardProps) {
             {cafe.rating && (
               <div className="flex items-center gap-1 bg-amber-50/70 border border-amber-100 rounded px-1.5 py-0.5 text-[10px] font-mono font-bold text-amber-900">
                 <Star className="w-2.5 h-2.5 fill-amber-500 text-amber-550 border-none shrink-0" />
-                <span>{cafe.rating ?? "4.5"}</span>
-                <span className="text-stone-405 font-light">({cafe.user_ratings_total ?? "100"})</span>
+                <span>{cafe.rating}</span>
+                {cafe.user_ratings_total ? (
+                  <span className="text-stone-405 font-light">({cafe.user_ratings_total})</span>
+                ) : null}
               </div>
             )}
           </div>

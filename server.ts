@@ -188,7 +188,7 @@ app.post("/api/cafes", requireAgentKey, (req, res) => {
     theme: newCafe.theme,
     introduction: newCafe.introduction || `${newCafe.name} is a newly integrated local specialty hub in Shillong.`,
     whyVisit: newCafe.whyVisit || "For high-quality flavors, friendly hosts, and warm spaces.",
-    hours: newCafe.hours || "10:30 AM — 8:30 PM",
+    hours: newCafe.hours || undefined,
     address: newCafe.address || "Shillong, Meghalaya 793001",
     neighborhood: newCafe.neighborhood,
     images: {
@@ -538,12 +538,12 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
             cafe.latitude = lat;
             cafe.longitude = lng;
             cafe.google_maps_url = r.url || `https://www.google.com/maps/place/?q=place_id:${placeId}`;
-            cafe.website = r.website || seed?.website || "https://instagram.com/";
-            cafe.phone_number = r.formatted_phone_number || seed?.phone_number || "+91 364 123 4567";
-            cafe.rating = r.rating || match.rating || cafe.rating || 4.5;
-            cafe.user_ratings_total = r.user_ratings_total || match.user_ratings_total || seed?.user_ratings_total || 25;
+            cafe.website = r.website || seed?.website || undefined;
+            cafe.phone_number = r.formatted_phone_number || seed?.phone_number || undefined;
+            cafe.rating = r.rating || match.rating || cafe.rating || undefined;
+            cafe.user_ratings_total = r.user_ratings_total || match.user_ratings_total || seed?.user_ratings_total || undefined;
             cafe.types = r.types || seed?.types || ["cafe", "food"];
-            cafe.opening_hours = r.opening_hours?.weekday_text || seed?.opening_hours || [cafe.hours];
+            cafe.opening_hours = r.opening_hours?.weekday_text || seed?.opening_hours || (cafe.hours ? [cafe.hours] : undefined);
             // Build full photo URLs (not raw references)
             const photoRefs = r.photos ? r.photos.slice(0, 6) : [];
             const mapsKey = process.env.GOOGLE_MAPS_PLATFORM_KEY || "";
@@ -598,12 +598,11 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
         cafe.latitude = cafe.coordinates?.lat || 25.568;
         cafe.longitude = cafe.coordinates?.lng || 91.885;
         cafe.google_maps_url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${cafe.name}, Shillong, Meghalaya`)}`;
-        cafe.website = "https://instagram.com/";
-        cafe.phone_number = "+91 364 123 4567";
-        cafe.rating = cafe.rating || 4.5;
-        cafe.user_ratings_total = 12;
+        // No Google match: leave contact details and ratings empty rather than invent them.
+        cafe.website = cafe.website || undefined;
+        cafe.phone_number = cafe.phone_number || undefined;
         cafe.types = ["cafe", "food"];
-        cafe.opening_hours = [cafe.hours || "10:30 AM — 8:30 PM"];
+        cafe.opening_hours = cafe.hours ? [cafe.hours] : undefined;
         cafe.photos = [cafe.images?.hero];
         cafe.khasi_food_available = cafe.vibeTags?.some((t: string) => /traditional|khasi|indigenous|jadoh/i.test(t));
         cafe.match_confidence = 0.72;

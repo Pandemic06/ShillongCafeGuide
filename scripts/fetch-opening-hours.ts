@@ -35,7 +35,7 @@ const SHILLONG_BIAS = "circle:20000@25.5788,91.8933";
 const GENERIC_WORDS = new Set(["the", "cafe", "café", "restaurant", "shillong", "and", "bakery", "lounge", "kitchen", "co", "studio", "shop", "fine", "dining"]);
 const FATAL = /REQUEST_DENIED|OVER_QUERY_LIMIT|OVER_DAILY_LIMIT/;
 
-type Cafe = {
+export type Cafe = {
   id: string; name: string; address?: string; formatted_address?: string; place_id?: string;
   opening_hours?: string[] | null; coordinates?: { lat: number; lng: number }; latitude?: number; longitude?: number;
 };
@@ -61,7 +61,7 @@ export function namesMatch(ours: string, theirs: string): boolean {
   return [...small].every((w) => big.has(w));
 }
 
-function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }): number {
+export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }): number {
   const rad = (d: number) => (d * Math.PI) / 180;
   const h = Math.sin(rad(b.lat - a.lat) / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(rad(b.lng - a.lng) / 2) ** 2;
   return 6371 * 2 * Math.asin(Math.sqrt(h));
@@ -77,7 +77,7 @@ async function callGoogle<T>(url: string): Promise<{ status: string; body: T }> 
   return { status: body.status, body };
 }
 
-async function findPlace(cafe: Cafe): Promise<Candidate | null> {
+export async function findPlace(cafe: Cafe): Promise<Candidate | null> {
   const query = encodeURIComponent(`${cafe.name}, ${cafe.formatted_address || cafe.address || "Shillong, Meghalaya"}`);
   const url = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${query}&inputtype=textquery&fields=place_id,name,formatted_address,geometry&locationbias=${SHILLONG_BIAS}`;
   const { status, body } = await callGoogle<{ candidates?: Candidate[] }>(url);

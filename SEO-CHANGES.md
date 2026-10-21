@@ -120,7 +120,13 @@ Preconnect hints reduce render-blocking latency — improves LCP Core Web Vital.
 - [x] `openingHoursSpecification` now built as proper Schema.org objects (`buildOpeningHours` in `cafeSchema.ts`); unreadable hours are omitted, never guessed.
 - [x] Admin CafeManager + DataHubModal no longer pre-fill `hours: "10:30 AM — 8:30 PM"`.
 - [x] Cleared the placeholder on the 11 skipped cafés (they now show no hours): The Pine Loft, You & I Shared Café, Cafe Sola, Sip & Bite Café, The Shillong Cafe, Jadoh Restaurant, Woodstock Cafe, Chez Rodin, Bamboo Hut, Turquoise Cafe, Open Up Cafe.
-- [ ] 36 cafés share the placeholder phone "+91 364 123 4567" (and one has "+91 98765 43210"); real numbers needed.
+
+## Phase 6 — Real Contact Details (Completed 2026-10-21)
+
+- [x] `scripts/fetch-contact-details.ts`: 78 cafés (37 with placeholder phones + 41 with none). 67 updated from Google (phone, website, rating, review count; real place_id kept), 11 never-matched cafés had fakes removed with no lookup. ~$1.69. Phones stored as +91 international format.
+- [x] Removed fakes: phone "+91 364 123 4567"/"+91 98765 43210", website "https://instagram.com/", review count 12.
+- [x] `server.ts` enrich + POST /api/cafes no longer invent phone, website, 4.5 rating, 12/25 review counts or "10:30 AM — 8:30 PM" hours.
+- [x] Café cards no longer show "(100)" when a café has no review count.
 
 - [ ] Submit updated sitemap to Google Search Console (manual — requires GSC access)
 - [ ] Set `trailingSlash: false` consistently in Vite/server config to eliminate redirect loops
