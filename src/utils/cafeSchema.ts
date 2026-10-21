@@ -16,6 +16,19 @@ import { toInternationalPhone } from './phone';
 
 const BASE_URL = 'https://shillongcafemap.in';
 
+const RESTAURANT_NAME = /\b(restaurant|eatery|kitchen|dhaba|grill|bistro|fine dining|wine & dine)\b/i;
+
+/**
+ * Schema.org type for a listing: Resort for lodging, Restaurant when Google's type (or, with no
+ * type data, a clear word in the name) says so and nothing says it is a cafe, else CafeOrCoffeeShop.
+ */
+export function schemaType(cafe: Pick<Cafe, 'name' | 'types'>): 'Resort' | 'Restaurant' | 'CafeOrCoffeeShop' {
+  if (cafe.types?.includes('lodging')) return 'Resort';
+  const isCafe = !!cafe.types?.includes('cafe') || /\bcaf[e\u00e9]\b/i.test(cafe.name);
+  const isRestaurant = !!cafe.types?.includes('restaurant') || RESTAURANT_NAME.test(cafe.name);
+  return isRestaurant && !isCafe ? 'Restaurant' : 'CafeOrCoffeeShop';
+}
+
 /** Converts a Cafe's neighborhood string into a URL-safe slug fragment */
 function neighborhoodSlug(neighborhood: string): string {
   return neighborhood.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
@@ -28,7 +41,7 @@ function neighborhoodSlug(neighborhood: string): string {
  */
 export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
   const cafeUrl = `${BASE_URL}/cafe/${cafe.id}`;
-  const isLodging = !!cafe.types?.includes('lodging');
+  const type = schemaType(cafe);
 
   // ── Geo coordinates ─────────────────────────────────────────────────────
   const lat = cafe.coordinates?.lat ?? cafe.latitude;
@@ -99,7 +112,7 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
   // Note: @context is omitted here — SEO.tsx wraps the schema in a top-level
   // { "@context": "...", "@graph": [...] } so nesting it would be redundant.
   const cafeEntity: Record<string, unknown> = {
-    '@type': isLodging ? 'Resort' : 'CafeOrCoffeeShop',
+    '@type': type,
     '@id': cafeUrl,
     name: cafe.name,
     description: cafe.introduction || cafe.tagline,
@@ -115,7 +128,7 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
     ...(cafe.phone_number ? { telephone: toInternationalPhone(cafe.phone_number) } : {}),
     ...(menuUrl ? { hasMenu: menuUrl } : {}),
     // servesCuisine is only valid on food businesses, not on a Resort.
-    ...(isLodging ? {} : { servesCuisine: buildCuisineList(cafe) }),
+    ...(type === 'Resort' ? {} : { servesCuisine: buildCuisineList(cafe) }),
     priceRange: buildPriceRange(cafe),
     breadcrumb,
     isAccessibleForFree: false,

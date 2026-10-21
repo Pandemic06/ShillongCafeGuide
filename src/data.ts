@@ -447,123 +447,6 @@ export const CAFES: Cafe[] = [
     ]
   },
   {
-    "id": "pine-loft",
-    "name": "The Pine Loft",
-    "neighborhood": "Upper Shillong",
-    "address": "Upper Shillong, Meghalaya 793009",
-    "coordinates": {
-      "lat": 25.585,
-      "lng": 91.878
-    },
-    "tagline": "High in the pines, close to the clouds.",
-    "theme": "Rooftop pine-forest cafe retreat",
-    "vibeTags": [
-      "Rooftop",
-      "Pine Forest",
-      "View",
-      "Peaceful",
-      "Scenic"
-    ],
-    "hasLiveMusic": false,
-    "editorial_featured": false,
-    "rating": 4.6,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "place-calc-pine-loft",
-    "formatted_address": "Upper Shillong, Meghalaya 793009",
-    "latitude": 25.585,
-    "longitude": 91.878,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Pine%20Loft%2C%20Shillong%2C%20Meghalaya",
-    "website": "https://instagram.com/",
-    "phone_number": "+91 364 123 4567",
-    "user_ratings_total": 12,
-    "types": [
-      "cafe",
-      "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?auto=format&fit=crop&q=80&w=1200"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.72,
-    "verification_status": "verified",
-    "kong_labet_tagline": "Cedar wood counters, soft whispers, and serious-faced people studying things they should have finished last semester.",
-    "kong_labet_note": "Silence is mandatory here. If you talk too loud, even the coffee filters will judge you.",
-    "kong_labet_observations": [
-      "The minimalist decor is clean. It makes my own living room look like a crowded bazaar.",
-      "The wildflower honey pour-over is subtle. Like Shillong sunshine in November.",
-      "If you whisper a secret here, three people will note it down in their organic paper diaries."
-    ]
-  },
-  {
-    "id": "melody-beans",
-    "name": "Melody & Beans",
-    "neighborhood": "Laitumkhrah",
-    "address": "Laitumkhrah, Shillong, Meghalaya 793003",
-    "coordinates": {
-      "lat": 25.5746,
-      "lng": 91.8831
-    },
-    "tagline": "Every sip has a soundtrack.",
-    "theme": "Music cafe with live acoustic sessions",
-    "vibeTags": [
-      "Live Music",
-      "Acoustic",
-      "Coffee",
-      "Cozy",
-      "Soulful",
-      "Khasi Music"
-    ],
-    "hasLiveMusic": true,
-    "hasKhasiMusic": true,
-    "editorial_featured": false,
-    "rating": 4.5,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "ChIJ_melody_and_beans_police_bazaar",
-    "formatted_address": "Polo Hills, Next to Dreamland Cinema, Police Bazaar, Shillong Meghalaya 793001",
-    "latitude": 25.5746,
-    "longitude": 91.8831,
-    "google_maps_url": "https://maps.google.com/?api=1&query=Melody+Beans+Shillong",
-    "website": "https://melodybeans.in",
-    "phone_number": "+91 87940 12056",
-    "user_ratings_total": 114,
-    "types": [
-      "cafe",
-      "restaurant",
-      "food"
-    ],
-    "opening_hours": [
-      "Monday: 10:30 AM — 9:30 PM",
-      "Tuesday: 10:30 AM — 9:30 PM",
-      "Wednesday: 10:30 AM — 9:30 PM",
-      "Thursday: 10:30 AM — 9:30 PM",
-      "Friday: 10:30 AM — 9:35 PM",
-      "Saturday: 10:30 AM — 9:30 PM",
-      "Sunday: 10:30 AM — 9:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.96,
-    "verification_status": "verified",
-    "kong_labet_tagline": "Central brick walls and signed acoustic guitars. The local crowd comes here to sing cover songs they've sung a hundred times.",
-    "kong_labet_note": "Vibrant and loud. Do not go here if you are trying to hide from someone to whom you owe money.",
-    "kong_labet_observations": [
-      "The brick walls are rustic. Reminds me of the old post office, but with better smell.",
-      "The cinnamon latte has too much spice. It wants to be a curry, but it is still just coffee.",
-      "A lot of laughter here. Shillong people love to laugh, usually at someone else's expensive haircut."
-    ]
-  },
-  {
     "id": "trattoria-shillong-pb",
     "name": "Trattoria",
     "neighborhood": "Police Bazaar",
@@ -3933,11 +3816,6 @@ export const NEIGHBORHOODS: NeighborhoodInfo[] = [
           title: "Traditional Appetizers",
           description: "Taste traditional Jadoh rice cooked rich with local spices in small, ancient brass pots."
         },
-        {
-          time: "7:30 PM — Melody & Beans Stage",
-          title: "Warm Acoustic Ending",
-          description: "Grab a high-top table, enjoying live independent cover bands playing classic acoustic soft rock."
-        }
       ]
     }
   },

@@ -68,24 +68,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "The air is thick with the scent of roasted beans and leather jacket dreams."
     ]
   },
-  "pine-loft": {
-    tagline: "Cedar wood counters, soft whispers, and serious-faced people studying things they should have finished last semester.",
-    note: "Silence is mandatory here. If you talk too loud, even the coffee filters will judge you.",
-    observations: [
-      "The minimalist decor is clean. It makes my own living room look like a crowded bazaar.",
-      "The wildflower honey pour-over is subtle. Like Shillong sunshine in November.",
-      "If you whisper a secret here, three people will note it down in their organic paper diaries."
-    ]
-  },
-  "melody-beans": {
-    tagline: "Central brick walls and signed acoustic guitars. The local crowd comes here to sing cover songs they've sung a hundred times.",
-    note: "Vibrant and loud. Do not go here if you are trying to hide from someone to whom you owe money.",
-    observations: [
-      "The brick walls are rustic. Reminds me of the old post office, but with better smell.",
-      "The cinnamon latte has too much spice. It wants to be a curry, but it is still just coffee.",
-      "A lot of laughter here. Shillong people love to laugh, usually at someone else's expensive haircut."
-    ]
-  },
   "trattoria-shillong-pb": {
     tagline: "No fancy lights, no hipster plating. Just real Khasi food that survived generations for a reason.",
     note: "The Jadoh and Dohkhlieh are authentic. If the queue is long, stand with some humility.",

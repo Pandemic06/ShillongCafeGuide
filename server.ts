@@ -367,38 +367,6 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
       match_confidence: 0.99,
       verification_status: "verified"
     },
-    "the-pine-loft": {
-      place_id: "ChIJ_pine_loft_golf_links",
-      formatted_address: "Golf Links Road, Block IV, Polo, Shillong Meghalaya 793001",
-      latitude: 25.5752,
-      longitude: 91.8985,
-      google_maps_url: "https://maps.google.com/?api=1&query=The+Pine+Loft+Shillong",
-      website: "https://thepineloft.comfort",
-      phone_number: "+91 94021 98450",
-      rating: 4.7,
-      user_ratings_total: 45,
-      opening_hours: ["Monday: 9:00 AM — 6:00 PM", "Tuesday: 9:00 AM — 6:00 PM", "Wednesday: 9:00 AM — 6:00 PM", "Thursday: 9:00 AM — 6:00 PM", "Friday: 9:00 AM — 6:00 PM", "Saturday: 9:00 AM — 6:00 PM", "Sunday: Closed"],
-      types: ["cafe", "coffee_shop", "establishment"],
-      khasi_food_available: false,
-      match_confidence: 0.94,
-      verification_status: "verified"
-    },
-    "melody-beans": {
-      place_id: "ChIJ_melody_and_beans_police_bazaar",
-      formatted_address: "Polo Hills, Next to Dreamland Cinema, Police Bazaar, Shillong Meghalaya 793001",
-      latitude: 25.5746,
-      longitude: 91.8831,
-      google_maps_url: "https://maps.google.com/?api=1&query=Melody+Beans+Shillong",
-      website: "https://melodybeans.in",
-      phone_number: "+91 87940 12056",
-      rating: 4.5,
-      user_ratings_total: 114,
-      opening_hours: ["Monday: 10:30 AM — 9:30 PM", "Tuesday: 10:30 AM — 9:30 PM", "Wednesday: 10:30 AM — 9:30 PM", "Thursday: 10:30 AM — 9:30 PM", "Friday: 10:30 AM — 9:35 PM", "Saturday: 10:30 AM — 9:30 PM", "Sunday: 10:30 AM — 9:30 PM"],
-      types: ["cafe", "restaurant", "food"],
-      khasi_food_available: false,
-      match_confidence: 0.96,
-      verification_status: "verified"
-    },
     "trattoria-shillong-pb": {
       place_id: "ChIJF88YFvcJSzkRQ2G6uVn7Xks",
       formatted_address: "Police Bazaar Circle, Next to old assembly, Police Bazaar, Shillong Meghalaya 793001",
@@ -1396,7 +1364,7 @@ async function startServer() {
 
     // Cafés that never existed or have closed: 410 Gone tells search engines to
     // drop the address, unlike an unknown /cafe/<id>, which still loads the app.
-    const REMOVED_CAFES = new Set(["fern-mist-garden", "sip-and-bite-cafe", "woodstock-cafe", "chez-rodin", "turquoise-cafe", "jadoh-restaurant", "bunker-bites-cafe"]);
+    const REMOVED_CAFES = new Set(["melody-beans", "pine-loft", "fern-mist-garden", "sip-and-bite-cafe", "woodstock-cafe", "chez-rodin", "turquoise-cafe", "jadoh-restaurant", "bunker-bites-cafe"]);
 
     // Serve pre-rendered café pages (scripts/generate-static-params.ts) at the
     // canonical no-trailing-slash URL. Without this, express.static sees the

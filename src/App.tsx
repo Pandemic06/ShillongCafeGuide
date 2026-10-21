@@ -51,8 +51,8 @@ const FAQ_CUISINE = [
 
 const FAQ_WALKS = [
   { q: "What's special about Laitumkhrah?", a: "Laitumkhrah is Shillong's student and music heart — elite schools, vinyl record stalls, acoustic cafés like Cafe Shillong, The Evening Club, Cherry Bean. Best walked late afternoon to dusk." },
-  { q: "Is Police Bazaar walkable?", a: "Yes. The central circle is dense and energetic — Khasi handicraft stalls, Bhaichung Jadoh street food, Melody & Beans live music, and the heritage cathedral within 800 metres." },
-  { q: "Why visit Golf Links?", a: "Quiet, misty, pine-shaded. Best for slow morning walks past botanical gardens. ML 05 Cafe and The Pine Loft are the anchor cafés." },
+  { q: "Is Police Bazaar walkable?", a: "Yes. The central circle is dense and energetic — Khasi handicraft stalls, Bhaichung Jadoh street food, and the heritage cathedral within 800 metres." },
+  { q: "Why visit Golf Links?", a: "Quiet, misty, pine-shaded. Best for slow morning walks past botanical gardens. ML 05 Cafe is the anchor café." },
 ];
 
 export default function App() {
