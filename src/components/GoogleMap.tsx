@@ -7,6 +7,7 @@ import {
   CheckCircle2, Phone, Route, Timer, Milestone,
 } from "lucide-react";
 import { Cafe, Review } from "../types";
+import { getReviewsFromFirestore } from "../services/db";
 
 interface GoogleMapProps {
   cafes: Cafe[];
@@ -69,12 +70,9 @@ export default function GoogleMap({ cafes, onSelectCafe, activeCafeId }: GoogleM
   const [routeOriginCafe, setRouteOriginCafe] = useState<Cafe | null>(null);
   const [routeMode, setRouteMode] = useState<"user" | "cafe">("user");
 
-  // Fetch reviews
+  // shortcut: reads every review once per map view; store per-café averages on the café once reviews pass ~1,000.
   useEffect(() => {
-    fetch("/api/reviews")
-      .then((r) => (r.ok ? r.json() : []))
-      .then(setReviews)
-      .catch(() => {});
+    getReviewsFromFirestore().then(setReviews).catch(() => {});
   }, []);
 
   // Fetch Maps API key from server

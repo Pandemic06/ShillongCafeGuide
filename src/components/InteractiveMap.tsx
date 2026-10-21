@@ -17,6 +17,7 @@ import {
   Car, Eye
 } from "lucide-react";
 import { Cafe, Review } from "../types";
+import { getReviewsFromFirestore } from "../services/db";
 import { GOOGLE_MAPS_API_KEY, hasValidKey } from "../config";
 import { TRAILS, Trail, TrailStop, DIFFICULTY_OPTIONS, TYPE_OPTIONS } from "../data/trailsData";
 
@@ -145,10 +146,10 @@ export default function InteractiveMap({ cafes, onSelectCafe, activeCafeId, sele
     };
   }, [isMapFullscreen]);
 
+  // shortcut: reads every review once per map view; store per-café averages on the café once reviews pass ~1,000.
   useEffect(() => {
-    fetch("/api/reviews")
-      .then((res) => (res.ok ? res.json() : []))
-      .then((data) => setReviews(data))
+    getReviewsFromFirestore()
+      .then(setReviews)
       .catch((err) => console.error("Error loading reviews inside Map:", err));
   }, []);
 

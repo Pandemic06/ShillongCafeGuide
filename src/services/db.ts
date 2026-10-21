@@ -5,6 +5,7 @@ import {
   doc,
   setDoc,
   query, 
+  where,
   orderBy, 
   serverTimestamp,
   getDoc
@@ -16,12 +17,13 @@ const REVIEWS_COLLECTION = "reviews";
 const CAFES_COLLECTION = "cafes";
 
 /**
- * Fetches all reviews from Firestore.
- * Merges them with fallback static reviews if needed in the UI.
+ * Fetches reviews from Firestore: one café's reviews when cafeId is given (what a café
+ * popup needs), otherwise all of them (what the maps need for average ratings).
  */
-export async function getReviewsFromFirestore(): Promise<Review[]> {
+export async function getReviewsFromFirestore(cafeId?: string): Promise<Review[]> {
   try {
-    const q = query(collection(db, REVIEWS_COLLECTION));
+    const reviews = collection(db, REVIEWS_COLLECTION);
+    const q = cafeId ? query(reviews, where("cafeId", "==", cafeId)) : query(reviews);
     const querySnapshot = await getDocs(q);
     const results: Review[] = [];
     querySnapshot.forEach((docSnap) => {

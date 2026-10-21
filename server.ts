@@ -92,9 +92,6 @@ function getGeminiClient() {
   return _ai;
 }
 
-// Visitor-submitted reviews, held in memory only (cleared on every restart or deploy).
-const userReviews: { id: string; cafeId: string; userName: string; rating: number; comment: string; date: string; isLocalGuide: boolean }[] = [];
-
 // Lightweight liveness probe. Used by the external keep-awake pinger
 // (.github/workflows/keep-render-awake.yml) to prevent Render free tier
 // from sleeping after 15min of inactivity. Returns immediately, no DB
@@ -106,33 +103,6 @@ app.get("/api/health", (req, res) => {
 });
 
 // API endpoint for reviews
-app.get("/api/reviews", (req, res) => {
-  res.json(userReviews);
-});
-
-app.post("/api/reviews", (req, res) => {
-  const { cafeId, userName, rating, comment } = req.body;
-  if (!cafeId || !userName || !rating || !comment) {
-    res.status(400).json({ error: "Missing required fields for review Submission" });
-    return;
-  }
-  const newReview = {
-    id: `user-${Date.now()}`,
-    cafeId,
-    userName,
-    rating: Number(rating),
-    comment,
-    date: new Date().toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    }),
-    isLocalGuide: false,
-  };
-  userReviews.unshift(newReview);
-  res.status(201).json(newReview);
-});
-
 // Dynamic Cafes Database API
 app.get("/api/cafes", (req, res) => {
   const enriched = cafesDb.map(enrichCafeWithLabet);

@@ -223,25 +223,7 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
 
   const fetchReviews = async () => {
     try {
-      const res = await fetch("/api/reviews");
-      const apiReviews = await res.json();
-      
-      let fsReviews: Review[] = [];
-      try {
-        fsReviews = await getReviewsFromFirestore();
-      } catch (err) {
-        console.warn("Firestore reviews download failed:", err);
-      }
-
-      const combined = [...fsReviews];
-      apiReviews.forEach((apiR: Review) => {
-        if (!combined.some(r => r.id === apiR.id)) {
-          combined.push(apiR);
-        }
-      });
-
-      const filtered = combined.filter((r: Review) => r.cafeId === cafe.id);
-      setReviews(filtered);
+      setReviews(await getReviewsFromFirestore(cafe.id));
     } catch (err) {
       console.error("Failed to load reviews:", err);
     }
