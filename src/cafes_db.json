@@ -150,32 +150,19 @@
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.7,
     "images": {
       "hero": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "ChIJ_ahavah_upland_shillong",
+    "place_id": "ChIJaTGs3QR_UDcRPqlVGv24iiY",
     "formatted_address": "Upland Road, Nongkynrih, Laitumkhrah, Shillong Meghalaya 793003",
     "latitude": 25.5721,
     "longitude": 91.8968,
     "google_maps_url": "https://maps.google.com/?api=1&query=Ahavah+Fine+Dining+Shillong",
-    "website": "https://ahavashillong.org",
-    "phone_number": "+91 96541 23456",
-    "user_ratings_total": 82,
     "types": [
       "restaurant",
       "food",
       "establishment"
-    ],
-    "opening_hours": [
-      "Monday: 11:30 AM – 9:30 PM",
-      "Tuesday: 11:30 AM – 9:30 PM",
-      "Wednesday: 11:30 AM – 9:30 PM",
-      "Thursday: 11:30 AM – 9:30 PM",
-      "Friday: 11:30 AM – 9:30 PM",
-      "Saturday: 11:30 AM – 9:30 PM",
-      "Sunday: 11:30 AM – 9:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-154118811-1e0d58224f24"
@@ -189,6 +176,18 @@
       "The crystal chandeliers blink like nervous stars.",
       "The rosewater sponge cake is lighter than the Shillong fog.",
       "Do not touch the velvet chairs with dirty hands, or the hosts will look at you with quiet middle-class tragedy."
+    ],
+    "phone_number": "+91 98620 80401",
+    "rating": 4.3,
+    "user_ratings_total": 197,
+    "opening_hours": [
+      "Monday: 12:30 – 9:30 PM",
+      "Tuesday: 12:30 – 9:30 PM",
+      "Wednesday: 12:30 – 9:30 PM",
+      "Thursday: 12:30 – 9:30 PM",
+      "Friday: 12:30 – 9:30 PM",
+      "Saturday: 9:30 AM – 10:30 PM",
+      "Sunday: 9:30 AM – 10:30 PM"
     ]
   },
   {
