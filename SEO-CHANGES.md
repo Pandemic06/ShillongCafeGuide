@@ -114,7 +114,13 @@ Preconnect hints reduce render-blocking latency — improves LCP Core Web Vital.
 
 ## Remaining Next Steps
 
-- [ ] 36 cafés have the placeholder `opening_hours: ["10:30 AM — 8:30 PM"]` (CMS default); verify or clear them. `openingHoursSpecification` also expects structured objects, not strings.
+## Phase 5 — Real Opening Hours (Completed 2026-10-21)
+
+- [x] `scripts/fetch-opening-hours.ts`: found 79 cafés with placeholder/missing hours on Google by name + address (confident match = same distinctive name words AND ≤3 km from our pin), saved real `place_id`s, fetched hours. Result: 58 real hours, 8 placeholder cleared (Google lists none), 13 skipped. ~148 Google calls (~$2.60).
+- [x] `openingHoursSpecification` now built as proper Schema.org objects (`buildOpeningHours` in `cafeSchema.ts`); unreadable hours are omitted, never guessed.
+- [x] Admin CafeManager + DataHubModal no longer pre-fill `hours: "10:30 AM — 8:30 PM"`.
+- [ ] 11 skipped cafés still show the placeholder to visitors (not sent to Google): The Pine Loft, You & I Shared Café, Cafe Sola, Sip & Bite Café, The Shillong Cafe, Jadoh Restaurant, Woodstock Cafe, Chez Rodin, Bamboo Hut, Turquoise Cafe, Open Up Cafe.
+- [ ] Some phone numbers look like placeholders (e.g. Madras Cafe "+91 364 123 4567").
 
 - [ ] Submit updated sitemap to Google Search Console (manual — requires GSC access)
 - [ ] Set `trailingSlash: false` consistently in Vite/server config to eliminate redirect loops

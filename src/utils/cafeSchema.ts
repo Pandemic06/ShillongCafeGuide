@@ -53,12 +53,7 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
   // review-snippet policy only allows ratings collected on this site.
 
   // ── Opening hours ────────────────────────────────────────────────────────
-  // opening_hours is string[] from Google e.g. ["Monday: 9:00 AM – 9:00 PM", …]
-  const openingHoursSpecification = cafe.opening_hours?.length
-    ? cafe.opening_hours
-    : cafe.hours
-    ? [cafe.hours]
-    : undefined;
+  const openingHoursSpecification = buildOpeningHours(cafe.opening_hours);
 
   // ── Images ───────────────────────────────────────────────────────────────
   const images: string[] = [];
@@ -126,6 +121,50 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
   };
 
   return cafeEntity;
+}
+
+const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+/** "9:30 AM" / "12:00" (+ fallback AM/PM) → "09:30"; null when unreadable. */
+function to24h(time: string, fallbackPeriod?: string): string | null {
+  const m = time.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)?$/i);
+  if (!m) return null;
+  const period = (m[3] || fallbackPeriod || '').toUpperCase();
+  if (!period) return null;
+  let hour = Number(m[1]) % 12;
+  if (period === 'PM') hour += 12;
+  return `${String(hour).padStart(2, '0')}:${m[2]}`;
+}
+
+/**
+ * Converts Google's weekday_text (["Monday: 9:00 AM – 9:00 PM", …]) into
+ * Schema.org OpeningHoursSpecification objects. Returns undefined if any line
+ * can't be read, so Google never gets guessed hours.
+ */
+export function buildOpeningHours(lines?: string[] | null): Record<string, unknown>[] | undefined {
+  if (!lines?.length) return undefined;
+  const specs: Record<string, unknown>[] = [];
+  for (const raw of lines) {
+    const line = raw.replace(/[   ]/g, ' ');
+    const sep = line.indexOf(':');
+    const day = line.slice(0, sep).trim();
+    const rest = line.slice(sep + 1).trim();
+    if (sep < 0 || !DAYS.includes(day)) return undefined;
+    if (/^closed$/i.test(rest)) continue;
+    if (/^open 24 hours$/i.test(rest)) {
+      specs.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: `https://schema.org/${day}`, opens: '00:00', closes: '23:59' });
+      continue;
+    }
+    for (const range of rest.split(',')) {
+      const [start, end] = range.split(/\s*[–—-]\s*/);
+      const endPeriod = end?.match(/(AM|PM)/i)?.[1];
+      const closes = end ? to24h(end) : null;
+      const opens = start ? to24h(start, endPeriod) : null;
+      if (!opens || !closes) return undefined;
+      specs.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: `https://schema.org/${day}`, opens, closes });
+    }
+  }
+  return specs.length ? specs : undefined;
 }
 
 /** Derives a cuisine list from cafe tags and flags */

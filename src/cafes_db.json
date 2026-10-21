@@ -32,7 +32,7 @@
       "detail4": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=1200",
       "detail5": "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=1200"
     },
-    "place_id": "place-calc-alaya-cafe",
+    "place_id": "ChIJQ_5G8MV_UDcR8l3PZfX-eTI",
     "formatted_address": "Nongthymmai, Shillong, Meghalaya 793014",
     "latitude": 25.5615,
     "longitude": 91.9025,
@@ -43,9 +43,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=1200"
@@ -59,6 +56,15 @@
       "Alaya means 'Abode'—classy and premium, yet it instantly makes you feel right at home.",
       "Located in Nongthymmai, it's away from the crowded market lanes, offering a more peaceful, upscale ambiance.",
       "Their weekly acoustic sessions showcasing local Shillong musicians are an absolute must-experience."
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM – 12:00 AM",
+      "Tuesday: 10:00 AM – 12:00 AM",
+      "Wednesday: 10:00 AM – 12:00 AM",
+      "Thursday: 10:00 AM – 12:00 AM",
+      "Friday: 10:00 AM – 12:00 AM",
+      "Saturday: 10:00 AM – 12:00 AM",
+      "Sunday: 10:00 AM – 12:00 AM"
     ]
   },
   {
@@ -985,7 +991,7 @@
       "hero": "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-mellow-mood-cafe",
+    "place_id": "ChIJDZHvmLt-UDcRFSiypypuB20",
     "formatted_address": "Lachumiere, Shillong, Meghalaya 793001",
     "latitude": 25.5755,
     "longitude": 91.8895,
@@ -996,9 +1002,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&q=80&w=1200"
@@ -1093,7 +1096,7 @@
       "hero": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-munchies-shillong",
+    "place_id": "ChIJ550aj7x-UDcRIbaSRThv2cY",
     "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
     "latitude": 25.5746,
     "longitude": 91.8942,
@@ -1104,9 +1107,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&q=80&w=1200"
@@ -1120,6 +1120,15 @@
       "The music is usually slightly too loud, probably to encourage you to eat faster and leave.",
       "The chicken burgers are messy. Eat them with humility; napkins are always in short supply.",
       "A prime spot for watching tourists realize they took the wrong turn towards Bara Bazaar."
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM – 9:00 PM",
+      "Tuesday: 11:30 AM – 9:00 PM",
+      "Wednesday: 11:30 AM – 9:00 PM",
+      "Thursday: 11:30 AM – 9:00 PM",
+      "Friday: 11:30 AM – 9:00 PM",
+      "Saturday: 11:30 AM – 9:00 PM",
+      "Sunday: 11:30 AM – 9:00 PM"
     ]
   },
   {
@@ -1201,7 +1210,7 @@
       "hero": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-little-chef-cafe",
+    "place_id": "ChIJl5Kd2C5_UDcRIZ2z8gubRdE",
     "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "latitude": 25.5665,
     "longitude": 91.8865,
@@ -1212,9 +1221,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=1200"
@@ -1228,6 +1234,15 @@
       "The space is so small you might accidentally hear what the girl next to you is texting her mother.",
       "The wooden sign outside is slightly lopsided, which gives me hope for the authenticity of the kitchen.",
       "The caramel custard is the only sweet thing in Laitumkhrah that doesn't try to look artistic."
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM – 8:30 PM",
+      "Tuesday: 11:30 AM – 8:30 PM",
+      "Wednesday: 11:30 AM – 8:30 PM",
+      "Thursday: 11:30 AM – 8:30 PM",
+      "Friday: 11:30 AM – 8:30 PM",
+      "Saturday: 11:30 AM – 8:30 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -1255,7 +1270,7 @@
       "hero": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-city-hut-family-dhaba",
+    "place_id": "ChIJQ4tcZZN-UDcRwy8cL76Sxss",
     "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
     "latitude": 25.5743,
     "longitude": 91.8945,
@@ -1266,9 +1281,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=1200"
@@ -1282,6 +1294,15 @@
       "The indoor stream has actual fish. I hope they don't look at the kitchen menu too closely.",
       "The butter chicken is rich enough to pay off a small loan. Eat it with respect.",
       "You will hear at least three different family arguments about property or school grades if you sit near the center."
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM – 9:30 PM",
+      "Tuesday: 11:00 AM – 9:30 PM",
+      "Wednesday: 11:00 AM – 9:30 PM",
+      "Thursday: 11:00 AM – 9:30 PM",
+      "Friday: 11:00 AM – 9:30 PM",
+      "Saturday: 11:00 AM – 9:30 PM",
+      "Sunday: 11:00 AM – 9:30 PM"
     ]
   },
   {
@@ -1309,7 +1330,7 @@
       "hero": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-delhi-mistan-bhandar",
+    "place_id": "ChIJAQAAAJV-UDcRvPDXeYv4CYs",
     "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
     "latitude": 25.5752,
     "longitude": 91.8937,
@@ -1320,9 +1341,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=1200"
@@ -1336,6 +1354,15 @@
       "The line for sweets moves like a busy train station. Don't hesitate when it's your turn, or you'll be pushed aside.",
       "The jalebis are fried in front of you. Watching them float in hot syrup is the only therapy I recommend.",
       "The floor is always slightly sticky. It's the sign of a place that does real business."
+    ],
+    "opening_hours": [
+      "Monday: 7:00 AM – 9:30 PM",
+      "Tuesday: 7:30 AM – 9:30 PM",
+      "Wednesday: 7:30 AM – 9:30 PM",
+      "Thursday: 7:30 AM – 9:30 PM",
+      "Friday: 7:30 AM – 9:30 PM",
+      "Saturday: 7:30 AM – 9:30 PM",
+      "Sunday: 7:30 AM – 9:30 PM"
     ]
   },
   {
@@ -1363,7 +1390,7 @@
       "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-ginger-restaurant",
+    "place_id": "ChIJs8kuP-t-UDcRSOj8kJM5aIw",
     "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "latitude": 25.5678,
     "longitude": 91.887,
@@ -1374,9 +1401,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
@@ -1390,6 +1414,15 @@
       "The modern lighting makes everyone look slightly mysterious, which helps if your conversation is dull.",
       "They use a lot of ginger in their curries. Honest ginger that clears your nose and your doubts.",
       "The waiters wear neat aprons and move with the serious speed of professionals."
+    ],
+    "opening_hours": [
+      "Monday: 7:00 AM – 11:00 PM",
+      "Tuesday: 7:00 AM – 11:00 PM",
+      "Wednesday: 7:00 AM – 11:00 PM",
+      "Thursday: 7:00 AM – 11:00 PM",
+      "Friday: 7:00 AM – 11:00 PM",
+      "Saturday: 7:00 AM – 11:00 PM",
+      "Sunday: 7:00 AM – 11:00 PM"
     ]
   },
   {
@@ -1417,7 +1450,7 @@
       "hero": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-lamee-restaurant",
+    "place_id": "ChIJSQo5MA5_UDcRj5Ek1yiOUb0",
     "formatted_address": "Nongkynrih, Shillong, Meghalaya 793006",
     "latitude": 25.5712,
     "longitude": 91.9048,
@@ -1428,9 +1461,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=1200"
@@ -1444,6 +1474,15 @@
       "The decor has local weaving patterns on the walls. Simple, quiet, and not shouting for attention.",
       "The red rice is cooked in small pots. It has that earthy smell that city folk try to find in health stores.",
       "A very peaceful crowd. Mostly people who know how to eat their meal without taking ten photos first."
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:00 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
     ]
   },
   {
@@ -1471,7 +1510,7 @@
       "hero": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-barbeque-restaurant",
+    "place_id": "ChIJaSUhbJJ-UDcRVpJVHp3CWzY",
     "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
     "latitude": 25.574,
     "longitude": 91.893,
@@ -1482,9 +1521,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=1200"
@@ -1498,6 +1534,15 @@
       "The wood paneling on the walls looks like it has survived several earthquakes and many local debates.",
       "The seekh kebabs are smoky and dark, cooked by men who have been doing this since before your parents met.",
       "Very popular with the local uncles who discuss football and old music over hot plates."
+    ],
+    "opening_hours": [
+      "Monday: 9:30 AM – 9:45 PM",
+      "Tuesday: 9:30 AM – 9:45 PM",
+      "Wednesday: 9:30 AM – 9:45 PM",
+      "Thursday: 9:30 AM – 9:45 PM",
+      "Friday: 9:30 AM – 9:45 PM",
+      "Saturday: 9:30 AM – 9:45 PM",
+      "Sunday: 9:30 AM – 9:45 PM"
     ]
   },
   {
@@ -1525,7 +1570,7 @@
       "hero": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-heritage-club-tripura-castle",
+    "place_id": "ChIJEbstTQB_UDcRZjfSKJclcmI",
     "formatted_address": "Tripura Castle, Shillong, Meghalaya 793001",
     "latitude": 25.576,
     "longitude": 91.89,
@@ -1536,9 +1581,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=1200"
@@ -1633,7 +1675,7 @@
       "hero": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-the-living-roof",
+    "place_id": "ChIJS8YapL1-UDcR5CjfkEv7sdU",
     "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "latitude": 25.5676,
     "longitude": 91.8858,
@@ -1644,9 +1686,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1200"
@@ -1689,7 +1728,7 @@
       "hero": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-smoky-falls-tribe-coffee",
+    "place_id": "ChIJY6biDQB_UDcRatPgFobArLU",
     "formatted_address": "Upper Shillong, Meghalaya 793009",
     "latitude": 25.5855,
     "longitude": 91.8775,
@@ -1700,9 +1739,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1200"
@@ -1716,6 +1752,15 @@
       "The roasting machine is loud and smells like heaven. Like toasted hazelnut and wild pine smoke.",
       "They support local tribal farmers directly, which is nice because coffee shouldn't just belong to big cities.",
       "The music here is often traditional Khasi folk guitar. Simple, woody, and very grounding."
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM – 9:00 PM",
+      "Tuesday: 10:00 AM – 9:00 PM",
+      "Wednesday: 10:00 AM – 9:00 PM",
+      "Thursday: 10:00 AM – 9:00 PM",
+      "Friday: 10:00 AM – 9:00 PM",
+      "Saturday: 10:00 AM – 9:00 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -1743,7 +1788,7 @@
       "hero": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-click-cafe",
+    "place_id": "ChIJTYbdfJR_UDcRUT80_hhKYbo",
     "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "latitude": 25.5674,
     "longitude": 91.8853,
@@ -1754,9 +1799,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1200"
@@ -1770,6 +1812,15 @@
       "Every second customer seems to have a fancy lens on their table. It's a silent competition of focus.",
       "The dark chocolate tart is rich and dark, like an old film negative.",
       "A quiet spot during the mornings, when the only sound is the espresso machine and the rain."
+    ],
+    "opening_hours": [
+      "Monday: 10:30 AM – 9:00 PM",
+      "Tuesday: 10:30 AM – 9:00 PM",
+      "Wednesday: 10:30 AM – 9:00 PM",
+      "Thursday: 10:30 AM – 9:00 PM",
+      "Friday: 10:30 AM – 9:00 PM",
+      "Saturday: 10:30 AM – 9:00 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -1797,7 +1848,7 @@
       "hero": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-latte-love-cafe",
+    "place_id": "ChIJu8E7XJJ-UDcRyD3NmC_UAuI",
     "formatted_address": "GS Road, Shillong, Meghalaya 793002",
     "latitude": 25.5688,
     "longitude": 91.892,
@@ -1808,9 +1859,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=1200"
@@ -1824,6 +1872,15 @@
       "They draw flowers and swans on the coffee. I usually prefer my coffee to just look like hot water, but it's very skilled.",
       "The chairs are pastel blue and very soft. Good for resting your back after walking up the GS road incline.",
       "Mostly young couples sharing desserts and looking very pleased with their weekend outfits."
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM – 8:30 PM",
+      "Tuesday: 10:00 AM – 8:30 PM",
+      "Wednesday: 10:00 AM – 8:30 PM",
+      "Thursday: 10:00 AM – 8:30 PM",
+      "Friday: 10:00 AM – 8:30 PM",
+      "Saturday: 10:00 AM – 8:30 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -1905,7 +1962,7 @@
       "hero": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-tring-tring",
+    "place_id": "ChIJbc45X81_UDcRPgl9SO_K9xI",
     "formatted_address": "Laban, Shillong, Meghalaya 793004",
     "latitude": 25.564,
     "longitude": 91.882,
@@ -1916,9 +1973,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=1200"
@@ -1932,6 +1986,15 @@
       "The decor is very bright. It's like a sunny day in the middle of monsoon, which is slightly disorienting but nice.",
       "The cheese toast is thick and greasy, the way comfort food should be when you're hiding from the cold wind.",
       "Kids love this place. If you want quiet contemplation, this might not be your sanctuary."
+    ],
+    "opening_hours": [
+      "Monday: 1:00 PM – 1:00 AM",
+      "Tuesday: 1:00 PM – 1:00 AM",
+      "Wednesday: 1:00 PM – 1:00 AM",
+      "Thursday: 1:00 PM – 1:00 AM",
+      "Friday: 1:00 PM – 1:00 AM",
+      "Saturday: 1:00 PM – 1:00 AM",
+      "Sunday: 1:00 PM – 1:00 AM"
     ]
   },
   {
@@ -1959,7 +2022,7 @@
       "hero": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-qzine-restaurant",
+    "place_id": "ChIJrQaZYZJ-UDcRZCkhrYCvJV0",
     "formatted_address": "GS Road, Shillong, Meghalaya 793002",
     "latitude": 25.5692,
     "longitude": 91.8925,
@@ -1970,9 +2033,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&q=80&w=1200"
@@ -1986,6 +2046,15 @@
       "They serve things on slate tiles instead of plates. I always worry the food will slide off, but it looks very modern.",
       "The modern jazz music is slightly strange, like a radio station that hasn't been tuned properly, but it fits the mood.",
       "The clients look very sleek, mostly business folks using words like 'leverage' and 'scalability'."
+    ],
+    "opening_hours": [
+      "Monday: 10:30 AM – 9:30 PM",
+      "Tuesday: 10:30 AM – 9:30 PM",
+      "Wednesday: 10:30 AM – 9:30 PM",
+      "Thursday: 10:30 AM – 9:30 PM",
+      "Friday: 10:30 AM – 9:30 PM",
+      "Saturday: 10:30 AM – 9:30 PM",
+      "Sunday: 10:30 AM – 9:30 PM"
     ]
   },
   {
@@ -2013,7 +2082,7 @@
       "hero": "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-dejavu-cafe-lounge",
+    "place_id": "ChIJxztTrgB_UDcRGeh2Jz2N-hg",
     "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "latitude": 25.5664,
     "longitude": 91.8868,
@@ -2024,9 +2093,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80&w=1200"
@@ -2040,6 +2106,15 @@
       "The lighting is so dark I once nearly drank my neighbor's tea by mistake. A very intimate vibe.",
       "The menu has a lot of mocktails with dramatic names. Choose the one with ginger; it's the safest bet.",
       "A favorite for late-night talks when the streets of Laitumkhrah are quiet and wet."
+    ],
+    "opening_hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:00 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
     ]
   },
   {
@@ -2067,7 +2142,7 @@
       "hero": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-enchante-tea-room",
+    "place_id": "ChIJHcprin1_UDcRNyxB2guX1sQ",
     "formatted_address": "Lachumiere, Shillong, Meghalaya 793001",
     "latitude": 25.5758,
     "longitude": 91.8898,
@@ -2078,9 +2153,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=1200"
@@ -2121,7 +2193,7 @@
       "hero": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-inside-out-cafe",
+    "place_id": "ChIJU0_8aQB_UDcRQYulUuBA12s",
     "formatted_address": "Nongthymmai, Shillong, Meghalaya 793014",
     "latitude": 25.5618,
     "longitude": 91.9108,
@@ -2132,9 +2204,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=1200"
@@ -2175,7 +2244,7 @@
       "hero": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-cafe-regal",
+    "place_id": "ChIJRUr_nJJ-UDcRjkj0yrJYtVs",
     "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
     "latitude": 25.5749,
     "longitude": 91.8932,
@@ -2186,9 +2255,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&q=80&w=1200"
@@ -2202,6 +2268,15 @@
       "The leather booths are deep and smell like old library books and clean wax.",
       "The coffee is served with a small piece of dark chocolate. A class touch that shows they care about details.",
       "Very popular with the local lawyers who discuss cases with serious faces over hot tea."
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM – 9:30 PM",
+      "Tuesday: 10:00 AM – 9:30 PM",
+      "Wednesday: 10:00 AM – 9:30 PM",
+      "Thursday: 10:00 AM – 9:30 PM",
+      "Friday: 10:00 AM – 9:30 PM",
+      "Saturday: 10:00 AM – 9:30 PM",
+      "Sunday: 10:00 AM – 9:30 PM"
     ]
   },
   {
@@ -2283,7 +2358,7 @@
       "hero": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-marsoki-cafe",
+    "place_id": "ChIJIQg1e8t_UDcRLswEecF2h5c",
     "formatted_address": "Mawlai, Shillong, Meghalaya 793008",
     "latitude": 25.5818,
     "longitude": 91.9006,
@@ -2294,9 +2369,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200"
@@ -2310,6 +2382,15 @@
       "The floor is simple cement, which is clean and doesn't try to look like a gallery.",
       "The tea is served in steel mugs, keeping it hot twice as long as ceramic does.",
       "Locals come here to talk about neighborhood sports and politics in soft voices."
+    ],
+    "opening_hours": [
+      "Monday: 12:00 – 8:00 PM",
+      "Tuesday: 12:00 PM – 8:00 AM",
+      "Wednesday: 12:00 – 8:00 PM",
+      "Thursday: 12:00 PM – 8:30 AM",
+      "Friday: 12:00 – 8:00 PM",
+      "Saturday: 12:00 – 8:00 PM",
+      "Sunday: 1:00 – 8:00 PM"
     ]
   },
   {
@@ -2391,7 +2472,7 @@
       "hero": "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-wok-la-chaumiere",
+    "place_id": "ChIJ8TCkp5B-UDcRL22C-R6wXEI",
     "formatted_address": "GS Road, Shillong, Meghalaya 793002",
     "latitude": 25.5695,
     "longitude": 91.8918,
@@ -2402,9 +2483,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&q=80&w=1200"
@@ -2418,6 +2496,15 @@
       "They serve soup in cups that look like abstract art. Delicious, but difficult to hold.",
       "The lighting is soft and golden, making the fusion dishes look like museum pieces.",
       "Mostly groups of colleagues celebrating promotions, trying to speak quietly but failing after the second drink."
+    ],
+    "opening_hours": [
+      "Monday: 11:30 AM – 8:45 PM",
+      "Tuesday: 11:00 AM – 8:45 PM",
+      "Wednesday: 11:00 AM – 8:45 PM",
+      "Thursday: 11:00 AM – 8:45 PM",
+      "Friday: 11:00 AM – 8:45 PM",
+      "Saturday: 11:00 AM – 8:45 PM",
+      "Sunday: 11:00 AM – 8:45 PM"
     ]
   },
   {
@@ -2445,7 +2532,7 @@
       "hero": "https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-madras-cafe",
+    "place_id": "ChIJrdEbApN-UDcR8I6lP_aYGIw",
     "formatted_address": "Police Bazaar, Shillong, Meghalaya 793001",
     "latitude": 25.5742,
     "longitude": 91.8943,
@@ -2456,9 +2543,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&q=80&w=1200"
@@ -2472,6 +2556,15 @@
       "The steel tumbler filter coffee is poured from a height. A local show that is always fun to watch.",
       "The dosas are long as a walking stick and paper-thin. Eat them hot, before the hill wind cools the butter.",
       "Very fast service. The waiters move like chess players who already know their next three moves."
+    ],
+    "opening_hours": [
+      "Monday: 7:00 AM – 10:00 PM",
+      "Tuesday: 7:00 AM – 10:00 PM",
+      "Wednesday: 7:30 AM – 10:00 PM",
+      "Thursday: 7:00 AM – 10:00 PM",
+      "Friday: 7:00 AM – 10:00 PM",
+      "Saturday: 7:00 AM – 10:00 PM",
+      "Sunday: 7:00 AM – 10:00 PM"
     ]
   },
   {
@@ -2499,7 +2592,7 @@
       "hero": "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-corner-cafe",
+    "place_id": "ChIJL9ZJN1x_UDcRZVybaUNyknA",
     "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
     "latitude": 25.5667,
     "longitude": 91.8875,
@@ -2510,9 +2603,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&q=80&w=1200"
@@ -2526,6 +2616,15 @@
       "The yellow walls make the room feel bright even when the rain outside is dark and heavy.",
       "The coffee is simple and strong. No fancy syrups, just good hot caffeine to start your day.",
       "A favorite for college students who look very tired but speak very fast about their weekend plans."
+    ],
+    "opening_hours": [
+      "Monday: 10:00 AM – 11:00 PM",
+      "Tuesday: 10:00 AM – 10:00 PM",
+      "Wednesday: 10:00 AM – 11:00 PM",
+      "Thursday: 10:00 AM – 11:00 PM",
+      "Friday: 10:00 AM – 11:00 PM",
+      "Saturday: 10:00 AM – 11:00 PM",
+      "Sunday: 10:00 AM – 11:00 PM"
     ]
   },
   {
@@ -2607,7 +2706,7 @@
       "hero": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "place-calc-the-press-cafe",
+    "place_id": "ChIJZ9WxYR9_UDcRmM8iTQ3EujM",
     "formatted_address": "GS Road, Shillong, Meghalaya 793002",
     "latitude": 25.569,
     "longitude": 91.8922,
@@ -2618,9 +2717,6 @@
     "types": [
       "cafe",
       "food"
-    ],
-    "opening_hours": [
-      "10:30 AM — 8:30 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1200"
@@ -2634,6 +2730,15 @@
       "The menu looks like a newspaper front page. Clever, though reading it in the dim light takes some effort.",
       "The bookshelves have a decent selection of local poetry. Read some; our local writers have wise souls.",
       "A quiet refuge from the heavy truck noise of the main road outside."
+    ],
+    "opening_hours": [
+      "Monday: Closed",
+      "Tuesday: 10:30 AM – 8:30 PM",
+      "Wednesday: 10:30 AM – 8:30 PM",
+      "Thursday: 10:30 AM – 8:30 PM",
+      "Friday: 10:30 AM – 8:30 PM",
+      "Saturday: 10:30 AM – 8:30 PM",
+      "Sunday: 12:00 – 8:30 PM"
     ]
   },
   {
@@ -2726,6 +2831,16 @@
       "The menu is longer than the lines at the district court, but everyone orders the same three items.",
       "You will hear at least five conversations about St. Anthony's college internal marks.",
       "The waiters have the blank look of people who have served ten thousand plates of chilly chicken this month."
+    ],
+    "place_id": "ChIJ93XBhrt-UDcRCFuiFvkn9Ik",
+    "opening_hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
     ]
   },
   {
@@ -2762,6 +2877,16 @@
       "Directly opposite the Presbyterian church. Convenient if you need to repent after skipping class.",
       "The stools are design-friendly but spine-unfriendly. Youth handles it, I suppose.",
       "The steam off the espresso machine is the only warm thing in here on a damp July afternoon."
+    ],
+    "place_id": "ChIJcb8zAMV_UDcR_kJPUJo2zEg",
+    "opening_hours": [
+      "Monday: 11:00 AM – 9:00 PM",
+      "Tuesday: 11:00 AM – 9:00 PM",
+      "Wednesday: 11:00 AM – 9:00 PM",
+      "Thursday: 11:00 AM – 9:00 PM",
+      "Friday: 11:00 AM – 9:00 PM",
+      "Saturday: 11:00 AM – 9:00 PM",
+      "Sunday: 1:00 – 9:00 PM"
     ]
   },
   {
@@ -2799,6 +2924,16 @@
       "Floral wallpaper that reminds me of my sister's wedding parlour, but much more expensive.",
       "The tea stands have three tiers. A lot of geometry for two small biscuits and a sandwich.",
       "People here take photos with their tea cups held just so. A very rehearsed sort of relaxation."
+    ],
+    "place_id": "ChIJob4VCAh_UDcROPQGD32HZdk",
+    "opening_hours": [
+      "Monday: 11:00 AM – 8:00 PM",
+      "Tuesday: 11:00 AM – 8:00 PM",
+      "Wednesday: 11:00 AM – 8:00 PM",
+      "Thursday: 11:00 AM – 8:00 PM",
+      "Friday: 11:00 AM – 8:00 PM",
+      "Saturday: 11:00 AM – 8:00 PM",
+      "Sunday: 11:00 AM – 8:00 PM"
     ]
   },
   {
@@ -2836,6 +2971,16 @@
       "The acoustic singers perform songs about heartbreak while people happily eat their pepper steak.",
       "The view of the Lachumiere ridge is very handsome, especially when the streetlights start to blink.",
       "If it starts to drizzle, watch the mad scramble for the indoor tables. A free comedy show."
+    ],
+    "place_id": "ChIJWVstwPh_UDcReSiJuQKNEJo",
+    "opening_hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -2873,6 +3018,16 @@
       "The blue mocktails look like window cleaner but taste like sweet pineapple. Gen Z seems to trust it.",
       "The laughter here is very loud, the kind you only have before you start paying electricity bills.",
       "The burgers are stacked high. A messy business that requires some planning."
+    ],
+    "place_id": "ChIJVaSfvnt_UDcRf2H9-FGlL2A",
+    "opening_hours": [
+      "Monday: 9:30 AM – 10:30 PM",
+      "Tuesday: 9:30 AM – 10:30 PM",
+      "Wednesday: 9:30 AM – 10:30 PM",
+      "Thursday: 9:30 AM – 10:30 PM",
+      "Friday: 9:30 AM – 10:30 PM",
+      "Saturday: 9:30 AM – 10:30 PM",
+      "Sunday: 9:30 AM – 10:30 PM"
     ]
   },
   {
@@ -2910,6 +3065,16 @@
       "Perfect for when your pockets are light and your stomach is demanding meat.",
       "The smell of frying oil is the strongest perfume on Bomfyle Road.",
       "The tissue dispenser is always empty. Use your own handkerchief, like a proper gentleman."
+    ],
+    "place_id": "ChIJGYRrdtF_UDcR4ySRlZ5VKMs",
+    "opening_hours": [
+      "Monday: 10:00 AM – 8:30 PM",
+      "Tuesday: 10:00 AM – 8:30 AM",
+      "Wednesday: 10:00 AM – 8:30 PM",
+      "Thursday: 10:00 AM – 8:30 PM",
+      "Friday: 10:00 AM – 8:30 PM",
+      "Saturday: 10:00 AM – 8:30 PM",
+      "Sunday: 11:00 AM – 8:30 PM"
     ]
   },
   {
@@ -2947,6 +3112,16 @@
       "Simple wooden tables that have probably seen more debates than the legislative assembly.",
       "The filter coffee is served hot and strong, the way it was before they started adding pumpkin spice.",
       "A very quiet, respectful space. Mawlai people like their coffee with a side of dignity."
+    ],
+    "place_id": "ChIJI1wlDyN_UDcRV20tj2iBres",
+    "opening_hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: Closed",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:30 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
     ]
   },
   {
@@ -2984,6 +3159,16 @@
       "The ivy on the walls is very neat, like it was combed by a strict headmistress.",
       "The lemon tarts are sour enough to make you blink, which is exactly how a lemon tart should be.",
       "Perfect for reading that book you've carried in your bag for three months without opening."
+    ],
+    "place_id": "ChIJnWg2c5V_UDcRVRRVoergWR8",
+    "opening_hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:00 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -3021,6 +3206,16 @@
       "So quiet you can hear the ice melt in your green tea. Don't cough, or the whole room will look at you.",
       "The light pine furniture looks very Japanese, but the view outside is pure, beautiful Meghalaya.",
       "They serve matcha with little bamboo whisks. A lot of ceremony for a cup of tea, but very pleasant."
+    ],
+    "place_id": "ChIJ_11pAid5UDcR_UAJz5amIjQ",
+    "opening_hours": [
+      "Monday: 12:00 – 7:00 PM",
+      "Tuesday: 12:00 – 7:00 PM",
+      "Wednesday: 12:00 – 7:00 PM",
+      "Thursday: Closed",
+      "Friday: 12:00 – 7:00 PM",
+      "Saturday: 12:00 – 7:00 PM",
+      "Sunday: 12:00 – 7:00 PM"
     ]
   },
   {
@@ -3058,7 +3253,8 @@
       "Sitting under the trees is lovely until a dry leaf falls directly into your soup. Natural seasoning, I guess.",
       "The mocktails are sweet and colorful, like the dresses at a Nongkrem dance.",
       "A great place for families who want to have a long, noisy lunch without the neighbors complaining."
-    ]
+    ],
+    "place_id": "ChIJWaa9hO5_UDcRi-w_YdBl-bU"
   },
   {
     "id": "belly-timber-cafe-restaurant",
@@ -3095,6 +3291,16 @@
       "The logs on the walls make you feel like you're in a forest cottage, though the main road is just outside.",
       "The pizza cheese stretches longer than the traffic jam at Nongmynsong junction.",
       "The hearth smells like oak-smoke and toasted garlic. A very comforting perfume in winter."
+    ],
+    "place_id": "ChIJeZ7ulxJ5UDcRiTFftdg4lHA",
+    "opening_hours": [
+      "Monday: 12:00 – 9:30 PM",
+      "Tuesday: 2:00 – 9:30 PM",
+      "Wednesday: 12:00 – 9:30 PM",
+      "Thursday: 12:00 – 9:30 PM",
+      "Friday: 12:00 – 9:30 PM",
+      "Saturday: 12:00 – 9:30 PM",
+      "Sunday: 12:00 – 9:30 PM"
     ]
   },
   {
@@ -3132,6 +3338,16 @@
       "The tables are made from massive tree trunks. If they ever move, they'll need a crane.",
       "The baristas look like they are conducting a science experiment when they brew your pour-over.",
       "Very quiet. Perfect for hiding from your relatives when you're supposed to be running errands."
+    ],
+    "place_id": "ChIJ3Vg_O8t_UDcR078RQQ2bNt4",
+    "opening_hours": [
+      "Monday: 10:00 AM – 8:30 PM",
+      "Tuesday: 10:00 AM – 8:30 PM",
+      "Wednesday: 10:00 AM – 8:30 PM",
+      "Thursday: 10:00 AM – 8:30 PM",
+      "Friday: 10:00 AM – 8:30 PM",
+      "Saturday: 10:00 AM – 8:30 PM",
+      "Sunday: 10:00 AM – 8:30 PM"
     ]
   },
   {
@@ -3169,6 +3385,16 @@
       "The crowd is mostly government clerks and lawyers talking about files and court dates.",
       "The croissants are flaky enough to ruin your neat office trousers. Eat with caution.",
       "The service is faster than the local monsoon clouds. In and out in five minutes."
+    ],
+    "place_id": "ChIJH7nkkVx_UDcRLBIqrk0cGLI",
+    "opening_hours": [
+      "Monday: 11:00 AM – 8:30 PM",
+      "Tuesday: 11:00 AM – 8:30 PM",
+      "Wednesday: 11:00 AM – 8:30 PM",
+      "Thursday: 11:00 AM – 8:30 PM",
+      "Friday: 11:00 AM – 8:30 PM",
+      "Saturday: 11:00 AM – 8:30 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -3206,6 +3432,16 @@
       "The paintings are beautiful, mostly mist and old pine trees. Very realistic, considering the real thing is outside.",
       "The tea selection is serious, served in heavy ceramic pots that keep the heat well.",
       "You will find actual artists here, looking very thoughtful over cold cups of black tea."
+    ],
+    "place_id": "ChIJcd6MzhV5UDcRK4aRC2XV0cw",
+    "opening_hours": [
+      "Monday: 11:30 AM – 7:30 PM",
+      "Tuesday: 11:30 AM – 7:30 PM",
+      "Wednesday: 11:30 AM – 7:30 PM",
+      "Thursday: 11:30 AM – 7:30 PM",
+      "Friday: 11:30 AM – 7:30 PM",
+      "Saturday: 11:30 AM – 7:30 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -3243,6 +3479,16 @@
       "The grass is so green and neat it looks like a carpet. Don't let your children run too wild on it.",
       "The continental platters are very pretty, like they were designed by a drawing teacher.",
       "The wind off the valley carries the smell of wet pine needles and expensive soap."
+    ],
+    "place_id": "ChIJS425ygR5UDcR4JacEfQ1NO4",
+    "opening_hours": [
+      "Monday: 1:30 – 9:30 PM",
+      "Tuesday: 1:30 – 9:30 PM",
+      "Wednesday: 1:30 – 9:30 PM",
+      "Thursday: 1:30 – 9:30 PM",
+      "Friday: 1:30 – 9:30 PM",
+      "Saturday: 1:30 – 9:30 PM",
+      "Sunday: 1:30 – 9:30 PM"
     ]
   },
   {
@@ -3317,6 +3563,16 @@
       "The tea master pours the chai from three feet high. A local spectacle that never gets old.",
       "No seats, just a crowd of people holding hot glasses and talking about the traffic jam.",
       "The ginger aroma is strong enough to cure a common cold on the spot."
+    ],
+    "place_id": "ChIJDxjDK0V_UDcRQWOsFuJDhZg",
+    "opening_hours": [
+      "Monday: 9:00 AM – 9:00 PM",
+      "Tuesday: 9:00 AM – 9:00 PM",
+      "Wednesday: 9:00 AM – 9:00 PM",
+      "Thursday: 9:00 AM – 9:00 PM",
+      "Friday: 9:00 AM – 9:00 PM",
+      "Saturday: 9:00 AM – 9:00 PM",
+      "Sunday: 10:00 AM – 9:00 PM"
     ]
   },
   {
@@ -3354,6 +3610,16 @@
       "The sofas are deep and covered in velvet. Designed for a proper post-lunch snooze.",
       "The Chinese-style sweet and sour pork is red enough to guide traffic, but very popular.",
       "You will always see a birthday party here with balloons and a very loud chorus of song."
+    ],
+    "place_id": "ChIJlQsSdIJ_UDcRqG62qKrOyyc",
+    "opening_hours": [
+      "Monday: 12:30 – 9:30 PM",
+      "Tuesday: 12:30 – 9:30 PM",
+      "Wednesday: 12:30 – 9:30 PM",
+      "Thursday: 12:30 – 9:30 PM",
+      "Friday: 12:30 – 9:30 PM",
+      "Saturday: 12:30 – 9:30 PM",
+      "Sunday: 12:30 – 9:30 PM"
     ]
   },
   {
@@ -3391,6 +3657,16 @@
       "The tablecloths are white and stiff, like a fresh office shirt. Very proper.",
       "The waiters move with a slow, dignified pace. They've seen many business deals succeed and fail here.",
       "Tucked away in the arcade, it's a good place to hide when Police Bazaar is too chaotic."
+    ],
+    "place_id": "ChIJ1YrZMKx_UDcRwTUsDzCmgs0",
+    "opening_hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 10:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:30 PM",
+      "Friday: 10:00 AM – 10:30 PM",
+      "Saturday: 10:00 AM – 10:00 PM",
+      "Sunday: 10:00 AM – 8:00 PM"
     ]
   },
   {
@@ -3428,6 +3704,16 @@
       "The plates are huge, but the food is placed in the exact center in a tiny, neat pile. Very stylish.",
       "The jazz music on the speaker is so soft you might think you're imagining it.",
       "A very quiet crowd. People look like they are trying not to make noise with their forks."
+    ],
+    "place_id": "ChIJC1Y_bw5_UDcRCtCByb-bK10",
+    "opening_hours": [
+      "Monday: 1:00 – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:00 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
     ]
   },
   {
@@ -3465,6 +3751,16 @@
       "They do not spare the butter. Your fingers will be shiny, but your heart will be happy.",
       "The tea is served in clay cups (kulhads). A nice touch that makes the road trip feel authentic.",
       "The traffic outside is loud, but the smell of hot ghee inside is louder."
+    ],
+    "place_id": "ChIJJTPjyiqHUDcRnAn5PzgOwHs",
+    "opening_hours": [
+      "Monday: 7:30 AM – 9:30 PM",
+      "Tuesday: 7:30 AM – 9:30 PM",
+      "Wednesday: 7:30 AM – 9:30 PM",
+      "Thursday: 7:30 AM – 9:30 PM",
+      "Friday: 7:30 AM – 9:30 PM",
+      "Saturday: 7:30 AM – 9:30 PM",
+      "Sunday: 7:30 AM – 9:30 PM"
     ]
   },
   {
@@ -3502,6 +3798,16 @@
       "The steel plates shine like mirrors. You can check your hair while eating your dal.",
       "No alcohol, no meat, no noise. Just families eating paneer with great focus.",
       "The filter coffee is served in proper brass tumblers. Very traditional and very hot."
+    ],
+    "place_id": "ChIJe69dbsJ_UDcRqx_yNQnXFpk",
+    "opening_hours": [
+      "Monday: 8:30 AM – 9:30 PM",
+      "Tuesday: 8:30 AM – 9:30 PM",
+      "Wednesday: 8:30 AM – 9:30 PM",
+      "Thursday: 8:30 AM – 9:30 PM",
+      "Friday: 8:30 AM – 9:30 PM",
+      "Saturday: 8:30 AM – 9:30 PM",
+      "Sunday: 8:30 AM – 9:30 PM"
     ]
   },
   {
@@ -3576,6 +3882,16 @@
       "The steps up to the restaurant are steep. Consider it a pre-meal exercise.",
       "The sweet corn soup is thick and hot, perfect for a cold rainy day when your chest feels tight.",
       "Regulars have been coming here since they were schoolboys in short trousers."
+    ],
+    "place_id": "ChIJu82SdMp_UDcRyH3lm0sJUWA",
+    "opening_hours": [
+      "Monday: 9:00 AM – 11:00 PM",
+      "Tuesday: 9:00 AM – 11:00 PM",
+      "Wednesday: 9:00 AM – 11:00 PM",
+      "Thursday: 9:00 AM – 11:00 PM",
+      "Friday: 9:00 AM – 11:00 PM",
+      "Saturday: 9:00 AM – 11:00 PM",
+      "Sunday: 9:00 AM – 11:00 PM"
     ]
   },
   {
@@ -3613,6 +3929,16 @@
       "So many students from St. Edmund's here, you might think it's an extension of the college library.",
       "The quesadillas are very cheesy. A messy business that requires many napkins.",
       "The wooden chairs are small, so don't plan on sitting here for five hours."
+    ],
+    "place_id": "ChIJBVxdQOd_UDcRy0kjGr-gQk4",
+    "opening_hours": [
+      "Monday: Closed",
+      "Tuesday: 1:00 – 9:30 PM",
+      "Wednesday: 1:00 – 9:30 PM",
+      "Thursday: 1:00 – 9:30 PM",
+      "Friday: 1:00 – 9:30 PM",
+      "Saturday: 1:00 – 9:30 PM",
+      "Sunday: 1:00 – 9:00 PM"
     ]
   },
   {
@@ -3650,6 +3976,16 @@
       "The scent of rosewater and mutton fat hits you at the door. Very promising.",
       "The decor is slightly faded, but the flavors are still as sharp as they were in the nineties.",
       "Very popular with families who believe Sunday is not Sunday without mutton curry."
+    ],
+    "place_id": "ChIJWUVbRJJ-UDcRuJf6jhzuEdo",
+    "opening_hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:00 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
     ]
   },
   {
@@ -3687,6 +4023,16 @@
       "The cocktails have smoking leaves in them. A lot of drama, but the drinks are quite handsome.",
       "The valley looks like a basin of stars in the evening. Very romantic, if you have the right company.",
       "The fusion dishes are plated like modern art. You might spend five minutes figuring out where to start eating."
+    ],
+    "place_id": "ChIJxSDDWwh_UDcReYPK8ipBy4M",
+    "opening_hours": [
+      "Monday: 1:00 – 10:00 PM",
+      "Tuesday: 1:00 – 10:00 PM",
+      "Wednesday: 1:00 – 10:00 PM",
+      "Thursday: 1:00 – 10:00 PM",
+      "Friday: 1:00 – 10:00 PM",
+      "Saturday: 1:00 – 10:00 PM",
+      "Sunday: 1:00 – 10:00 PM"
     ]
   },
   {
@@ -3724,6 +4070,16 @@
       "The cakes look like they are made of porcelain, not sugar. I'd be afraid to cut them.",
       "The macarons are arranged in perfect neat rows, looking like colorful buttons on a fancy coat.",
       "A lot of mothers here discussing wedding cake designs with very serious faces."
+    ],
+    "place_id": "ChIJqU8iGD9_UDcRCnuxJwOkGwQ",
+    "opening_hours": [
+      "Monday: 10:00 AM – 8:00 PM",
+      "Tuesday: 10:30 AM – 8:00 PM",
+      "Wednesday: 10:00 AM – 8:00 PM",
+      "Thursday: 10:00 AM – 8:00 PM",
+      "Friday: 10:00 AM – 8:00 PM",
+      "Saturday: 10:00 AM – 8:00 PM",
+      "Sunday: 10:00 AM – 8:00 PM"
     ]
   },
   {
@@ -3761,6 +4117,16 @@
       "The queue at 5 PM moves fast because everyone knows exactly what they want: bread and buns.",
       "The coconut cookies are dry and crunchy, perfect for dipping into hot tea until they almost melt.",
       "The baker has the flour-dusted hands of an honest working man. A very comforting sight."
+    ],
+    "place_id": "ChIJj2QJe0l_UDcRXkB4-7jfvYw",
+    "opening_hours": [
+      "Monday: 7:30 AM – 9:30 PM",
+      "Tuesday: 7:30 AM – 9:30 PM",
+      "Wednesday: 7:30 AM – 9:30 PM",
+      "Thursday: 7:30 AM – 9:30 PM",
+      "Friday: 7:30 AM – 9:30 PM",
+      "Saturday: 7:30 AM – 9:30 PM",
+      "Sunday: 7:30 AM – 9:30 PM"
     ]
   },
   {
@@ -3798,6 +4164,16 @@
       "The donuts are simple rings of fried dough covered in granulated sugar. Honest and perfect.",
       "The wood counters look older than my grandmother's wardrobe, smelling of sweet yeast and pine wood.",
       "A favorite stop for golfers who need a sugar boost after walking the eighteen holes."
+    ],
+    "place_id": "ChIJpcNWisR-UDcRra42Tig6wa8",
+    "opening_hours": [
+      "Monday: 9:00 AM – 8:00 PM",
+      "Tuesday: 9:00 AM – 8:00 PM",
+      "Wednesday: 9:00 AM – 8:00 PM",
+      "Thursday: 9:00 AM – 8:00 PM",
+      "Friday: 9:00 AM – 8:00 PM",
+      "Saturday: 9:00 AM – 8:00 PM",
+      "Sunday: 9:00 AM – 8:00 PM"
     ]
   },
   {
@@ -3835,6 +4211,16 @@
       "The pastel pink walls are very modern, though they look a bit strange against the dark pine trees outside.",
       "The eclairs are lined up in the glass case like little soldiers. Very neat.",
       "A quiet spot for ladies who discuss neighborhood gossip in very soft voices over tea."
+    ],
+    "place_id": "ChIJiwuc_aJ_UDcRtcReUTVdqpM",
+    "opening_hours": [
+      "Monday: 10:30 AM – 8:00 PM",
+      "Tuesday: Closed",
+      "Wednesday: 10:30 AM – 8:00 PM",
+      "Thursday: 10:30 AM – 8:00 PM",
+      "Friday: 10:30 AM – 8:00 PM",
+      "Saturday: 10:00 AM – 8:00 PM",
+      "Sunday: 10:00 AM – 8:00 PM"
     ]
   },
   {
@@ -3872,6 +4258,16 @@
       "No physical shopfront, just a busy kitchen where the magic happens and delivery boys wait.",
       "The butter-cream is smooth and real, unlike the shiny chemical foam they use in commercial shops.",
       "The fruit cakes actually contain real fruit, which is a rare and welcome choice these days."
+    ],
+    "place_id": "ChIJrxl-ynB_UDcRt4vJbu0vwHs",
+    "opening_hours": [
+      "Monday: 12:00 – 7:00 PM",
+      "Tuesday: 12:00 – 7:00 PM",
+      "Wednesday: 12:00 – 7:00 PM",
+      "Thursday: 12:00 – 7:00 PM",
+      "Friday: 12:00 – 7:00 PM",
+      "Saturday: Closed",
+      "Sunday: Closed"
     ]
   },
   {
@@ -3909,6 +4305,16 @@
       "The shop is small and always smells of melted chocolate and vanilla essence.",
       "The chocolate truffle cake is dense enough to be used as a paperweight, but very delicious.",
       "The service is quick. You pay, you eat, you go back to the crowd."
+    ],
+    "place_id": "ChIJYxE9YpJ-UDcReBY_YQ6nglA",
+    "opening_hours": [
+      "Monday: 9:30 AM – 8:30 PM",
+      "Tuesday: 9:30 AM – 8:30 PM",
+      "Wednesday: 9:30 AM – 8:30 PM",
+      "Thursday: 9:30 AM – 8:30 PM",
+      "Friday: 9:30 AM – 8:30 PM",
+      "Saturday: 9:30 AM – 8:30 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -3946,6 +4352,16 @@
       "The croissants have actual layers that flake when you bite. A proper French technique in Laban.",
       "The sourdough loaves are hard and crusty. My husband says they are too tough, but I say they have character.",
       "A small boutique space that smells of high-quality butter and slow fermentation."
+    ],
+    "place_id": "ChIJt0_rUDd_UDcRN-J6mdzVLTs",
+    "opening_hours": [
+      "Monday: 9:00 AM – 9:00 PM",
+      "Tuesday: 9:00 AM – 9:00 PM",
+      "Wednesday: 9:00 AM – 9:00 PM",
+      "Thursday: 9:00 AM – 9:00 PM",
+      "Friday: 9:00 AM – 9:00 PM",
+      "Saturday: 9:00 AM – 9:00 PM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -3983,6 +4399,16 @@
       "The display cases look like they belong in a museum of local baking history. Nostalgia is the main ingredient.",
       "The chicken patties are flaky and spicy, though you might find more potato than chicken inside. Classic Shillong style.",
       "Almost every adult in Shillong has a memory of eating here after school."
+    ],
+    "place_id": "ChIJQ9OpVZJ-UDcRXada2mRnqew",
+    "opening_hours": [
+      "Monday: 9:00 AM – 9:00 PM",
+      "Tuesday: 9:00 AM – 9:00 PM",
+      "Wednesday: 9:00 AM – 9:00 PM",
+      "Thursday: 9:00 AM – 9:00 PM",
+      "Friday: 9:00 AM – 9:00 PM",
+      "Saturday: 9:00 AM – 9:00 PM",
+      "Sunday: 9:00 AM – 9:00 PM"
     ]
   },
   {
@@ -4020,6 +4446,16 @@
       "The crowd is very health-conscious, wearing yoga pants and drinking unsweetened almond milk.",
       "The bakery is clean and modern, matching the minimalist diets of its customers.",
       "The banana bread is dense and sweet, sweetened with real honey instead of white sugar."
+    ],
+    "place_id": "ChIJndjs8Xp_UDcR7yU9cDlycbY",
+    "opening_hours": [
+      "Monday: 12:00 – 7:00 PM",
+      "Tuesday: 12:00 – 7:00 PM",
+      "Wednesday: 12:00 – 7:00 PM",
+      "Thursday: 12:00 – 7:00 PM",
+      "Friday: 12:00 – 7:00 PM",
+      "Saturday: Closed",
+      "Sunday: Closed"
     ]
   },
   {
@@ -4057,6 +4493,16 @@
       "No fancy glass cases, just cardboard boxes full of fresh buns and biscuits.",
       "The cream rolls are long and filled with sweet white frosting. Youthful happiness for ten rupees.",
       "The staff is friendly and remembers your face if you visit twice."
+    ],
+    "place_id": "ChIJHQAAALt-UDcRe13wBOXU5iA",
+    "opening_hours": [
+      "Monday: 9:00 AM – 7:00 AM",
+      "Tuesday: 9:00 AM – 7:00 AM",
+      "Wednesday: 9:00 AM – 7:00 AM",
+      "Thursday: 9:00 AM – 7:00 AM",
+      "Friday: 9:00 AM – 7:00 AM",
+      "Saturday: 9:00 AM – 7:00 AM",
+      "Sunday: Closed"
     ]
   },
   {
@@ -4094,6 +4540,16 @@
       "The cookies are sold in simple clear plastic bags tied with a yellow rubber band. Authentic.",
       "The shop has been here for ages, watching the Laitumkhrah traffic grow from horse-carts to SUVs.",
       "The smell of baking butter wafts across the road, tempting students skipping classes."
+    ],
+    "place_id": "ChIJhU4_ubp-UDcRTxCVgR4A_co",
+    "opening_hours": [
+      "Monday: 8:00 AM – 8:36 PM",
+      "Tuesday: 8:00 AM – 8:36 PM",
+      "Wednesday: 8:00 AM – 8:36 PM",
+      "Thursday: 8:00 AM – 8:36 PM",
+      "Friday: 8:00 AM – 8:36 PM",
+      "Saturday: 8:00 AM – 8:36 PM",
+      "Sunday: 8:00 AM – 8:36 PM"
     ]
   },
   {
@@ -4131,6 +4587,16 @@
       "Located inside the hotel lobby, it is quiet and feels very safe from the Police Bazaar noise.",
       "The pastries are decorated with neat chocolate fans and gold leaf. Very fancy.",
       "A favorite for local vegetarian families who trust the kitchen completely."
+    ],
+    "place_id": "ChIJk81MMIl_UDcRXLyYUioAqBI",
+    "opening_hours": [
+      "Monday: 11:00 AM – 8:30 PM",
+      "Tuesday: 11:00 AM – 8:30 PM",
+      "Wednesday: 11:00 AM – 8:30 PM",
+      "Thursday: 11:00 AM – 8:30 PM",
+      "Friday: 11:00 AM – 8:30 PM",
+      "Saturday: 11:00 AM – 8:30 PM",
+      "Sunday: 11:00 AM – 8:30 PM"
     ]
   },
   {
@@ -4168,6 +4634,16 @@
       "The shop is busy, serving the Garikhana transport crowd with quick snacks and tea cakes.",
       "The vanilla buns are soft and sweet, the kind of comfort food that doesn't ask you to think.",
       "The prices are the best part of the menu. Shillong prices as they used to be."
+    ],
+    "place_id": "ChIJzy62OJh_UDcRCQ8DMVJEyhI",
+    "opening_hours": [
+      "Monday: 8:00 AM – 8:00 PM",
+      "Tuesday: 8:00 AM – 8:00 PM",
+      "Wednesday: 8:00 AM – 8:00 PM",
+      "Thursday: 8:00 AM – 8:00 PM",
+      "Friday: 8:00 AM – 8:00 PM",
+      "Saturday: 8:00 AM – 8:00 PM",
+      "Sunday: 8:00 AM – 8:00 PM"
     ]
   },
   {
@@ -4205,7 +4681,8 @@
       "The kitchen smells of vanilla extract and warm sugar, a sweet pocket in the middle of Garikhana noise.",
       "The photo album of past wedding cakes is thicker than the local telephone directory.",
       "A lot of serious conversations here about ribbons, icing colors, and guest lists."
-    ]
+    ],
+    "place_id": "ChIJsTxG46V_UDcR9ZBTa2kVZEg"
   },
   {
     "id": "gateau-bakes-and-more",
@@ -4242,7 +4719,8 @@
       "The glass cases are spotless, showing off croissants and tarts like jewelry.",
       "The multi-grain bread is heavy and feels healthy, though I still prefer white flour myself.",
       "A popular stop for office workers buying a quick treat for their desks."
-    ]
+    ],
+    "place_id": "ChIJYa-uCiV_UDcRoJ68kpeDLho"
   },
   {
     "id": "robert-junior-patisserie",
@@ -4279,6 +4757,16 @@
       "The choux buns are filled with fresh vanilla cream that squeezes out when you bite. Eat with care.",
       "The macarons are arranged in perfect neat rows, looking like colorful buttons on a fancy coat.",
       "A very classy shop that brings a touch of Parisian style to Nongthymmai's quiet lanes."
+    ],
+    "place_id": "ChIJsYe3o-l_UDcRjtJVqk9gJEI",
+    "opening_hours": [
+      "Monday: 8:30 AM – 5:00 PM",
+      "Tuesday: 8:30 AM – 5:00 PM",
+      "Wednesday: 8:30 AM – 5:00 PM",
+      "Thursday: 8:30 AM – 5:00 PM",
+      "Friday: 8:30 AM – 5:00 PM",
+      "Saturday: 8:30 AM – 5:30 PM",
+      "Sunday: Closed"
     ]
   }
 ]

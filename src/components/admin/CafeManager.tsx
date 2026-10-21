@@ -77,7 +77,7 @@ export default function CafeManager() {
       theme: "",
       introduction: "",
       whyVisit: "",
-      hours: "10:30 AM — 8:30 PM",
+      hours: "",
       address: "Shillong, Meghalaya 793001",
       neighborhood: "Laitumkhrah",
       images: { hero: "", card: "" },
