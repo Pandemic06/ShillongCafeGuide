@@ -113,15 +113,6 @@ export const KONG_LABET_REGISTRY: Record<string, LabetCommentary> = {
       "Watch the clouds from the balcony. You can see the weather changing faster than a politician's opinion."
     ]
   },
-  "jiva-grill-nongkynrih": {
-    tagline: "Luxury pine yards, romantic stone fire pits, and artificial waterfalls. Very scenic, but your wallet will feel the cold.",
-    note: "Bring a heavy jacket. The fires are warm, but the mountain wind has no respect for fine outfits.",
-    observations: [
-      "An artificial waterfall. In a town with real ones every five miles. Well, at least this one has a remote control.",
-      "The basalt sizzlers are hot enough to cook your worries away.",
-      "Mostly couples looking deeply into each other's eyes, trying not to look at the bill."
-    ]
-  },
   "bread-cafe-pb": {
     tagline: "Warm croissants and morning espressos. The perfect place to hide while waiting for the Police Bazaar crowd to thin out.",
     note: "Bakeries are always comforting. Butter never tells you to move faster or think harder.",

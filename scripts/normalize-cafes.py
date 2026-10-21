@@ -65,11 +65,6 @@ MANUAL_OVERRIDES = {
         "add_tags": ["Limited Outdoor Seating"],
         "rooftop_verified": False,
     },
-    "jiva-grill-nongkynrih": {
-        "drop_tags": ["Rooftop", "Outdoor Deck"],
-        "add_tags": ["Outdoor Seating", "Scenic View"],
-        "rooftop_verified": False,
-    },
     "the-living-roof": {
         "rooftop_verified": True,  # confirmed real rooftop
     },

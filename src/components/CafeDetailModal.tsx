@@ -163,18 +163,6 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
       "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800"
     ]
   },
-  "jiva-grill-nongkynrih": {
-    gallery: [
-      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800"
-    ],
-    menuImages: [
-      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=800"
-    ]
-  },
   "bread-cafe-pb": {
     gallery: [
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800",
@@ -241,8 +229,8 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
   // ── SEO values derived from cafe data ────────────────────────────────────
   const slug = cafe.id;
   const cafeCanonical = `https://shillongcafemap.in/cafe/${slug}`;
-  const seoTitle = `${cafe.name} — Café in ${cafe.neighborhood}, Shillong`;
-  const seoDescription = (
+  const seoTitle = cafe.seo_title || `${cafe.name} — Café in ${cafe.neighborhood}, Shillong`;
+  const seoDescription = cafe.seo_description || (
     `${cafe.name} is a café in ${cafe.neighborhood}, Shillong. ` +
     (cafe.tagline || cafe.introduction?.slice(0, 110) || "")
   ).slice(0, 160);

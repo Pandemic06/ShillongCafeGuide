@@ -447,22 +447,6 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
       match_confidence: 0.97,
       verification_status: "verified"
     },
-    "jiva-grill-nongkynrih": {
-      place_id: "ChIJj_jiva_grill_shillong",
-      formatted_address: "Nongkynrih Main Road, Behind Pinewood Gates, Shillong Meghalaya 793003",
-      latitude: 25.5695,
-      longitude: 91.8990,
-      google_maps_url: "https://maps.google.com/?api=1&query=Jiva+Grill+Shillong",
-      website: "http://jivagrill.com",
-      phone_number: "+91 94369 12345",
-      rating: 4.6,
-      user_ratings_total: 412,
-      opening_hours: ["Monday: 11:00 AM — 10:30 PM", "Tuesday: 11:00 AM — 10:30 PM", "Wednesday: 11:00 AM — 10:30 PM", "Thursday: 11:00 AM — 10:30 PM", "Friday: 11:00 AM — 10:30 PM", "Saturday: 11:00 AM — 10:30 PM", "Sunday: 11:00 AM — 10:30 PM"],
-      types: ["restaurant", "food", "establishment"],
-      khasi_food_available: false,
-      match_confidence: 0.95,
-      verification_status: "verified"
-    },
     "bread-cafe-pb": {
       place_id: "ChIJ_bread_cafe_shillong",
       formatted_address: "Bara Bazaar Crossing, Police Bazaar, Shillong Meghalaya 793001",
@@ -841,28 +825,6 @@ app.post("/api/cafes/sweep", requireAgentKey, async (req, res) => {
           }
         ],
         coordinates: { lat: 25.5714, lng: 91.8942 }
-      },
-      {
-        id: "jiva-grill-nongkynrih",
-        name: "Jiva Grill",
-        tagline: "Spectacular Waterfalls & Luxury Sizzlers",
-        theme: "Premium Pine Lawn & Cascading Slate Waters",
-        introduction: "Jiva Grill brings an absolute visual masterpiece of fine dining to the foothills. Surrounded by towering emerald pines and cascading fresh slate waterfall constructs, this gorgeous premium dining retreat offers pristine outdoor glass seating, romantic stone fire pits, and exemplary multi-cuisine sizzlers.",
-        whyVisit: "To experience a luxury, scenic dinner alongside live flame grills and cascading mountain pools under the starry night sky.",
-        hours: "11:00 AM — 10:30 PM (Daily)",
-        address: "Nongkynrih Main Road, Behind Pinewood Gates, Shillong 793003",
-        neighborhood: "Nongkynrih",
-        hasLiveMusic: false,
-        vibeTags: ["Premium Dining", "Cascading Pools", "Outdoor Deck", "Waterfalls", "Fire Pits"],
-        mustTry: [
-          {
-            name: "Stone Grilled Mughlai Platter",
-            description: "Hand-skewered local ingredients and tender lamb pieces, slow charcoal-roasted on local hot mountain basalt tiles and served with mint dip.",
-            price: "₹420",
-            image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
-          }
-        ],
-        coordinates: { lat: 25.5695, lng: 91.8990 }
       },
       {
         id: "bread-cafe-pb",
@@ -1441,12 +1403,20 @@ async function startServer() {
     // In production, serve compiled static assets from 'dist'
     const distPath = path.join(process.cwd(), "dist", "public");
 
+    // Cafés whose page moved: old id → new id, sent as a permanent redirect so
+    // search engines carry the old address over to the new one.
+    const MOVED_CAFES: Record<string, string> = {
+      "jiva-grill-nongkynrih": "jiva-resort-cherrapunjee",
+    };
+
     // Serve pre-rendered café pages (scripts/generate-static-params.ts) at the
     // canonical no-trailing-slash URL. Without this, express.static sees the
     // /cafe/<id> directory and 301s to /cafe/<id>/, wasting crawl budget.
     app.get("/cafe/:id", (req, res, next) => {
       const { id } = req.params;
       if (!/^[a-z0-9-]+$/i.test(id)) return next();
+      const movedTo = MOVED_CAFES[id];
+      if (movedTo) return res.redirect(301, `/cafe/${movedTo}`);
       const file = path.join(distPath, "cafe", id, "index.html");
       if (!fs.existsSync(file)) return next();
       res.sendFile(file);

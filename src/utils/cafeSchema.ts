@@ -28,6 +28,7 @@ function neighborhoodSlug(neighborhood: string): string {
  */
 export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
   const cafeUrl = `${BASE_URL}/cafe/${cafe.id}`;
+  const isLodging = !!cafe.types?.includes('lodging');
 
   // ── Geo coordinates ─────────────────────────────────────────────────────
   const lat = cafe.coordinates?.lat ?? cafe.latitude;
@@ -98,7 +99,7 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
   // Note: @context is omitted here — SEO.tsx wraps the schema in a top-level
   // { "@context": "...", "@graph": [...] } so nesting it would be redundant.
   const cafeEntity: Record<string, unknown> = {
-    '@type': 'CafeOrCoffeeShop',
+    '@type': isLodging ? 'Resort' : 'CafeOrCoffeeShop',
     '@id': cafeUrl,
     name: cafe.name,
     description: cafe.introduction || cafe.tagline,
@@ -113,7 +114,8 @@ export function buildCafeSchema(cafe: Cafe): Record<string, unknown> {
     ...(images.length ? { image: images.length === 1 ? images[0] : images } : {}),
     ...(cafe.phone_number ? { telephone: toInternationalPhone(cafe.phone_number) } : {}),
     ...(menuUrl ? { hasMenu: menuUrl } : {}),
-    servesCuisine: buildCuisineList(cafe),
+    // servesCuisine is only valid on food businesses, not on a Resort.
+    ...(isLodging ? {} : { servesCuisine: buildCuisineList(cafe) }),
     priceRange: buildPriceRange(cafe),
     breadcrumb,
     isAccessibleForFree: false,

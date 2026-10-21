@@ -746,67 +746,6 @@ export const CAFES: Cafe[] = [
     ]
   },
   {
-    "id": "jiva-grill-nongkynrih",
-    "name": "Jiva Grill",
-    "neighborhood": "Nongkynrih",
-    "address": "Nongkynrih, Shillong, Meghalaya 793006",
-    "coordinates": {
-      "lat": 25.5695,
-      "lng": 91.899
-    },
-    "tagline": "Grill smoke and good times.",
-    "theme": "Rustic grill restaurant with open-fire cooking",
-    "vibeTags": [
-      "Grill",
-      "BBQ",
-      "Rustic",
-      "Meat",
-      "Outdoor Seating"
-    ],
-    "hasLiveMusic": false,
-    "editorial_featured": false,
-    "rating": 4.6,
-    "images": {
-      "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
-    },
-    "place_id": "ChIJj_jiva_grill_shillong",
-    "formatted_address": "Nongkynrih Main Road, Behind Pinewood Gates, Shillong Meghalaya 793003",
-    "latitude": 25.5695,
-    "longitude": 91.899,
-    "google_maps_url": "https://maps.google.com/?api=1&query=Jiva+Grill+Shillong",
-    "website": "http://jivagrill.com",
-    "phone_number": "+91 94369 12345",
-    "user_ratings_total": 412,
-    "types": [
-      "restaurant",
-      "food",
-      "establishment"
-    ],
-    "opening_hours": [
-      "Monday: 11:00 AM — 10:30 PM",
-      "Tuesday: 11:00 AM — 10:30 PM",
-      "Wednesday: 11:00 AM — 10:30 PM",
-      "Thursday: 11:00 AM — 10:30 PM",
-      "Friday: 11:00 AM — 10:30 PM",
-      "Saturday: 11:00 AM — 10:30 PM",
-      "Sunday: 11:00 AM — 10:30 PM"
-    ],
-    "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
-    ],
-    "khasi_food_available": false,
-    "match_confidence": 0.95,
-    "verification_status": "verified",
-    "kong_labet_tagline": "Luxury pine yards, romantic stone fire pits, and artificial waterfalls. Very scenic, but your wallet will feel the cold.",
-    "kong_labet_note": "Bring a heavy jacket. The fires are warm, but the mountain wind has no respect for fine outfits.",
-    "kong_labet_observations": [
-      "An artificial waterfall. In a town with real ones every five miles. Well, at least this one has a remote control.",
-      "The basalt sizzlers are hot enough to cook your worries away.",
-      "Mostly couples looking deeply into each other's eyes, trying not to look at the bill."
-    ]
-  },
-  {
     "id": "bread-cafe-pb",
     "name": "Bread Cafe",
     "neighborhood": "Police Bazaar",
