@@ -193,11 +193,11 @@
   {
     "id": "cherry-bean-cafe",
     "name": "Cherry Bean Cafe",
-    "neighborhood": "Laitumkhrah",
-    "address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "neighborhood": "Police Bazaar",
+    "address": "GS Rd, opposite Broadway Hotel, Police Bazar, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.562,
-      "lng": 91.8842
+      "lat": 25.57564,
+      "lng": 91.881156
     },
     "tagline": "Bright beans, brighter mornings.",
     "theme": "Cheerful cafe with specialty coffee",
@@ -215,27 +215,26 @@
       "hero": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "ChIJ_cherry_bean_shillong",
-    "formatted_address": "Bungalow 4, Kench's Trace, Opp Bishop Cotton School, Shillong Meghalaya 793004",
-    "latitude": 25.562,
-    "longitude": 91.8842,
-    "google_maps_url": "https://maps.google.com/?api=1&query=Cherry+Bean+Cafe+Shillong",
-    "website": "https://instagram.com/cherrybeancafe",
-    "phone_number": "+91 97740 67451",
-    "user_ratings_total": 312,
+    "place_id": "ChIJRyV05z9_UDcRWdOml_k8cyg",
+    "formatted_address": "GS Rd, opposite Broadway Hotel, Police Bazar, Shillong, Meghalaya 793001",
+    "latitude": 25.57564,
+    "longitude": 91.881156,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJRyV05z9_UDcRWdOml_k8cyg",
+    "phone_number": "+91 98639 24605",
+    "user_ratings_total": 457,
     "types": [
       "cafe",
       "bakery",
       "food"
     ],
     "opening_hours": [
-      "Monday: 11:00 AM — 9:00 PM",
-      "Tuesday: 11:00 AM — 9:00 PM",
-      "Wednesday: 11:00 AM — 9:00 PM",
-      "Thursday: 11:00 AM — 9:00 PM",
-      "Friday: 11:00 AM — 9:00 PM",
-      "Saturday: 11:00 AM — 9:00 PM",
-      "Sunday: Closed"
+      "Monday: 11:30 AM – 10:00 PM",
+      "Tuesday: 11:30 AM – 10:00 PM",
+      "Wednesday: 11:30 AM – 10:00 PM",
+      "Thursday: 11:30 AM – 10:00 PM",
+      "Friday: 11:30 AM – 10:00 PM",
+      "Saturday: 11:30 AM – 10:00 PM",
+      "Sunday: 11:30 AM – 10:00 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-154118811-1e0d58224f24"
@@ -731,10 +730,10 @@
     "id": "bread-cafe-pb",
     "name": "Bread Cafe",
     "neighborhood": "Police Bazaar",
-    "address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "address": "GS Rd, Starline, Police Bazar, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5755,
-      "lng": 91.8848
+      "lat": 25.575775,
+      "lng": 91.881253
     },
     "tagline": "Fresh baked, always.",
     "theme": "Artisan bakery cafe",
@@ -747,32 +746,31 @@
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
-    "rating": 4.3,
+    "rating": 3,
     "images": {
       "hero": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "ChIJ_bread_cafe_shillong",
-    "formatted_address": "Bara Bazaar Crossing, Police Bazaar, Shillong Meghalaya 793001",
-    "latitude": 25.5755,
-    "longitude": 91.8848,
-    "google_maps_url": "https://maps.google.com/?api=1&query=Bread+Cafe+Shillong",
-    "website": "https://breadcafe.co.in",
-    "phone_number": "+91 98560 31200",
-    "user_ratings_total": 512,
+    "place_id": "ChIJiyinXdp_UDcR8zvzeT0ACSs",
+    "formatted_address": "GS Rd, Starline, Police Bazar, Shillong, Meghalaya 793001",
+    "latitude": 25.575775,
+    "longitude": 91.881253,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJiyinXdp_UDcR8zvzeT0ACSs",
+    "phone_number": "+91 89740 66849",
+    "user_ratings_total": 44,
     "types": [
       "cafe",
       "bakery",
       "food"
     ],
     "opening_hours": [
-      "Monday: 11:00 AM — 10:30 PM",
-      "Tuesday: 11:00 AM — 10:30 PM",
-      "Wednesday: 11:00 AM — 10:30 PM",
-      "Thursday: 11:00 AM — 10:30 PM",
-      "Friday: 11:00 AM — 10:30 PM",
-      "Saturday: 11:00 AM — 10:30 PM",
-      "Sunday: 11:00 AM — 10:30 PM"
+      "Monday: 9:30 AM – 8:00 PM",
+      "Tuesday: 9:30 AM – 8:00 PM",
+      "Wednesday: 9:30 AM – 8:00 PM",
+      "Thursday: 9:30 AM – 8:00 PM",
+      "Friday: 9:30 AM – 8:00 PM",
+      "Saturday: 9:30 AM – 8:00 PM",
+      "Sunday: 9:30 AM – 8:00 PM"
     ],
     "photos": [
       "https://images.unsplash.com/photo-154118811-1e0d58224f24"
@@ -880,6 +878,19 @@
       "So much white wood. My kitchen has more character in a single tea stain, but students seem to find it peaceful.",
       "The cinnamon rolls are massive. They require a strategy, not just a fork.",
       "Very quiet. You can hear a teaspoon clink from three tables away, which makes laughing feel like a crime."
+    ],
+    "phone_number": "+91 73083 14570",
+    "website": "https://cafesolashillong.com/",
+    "rating": 4.1,
+    "user_ratings_total": 432,
+    "opening_hours": [
+      "Monday: 2:00 – 9:00 PM",
+      "Tuesday: 12:00 – 9:00 PM",
+      "Wednesday: 1:00 – 9:00 PM",
+      "Thursday: 1:00 – 9:00 PM",
+      "Friday: 1:00 – 9:00 PM",
+      "Saturday: 1:00 – 9:00 PM",
+      "Sunday: 3:00 – 9:00 PM"
     ]
   },
   {
@@ -2114,6 +2125,17 @@
       "Everything is made of local bamboo. If you sit too fast, the chair might squeak in Khasi.",
       "The view is spectacular. On a clear day you can see the plains; on a rainy day you can't even see your tea.",
       "The red tea with ginger (Lal-cha) is the only reason to stand in this cold."
+    ],
+    "rating": 3.5,
+    "user_ratings_total": 10,
+    "opening_hours": [
+      "Monday: 11:00 AM – 9:30 PM",
+      "Tuesday: 11:00 AM – 9:30 PM",
+      "Wednesday: 11:00 AM – 9:30 PM",
+      "Thursday: 11:00 AM – 9:30 PM",
+      "Friday: 11:00 AM – 9:30 PM",
+      "Saturday: 11:00 AM – 9:30 PM",
+      "Sunday: 11:00 AM – 9:30 PM"
     ]
   },
   {
@@ -2400,6 +2422,17 @@
       "A lot of hand-painted murals on the walls. Very energetic and slightly chaotic, like youth itself.",
       "The lemon ginger honey tea is warm, perfect for healing dry throats before open mic slots.",
       "The crowd is very supportive. Even if a singer hits the wrong note, everyone claps. Shillong warmth."
+    ],
+    "rating": 4.3,
+    "user_ratings_total": 1039,
+    "opening_hours": [
+      "Monday: Closed",
+      "Tuesday: 1:30 – 9:30 PM",
+      "Wednesday: 1:30 – 9:30 PM",
+      "Thursday: 1:30 – 9:30 PM",
+      "Friday: 1:30 – 9:30 PM",
+      "Saturday: 1:30 – 9:30 PM",
+      "Sunday: 1:30 – 9:30 PM"
     ]
   },
   {
@@ -3085,7 +3118,7 @@
       "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Set inside the lush Windermere Resorts complex, 16 Street Bistro is a premium dining destination offering continental cuisine and beautiful valley views in a garden setting.",
-    "whyVisit": "For a scenic lunch in a peaceful, manicured resort garden away from Shillong's central traffic.",
+    "whyVisit": "For a scenic lunch in a peaceful, manicured resort garden away from Shillong's central traffic. Locals rate the Margherita pizza here among the best in town.",
     "kong_labet_tagline": "Scenic garden dining inside the Windermere Resorts. Premium plates with a view of the green valleys.",
     "kong_labet_note": "Take a table near the lawn edge. The valley view is worth the slightly higher prices, believe me.",
     "kong_labet_observations": [
@@ -3398,10 +3431,10 @@
     "id": "blackstone-grill",
     "name": "BLACKSTONE GRILL",
     "neighborhood": "Golf Links",
-    "address": "Mawlai Mawroh, Near SBI ATM, Golf Links, Shillong 793008",
+    "address": "Golf Links, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5898,
-      "lng": 91.8988
+      "lat": 25.595594,
+      "lng": 91.8968
     },
     "tagline": "Middle Eastern kebabs and smoky grills.",
     "theme": "Middle Eastern grill house",
@@ -3415,8 +3448,8 @@
     "hasLiveMusic": false,
     "hasKhasiMusic": false,
     "editorial_featured": false,
-    "rating": 4.4,
-    "user_ratings_total": 89,
+    "rating": 4.5,
+    "user_ratings_total": 500,
     "images": {
       "hero": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
@@ -3429,6 +3462,22 @@
       "The kebabs are cooked over real charcoal, giving the air a lovely smoky flavor.",
       "The view of the pine trees from the balcony is very handsome, especially at dusk.",
       "A favorite for young guys who talk about gym routines and engine oil over plates of mutton."
+    ],
+    "formatted_address": "Golf Links, Shillong, Meghalaya 793001",
+    "latitude": 25.595594,
+    "longitude": 91.8968,
+    "place_id": "ChIJLTTIKyV_UDcRnkxASfHGRfU",
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJLTTIKyV_UDcRnkxASfHGRfU",
+    "phone_number": "+91 98954 72531",
+    "website": "https://instagram.com/black_stone_grill?r=nametag",
+    "opening_hours": [
+      "Monday: 1:00 – 9:15 PM",
+      "Tuesday: 1:00 – 9:15 PM",
+      "Wednesday: 1:00 – 9:15 PM",
+      "Thursday: Closed",
+      "Friday: 1:00 – 9:15 PM",
+      "Saturday: 1:00 – 9:15 PM",
+      "Sunday: 3:00 – 9:15 PM"
     ]
   },
   {

@@ -203,11 +203,11 @@ export const CAFES: Cafe[] = [
   {
     "id": "cherry-bean-cafe",
     "name": "Cherry Bean Cafe",
-    "neighborhood": "Laitumkhrah",
-    "address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "neighborhood": "Police Bazaar",
+    "address": "GS Rd, opposite Broadway Hotel, Police Bazar, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.562,
-      "lng": 91.8842
+      "lat": 25.57564,
+      "lng": 91.881156
     },
     "tagline": "Bright beans, brighter mornings.",
     "theme": "Cheerful cafe with specialty coffee",
@@ -225,11 +225,11 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "ChIJ_cherry_bean_shillong",
-    "formatted_address": "Bungalow 4, Kench's Trace, Opp Bishop Cotton School, Shillong Meghalaya 793004",
-    "latitude": 25.562,
-    "longitude": 91.8842,
-    "google_maps_url": "https://maps.google.com/?api=1&query=Cherry+Bean+Cafe+Shillong",
+    "place_id": "ChIJRyV05z9_UDcRWdOml_k8cyg",
+    "formatted_address": "GS Rd, opposite Broadway Hotel, Police Bazar, Shillong, Meghalaya 793001",
+    "latitude": 25.57564,
+    "longitude": 91.881156,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJRyV05z9_UDcRWdOml_k8cyg",
     "website": "https://instagram.com/cherrybeancafe",
     "phone_number": "+91 97740 67451",
     "user_ratings_total": 312,
@@ -688,10 +688,10 @@ export const CAFES: Cafe[] = [
     "id": "bread-cafe-pb",
     "name": "Bread Cafe",
     "neighborhood": "Police Bazaar",
-    "address": "Police Bazaar, Shillong, Meghalaya 793001",
+    "address": "GS Rd, Starline, Police Bazar, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5755,
-      "lng": 91.8848
+      "lat": 25.575775,
+      "lng": 91.881253
     },
     "tagline": "Fresh baked, always.",
     "theme": "Artisan bakery cafe",
@@ -709,11 +709,11 @@ export const CAFES: Cafe[] = [
       "hero": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1200",
       "card": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
     },
-    "place_id": "ChIJ_bread_cafe_shillong",
-    "formatted_address": "Bara Bazaar Crossing, Police Bazaar, Shillong Meghalaya 793001",
-    "latitude": 25.5755,
-    "longitude": 91.8848,
-    "google_maps_url": "https://maps.google.com/?api=1&query=Bread+Cafe+Shillong",
+    "place_id": "ChIJiyinXdp_UDcR8zvzeT0ACSs",
+    "formatted_address": "GS Rd, Starline, Police Bazar, Shillong, Meghalaya 793001",
+    "latitude": 25.575775,
+    "longitude": 91.881253,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJiyinXdp_UDcR8zvzeT0ACSs",
     "website": "https://breadcafe.co.in",
     "phone_number": "+91 98560 31200",
     "user_ratings_total": 512,
@@ -3094,10 +3094,10 @@ export const CAFES: Cafe[] = [
     "id": "blackstone-grill",
     "name": "BLACKSTONE GRILL",
     "neighborhood": "Golf Links",
-    "address": "Mawlai Mawroh, Near SBI ATM, Golf Links, Shillong 793008",
+    "address": "Golf Links, Shillong, Meghalaya 793001",
     "coordinates": {
-      "lat": 25.5898,
-      "lng": 91.8988
+      "lat": 25.595594,
+      "lng": 91.8968
     },
     "tagline": "Middle Eastern kebabs and smoky grills.",
     "theme": "Middle Eastern grill house",
