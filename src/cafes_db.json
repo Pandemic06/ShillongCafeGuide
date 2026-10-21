@@ -4421,5 +4421,119 @@
     ],
     "user_ratings_total": 21,
     "website": "https://instagram.com/robertjuniorpatisserie?igshid=NGVhN2U2NjQ0Yg=="
+  },
+  {
+    "id": "kynjai-cloud-kitchen",
+    "name": "Kynjai Cloud Kitchen",
+    "neighborhood": "Nongthymmai",
+    "address": "Motinagar, Nongthymmai, Shillong, Meghalaya 793014",
+    "coordinates": {
+      "lat": 25.560585,
+      "lng": 91.899338
+    },
+    "tagline": "A well-reviewed kitchen in Motinagar.",
+    "theme": "Neighbourhood restaurant",
+    "vibeTags": [
+      "Restaurant",
+      "Local Eats"
+    ],
+    "hasLiveMusic": false,
+    "editorial_featured": false,
+    "rating": 4.2,
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
+    },
+    "introduction": "Kynjai Cloud Kitchen is a restaurant in Motinagar, Nongthymmai. It is open every day from 12:30 PM to 9:30 PM and has a 4.2 rating from 793 reviews on Google Maps.",
+    "whyVisit": "A well-reviewed neighbourhood restaurant in Nongthymmai, open every day until 9:30 PM.",
+    "seo_title": "Kynjai Cloud Kitchen — Restaurant in Nongthymmai, Shillong",
+    "seo_description": "Restaurant in Motinagar, Nongthymmai, open daily 12:30 to 9:30 PM and rated 4.2 on Google Maps from 793 reviews.",
+    "place_id": "ChIJpw1b0BZ_UDcRVDO4PEBBBm8",
+    "formatted_address": "Motinagar, Nongthymmai, Shillong, Meghalaya 793014",
+    "latitude": 25.560585,
+    "longitude": 91.899338,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJpw1b0BZ_UDcRVDO4PEBBBm8",
+    "phone_number": "+91 60090 26514",
+    "user_ratings_total": 793,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 12:30 – 9:30 PM",
+      "Tuesday: 12:30 – 9:30 PM",
+      "Wednesday: 12:30 – 9:30 PM",
+      "Thursday: 12:30 – 9:30 PM",
+      "Friday: 12:30 – 9:30 PM",
+      "Saturday: 12:30 – 9:30 PM",
+      "Sunday: 12:30 – 9:30 PM"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.95,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Open every afternoon and evening in Motinagar.",
+    "kong_labet_note": "It opens at 12:30 PM, so plan it as a lunch-or-later stop.",
+    "kong_labet_observations": [
+      "Open daily until 9:30 PM.",
+      "Around 800 diners have rated it on Google."
+    ]
+  },
+  {
+    "id": "the-farraway",
+    "name": "The Farraway",
+    "neighborhood": "Nongthymmai",
+    "address": "366, Motinagar, Nongthymmai, Shillong, Meghalaya 793014",
+    "coordinates": {
+      "lat": 25.563956,
+      "lng": 91.899287
+    },
+    "tagline": "An all-day restaurant in Motinagar.",
+    "theme": "All-day neighbourhood restaurant",
+    "vibeTags": [
+      "Restaurant",
+      "Local Eats"
+    ],
+    "hasLiveMusic": false,
+    "editorial_featured": false,
+    "rating": 4.1,
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
+    },
+    "introduction": "The Farraway is a restaurant at 366 Motinagar, Nongthymmai. It is open every day from 9:30 AM to 9:30 PM and has a 4.1 rating from 204 reviews on Google Maps.",
+    "whyVisit": "A neighbourhood restaurant in Nongthymmai that stays open from morning to evening, seven days a week.",
+    "seo_title": "The Farraway — Restaurant in Nongthymmai, Shillong",
+    "seo_description": "Restaurant at 366 Motinagar, Nongthymmai, open daily 9:30 AM to 9:30 PM and rated 4.1 on Google Maps from 204 reviews.",
+    "place_id": "ChIJocFcZwB_UDcRV35avG7VuIQ",
+    "formatted_address": "366, Motinagar, Nongthymmai, Shillong, Meghalaya 793014",
+    "latitude": 25.563956,
+    "longitude": 91.899287,
+    "google_maps_url": "https://www.google.com/maps/place/?q=place_id:ChIJocFcZwB_UDcRV35avG7VuIQ",
+    "phone_number": "+91 93664 92365",
+    "user_ratings_total": 204,
+    "types": [
+      "restaurant",
+      "food",
+      "establishment"
+    ],
+    "opening_hours": [
+      "Monday: 9:30 AM – 9:30 PM",
+      "Tuesday: 9:30 AM – 9:30 PM",
+      "Wednesday: 9:30 AM – 9:30 PM",
+      "Thursday: 9:30 AM – 9:30 PM",
+      "Friday: 9:30 AM – 9:30 PM",
+      "Saturday: 9:30 AM – 9:30 PM",
+      "Sunday: 9:30 AM – 9:30 PM"
+    ],
+    "khasi_food_available": false,
+    "match_confidence": 0.95,
+    "verification_status": "verified",
+    "kong_labet_tagline": "Open from 9:30 in the morning to 9:30 at night.",
+    "kong_labet_note": "A neighbourhood spot in Motinagar, open all day, seven days a week.",
+    "kong_labet_observations": [
+      "Open daily 9:30 AM to 9:30 PM.",
+      "Rated 4.1 on Google by over 200 diners."
+    ]
   }
 ]
