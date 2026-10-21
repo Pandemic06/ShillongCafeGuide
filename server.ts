@@ -92,36 +92,8 @@ function getGeminiClient() {
   return _ai;
 }
 
-// In-Memory storage for user submitted reviews to make the applet fully dynamic and "real"
-const userReviews = [
-  {
-    id: "r1",
-    cafeId: "cafe-shillong",
-    userName: "Naphisabet K.",
-    rating: 5,
-    comment: "The smoked pork toast here is legendary! Sitting by the glass during a rainy afternoon with the jazz guitar playing was absolute bliss.",
-    date: "May 20, 2026",
-    isLocalGuide: true
-  },
-  {
-    id: "r2",
-    cafeId: "cafe-shillong",
-    userName: "Siddharth S.",
-    rating: 4,
-    comment: "Great heritage vibe. The Shillong coffee is organic and has a very interesting herbal aftertaste.",
-    date: "May 18, 2026",
-    isLocalGuide: false
-  },
-  {
-    id: "r3",
-    cafeId: "dylans-cafe",
-    userName: "Mark L.",
-    rating: 5,
-    comment: "Love the Bob Dylan portraits and student atmosphere. Definitely try the apple pie and ginger tea cocktail!",
-    date: "May 22, 2026",
-    isLocalGuide: true
-  }
-];
+// Visitor-submitted reviews, held in memory only (cleared on every restart or deploy).
+const userReviews: { id: string; cafeId: string; userName: string; rating: number; comment: string; date: string; isLocalGuide: boolean }[] = [];
 
 // Lightweight liveness probe. Used by the external keep-awake pinger
 // (.github/workflows/keep-render-awake.yml) to prevent Render free tier
