@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import SEO from "./SEO";
 import { buildCafeSchema } from "../utils/cafeSchema";
 import { toInternationalPhone } from "../utils/phone";
+import { describePhotos } from "../utils/photos";
 import { getReviewsFromFirestore, addReviewToFirestore } from "../services/db";
 
 interface CafeDetailModalProps {
@@ -183,6 +184,9 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
   const [activeTab, setActiveTab] = useState<"overview" | "menu" | "gallery">("overview");
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
+  const gallery = getMediaAssets(cafe).gallery;
+  const photoNotice = describePhotos(gallery, cafe.name);
+
   const hasMenu = (cafe.mustTry && cafe.mustTry.length > 0) || 
                   !!cafe.menu_url || 
                   !!(MEDIA_DATABASE[cafe.id]?.menuImages && MEDIA_DATABASE[cafe.id].menuImages.length > 0);
@@ -342,7 +346,7 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
               {[
                 { id: "overview", label: "Details & Vibe", icon: <Info className="w-4 h-4" /> },
                 ...(hasMenu ? [{ id: "menu", label: "Menu & Bites", icon: <BookOpen className="w-4 h-4" /> }] : []),
-                { id: "gallery", label: "Google Shared Photos", icon: <Camera className="w-4 h-4" /> }
+                ...(photoNotice.kind !== "none" ? [{ id: "gallery", label: "Photos", icon: <Camera className="w-4 h-4" /> }] : []),
               ].map((tab) => {
                 const active = activeTab === tab.id;
                 return (
@@ -803,22 +807,23 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
               {activeTab === "gallery" && (
                 <div className="space-y-6">
                   <div className="flex flex-wrap items-center justify-between gap-4 pb-2 border-b border-stone-200">
-                    <div>
-                      <h4 className="font-display font-bold text-stone-900 text-lg">
-                        Google Maps & Image Search Results
-                      </h4>
-                      <p className="text-xs text-stone-500 font-sans">
-                        Verified photos uploaded by local guides and customers onto Google Search engines.
-                      </p>
-                    </div>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#991b1b] bg-[#fef2f2] border border-[#fecaca] px-2.5 py-1 rounded-full">
-                      📷 Live Grounding
-                    </span>
+                    <h4 className="font-display font-bold text-stone-900 text-lg">
+                      {photoNotice.heading}
+                    </h4>
+                    {photoNotice.badge && (
+                      <span className={`text-[10px] font-mono font-bold uppercase tracking-wider border px-2.5 py-1 rounded-full ${
+                        photoNotice.kind === "real"
+                          ? "text-emerald-800 bg-emerald-50 border-emerald-200"
+                          : "text-stone-600 bg-stone-100 border-stone-200"
+                      }`}>
+                        {photoNotice.badge}
+                      </span>
+                    )}
                   </div>
 
                   {/* Dynamic Google Search style Cards grids */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {getMediaAssets(cafe).gallery.map((gImg, idx) => (
+                    {gallery.map((gImg, idx) => (
                       <div
                         key={idx}
                         className="h-36 rounded-xl overflow-hidden border border-stone-200 bg-stone-50 relative group cursor-pointer"
@@ -826,7 +831,7 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                       >
                         <img
                           src={gImg}
-                          alt="Google Image upload for Shillong Cafe"
+                          alt={photoNotice.alt(gImg, idx)}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
                         />
@@ -834,13 +839,13 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                           <span className="text-[10px] text-white font-mono uppercase bg-stone-950/85 px-2 py-1 rounded">Full View</span>
                         </div>
                         <div className="absolute bottom-2 left-2 bg-stone-900/65 px-1.5 py-0.5 rounded text-[8px] font-mono text-white">
-                          User photo {idx + 1}
+                          {photoNotice.label(gImg, idx)}
                         </div>
                       </div>
                     ))}
                   </div>
                   <p className="text-xs text-stone-400 font-sans italic pt-2 block text-left">
-                    “Photos for reference only. Photos are not authentic.”
+                    {photoNotice.caption}
                   </p>
                 </div>
               )}

@@ -305,13 +305,13 @@ function CafeEditor({
           </Field>
         </Section>
 
-        <Section title="Google Shared Photos">
+        <Section title="Photos">
           <GalleryEditor
             value={cafe.photos || []}
             onChange={(v) => set("photos", v)}
             folder="cafes"
             title="Photos"
-            helpText="Shown in the 'Google Shared Photos' section. Order matters — top of list shows first. Auto-populated by the Maps URL import; add or rearrange here."
+            helpText="Shown in the 'Photos' tab on the café's page (hidden when empty; Unsplash images are labelled as stock images). Order matters — top of list shows first. Auto-populated by the Maps URL import; add or rearrange here."
           />
         </Section>
 
