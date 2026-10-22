@@ -630,11 +630,11 @@ export const CAFES: Cafe[] = [
   {
     "id": "you-and-i-arts-cafe",
     "name": "You & I Arts Cafe",
-    "neighborhood": "Laitumkhrah",
-    "address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "neighborhood": "Mawroh",
+    "address": "NA I PA - VILLA, Opposite Mawroh Community Hall, Mawroh, Shillong 793008",
     "coordinates": {
-      "lat": 25.5669,
-      "lng": 91.886
+      "lat": 25.595538,
+      "lng": 91.89559
     },
     "tagline": "A place for two, open to all.",
     "theme": "Intimate shared-space concept cafe",
@@ -653,10 +653,10 @@ export const CAFES: Cafe[] = [
       "card": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=600"
     },
     "place_id": "place-calc-you-and-i-arts-cafe",
-    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
-    "latitude": 25.5669,
-    "longitude": 91.886,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=You%20%26%20I%20Shared%20Caf%C3%A9%2C%20Shillong%2C%20Meghalaya",
+    "formatted_address": "NA I PA - VILLA, Opposite Mawroh Community Hall, Mawroh, Shillong 793008",
+    "latitude": 25.595538,
+    "longitude": 91.89559,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=You%20%26%20I%20Arts%20Cafe%2C%20Mawroh%2C%20Shillong",
     "website": "https://instagram.com/",
     "phone_number": "+91 364 123 4567",
     "user_ratings_total": 12,

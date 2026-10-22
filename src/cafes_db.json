@@ -678,20 +678,17 @@
   {
     "id": "you-and-i-arts-cafe",
     "name": "You & I Arts Cafe",
-    "neighborhood": "Laitumkhrah",
-    "address": "Laitumkhrah, Shillong, Meghalaya 793003",
+    "neighborhood": "Mawroh",
+    "address": "NA I PA - VILLA, Opposite Mawroh Community Hall, Mawroh, Shillong 793008",
     "coordinates": {
-      "lat": 25.5669,
-      "lng": 91.886
+      "lat": 25.595538,
+      "lng": 91.89559
     },
-    "tagline": "A place for two, open to all.",
-    "theme": "Intimate shared-space concept cafe",
+    "tagline": "An arts café in Mawroh.",
+    "theme": "Arts café",
     "vibeTags": [
-      "Intimate",
-      "Cozy",
-      "Date Spot",
-      "Coffee",
-      "Quiet"
+      "Arts",
+      "Cafe"
     ],
     "hasLiveMusic": false,
     "editorial_featured": false,
@@ -700,10 +697,10 @@
       "card": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=600"
     },
     "place_id": "place-calc-you-and-i-shared-cafe",
-    "formatted_address": "Laitumkhrah, Shillong, Meghalaya 793003",
-    "latitude": 25.5669,
-    "longitude": 91.886,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=You%20%26%20I%20Shared%20Caf%C3%A9%2C%20Shillong%2C%20Meghalaya",
+    "formatted_address": "NA I PA - VILLA, Opposite Mawroh Community Hall, Mawroh, Shillong 793008",
+    "latitude": 25.595538,
+    "longitude": 91.89559,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=You%20%26%20I%20Arts%20Cafe%2C%20Mawroh%2C%20Shillong",
     "types": [
       "cafe",
       "food"
@@ -714,13 +711,16 @@
     "khasi_food_available": false,
     "match_confidence": 0.72,
     "verification_status": "verified",
-    "kong_labet_tagline": "Shared tables and quiet whispers. A space designed to make eavesdropping look like contemplation.",
-    "kong_labet_note": "Best for a date where you have nothing left to say to each other, but the cozy seats hide the silence.",
+    "kong_labet_tagline": "Find the villa opposite Mawroh Community Hall.",
+    "kong_labet_note": "No opening hours are listed yet, so call +91 70851 53466 before you go.",
     "kong_labet_observations": [
-      "People here look very intense. Usually over single-shot espressos that went cold twenty minutes ago.",
-      "The shared library bookshelf is full of books with missing pages. Like the memories we choose to leave behind.",
-      "Order the ginger cookies. They have a sharp bite, unlike the mild promises people make here."
-    ]
+      "It sits in the NA I PA villa in Mawroh."
+    ],
+    "phone_number": "+91 70851 53466",
+    "introduction": "You & I Arts Cafe is a café in Mawroh, Shillong, in the NA I PA villa opposite Mawroh Community Hall.",
+    "whyVisit": "An arts café in Mawroh. Its opening hours are not listed yet, so call ahead.",
+    "seo_title": "You & I Arts Cafe — Café in Mawroh, Shillong",
+    "seo_description": "Arts café in Mawroh, Shillong, opposite Mawroh Community Hall. Phone +91 70851 53466."
   },
   {
     "id": "cafe-sola",
