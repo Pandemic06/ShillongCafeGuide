@@ -693,8 +693,9 @@
     "hasLiveMusic": false,
     "editorial_featured": false,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=600"
+      "hero": "/cafe-photos/you-and-i-arts-cafe/interior-0.jpg",
+      "card": "/cafe-photos/you-and-i-arts-cafe/card-0.jpg",
+      "interior": "/cafe-photos/you-and-i-arts-cafe/gallery-4.jpg"
     },
     "place_id": "place-calc-you-and-i-shared-cafe",
     "formatted_address": "NA I PA - VILLA, Opposite Mawroh Community Hall, Mawroh, Shillong 793008",
@@ -706,7 +707,11 @@
       "food"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=1200"
+      "/cafe-photos/you-and-i-arts-cafe/interior-0.jpg",
+      "/cafe-photos/you-and-i-arts-cafe/card-0.jpg",
+      "/cafe-photos/you-and-i-arts-cafe/gallery-3.jpg",
+      "/cafe-photos/you-and-i-arts-cafe/gallery-4.jpg",
+      "/cafe-photos/you-and-i-arts-cafe/hero-0.jpg"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.72,
@@ -720,7 +725,14 @@
     "introduction": "You & I Arts Cafe is a café in Mawroh, Shillong, in the NA I PA villa opposite Mawroh Community Hall.",
     "whyVisit": "An arts café in Mawroh. Its opening hours are not listed yet, so call ahead.",
     "seo_title": "You & I Arts Cafe — Café in Mawroh, Shillong",
-    "seo_description": "Arts café in Mawroh, Shillong, opposite Mawroh Community Hall. Phone +91 70851 53466."
+    "seo_description": "Arts café in Mawroh, Shillong, opposite Mawroh Community Hall. Phone +91 70851 53466.",
+    "gallery": [
+      "/cafe-photos/you-and-i-arts-cafe/interior-0.jpg",
+      "/cafe-photos/you-and-i-arts-cafe/card-0.jpg",
+      "/cafe-photos/you-and-i-arts-cafe/gallery-3.jpg",
+      "/cafe-photos/you-and-i-arts-cafe/gallery-4.jpg",
+      "/cafe-photos/you-and-i-arts-cafe/hero-0.jpg"
+    ]
   },
   {
     "id": "cafe-sola",

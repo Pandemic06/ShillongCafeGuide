@@ -70,7 +70,7 @@ export default function SEO({ title, description, canonical, image, schema, brea
   useEffect(() => {
     const fullTitle = title.includes(BRAND) ? title : `${title} | ${BRAND}`;
     const url = canonical || SITE;
-    const img = image || DEFAULT_IMAGE;
+    const img = image ? (image.startsWith("/") ? `${SITE}${image}` : image) : DEFAULT_IMAGE;
 
     document.title = fullTitle;
     upsertMeta("name", "description", description);

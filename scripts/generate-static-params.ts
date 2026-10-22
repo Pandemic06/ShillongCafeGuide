@@ -44,6 +44,7 @@ function applyHeadTags(html: string, tags: HeadTags): string {
 
 /** Prefers the café's real cached Google photo over a stock image. */
 function cafeShareImage(cafe: Cafe): string {
+  if (cafe.images?.hero?.startsWith('/')) return `${SITE}${cafe.images.hero}`;
   if (fs.existsSync(path.join(PHOTOS_DIR, cafe.id, 'hero-0.jpg'))) {
     return `${SITE}/cafe-photos/${cafe.id}/hero-0.jpg`;
   }
