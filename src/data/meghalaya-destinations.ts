@@ -113,7 +113,7 @@ export const MEGHALAYA_DESTINATIONS: Destination[] = [
     bestTime: "October – April",
     entryFee: "Free (activities extra)",
     duration: "Half–full day",
-    image: "https://images.unsplash.com/photo-1439853949212-36589f288346?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=1200",
   },
   {
     id: "laitlum-canyons",
@@ -265,7 +265,7 @@ export const MEGHALAYA_DESTINATIONS: Destination[] = [
     highlights: ["Sacred Lake", "Forest Walk", "Jaintia Cultural Site", "Mist Photography"],
     bestTime: "October – March",
     duration: "2–3 hours",
-    image: "https://images.unsplash.com/photo-1439853949212-36589f288346?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=1200",
   },
 
   // ── HIDDEN GEMS ──────────────────────────────────────────

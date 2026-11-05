@@ -147,7 +147,7 @@ app.post("/api/cafes", requireAgentKey, (req, res) => {
         name: "Artisan Hill Roast Latte",
         description: "Organically cultivated East Khasi hills arabica blend topped with microfoam.",
         price: "₹180",
-        image: "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
+        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
       }
     ],
     gallery: Array.isArray(newCafe.gallery) ? newCafe.gallery : [],
@@ -464,7 +464,7 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
         cafe.user_ratings_total = seed.user_ratings_total;
         cafe.types = seed.types;
         cafe.opening_hours = seed.opening_hours;
-        cafe.photos = cafe.photos || ["https://images.unsplash.com/photo-154118811-1e0d58224f24"];
+        cafe.photos = cafe.photos || [];
         cafe.khasi_food_available = seed.khasi_food_available;
         cafe.match_confidence = seed.match_confidence;
         cafe.verification_status = seed.verification_status;
@@ -519,7 +519,7 @@ app.post("/api/cafes/enrich", requireAgentKey, async (req, res) => {
               name: item.name,
               description: item.description,
               price: item.price,
-              image: item.image || "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
+              image: item.image || "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
             }));
           }
 
@@ -693,7 +693,7 @@ app.post("/api/cafes/sweep", requireAgentKey, async (req, res) => {
             name: "Dohkhlieh local Onion Salad",
             description: "A cold traditional pork dish tossed with local red onions, green mountain chilies, and hand-shredded fresh ginger leaves.",
             price: "₹140",
-            image: "https://images.unsplash.com/photo-1623961990059-28355e229a87?auto=format&fit=crop&q=80&w=600"
+            image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
           }
         ],
         coordinates: { lat: 25.5788, lng: 91.8835 }
@@ -766,7 +766,6 @@ app.post("/api/cafes/sweep", requireAgentKey, async (req, res) => {
             interior: image
           },
           gallery: [
-            "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800",
             "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
           ]
         };

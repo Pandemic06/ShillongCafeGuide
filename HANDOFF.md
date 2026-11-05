@@ -93,3 +93,6 @@ Agent repo:
 ## Optional Note from Outgoing Session
 Context window filled. All code committed + pushed on both repos; working trees clean.
 Nothing in-flight. Safe to resume cold from this doc.
+
+## 2026-11-05 Dead stock photos fixed
+Replaced the 15 dead Unsplash links (12 blank café headers, 12 broken photo tabs, lakes, route planner, new-café default). Added `npm run check:photos` (run before pushes) and a 'Photos on Google Maps' link on cafés with a verified Google ID.

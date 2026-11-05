@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import SEO from "./SEO";
 import { buildCafeSchema } from "../utils/cafeSchema";
 import { toInternationalPhone } from "../utils/phone";
-import { describePhotos } from "../utils/photos";
+import { describePhotos, googlePhotosUrl } from "../utils/photos";
 import { getReviewsFromFirestore, addReviewToFirestore } from "../services/db";
 
 interface CafeDetailModalProps {
@@ -24,7 +24,6 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
     ],
     menuImages: [
       "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1623961990059-28355e229a87?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800"
     ]
@@ -33,19 +32,16 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
     gallery: [
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&q=80&w=800"
     ],
     menuImages: [
       "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800"
     ]
   },
   "cherry-bean-cafe": {
     gallery: [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=800"
@@ -73,7 +69,6 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
   },
   "dylans-cafe": {
     gallery: [
-      "https://images.unsplash.com/photo-1487180142328-054b783fc471?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1485686531765-ba63b07845a7?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=800"
@@ -101,15 +96,11 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
   },
   "trattoria-shillong-pb": {
     gallery: [
-      "https://images.unsplash.com/photo-1555555555-5a79af67a629?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1502472545319-977b1a4a9f1f?auto=format&fit=crop&q=80&w=800"
     ],
     menuImages: [
       "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1623961990059-28355e229a87?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800"
     ]
   },
@@ -129,7 +120,6 @@ const MEDIA_DATABASE: Record<string, { gallery: string[]; menuImages: string[] }
   "bread-cafe-pb": {
     gallery: [
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800"
     ],
     menuImages: [
@@ -186,6 +176,7 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
 
   const gallery = getMediaAssets(cafe).gallery;
   const photoNotice = describePhotos(gallery, cafe.name);
+  const googlePhotosLink = googlePhotosUrl(cafe);
 
   const hasMenu = (cafe.mustTry && cafe.mustTry.length > 0) || 
                   !!cafe.menu_url || 
@@ -631,6 +622,18 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                             Directions Map
                           </a>
                         )}
+
+                        {googlePhotosLink && (
+                          <a
+                            href={googlePhotosLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white hover:bg-amber-50 border border-amber-200 text-amber-800 px-3.5 py-2 rounded-lg text-xs font-sans font-medium transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer"
+                          >
+                            <Camera className="w-3.5 h-3.5" />
+                            Photos on Google Maps
+                          </a>
+                        )}
                       </div>
 
                       {/* Price per person */}
@@ -847,6 +850,11 @@ export default function CafeDetailModal({ cafe, onClose }: CafeDetailModalProps)
                   <p className="text-xs text-stone-400 font-sans italic pt-2 block text-left">
                     {photoNotice.caption}
                   </p>
+                  {googlePhotosLink && photoNotice.kind !== "real" && (
+                    <a href={googlePhotosLink} target="_blank" rel="noopener noreferrer" className="text-xs font-sans font-semibold text-amber-800 underline">
+                      See real photos of this café on Google Maps ↗
+                    </a>
+                  )}
                 </div>
               )}
 

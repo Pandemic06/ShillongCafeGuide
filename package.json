@@ -8,6 +8,7 @@
     "build": "vite build && tsx scripts/generate-static-params.ts && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs --external:./src/cafes_db.json --loader:.jpg=empty --loader:.png=empty --loader:.svg=empty --loader:.mp4=empty",
     "start": "node dist/server.cjs",
     "lint": "tsc --noEmit",
+    "check:photos": "tsx scripts/check-photo-links.ts",
     "enrich": "tsx scripts/enrich-cafes.ts"
   },
   "dependencies": {

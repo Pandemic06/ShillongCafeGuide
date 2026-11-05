@@ -93,7 +93,7 @@ const CATEGORY_MODERN_IMAGES: Record<string, string> = {
   "Eatery": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=400&q=80",
   "Trek": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80",
   "Picnic Spot": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80",
-  "Misc": "https://images.unsplash.com/photo-1548252737-12962635ccca?auto=format&fit=crop&w=400&q=80"
+  "Misc": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
 };
 
 // --- Base Commencing / Concluding Landmark Station ---
@@ -1072,7 +1072,7 @@ export default function PlannersGuide() {
                   <div className="relative h-28">
                     <div className="absolute inset-0 bg-stone-950/25 z-10" />
                     <img 
-                      src={ROUTE_BANNER_IMAGES[route.id] || "https://images.unsplash.com/photo-1548252737-12962635ccca?auto=format&fit=crop&w=800&q=80"} 
+                      src={ROUTE_BANNER_IMAGES[route.id] || "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"} 
                       alt={route.name}
                       className="absolute inset-0 w-full h-full object-cover"
                       referrerPolicy="no-referrer"

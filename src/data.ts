@@ -126,7 +126,7 @@ export const CAFES: Cafe[] = [
       "Sunday: Closed"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": true,
     "match_confidence": 0.98,
@@ -187,7 +187,7 @@ export const CAFES: Cafe[] = [
       "Sunday: 11:30 AM – 9:30 PM"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.95,
@@ -248,7 +248,7 @@ export const CAFES: Cafe[] = [
       "Sunday: Closed"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.98,
@@ -308,7 +308,7 @@ export const CAFES: Cafe[] = [
       "Sunday: 12:00 – 10:00 PM"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": true,
     "match_confidence": 0.99,
@@ -371,7 +371,7 @@ export const CAFES: Cafe[] = [
       "Sunday: 11:30 AM – 10:00 PM"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.99,
@@ -432,7 +432,7 @@ export const CAFES: Cafe[] = [
       "Sunday: 10:00 AM – 9:00 PM"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": true,
     "match_confidence": 0.99,
@@ -492,7 +492,7 @@ export const CAFES: Cafe[] = [
       "Sunday: Closed"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": true,
     "match_confidence": 0.98,
@@ -553,7 +553,7 @@ export const CAFES: Cafe[] = [
       "Tuesday: Closed"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.97,
@@ -614,7 +614,7 @@ export const CAFES: Cafe[] = [
       "Sunday: 11:00 AM — 10:30 PM"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-154118811-1e0d58224f24"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.96,
@@ -1081,8 +1081,8 @@ export const CAFES: Cafe[] = [
     "editorial_featured": false,
     "rating": 4.4,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "place_id": "place-calc-lamee-restaurant",
     "formatted_address": "Nongkynrih, Shillong, Meghalaya 793006",
@@ -1100,7 +1100,7 @@ export const CAFES: Cafe[] = [
       "10:30 AM — 8:30 PM"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-1476224203421-9ac39bcb3b32?auto=format&fit=crop&q=80&w=1200"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.72,
@@ -1623,8 +1623,8 @@ export const CAFES: Cafe[] = [
     "editorial_featured": false,
     "rating": 4.6,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "place_id": "place-calc-enchante-tea-room",
     "formatted_address": "Lachumiere, Shillong, Meghalaya 793001",
@@ -1642,7 +1642,7 @@ export const CAFES: Cafe[] = [
       "10:30 AM — 8:30 PM"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&q=80&w=1200"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.72,
@@ -1839,8 +1839,8 @@ export const CAFES: Cafe[] = [
     "editorial_featured": false,
     "rating": 4.5,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1570053782985-e57f5e0a42d8?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1570053782985-e57f5e0a42d8?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "place_id": "ChIJm2wNe_F_UDcRe5DlvWzyKgE",
     "formatted_address": "Nongkynrih, Laitumkhrah, Shillong, Meghalaya 793003",
@@ -1858,7 +1858,7 @@ export const CAFES: Cafe[] = [
       "10:30 AM — 8:30 PM"
     ],
     "photos": [
-      "https://images.unsplash.com/photo-1570053782985-e57f5e0a42d8?auto=format&fit=crop&q=80&w=1200"
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200"
     ],
     "khasi_food_available": false,
     "match_confidence": 0.72,
@@ -2351,8 +2351,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.2,
     "user_ratings_total": 120,
     "images": {
-      "hero": "https://images.unsplash.com/photo-151097252790b-af4f42ded7a4?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-151097252790b-af4f42ded7a4?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Shillong Coffee House in Mawlai is a local landmark providing a simple, traditional space where neighbors gather for hot filter coffee, classic toast, and long conversations.",
     "whyVisit": "For a nostalgic, slow-paced coffee experience in the historic Mawlai neighborhood.",
@@ -2610,8 +2610,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.6,
     "user_ratings_total": 42,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1487180142328-054b783fc471?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1487180142328-054b783fc471?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "THEROYS is a stunning gallery-cafe hybrid in Umpling, showcasing oil paintings and wood carvings from Meghalaya's finest local artists over custom tea and coffee.",
     "whyVisit": "To appreciate regional contemporary art in a silent, beautiful creative refuge.",
@@ -2684,8 +2684,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.3,
     "user_ratings_total": 210,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1599307737286-218221689ee8?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1599307737286-218221689ee8?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Karak Chaa Dhankheti is a bustling roadside hub opposite Shillong Law College, renowned for serving the strongest, spiciest ginger karak chai and quick street-style toast.",
     "whyVisit": "To grab a quick, steaming steel glass of ginger chai and buttered bun between study sessions.",
@@ -3091,8 +3091,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.6,
     "user_ratings_total": 110,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1535141192574-5d4897c13636?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1535141192574-5d4897c13636?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Zayra The Cake Studio inside SF Mall is famous for designing the most elaborate, beautiful, and delicious custom wedding and celebration cakes in Shillong, alongside French macarons.",
     "whyVisit": "To grab a box of colorful designer macarons or order a breathtaking custom birthday cake.",
@@ -3165,8 +3165,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.4,
     "user_ratings_total": 240,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1557925923-cd4648e21187?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1557925923-cd4648e21187?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "James & Sons Bakery is a family legacy bakery near Golf Links, celebrated for its legendary sugar-dusted local donuts, cream buns, and old-school Khasi cookies.",
     "whyVisit": "To grab a classic cream roll and a dozen fresh local donuts after a misty walk in Golf Links.",
@@ -3239,8 +3239,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.7,
     "user_ratings_total": 54,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "My Little Bakery is a premium custom home bakery run by Wanrilinia, delivering organic, hand-crafted celebration cakes and sourdough treats directly to customers across Shillong.",
     "whyVisit": "To order the most delicious, customized organic fruit cakes for your mountain celebrations.",
@@ -3498,8 +3498,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.5,
     "user_ratings_total": 78,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Trifle Patisserie on the ground floor of Hotel Alpine Continental offers a premium selection of 100% vegetarian, eggless pastries, gourmet chocolate tarts, and custom designer cakes.",
     "whyVisit": "For the finest, most delicate eggless chocolate truffle slice in Shillong.",
@@ -3572,8 +3572,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.6,
     "user_ratings_total": 48,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Tucked in Lower Mawprem, The Cake Craving specializes in baking and crafting spectacular multi-tiered custom wedding cakes, bridal shower treats, and elegant birthday creations.",
     "whyVisit": "To consult and design the most memorable, artistic tier cake for your major celebrations.",
@@ -3646,8 +3646,8 @@ export const CAFES: Cafe[] = [
     "rating": 4.5,
     "user_ratings_total": 36,
     "images": {
-      "hero": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=1200",
-      "card": "https://images.unsplash.com/photo-1535124400015-725530413da6?auto=format&fit=crop&q=80&w=600"
+      "hero": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200",
+      "card": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
     },
     "introduction": "Robert Junior Patisserie in Demthring brings high-end French baking to Nongthymmai, serving delicate choux pastries, chocolate eclairs, and a colorful selection of gourmet macarons.",
     "whyVisit": "For the most authentic choux buns and delicate chocolate eclairs in the area.",

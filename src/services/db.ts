@@ -124,7 +124,7 @@ export async function saveCustomCafeToFirestore(cafe: Cafe): Promise<Cafe> {
         name: "Artisan Hill Roast Latte",
         description: "Organically cultivated East Khasi hills arabica blend topped with microfoam.",
         price: "₹180",
-        image: "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
+        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
       }
     ],
     gallery: Array.isArray(cafe.gallery) ? cafe.gallery : [],

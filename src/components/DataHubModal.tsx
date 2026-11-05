@@ -376,7 +376,7 @@ export default function DataHubModal({ isOpen, onClose, onCafesUpdated, currentC
         name: formData.item1Name.trim(),
         description: formData.item1Desc.trim() || "Traditional local recipe.",
         price: formData.item1Price.trim().startsWith("₹") ? formData.item1Price.trim() : `₹${formData.item1Price.trim()}`,
-        image: "https://images.unsplash.com/photo-154118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600"
+        image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
       });
     }
     if (formData.item2Name.trim()) {

@@ -41,3 +41,13 @@ export function describePhotos(urls: string[], cafeName: string): PhotoNotice {
       return { ...base, kind, heading: '', badge: null, caption: '' };
   }
 }
+
+/** A real Google place ID looks like "ChIJ" plus random characters; invented ones contain readable words. */
+export const hasGoogleListing = (placeId?: string): boolean =>
+  !!placeId && /^ChIJ[A-Za-z0-9_-]{20,}$/.test(placeId) && !/[a-z]{4,}_[a-z]{3,}/.test(placeId);
+
+/** Link to the café's photos on Google Maps, or null when we have no verified Google listing. */
+export function googlePhotosUrl(cafe: { name: string; place_id?: string }): string | null {
+  if (!hasGoogleListing(cafe.place_id)) return null;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${cafe.name} Shillong`)}&query_place_id=${cafe.place_id}`;
+}

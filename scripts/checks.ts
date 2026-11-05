@@ -1,7 +1,7 @@
 // Quick self-checks for the Google-label logic. Run: npx tsx scripts/checks.ts
 import assert from "node:assert";
 import { schemaType, buildOpeningHours } from "../src/utils/cafeSchema";
-import { describePhotos } from "../src/utils/photos";
+import { describePhotos, hasGoogleListing, googlePhotosUrl } from "../src/utils/photos";
 
 assert.strictEqual(schemaType({ name: "Jiva Resort Cherrapunjee", types: ["lodging", "restaurant"] }), "Resort");
 assert.strictEqual(schemaType({ name: "Kynjai Cloud Kitchen", types: ["restaurant", "food"] }), "Restaurant");
@@ -31,3 +31,10 @@ assert.doesNotMatch(describePhotos([REAL], "X").caption, /not authentic|stock/i)
 assert.doesNotMatch(describePhotos([STOCK], "X").heading, /verified|local guides/i);
 
 console.log("all checks pass");
+
+assert.strictEqual(hasGoogleListing("ChIJN1t_tDeuEmsRUsoyG83frY4"), true);
+assert.strictEqual(hasGoogleListing("ChIJ_cafe_shillong"), false);
+assert.strictEqual(hasGoogleListing("place-calc-12"), false);
+assert.strictEqual(hasGoogleListing(undefined), false);
+assert.match(googlePhotosUrl({ name: "A & B", place_id: "ChIJN1t_tDeuEmsRUsoyG83frY4" })!, /query=A%20%26%20B%20Shillong&query_place_id=ChIJ/);
+assert.strictEqual(googlePhotosUrl({ name: "X" }), null);
